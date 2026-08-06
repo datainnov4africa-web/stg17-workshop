@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+title: "<Indicator name> - <Country>"
+message: "If you use this work, please cite it as below."
+type: dataset
+authors:
+  - family-names: "<Surname>"
+    given-names: "<Given name>"
+    affiliation: "<Your national statistical office>"
+abstract: >-
+  <Two sentences: what the dataset is, and what it can legitimately be used for.>
+doi: 10.5281/zenodo.XXXXXXX
+version: 1.0.0
+date-released: "<YYYY-MM-DD>"
+license: "<MIT | CC-BY-4.0 | CC-BY-NC-SA-4.0>"
+repository-code: "https://github.com/<owner>/stg17-<iso3>"
+url: "https://<owner>.github.io/stg17-<iso3>/"
+keywords:
+  - night-time lights
+  - VIIRS
+  - official statistics
+  - "<country>"
+  - STG17

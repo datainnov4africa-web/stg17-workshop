@@ -1,0 +1,83 @@
+<!-- GÉNÉRÉ depuis config/agenda.yml par tools/build_site.py. Ne pas modifier. -->
+
+# Jour 1 — Concepts de l'IA et l'infrastructure qui les porte
+
+*Lundi · Un vocabulaire commun, l'expérience des pays, et ce qu'exige réellement la construction et l'exploitation de l'IA*
+
+## Matinée · 09h00 – 12h30
+
+### 09h00–09h45 &nbsp;·&nbsp; Cérémonie d'ouverture
+
+:material-account-group: **Cérémonie** &nbsp;·&nbsp; Plan d’action 4.2 · 4.1.1
+
+Mots de bienvenue et d'ouverture de la Banque africaine de développement et de l'UA STATAFRIC. Objectifs de la semaine, présentation du Plan d'action STG17 2025-2030 et de la place de cet atelier en son sein. Tour de table.
+
+
+### 09h45–10h15 &nbsp;·&nbsp; L'arbre généalogique de l'IA : comment les concepts s'articulent
+
+:material-presentation: **Exposé** &nbsp;·&nbsp; Plan d’action 3.3.2 · 4.1.1
+
+Construction d'une carte conceptuelle commune — IA, LLM, ingénierie de prompt, RAG, affinage, systèmes agentiques, agents, MCP. Ce que chaque concept peut et ne peut pas faire pour la statistique officielle, et la discipline de vocabulaire qui évite les malentendus coûteux. Cette demi-heure fixe le langage de toute la semaine.
+
+[:material-presentation: Diapositives](../slides/index.md#deck-01)
+
+
+### 10h30–11h45 &nbsp;·&nbsp; Expériences des pays en IA et en usage des mégadonnées non traditionnelles
+
+:material-forum: **Plénière** &nbsp;·&nbsp; Plan d’action 3.3.2 · 3.1.2 · 2.1.1
+
+Brèves présentations pays (8 minutes chacune, 6 diapositives maximum) sur ce qui a réellement été tenté sur place — pilotes lancés, partenariats de données signés, obstacles rencontrés, résultats publiés. Les pays sont invités à être francs sur ce qui n'a pas fonctionné ; c'est la moitié la plus utile de l'échange.
+
+
+### 11h45–12h30 &nbsp;·&nbsp; Synthèse : où en est le continent
+
+:material-lightbulb-on: **Animée** &nbsp;·&nbsp; Plan d’action 3.1.2 · 4.1.1
+
+Discussion animée structurée autour de quatre questions tirées des présentations — quels cas d'usage reviennent, quels partenariats de données sont réplicables, quels obstacles sont partagés, et où la mutualisation serait payante. Les productions sont consignées sur un mur ouvert toute la semaine. Se termine par l'auto-évaluation initiale des compétences.
+
+
+!!! quote "10h15–10h30 — Pause café"
+
+## Après-midi · 14h00 – 17h00
+
+### 14h00–14h45 &nbsp;·&nbsp; Infrastructure de l'IA : ce qu'exige réellement l'exploitation de l'IA dans un office statistique
+
+:material-presentation: **Exposé** &nbsp;·&nbsp; Plan d’action 4.2.3 · 3.3.2
+
+Fondamentaux et besoins — GPU et accélérateurs, mémoire et contexte, inférence contre entraînement, latence et débit. Nuage, hybride ou sur site ; souveraineté des données et contraintes de confidentialité des microdonnées d'un INS ; modélisation des coûts par cas d'usage ; modèles à poids ouverts contre propriétaires. À quoi ressemble une configuration d'entrée de gamme réaliste pour un INS africain, avec des ordres de grandeur indicatifs.
+
+[:material-presentation: Diapositives](../slides/index.md#deck-02)
+
+
+### 14h45–15h30 &nbsp;·&nbsp; Atelier partie 1 — Génération augmentée par récupération (RAG)
+
+:material-flask: **Laboratoire** &nbsp;·&nbsp; Plan d’action 4.2.1 · 2.1.1
+
+Construire un assistant RAG fonctionnel sur un corpus statistique (note de concept STG17, plan d'action, SHaSA II, documents méthodologiques nationaux) — découpage, plongements, base vectorielle, récupération, réponse ancrée. Le tester sur des questions à réponse connue et observer où la récupération échoue, et pourquoi.
+
+!!! example "Laboratoire — Assistant RAG"
+
+    **Livrable :** Un carnet répondant à dix questions test avec ses sources, plus une courte note sur les questions échouées et les raisons
+
+    **Repli :** Un index vectoriel pré-construit est distribué ; les équipes qui ne peuvent pas calculer les plongements démarrent directement à l'étape de récupération
+
+    **Statut :** :material-progress-clock: Lot Jour 1
+
+
+### 15h45–17h00 &nbsp;·&nbsp; Atelier partie 2 — Du RAG à l'agent
+
+:material-flask: **Laboratoire** &nbsp;·&nbsp; Plan d’action 4.2.1 · 4.2.3
+
+Transformer le récupérateur construit avant la pause en outil, et l'envelopper dans un agent — outils et appel de fonctions, planification et itération, mémoire, gestion d'erreurs et points de contrôle humains. L'agent répond à une question, retrouve les chiffres à l'appui et rédige une courte note ; les participants examinent ensuite précisément où il doit rester supervisé.
+
+!!! example "Laboratoire — Du RAG à l'agent"
+
+    **Livrable :** Un agent qui répond à une question, retrouve le chiffre à l'appui et rédige une note de cinq lignes
+
+    **Repli :** Un agent de référence fonctionnel est fourni ; les équipes le modifient plutôt que de partir de zéro
+
+    **Statut :** :material-progress-clock: Lot Jour 1
+
+
+!!! quote "15h30–15h45 — Pause café"
+

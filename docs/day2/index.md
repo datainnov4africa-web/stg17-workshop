@@ -1,0 +1,79 @@
+<!-- GENERATED from config/agenda.yml by tools/build_site.py. Do not edit. -->
+
+# Day 2 — Prompt Engineering and the Optimised Use of LLMs
+
+*Tuesday · Getting reliable, fast and affordable work out of language models*
+
+## Morning · 09:00 – 12:30
+
+### 09:00–10:15 &nbsp;·&nbsp; Talking to Machines: The Craft of Prompt Engineering
+
+:material-presentation: **Talk** &nbsp;·&nbsp; Action Plan 4.2.1
+
+Task framing, role and context, explicit constraints, few-shot examples, decomposition, structured JSON outputs, guardrails and systematic iteration. Why models hallucinate and how prompt design reduces it. Common anti-patterns and how to detect them in your own prompts.
+
+[:material-presentation: Slides](../slides/index.md#deck-03)
+
+
+### 10:30–12:30 &nbsp;·&nbsp; Hands-on — From Statistical Document to Public Dashboard
+
+:material-flask: **Laboratory** &nbsp;·&nbsp; Action Plan 4.2.1 · 2.1.1
+
+Take a national statistical publication (PDF or report), use an LLM to extract and structure its data, verify the extraction against the source, generate an interactive dashboard and publish it live on GitHub Pages. Each participant leaves with a public URL. The verification step is not optional — it is the part that makes the output publishable.
+
+!!! example "Laboratory — Document to dashboard"
+
+    **Deliverable:** A public dashboard URL and the extraction-verification table comparing output against the source
+
+    **Fallback:** A sample publication and a static dashboard template are supplied; publishing can be done from the template alone
+
+    **Status:** :material-progress-clock: Day 2 batch
+
+
+!!! quote "10:15–10:30 — Coffee break"
+
+## Afternoon · 14:00 – 17:00
+
+### 14:00–14:45 &nbsp;·&nbsp; From Good to Great: Prompt Optimisation
+
+:material-presentation: **Talk** &nbsp;·&nbsp; Action Plan 4.2.1 · 4.2.3
+
+Systematic improvement rather than trial and error — building an evaluation set, measuring output quality, controlling variance, managing context length and token cost, caching, and choosing between prompting, RAG and fine-tuning.
+
+[:material-presentation: Slides](../slides/index.md#deck-04)
+
+
+### 14:45–15:30 &nbsp;·&nbsp; Choosing your engine: speed, cost and sovereignty — working with Groq
+
+:material-speedometer: **Talk + benchmark** &nbsp;·&nbsp; Action Plan 4.2.3
+
+How inference speed changes what is feasible in a production statistical pipeline. Participants run the same prompt against two providers, including Groq, and record latency, cost per thousand documents and output quality in a shared comparison sheet. The sheet becomes a reusable procurement input for their office.
+
+[:material-presentation: Slides](../slides/index.md#deck-05)
+
+!!! example "Laboratory — Provider benchmark"
+
+    **Deliverable:** Three rows in the shared comparison sheet: latency, cost per thousand documents, quality score
+
+    **Fallback:** The facilitator runs the benchmark live from the podium if participant keys fail
+
+    **Status:** :material-progress-clock: Day 2 batch
+
+
+### 15:45–17:00 &nbsp;·&nbsp; Hands-on — One Model, Many Jobs: an LLM Toolkit for Statisticians
+
+:material-flask: **Laboratory** &nbsp;·&nbsp; Action Plan 4.2.1
+
+Rotating stations across professional use cases — writing and debugging code; drafting reports and methodological notes; producing presentations; generating charts and graphics; image and visual identity work, including logo design; document analysis and audio briefings with NotebookLM; multimodal work with Gemini. Each participant selects two stations relevant to their office and leaves with a finished deliverable from each.
+
+!!! example "Laboratory — Toolkit stations"
+
+    **Deliverable:** Two finished artefacts per participant, one from each chosen station
+
+    **Fallback:** Stations are independent — a station that fails costs only itself
+
+    **Status:** :material-progress-clock: Day 2 batch
+
+
+!!! quote "15:30–15:45 — Coffee break"
+

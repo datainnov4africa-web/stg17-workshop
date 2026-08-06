@@ -1,0 +1,473 @@
+# =============================================================================
+#  STG17 Workshop — the agenda, as data.
+#
+#  This file IS the structure of the website. `python tools/build_site.py` reads
+#  it and renders docs/day1..day5 in both languages, the laboratory index, and
+#  the Action-Plan mapping table. Edit the agenda here and the site follows —
+#  there is no second copy to forget.
+#
+#  Transcribed from: STG17_Workshop_Agenda_Emerging_Issues_Emerging_Practice_
+#  V05082026_2.docx, section 4 "Detailed agenda".
+# =============================================================================
+
+days:
+  - n: 1
+    weekday_en: Monday
+    weekday_fr: Lundi
+    title_en: AI concepts and the infrastructure behind them
+    title_fr: Concepts de l'IA et l'infrastructure qui les porte
+    strap_en: Shared vocabulary, country experience, and what it really takes to build and run AI
+    strap_fr: Un vocabulaire commun, l'expérience des pays, et ce qu'exige réellement la construction et l'exploitation de l'IA
+    sessions:
+      - time: "09:00–09:45"
+        mode: ceremony
+        title_en: Opening ceremony
+        title_fr: Cérémonie d'ouverture
+        desc_en: Welcome and opening remarks by the African Development Bank and AU STATAFRIC. Objectives of the week, presentation of the STG17 Action Plan 2025–2030 and of where this workshop sits within it. Tour de table.
+        desc_fr: Mots de bienvenue et d'ouverture de la Banque africaine de développement et de l'UA STATAFRIC. Objectifs de la semaine, présentation du Plan d'action STG17 2025-2030 et de la place de cet atelier en son sein. Tour de table.
+        plan: [4.2, 4.1.1]
+      - time: "09:45–10:15"
+        mode: talk
+        deck: "01"
+        title_en: "The AI Family Tree: How the Concepts Fit Together"
+        title_fr: "L'arbre généalogique de l'IA : comment les concepts s'articulent"
+        desc_en: Building a shared concept map — AI, LLM, prompt engineering, RAG, fine-tuning, agentic systems, agents, MCP. What each concept can and cannot do for official statistics, and the vocabulary discipline that avoids costly misunderstandings. This half-hour sets the language used for the rest of the week.
+        desc_fr: Construction d'une carte conceptuelle commune — IA, LLM, ingénierie de prompt, RAG, affinage, systèmes agentiques, agents, MCP. Ce que chaque concept peut et ne peut pas faire pour la statistique officielle, et la discipline de vocabulaire qui évite les malentendus coûteux. Cette demi-heure fixe le langage de toute la semaine.
+        plan: [3.3.2, 4.1.1]
+      - time: "10:30–11:45"
+        mode: plenary
+        title_en: Country experiences in AI and the use of non-traditional big data
+        title_fr: Expériences des pays en IA et en usage des mégadonnées non traditionnelles
+        desc_en: Short country presentations (8 minutes each, no more than 6 slides) on what has actually been attempted at home — pilots launched, data partnerships signed, obstacles met, results published. Countries are invited to be candid about what did not work; that is the more useful half of the exchange.
+        desc_fr: Brèves présentations pays (8 minutes chacune, 6 diapositives maximum) sur ce qui a réellement été tenté sur place — pilotes lancés, partenariats de données signés, obstacles rencontrés, résultats publiés. Les pays sont invités à être francs sur ce qui n'a pas fonctionné ; c'est la moitié la plus utile de l'échange.
+        plan: [3.3.2, 3.1.2, 2.1.1]
+      - time: "11:45–12:30"
+        mode: facilitated
+        title_en: "Synthesis: where the continent stands"
+        title_fr: "Synthèse : où en est le continent"
+        desc_en: Facilitated discussion structured around four questions drawn from the presentations — which use cases recur, which data partnerships are replicable, which obstacles are shared, and where pooling effort would pay. Outputs are recorded on a wall board kept open all week. Closes with the baseline skills self-assessment.
+        desc_fr: Discussion animée structurée autour de quatre questions tirées des présentations — quels cas d'usage reviennent, quels partenariats de données sont réplicables, quels obstacles sont partagés, et où la mutualisation serait payante. Les productions sont consignées sur un mur ouvert toute la semaine. Se termine par l'auto-évaluation initiale des compétences.
+        plan: [3.1.2, 4.1.1]
+      - time: "14:00–14:45"
+        mode: talk
+        deck: "02"
+        title_en: "AI Infrastructure: What It Really Takes to Run AI in a Statistical Office"
+        title_fr: "Infrastructure de l'IA : ce qu'exige réellement l'exploitation de l'IA dans un office statistique"
+        desc_en: Fundamentals and needs — GPUs and accelerators, memory and context, inference versus training, latency and throughput. Cloud, hybrid or on-premise; data sovereignty and confidentiality constraints for NSO microdata; cost modelling per use case; open-weight versus proprietary models. What a realistic entry-level configuration looks like for an African NSO, with indicative orders of magnitude.
+        desc_fr: Fondamentaux et besoins — GPU et accélérateurs, mémoire et contexte, inférence contre entraînement, latence et débit. Nuage, hybride ou sur site ; souveraineté des données et contraintes de confidentialité des microdonnées d'un INS ; modélisation des coûts par cas d'usage ; modèles à poids ouverts contre propriétaires. À quoi ressemble une configuration d'entrée de gamme réaliste pour un INS africain, avec des ordres de grandeur indicatifs.
+        plan: [4.2.3, 3.3.2]
+      - time: "14:45–15:30"
+        mode: lab
+        lab: d1_rag
+        title_en: "Hands-on part 1 — Retrieval-Augmented Generation"
+        title_fr: "Atelier partie 1 — Génération augmentée par récupération (RAG)"
+        desc_en: Build a working RAG assistant over a statistical corpus (STG17 Concept Note, Action Plan, SHaSA II, national methodological documents) — chunking, embeddings, vector store, retrieval, grounded answering. Test it against questions with known answers and observe where retrieval fails, and why.
+        desc_fr: Construire un assistant RAG fonctionnel sur un corpus statistique (note de concept STG17, plan d'action, SHaSA II, documents méthodologiques nationaux) — découpage, plongements, base vectorielle, récupération, réponse ancrée. Le tester sur des questions à réponse connue et observer où la récupération échoue, et pourquoi.
+        plan: [4.2.1, 2.1.1]
+      - time: "15:45–17:00"
+        mode: lab
+        lab: d1_agent
+        title_en: "Hands-on part 2 — From RAG to Agent"
+        title_fr: "Atelier partie 2 — Du RAG à l'agent"
+        desc_en: Turn the retriever built before the break into a tool, and wrap it in an agent — tools and function calling, planning and iteration, memory, error handling and human-in-the-loop checkpoints. The agent answers a question, retrieves the supporting figures and drafts a short note; participants then examine exactly where it must stay supervised.
+        desc_fr: Transformer le récupérateur construit avant la pause en outil, et l'envelopper dans un agent — outils et appel de fonctions, planification et itération, mémoire, gestion d'erreurs et points de contrôle humains. L'agent répond à une question, retrouve les chiffres à l'appui et rédige une courte note ; les participants examinent ensuite précisément où il doit rester supervisé.
+        plan: [4.2.1, 4.2.3]
+
+  - n: 2
+    weekday_en: Tuesday
+    weekday_fr: Mardi
+    title_en: Prompt Engineering and the Optimised Use of LLMs
+    title_fr: Ingénierie de prompt et usage optimisé des LLM
+    strap_en: Getting reliable, fast and affordable work out of language models
+    strap_fr: Obtenir des modèles de langage un travail fiable, rapide et abordable
+    sessions:
+      - time: "09:00–10:15"
+        mode: talk
+        deck: "03"
+        title_en: "Talking to Machines: The Craft of Prompt Engineering"
+        title_fr: "Parler aux machines : l'art de l'ingénierie de prompt"
+        desc_en: Task framing, role and context, explicit constraints, few-shot examples, decomposition, structured JSON outputs, guardrails and systematic iteration. Why models hallucinate and how prompt design reduces it. Common anti-patterns and how to detect them in your own prompts.
+        desc_fr: Cadrage de la tâche, rôle et contexte, contraintes explicites, exemples few-shot, décomposition, sorties JSON structurées, garde-fous et itération systématique. Pourquoi les modèles hallucinent et comment la conception du prompt réduit le phénomène. Anti-patrons courants et comment les détecter dans vos propres prompts.
+        plan: [4.2.1]
+      - time: "10:30–12:30"
+        mode: lab
+        lab: d2_dashboard
+        title_en: "Hands-on — From Statistical Document to Public Dashboard"
+        title_fr: "Atelier — Du document statistique au tableau de bord public"
+        desc_en: Take a national statistical publication (PDF or report), use an LLM to extract and structure its data, verify the extraction against the source, generate an interactive dashboard and publish it live on GitHub Pages. Each participant leaves with a public URL. The verification step is not optional — it is the part that makes the output publishable.
+        desc_fr: Prendre une publication statistique nationale (PDF ou rapport), utiliser un LLM pour en extraire et structurer les données, vérifier l'extraction contre la source, générer un tableau de bord interactif et le publier en ligne sur GitHub Pages. Chaque participant repart avec une URL publique. L'étape de vérification n'est pas optionnelle — c'est elle qui rend le résultat publiable.
+        plan: [4.2.1, 2.1.1]
+      - time: "14:00–14:45"
+        mode: talk
+        deck: "04"
+        title_en: "From Good to Great: Prompt Optimisation"
+        title_fr: "De bon à excellent : optimisation des prompts"
+        desc_en: Systematic improvement rather than trial and error — building an evaluation set, measuring output quality, controlling variance, managing context length and token cost, caching, and choosing between prompting, RAG and fine-tuning.
+        desc_fr: L'amélioration systématique plutôt que le tâtonnement — construire un jeu d'évaluation, mesurer la qualité des sorties, maîtriser la variance, gérer la longueur de contexte et le coût en tokens, la mise en cache, et arbitrer entre prompt, RAG et affinage.
+        plan: [4.2.1, 4.2.3]
+      - time: "14:45–15:30"
+        mode: benchmark
+        deck: "05"
+        lab: d2_benchmark
+        title_en: "Choosing your engine: speed, cost and sovereignty — working with Groq"
+        title_fr: "Choisir son moteur : vitesse, coût et souveraineté — travailler avec Groq"
+        desc_en: How inference speed changes what is feasible in a production statistical pipeline. Participants run the same prompt against two providers, including Groq, and record latency, cost per thousand documents and output quality in a shared comparison sheet. The sheet becomes a reusable procurement input for their office.
+        desc_fr: Comment la vitesse d'inférence change ce qui est faisable dans une chaîne statistique de production. Les participants exécutent le même prompt chez deux fournisseurs, dont Groq, et consignent latence, coût pour mille documents et qualité de sortie dans une feuille de comparaison partagée. Cette feuille devient un intrant réutilisable pour les achats de leur office.
+        plan: [4.2.3]
+      - time: "15:45–17:00"
+        mode: lab
+        lab: d2_toolkit
+        title_en: "Hands-on — One Model, Many Jobs: an LLM Toolkit for Statisticians"
+        title_fr: "Atelier — Un modèle, plusieurs métiers : une boîte à outils LLM pour statisticiens"
+        desc_en: Rotating stations across professional use cases — writing and debugging code; drafting reports and methodological notes; producing presentations; generating charts and graphics; image and visual identity work, including logo design; document analysis and audio briefings with NotebookLM; multimodal work with Gemini. Each participant selects two stations relevant to their office and leaves with a finished deliverable from each.
+        desc_fr: Ateliers tournants sur des cas d'usage professionnels — écrire et déboguer du code ; rédiger rapports et notes méthodologiques ; produire des présentations ; générer graphiques et visuels ; travail sur l'image et l'identité visuelle, y compris la création de logos ; analyse documentaire et synthèses audio avec NotebookLM ; multimodalité avec Gemini. Chaque participant choisit deux ateliers pertinents pour son office et repart avec un livrable achevé de chacun.
+        plan: [4.2.1]
+
+  - n: 3
+    weekday_en: Wednesday
+    weekday_fr: Mercredi
+    title_en: "Beyond the Survey: Non-Traditional Data and the Technologies That Handle Them"
+    title_fr: "Au-delà de l'enquête : données non traditionnelles et technologies qui les traitent"
+    strap_en: New raw material for official statistics — and the engines that make it usable at scale
+    strap_fr: Une nouvelle matière première pour la statistique officielle — et les moteurs qui la rendent exploitable à l'échelle
+    sessions:
+      - time: "09:00–10:15"
+        mode: talk
+        deck: "06"
+        title_en: "Non-Traditional Data Sources: The Hidden Treasure"
+        title_fr: "Sources de données non traditionnelles : le trésor caché"
+        desc_en: Taxonomy of non-traditional sources — satellite imagery, crowdsourced measurement, scanner and transaction data, web scraping, sensors and IoT, citizen-generated data. Quality frameworks and coverage bias in non-probabilistic sources; access and partnership models with private data holders; ethics and confidentiality.
+        desc_fr: Taxonomie des sources non traditionnelles — imagerie satellitaire, mesure participative, données de caisse et de transaction, moissonnage web, capteurs et IdO, données produites par les citoyens. Cadres de qualité et biais de couverture des sources non probabilistes ; modèles d'accès et de partenariat avec les détenteurs privés ; éthique et confidentialité.
+        plan: [2.1.1, "3.1", "4.3"]
+      - time: "10:30–12:30"
+        mode: lab
+        lab: d3_ookla_worldpop
+        title_en: "Hands-on — Ookla Speedtest Open Data and WorldPop"
+        title_fr: "Atelier — Données ouvertes Ookla Speedtest et WorldPop"
+        desc_en: "Ookla: performance tiles at web-Mercator zoom 16 (about 611 m at the equator), quarterly since Q1 2019; key fields (quadkey, avg_d_kbps, avg_lat_ms, tests, devices); CC BY-NC-SA 4.0 licence and its consequences for NSO publication; verify national coverage before designing any indicator. WorldPop: gridded population rasters used to weight and normalise. Teams join the tiles to administrative boundaries and produce a first population-weighted connectivity indicator per region."
+        desc_fr: "Ookla : tuiles de performance au zoom 16 en Mercator web (environ 611 m à l'équateur), trimestrielles depuis le T1 2019 ; champs clés (quadkey, avg_d_kbps, avg_lat_ms, tests, devices) ; licence CC BY-NC-SA 4.0 et ses conséquences pour la publication par un INS ; vérifier la couverture nationale avant de concevoir tout indicateur. WorldPop : rasters de population maillés servant à pondérer et normaliser. Les équipes joignent les tuiles aux frontières administratives et produisent un premier indicateur de connectivité pondéré par la population, par région."
+        plan: [2.1.1, "3.1"]
+      - time: "14:00–14:45"
+        mode: talk
+        deck: "07"
+        title_en: "Engines of Scale: Big Data Technologies for Statistical Systems"
+        title_fr: "Moteurs de passage à l'échelle : technologies big data pour les systèmes statistiques"
+        desc_en: Fundamentals — ingestion, storage (data lake and lakehouse), distributed processing (batch versus streaming, Spark), indexing and search, orchestration, metadata and versioning. Where each technology earns its place in an NSO, and where a simpler tool would do the job. The UN Global Platform and the UN Big Data Hub in Kigali as shared infrastructure.
+        desc_fr: Fondamentaux — ingestion, stockage (lac de données et lakehouse), traitement distribué (par lots contre flux, Spark), indexation et recherche, orchestration, métadonnées et versionnement. Où chaque technologie mérite sa place dans un INS, et où un outil plus simple ferait l'affaire. La Plateforme mondiale des Nations unies et le Centre ONU pour les mégadonnées de Kigali comme infrastructures partagées.
+        plan: [4.2.3, 4.2.2]
+      - time: "14:45–15:30"
+        mode: lab
+        lab: d3_elasticsearch
+        title_en: "Hands-on part 1 — Ookla at Scale with Elasticsearch"
+        title_fr: "Atelier partie 1 — Ookla à l'échelle avec Elasticsearch"
+        desc_en: Index the Ookla tiles in a pre-provisioned Elasticsearch cluster; understand the mapping and the geo_shape type; run the first aggregation and geospatial queries.
+        desc_fr: Indexer les tuiles Ookla dans un cluster Elasticsearch pré-provisionné ; comprendre le mapping et le type geo_shape ; exécuter les premières agrégations et requêtes géospatiales.
+        plan: [4.2.1, 4.2.3]
+      - time: "15:45–16:45"
+        mode: lab
+        lab: d3_search
+        title_en: "Hands-on part 2 — Search-driven exploration"
+        title_fr: "Atelier partie 2 — Exploration pilotée par la recherche"
+        desc_en: Build a search-driven exploration of connectivity by region and quarter; compare query time and memory footprint against the pandas approach of the morning, and draw the practical conclusion about when the added complexity is worth it.
+        desc_fr: Construire une exploration de la connectivité par région et par trimestre pilotée par la recherche ; comparer temps de requête et empreinte mémoire avec l'approche pandas du matin, et en tirer la conclusion pratique sur le moment où la complexité supplémentaire se justifie.
+        plan: [4.2.1, 4.2.3]
+      - time: "16:45–17:00"
+        mode: lab
+        title_en: Publication on GitHub
+        title_fr: Publication sur GitHub
+        desc_en: Each team commits its notebooks, queries and outputs to the workshop GitHub organisation, with a README documenting method, sources and licence.
+        desc_fr: Chaque équipe verse ses carnets, requêtes et résultats dans l'organisation GitHub de l'atelier, avec un README documentant méthode, sources et licence.
+        plan: [2.1.1, 4.2.1]
+
+  - n: 4
+    weekday_en: Thursday
+    weekday_fr: Jeudi
+    title_en: "Africa after dark: Reading development from Night-Time Lights"
+    title_fr: "L'Afrique après la nuit tombée : lire le développement dans les lumières nocturnes"
+    strap_en: A full day on NTL — from raw radiance to a validated subnational indicator
+    strap_fr: Une journée entière sur les NTL — de la radiance brute à un indicateur infranational validé
+    sessions:
+      - time: "09:00–09:30"
+        mode: talk
+        deck: "08"
+        title_en: "Night-Time Lights: What the Darkness Tells Us"
+        title_fr: "Lumières nocturnes : ce que l'obscurité nous dit"
+        desc_en: Concepts and utility, kept deliberately short so the day is spent in the data — from DMSP-OLS (1992–2013) to VIIRS/DNB; the NASA Black Marble products (VNP46A2 daily, A3 monthly, A4 annual) and the EOG annual VNL series; radiance units, resolution and temporal availability; what NTL proxies well — economic activity, electrification, urbanisation, crisis monitoring. The known artefacts are introduced here by name only and met hands-on in Part 2.
+        desc_fr: Concepts et utilité, délibérément brefs pour que la journée se passe dans les données — de DMSP-OLS (1992-2013) à VIIRS/DNB ; les produits NASA Black Marble (VNP46A2 journalier, A3 mensuel, A4 annuel) et la série VNL annuelle de l'EOG ; unités de radiance, résolution et disponibilité temporelle ; ce que les NTL approchent bien — activité économique, électrification, urbanisation, suivi de crise. Les artefacts connus ne sont ici que nommés ; on les rencontre concrètement en partie 2.
+        plan: [2.1.1]
+      - time: "09:30–10:15"
+        mode: lab
+        lab: d4_ntl_collect
+        title_en: "Hands-on part 1 — Collect"
+        title_fr: "Atelier partie 1 — Collecter"
+        desc_en: Access NTL rasters (NASA Earthdata, EOG or Google Earth Engine); understand the file structure, bands and quality flags; clip to the national extent and save a working subset.
+        desc_fr: Accéder aux rasters NTL (NASA Earthdata, EOG ou Google Earth Engine) ; comprendre la structure des fichiers, les bandes et les indicateurs de qualité ; découper à l'emprise nationale et enregistrer un sous-ensemble de travail.
+        plan: [4.2.1]
+      - time: "10:30–12:30"
+        mode: lab
+        lab: d4_ntl_explore
+        title_en: "Hands-on part 2 — Explore and Understand"
+        title_fr: "Atelier partie 2 — Explorer et comprendre"
+        desc_en: Visualise and interrogate the raster before computing on it — distribution of radiance values, effect of the cloud and quality masks, month-to-month variation. Teams deliberately hunt for the artefacts named in the morning talk (blooming around cities, saturation, gas flares, seasonality, sensor discontinuity, rural low-light noise) and document which ones are present in their own country. Closes with a short round of comparisons across teams.
+        desc_fr: Visualiser et interroger le raster avant de calculer dessus — distribution des valeurs de radiance, effet des masques de nuages et de qualité, variation d'un mois à l'autre. Les équipes traquent délibérément les artefacts nommés dans l'exposé du matin (halo lumineux autour des villes, saturation, torchères, saisonnalité, discontinuité de capteur, bruit de faible luminosité rural) et documentent lesquels sont présents dans leur propre pays. Se termine par un tour de comparaisons entre équipes.
+        plan: [4.2.1, 2.1.1]
+      - time: "14:00–15:30"
+        mode: lab
+        lab: d4_ntl_analysis
+        title_en: "Hands-on part 3 — Analysis"
+        title_fr: "Atelier partie 3 — Analyse"
+        desc_en: Zonal statistics by administrative level (sum of radiance, mean radiance, lit area); annual and monthly time series; change detection between two periods; mapping and visualisation of the results.
+        desc_fr: Statistiques zonales par niveau administratif (somme de radiance, radiance moyenne, superficie éclairée) ; séries temporelles annuelles et mensuelles ; détection de changement entre deux périodes ; cartographie et visualisation des résultats.
+        plan: [4.2.1, 2.1.1]
+      - time: "15:45–16:30"
+        mode: lab
+        lab: d4_ntl_validation
+        title_en: "Hands-on part 4 — Validation"
+        title_fr: "Atelier partie 4 — Validation"
+        desc_en: Correlate the NTL proxy with official subnational statistics (GDP, population, electrification rate) and, where relevant, with the Day 3 connectivity indicators. Decide, with evidence, whether the proxy is usable for dissemination in your country or remains a diagnostic tool only. Document the limitations explicitly — this statement is part of the deliverable.
+        desc_fr: Corréler l'indicateur indirect NTL avec des statistiques infranationales officielles (PIB, population, taux d'électrification) et, le cas échéant, avec les indicateurs de connectivité du Jour 3. Décider, preuves à l'appui, si l'indicateur est utilisable pour la diffusion dans votre pays ou s'il reste un simple outil de diagnostic. Documenter explicitement les limites — cette déclaration fait partie du livrable.
+        plan: [2.1.1, "4.3"]
+      - time: "16:30–17:00"
+        mode: lab
+        title_en: Publication and preparation for Day 5
+        title_fr: Publication et préparation du Jour 5
+        desc_en: Commit notebooks, maps and the limitations statement to GitHub; assemble the week's three outputs — dashboard, connectivity indicators, NTL analysis — into the 8-minute country presentation for Friday.
+        desc_fr: Verser carnets, cartes et déclaration de limites sur GitHub ; assembler les trois productions de la semaine — tableau de bord, indicateurs de connectivité, analyse NTL — dans la présentation pays de 8 minutes pour vendredi.
+        plan: [4.2.1, 3.1.1]
+
+  - n: 5
+    weekday_en: Friday (morning only)
+    weekday_fr: Vendredi (matin seulement)
+    title_en: Shared Resources, Country Results and the Way Forward
+    title_fr: Ressources partagées, résultats des pays et voie à suivre
+    strap_en: Turning a week of practice into a continental resource and into commitments under the Action Plan
+    strap_fr: Transformer une semaine de pratique en ressource continentale et en engagements au titre du Plan d'action
+    sessions:
+      - time: "09:00–10:15"
+        mode: talk
+        deck: "09"
+        lab: d5_publish
+        title_en: Assisting countries in publishing their work
+        title_fr: Aider les pays à publier leurs travaux
+        desc_en: How a national team takes what it built this week to a durable public product — repository structure and README conventions, GitHub Pages, dataset and code licensing, DOI and citation, metadata, versioning and maintenance responsibility. Concludes with the offer of continued support from the Secretariat and the route for submitting national work to the STG17 catalogue of best practices.
+        desc_fr: Comment une équipe nationale transforme ce qu'elle a construit cette semaine en produit public durable — structure de dépôt et conventions de README, GitHub Pages, licences des données et du code, DOI et citation, métadonnées, versionnement et responsabilité de maintenance. Se conclut par l'offre d'appui continu du Secrétariat et la voie de soumission des travaux nationaux au catalogue de bonnes pratiques du STG17.
+        plan: [2.1.1, 4.2.1, 3.2.1]
+      - time: "10:30–12:00"
+        mode: plenary
+        title_en: Country presentations
+        title_fr: Présentations des pays
+        desc_en: Each team presents the work produced during the week — dashboard, connectivity indicators, NTL analysis — with its GitHub repository and an honest statement of limitations. 8 minutes plus 2 for questions; teams are formed at country or sub-regional level so that the slot holds.
+        desc_fr: Chaque équipe présente les travaux produits durant la semaine — tableau de bord, indicateurs de connectivité, analyse NTL — avec son dépôt GitHub et une déclaration honnête de ses limites. 8 minutes plus 2 pour les questions ; les équipes sont formées au niveau pays ou sous-régional afin que le créneau tienne.
+        plan: [3.1.1, 3.1.2]
+      - time: "12:00–12:15"
+        mode: plenary
+        title_en: Key takeaways and way forward
+        title_fr: Enseignements clés et voie à suivre
+        desc_en: Consolidation of the wall board kept open all week, and agreement on the follow-up webinar topics.
+        desc_fr: Consolidation du mur resté ouvert toute la semaine, et accord sur les thèmes des webinaires de suivi.
+        plan: [1.3.1, 2.1.1, 3.1.1, 4.1.1]
+      - time: "12:15–12:30"
+        mode: ceremony
+        deck: "10"
+        title_en: Closing ceremony
+        title_fr: Cérémonie de clôture
+        desc_en: Closing remarks by the African Development Bank and AU STATAFRIC. Certificates and next steps under the STG17 Action Plan.
+        desc_fr: Mots de clôture de la Banque africaine de développement et de l'UA STATAFRIC. Certificats et prochaines étapes au titre du Plan d'action STG17.
+        plan: [4.2]
+
+# ---------------------------------------------------------------------------
+#  Laboratory specifications — section 6 of the concept note.
+#  `notebook` is the stem produced by tools/build_notebooks.py; the site turns
+#  it into Colab badges and GitHub links in both languages and both tracks.
+# ---------------------------------------------------------------------------
+labs:
+  d1_rag:
+    day: 1
+    title_en: RAG assistant
+    title_fr: Assistant RAG
+    team_en: pairs
+    team_fr: binômes
+    country: CIV
+    env_en: Python in Colab or local; sentence-transformers embeddings; FAISS or Chroma vector store; corpus of STG17 and national methodological documents supplied in the repository
+    env_fr: Python dans Colab ou en local ; plongements sentence-transformers ; base vectorielle FAISS ou Chroma ; corpus de documents méthodologiques STG17 et nationaux fourni dans le dépôt
+    deliverable_en: A notebook answering ten test questions with sources, plus a short note on the questions it fails and why
+    deliverable_fr: Un carnet répondant à dix questions test avec ses sources, plus une courte note sur les questions échouées et les raisons
+    fallback_en: A pre-built vector index is distributed; teams that cannot embed start directly at the retrieval step
+    fallback_fr: Un index vectoriel pré-construit est distribué ; les équipes qui ne peuvent pas calculer les plongements démarrent directement à l'étape de récupération
+    status: phase1
+  d1_agent:
+    day: 1
+    title_en: From RAG to agent
+    title_fr: Du RAG à l'agent
+    team_en: pairs
+    team_fr: binômes
+    country: CIV
+    env_en: Same environment plus a provisioned LLM API key; function calling with two tools — the retriever and a table lookup
+    env_fr: Même environnement plus une clé API LLM fournie ; appel de fonctions avec deux outils — le récupérateur et une consultation de table
+    deliverable_en: An agent that answers a question, retrieves the supporting figure and drafts a five-line note
+    deliverable_fr: Un agent qui répond à une question, retrouve le chiffre à l'appui et rédige une note de cinq lignes
+    fallback_en: A working reference agent is provided; teams modify it rather than build from scratch
+    fallback_fr: Un agent de référence fonctionnel est fourni ; les équipes le modifient plutôt que de partir de zéro
+    status: phase1
+  d2_dashboard:
+    day: 2
+    title_en: Document to dashboard
+    title_fr: Du document au tableau de bord
+    team_en: solo
+    team_fr: individuel
+    country: CIV
+    env_en: LLM API; Python or plain HTML/JS; the participant's own national publication; GitHub Pages
+    env_fr: API LLM ; Python ou simple HTML/JS ; la publication nationale du participant ; GitHub Pages
+    deliverable_en: A public dashboard URL and the extraction-verification table comparing output against the source
+    deliverable_fr: Une URL publique de tableau de bord et le tableau de vérification comparant l'extraction à la source
+    fallback_en: A sample publication and a static dashboard template are supplied; publishing can be done from the template alone
+    fallback_fr: Une publication d'exemple et un gabarit statique de tableau de bord sont fournis ; la publication peut se faire à partir du seul gabarit
+    status: phase2
+  d2_benchmark:
+    day: 2
+    title_en: Provider benchmark
+    title_fr: Benchmark des fournisseurs
+    team_en: solo
+    team_fr: individuel
+    country: CIV
+    env_en: Two API endpoints including Groq; one shared spreadsheet
+    env_fr: Deux points d'accès API dont Groq ; une feuille de calcul partagée
+    deliverable_en: "Three rows in the shared comparison sheet: latency, cost per thousand documents, quality score"
+    deliverable_fr: "Trois lignes dans la feuille de comparaison partagée : latence, coût pour mille documents, score de qualité"
+    fallback_en: The facilitator runs the benchmark live from the podium if participant keys fail
+    fallback_fr: L'animateur exécute le benchmark en direct depuis le pupitre si les clés des participants échouent
+    status: phase2
+  d2_toolkit:
+    day: 2
+    title_en: Toolkit stations
+    title_fr: Ateliers boîte à outils
+    team_en: stations
+    team_fr: ateliers tournants
+    country: CIV
+    env_en: Varies by station; all accessible from a browser
+    env_fr: Variable selon l'atelier ; tous accessibles depuis un navigateur
+    deliverable_en: Two finished artefacts per participant, one from each chosen station
+    deliverable_fr: Deux productions achevées par participant, une de chaque atelier choisi
+    fallback_en: Stations are independent — a station that fails costs only itself
+    fallback_fr: Les ateliers sont indépendants — un atelier en panne ne coûte que lui-même
+    status: phase2
+  d3_ookla_worldpop:
+    day: 3
+    title_en: Ookla and WorldPop
+    title_fr: Ookla et WorldPop
+    team_en: teams
+    team_fr: équipes
+    country: TUN
+    gee: true
+    env_en: Python with geopandas and pyarrow; Ookla parquet tiles and WorldPop rasters mirrored locally; national administrative boundaries
+    env_fr: Python avec geopandas et pyarrow ; tuiles parquet Ookla et rasters WorldPop en miroir local ; frontières administratives nationales
+    deliverable_en: A population-weighted download-speed and latency indicator per first-level administrative region, one map and one quarterly series
+    deliverable_fr: Un indicateur de débit descendant et de latence pondéré par la population, par région administrative de premier niveau, une carte et une série trimestrielle
+    fallback_en: Pre-clipped country extracts are prepared in advance for every participating country
+    fallback_fr: Des extraits pays pré-découpés sont préparés à l'avance pour chaque pays participant
+    status: phase3
+  d3_elasticsearch:
+    day: 3
+    title_en: Elasticsearch
+    title_fr: Elasticsearch
+    team_en: teams
+    team_fr: équipes
+    country: TUN
+    env_en: Pre-provisioned and pre-loaded cluster, one index per country, Kibana available
+    env_fr: Cluster pré-provisionné et pré-chargé, un index par pays, Kibana disponible
+    deliverable_en: Five saved queries and a timing comparison against the morning's pandas approach
+    deliverable_fr: Cinq requêtes enregistrées et une comparaison de temps avec l'approche pandas du matin
+    fallback_en: If the cluster is unreachable, the same exercise runs locally in DuckDB with an identical query set
+    fallback_fr: Si le cluster est injoignable, le même exercice tourne en local sous DuckDB avec un jeu de requêtes identique
+    status: phase3
+  d3_search:
+    day: 3
+    title_en: Search-driven exploration
+    title_fr: Exploration pilotée par la recherche
+    team_en: teams
+    team_fr: équipes
+    country: TUN
+    env_en: The same cluster, or the DuckDB fallback
+    env_fr: Le même cluster, ou le repli DuckDB
+    deliverable_en: A search-driven exploration of connectivity by region and quarter, with the timing conclusion
+    deliverable_fr: Une exploration de la connectivité par région et trimestre pilotée par la recherche, avec la conclusion sur les temps
+    fallback_en: Identical query set runs in DuckDB on the same parquet files
+    fallback_fr: Le jeu de requêtes identique tourne sous DuckDB sur les mêmes fichiers parquet
+    status: phase3
+  d4_ntl_collect:
+    day: 4
+    title_en: NTL collect and explore
+    title_fr: NTL collecter et explorer
+    team_en: teams
+    team_fr: équipes
+    country: CIV
+    gee: true
+    notebook: D4_NTL_Collect_Explore
+    gee_notebook: D4_NTL_GEE
+    env_en: Python with rasterio and h5py; VIIRS monthly and annual subsets mirrored locally; Earth Engine account optional
+    env_fr: Python avec rasterio et h5py ; sous-ensembles VIIRS mensuels et annuels en miroir local ; compte Earth Engine optionnel
+    deliverable_en: A documented national raster subset and an inventory of the artefacts present in that country
+    deliverable_fr: Un sous-ensemble raster national documenté et un inventaire des artefacts présents dans ce pays
+    fallback_en: Pre-clipped national subsets are prepared for every participating country; the Earth Engine variant downloads nothing at all
+    fallback_fr: Des sous-ensembles nationaux pré-découpés sont préparés pour chaque pays participant ; la variante Earth Engine ne télécharge rien
+    status: ready
+  d4_ntl_explore:
+    day: 4
+    title_en: NTL explore and understand
+    title_fr: NTL explorer et comprendre
+    team_en: teams
+    team_fr: équipes
+    country: CIV
+    gee: true
+    notebook: D4_NTL_Collect_Explore
+    gee_notebook: D4_NTL_GEE
+    env_en: Same notebook as part 1 — steps 7 and 8
+    env_fr: Même carnet que la partie 1 — étapes 7 et 8
+    deliverable_en: The artefact inventory for your country, with evidence
+    deliverable_fr: L'inventaire des artefacts de votre pays, avec les preuves
+    fallback_en: The reference country (Côte d'Ivoire) is prepared end to end
+    fallback_fr: Le pays de référence (Côte d'Ivoire) est préparé de bout en bout
+    status: ready
+  d4_ntl_analysis:
+    day: 4
+    title_en: NTL analysis
+    title_fr: NTL analyse
+    team_en: teams
+    team_fr: équipes
+    country: CIV
+    gee: true
+    env_en: rasterstats or exactextract; the panel produced in the morning
+    env_fr: rasterstats ou exactextract ; le panel produit le matin
+    deliverable_en: Zonal statistics table, time series, change detection between two periods, and the maps
+    deliverable_fr: Tableau de statistiques zonales, séries temporelles, détection de changement entre deux périodes, et les cartes
+    fallback_en: One reference country is prepared end to end and handed to any team whose national data proves incomplete
+    fallback_fr: Un pays de référence est préparé de bout en bout et remis à toute équipe dont les données nationales s'avèrent incomplètes
+    status: phase4
+  d4_ntl_validation:
+    day: 4
+    title_en: NTL validation
+    title_fr: NTL validation
+    team_en: teams
+    team_fr: équipes
+    country: CIV
+    env_en: The official subnational indicator brought by the team
+    env_fr: L'indicateur infranational officiel apporté par l'équipe
+    deliverable_en: Correlation against the official indicator, and a written limitations statement
+    deliverable_fr: Corrélation avec l'indicateur officiel, et une déclaration écrite des limites
+    fallback_en: A reference official indicator is supplied for the reference country
+    fallback_fr: Un indicateur officiel de référence est fourni pour le pays de référence
+    status: phase4
+  d5_publish:
+    day: 5
+    title_en: Publish your work
+    title_fr: Publier vos travaux
+    team_en: teams
+    team_fr: équipes
+    country: CIV
+    env_en: A GitHub account and the country-template repository
+    env_fr: Un compte GitHub et le dépôt country-template
+    deliverable_en: A public country repository with README, licence, metadata, GitHub Pages site and citation file
+    deliverable_fr: Un dépôt pays public avec README, licence, métadonnées, site GitHub Pages et fichier de citation
+    fallback_en: The template can be published as-is and populated afterwards
+    fallback_fr: Le gabarit peut être publié tel quel et rempli ensuite
+    status: phase5

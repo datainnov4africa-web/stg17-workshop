@@ -1,0 +1,106 @@
+# =============================================================================
+#  STG17 Workshop — single source of truth for every placeholder value.
+#  Change a value here and it propagates to: Colab badges, site links,
+#  notebook headers, slide footers, country-template README.
+#
+#  Regenerate everything after editing:   python tools/build_all.py
+# =============================================================================
+
+workshop:
+  code: STG17
+  title_en: "Emerging Issues, Emerging Practice"
+  title_fr: "Enjeux émergents, pratiques émergentes"
+  subtitle_en: "Innovating the Data Value Chain — AI, LLMs and Big Data for Official Statistics"
+  subtitle_fr: "Innover dans la chaîne de valeur des données — IA, LLM et Big Data pour la statistique officielle"
+  # --- TO BE CONFIRMED BY THE SECRETARIAT -----------------------------------
+  year: 2026
+  dates_en: "TBC — 5 days, Monday to Friday morning"
+  dates_fr: "À confirmer — 5 jours, du lundi au vendredi matin"
+  venue_en: "TBC (hybrid)"
+  venue_fr: "À confirmer (hybride)"
+  # --------------------------------------------------------------------------
+  duration_hours: 27
+  working_language: en
+  languages: [en, fr]
+
+organisers:
+  lead:
+    name_en: "African Development Bank — Secretariat of STG17"
+    name_fr: "Banque africaine de développement — Secrétariat du STG17"
+    short: AfDB
+  partner:
+    name_en: "African Union — STATAFRIC"
+    name_fr: "Union africaine — STATAFRIC"
+    short: STATAFRIC
+  framework_en: "SHaSA II · Specialized Technical Group 17 · Action Plan 2025–2030"
+  framework_fr: "SHaSA II · Groupe technique spécialisé 17 · Plan d'action 2025-2030"
+
+github:
+  # --- PLACEHOLDER: replace with the real organisation once created ---------
+  org: STG17-Africa
+  repo: stg17-workshop
+  branch: main
+  # Country repositories are named:  stg17-<iso3 lowercase>   e.g. stg17-civ
+  country_repo_prefix: stg17-
+  pages_url: "https://stg17-africa.github.io/stg17-workshop"
+
+services:
+  # --- PLACEHOLDERS: filled by the technical assistants at T-2 weeks --------
+  elasticsearch:
+    endpoint: "https://CHANGE-ME.example.org:9200"
+    kibana: "https://CHANGE-ME.example.org:5601"
+    index_pattern: "ookla-{iso3}-{year}q{quarter}"
+    fallback: duckdb          # fully implemented alternative, see lab D3
+  llm_providers:
+    - id: groq
+      env: GROQ_API_KEY
+      base_url: "https://api.groq.com/openai/v1"
+      note_en: "Named in the agenda — used for the Day 2 speed/cost benchmark"
+      note_fr: "Cité dans l'agenda — utilisé pour le benchmark vitesse/coût du Jour 2"
+    - id: anthropic
+      env: ANTHROPIC_API_KEY
+      base_url: "https://api.anthropic.com"
+    - id: openai_compatible
+      env: OPENAI_API_KEY
+      base_url: "https://api.openai.com/v1"
+    - id: ollama
+      env: OLLAMA_HOST
+      base_url: "http://localhost:11434"
+      note_en: "Local / sovereign path — no key, no data leaving the building"
+      note_fr: "Voie locale / souveraine — aucune clé, aucune donnée ne sort du bâtiment"
+  earth_engine:
+    project: "CHANGE-ME-gee-project"
+  zenodo:
+    community: "stg17"
+
+# Default demonstration country, per laboratory.
+# Participants change ONE variable (COUNTRY_ISO3) at the top of any notebook.
+defaults:
+  country_fallback: CIV        # the fully prepared reference country
+  by_lab:
+    d1_rag: CIV
+    d1_agent: CIV
+    d2_dashboard: CIV
+    d2_benchmark: CIV
+    d2_toolkit: CIV
+    d3_ookla_worldpop: TUN     # 4 quarters of 2024 already mirrored
+    d3_elasticsearch: TUN
+    d3_search: TUN
+    d4_ntl_collect: CIV        # VNP46A4 2012-2025 + ADM0-3 available
+    d4_ntl_explore: CIV
+    d4_ntl_analysis: CIV
+    d4_ntl_validation: CIV
+    d5_publish: CIV
+
+paths:
+  # Local data mirror built by  python tools/fetch_data.py --iso CIV
+  local_root_windows: "C:/STG17_LOCAL"
+  local_root_posix: "~/STG17_LOCAL"
+  colab_root: "/content/STG17_LOCAL"
+  kaggle_root: "/kaggle/working/STG17_LOCAL"
+
+licences:
+  code: "MIT"
+  content: "CC BY 4.0"
+  # Ookla derivatives inherit NonCommercial + ShareAlike — see docs/publish/licensing
+  ookla_source: "CC BY-NC-SA 4.0"

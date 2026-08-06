@@ -1,0 +1,45 @@
+{
+  "title": "<Indicator name> - <Country>",
+  "title_fr": "<Nom de l'indicateur> - <Pays>",
+  "description": "<One sentence.>",
+  "country": {
+    "iso3": "<ISO3>",
+    "name_en": "<Country>",
+    "name_fr": "<Pays>"
+  },
+  "producer": "<Your national statistical office>",
+  "workshop": "STG17 - AfDB / STATAFRIC - Action Plan 2025-2030 - WP 4.2",
+  "temporal_coverage": {
+    "start": "<YYYY>",
+    "end": "<YYYY>"
+  },
+  "spatial_resolution": "ADM2",
+  "sources": [
+    {
+      "name": "NASA Black Marble VNP46A4",
+      "licence": "Public domain",
+      "retrieved": "<YYYY-MM-DD>"
+    },
+    {
+      "name": "Ookla Open Data",
+      "licence": "CC BY-NC-SA 4.0",
+      "retrieved": "<YYYY-MM-DD>"
+    }
+  ],
+  "licence_code": "MIT",
+  "licence_data": "<CC BY 4.0 | CC BY-NC-SA 4.0>",
+  "keywords": [
+    "night-time lights",
+    "VIIRS",
+    "official statistics",
+    "<country>"
+  ],
+  "maintainer": {
+    "name": "<Name>",
+    "email": "<institutional email>",
+    "role": "<role>"
+  },
+  "version": "1.0.0",
+  "published": "<YYYY-MM-DD>",
+  "repository": "https://github.com/<owner>/stg17-<iso3>"
+}

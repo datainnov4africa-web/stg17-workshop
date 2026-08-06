@@ -1,0 +1,23 @@
+/* ===========================================================================
+   STG17 workshop — African Development Bank identity
+   GENERATED FILE. Do not edit by hand.
+   Source: stg17/theme.py   Regenerate: python -m stg17.theme --emit-css
+   =========================================================================== */
+:root {
+  --afdb-navy:  #0B2545;
+  --afdb-green: #1B7A43;
+  --afdb-amber: #F2A900;
+  --afdb-ink:   #33403A;
+  --afdb-muted: #6B7B75;
+  --afdb-line:  #D5E6DF;
+  --afdb-wash:  #F4F8F5;
+  --afdb-paper: #FBFCFB;
+  --afdb-ok:    #1B7A43;
+  --afdb-warn:  #F2A900;
+  --afdb-fail:  #C0392B;
+  --afdb-info:  #1D5FA8;
+  --afdb-font:  "Segoe UI", "Inter", system-ui, -apple-system, "Helvetica Neue", sans-serif;
+  --afdb-mono:  "JetBrains Mono", "Cascadia Code", "Consolas", ui-monospace, monospace;
+  --afdb-radius: 10px;
+  --afdb-shadow: 0 1px 3px rgba(11, 37, 69, .08), 0 8px 24px rgba(11, 37, 69, .06);
+}

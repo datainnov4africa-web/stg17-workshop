@@ -1,0 +1,47 @@
+# Everything that must be true before material reaches a participant.
+name: Validate
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - name: Install
+        run: pip install -r requirements-dev.txt
+
+      # The country registry is the single point of failure for every
+      # geospatial laboratory: a malformed bbox silently drops territory.
+      - name: Country registry self-check
+        run: python -m stg17.countries
+
+      # Generated notebooks must match their masters. If they do not, someone
+      # edited a published file directly and their change will be lost on the
+      # next build.
+      - name: Notebooks are in sync with their masters
+        run: python tools/build_notebooks.py --check
+
+      - name: Notebooks are valid and carry no secrets
+        run: python tools/check_notebooks.py
+
+      - name: Site pages are in sync with the agenda
+        run: |
+          python tools/build_site.py
+          git diff --exit-code docs/ || \
+            (echo "::error::docs/ is stale. Run: python tools/build_site.py" && exit 1)
+
+      - name: Slide decks build
+        run: python tools/build_slides.py
+
+      - name: Site builds strictly
+        run: mkdocs build --strict

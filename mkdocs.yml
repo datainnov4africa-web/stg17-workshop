@@ -1,0 +1,179 @@
+# =============================================================================
+#  STG17 Workshop website
+#
+#  Build:    mkdocs serve         (local preview at http://127.0.0.1:8000)
+#            mkdocs build         (static site into ./site)
+#  Deploy:   pushed to main -> .github/workflows/pages.yml -> GitHub Pages
+#
+#  English is the default build and is served at the root.
+#  French is served under /fr/ and reached from the language selector.
+#  Pages are paired by suffix:  page.md  (EN)  <->  page.fr.md  (FR)
+# =============================================================================
+
+site_name: STG17 Workshop — Emerging Issues, Emerging Practice
+site_description: >-
+  African Development Bank and AU STATAFRIC · SHaSA II · Specialized Technical Group 17.
+  Artificial intelligence, large language models and big data for official statistics —
+  hands-on applications to Ookla, WorldPop and Night-Time Lights.
+site_author: African Development Bank — Secretariat of STG17
+site_url: https://stg17-africa.github.io/stg17-workshop/
+repo_url: https://github.com/STG17-Africa/stg17-workshop
+repo_name: STG17-Africa/stg17-workshop
+edit_uri: edit/main/docs/
+copyright: >-
+  © African Development Bank and African Union STATAFRIC ·
+  Content CC BY 4.0 · Code MIT
+
+theme:
+  name: material
+  language: en
+  custom_dir: docs/overrides
+  logo: assets/img/logo-stg17.svg
+  favicon: assets/img/favicon.svg
+  font:
+    text: Inter
+    code: JetBrains Mono
+  icon:
+    repo: fontawesome/brands/github
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - navigation.indexes
+    - navigation.footer
+    - toc.follow
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - content.code.annotate
+    - content.tabs.link
+    - content.action.edit
+
+extra_css:
+  - assets/_afdb-vars.css
+  - assets/afdb.css
+
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - tables
+  - toc:
+      permalink: "#"
+      toc_depth: 3
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+
+plugins:
+  - search:
+      lang: [en, fr]
+  # mkdocs-static-i18n: English at /, French at /fr/, paired by the .fr.md suffix.
+  - i18n:
+      docs_structure: suffix
+      fallback_to_default: true
+      reconfigure_material: true
+      reconfigure_search: true
+      languages:
+        - locale: en
+          default: true
+          name: English
+          build: true
+        - locale: fr
+          name: Français
+          build: true
+          site_name: Atelier STG17 — Enjeux émergents, pratiques émergentes
+          site_description: >-
+            Banque africaine de développement et UA STATAFRIC · SHaSA II · Groupe technique
+            spécialisé 17. Intelligence artificielle, grands modèles de langage et mégadonnées
+            pour la statistique officielle.
+          nav_translations:
+            Home: Accueil
+            Before the workshop: Avant l'atelier
+            Prerequisites: Prérequis
+            Accounts to create: Comptes à créer
+            Your national data pack: Votre paquet de données national
+            When you need Kaggle: Quand Kaggle est nécessaire
+            Environment check: Vérification de l'environnement
+            Country slides template: Gabarit des diapositives pays
+            The week: La semaine
+            Day 1 · AI concepts: Jour 1 · Concepts de l'IA
+            Day 2 · Prompt engineering: Jour 2 · Ingénierie de prompt
+            Day 3 · Non-traditional data: Jour 3 · Données non traditionnelles
+            Day 4 · Night-Time Lights: Jour 4 · Lumières nocturnes
+            Day 5 · Publishing and results: Jour 5 · Publication et résultats
+            Laboratories: Laboratoires
+            Slides: Présentations
+            Publish your work: Publier vos travaux
+            Resources: Ressources
+            Action Plan mapping: Correspondance Plan d'action
+            Glossary: Glossaire
+            Licensing and ethics: Licences et éthique
+            For facilitators: Pour les animateurs
+
+nav:
+  - Home: index.md
+  - Before the workshop:
+      - before/index.md
+      - Prerequisites: before/prerequisites.md
+      - Accounts to create: before/accounts.md
+      - Your national data pack: before/data-pack.md
+      - When you need Kaggle: before/kaggle.md
+      - Environment check: before/environment-check.md
+      - Country slides template: before/country-slides.md
+  - The week:
+      - Day 1 · AI concepts: day1/index.md
+      - Day 2 · Prompt engineering: day2/index.md
+      - Day 3 · Non-traditional data: day3/index.md
+      - Day 4 · Night-Time Lights: day4/index.md
+      - Day 5 · Publishing and results: day5/index.md
+  - Laboratories: labs/index.md
+  - Slides: slides/index.md
+  - Publish your work:
+      - publish/index.md
+  - Resources:
+      - Action Plan mapping: resources/action-plan.md
+      - Glossary: resources/glossary.md
+      - Licensing and ethics: resources/licensing.md
+      - For facilitators: resources/facilitators.md
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/STG17-Africa
+    - icon: fontawesome/solid/globe
+      link: https://www.afdb.org
+  generator: false
+
+not_in_nav: |
+  /**/*.fr.md

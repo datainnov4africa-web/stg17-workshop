@@ -1,0 +1,16 @@
+site_name: <Indicator name> - <Country>
+site_description: Produced during the STG17 workshop - AfDB / AU STATAFRIC
+theme:
+  name: material
+  palette:
+    primary: black
+    accent: green
+  features:
+    - navigation.top
+    - content.code.copy
+markdown_extensions:
+  - admonition
+  - tables
+  - attr_list
+nav:
+  - Home: index.md

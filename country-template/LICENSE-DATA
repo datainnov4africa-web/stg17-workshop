@@ -1,0 +1,56 @@
+DATA LICENCE
+============
+
+This file covers the DERIVED DATA in data/processed/ and outputs/.
+Code is licensed separately, under MIT - see LICENSE.
+
+--------------------------------------------------------------------------
+CHOOSE ONE OF THE TWO BLOCKS BELOW AND DELETE THE OTHER.
+The choice is not free: it is determined by the strictest licence among your
+inputs. See the data-sources table in README.md.
+--------------------------------------------------------------------------
+
+### BLOCK A - no Ookla data used anywhere in this repository
+
+Creative Commons Attribution 4.0 International (CC BY 4.0)
+https://creativecommons.org/licenses/by/4.0/
+
+You are free to share and adapt this data for any purpose, including
+commercially, provided you give appropriate credit.
+
+Attribution:
+  "<Indicator name> - <Country>, <Your office>, <year>. Derived from NASA
+   Black Marble VNP46A4 and <other sources>. CC BY 4.0."
+
+--------------------------------------------------------------------------
+
+### BLOCK B - Ookla open data used, alone or in combination
+
+Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International
+(CC BY-NC-SA 4.0)
+https://creativecommons.org/licenses/by-nc-sa/4.0/
+
+This is NOT a choice. The Ookla Speedtest open dataset is published under
+CC BY-NC-SA 4.0, and two of its terms propagate to anything derived from it:
+
+  * NonCommercial - this derived data may not be used for commercial purposes.
+  * ShareAlike    - this derived data must itself be distributed under
+                    CC BY-NC-SA 4.0. It cannot be relicensed as CC BY 4.0 and
+                    cannot be placed in the public domain.
+
+Consequence for a national statistical office: this product cannot be released
+under a standard open-data policy that permits commercial reuse. State the
+licence clearly on the product, and raise the question internally before the
+indicator enters a regular publication.
+
+Attribution:
+  "<Indicator name> - <Country>, <Your office>, <year>. Contains data from
+   Ookla Speedtest Intelligence (CC BY-NC-SA 4.0) and <other sources>.
+   Distributed under CC BY-NC-SA 4.0."
+
+--------------------------------------------------------------------------
+
+BOUNDARIES
+Whichever administrative boundary file was used must be cited above with its
+own licence. Boundary depiction in this repository represents the position of
+<Your office> and not that of the African Development Bank or AU STATAFRIC.

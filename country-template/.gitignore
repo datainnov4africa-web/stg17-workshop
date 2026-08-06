@@ -1,0 +1,29 @@
+# Secrets - never commit these.
+.env
+*.key
+*_token*
+
+# Raw inputs: large, and in some cases not ours to redistribute.
+data/raw/
+*.h5
+*.tif
+*.tiff
+*.nc
+
+# Large tabular files. Derived tables under 5 MB belong in data/processed/.
+data/**/*.parquet
+data/raw/**/*.csv
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.ipynb_checkpoints/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Site build
+site/

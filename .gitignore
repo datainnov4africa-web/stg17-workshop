@@ -1,0 +1,32 @@
+# Secrets
+.env
+*.key
+*_token*
+
+# Local data mirror - never committed. Built by tools/fetch_data.py
+STG17_LOCAL/
+NTL_LOCAL/
+data/raw/
+*.h5
+*.tif
+*.tiff
+*.nc
+*.parquet
+
+# Build output
+site/
+slides/vendor/
+slides/pptx/*.pptx
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.ipynb_checkpoints/
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
