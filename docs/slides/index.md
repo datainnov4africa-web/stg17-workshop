@@ -25,7 +25,19 @@ Building a shared concept map: AI, LLM, prompt engineering, RAG, fine-tuning,
 agentic systems, agents, MCP. This half-hour sets the vocabulary used for the
 rest of the week.
 
-:material-progress-clock: *Day 1 batch*
+:material-check-circle:{ .ok } **Available**
+
+<p>
+<a class="md-button md-button--primary" href="01-the-ai-family-tree-how-the-concepts-fit-together-en.html">Present (EN)</a>
+<a class="md-button" href="01-the-ai-family-tree-how-the-concepts-fit-together-fr.html">Présenter (FR)</a>
+</p>
+
+<p>
+<a href="01-the-ai-family-tree-how-the-concepts-fit-together-en.html?print-pdf">PDF (EN)</a> ·
+<a href="01-the-ai-family-tree-how-the-concepts-fit-together-fr.html?print-pdf">PDF (FR)</a> ·
+<a href="pptx/01-ai-family-tree-en.pptx">PPTX (EN)</a> ·
+<a href="pptx/01-ai-family-tree-fr.pptx">PPTX (FR)</a>
+</p>
 
 ### Deck 02 { #deck-02 }
 **AI Infrastructure: What It Really Takes to Run AI in a Statistical Office** — 45 min

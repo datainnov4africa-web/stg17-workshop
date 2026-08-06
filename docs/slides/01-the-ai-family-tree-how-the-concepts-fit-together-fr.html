@@ -1,0 +1,561 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<title>L'arbre généalogique de l'IA - Comment les concepts s'articulent · STG17</title>
+<meta name="description" content="Jour 1 · 09h45-10h15 · Exposé — STG17 workshop, AfDB / AU STATAFRIC">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reset.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.css">
+<link rel="stylesheet" href="../../slides/theme/_afdb-vars.css">
+<link rel="stylesheet" href="../../slides/theme/afdb.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/plugin/highlight/monokai.css">
+</head>
+<body class="no-reveal">
+<div class="reveal">
+  <div class="slides">
+<section class="title">
+
+<div class="eyebrow">Banque africaine de développement · UA STATAFRIC · STG17 · Jour 1</div>
+<h1>L'arbre généalogique de l'IA</h1>
+<h2>Comment les concepts s'articulent — et lesquels ont leur place dans un office statistique</h2>
+<div class="meta">
+Trente minutes pour fixer le vocabulaire de toute la semaine.<br>
+Chaque terme vu ici revient aux Jours 2, 3, 4 et 5.<br><br>
+Plan d'action STG17 2025-2030 · activités 3.3.2 et 4.1.1
+</div>
+</section>
+<section>
+<span class="timing">2 min</span>
+
+<h2>Pourquoi une demi-heure sur du vocabulaire</h2>
+
+<div class="cols wide-left">
+<div>
+<p>Trois phrases, toutes réellement apparues dans des cahiers des charges
+d'offices statistiques :</p>
+
+<div class="warn" style="font-size:.72em;">
+<b>Vues sur le terrain</b>
+<i>« Il nous faut une IA pour répondre aux questions sur nos publications. »</i><br>
+<i>« L'agent utilisera l'apprentissage automatique pour classer les réponses. »</i><br>
+<i>« Nous allons affiner le modèle sur nos données pour qu'il connaisse nos statistiques. »</i>
+</div>
+
+<p style="font-size:.86em;">Chacune décrit un système <em>différent</em>, au coût
+différent, au risque différent, et avec une réponse différente à « qui répond de
+la sortie ». La troisième, en particulier, décrit généralement quelque chose que
+son auteur n'avait pas en tête et n'aurait pas financé.</p>
+
+<div class="key">
+<b>L'objet de cette demi-heure</b>
+Non pas faire de vous un ingénieur. Faire en sorte que lorsque votre office
+rédige un cahier des charges, achète un service ou explique une décision à un
+conseil, les mots du document signifient ce que le lecteur croit qu'ils signifient.
+</div>
+</div>
+<div>
+<div class="metrics" style="flex-direction:column;">
+<div><div class="n">8</div><div class="l">Termes fixés aujourd'hui</div><div class="s">utilisés toute la semaine</div></div>
+<div><div class="n">3</div><div class="l">Façons d'adapter un modèle</div><div class="s">de la moins chère à la plus chère</div></div>
+<div><div class="n">1</div><div class="l">Mécanisme sous-jacent</div><div class="s">tout le reste repose dessus</div></div>
+</div>
+</div>
+</div>
+
+<aside class="notes">
+Lisez les trois phrases citées à voix haute, puis marquez une pause. Demandez à
+la salle, sans nommer personne, si certaines leur sont familières. En général
+plusieurs mains se lèvent. C'est cette reconnaissance qui fait porter les
+vingt-cinq minutes suivantes : il ne s'agit pas de terminologie abstraite, mais
+de la langue dans laquelle leurs propres documents d'achat sont déjà rédigés.
+</aside>
+</section>
+<section class="divider">
+
+<div class="eyebrow" style="color:var(--afdb-amber);">Partie 1</div>
+<h2>Le mécanisme unique en dessous</h2>
+<p>Tout le reste de cette présentation repose sur une seule boucle.</p>
+</section>
+<section>
+<span class="timing">4 min</span>
+
+<h2>Ce que fait réellement un modèle de langage</h2>
+<figure>
+<svg viewBox="0 0 1180 250" xmlns="http://www.w3.org/2000/svg" role="img"
+     aria-label="Un modèle de langage prédisant le token suivant, avec une distribution de probabilité">
+ <g font-family="Inter,sans-serif">
+  <text x="20" y="30" font-size="15" fill="#6B7B75">Entrée, découpée en tokens</text>
+  <g>
+   <rect x="20"  y="44" width="128" height="38" rx="7" fill="#F4F8F5" stroke="#1B7A43"/>
+   <rect x="154" y="44" width="86"  height="38" rx="7" fill="#F4F8F5" stroke="#1B7A43"/>
+   <rect x="246" y="44" width="112" height="38" rx="7" fill="#F4F8F5" stroke="#1B7A43"/>
+   <rect x="364" y="44" width="74"  height="38" rx="7" fill="#F4F8F5" stroke="#1B7A43"/>
+   <rect x="444" y="44" width="96"  height="38" rx="7" fill="#F4F8F5" stroke="#1B7A43"/>
+   <text x="84"  y="69" text-anchor="middle" font-size="15" fill="#0B2545">Le plus grand</text>
+   <text x="197" y="69" text-anchor="middle" font-size="15" fill="#0B2545">pays</text>
+   <text x="302" y="69" text-anchor="middle" font-size="15" fill="#0B2545">d'Afrique</text>
+   <text x="401" y="69" text-anchor="middle" font-size="15" fill="#0B2545">en aire</text>
+   <text x="492" y="69" text-anchor="middle" font-size="15" fill="#0B2545">est</text>
+  </g>
+
+  <rect x="560" y="36" width="150" height="54" rx="10" fill="#0B2545"/>
+  <text x="635" y="60" text-anchor="middle" font-size="14" font-weight="700" fill="#fff">LE MODÈLE</text>
+  <text x="635" y="79" text-anchor="middle" font-size="12" fill="#b9c8d8">milliards de poids</text>
+  <path d="M544 63 L556 63" stroke="#1B7A43" stroke-width="2.5"/>
+  <path d="M714 63 L734 63" stroke="#1B7A43" stroke-width="2.5"/>
+
+  <text x="740" y="30" font-size="15" fill="#6B7B75">Probabilité du token suivant</text>
+  <g font-size="14">
+   <rect x="740" y="42" width="300" height="17" rx="3" fill="#1B7A43"/>
+   <text x="1050" y="55" fill="#0B2545">l'Algérie &nbsp;0,71</text>
+   <rect x="740" y="65" width="76"  height="17" rx="3" fill="#4B9E6E"/>
+   <text x="826" y="78" fill="#33403A">le Soudan &nbsp;0,18</text>
+   <rect x="740" y="88" width="30"  height="17" rx="3" fill="#8ABFA3"/>
+   <text x="780" y="101" fill="#6B7B75">un &nbsp;0,07</text>
+   <rect x="740" y="111" width="14" height="17" rx="3" fill="#C3DDD0"/>
+   <text x="764" y="124" fill="#6B7B75">la Libye &nbsp;0,03</text>
+  </g>
+
+  <path d="M890 140 C 890 170, 300 170, 300 100" fill="none" stroke="#F2A900"
+        stroke-width="2.5" stroke-dasharray="6 4"/>
+  <text x="600" y="188" text-anchor="middle" font-size="15" fill="#8a6100" font-weight="700">
+   en choisir un · l'ajouter · tout recommencer</text>
+  <text x="600" y="212" text-anchor="middle" font-size="14" fill="#6B7B75">
+   Cette boucle, répétée quelques centaines de fois, constitue toute la sortie.</text>
+  <text x="600" y="236" text-anchor="middle" font-size="14" fill="#6B7B75">
+   Aucune consultation de base, aucune étape où le modèle vérifie s'il a raison.</text>
+ </g>
+</svg>
+</figure>
+
+<div class="key">
+<b>Relisez cette dernière ligne</b>
+Un modèle de langage n'est pas une base de connaissances dotée d'une interface
+conversationnelle. C'est un prédicteur de token suivant. Il produit la
+<em>continuation la plus plausible</em>, et plausibilité et vérité coïncident la
+plupart du temps — ce qui rend précisément les divergences dangereuses.
+</div>
+
+<div class="src">
+<b>Sources</b> · L'architecture : Vaswani et al. (2017), <i>Attention Is All You Need</i>,
+NeurIPS. · Comportement few-shot et effet d'échelle : Brown et al. (2020),
+<i>Language Models are Few-Shot Learners</i>, NeurIPS. · L'hallucination comme
+propriété et non comme défaut : Ji et al. (2023), <i>Survey of Hallucination in
+Natural Language Generation</i>, <i>ACM Computing Surveys</i> 55(12).
+</div>
+
+<aside class="notes">
+C'est la diapositive la plus importante de la semaine et elle mérite qu'on
+ralentisse. La salle contient des personnes à qui l'on demandera plus tard
+« peut-on lui faire confiance ? » — et la réponse honnête commence ici : le
+modèle n'a aucune notion interne du vrai ou du faux, seulement du probable. Tout
+ce qui est dit au Jour 2 sur la vérification, et tout ce qui est dit au Jour 4
+sur la validation, découle de ce seul fait. Au laboratoire de cet après-midi, les
+participants affichent la distribution de probabilité réelle pour un prompt de
+leur choix.
+</aside>
+</section>
+<section class="divider">
+
+<div class="eyebrow" style="color:var(--afdb-amber);">Partie 2</div>
+<h2>Trois façons de le rendre utile</h2>
+<p>Prompt, récupération, réentraînement — dans cet ordre, toujours.</p>
+</section>
+<section>
+<span class="timing">5 min</span>
+
+<h2>Les trois leviers, et sur quoi chacun agit</h2>
+<figure>
+<svg viewBox="0 0 1180 270" xmlns="http://www.w3.org/2000/svg" role="img"
+     aria-label="Trois leviers d'adaptation : le prompt agit sur l'entrée, le RAG sur le contexte, l'affinage sur les poids">
+ <g font-family="Inter,sans-serif">
+  <rect x="30" y="30" width="350" height="180" rx="12" fill="#F4F8F5" stroke="#1B7A43" stroke-width="2"/>
+  <text x="205" y="60" text-anchor="middle" font-size="18" font-weight="800" fill="#1B7A43">1 · PROMPT</text>
+  <text x="205" y="84" text-anchor="middle" font-size="14" fill="#0B2545" font-weight="700">agit sur l'ENTRÉE</text>
+  <text x="205" y="112" text-anchor="middle" font-size="13.5" fill="#33403A">Rôle, contexte, contraintes, exemples.</text>
+  <text x="205" y="132" text-anchor="middle" font-size="13.5" fill="#33403A">Le modèle n'est pas touché.</text>
+  <text x="205" y="164" text-anchor="middle" font-size="13.5" fill="#1B7A43" font-weight="700">Coût : nul · Délai : minutes</text>
+  <text x="205" y="188" text-anchor="middle" font-size="13" fill="#6B7B75">À épuiser en premier. Toujours.</text>
+
+  <rect x="410" y="30" width="350" height="180" rx="12" fill="#F4F8F5" stroke="#1B7A43" stroke-width="2"/>
+  <text x="585" y="60" text-anchor="middle" font-size="18" font-weight="800" fill="#1B7A43">2 · RAG</text>
+  <text x="585" y="84" text-anchor="middle" font-size="14" fill="#0B2545" font-weight="700">agit sur le CONTEXTE</text>
+  <text x="585" y="112" text-anchor="middle" font-size="13.5" fill="#33403A">Retrouver vos documents, les placer</text>
+  <text x="585" y="132" text-anchor="middle" font-size="13.5" fill="#33403A">dans le prompt. Modèle non touché.</text>
+  <text x="585" y="164" text-anchor="middle" font-size="13.5" fill="#1B7A43" font-weight="700">Coût : faible · Délai : jours</text>
+  <text x="585" y="188" text-anchor="middle" font-size="13" fill="#6B7B75">Le laboratoire de cet après-midi.</text>
+
+  <rect x="790" y="30" width="360" height="180" rx="12" fill="#FEF9EC" stroke="#F2A900" stroke-width="2"/>
+  <text x="970" y="60" text-anchor="middle" font-size="18" font-weight="800" fill="#8a6100">3 · AFFINAGE</text>
+  <text x="970" y="84" text-anchor="middle" font-size="14" fill="#0B2545" font-weight="700">agit sur les POIDS</text>
+  <text x="970" y="112" text-anchor="middle" font-size="13.5" fill="#33403A">Réentraîner sur vos exemples.</text>
+  <text x="970" y="132" text-anchor="middle" font-size="13.5" fill="#33403A">Le modèle lui-même change.</text>
+  <text x="970" y="164" text-anchor="middle" font-size="13.5" fill="#8a6100" font-weight="700">Coût : réel · Délai : semaines</text>
+  <text x="970" y="188" text-anchor="middle" font-size="13" fill="#6B7B75">Rarement la bonne première réponse.</text>
+
+  <text x="590" y="242" text-anchor="middle" font-size="15" fill="#0B2545" font-weight="700">
+   Enseigne bien le STYLE et le FORMAT &nbsp;·&nbsp; enseigne mal les FAITS</text>
+  <text x="590" y="262" text-anchor="middle" font-size="13.5" fill="#6B7B75">
+   ↑ le malentendu le plus coûteux du domaine</text>
+  <path d="M970 214 L970 228" stroke="#F2A900" stroke-width="2"/>
+ </g>
+</svg>
+</figure>
+
+<div class="warn">
+<b>« Nous allons affiner le modèle sur nos données pour qu'il connaisse nos statistiques »</b>
+C'est la phrase de la diapositive 2, et elle désigne le mauvais levier. L'affinage
+apprend à un modèle à <em>écrire comme</em> votre office ; il ne lui apprend pas
+de façon fiable à <em>connaître</em> vos chiffres, et il ne vous donne aucun moyen
+de citer une source. Le besoin derrière cette phrase est presque toujours le
+<strong>RAG</strong> — moins cher, plus rapide, actualisable dès qu'un chiffre est
+révisé, et produisant une réponse traçable jusqu'à un document.
+</div>
+
+<div class="src">
+<b>Sources</b> · RAG : Lewis et al. (2020), <i>Retrieval-Augmented Generation for
+Knowledge-Intensive NLP Tasks</i>, NeurIPS. · Affinage à faible coût : Hu et al. (2021),
+<i>LoRA: Low-Rank Adaptation of Large Language Models</i>. · Technique de prompt :
+Wei et al. (2022), <i>Chain-of-Thought Prompting Elicits Reasoning in Large Language
+Models</i>, NeurIPS.
+</div>
+
+<aside class="notes">
+Si vous ne retenez qu'une diapositive pour une réunion d'achat, prenez celle-ci.
+L'ordre — prompt, puis récupération, puis réentraînement — n'est pas affaire de
+goût : il est ordonné par le coût, par le délai, et par la facilité d'audit du
+résultat. L'avertissement ambre est la correction dont la plupart des salles ont
+besoin, et il mérite d'être dit clairement : un prestataire qui propose
+l'affinage comme réponse à « le modèle doit connaître nos données » propose le
+levier coûteux pour un problème que le levier bon marché résout mieux.
+</aside>
+</section>
+<section>
+<span class="timing">4 min</span>
+
+<h2>Le RAG, dans la forme que vous construirez cet après-midi</h2>
+<figure>
+<svg viewBox="0 0 1180 250" xmlns="http://www.w3.org/2000/svg" role="img"
+     aria-label="Chaîne RAG : question, récupération dans les documents indexés, réponse ancrée avec citation">
+ <defs><marker id="raf" markerWidth="9" markerHeight="9" refX="7" refY="3.2" orient="auto">
+   <path d="M0,0 L8,3.2 L0,6.4 z" fill="#1B7A43"/></marker></defs>
+ <g font-family="Inter,sans-serif" font-size="13">
+  <rect x="20" y="96" width="150" height="52" rx="10" fill="#0B2545"/>
+  <text x="95" y="118" text-anchor="middle" fill="#fff" font-size="14" font-weight="700">QUESTION</text>
+  <text x="95" y="137" text-anchor="middle" fill="#b9c8d8">d'un utilisateur</text>
+
+  <rect x="212" y="96" width="176" height="52" rx="10" fill="#F4F8F5" stroke="#1B7A43" stroke-width="1.6"/>
+  <text x="300" y="118" text-anchor="middle" fill="#0B2545" font-weight="700">1 · RÉCUPÉRER</text>
+  <text x="300" y="137" text-anchor="middle" fill="#33403A">trouver les passages pertinents</text>
+
+  <rect x="212" y="18" width="176" height="60" rx="10" fill="#fff" stroke="#6B7B75" stroke-dasharray="4 3"/>
+  <text x="300" y="40" text-anchor="middle" fill="#6B7B75" font-weight="700">VOS DOCUMENTS</text>
+  <text x="300" y="58" text-anchor="middle" fill="#6B7B75">annuaires · méthodes · SHaSA II</text>
+  <text x="300" y="72" text-anchor="middle" fill="#6B7B75" font-size="12">découpés et indexés à l'avance</text>
+  <line x1="300" y1="80" x2="300" y2="92" stroke="#6B7B75" stroke-width="1.6" marker-end="url(#raf)"/>
+
+  <rect x="430" y="96" width="176" height="52" rx="10" fill="#F4F8F5" stroke="#1B7A43" stroke-width="1.6"/>
+  <text x="518" y="118" text-anchor="middle" fill="#0B2545" font-weight="700">2 · AUGMENTER</text>
+  <text x="518" y="137" text-anchor="middle" fill="#33403A">les coller dans le prompt</text>
+
+  <rect x="648" y="96" width="176" height="52" rx="10" fill="#F4F8F5" stroke="#1B7A43" stroke-width="1.6"/>
+  <text x="736" y="118" text-anchor="middle" fill="#0B2545" font-weight="700">3 · GÉNÉRER</text>
+  <text x="736" y="137" text-anchor="middle" fill="#33403A">répondre depuis ce texte seul</text>
+
+  <rect x="866" y="88" width="290" height="68" rx="10" fill="#1B7A43"/>
+  <text x="1011" y="112" text-anchor="middle" fill="#fff" font-size="14" font-weight="700">RÉPONSE ANCRÉE</text>
+  <text x="1011" y="131" text-anchor="middle" fill="#d6ecdf">avec le passage source joint</text>
+  <text x="1011" y="147" text-anchor="middle" fill="#d6ecdf" font-size="12">— ou un honnête « absent de mes documents »</text>
+
+  <g stroke="#1B7A43" stroke-width="2.2" marker-end="url(#raf)">
+   <line x1="172" y1="122" x2="206" y2="122"/>
+   <line x1="390" y1="122" x2="424" y2="122"/>
+   <line x1="608" y1="122" x2="642" y2="122"/>
+   <line x1="826" y1="122" x2="860" y2="122"/>
+  </g>
+
+  <text x="590" y="196" text-anchor="middle" font-size="14.5" fill="#8a6100" font-weight="700">
+   La mémoire propre du modèle n'est jamais consultée. Il ne lit que ce que l'étape 2 lui a remis.</text>
+  <text x="590" y="220" text-anchor="middle" font-size="13.5" fill="#6B7B75">
+   C'est ce qui rend la réponse citable — et ce qui fait de « absent de mes documents » une bonne</text>
+  <text x="590" y="240" text-anchor="middle" font-size="13.5" fill="#6B7B75">
+   réponse plutôt qu'un échec.</text>
+ </g>
+</svg>
+</figure>
+
+<div class="key">
+<b>Pourquoi un office statistique doit s'intéresser précisément à l'étape 3</b>
+Une réponse citant le paragraphe dont elle provient se vérifie en dix secondes
+par un humain. Une réponse sans source doit être crue ou refaite. Une seule des
+deux est compatible avec une publication sous marque officielle.
+</div>
+
+<aside class="notes">
+Pointez la ligne ambre. L'échec le plus fréquent d'un premier RAG est que le
+récupérateur ne renvoie rien d'utile et que le modèle, laissé avec un contexte
+vide, se rabat sur sa propre mémoire et répond avec aisance et à côté. Le
+laboratoire de cet après-midi inclut délibérément des questions auxquelles le
+corpus ne peut pas répondre, pour que les participants voient cet échec se
+produire et apprennent à instruire le modèle de refuser.
+</aside>
+</section>
+<section class="divider">
+
+<div class="eyebrow" style="color:var(--afdb-amber);">Partie 3</div>
+<h2>Les agents, et où se place la supervision</h2>
+<p>Le pas de « répond à une question » à « accomplit une action ».</p>
+</section>
+<section>
+<span class="timing">5 min</span>
+
+<h2>Assistant → agent : un seul changement, et il n'est pas mince</h2>
+
+<table>
+<tr><th></th><th>Assistant (ce que vous construisez à 14h45)</th><th>Agent (ce que vous construisez à 15h45)</th></tr>
+<tr>
+ <td><b>Ce qu'il fait</b></td>
+ <td>Lit, puis rédige une réponse</td>
+ <td>Lit, puis <em>décide quel outil appeler</em>, l'appelle, lit le résultat, recommence</td>
+</tr>
+<tr>
+ <td><b>Qui choisit les étapes</b></td>
+ <td>Vous, en écrivant la chaîne</td>
+ <td><strong>Le modèle, à l'exécution</strong></td>
+</tr>
+<tr>
+ <td><b>À quoi ressemble un échec</b></td>
+ <td>Une phrase fausse</td>
+ <td>Une phrase fausse, ou une <em>action</em> fausse, ou une boucle qui ne s'arrête pas</td>
+</tr>
+<tr>
+ <td><b>Ce qu'il coûte</b></td>
+ <td>Un appel au modèle</td>
+ <td>Autant d'appels qu'il décide d'en faire</td>
+</tr>
+<tr>
+ <td><b>Où se place l'humain</b></td>
+ <td>Vérifier la sortie avant publication</td>
+ <td>Vérifier la sortie <strong>et</strong> approuver les actions avant qu'elles n'aient lieu</td>
+</tr>
+</table>
+
+<div class="warn">
+<b>Le mot « outil » porte beaucoup ici</b>
+Un outil est toute fonction que vous autorisez le modèle à appeler : une requête
+en base, une étape de récupération, une écriture de fichier, un courriel. Le
+modèle n'exécute pas l'outil — <em>c'est votre code qui l'exécute</em>, après que
+le modèle l'a demandé. C'est dans cet interstice que vivent tous les points
+d'approbation, journaux d'audit et contrôles de sûreté. Concevez-le avant d'en
+avoir besoin.
+</div>
+
+<div class="src">
+<b>Normaliser l'interface des outils</b> · Le <b>Model Context Protocol (MCP)</b> est un
+protocole ouvert pour connecter les modèles aux outils et aux sources de données
+de façon uniforme — un outil écrit une fois est réutilisable entre systèmes plutôt
+que réimplémenté pour chaque fournisseur.
+<span style="font-family:var(--afdb-mono)">modelcontextprotocol.io</span>
+</div>
+
+<aside class="notes">
+La ligne qui compte pour ce public est la dernière. Dans un assistant, un humain
+vérifie la sortie. Dans un agent, un humain doit aussi s'interposer entre la
+décision et l'action — et c'est un choix d'architecture fait à la construction,
+pas une politique ajoutable après coup. Dites clairement que « l'humain dans la
+boucle » n'est pas un slogan ici : c'est un endroit précis dans le code, et le
+laboratoire de cet après-midi montre exactement où il se place.
+</aside>
+</section>
+<section>
+<span class="timing">4 min</span>
+
+<h2>Où chaque concept se place dans la chaîne de valeur statistique</h2>
+
+<table>
+<tr><th>Étape</th><th>Usage plausible</th><th>Le bon levier</th><th>Contrôle non négociable</th></tr>
+<tr><td><b>Collecte</b></td><td>Classer des réponses d'enquête en texte libre ; coder des professions</td>
+    <td>Prompt, ou un petit classifieur entraîné</td><td>Un jeu d'évaluation étiqueté — mesuré, non supposé</td></tr>
+<tr><td><b>Traitement</b></td><td>Extraire les tableaux d'une publication PDF</td>
+    <td>Prompt + sortie structurée</td><td>Vérification contre la source. Jour 2 matin</td></tr>
+<tr><td><b>Analyse</b></td><td>Écrire et déboguer le code d'analyse lui-même</td>
+    <td>Prompt</td><td>Le code est lu et exécuté par un statisticien</td></tr>
+<tr><td><b>Diffusion</b></td><td>Répondre aux questions du public sur vos publications</td>
+    <td><em>RAG</em></td><td>Chaque réponse porte son passage source</td></tr>
+<tr><td><b>Documentation</b></td><td>Rédiger notes méthodologiques et métadonnées</td>
+    <td>Prompt, ou RAG sur les notes passées</td><td>Validé par le responsable de la méthode</td></tr>
+<tr style="background:#FEF9EC;"><td><b>Estimation</b></td><td colspan="3">
+    <strong>Produire un chiffre officiel directement à partir d'un modèle.</strong> Absent de
+    cette liste, et de toute liste. Un modèle de langage produit le plausible, pas le mesuré.
+    Utilisez-le autour de vos statistiques, jamais à leur place.</td></tr>
+</table>
+
+<div class="key">
+<b>Il existe un cadre international pour cela</b>
+Le Groupe de haut niveau de la CEE-ONU pour la modernisation de la statistique
+officielle (HLG-MOS) a publié <i>Machine Learning for Official Statistics</i>,
+comprenant un <strong>cadre de qualité</strong> pour le choix des méthodes et des
+orientations pour passer de l'expérimentation à la production. Votre office n'a
+pas à inventer ses propres critères — et une proposition qui ignore un cadre
+international existant se conteste plus facilement qu'une proposition qui s'y
+confronte.
+</div>
+
+<div class="src">
+<b>Sources</b> · CEE-ONU HLG-MOS, <i>Machine Learning for Official Statistics</i> — projet
+du groupe apprentissage automatique, orientations sur l'usage éthique et cadre de
+qualité ; <span style="font-family:var(--afdb-mono)">statswiki.unece.org</span> ·
+Comité d'experts des Nations unies sur les mégadonnées et la science des données
+pour la statistique officielle — la Plateforme mondiale, revue au Jour 3.
+</div>
+
+<aside class="notes">
+La ligne ambre mérite qu'on s'y arrête. Toutes les autres lignes sont des gains
+d'efficacité autour d'un processus statistique existant ; celle-là remplacerait
+le processus lui-même, et c'est la limite que cet atelier ne franchit pas.
+Mentionnez explicitement le cadre de la CEE-ONU — il donne aux participants
+quelque chose de citable à rapporter à une direction hésitante, et signale qu'il
+s'agit d'une conversation méthodologique établie et non d'une nouveauté.
+</aside>
+</section>
+<section>
+<span class="timing">3 min</span>
+
+<h2>Huit mots, fixés pour la semaine</h2>
+
+<div class="cols">
+<div>
+<table style="font-size:.58em;">
+<tr><td><b>LLM</b></td><td>Un prédicteur de token suivant entraîné sur un très grand corpus de texte. Pas une base de données.</td></tr>
+<tr><td><b>Token</b></td><td>L'unité sous-lexicale que le modèle lit et écrit. Coûts et limites de contexte se comptent en tokens, pas en mots.</td></tr>
+<tr><td><b>Ingénierie de prompt</b></td><td>Façonner l'<em>entrée</em>. Gratuit, immédiat, et le levier à épuiser en premier.</td></tr>
+<tr><td><b>RAG</b></td><td>Façonner le <em>contexte</em> — récupérer vos documents pour que la réponse soit ancrée et citable.</td></tr>
+</table>
+</div>
+<div>
+<table style="font-size:.58em;">
+<tr><td><b>Affinage</b></td><td>Changer les <em>poids</em>. Enseigne bien le style, mal les faits.</td></tr>
+<tr><td><b>Agent</b></td><td>Un modèle autorisé à choisir quels outils appeler, et dans quel ordre. C'est toujours votre code qui les exécute.</td></tr>
+<tr><td><b>MCP</b></td><td>Un protocole ouvert pour exposer outils et données aux modèles de façon uniforme — écrire un outil une fois, le réutiliser.</td></tr>
+<tr><td><b>Hallucination</b></td><td>Une sortie fluide, assurée et fausse. Propriété du mécanisme, gérée par la vérification — pas un défaut en attente de correctif.</td></tr>
+</table>
+</div>
+</div>
+
+<div class="key">
+<b>La discipline que cela vous achète</b>
+Quand quelqu'un de votre office dira « l'agent utilisera le RAG pour affiner les
+réponses », vous saurez désormais que cette phrase contient trois termes et ne
+décrit aucun système cohérent — et vous pourrez poser la question qui débloque le
+projet : <em>lequel des trois leviers est-ce, et par rapport à quoi le
+mesurons-nous ?</em>
+</div>
+
+<aside class="notes">
+Lisez la phrase de clôture telle quelle ; c'est celle que les participants citent
+en retour plus tard dans la semaine. Renvoyez-les au glossaire du site de
+l'atelier, qui porte ces termes dans les deux langues avec la formulation exacte
+des carnets — l'intérêt d'un vocabulaire partagé est qu'il soit réellement
+partagé, et non répété approximativement à cinq endroits.
+</aside>
+</section>
+<section class="divider">
+
+<div class="eyebrow" style="color:var(--afdb-amber);">Ensuite</div>
+<h2>10h30 — Ce que vos pays ont réellement tenté</h2>
+<p style="font-size:.8em;">Huit minutes chacun, six diapositives, et la moitié la
+plus utile est ce qui n'a pas fonctionné.</p>
+<p style="font-size:.66em;color:#6B7B75;margin-top:2rem;">
+14h00 — Infrastructure de l'IA : ce qu'exige réellement son exploitation dans un office statistique<br>
+14h45 — Laboratoire : construire l'assistant RAG de cette présentation<br>
+15h45 — Laboratoire : le transformer en agent, et trouver où il doit rester supervisé
+</p>
+</section>
+<section class="appendix">
+
+<h2>Références</h2>
+<p style="font-size:.5em;color:var(--afdb-muted);margin-top:-.3em;">
+La liste annotée complète, avec liens actifs, est sur le site de l'atelier, sous Ressources.</p>
+
+<ol class="refs">
+<li><b>Vaswani, A., Shazeer, N., Parmar, N., Uszkoreit, J., Jones, L., Gomez, A.N., et al.</b>
+(2017). Attention Is All You Need. <i>Advances in Neural Information Processing
+Systems</i> 30.<br><i>L'architecture transformeur sur laquelle repose tout modèle de cette présentation.</i></li>
+
+<li><b>Brown, T.B., et al.</b> (2020). Language Models are Few-Shot Learners.
+<i>Advances in Neural Information Processing Systems</i> 33.<br>
+<i>Pourquoi donner quelques exemples au modèle dans le prompt fonctionne.</i></li>
+
+<li><b>Lewis, P., Perez, E., Piktus, A., Petroni, F., Karpukhin, V., Goyal, N., et al.</b>
+(2020). Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks.
+<i>Advances in Neural Information Processing Systems</i> 33.<br>
+<i>L'article fondateur du RAG — le motif que vous construisez cet après-midi.</i></li>
+
+<li><b>Hu, E.J., Shen, Y., Wallis, P., Allen-Zhu, Z., Li, Y., Wang, S., et al.</b> (2021).
+LoRA: Low-Rank Adaptation of Large Language Models. <i>arXiv:2106.09685</i> ;
+ICLR 2022.<br><i>Pourquoi l'affinage est désormais abordable — et reste le mauvais premier levier.</i></li>
+
+<li><b>Wei, J., Wang, X., Schuurmans, D., Bosma, M., Ichter, B., Xia, F., et al.</b> (2022).
+Chain-of-Thought Prompting Elicits Reasoning in Large Language Models.
+<i>Advances in Neural Information Processing Systems</i> 35.<br>
+<i>Le résultat de prompting derrière une grande partie du Jour 2 matin.</i></li>
+
+<li><b>Ji, Z., Lee, N., Frieske, R., Yu, T., Su, D., Xu, Y., et al.</b> (2023).
+Survey of Hallucination in Natural Language Generation. <i>ACM Computing Surveys</i>,
+55(12), 1-38.<br><i>L'hallucination comme propriété du mécanisme, non comme défaut à corriger.</i></li>
+
+<li><b>Groupe de haut niveau de la CEE-ONU pour la modernisation de la statistique officielle.</b>
+<i>Machine Learning for Official Statistics</i> — productions du projet apprentissage
+automatique, dont des orientations sur l'usage éthique et un cadre de qualité.
+<span class="doi">statswiki.unece.org</span><br>
+<i>Le cadre méthodologique international. Citez-le plutôt que d'inventer vos propres critères.</i></li>
+
+<li><b>Model Context Protocol.</b> Spécification ouverte pour connecter les modèles aux
+outils et aux sources de données. <span class="doi">modelcontextprotocol.io</span><br>
+<i>Écrire un outil une fois ; le réutiliser entre systèmes plutôt que par fournisseur.</i></li>
+</ol>
+
+<aside class="notes">
+Ne lisez pas cette diapositive. Elle existe pour que la présentation publiée
+serve de bibliographie et pour qu'une affirmation contestée puisse être appuyée
+sur une source plutôt que sur une assertion.
+</aside>
+</section>
+  </div>
+</div>
+<div class="footer">
+  <span class="brand">African Development Bank · AU STATAFRIC · STG17</span>
+  <span>Jour 1 · 09h45-10h15 · Exposé</span>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/plugin/notes/notes.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/plugin/highlight/highlight.js"></script>
+<script>
+// If the CDN is unreachable — a real possibility on the networks this workshop
+// runs on — Reveal is undefined and the body keeps its `no-reveal` class, so the
+// deck renders as a long scrollable document instead of a blank page.
+if (typeof Reveal !== 'undefined') {
+  document.body.classList.remove('no-reveal');
+  Reveal.initialize({
+    hash: true,
+    slideNumber: 'c/t',
+    controls: true,
+    progress: true,
+    center: false,
+    transition: 'fade',
+    transitionSpeed: 'fast',
+    width: 1280,
+    height: 720,
+    margin: 0.045,
+    minScale: 0.2,
+    maxScale: 1.6,
+    plugins: [ RevealNotes, RevealHighlight ]
+  });
+} else {
+  console.warn('reveal.js could not be loaded — falling back to document mode.');
+}
+</script>
+</body>
+</html>

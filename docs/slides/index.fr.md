@@ -26,7 +26,19 @@ Construction d'une carte conceptuelle commune : IA, LLM, ingénierie de prompt,
 RAG, affinage, systèmes agentiques, agents, MCP. Cette demi-heure fixe le
 vocabulaire de toute la semaine.
 
-:material-progress-clock: *Lot Jour 1*
+:material-check-circle:{ .ok } **Disponible**
+
+<p>
+<a class="md-button md-button--primary" href="../../slides/01-the-ai-family-tree-how-the-concepts-fit-together-fr.html">Présenter (FR)</a>
+<a class="md-button" href="../../slides/01-the-ai-family-tree-how-the-concepts-fit-together-en.html">Present (EN)</a>
+</p>
+
+<p>
+<a href="../../slides/01-the-ai-family-tree-how-the-concepts-fit-together-fr.html?print-pdf">PDF (FR)</a> ·
+<a href="../../slides/01-the-ai-family-tree-how-the-concepts-fit-together-en.html?print-pdf">PDF (EN)</a> ·
+<a href="../../slides/pptx/01-ai-family-tree-fr.pptx">PPTX (FR)</a> ·
+<a href="../../slides/pptx/01-ai-family-tree-en.pptx">PPTX (EN)</a>
+</p>
 
 ### Deck 02 { #deck-02 }
 **Infrastructure de l'IA : ce qu'exige réellement son exploitation dans un office statistique** — 45 min

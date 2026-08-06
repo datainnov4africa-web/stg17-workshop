@@ -1,0 +1,551 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<title>The AI Family Tree - How the Concepts Fit Together · STG17</title>
+<meta name="description" content="Day 1 · 09:45-10:15 · Talk — STG17 workshop, AfDB / AU STATAFRIC">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reset.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.css">
+<link rel="stylesheet" href="../../slides/theme/_afdb-vars.css">
+<link rel="stylesheet" href="../../slides/theme/afdb.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/plugin/highlight/monokai.css">
+</head>
+<body class="no-reveal">
+<div class="reveal">
+  <div class="slides">
+<section class="title">
+
+<div class="eyebrow">African Development Bank · AU STATAFRIC · STG17 · Day 1</div>
+<h1>The AI Family Tree</h1>
+<h2>How the concepts fit together — and which ones belong in a statistical office</h2>
+<div class="meta">
+Thirty minutes to fix the vocabulary used for the rest of the week.<br>
+Every term here comes back on Days 2, 3, 4 and 5.<br><br>
+STG17 Action Plan 2025–2030 · activities 3.3.2 and 4.1.1
+</div>
+</section>
+<section>
+<span class="timing">2 min</span>
+
+<h2>Why half an hour on vocabulary</h2>
+
+<div class="cols wide-left">
+<div>
+<p>Three sentences, all of which have appeared in real terms of reference at real
+statistical offices:</p>
+
+<div class="warn" style="font-size:.72em;">
+<b>Seen in the wild</b>
+<i>"We need an AI to answer questions about our publications."</i><br>
+<i>"The agent will use machine learning to classify the responses."</i><br>
+<i>"We will fine-tune the model on our data so it knows our statistics."</i>
+</div>
+
+<p style="font-size:.86em;">Each describes a <em>different</em> system, with different
+cost, different risk, and a different answer to "who is accountable for the
+output". The third one, in particular, usually describes something the author
+did not intend and would not have funded.</p>
+
+<div class="key">
+<b>The point of this half-hour</b>
+Not to make you an engineer. To make sure that when your office writes a
+specification, procures a service, or explains a decision to a Board, the words
+in the document mean what the reader thinks they mean.
+</div>
+</div>
+<div>
+<div class="metrics" style="flex-direction:column;">
+<div><div class="n">8</div><div class="l">Terms fixed today</div><div class="s">used all week</div></div>
+<div><div class="n">3</div><div class="l">Ways to adapt a model</div><div class="s">cheapest first</div></div>
+<div><div class="n">1</div><div class="l">Mechanism underneath</div><div class="s">everything else sits on it</div></div>
+</div>
+</div>
+</div>
+
+<aside class="notes">
+Read the three quoted sentences aloud and pause. Ask the room, without naming
+anyone, whether they recognise any of them. Usually several hands. That
+recognition is what makes the next twenty-five minutes land — this is not
+abstract terminology, it is the language their own procurement documents are
+already written in.
+</aside>
+</section>
+<section class="divider">
+
+<div class="eyebrow" style="color:var(--afdb-amber);">Part 1</div>
+<h2>The one mechanism underneath</h2>
+<p>Everything else in this deck is built on a single loop.</p>
+</section>
+<section>
+<span class="timing">4 min</span>
+
+<h2>What a language model actually does</h2>
+<figure>
+<svg viewBox="0 0 1180 250" xmlns="http://www.w3.org/2000/svg" role="img"
+     aria-label="A language model predicting the next token, with a probability distribution">
+ <g font-family="Inter,sans-serif">
+  <text x="20" y="30" font-size="15" fill="#6B7B75">Input, cut into tokens</text>
+  <g>
+   <rect x="20"  y="44" width="128" height="38" rx="7" fill="#F4F8F5" stroke="#1B7A43"/>
+   <rect x="154" y="44" width="86"  height="38" rx="7" fill="#F4F8F5" stroke="#1B7A43"/>
+   <rect x="246" y="44" width="112" height="38" rx="7" fill="#F4F8F5" stroke="#1B7A43"/>
+   <rect x="364" y="44" width="74"  height="38" rx="7" fill="#F4F8F5" stroke="#1B7A43"/>
+   <rect x="444" y="44" width="96"  height="38" rx="7" fill="#F4F8F5" stroke="#1B7A43"/>
+   <text x="84"  y="69" text-anchor="middle" font-size="15" fill="#0B2545">The largest</text>
+   <text x="197" y="69" text-anchor="middle" font-size="15" fill="#0B2545">country</text>
+   <text x="302" y="69" text-anchor="middle" font-size="15" fill="#0B2545">in Africa</text>
+   <text x="401" y="69" text-anchor="middle" font-size="15" fill="#0B2545">by area</text>
+   <text x="492" y="69" text-anchor="middle" font-size="15" fill="#0B2545">is</text>
+  </g>
+
+  <rect x="560" y="36" width="150" height="54" rx="10" fill="#0B2545"/>
+  <text x="635" y="60" text-anchor="middle" font-size="14" font-weight="700" fill="#fff">THE MODEL</text>
+  <text x="635" y="79" text-anchor="middle" font-size="12" fill="#b9c8d8">billions of weights</text>
+  <path d="M544 63 L556 63" stroke="#1B7A43" stroke-width="2.5"/>
+  <path d="M714 63 L734 63" stroke="#1B7A43" stroke-width="2.5"/>
+
+  <text x="740" y="30" font-size="15" fill="#6B7B75">Probability of the next token</text>
+  <g font-size="14">
+   <rect x="740" y="42" width="300" height="17" rx="3" fill="#1B7A43"/>
+   <text x="1050" y="55" fill="#0B2545">Algeria &nbsp;0.71</text>
+   <rect x="740" y="65" width="76"  height="17" rx="3" fill="#4B9E6E"/>
+   <text x="826" y="78" fill="#33403A">Sudan &nbsp;0.18</text>
+   <rect x="740" y="88" width="30"  height="17" rx="3" fill="#8ABFA3"/>
+   <text x="780" y="101" fill="#6B7B75">the &nbsp;0.07</text>
+   <rect x="740" y="111" width="14" height="17" rx="3" fill="#C3DDD0"/>
+   <text x="764" y="124" fill="#6B7B75">Libya &nbsp;0.03</text>
+  </g>
+
+  <path d="M890 140 C 890 170, 300 170, 300 100" fill="none" stroke="#F2A900"
+        stroke-width="2.5" stroke-dasharray="6 4"/>
+  <text x="600" y="188" text-anchor="middle" font-size="15" fill="#8a6100" font-weight="700">
+   pick one · append it · run the whole thing again</text>
+  <text x="600" y="212" text-anchor="middle" font-size="14" fill="#6B7B75">
+   That loop, repeated a few hundred times, is the entire output.</text>
+  <text x="600" y="236" text-anchor="middle" font-size="14" fill="#6B7B75">
+   There is no lookup, no database, and no step where the model checks whether it is right.</text>
+ </g>
+</svg>
+</figure>
+
+<div class="key">
+<b>Read that last line twice</b>
+A language model is not a knowledge base with a conversational front end. It is a
+next-token predictor. It produces the <em>most plausible continuation</em>, and
+plausibility and truth agree most of the time — which is exactly what makes the
+disagreements dangerous.
+</div>
+
+<div class="src">
+<b>Sources</b> · The architecture: Vaswani et al. (2017), <i>Attention Is All You Need</i>,
+NeurIPS. · Few-shot behaviour and scale: Brown et al. (2020),
+<i>Language Models are Few-Shot Learners</i>, NeurIPS. · Hallucination as a property
+rather than a bug: Ji et al. (2023), <i>Survey of Hallucination in Natural Language
+Generation</i>, <i>ACM Computing Surveys</i> 55(12).
+</div>
+
+<aside class="notes">
+This is the single most important slide of the week and it is worth going slowly.
+The room contains people who will later be asked "can we trust it?" — and the
+honest answer starts here: the model has no internal notion of true or false,
+only of likely. Everything on Day 2 about verification, and everything on Day 4
+about validation, follows from this one fact. In the laboratory this afternoon
+participants print the actual probability distribution for a prompt of their own.
+</aside>
+</section>
+<section class="divider">
+
+<div class="eyebrow" style="color:var(--afdb-amber);">Part 2</div>
+<h2>Three ways to make it useful</h2>
+<p>Prompt, retrieve, retrain — in that order, always.</p>
+</section>
+<section>
+<span class="timing">5 min</span>
+
+<h2>The three levers, and where each one acts</h2>
+<figure>
+<svg viewBox="0 0 1180 270" xmlns="http://www.w3.org/2000/svg" role="img"
+     aria-label="Three adaptation levers: prompt acts on the input, RAG on the context, fine-tuning on the weights">
+ <g font-family="Inter,sans-serif">
+  <rect x="30" y="30" width="350" height="180" rx="12" fill="#F4F8F5" stroke="#1B7A43" stroke-width="2"/>
+  <text x="205" y="60" text-anchor="middle" font-size="18" font-weight="800" fill="#1B7A43">1 · PROMPT</text>
+  <text x="205" y="84" text-anchor="middle" font-size="14" fill="#0B2545" font-weight="700">acts on the INPUT</text>
+  <text x="205" y="112" text-anchor="middle" font-size="13.5" fill="#33403A">Role, context, constraints, examples.</text>
+  <text x="205" y="132" text-anchor="middle" font-size="13.5" fill="#33403A">The model is untouched.</text>
+  <text x="205" y="164" text-anchor="middle" font-size="13.5" fill="#1B7A43" font-weight="700">Cost: zero · Time: minutes</text>
+  <text x="205" y="188" text-anchor="middle" font-size="13" fill="#6B7B75">Exhaust this first. Always.</text>
+
+  <rect x="410" y="30" width="350" height="180" rx="12" fill="#F4F8F5" stroke="#1B7A43" stroke-width="2"/>
+  <text x="585" y="60" text-anchor="middle" font-size="18" font-weight="800" fill="#1B7A43">2 · RAG</text>
+  <text x="585" y="84" text-anchor="middle" font-size="14" fill="#0B2545" font-weight="700">acts on the CONTEXT</text>
+  <text x="585" y="112" text-anchor="middle" font-size="13.5" fill="#33403A">Find your documents, put them in</text>
+  <text x="585" y="132" text-anchor="middle" font-size="13.5" fill="#33403A">the prompt. The model is untouched.</text>
+  <text x="585" y="164" text-anchor="middle" font-size="13.5" fill="#1B7A43" font-weight="700">Cost: low · Time: days</text>
+  <text x="585" y="188" text-anchor="middle" font-size="13" fill="#6B7B75">This afternoon's laboratory.</text>
+
+  <rect x="790" y="30" width="360" height="180" rx="12" fill="#FEF9EC" stroke="#F2A900" stroke-width="2"/>
+  <text x="970" y="60" text-anchor="middle" font-size="18" font-weight="800" fill="#8a6100">3 · FINE-TUNING</text>
+  <text x="970" y="84" text-anchor="middle" font-size="14" fill="#0B2545" font-weight="700">acts on the WEIGHTS</text>
+  <text x="970" y="112" text-anchor="middle" font-size="13.5" fill="#33403A">Retrain on your examples.</text>
+  <text x="970" y="132" text-anchor="middle" font-size="13.5" fill="#33403A">The model itself changes.</text>
+  <text x="970" y="164" text-anchor="middle" font-size="13.5" fill="#8a6100" font-weight="700">Cost: real · Time: weeks</text>
+  <text x="970" y="188" text-anchor="middle" font-size="13" fill="#6B7B75">Rarely the right first answer.</text>
+
+  <text x="590" y="242" text-anchor="middle" font-size="15" fill="#0B2545" font-weight="700">
+   Teaches STYLE and FORMAT well &nbsp;·&nbsp; teaches FACTS badly</text>
+  <text x="590" y="262" text-anchor="middle" font-size="13.5" fill="#6B7B75">
+   ↑ this is the single most expensive misunderstanding in the field</text>
+  <path d="M970 214 L970 228" stroke="#F2A900" stroke-width="2"/>
+ </g>
+</svg>
+</figure>
+
+<div class="warn">
+<b>"We will fine-tune the model on our data so it knows our statistics"</b>
+This is the sentence from slide 2, and it describes the wrong lever. Fine-tuning
+teaches a model to <em>write like</em> your office; it does not reliably teach it
+to <em>know</em> your numbers, and it gives you no way to cite a source. The
+requirement behind that sentence is almost always <strong>RAG</strong> — which is
+cheaper, faster, updatable the moment a figure is revised, and produces an answer
+you can trace back to a document.
+</div>
+
+<div class="src">
+<b>Sources</b> · RAG: Lewis et al. (2020), <i>Retrieval-Augmented Generation for
+Knowledge-Intensive NLP Tasks</i>, NeurIPS. · Low-cost fine-tuning: Hu et al. (2021),
+<i>LoRA: Low-Rank Adaptation of Large Language Models</i>. · Prompting technique:
+Wei et al. (2022), <i>Chain-of-Thought Prompting Elicits Reasoning in Large Language
+Models</i>, NeurIPS.
+</div>
+
+<aside class="notes">
+If you take one slide from this deck into a procurement meeting, take this one.
+The ordering — prompt, then retrieve, then retrain — is not a matter of taste; it
+is ordered by cost, by time, and by how easily the result can be audited. The
+amber warning is the correction most rooms need, and it is worth stating plainly:
+a vendor proposing fine-tuning as the answer to "the model should know our data"
+is proposing the expensive lever for a problem the cheap one solves better.
+</aside>
+</section>
+<section>
+<span class="timing">4 min</span>
+
+<h2>RAG, in the shape you will build this afternoon</h2>
+<figure>
+<svg viewBox="0 0 1180 250" xmlns="http://www.w3.org/2000/svg" role="img"
+     aria-label="RAG pipeline: question, retrieve from indexed documents, grounded answer with citation">
+ <defs><marker id="ra" markerWidth="9" markerHeight="9" refX="7" refY="3.2" orient="auto">
+   <path d="M0,0 L8,3.2 L0,6.4 z" fill="#1B7A43"/></marker></defs>
+ <g font-family="Inter,sans-serif" font-size="13">
+  <rect x="20" y="96" width="150" height="52" rx="10" fill="#0B2545"/>
+  <text x="95" y="118" text-anchor="middle" fill="#fff" font-size="14" font-weight="700">QUESTION</text>
+  <text x="95" y="137" text-anchor="middle" fill="#b9c8d8">from a user</text>
+
+  <rect x="212" y="96" width="176" height="52" rx="10" fill="#F4F8F5" stroke="#1B7A43" stroke-width="1.6"/>
+  <text x="300" y="118" text-anchor="middle" fill="#0B2545" font-weight="700">1 · RETRIEVE</text>
+  <text x="300" y="137" text-anchor="middle" fill="#33403A">find the relevant passages</text>
+
+  <rect x="212" y="18" width="176" height="60" rx="10" fill="#fff" stroke="#6B7B75" stroke-dasharray="4 3"/>
+  <text x="300" y="40" text-anchor="middle" fill="#6B7B75" font-weight="700">YOUR DOCUMENTS</text>
+  <text x="300" y="58" text-anchor="middle" fill="#6B7B75">yearbooks · methods · SHaSA II</text>
+  <text x="300" y="72" text-anchor="middle" fill="#6B7B75" font-size="12">chunked and indexed in advance</text>
+  <line x1="300" y1="80" x2="300" y2="92" stroke="#6B7B75" stroke-width="1.6" marker-end="url(#ra)"/>
+
+  <rect x="430" y="96" width="176" height="52" rx="10" fill="#F4F8F5" stroke="#1B7A43" stroke-width="1.6"/>
+  <text x="518" y="118" text-anchor="middle" fill="#0B2545" font-weight="700">2 · AUGMENT</text>
+  <text x="518" y="137" text-anchor="middle" fill="#33403A">paste them into the prompt</text>
+
+  <rect x="648" y="96" width="176" height="52" rx="10" fill="#F4F8F5" stroke="#1B7A43" stroke-width="1.6"/>
+  <text x="736" y="118" text-anchor="middle" fill="#0B2545" font-weight="700">3 · GENERATE</text>
+  <text x="736" y="137" text-anchor="middle" fill="#33403A">answer from that text only</text>
+
+  <rect x="866" y="88" width="290" height="68" rx="10" fill="#1B7A43"/>
+  <text x="1011" y="112" text-anchor="middle" fill="#fff" font-size="14" font-weight="700">GROUNDED ANSWER</text>
+  <text x="1011" y="131" text-anchor="middle" fill="#d6ecdf">with the source passage attached</text>
+  <text x="1011" y="147" text-anchor="middle" fill="#d6ecdf" font-size="12">— or an honest "not in my documents"</text>
+
+  <g stroke="#1B7A43" stroke-width="2.2" marker-end="url(#ra)">
+   <line x1="172" y1="122" x2="206" y2="122"/>
+   <line x1="390" y1="122" x2="424" y2="122"/>
+   <line x1="608" y1="122" x2="642" y2="122"/>
+   <line x1="826" y1="122" x2="860" y2="122"/>
+  </g>
+
+  <text x="590" y="196" text-anchor="middle" font-size="14.5" fill="#8a6100" font-weight="700">
+   The model's own memory is never consulted. It reads only what step 2 handed it.</text>
+  <text x="590" y="220" text-anchor="middle" font-size="13.5" fill="#6B7B75">
+   That is what makes the answer citable — and what makes "not in my documents" a correct answer</text>
+  <text x="590" y="240" text-anchor="middle" font-size="13.5" fill="#6B7B75">
+   rather than a failure.</text>
+ </g>
+</svg>
+</figure>
+
+<div class="key">
+<b>Why a statistical office should care about step 3 specifically</b>
+An answer that cites the paragraph it came from can be checked by a human in ten
+seconds. An answer with no source has to be trusted or re-derived. Only one of
+those two is compatible with publishing under an official mark.
+</div>
+
+<aside class="notes">
+Point at the amber line. The most common failure in a first RAG build is that
+the retriever returns nothing useful and the model, left with an empty context,
+falls back on its own memory and answers fluently and wrongly. This afternoon's
+laboratory deliberately includes questions the corpus cannot answer, so
+participants see that failure happen and learn to instruct the model to refuse.
+</aside>
+</section>
+<section class="divider">
+
+<div class="eyebrow" style="color:var(--afdb-amber);">Part 3</div>
+<h2>Agents, and where supervision goes</h2>
+<p>The step from "answers a question" to "takes an action".</p>
+</section>
+<section>
+<span class="timing">5 min</span>
+
+<h2>Assistant → agent: one change, and it is not a small one</h2>
+
+<table>
+<tr><th></th><th>Assistant (what you build at 14:45)</th><th>Agent (what you build at 15:45)</th></tr>
+<tr>
+ <td><b>What it does</b></td>
+ <td>Reads, then writes an answer</td>
+ <td>Reads, then <em>decides which tool to call</em>, calls it, reads the result, repeats</td>
+</tr>
+<tr>
+ <td><b>Who chooses the steps</b></td>
+ <td>You did, when you wrote the pipeline</td>
+ <td><strong>The model does, at run time</strong></td>
+</tr>
+<tr>
+ <td><b>Failure looks like</b></td>
+ <td>A wrong sentence</td>
+ <td>A wrong sentence, or a wrong <em>action</em>, or a loop that will not stop</td>
+</tr>
+<tr>
+ <td><b>What it costs</b></td>
+ <td>One model call</td>
+ <td>As many calls as it decides to make</td>
+</tr>
+<tr>
+ <td><b>Where a human belongs</b></td>
+ <td>Checking the output before publication</td>
+ <td>Checking the output <strong>and</strong> approving actions before they happen</td>
+</tr>
+</table>
+
+<div class="warn">
+<b>The word "tool" is doing a lot of work here</b>
+A tool is any function you let the model call: a database query, a retrieval step,
+a file write, an email. The model does not run the tool — <em>your code does</em>,
+after the model asks for it. That gap is where every approval gate, audit log and
+safety check lives. Design it before you need it.
+</div>
+
+<div class="src">
+<b>Standardising the tool interface</b> · The <b>Model Context Protocol (MCP)</b> is an
+open protocol for connecting models to tools and data sources in a uniform way —
+so a tool written once can be reused across systems rather than re-implemented
+per vendor. <span style="font-family:var(--afdb-mono)">modelcontextprotocol.io</span>
+</div>
+
+<aside class="notes">
+The row that matters for this audience is the last one. In an assistant, a human
+checks the output. In an agent, a human must also stand between the decision and
+the action — and that is an architectural choice made at build time, not a policy
+you can add afterwards. Say plainly that "human in the loop" is not a slogan
+here; it is a specific place in the code, and this afternoon's laboratory shows
+participants exactly where it goes.
+</aside>
+</section>
+<section>
+<span class="timing">4 min</span>
+
+<h2>Where each concept belongs in the statistical value chain</h2>
+
+<table>
+<tr><th>Stage</th><th>Plausible use</th><th>The right lever</th><th>Non-negotiable control</th></tr>
+<tr><td><b>Collection</b></td><td>Classifying free-text survey answers; coding occupations</td>
+    <td>Prompting, or a small trained classifier</td><td>A labelled evaluation set — measured, not assumed</td></tr>
+<tr><td><b>Processing</b></td><td>Extracting tables from a PDF publication</td>
+    <td>Prompting + structured output</td><td>Verification against the source. Day 2 morning</td></tr>
+<tr><td><b>Analysis</b></td><td>Writing and debugging the analysis code itself</td>
+    <td>Prompting</td><td>The code is read and run by a statistician</td></tr>
+<tr><td><b>Dissemination</b></td><td>Answering public questions about your publications</td>
+    <td><em>RAG</em></td><td>Every answer carries its source passage</td></tr>
+<tr><td><b>Documentation</b></td><td>Drafting methodological notes and metadata</td>
+    <td>Prompting, or RAG over past notes</td><td>Signed off by the method owner</td></tr>
+<tr style="background:#FEF9EC;"><td><b>Estimation</b></td><td colspan="3">
+    <strong>Producing an official figure directly from a model.</strong> Not on this list, and
+    not on any list. A language model outputs the plausible, not the measured. Use it around
+    your statistics, never in place of them.</td></tr>
+</table>
+
+<div class="key">
+<b>There is an international framework for this</b>
+The UNECE High-Level Group for the Modernisation of Official Statistics has
+published <i>Machine Learning for Official Statistics</i>, including a
+<strong>quality framework</strong> for choosing methods and guidance on moving from
+experiment to production. Your office does not have to invent its own criteria —
+and a proposal that ignores an existing international framework is easier to
+challenge than one that engages with it.
+</div>
+
+<div class="src">
+<b>Sources</b> · UNECE HLG-MOS, <i>Machine Learning for Official Statistics</i> — machine
+learning group project, ethical-use guidance and quality framework;
+<span style="font-family:var(--afdb-mono)">statswiki.unece.org</span> ·
+UN Committee of Experts on Big Data and Data Science for Official Statistics —
+the UN Global Platform, revisited on Day 3.
+</div>
+
+<aside class="notes">
+The amber row is the one to dwell on. Every other row is an efficiency gain
+around an existing statistical process; that row would replace the process
+itself, and it is the line this workshop does not cross. Mention the UNECE
+framework explicitly — it gives participants something citable to bring back to
+a hesitant management, and it signals that this is an established methodological
+conversation rather than a novelty.
+</aside>
+</section>
+<section>
+<span class="timing">3 min</span>
+
+<h2>Eight words, fixed for the week</h2>
+
+<div class="cols">
+<div>
+<table style="font-size:.58em;">
+<tr><td><b>LLM</b></td><td>A next-token predictor trained on a very large text corpus. Not a database.</td></tr>
+<tr><td><b>Token</b></td><td>The sub-word unit the model reads and writes. Cost and context limits are counted in these, not in words.</td></tr>
+<tr><td><b>Prompt engineering</b></td><td>Shaping the <em>input</em>. Free, instant, and the lever to exhaust first.</td></tr>
+<tr><td><b>RAG</b></td><td>Shaping the <em>context</em> — retrieving your documents so the answer is grounded and citable.</td></tr>
+</table>
+</div>
+<div>
+<table style="font-size:.58em;">
+<tr><td><b>Fine-tuning</b></td><td>Changing the <em>weights</em>. Teaches style well, facts badly.</td></tr>
+<tr><td><b>Agent</b></td><td>A model allowed to choose which tools to call, and in what order. Your code still executes them.</td></tr>
+<tr><td><b>MCP</b></td><td>An open protocol for exposing tools and data to models uniformly — write a tool once, reuse it.</td></tr>
+<tr><td><b>Hallucination</b></td><td>A fluent, confident, false output. A property of the mechanism, managed by verification — not a bug awaiting a patch.</td></tr>
+</table>
+</div>
+</div>
+
+<div class="key">
+<b>The discipline this buys you</b>
+When someone in your office says "the agent will use RAG to fine-tune the
+answers", you now know that sentence contains three terms and describes no
+coherent system — and you can ask the question that unblocks the project:
+<em>which of the three levers is this, and what are we measuring it against?</em>
+</div>
+
+<aside class="notes">
+Read the closing line as written; it is the one participants tend to quote back
+later in the week. Point them at the glossary on the workshop site, which carries
+these terms in both languages with the same wording as the notebooks — the point
+of the shared vocabulary is that it is genuinely shared, not repeated
+approximately in five places.
+</aside>
+</section>
+<section class="divider">
+
+<div class="eyebrow" style="color:var(--afdb-amber);">Next</div>
+<h2>10:30 — What your countries have actually tried</h2>
+<p style="font-size:.8em;">Eight minutes each, six slides, and the more useful half
+is what did not work.</p>
+<p style="font-size:.66em;color:#6B7B75;margin-top:2rem;">
+14:00 — AI Infrastructure: what it really takes to run this in a statistical office<br>
+14:45 — Laboratory: build the RAG assistant from this deck<br>
+15:45 — Laboratory: turn it into an agent, and find where it must stay supervised
+</p>
+</section>
+<section class="appendix">
+
+<h2>References</h2>
+<p style="font-size:.5em;color:var(--afdb-muted);margin-top:-.3em;">
+The full annotated list, with live links, is on the workshop site under Resources.</p>
+
+<ol class="refs">
+<li><b>Vaswani, A., Shazeer, N., Parmar, N., Uszkoreit, J., Jones, L., Gomez, A.N., et al.</b>
+(2017). Attention Is All You Need. <i>Advances in Neural Information Processing
+Systems</i> 30.<br><i>The transformer architecture every model in this deck is built on.</i></li>
+
+<li><b>Brown, T.B., et al.</b> (2020). Language Models are Few-Shot Learners.
+<i>Advances in Neural Information Processing Systems</i> 33.<br>
+<i>Why giving a model a couple of examples in the prompt works at all.</i></li>
+
+<li><b>Lewis, P., Perez, E., Piktus, A., Petroni, F., Karpukhin, V., Goyal, N., et al.</b>
+(2020). Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks.
+<i>Advances in Neural Information Processing Systems</i> 33.<br>
+<i>The original RAG paper — the pattern you build this afternoon.</i></li>
+
+<li><b>Hu, E.J., Shen, Y., Wallis, P., Allen-Zhu, Z., Li, Y., Wang, S., et al.</b> (2021).
+LoRA: Low-Rank Adaptation of Large Language Models. <i>arXiv:2106.09685</i>;
+ICLR 2022.<br><i>Why fine-tuning is now affordable — and still the wrong first lever.</i></li>
+
+<li><b>Wei, J., Wang, X., Schuurmans, D., Bosma, M., Ichter, B., Xia, F., et al.</b> (2022).
+Chain-of-Thought Prompting Elicits Reasoning in Large Language Models.
+<i>Advances in Neural Information Processing Systems</i> 35.<br>
+<i>The prompting result behind much of Day 2 morning.</i></li>
+
+<li><b>Ji, Z., Lee, N., Frieske, R., Yu, T., Su, D., Xu, Y., et al.</b> (2023).
+Survey of Hallucination in Natural Language Generation. <i>ACM Computing Surveys</i>,
+55(12), 1–38.<br><i>Hallucination as a property of the mechanism, not a defect to patch.</i></li>
+
+<li><b>UNECE High-Level Group for the Modernisation of Official Statistics.</b>
+<i>Machine Learning for Official Statistics</i> — machine learning project outputs,
+including ethical-use guidance and a quality framework.
+<span class="doi">statswiki.unece.org</span><br>
+<i>The international methodological frame. Cite it rather than inventing your own criteria.</i></li>
+
+<li><b>Model Context Protocol.</b> Open specification for connecting models to tools
+and data sources. <span class="doi">modelcontextprotocol.io</span><br>
+<i>Write a tool once; reuse it across systems instead of per vendor.</i></li>
+</ol>
+
+<aside class="notes">
+Do not read this slide. It exists so the published deck works as a reading list
+and so a challenged claim can be answered with a source rather than an assertion.
+</aside>
+</section>
+  </div>
+</div>
+<div class="footer">
+  <span class="brand">African Development Bank · AU STATAFRIC · STG17</span>
+  <span>Day 1 · 09:45-10:15 · Talk</span>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/plugin/notes/notes.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/plugin/highlight/highlight.js"></script>
+<script>
+// If the CDN is unreachable — a real possibility on the networks this workshop
+// runs on — Reveal is undefined and the body keeps its `no-reveal` class, so the
+// deck renders as a long scrollable document instead of a blank page.
+if (typeof Reveal !== 'undefined') {
+  document.body.classList.remove('no-reveal');
+  Reveal.initialize({
+    hash: true,
+    slideNumber: 'c/t',
+    controls: true,
+    progress: true,
+    center: false,
+    transition: 'fade',
+    transitionSpeed: 'fast',
+    width: 1280,
+    height: 720,
+    margin: 0.045,
+    minScale: 0.2,
+    maxScale: 1.6,
+    plugins: [ RevealNotes, RevealHighlight ]
+  });
+} else {
+  console.warn('reveal.js could not be loaded — falling back to document mode.');
+}
+</script>
+</body>
+</html>
