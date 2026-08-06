@@ -248,6 +248,9 @@ def main() -> int:
             written += 1
             print(f"  {source.name:<44} -> {path.name}")
             broken.extend(check_stylesheets(html, path))
+            over, dense = check_density(source, html, lang)
+            broken.extend(over)
+            warnings.extend(dense)
         warnings.extend(check_symmetry(source, built))
 
     if warnings:
@@ -298,6 +301,69 @@ def check_stylesheets(html: str, out_path: Path) -> list[str]:
                 f"({target}) — MkDocs will not publish it"
             )
     return issues
+
+
+#: A slide is read at four metres by someone who is also listening. Past roughly
+#: this many words it stops being a slide and becomes a projected document — the
+#: type must shrink to fit, and the audience reads instead of listening.
+#: Measured on visible text only: speaker notes and SVG labels are excluded,
+#: because notes are what the presenter *says* and are meant to be long.
+WORD_BUDGET = 75
+WORD_LIMIT = 110
+TABLE_ROW_LIMIT = 6          # header + five data rows
+
+
+def visible_text(section_html: str) -> str:
+    """The words an audience actually reads, with notes and diagram labels removed."""
+    body = re.sub(r"<aside class=\"notes\">.*?</aside>", "", section_html, flags=re.S)
+    body = re.sub(r"<svg.*?</svg>", "", body, flags=re.S)
+    body = re.sub(r"<div class=\"src\">.*?</div>", "", body, flags=re.S)
+    return re.sub(r"\s+", " ", re.sub(r"<[^>]+>", " ", body)).strip()
+
+
+def check_density(source: Path, html: str, lang: str) -> tuple[list[str], list[str]]:
+    """
+    Flag slides carrying more than an audience can read while listening.
+
+    Returns (fatal, advisory). Over WORD_LIMIT is fatal: that slide will be
+    unreadable on a projector no matter how the CSS is tuned, and shipping it is
+    worse than shipping nothing. Between WORD_BUDGET and WORD_LIMIT is advisory —
+    a dense-but-defensible reference slide exists, and a build that refuses to run
+    over a judgement call is a build people route around.
+    """
+    fatal, advisory = [], []
+    for index, match in enumerate(
+        re.finditer(r"<section\b([^>]*)>(.*?)</section>", html, re.S), start=1
+    ):
+        attrs, section = match.group(1), match.group(2)
+        words = len(visible_text(section).split())
+        heading = re.search(r"<h[12][^>]*>(.*?)</h[12]>", section, re.S)
+        title = re.sub(r"<[^>]+>", "", heading.group(1)).strip()[:44] if heading else "(divider)"
+        where = f"{source.name} [{lang}] slide {index} — {title!r}"
+
+        # A slide marked `appendix` is a bibliography: it exists so the *published*
+        # deck works as a reading list, and nobody is expected to read it from the
+        # back of a room. It is still reported, so the exemption cannot quietly
+        # become the place overflow prose goes to hide.
+        if "appendix" in attrs:
+            advisory.append(f"{where}: {words} words — appendix, exempt from the "
+                            f"projection limit. Keep it a reference list, not an argument.")
+        elif words > WORD_LIMIT:
+            fatal.append(f"{where}: {words} words (limit {WORD_LIMIT}). "
+                         f"Split it, or move the prose into <aside class=\"notes\">.")
+        elif words > WORD_BUDGET:
+            advisory.append(f"{where}: {words} words (budget {WORD_BUDGET})")
+
+        rows = len(re.findall(r"<tr", section))
+        if rows > TABLE_ROW_LIMIT:
+            fatal.append(f"{where}: table has {rows} rows (limit {TABLE_ROW_LIMIT}). "
+                         f"Keep the rows that change a decision; drop the rest.")
+
+        callouts = len(re.findall(r'class="(?:key|warn)"', section))
+        if callouts > 1:
+            advisory.append(f"{where}: {callouts} callouts — two callouts is two ideas, "
+                            f"which is two slides")
+    return fatal, advisory
 
 
 def check_symmetry(source: Path, built: dict[str, str]) -> list[str]:
