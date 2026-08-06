@@ -24,7 +24,7 @@ Thirty minutes, deliberately short.<br>
 The rest of the day is spent in the data.<br><br>
 STG17 Action Plan 2025–2030 · activity 2.1.1
 </div>
-
+</section>
 <section>
 <span class="timing">2 min</span>
 
@@ -59,12 +59,76 @@ your own official figures you can measure — and then decide whether to use.
 </div>
 </div>
 
+<aside class="notes">
+Anchor this in the room's reality: ask how many offices have a subnational GDP
+series updated more often than every five years. Usually very few hands. That
+gap is the whole reason this day exists. Do not oversell — the next slide is
+deliberately about what the literature has and has not established.
+</aside>
+</section>
+<section>
+<span class="timing">3 min</span>
+
+<h2>What the literature actually establishes</h2>
+
+<div class="findings">
+<div class="finding">
+<span class="what">Lights improve growth estimates where accounts are weak</span>
+For countries with poor national income accounts, the best estimate of growth is
+a composite putting <em>roughly equal weight</em> on measured growth and on growth
+predicted from lights.
+<span class="who">Henderson, Storeygard &amp; Weil (2012), <i>American Economic Review</i></span>
+<span class="so">→ A complement to your accounts, never a replacement.</span>
+</div>
+
+<div class="finding">
+<span class="what">Electrification is detectable, village by village</span>
+Night lights detected rural electrification in Senegal and Mali against
+ground-truth records, at the level of individual settlements.
+<span class="who">Min, Gaba, Sarr &amp; Agalassou (2013), <i>Int. J. Remote Sensing</i></span>
+<span class="so">→ The most defensible use for an African NSO.</span>
+</div>
+
+<div class="finding">
+<span class="what">Correcting saturation changes the conclusion</span>
+Once DMSP top-coding is corrected, primary cities in Sub-Saharan Africa grow
+<em>faster</em> than secondary cities — a premium that appears only in the
+corrected data, and matches census figures.
+<span class="who">Bluhm &amp; Krause (2022), <i>J. Development Economics</i></span>
+<span class="so">→ Saturation is not a footnote; it reverses findings.</span>
+</div>
+
+<div class="finding">
+<span class="what">Which dataset you choose changes the answer</span>
+Results in economics differ materially depending on the lights product used, and
+the differences are largest exactly where studies of developing countries operate.
+<span class="who">Gibson, Olivia, Boe-Gibson &amp; Li (2021), <i>J. Development Economics</i></span>
+<span class="so">→ Name your product and version, every time.</span>
+</div>
+</div>
+
+<div class="src">
+<b>Sources</b> · Henderson et al. 2012, <span style="font-family:var(--afdb-mono)">10.1257/aer.102.2.994</span> ·
+Min et al. 2013, <span style="font-family:var(--afdb-mono)">10.1080/01431161.2013.833358</span> ·
+Bluhm &amp; Krause 2022, <span style="font-family:var(--afdb-mono)">10.1016/j.jdeveco.2022.102880</span> ·
+Gibson et al. 2021, <span style="font-family:var(--afdb-mono)">10.1016/j.jdeveco.2020.102602</span>.
+Full list at the end of this deck.
+</div>
+
+<aside class="notes">
+The point of this slide is credibility in both directions. The first two findings
+say the method works; the last two say it fails quietly when handled carelessly.
+If you only have time for one, take Bluhm and Krause: a real, published,
+peer-reviewed result that *reversed* once an artefact was corrected. That is the
+argument for spending the morning in the raster rather than in the table.
+</aside>
+</section>
 <section class="divider">
 
 <div class="eyebrow" style="color:var(--afdb-amber);">Part 1</div>
 <h2>Where the data comes from</h2>
 <p>Two instruments, thirty years, and one discontinuity you must not ignore.</p>
-
+</section>
 <section>
 <span class="timing">4 min</span>
 
@@ -108,7 +172,7 @@ radiance. <strong>Never splice the two without an explicit harmonisation step</s
 and if you do harmonise, say which method you used, because they disagree.
 Most published African NTL work starts in 2012 for exactly this reason, and so does this workshop.
 </div>
-
+</section>
 <section>
 <span class="timing">3 min</span>
 
@@ -137,13 +201,72 @@ compositing and masking. A gap of a few percent between them is expected and
 healthy. <strong>Publishing a Sum of Lights figure without naming the product and
 version is not a reproducible statistic.</strong>
 </div>
+</section>
+<section>
+<span class="timing">3 min</span>
 
+<h2>Where to actually get it — four routes, all free</h2>
+
+<table>
+<tr><th>Route</th><th>Gives you</th><th>Needs</th><th>Best when</th></tr>
+<tr>
+ <td><b>NASA LAADS DAAC</b><br><code>ladsweb.modaps.eosdis.nasa.gov</code></td>
+ <td>Black Marble VNP46A1–A4, the authoritative source</td>
+ <td>Free Earthdata account + bearer token</td>
+ <td>You want the reference product and can afford the download</td>
+</tr>
+<tr>
+ <td><b>Earth Observation Group</b><br><code>eogdata.mines.edu/products/vnl</code></td>
+ <td>EOG annual VNL v2, and the gas-flare survey</td>
+ <td>Free registration</td>
+ <td>You want an annual series ready to use, or a flare mask</td>
+</tr>
+<tr>
+ <td><b>Google Earth Engine</b><br><code>NOAA/VIIRS/DNB/ANNUAL_V22</code></td>
+ <td>The same series, computed server-side</td>
+ <td>Free non-commercial account + Cloud project</td>
+ <td><em>Bandwidth is your constraint</em> — nothing is downloaded</td>
+</tr>
+<tr>
+ <td><b>World Bank «&nbsp;Light Every Night&nbsp;»</b><br>AWS Registry of Open Data</td>
+ <td>The full 1992–present night-time archive, analysis-ready</td>
+ <td>Nothing — no account at all</td>
+ <td>You need the DMSP years, or an unauthenticated pipeline</td>
+</tr>
+</table>
+
+<div class="key">
+<b>Free to obtain is not free to use</b>
+Black Marble and VNL are US Government products, effectively public domain, so a
+derived national indicator can carry your office's own open-data licence. That is
+<em>not</em> true of every source you will meet this week — Wednesday's Ookla data
+is CC BY-NC-SA 4.0, and both the NonCommercial and ShareAlike terms propagate into
+anything you derive from it.
+</div>
+
+<div class="src">
+<b>Access points</b> · NASA Black Marble product suite documented in Román et al. (2018),
+<span style="font-family:var(--afdb-mono)">10.1016/j.rse.2018.03.017</span> ·
+EOG annual VNL v2 in Elvidge et al. (2021),
+<span style="font-family:var(--afdb-mono)">10.3390/rs13050922</span> ·
+World Bank <i>Light Every Night</i> on the AWS Registry of Open Data ·
+Step-by-step tutorials: World Bank <i>Open Nighttime Lights</i>,
+<span style="font-family:var(--afdb-mono)">worldbank.github.io/OpenNightLights</span>
+</div>
+
+<aside class="notes">
+Point participants at the World Bank Open Nighttime Lights tutorial explicitly —
+it is free, it is in Jupyter, and it is the natural continuation for anyone who
+wants more than this workshop covers. Mention Light Every Night for teams whose
+network blocks authenticated endpoints: it needs no account at all.
+</aside>
+</section>
 <section class="divider">
 
 <div class="eyebrow" style="color:var(--afdb-amber);">Part 2</div>
 <h2>From radiance to an indicator</h2>
 <p>The five steps you will run this morning and this afternoon.</p>
-
+</section>
 <section>
 <span class="timing">4 min</span>
 
@@ -212,7 +335,7 @@ version is not a reproducible statistic.</strong>
 </svg>
 <figcaption>Step 5 is not a formality. It is the step that decides whether your country can disseminate this.</figcaption>
 </figure>
-
+</section>
 <section>
 <span class="timing">3 min</span>
 
@@ -255,13 +378,13 @@ you would put an investment.
 "Lit area" moves when you move the threshold. At 0.1 nW·cm⁻²·sr⁻¹ a country may be
 40 % lit; at 5.0, 6 %. <strong>Publish the threshold next to the number, every time.</strong>
 </div>
-
+</section>
 <section class="divider">
 
 <div class="eyebrow" style="color:var(--afdb-amber);">Part 3</div>
 <h2>The six artefacts</h2>
 <p>Named here. Met hands-on at 10:30, in your own country's raster.</p>
-
+</section>
 <section class="night">
 <span class="timing">6 min</span>
 
@@ -321,7 +444,7 @@ you would put an investment.
 monthly series; annual composites hide it. <strong>Sensor discontinuity</strong> —
 the DMSP/VIIRS join, discussed earlier.
 </div>
-
+</section>
 <section>
 <span class="timing">3 min</span>
 
@@ -352,7 +475,7 @@ All three produce a well-formatted, plausible number. That is why the exploratio
 laboratory comes <em>before</em> the analysis laboratory, and why the artefact
 inventory is a deliverable rather than an optional extra.
 </div>
-
+</section>
 <section>
 <span class="timing">3 min</span>
 
@@ -387,7 +510,7 @@ inventory is a deliverable rather than an optional extra.
 suitable for Y, not suitable for Z." <strong>That sentence — with your own
 correlation coefficient in it — is what you will produce this afternoon.</strong>
 </div>
-
+</section>
 <section>
 <span class="timing">2 min</span>
 
@@ -410,7 +533,75 @@ change one line, and run it on their own territory.</p>
 Boundaries, satellite tiles, projection, map extent and every figure title follow
 from it. The registry covers all 55 African Union member states.
 </div>
+</section>
+<section>
+<span class="timing">3 min</span>
 
+<h2>Is my proxy publishable? A decision framework</h2>
+<figure>
+<svg viewBox="0 0 1180 300" xmlns="http://www.w3.org/2000/svg" role="img"
+     aria-label="Decision tree: from a computed proxy to a publication decision">
+ <defs><marker id="a2" markerWidth="9" markerHeight="9" refX="7" refY="3.2" orient="auto">
+   <path d="M0,0 L8,3.2 L0,6.4 z" fill="#6B7B75"/></marker></defs>
+ <g font-family="Inter,sans-serif" font-size="13">
+  <rect x="18" y="126" width="150" height="48" rx="10" fill="#0B2545"/>
+  <text x="93" y="147" text-anchor="middle" fill="#fff" font-size="14" font-weight="700">Proxy computed</text>
+  <text x="93" y="164" text-anchor="middle" fill="#b9c8d8">panel by ADM level</text>
+
+  <g fill="#F4F8F5" stroke="#1B7A43" stroke-width="1.6">
+    <rect x="205" y="120" width="180" height="60" rx="10"/>
+    <rect x="422" y="120" width="180" height="60" rx="10"/>
+    <rect x="639" y="120" width="180" height="60" rx="10"/>
+  </g>
+  <text x="295" y="142" text-anchor="middle" fill="#0B2545" font-weight="700">1 · Complete?</text>
+  <text x="295" y="160" text-anchor="middle" fill="#33403A">all tiles, all years</text>
+  <text x="512" y="142" text-anchor="middle" fill="#0B2545" font-weight="700">2 · Artefacts named?</text>
+  <text x="512" y="160" text-anchor="middle" fill="#33403A">flares, saturation, blooming</text>
+  <text x="729" y="142" text-anchor="middle" fill="#0B2545" font-weight="700">3 · Correlated?</text>
+  <text x="729" y="160" text-anchor="middle" fill="#33403A">vs your official indicator</text>
+
+  <g stroke="#6B7B75" stroke-width="2" marker-end="url(#a2)">
+    <line x1="170" y1="150" x2="200" y2="150"/>
+    <line x1="387" y1="150" x2="417" y2="150"/>
+    <line x1="604" y1="150" x2="634" y2="150"/>
+    <line x1="821" y1="150" x2="851" y2="150"/>
+  </g>
+
+  <rect x="856" y="60" width="306" height="76" rx="10" fill="#1B7A43"/>
+  <text x="1009" y="86" text-anchor="middle" fill="#fff" font-size="15" font-weight="800">DISSEMINATE</text>
+  <text x="1009" y="106" text-anchor="middle" fill="#d6ecdf">with parameters, limitations</text>
+  <text x="1009" y="123" text-anchor="middle" fill="#d6ecdf">and the correlation stated</text>
+
+  <rect x="856" y="164" width="306" height="76" rx="10" fill="#F2A900"/>
+  <text x="1009" y="190" text-anchor="middle" fill="#0B2545" font-size="15" font-weight="800">DIAGNOSTIC ONLY</text>
+  <text x="1009" y="210" text-anchor="middle" fill="#5c4200">internal use, targeting, triage —</text>
+  <text x="1009" y="227" text-anchor="middle" fill="#5c4200">not a published statistic</text>
+
+  <text x="836" y="112" fill="#1B7A43" font-weight="700" font-size="12">yes to all three</text>
+  <text x="836" y="258" fill="#8a6100" font-weight="700" font-size="12">any no</text>
+  <path d="M845 155 L845 200 L851 200" fill="none" stroke="#6B7B75" stroke-width="2" marker-end="url(#a2)"/>
+
+  <text x="18" y="278" fill="#6B7B75" font-size="12.5">Both outcomes are legitimate results of the day. "Diagnostic only", argued with evidence, is a finding — not a failure.</text>
+ </g>
+</svg>
+</figure>
+
+<div class="warn">
+<b>The honest sentence you are aiming for</b>
+"Night-time radiance at ADM2, VNP46A4 collection 002, lit threshold 0.5 nW·cm⁻²·sr⁻¹,
+correlates with our official electrification rate at r&nbsp;=&nbsp;0.NN across NN districts
+in 20NN. Suitable for tracking relative change between districts; not suitable for
+estimating connection rates in absolute terms."
+</div>
+
+<aside class="notes">
+Say plainly that roughly half the teams should expect to land on "diagnostic
+only", and that this is the correct answer for their country rather than a poor
+performance. Offices under pressure to publish something new will be tempted to
+skip step 3 — the whole point of the afternoon is that step 3 is what separates a
+statistical product from a picture.
+</aside>
+</section>
 <section class="night">
 
 <div class="eyebrow" style="color:var(--afdb-amber);">Now to the data</div>
@@ -424,7 +615,89 @@ No Earthdata token, no network, or a download that will not finish?<br>
 Take the Earth Engine variant — it downloads nothing at all.<br>
 Or set <code>COUNTRY_ISO3 = "CIV"</code>, the reference country, and carry on.
 </p>
+</section>
+<section class="appendix">
 
+<h2>References</h2>
+<p style="font-size:.5em;color:var(--afdb-muted);margin-top:-.3em;">
+Every claim in this deck traces to one of these. DOIs resolve at
+<code>doi.org/&lt;doi&gt;</code>.</p>
+
+<ol class="refs">
+<li><b>Román, M.O., et al.</b> (2018). NASA's Black Marble nighttime lights product
+suite. <i>Remote Sensing of Environment</i>, 210, 113–143.
+<span class="doi">10.1016/j.rse.2018.03.017</span><br>
+<i>The VNP46 product suite — read this before using VNP46A2/A3/A4.</i></li>
+
+<li><b>Elvidge, C.D., Zhizhin, M., Ghosh, T., Hsu, F.-C., Taneja, J.</b> (2021).
+Annual Time Series of Global VIIRS Nighttime Lights Derived from Monthly Averages:
+2012 to 2019. <i>Remote Sensing</i>, 13(5), 922.
+<span class="doi">10.3390/rs13050922</span><br>
+<i>The EOG annual VNL v2 series — the product behind the Earth Engine variant.</i></li>
+
+<li><b>Levin, N., et al.</b> (2020). Remote sensing of night lights: A review and an
+outlook for the future. <i>Remote Sensing of Environment</i>, 237, 111443.
+<span class="doi">10.1016/j.rse.2019.111443</span><br>
+<i>The single best starting point if you read only one paper.</i></li>
+
+<li><b>Henderson, J.V., Storeygard, A., Weil, D.N.</b> (2012). Measuring Economic
+Growth from Outer Space. <i>American Economic Review</i>, 102(2), 994–1028.
+<span class="doi">10.1257/aer.102.2.994</span><br>
+<i>The foundational case for lights as a complement to weak national accounts.</i></li>
+
+<li><b>Gibson, J., Olivia, S., Boe-Gibson, G.</b> (2020). Night Lights in Economics:
+Sources and Uses. <i>Journal of Economic Surveys</i>, 34(5), 955–980.<br>
+<i>A critical review. Read it alongside Henderson et al., not instead of it.</i></li>
+
+<li><b>Gibson, J., Olivia, S., Boe-Gibson, G., Li, C.</b> (2021). Which night lights
+data should we use in economics, and where? <i>Journal of Development Economics</i>,
+149, 102602. <span class="doi">10.1016/j.jdeveco.2020.102602</span><br>
+<i>Why naming your product and version is not pedantry.</i></li>
+
+<li><b>Bluhm, R., Krause, M.</b> (2022). Top lights: Bright cities and their
+contribution to economic development. <i>Journal of Development Economics</i>, 157,
+102880. <span class="doi">10.1016/j.jdeveco.2022.102880</span><br>
+<i>Saturation correction reverses the Sub-Saharan primary/secondary city finding.</i></li>
+
+<li><b>Min, B., Gaba, K.M., Sarr, O.F., Agalassou, A.</b> (2013). Detection of rural
+electrification in Africa using DMSP-OLS night lights imagery. <i>International
+Journal of Remote Sensing</i>, 34(22), 8118–8141.
+<span class="doi">10.1080/01431161.2013.833358</span><br>
+<i>Senegal and Mali, validated against ground records. The African reference.</i></li>
+
+<li><b>Elvidge, C.D., Zhizhin, M., Baugh, K., Hsu, F.-C., Ghosh, T.</b> (2016).
+Methods for Global Survey of Natural Gas Flaring from Visible Infrared Imaging
+Radiometer Suite Data. <i>Energies</i>, 9(1), 14.
+<span class="doi">10.3390/en9010014</span><br>
+<i>How flares are detected — and therefore how to mask them out of your totals.</i></li>
+
+<li><b>Li, X., Zhou, Y., Zhao, M., Zhao, X.</b> (2020). A harmonized global nighttime
+light dataset 1992–2018. <i>Scientific Data</i>, 7, 168.
+<span class="doi">10.1038/s41597-020-0510-y</span><br>
+<i>If you must span the DMSP/VIIRS break, this is the defensible way to do it.</i></li>
+
+<li><b>Runfola, D., et al.</b> (2020). geoBoundaries: A global database of political
+administrative boundaries. <i>PLOS ONE</i>, 15(4), e0231866.
+<span class="doi">10.1371/journal.pone.0231866</span><br>
+<i>The boundary source used in the laboratories — cite it if you publish with it.</i></li>
+
+<li><b>World Bank.</b> <i>Open Nighttime Lights</i> — open tutorials and notebooks.
+<span class="doi">worldbank.github.io/OpenNightLights</span><br>
+<i>The natural continuation of Day 4. Free, in Jupyter, Earth Engine based.</i></li>
+
+<li><b>World Bank / NOAA-NCEI / University of Michigan.</b> <i>Light Every Night</i> —
+the full 1992–present archive, analysis-ready, on the AWS Registry of Open Data.
+<span class="doi">registry.opendata.aws/wb-light-every-night</span><br>
+<i>No account required — the route for teams behind restrictive networks.</i></li>
+</ol>
+
+<aside class="notes">
+Do not read this slide aloud. It is there so the published deck is usable as a
+reading list, and so that anyone who challenges a number in the room can be
+pointed at a source rather than at an assertion. The website carries the same
+list with live links, under Resources.
+</aside>
+</section>
   </div>
 </div>
 <div class="footer">

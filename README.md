@@ -41,8 +41,11 @@ then run the environment check:
 git clone https://github.com/STG17-Africa/stg17-workshop.git
 cd stg17-workshop
 pip install -r requirements-dev.txt
-python tools/build_all.py      # regenerate every derived artefact
-mkdocs serve                   # preview the site at 127.0.0.1:8000
+python tools/serve.py          # regenerate everything, then preview
+#
+# The site is served under the GitHub Pages path, NOT at the root:
+#   English   http://127.0.0.1:8000/stg17-workshop/
+#   Français  http://127.0.0.1:8000/stg17-workshop/fr/
 ```
 
 ## What is in here

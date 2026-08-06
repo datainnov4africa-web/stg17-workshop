@@ -37,7 +37,11 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 DECKS = ROOT / "slides" / "decks"
-OUT = ROOT / "slides" / "pptx"
+# Emitted into docs/ so that MkDocs copies them into the published site and
+# they are downloadable from the slides page. They are NOT committed: they are
+# derived binaries that would churn on every rebuild, so the Pages workflow
+# regenerates them at deploy time.
+OUT = ROOT / "docs" / "slides" / "pptx"
 
 # Palette — kept in sync with stg17/theme.py by the CI check in build_all.py.
 NAVY = (0x0B, 0x25, 0x45)
@@ -325,7 +329,10 @@ def build(source: Path, lang: str) -> Path:
 
     OUT.mkdir(parents=True, exist_ok=True)
     stem = source.name.replace(".deck.html", "")
-    path = OUT / f"{stem}.{lang}.pptx"
+    # Hyphen, not dot: mkdocs-static-i18n treats a `.fr.` segment as its own
+    # language suffix for ANY file type, and would publish one collapsed file
+    # instead of the two.
+    path = OUT / f"{stem}-{lang}.pptx"
     prs.save(path)
     return path
 

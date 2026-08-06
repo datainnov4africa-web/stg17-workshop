@@ -90,8 +90,8 @@ hands-on at 10:30.
 <p>
 <a href="08-night-time-lights-what-the-darkness-tells-us-en.html?print-pdf">PDF (EN)</a> ·
 <a href="08-night-time-lights-what-the-darkness-tells-us-fr.html?print-pdf">PDF (FR)</a> ·
-<a href="https://github.com/STG17-Africa/stg17-workshop/raw/main/slides/pptx/08-ntl-what-darkness-tells-us.en.pptx">PPTX (EN)</a> ·
-<a href="https://github.com/STG17-Africa/stg17-workshop/raw/main/slides/pptx/08-ntl-what-darkness-tells-us.fr.pptx">PPTX (FR)</a>
+<a href="pptx/08-ntl-what-darkness-tells-us-en.pptx">PPTX (EN)</a> ·
+<a href="pptx/08-ntl-what-darkness-tells-us-fr.pptx">PPTX (FR)</a>
 </p>
 
 ---

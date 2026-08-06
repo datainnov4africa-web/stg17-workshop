@@ -138,6 +138,7 @@ plugins:
             Resources: Ressources
             Action Plan mapping: Correspondance Plan d'action
             Glossary: Glossaire
+            References: Références
             Licensing and ethics: Licences et éthique
             For facilitators: Pour les animateurs
 
@@ -164,6 +165,7 @@ nav:
   - Resources:
       - Action Plan mapping: resources/action-plan.md
       - Glossary: resources/glossary.md
+      - References: resources/references.md
       - Licensing and ethics: resources/licensing.md
       - For facilitators: resources/facilitators.md
 

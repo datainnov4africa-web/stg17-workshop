@@ -194,3 +194,38 @@ section.title ~ * .footer { display: none; }
   max-width: 1100px; margin: 0 auto;
 }
 .no-reveal .timing { display: none; }
+
+/* --- Per-slide source attribution -----------------------------------------
+   Every factual claim on a slide carries its source. In a room of statisticians
+   an unattributed number is not a number, and the decks are published, so the
+   attribution has to survive the slide leaving the room. */
+.src {
+  font-size: .38em;
+  color: var(--afdb-muted);
+  line-height: 1.5;
+  margin-top: .8em;
+  border-top: 1px solid var(--afdb-line);
+  padding-top: .4em;
+}
+.src b { color: var(--afdb-green); font-weight: 700; }
+.reveal section.night .src { color: #6B7B75; border-top-color: #2A3441; }
+.reveal section.night .src b { color: var(--afdb-amber); }
+
+/* --- Finding cards: a verified result, its source, and what it means for you */
+.findings { display: grid; grid-template-columns: 1fr 1fr; gap: .9rem; margin: .7em 0; }
+.finding {
+  background: #fff; border: 1px solid var(--afdb-line);
+  border-left: 5px solid var(--afdb-green); border-radius: 0 10px 10px 0;
+  padding: .7em .95em; font-size: .58em; line-height: 1.5;
+}
+.finding .what { color: var(--afdb-navy); font-weight: 700; display: block; margin-bottom: .25em; }
+.finding .who  { color: var(--afdb-muted); font-size: .88em; font-style: italic; }
+.finding .so   { color: var(--afdb-green); font-weight: 600; display: block; margin-top: .35em; }
+
+/* --- Reference list -------------------------------------------------------- */
+.refs { font-size: .42em; line-height: 1.65; column-count: 2; column-gap: 2rem; }
+.refs li { margin: 0 0 .55em; break-inside: avoid; }
+.refs .doi { color: var(--afdb-green); font-family: var(--afdb-mono); font-size: .92em; }
+
+/* --- Appendix marker ------------------------------------------------------- */
+.reveal section.appendix { border-top: 6px solid var(--afdb-amber); }

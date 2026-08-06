@@ -12,7 +12,6 @@ autre pays africain.</p>
 <span>5 jours · 27 heures de contact</span>
 <span>Hybride</span>
 <span>Carnets en EN et FR</span>
-<span>Les 55 États membres de l'UA pris en charge</span>
 <span>Groupe technique spécialisé 17</span>
 </div>
 </div>

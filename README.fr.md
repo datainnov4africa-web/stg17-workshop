@@ -42,8 +42,11 @@ puis exécutez la vérification d'environnement :
 git clone https://github.com/STG17-Africa/stg17-workshop.git
 cd stg17-workshop
 pip install -r requirements-dev.txt
-python tools/build_all.py      # régénère tout ce qui est dérivé
-mkdocs serve                   # prévisualise le site sur 127.0.0.1:8000
+python tools/serve.py          # régénère tout, puis prévisualise
+#
+# Le site est servi sous le chemin GitHub Pages, PAS à la racine :
+#   English   http://127.0.0.1:8000/stg17-workshop/
+#   Français  http://127.0.0.1:8000/stg17-workshop/fr/
 ```
 
 ## Ce que contient le dépôt

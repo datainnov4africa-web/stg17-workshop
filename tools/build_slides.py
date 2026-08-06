@@ -169,7 +169,26 @@ def build(source: Path, lang: str) -> tuple[Path, str]:
         lang_attr = RE_LANG_ATTR.search(part)
         if lang_attr and lang_attr.group(1).lower() != lang:
             continue
-        kept.append(split_lang(part, lang, where=f"{source.name} slide {index}"))
+
+        # Split only the INNER body, then put the wrapper back.
+        #
+        # Splitting the whole <section>…</section> string would truncate the
+        # English build at the <!--FR--> marker and take the closing </section>
+        # with it, because that tag sits after the French block. Browsers recover
+        # from unclosed sections by nesting them, so reveal.js still shows
+        # something — which is exactly why this survived a visual check. The
+        # French build was unaffected, its text running to the end of the string.
+        open_tag = re.match(r"<section\b[^>]*>", part, re.I)
+        assert open_tag, "RE_SECTION matched something that is not a <section>"
+        inner = part[open_tag.end():]
+        close = ""
+        if inner.rstrip().lower().endswith("</section>"):
+            cut = inner.rstrip()[: -len("</section>")]
+            close = inner[len(cut):]
+            inner = cut
+        kept.append(open_tag.group(0)
+                    + split_lang(inner, lang, where=f"{source.name} slide {index}")
+                    + close)
 
     title = meta.get(f"title_{lang}", meta.get("title_en", ""))
     session = meta.get(f"session_{lang}", meta.get("session_en", ""))
@@ -218,14 +237,62 @@ def main() -> int:
         return 0
 
     written = 0
+    warnings: list[str] = []
     for source in sources:
+        built = {}
         for lang in ("en", "fr"):
             path, html = build(source, lang)
             path.write_text(html, encoding="utf-8")
+            built[lang] = html
             written += 1
             print(f"  {source.name:<44} -> {path.name}")
+        warnings.extend(check_symmetry(source, built))
+
+    if warnings:
+        print("\nAsymmetries between the English and French builds:")
+        for warning in warnings:
+            print("   !", warning)
+        print("  These are authoring omissions, not build failures — the decks are usable.")
+
     print(f"\n{len(sources)} deck source(s) · wrote {written} file(s).")
     return 0
+
+
+def check_symmetry(source: Path, built: dict[str, str]) -> list[str]:
+    """
+    Compare the two language builds and report anything present in one only.
+
+    A bilingual deck is meant to be the same deck twice. When a slide, a speaker
+    note or a source line exists in English and not in French, the French
+    audience silently gets less — and nothing fails, so nobody notices. This
+    check is what turns that into a visible line in the build output.
+
+    Reported, not fatal: an author may legitimately give one language an extra
+    slide (a national example, a note about interpretation), and a build that
+    refuses to run over a judgement call is a build people stop using.
+    """
+    issues = []
+    counts = {}
+    for lang, html in built.items():
+        sections = re.findall(r"<section\b[^>]*>(.*?)</section>", html, re.S)
+        opens, closes = len(re.findall(r"<section\b", html)), len(re.findall(r"</section>", html))
+        if opens != closes:
+            issues.append(f"{source.name} [{lang}]: {opens} <section> but {closes} </section> "
+                          f"— the deck will render with nested slides")
+        counts[lang] = {
+            "slides": len(sections),
+            "notes": sum(1 for s in sections if 'aside class="notes"' in s),
+            "sources": sum(1 for s in sections if 'class="src"' in s),
+            "figures": sum(1 for s in sections if "<svg" in s),
+        }
+
+    labels = {"slides": "slides", "notes": "speaker notes",
+              "sources": "source lines", "figures": "figures"}
+    for key, label in labels.items():
+        en, fr = counts["en"][key], counts["fr"][key]
+        if en != fr:
+            issues.append(f"{source.name}: {en} {label} in English, {fr} in French")
+    return issues
 
 
 if __name__ == "__main__":

@@ -11,7 +11,6 @@ week is published, documented and reusable by another African country.</p>
 <span>5 days · 27 contact hours</span>
 <span>Hybrid</span>
 <span>Notebooks in EN and FR</span>
-<span>All 55 AU member states supported</span>
 <span>Specialized Technical Group 17</span>
 </div>
 </div>
