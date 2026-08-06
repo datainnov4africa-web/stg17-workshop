@@ -187,7 +187,8 @@ if __name__ == "__main__":  # pragma: no cover
 
     if args.emit_css:
         root = Path(__file__).resolve().parent.parent
-        for target in (root / "docs/assets/_afdb-vars.css", root / "slides/theme/_afdb-vars.css"):
+        for target in (root / "docs/assets/_afdb-vars.css",
+                       root / "docs/slides/theme/_afdb-vars.css"):
             print("wrote", emit_css(target))
     else:
         for name, value in [("navy", NAVY), ("green", GREEN), ("amber", AMBER)]:

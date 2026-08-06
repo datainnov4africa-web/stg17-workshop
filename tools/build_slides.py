@@ -69,8 +69,8 @@ TEMPLATE = """<!doctype html>
 <meta name="description" content="{session} — STG17 workshop, AfDB / AU STATAFRIC">
 <link rel="stylesheet" href="{reveal}/dist/reset.css">
 <link rel="stylesheet" href="{reveal}/dist/reveal.css">
-<link rel="stylesheet" href="../../slides/theme/_afdb-vars.css">
-<link rel="stylesheet" href="../../slides/theme/afdb.css">
+<link rel="stylesheet" href="theme/_afdb-vars.css">
+<link rel="stylesheet" href="theme/afdb.css">
 <link rel="stylesheet" href="{reveal}/plugin/highlight/monokai.css">
 </head>
 <body class="no-reveal">
@@ -238,6 +238,7 @@ def main() -> int:
 
     written = 0
     warnings: list[str] = []
+    broken: list[str] = []
     for source in sources:
         built = {}
         for lang in ("en", "fr"):
@@ -246,6 +247,7 @@ def main() -> int:
             built[lang] = html
             written += 1
             print(f"  {source.name:<44} -> {path.name}")
+            broken.extend(check_stylesheets(html, path))
         warnings.extend(check_symmetry(source, built))
 
     if warnings:
@@ -254,8 +256,48 @@ def main() -> int:
             print("   !", warning)
         print("  These are authoring omissions, not build failures — the decks are usable.")
 
+    # A broken stylesheet path is fatal, unlike an asymmetry. An unstyled deck
+    # still renders — reveal.js loads from the CDN — so nothing errors and the
+    # slides advance normally. It just looks like a browser default. That is not
+    # a usable deck in front of a room, and it must not reach one.
+    if broken:
+        print("\nBroken stylesheet references:")
+        for problem in broken:
+            print("   x", problem)
+        return 1
+
     print(f"\n{len(sources)} deck source(s) · wrote {written} file(s).")
     return 0
+
+
+def check_stylesheets(html: str, out_path: Path) -> list[str]:
+    """
+    Verify every local stylesheet the deck references actually resolves on disk.
+
+    A missing theme file does not fail loudly: reveal.js loads from the CDN and
+    renders the slides, so the deck *works* — it is just unstyled, in the browser
+    default serif, with none of the AfDB identity. That looks like a design
+    problem rather than a broken path, which is exactly how it survives review.
+
+    The original bug: the theme lived outside `docs/`, so MkDocs never copied it
+    into the site, and the href climbed two directories above the site root.
+    """
+    issues = []
+    for href in re.findall(r'<link[^>]+href="([^"]+\.css)"', html):
+        if href.startswith(("http://", "https://", "//")):
+            continue  # CDN — reachability is a network question, not a path one
+        target = (out_path.parent / href).resolve()
+        if not target.exists():
+            issues.append(
+                f"{out_path.name}: stylesheet {href!r} resolves to {target}, which does "
+                f"not exist — the deck will render unstyled without any error"
+            )
+        elif ROOT / "docs" not in target.parents:
+            issues.append(
+                f"{out_path.name}: stylesheet {href!r} resolves outside docs/ "
+                f"({target}) — MkDocs will not publish it"
+            )
+    return issues
 
 
 def check_symmetry(source: Path, built: dict[str, str]) -> list[str]:
