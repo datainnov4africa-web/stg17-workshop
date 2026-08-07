@@ -1,4 +1,4 @@
-# Illustration prompts
+# Figure slots — the illustration catalogue
 
 Diagrams in these decks are hand-authored SVG — a timeline, a pipeline, a
 schematic of blooming and saturation. SVG is the right tool there: it stays
@@ -17,7 +17,7 @@ Where a deck expects generated imagery, it renders a dashed placeholder:
 ```html
 <div class="figure-slot">
   Illustration: <code>figures/08-cover-night-africa.png</code><br>
-  See slides/PROMPTS-GEMINI.md · slot 08-A
+  See resources/prompts/figure-slots.md · slot 08-A
 </div>
 ```
 

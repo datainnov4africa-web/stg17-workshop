@@ -12,8 +12,13 @@ Chaque présentation est disponible sous trois formes :
 - **:material-file-pdf-box: PDF** — ajoutez `?print-pdf` à l'URL du deck et
   imprimez depuis le navigateur. Utile pour la cabine d'interprétation et pour les
   participants qui souhaitent annoter.
-- **:material-microsoft-powerpoint: PPTX** — un dérivé modifiable pour les
-  animateurs. Voir la note en bas de page.
+- **:material-microsoft-powerpoint: PPTX** — un **squelette de titres**, pas la
+  présentation. Il porte les titres de diapositives et l'ordre de passage, et
+  perd le corps de chaque diapositive. À utiliser comme plan de document ou comme
+  trame de départ que vous remplissez vous-même. Pour construire un vrai
+  PowerPoint, utilisez
+  [P7 · Construction native](../resources/prompts/P7-native-deck.md). Les raisons
+  sont exposées dans la [bibliothèque de prompts](../resources/prompts/index.md).
 
 ---
 

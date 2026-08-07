@@ -241,7 +241,7 @@
   line-height: 1.4; max-width: 70ch;
 }
 
-/* Placeholder for generated imagery — see slides/PROMPTS-GEMINI.md */
+/* Placeholder for generated imagery — see docs/resources/prompts/figure-slots.md */
 .figure-slot {
   border: 2px dashed var(--afdb-line); border-radius: 12px;
   padding: 1.8em 1.2em; text-align: center;

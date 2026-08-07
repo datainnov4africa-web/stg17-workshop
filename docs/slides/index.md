@@ -11,8 +11,12 @@ Each deck is available three ways:
 - **:material-file-pdf-box: PDF** — append `?print-pdf` to the deck URL and print
   from the browser. Useful for the interpretation booth and for participants who
   want to annotate.
-- **:material-microsoft-powerpoint: PPTX** — an editable derivative for
-  facilitators. See the note at the bottom of this page.
+- **:material-microsoft-powerpoint: PPTX** — a **title-and-heading skeleton**,
+  not the presentation. It carries the slide titles and the running order and
+  drops the body of every slide. Use it as a handout outline or as a starting
+  frame you fill in yourself. To build a real PowerPoint, use
+  [P7 · Native deck build](../resources/prompts/P7-native-deck.md). The reasons
+  are set out in the [prompt library](../resources/prompts/index.md).
 
 ---
 

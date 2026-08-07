@@ -168,6 +168,17 @@ nav:
       - References: resources/references.md
       - Licensing and ethics: resources/licensing.md
       - For facilitators: resources/facilitators.md
+      - Prompt library:
+          - resources/prompts/index.md
+          - P1 · Deck architect: resources/prompts/P1-deck-architect.md
+          - P2 · Slide writer: resources/prompts/P2-slide-writer.md
+          - P3 · Diagram author: resources/prompts/P3-diagram-svg.md
+          - P4 · Illustration: resources/prompts/P4-illustration.md
+          - P5 · Speaker notes: resources/prompts/P5-speaker-notes.md
+          - P6 · Adversarial critic: resources/prompts/P6-critic.md
+          - P7 · Native deck build: resources/prompts/P7-native-deck.md
+          - P8 · French rendering: resources/prompts/P8-translate-fr.md
+          - Figure slots: resources/prompts/figure-slots.md
 
 extra:
   social:
