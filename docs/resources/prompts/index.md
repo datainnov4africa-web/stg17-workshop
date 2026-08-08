@@ -23,6 +23,7 @@ generator gets wrong when you do not state them.
 | **P6** | [Adversarial critic](P6-critic.md) | Before a deck is published. Hunts invented references, unsupported claims, overloaded slides. | Claude, ChatGPT |
 | **P7** | [Native deck build](P7-native-deck.md) | You want a genuinely designed PowerPoint or Gamma deck. **Start here if the automated PPTX disappointed you** — see the note below. | Gamma, Copilot, Claude |
 | **P8** | [French translation](P8-translate-fr.md) | An English deck exists and the French must match it in density, not just in meaning. | Claude, ChatGPT |
+| **P9** | [Standalone deck](P9-standalone-deck.md) | You want one finished, self-contained `.html` presentation built entirely in Claude — highest visual standard, outside the build. | Claude |
 
 A normal deck runs **P1 → P2 (×n) → P3/P4 → P5 → P8 → P6**. Run P6 last, in a
 fresh conversation, so the critic has not seen the drafting.

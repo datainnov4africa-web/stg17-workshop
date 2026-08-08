@@ -73,9 +73,37 @@ is shared.
 <div class="cols">          two columns   <div class="cols-3"> three columns
 <div class="terms">         glossary grid: <div><b>Term</b><span>Short gloss.</span></div>
 <div class="src">           source line at the foot: <b>Sources</b> · Author (year), DOI
+
+  -- components that carry visual weight without carrying words --
+<div class="hero-n">        one numeral at size: 71<span class="unit">%</span>
+                            followed by <div class="hero-cap">the caption</div>
+<div class="steps">         3–5 numbered cards for a process or a parallel set:
+                            <div><div class="i">1</div><div class="t">Title</div>
+                            <div class="d">One line.</div></div>
+<div class="compare">       two colour-coded panels, for over-claimed vs defensible:
+                            <div><h4>Label</h4><ul>…</ul></div> ×2
+<div class="chips">         a short fixed set shown rather than listed:
+                            <span>Term</span> <span class="on">Selected</span>
+<div class="quote">         pull quote, followed by <div class="attrib">Who said it</div>
+
+  -- section treatments; the class goes on <section> --
 <section class="divider">   part opener: eyebrow + h2 + one line of <p>
 <section class="title">     title slide only
-<section class="night">     dark background, for night-imagery slides
+<section class="night">     dark ground, for night-imagery slides
+<section class="jade">      solid jade field. Use it for the slide carrying the
+                            part's verdict, or the deck's one absolute
+<section class="tint">      wash ground. The cheap, always-available way to break
+                            a run of white slides
+<section class="split">     a colour panel carrying the claim, content beside it.
+                            THE WORKHORSE — it rescues any heading-plus-prose
+                            slide at no cost in words:
+                            <section class="split wide">
+                            <div class="panel is-amber">eyebrow, h2, one <p></div>
+                            <div class="body">the content</div>
+                            </section>
+                            panel variants: default navy, .is-jade, .is-amber
+<section class="bleed">      the figure IS the slide:
+                            <div class="cap"><h2>Title</h2></div><figure>…</figure>
 <section class="appendix">  bibliography only; exempt from the word limit
 
 # Hard constraints — the build enforces these
@@ -88,6 +116,17 @@ is shared.
    which is two slides.
 
 3. Tables: at most {{TABLE_ROW_LIMIT}} <tr> on the slide, header included.
+
+3b. NO BARE TEXT ON WHITE. The build rejects a slide whose only content is a
+   heading, prose and a callout. Every content slide must carry one of: a
+   figure, a `statement`, a `table`, `metrics`, `findings`, `steps`, `compare`,
+   `chips`, `terms`, a `hero-n` numeral — or be a `split`, `bleed`, `jade`,
+   `tint` or `night` section. None of these adds a single word, which is the
+   point: the word budget does not move.
+
+   The build also refuses more than three consecutive white slides across the
+   deck. If the slide before and after yours are both white, make yours `tint`
+   or `split`.
 
 4. The prose goes in <aside class="notes">. That is not a dumping ground — it is
    the script. Write it as what a person says out loud: full sentences, second

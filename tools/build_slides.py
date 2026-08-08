@@ -331,7 +331,7 @@ def check_density(source: Path, html: str, lang: str) -> tuple[list[str], list[s
     a dense-but-defensible reference slide exists, and a build that refuses to run
     over a judgement call is a build people route around.
     """
-    fatal, advisory = [], []
+    fatal, advisory, grounds = [], [], []
     for index, match in enumerate(
         re.finditer(r"<section\b([^>]*)>(.*?)</section>", html, re.S), start=1
     ):
@@ -363,7 +363,76 @@ def check_density(source: Path, html: str, lang: str) -> tuple[list[str], list[s
         if callouts > 1:
             advisory.append(f"{where}: {callouts} callouts — two callouts is two ideas, "
                             f"which is two slides")
+
+        fatal.extend(check_visual(attrs, section, where))
+        grounds.append(any(c in attrs for c in COLOURED_SECTIONS))
+
+    advisory.extend(check_rhythm(grounds, source, lang))
     return fatal, advisory
+
+
+#: Sections that put something other than white behind the content.
+COLOURED_SECTIONS = ("title", "divider", "night", "split", "bleed", "jade", "tint")
+WHITE_RUN_LIMIT = 3
+
+
+def check_rhythm(grounds: list[bool], source: Path, lang: str) -> list[str]:
+    """
+    Flag a stretch of consecutive white slides.
+
+    No single white slide is a fault. Four in a row is: the audience stops
+    perceiving slide changes, and the deck reads as one long scrolling page.
+    A divider, a `split` panel or a `tint` ground breaks the run and costs
+    nothing — not a word, not a minute.
+    """
+    out, run, start = [], 0, 0
+    for i, coloured in enumerate(grounds + [True]):
+        if coloured:
+            if run > WHITE_RUN_LIMIT:
+                out.append(f"{source.name} [{lang}] slides {start + 1}–{i}: {run} white "
+                           f"slides in a row. Break the run — a divider, a `split` panel "
+                           f"or a `tint` ground.")
+            run = 0
+        else:
+            if run == 0:
+                start = i
+            run += 1
+    return out
+
+
+#: Anything that gives a slide weight the audience reads before the words:
+#: a drawn figure, a colour field, a numeral at size, a set of cards.
+VISUAL_ELEMENTS = (
+    "<svg", "<img", "figure-slot",
+    'class="metrics"', 'class="findings"', 'class="statement"', 'class="steps"',
+    'class="compare"', 'class="chips"', 'class="hero-n"', 'class="quote"',
+    'class="terms"', "<table",
+)
+#: Section classes that ARE the visual treatment.
+VISUAL_SECTIONS = ("title", "divider", "night", "split", "bleed", "jade", "tint", "appendix")
+
+
+def check_visual(attrs: str, section: str, where: str) -> list[str]:
+    """
+    Refuse a slide that is bare text on a white ground.
+
+    The density guard above made slides short. Short is not the same as
+    designed: a heading, two sentences and a callout on white is a well-set
+    paragraph, and a deck of them reads as a document that happens to paginate.
+
+    Every content slide must carry one of: a drawn figure, a colour field, a
+    numeral at size, or a card set. None of those costs a single word — which
+    is the point, because the word budget stays where it is.
+    """
+    if any(cls in attrs for cls in VISUAL_SECTIONS):
+        return []
+    if any(marker in section for marker in VISUAL_ELEMENTS):
+        return []
+    return [
+        f"{where}: bare text on white. Give it visual weight — a figure, a "
+        f"`split` colour panel, a `hero-n` numeral, `steps`, `compare`, `chips`, "
+        f"or set the section to `tint`, `jade` or `night`. None of these adds words."
+    ]
 
 
 def check_symmetry(source: Path, built: dict[str, str]) -> list[str]:

@@ -93,7 +93,25 @@ content includes speaker notes, put them in the notes pane, not on the slide.
   FIGURE     The diagram occupies the full content width. Caption beneath at
              13pt muted, stating what the figure MEANS, not what it contains.
 
+  SPLIT      A navy, jade or amber colour panel across ~40% of the width
+             carrying the eyebrow and title, content in the remaining 60%.
+             Use it for any slide that would otherwise be heading-plus-prose.
+
+  HERO NUM   One numeral at 92pt weight 800 in jade, its unit at 35pt muted
+             beside it, and a caption of at most two lines at 17pt.
+
+  STEPS      3–5 cards in a row, each with a 46pt numeral, a 17pt title and two
+             lines at 14pt. A 5pt top border, jade, amber on the last card.
+
+  COMPARE    Two panels side by side on a wash fill, 5pt top border — muted or
+             red on the left, jade on the right. Labels in 13pt caps.
+
   CLOSING    Navy or night ground, what happens next, no "thank you" slide.
+
+## Rhythm — the rule most decks fail
+  Never more than three consecutive white slides. Roughly a third of the deck
+  should carry a colour field. Every content slide must have a visual idea as
+  well as a verbal one: a slide whose only content is prose is unfinished.
 
 ## Footer, on every slide except the title
   A 2pt amber rule across the content width at 0.55in from the bottom.

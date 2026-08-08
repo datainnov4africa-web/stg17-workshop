@@ -141,6 +141,8 @@ plugins:
             References: Références
             Licensing and ethics: Licences et éthique
             For facilitators: Pour les animateurs
+            Prompt library: Bibliothèque de prompts
+            Figure slots: Emplacements d'illustration
 
 nav:
   - Home: index.md
@@ -178,6 +180,7 @@ nav:
           - P6 · Adversarial critic: resources/prompts/P6-critic.md
           - P7 · Native deck build: resources/prompts/P7-native-deck.md
           - P8 · French rendering: resources/prompts/P8-translate-fr.md
+          - P9 · Standalone deck: resources/prompts/P9-standalone-deck.md
           - Figure slots: resources/prompts/figure-slots.md
 
 extra:

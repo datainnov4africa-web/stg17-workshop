@@ -50,7 +50,7 @@ jobs:
       - name: Prompt library assembles
         run: |
           python tools/prompt.py --list
-          for p in P1 P6 P7; do
+          for p in P1 P6 P7 P9; do
             python tools/prompt.py $p --deck 01 >/dev/null 2>err.txt
             test -s err.txt && (echo "::error::$p left tokens unresolved" && cat err.txt && exit 1)
           done

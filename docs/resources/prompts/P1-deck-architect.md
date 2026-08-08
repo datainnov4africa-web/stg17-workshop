@@ -36,7 +36,8 @@ Produce a slide-by-slide PLAN. Not slide content — a plan. For each slide give
   - a number and a one-line title that states a CLAIM, not a topic
     (write "Fine-tuning teaches style, not facts", not "About fine-tuning")
   - the slide TYPE, from this fixed set:
-        title | divider | statement | figure | table | callout | cards | closing
+        title | divider | statement | split | figure | bleed-figure | table
+        hero-number | steps | compare | cards | chips | quote | closing
   - the single idea it carries, in one sentence
   - what the presenter says that is NOT on the slide, in one sentence
   - the evidence it rests on: a specific paper, dataset, standard or framework —
@@ -61,6 +62,16 @@ Produce a slide-by-slide PLAN. Not slide content — a plan. For each slide give
 4. ARC. Group content slides into 2–4 parts, each introduced by a divider slide
    that states what the part is for. A 30-minute session with no dividers reads
    as one undifferentiated block.
+
+4b. RHYTHM. `title`, `divider`, `split` and `bleed-figure` put colour behind the
+   content; the rest are white. Plan so that no more than THREE consecutive
+   slides are white — the build rejects a longer run. Aim for roughly a third of
+   the deck carrying a colour field, and at least two diagrams.
+
+4c. NO PROSE-ONLY SLIDE. Every content slide must have a visual idea as well as
+   a verbal one. If the only type you can think of for a slide is "heading plus
+   two paragraphs", plan it as a `split` — the claim goes in the colour panel
+   and the detail beside it, at no cost in words.
 
 5. ONE ABSOLUTE. Somewhere in the deck there must be a single slide stating the
    line this material does not cross — the thing the audience must not do with

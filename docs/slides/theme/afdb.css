@@ -301,6 +301,154 @@
 .refs li { margin: 0 0 .6em; break-inside: avoid; }
 .refs .doi { color: var(--afdb-green); font-family: var(--afdb-mono); font-size: .92em; }
 
+/* ===========================================================================
+   VISUAL ARCHETYPES
+   ---------------------------------------------------------------------------
+   Everything above this line solves overload: short measure, one callout, no
+   size below which text shrinks to fit. It works, and it produced decks in
+   which eight slides out of seventeen were black text on white with a rule
+   under the heading. That is a well-set page, not a slide.
+
+   What follows is the other half — a positive visual language. The register is
+   editorial-graphic: flat colour fields, oversized numerals, strong type,
+   drawn diagrams. No photography, no gradients beyond the title slide, no
+   depth effects. It has to hold up on a badly calibrated projector in a room
+   with the lights on, and it has to still look right in ten years.
+
+   The rule these add to the one above: NO SLIDE IS BARE TEXT ON WHITE.
+   Every content slide carries a figure, a colour field, a numeral, a card set
+   or a tinted ground. `tools/build_slides.py` fails the build otherwise.
+
+   None of these archetypes adds words. Visual weight is not verbal weight.
+   =========================================================================== */
+
+/* --- Alternating grounds --------------------------------------------------
+   The cheapest fix for a deck that reads as a document: stop every slide
+   being white. Use `tint` for a slide that follows two white ones.        */
+.reveal section.tint { background: var(--afdb-wash); }
+.reveal section.tint .key { background: #fff; }
+
+/* A solid jade field. For the one slide in a part that carries its verdict. */
+.reveal section.jade { background: var(--afdb-green); color: #fff; }
+.reveal section.jade h2 { color: #fff; border-bottom-color: var(--afdb-amber); }
+.reveal section.jade h3 { color: var(--afdb-amber); }
+.reveal section.jade strong, .reveal section.jade em { color: #fff; }
+.reveal section.jade .statement { color: #fff; }
+.reveal section.jade .statement .hl { color: var(--afdb-amber); }
+.reveal section.jade .statement-sub,
+.reveal section.jade .lead { color: rgba(255,255,255,.78); }
+.reveal section.jade .eyebrow { color: var(--afdb-amber); }
+.reveal section.jade .src { color: rgba(255,255,255,.6); border-top-color: rgba(255,255,255,.25); }
+
+/* --- Split: a colour field carrying the claim, content beside it ----------
+   The workhorse. Turns any "heading plus two paragraphs" slide into something
+   with architecture, at no cost in words.                                  */
+.reveal section.split {
+  padding: 0; height: 100%;
+  display: grid; grid-template-columns: 5fr 7fr; align-items: stretch;
+}
+.reveal section.split.wide  { grid-template-columns: 4fr 8fr; }
+.reveal section.split.even  { grid-template-columns: 1fr 1fr; }
+.reveal section.split > .panel {
+  background: var(--afdb-navy); color: #fff;
+  padding: 2.4rem 2.2rem; display: flex; flex-direction: column; justify-content: center;
+}
+.reveal section.split > .panel.is-jade  { background: var(--afdb-green); }
+.reveal section.split > .panel.is-amber { background: var(--afdb-amber); color: var(--afdb-navy); }
+.reveal section.split > .panel h2 {
+  color: #fff; border-bottom: 4px solid var(--afdb-amber);
+  font-size: 1.16em; max-width: 16ch;
+}
+.reveal section.split > .panel.is-amber h2 { color: var(--afdb-navy); border-bottom-color: var(--afdb-navy); }
+.reveal section.split > .panel .eyebrow { color: var(--afdb-amber); }
+.reveal section.split > .panel.is-amber .eyebrow { color: #6b4c00; }
+.reveal section.split > .panel p { color: rgba(255,255,255,.8); font-size: .74em; max-width: none; }
+.reveal section.split > .panel.is-amber p { color: #5c4200; }
+.reveal section.split > .body {
+  padding: 2.2rem 3rem 3.2rem; overflow: hidden;
+  display: flex; flex-direction: column; justify-content: center;
+}
+.reveal section.split > .body > :first-child { margin-top: 0; }
+
+/* --- Hero numeral: one figure, at the size the figure deserves ------------ */
+.hero-n {
+  font-size: 3.6em; font-weight: 800; color: var(--afdb-green);
+  line-height: .95; letter-spacing: -0.045em; margin: .1em 0 .25em;
+}
+.hero-n .unit { font-size: .38em; font-weight: 700; color: var(--afdb-muted);
+                letter-spacing: 0; margin-left: .2em; }
+.reveal section.split > .panel .hero-n { color: var(--afdb-amber); }
+.reveal section.jade .hero-n, .reveal section.night .hero-n { color: var(--afdb-amber); }
+.hero-cap { font-size: .68em; color: var(--afdb-ink); max-width: 30ch; line-height: 1.4; }
+.reveal section.split > .panel .hero-cap { color: rgba(255,255,255,.82); }
+
+/* --- Pull quote ----------------------------------------------------------- */
+.quote {
+  font-size: 1.24em; font-weight: 600; color: var(--afdb-navy);
+  line-height: 1.3; max-width: 30ch; margin: .3em 0 .5em;
+  border-left: 8px solid var(--afdb-amber); padding-left: 1rem;
+}
+.quote + .attrib { font-size: .56em; color: var(--afdb-muted); letter-spacing: .04em; }
+.reveal section.night .quote, .reveal section.jade .quote { color: #fff; }
+
+/* --- Numbered steps: a process, drawn rather than bulleted ---------------- */
+.steps { display: grid; grid-auto-flow: column; grid-auto-columns: 1fr;
+         gap: .9rem; margin: 1.1rem 0; }
+.steps > div {
+  border-top: 5px solid var(--afdb-green); background: var(--afdb-wash);
+  border-radius: 0 0 12px 12px; padding: .9em 1em;
+}
+.steps > div:last-child { border-top-color: var(--afdb-amber); }
+.steps .i { font-size: 1.5em; font-weight: 800; color: var(--afdb-green);
+            line-height: 1; letter-spacing: -0.03em; }
+.steps > div:last-child .i { color: var(--afdb-amber); }
+.steps .t { font-size: .46em; font-weight: 800; color: var(--afdb-navy);
+            margin: .45em 0 .2em; line-height: 1.25; }
+.steps .d { font-size: .4em; color: var(--afdb-muted); line-height: 1.35; }
+
+/* --- Comparison: two states, colour-coded -------------------------------- */
+.compare { display: grid; grid-template-columns: 1fr 1fr; gap: 1.1rem; margin: .9rem 0; }
+.compare > div { border-radius: 12px; padding: 1em 1.15em; background: var(--afdb-wash); }
+.compare > div:first-child { border-top: 5px solid var(--afdb-muted); }
+.compare > div:last-child  { border-top: 5px solid var(--afdb-green); background: #EEF6F1; }
+.compare h4 { font-size: .5em; font-weight: 800; letter-spacing: .12em;
+              text-transform: uppercase; color: var(--afdb-muted); margin: 0 0 .5em; }
+.compare > div:last-child h4 { color: var(--afdb-green); }
+.compare p, .compare li { font-size: .62em; line-height: 1.4; max-width: none; }
+
+/* --- Chips: a short fixed set, shown rather than listed ------------------- */
+.chips { display: flex; flex-wrap: wrap; gap: .5rem; margin: .9rem 0; }
+.chips span {
+  font-size: .46em; font-weight: 700; color: var(--afdb-navy);
+  background: var(--afdb-wash); border: 1px solid var(--afdb-line);
+  border-radius: 40px; padding: .5em 1.1em;
+}
+.chips span.on { background: var(--afdb-green); color: #fff; border-color: var(--afdb-green); }
+
+/* --- Full-bleed figure: the diagram IS the slide -------------------------- */
+.reveal section.bleed { padding: 0; display: flex; flex-direction: column; }
+.reveal section.bleed > .cap {
+  background: var(--afdb-navy); color: #fff;
+  padding: 1rem 3.2rem; flex: 0 0 auto;
+}
+.reveal section.bleed > .cap h2 {
+  color: #fff; border: 0; padding: 0; margin: 0; font-size: 1.12em; max-width: 40ch;
+}
+.reveal section.bleed > .cap .eyebrow { color: var(--afdb-amber); margin-bottom: .3em; }
+.reveal section.bleed > figure {
+  flex: 1 1 auto; margin: 0; padding: 1.2rem 3.2rem 3.4rem;
+  display: flex; flex-direction: column; justify-content: center;
+}
+
+/* --- Corner accent: a quiet mark that makes a white slide feel designed ---
+   A 90px amber wedge at the top left of the content area. Costs nothing,
+   and stops a text slide reading as an unstyled document.                 */
+.reveal .slides section:not(.title):not(.divider):not(.split):not(.bleed)::before {
+  content: ""; position: absolute; left: 0; top: 0;
+  width: 10px; height: 108px; background: var(--afdb-amber);
+}
+.reveal section.night::before { background: var(--afdb-amber); }
+
 /* --- Print / PDF export (?print-pdf) -------------------------------------- */
 @media print {
   .reveal .footer { position: static; }

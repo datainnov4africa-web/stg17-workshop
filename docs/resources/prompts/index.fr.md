@@ -23,6 +23,7 @@ atelier — précisément ce qu'un générateur rate quand on ne le lui dit pas.
 | **P6** | [Critique adversarial](P6-critic.md) | Avant publication. Traque les références inventées, les affirmations non étayées, les diapositives surchargées. | Claude, ChatGPT |
 | **P7** | [Construction native](P7-native-deck.md) | Vous voulez un vrai PowerPoint conçu. **Commencez ici si le PPTX automatique vous a déçu** — voir la note ci-dessous. | Gamma, Copilot, Claude |
 | **P8** | [Version française](P8-translate-fr.md) | La présentation anglaise existe et le français doit l'égaler en densité, pas seulement en sens. | Claude, ChatGPT |
+| **P9** | [Présentation autonome](P9-standalone-deck.md) | Vous voulez une présentation `.html` autonome et finie, produite entièrement dans Claude — standard visuel maximal, hors pipeline. | Claude |
 
 Une présentation normale suit **P1 → P2 (×n) → P3/P4 → P5 → P8 → P6**. Lancez P6
 en dernier, dans une conversation neuve, pour que le critique n'ait pas assisté à

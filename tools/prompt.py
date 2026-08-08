@@ -45,6 +45,16 @@ ROOT = Path(__file__).resolve().parent.parent
 PROMPTS = ROOT / "docs" / "resources" / "prompts"
 DECKS = ROOT / "slides" / "decks"
 
+#: Who these decks are for. Stated once, because every prompt that describes the
+#: audience wrongly produces material pitched at the wrong level.
+DEFAULT_AUDIENCE = (
+    "Heads of statistical methodology and heads of IT at African national "
+    "statistical offices. Expert in official statistics, non-expert in machine "
+    "learning. Many are attending in their second or third working language. "
+    "They are decision-makers: they specify, procure and defend what their "
+    "office builds."
+)
+
 sys.path.insert(0, str(ROOT))
 from stg17 import theme  # noqa: E402
 
@@ -163,6 +173,12 @@ def build_tokens(args) -> dict[str, str]:
         "FIGURE_BRIEF": args.figure or "(describe the diagram here)",
         "FIGURE_TAKEAWAY": args.takeaway or "(state the five-second takeaway here)",
         "IMAGE_BRIEF": args.figure or "(describe the image here)",
+        # P9 is the one prompt that does not have to be about a workshop
+        # session, so its three inputs are supplied rather than looked up.
+        # When --deck is given they are filled from the agenda below.
+        "SUBJECT": args.subject or "(state the subject here)",
+        "AUDIENCE": args.audience or DEFAULT_AUDIENCE,
+        "DURATION": args.duration or "30",
     }
 
     if not args.deck:
@@ -185,7 +201,10 @@ def build_tokens(args) -> dict[str, str]:
             "DAY": str(day["n"]),
             "TIME": session.get("time", ""),
             "MODE": session.get("mode", "talk"),
-            "DURATION": meta.get("duration", "30"),
+            "DURATION": args.duration or meta.get("duration", "30"),
+            "SUBJECT": args.subject or "\n\n".join(
+                x for x in (session.get("title_en", ""), session.get("desc_en", "")) if x
+            ),
             "DESC_EN": session.get("desc_en", ""),
             "DESC_FR": session.get("desc_fr", ""),
             "PLAN": str(session.get("plan", "")),
@@ -281,6 +300,9 @@ def main() -> int:
     ap.add_argument("--slide", type=int, help="1-based slide number, for P2 / P5 / P8")
     ap.add_argument("--figure", help="what the diagram or image should show, for P3 / P4")
     ap.add_argument("--takeaway", help="the five-second takeaway of a figure, for P3")
+    ap.add_argument("--subject", help="what the deck is about, for P9 without --deck")
+    ap.add_argument("--audience", help="who it is for, for P9; defaults to the STG17 audience")
+    ap.add_argument("--duration", help="minutes; overrides the deck's own duration")
     ap.add_argument("--lang", default="en", choices=["en", "fr"],
                     help="which language of the deck to read slides from")
     ap.add_argument("--copy", action="store_true", help="also copy to the clipboard")
