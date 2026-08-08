@@ -34,6 +34,12 @@ jobs:
       - name: Notebooks are valid and carry no secrets
         run: python tools/check_notebooks.py
 
+      # The RAG module is the one piece of laboratory machinery with real logic
+      # rather than plumbing, and it runs with no model provider and no network.
+      # A chunker that silently drops a paragraph is invisible in a notebook.
+      - name: RAG module works end to end
+        run: python tools/check_rag.py
+
       - name: Site pages are in sync with the agenda
         run: |
           python tools/build_site.py

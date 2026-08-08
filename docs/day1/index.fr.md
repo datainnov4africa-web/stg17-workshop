@@ -57,11 +57,15 @@ Construire un assistant RAG fonctionnel sur un corpus statistique (note de conce
 
 !!! example "Laboratoire — Assistant RAG"
 
-    **Livrable :** Un carnet répondant à dix questions test avec ses sources, plus une courte note sur les questions échouées et les raisons
+    **Livrable :** Un relevé de réponses avec les passages exacts qui les fondent, et une évaluation de la récupération séparant les échecs de récupération des échecs de génération
 
-    **Repli :** Un index vectoriel pré-construit est distribué ; les équipes qui ne peuvent pas calculer les plongements démarrent directement à l'étape de récupération
+    **Repli :** Un corpus fictif de cinq documents est fourni avec la boîte à outils, donc aucune équipe n'est bloquée par des publications non validées ; sans aucun fournisseur de modèle, la moitié « récupération » du laboratoire fonctionne quand même — et c'est là que sont la plupart des problèmes du RAG
 
-    **Statut :** :material-progress-clock: Lot Jour 1
+    **Statut :** :material-check-circle:{ .ok } Disponible
+
+    [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/STG17-Africa/stg17-workshop/blob/main/notebooks/day1/D1_RAG_Assistant_FR.ipynb) **guidée** &nbsp; [:material-github:](https://github.com/STG17-Africa/stg17-workshop/blob/main/notebooks/day1/D1_RAG_Assistant_FR.ipynb)
+    
+    [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/STG17-Africa/stg17-workshop/blob/main/notebooks/day1/D1_RAG_Assistant_FR_open.ipynb) **ouverte** &nbsp; [:material-github:](https://github.com/STG17-Africa/stg17-workshop/blob/main/notebooks/day1/D1_RAG_Assistant_FR_open.ipynb)
 
 
 ### 15h45–17h00 &nbsp;·&nbsp; Atelier partie 2 — Du RAG à l'agent

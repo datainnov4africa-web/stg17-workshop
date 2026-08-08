@@ -16,11 +16,15 @@ Neuf laboratoires portent la semaine. Chacun est spécifié ci-dessous avec l'en
 |---|---|
 | **Équipe** | binômes |
 | **Pays par défaut** | `CIV` — changez `COUNTRY_ISO3` pour le vôtre |
-| **Environnement et données** | Python dans Colab ou en local ; plongements sentence-transformers ; base vectorielle FAISS ou Chroma ; corpus de documents méthodologiques STG17 et nationaux fourni dans le dépôt |
-| **Livrable de l’équipe** | Un carnet répondant à dix questions test avec ses sources, plus une courte note sur les questions échouées et les raisons |
-| **Repli** | Un index vectoriel pré-construit est distribué ; les équipes qui ne peuvent pas calculer les plongements démarrent directement à l'étape de récupération |
+| **Environnement et données** | Python dans Colab, Kaggle ou en local ; scikit-learn pour le récupérateur par mots, sans téléchargement ; sentence-transformers en option pour le récupérateur sémantique ; pas de base vectorielle — le corpus est trop petit pour la justifier |
+| **Livrable de l’équipe** | Un relevé de réponses avec les passages exacts qui les fondent, et une évaluation de la récupération séparant les échecs de récupération des échecs de génération |
+| **Repli** | Un corpus fictif de cinq documents est fourni avec la boîte à outils, donc aucune équipe n'est bloquée par des publications non validées ; sans aucun fournisseur de modèle, la moitié « récupération » du laboratoire fonctionne quand même — et c'est là que sont la plupart des problèmes du RAG |
 | **Variante Earth Engine** | — |
-| **Statut** | :material-progress-clock: Lot Jour 1 |
+| **Statut** | :material-check-circle:{ .ok } Disponible |
+
+[![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/STG17-Africa/stg17-workshop/blob/main/notebooks/day1/D1_RAG_Assistant_FR.ipynb) **guidée** &nbsp; [:material-github:](https://github.com/STG17-Africa/stg17-workshop/blob/main/notebooks/day1/D1_RAG_Assistant_FR.ipynb)
+
+[![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/STG17-Africa/stg17-workshop/blob/main/notebooks/day1/D1_RAG_Assistant_FR_open.ipynb) **ouverte** &nbsp; [:material-github:](https://github.com/STG17-Africa/stg17-workshop/blob/main/notebooks/day1/D1_RAG_Assistant_FR_open.ipynb)
 
 ### Du RAG à l'agent
 

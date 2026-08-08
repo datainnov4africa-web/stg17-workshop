@@ -57,11 +57,15 @@ Build a working RAG assistant over a statistical corpus (STG17 Concept Note, Act
 
 !!! example "Laboratory — RAG assistant"
 
-    **Deliverable:** A notebook answering ten test questions with sources, plus a short note on the questions it fails and why
+    **Deliverable:** A transcript of answers with the exact passages behind each one, and a retrieval evaluation separating retrieval failures from generation failures
 
-    **Fallback:** A pre-built vector index is distributed; teams that cannot embed start directly at the retrieval step
+    **Fallback:** A fictional five-document corpus ships with the toolkit, so no team is blocked by uncleared publications; without any model provider, the retrieval half of the laboratory still runs — and that is where most RAG problems are
 
-    **Status:** :material-progress-clock: Day 1 batch
+    **Status:** :material-check-circle:{ .ok } Available
+
+    [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/STG17-Africa/stg17-workshop/blob/main/notebooks/day1/D1_RAG_Assistant_EN.ipynb) **guided** &nbsp; [:material-github:](https://github.com/STG17-Africa/stg17-workshop/blob/main/notebooks/day1/D1_RAG_Assistant_EN.ipynb)
+    
+    [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/STG17-Africa/stg17-workshop/blob/main/notebooks/day1/D1_RAG_Assistant_EN_open.ipynb) **open** &nbsp; [:material-github:](https://github.com/STG17-Africa/stg17-workshop/blob/main/notebooks/day1/D1_RAG_Assistant_EN_open.ipynb)
 
 
 ### 15:45–17:00 &nbsp;·&nbsp; Hands-on part 2 — From RAG to Agent

@@ -288,13 +288,14 @@ labs:
     team_en: pairs
     team_fr: binômes
     country: CIV
-    env_en: Python in Colab or local; sentence-transformers embeddings; FAISS or Chroma vector store; corpus of STG17 and national methodological documents supplied in the repository
-    env_fr: Python dans Colab ou en local ; plongements sentence-transformers ; base vectorielle FAISS ou Chroma ; corpus de documents méthodologiques STG17 et nationaux fourni dans le dépôt
-    deliverable_en: A notebook answering ten test questions with sources, plus a short note on the questions it fails and why
-    deliverable_fr: Un carnet répondant à dix questions test avec ses sources, plus une courte note sur les questions échouées et les raisons
-    fallback_en: A pre-built vector index is distributed; teams that cannot embed start directly at the retrieval step
-    fallback_fr: Un index vectoriel pré-construit est distribué ; les équipes qui ne peuvent pas calculer les plongements démarrent directement à l'étape de récupération
-    status: phase1
+    notebook: D1_RAG_Assistant
+    env_en: Python in Colab, Kaggle or local; scikit-learn for the word-matching retriever, which needs no download; sentence-transformers optional for the meaning-matching one; no vector database — the corpus is small enough that one is not warranted
+    env_fr: Python dans Colab, Kaggle ou en local ; scikit-learn pour le récupérateur par mots, sans téléchargement ; sentence-transformers en option pour le récupérateur sémantique ; pas de base vectorielle — le corpus est trop petit pour la justifier
+    deliverable_en: A transcript of answers with the exact passages behind each one, and a retrieval evaluation separating retrieval failures from generation failures
+    deliverable_fr: Un relevé de réponses avec les passages exacts qui les fondent, et une évaluation de la récupération séparant les échecs de récupération des échecs de génération
+    fallback_en: A fictional five-document corpus ships with the toolkit, so no team is blocked by uncleared publications; without any model provider, the retrieval half of the laboratory still runs — and that is where most RAG problems are
+    fallback_fr: Un corpus fictif de cinq documents est fourni avec la boîte à outils, donc aucune équipe n'est bloquée par des publications non validées ; sans aucun fournisseur de modèle, la moitié « récupération » du laboratoire fonctionne quand même — et c'est là que sont la plupart des problèmes du RAG
+    status: ready
   d1_agent:
     day: 1
     title_en: From RAG to agent

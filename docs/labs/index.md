@@ -16,11 +16,15 @@ Nine laboratories carry the week. Each is specified below with the environment i
 |---|---|
 | **Team** | pairs |
 | **Default country** | `CIV` — change `COUNTRY_ISO3` to your own |
-| **Environment and data** | Python in Colab or local; sentence-transformers embeddings; FAISS or Chroma vector store; corpus of STG17 and national methodological documents supplied in the repository |
-| **Team deliverable** | A notebook answering ten test questions with sources, plus a short note on the questions it fails and why |
-| **Fallback** | A pre-built vector index is distributed; teams that cannot embed start directly at the retrieval step |
+| **Environment and data** | Python in Colab, Kaggle or local; scikit-learn for the word-matching retriever, which needs no download; sentence-transformers optional for the meaning-matching one; no vector database — the corpus is small enough that one is not warranted |
+| **Team deliverable** | A transcript of answers with the exact passages behind each one, and a retrieval evaluation separating retrieval failures from generation failures |
+| **Fallback** | A fictional five-document corpus ships with the toolkit, so no team is blocked by uncleared publications; without any model provider, the retrieval half of the laboratory still runs — and that is where most RAG problems are |
 | **Earth Engine variant** | — |
-| **Status** | :material-progress-clock: Day 1 batch |
+| **Status** | :material-check-circle:{ .ok } Available |
+
+[![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/STG17-Africa/stg17-workshop/blob/main/notebooks/day1/D1_RAG_Assistant_EN.ipynb) **guided** &nbsp; [:material-github:](https://github.com/STG17-Africa/stg17-workshop/blob/main/notebooks/day1/D1_RAG_Assistant_EN.ipynb)
+
+[![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/STG17-Africa/stg17-workshop/blob/main/notebooks/day1/D1_RAG_Assistant_EN_open.ipynb) **open** &nbsp; [:material-github:](https://github.com/STG17-Africa/stg17-workshop/blob/main/notebooks/day1/D1_RAG_Assistant_EN_open.ipynb)
 
 ### From RAG to agent
 
