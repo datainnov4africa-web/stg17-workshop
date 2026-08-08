@@ -76,11 +76,15 @@ Turn the retriever built before the break into a tool, and wrap it in an agent �
 
 !!! example "Laboratory — From RAG to agent"
 
-    **Deliverable:** An agent that answers a question, retrieves the supporting figure and drafts a five-line note
+    **Deliverable:** An audit log recording every tool the model asked for, whether policy allowed it, and the raw reply behind each request — plus the note the agent wrote once a policy permitted it
 
-    **Fallback:** A working reference agent is provided; teams modify it rather than build from scratch
+    **Fallback:** A scripted model replays fixed replies, so the loop, the approval gate, the error recovery and the audit log are all exercised with no API key. That is deliberate rather than a consolation path — those four things are what an office writes and owns; the model is what it rents
 
-    **Status:** :material-progress-clock: Day 1 batch
+    **Status:** :material-check-circle:{ .ok } Available
+
+    [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/STG17-Africa/stg17-workshop/blob/main/notebooks/day1/D1_Agent_EN.ipynb) **guided** &nbsp; [:material-github:](https://github.com/STG17-Africa/stg17-workshop/blob/main/notebooks/day1/D1_Agent_EN.ipynb)
+    
+    [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/STG17-Africa/stg17-workshop/blob/main/notebooks/day1/D1_Agent_EN_open.ipynb) **open** &nbsp; [:material-github:](https://github.com/STG17-Africa/stg17-workshop/blob/main/notebooks/day1/D1_Agent_EN_open.ipynb)
 
 
 !!! quote "15:30–15:45 — Coffee break"

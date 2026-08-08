@@ -303,13 +303,16 @@ labs:
     team_en: pairs
     team_fr: binômes
     country: CIV
-    env_en: Same environment plus a provisioned LLM API key; function calling with two tools — the retriever and a table lookup
-    env_fr: Même environnement plus une clé API LLM fournie ; appel de fonctions avec deux outils — le récupérateur et une consultation de table
-    deliverable_en: An agent that answers a question, retrieves the supporting figure and drafts a five-line note
-    deliverable_fr: Un agent qui répond à une question, retrouve le chiffre à l'appui et rédige une note de cinq lignes
-    fallback_en: A working reference agent is provided; teams modify it rather than build from scratch
-    fallback_fr: Un agent de référence fonctionnel est fourni ; les équipes le modifient plutôt que de partir de zéro
-    status: phase1
+    notebook: D1_Agent
+    env_en: Same environment as the RAG laboratory; four tools — retrieval, a document list, a guarded calculator and one that writes to disk. A JSON text protocol rather than native function calling, so the request-to-execution gap stays visible and the exercise runs on any provider including a local model
+    env_fr: Même environnement que le laboratoire RAG ; quatre outils — récupération, liste de documents, calculatrice protégée et un outil qui écrit sur disque. Un protocole textuel JSON plutôt que l'appel de fonctions natif, pour que l'interstice demande-exécution reste visible et que l'exercice tourne sur tout fournisseur, y compris un modèle local
+    deliverable_en: An audit log recording every tool the model asked for, whether policy allowed it, and the raw reply behind each request — plus the note the agent wrote once a policy permitted it
+    deliverable_fr: Un journal d'audit consignant chaque outil demandé par le modèle, son autorisation par la politique, et la réponse brute derrière chaque demande — plus la note écrite par l'agent une fois une politique l'y autorisant
+    fallback_en: A scripted model replays fixed replies, so the loop, the approval gate, the error recovery and the audit log are all exercised with no API key. That is deliberate rather than a consolation path — those four things are what an office writes and owns; the model is what it rents
+    # Quoted: French puts a space before a colon, and an unquoted YAML scalar
+    # reads " : " as a key/value separator.
+    fallback_fr: "Un modèle scripté rejoue des réponses fixes : la boucle, le point d'approbation, la reprise sur erreur et le journal d'audit s'exercent donc sans clé API. C'est délibéré et non un chemin de repli — ces quatre éléments sont ce qu'un office écrit et possède ; le modèle est ce qu'il loue"
+    status: ready
   d2_dashboard:
     day: 2
     title_en: Document to dashboard

@@ -40,6 +40,13 @@ jobs:
       - name: RAG module works end to end
         run: python tools/check_rag.py
 
+      # The agent loop is exercised by a scripted model, so CI covers the
+      # approval gate without an API key. The check that matters: a refused write
+      # must leave the disk untouched — a gate that logs a refusal and executes
+      # anyway is worse than no gate, because the audit trail reassures.
+      - name: Agent loop and approval gate work
+        run: python tools/check_agent.py
+
       - name: Site pages are in sync with the agenda
         run: |
           python tools/build_site.py

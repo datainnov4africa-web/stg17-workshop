@@ -182,8 +182,45 @@ def available(provider: str) -> bool:
     if importlib.util.find_spec(spec["package"]) is None:
         return False
     if provider == "ollama":
-        return True   # no key; reachability is checked at call time
+        return _ollama_reachable()
     return bool(get_secret(spec["env"]))
+
+
+_OLLAMA_REACHABLE: bool | None = None
+
+
+def _ollama_reachable(timeout: float = 0.4) -> bool:
+    """
+    Is a local Ollama actually answering?
+
+    This used to return True whenever the package was importable, on the grounds
+    that reachability was checked at call time. That made `available()` — whose
+    docstring promises "usable right now" — and `first_available()` into promises
+    neither could keep: a notebook guarding on them would report a provider and
+    then crash on the call, which is exactly the failure every laboratory is
+    designed to avoid.
+
+    A 0.4-second connection attempt to localhost costs nothing and makes the
+    answer true. Cached per process, because `status()` asks on every call and a
+    daemon does not start mid-notebook.
+    """
+    global _OLLAMA_REACHABLE
+    if _OLLAMA_REACHABLE is not None:
+        return _OLLAMA_REACHABLE
+
+    import socket  # noqa: PLC0415
+    from urllib.parse import urlparse  # noqa: PLC0415
+
+    # Same resolution as `_chat_ollama` uses, so the probe and the call cannot
+    # disagree about which host they are talking to.
+    url = urlparse(get_secret("OLLAMA_HOST") or "http://localhost:11434")
+    try:
+        with socket.create_connection((url.hostname or "localhost", url.port or 11434),
+                                      timeout=timeout):
+            _OLLAMA_REACHABLE = True
+    except OSError:
+        _OLLAMA_REACHABLE = False
+    return _OLLAMA_REACHABLE
 
 
 def status() -> list[tuple[str, str, str]]:
@@ -197,6 +234,11 @@ def status() -> list[tuple[str, str, str]]:
 
             if importlib.util.find_spec(spec["package"]) is None:
                 detail = T(f"pip install {spec['package']}", f"pip install {spec['package']}")
+            elif name == "ollama":
+                # Ollama needs no key, so "env not set" would name the wrong
+                # problem and send someone hunting for a variable they do not need.
+                detail = T("not reachable — run `ollama serve`",
+                           "injoignable — lancez `ollama serve`")
             else:
                 detail = T(f"{spec['env']} not set", f"{spec['env']} non défini")
             rows.append((spec["label"], "warn", detail))

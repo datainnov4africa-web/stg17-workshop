@@ -32,11 +32,15 @@ Nine laboratories carry the week. Each is specified below with the environment i
 |---|---|
 | **Team** | pairs |
 | **Default country** | `CIV` — change `COUNTRY_ISO3` to your own |
-| **Environment and data** | Same environment plus a provisioned LLM API key; function calling with two tools — the retriever and a table lookup |
-| **Team deliverable** | An agent that answers a question, retrieves the supporting figure and drafts a five-line note |
-| **Fallback** | A working reference agent is provided; teams modify it rather than build from scratch |
+| **Environment and data** | Same environment as the RAG laboratory; four tools — retrieval, a document list, a guarded calculator and one that writes to disk. A JSON text protocol rather than native function calling, so the request-to-execution gap stays visible and the exercise runs on any provider including a local model |
+| **Team deliverable** | An audit log recording every tool the model asked for, whether policy allowed it, and the raw reply behind each request — plus the note the agent wrote once a policy permitted it |
+| **Fallback** | A scripted model replays fixed replies, so the loop, the approval gate, the error recovery and the audit log are all exercised with no API key. That is deliberate rather than a consolation path — those four things are what an office writes and owns; the model is what it rents |
 | **Earth Engine variant** | — |
-| **Status** | :material-progress-clock: Day 1 batch |
+| **Status** | :material-check-circle:{ .ok } Available |
+
+[![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/STG17-Africa/stg17-workshop/blob/main/notebooks/day1/D1_Agent_EN.ipynb) **guided** &nbsp; [:material-github:](https://github.com/STG17-Africa/stg17-workshop/blob/main/notebooks/day1/D1_Agent_EN.ipynb)
+
+[![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/STG17-Africa/stg17-workshop/blob/main/notebooks/day1/D1_Agent_EN_open.ipynb) **open** &nbsp; [:material-github:](https://github.com/STG17-Africa/stg17-workshop/blob/main/notebooks/day1/D1_Agent_EN_open.ipynb)
 
 ## Day 2
 

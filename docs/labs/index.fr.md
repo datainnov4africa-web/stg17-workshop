@@ -32,11 +32,15 @@ Neuf laboratoires portent la semaine. Chacun est spécifié ci-dessous avec l'en
 |---|---|
 | **Équipe** | binômes |
 | **Pays par défaut** | `CIV` — changez `COUNTRY_ISO3` pour le vôtre |
-| **Environnement et données** | Même environnement plus une clé API LLM fournie ; appel de fonctions avec deux outils — le récupérateur et une consultation de table |
-| **Livrable de l’équipe** | Un agent qui répond à une question, retrouve le chiffre à l'appui et rédige une note de cinq lignes |
-| **Repli** | Un agent de référence fonctionnel est fourni ; les équipes le modifient plutôt que de partir de zéro |
+| **Environnement et données** | Même environnement que le laboratoire RAG ; quatre outils — récupération, liste de documents, calculatrice protégée et un outil qui écrit sur disque. Un protocole textuel JSON plutôt que l'appel de fonctions natif, pour que l'interstice demande-exécution reste visible et que l'exercice tourne sur tout fournisseur, y compris un modèle local |
+| **Livrable de l’équipe** | Un journal d'audit consignant chaque outil demandé par le modèle, son autorisation par la politique, et la réponse brute derrière chaque demande — plus la note écrite par l'agent une fois une politique l'y autorisant |
+| **Repli** | Un modèle scripté rejoue des réponses fixes : la boucle, le point d'approbation, la reprise sur erreur et le journal d'audit s'exercent donc sans clé API. C'est délibéré et non un chemin de repli — ces quatre éléments sont ce qu'un office écrit et possède ; le modèle est ce qu'il loue |
 | **Variante Earth Engine** | — |
-| **Statut** | :material-progress-clock: Lot Jour 1 |
+| **Statut** | :material-check-circle:{ .ok } Disponible |
+
+[![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/STG17-Africa/stg17-workshop/blob/main/notebooks/day1/D1_Agent_FR.ipynb) **guidée** &nbsp; [:material-github:](https://github.com/STG17-Africa/stg17-workshop/blob/main/notebooks/day1/D1_Agent_FR.ipynb)
+
+[![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/STG17-Africa/stg17-workshop/blob/main/notebooks/day1/D1_Agent_FR_open.ipynb) **ouverte** &nbsp; [:material-github:](https://github.com/STG17-Africa/stg17-workshop/blob/main/notebooks/day1/D1_Agent_FR_open.ipynb)
 
 ## Jour 2
 
