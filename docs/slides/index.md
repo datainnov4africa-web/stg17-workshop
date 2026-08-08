@@ -50,7 +50,19 @@ GPUs and accelerators, inference versus training, cloud/hybrid/on-premise, data
 sovereignty for NSO microdata, cost modelling, open-weight versus proprietary.
 What a realistic entry-level configuration looks like for an African NSO.
 
-:material-progress-clock: *Day 1 batch*
+:material-check-circle:{ .ok } **Available**
+
+<p>
+<a class="md-button md-button--primary" href="02-ai-infrastructure-what-it-really-takes-en.html">Present (EN)</a>
+<a class="md-button" href="02-ai-infrastructure-what-it-really-takes-fr.html">Présenter (FR)</a>
+</p>
+
+<p>
+<a href="02-ai-infrastructure-what-it-really-takes-en.html?print-pdf">PDF (EN)</a> ·
+<a href="02-ai-infrastructure-what-it-really-takes-fr.html?print-pdf">PDF (FR)</a> ·
+<a href="pptx/02-ai-infrastructure-en.pptx">PPTX (EN)</a> ·
+<a href="pptx/02-ai-infrastructure-fr.pptx">PPTX (FR)</a>
+</p>
 
 ---
 

@@ -1,0 +1,1224 @@
+<!--meta
+id: 02
+title_en: AI Infrastructure - What It Really Takes
+title_fr: Infrastructure de l'IA - Ce qu'elle exige réellement
+session_en: Day 1 · 14:00-14:45 · Talk
+session_fr: Jour 1 · 14h00-14h45 · Exposé
+duration: 45
+plan: 4.2.3 / 3.3.2
+-->
+
+<!-- 1 ==================================================================== -->
+<section class="title">
+<!--EN-->
+<div class="eyebrow">African Development Bank · AU STATAFRIC · STG17 · Day 1</div>
+<h1>AI Infrastructure</h1>
+<h2>What it really takes to run AI in a statistical office — and what you do not need to buy</h2>
+<div class="meta">
+Day 1 · 14:00–14:45<br>
+STG17 Action Plan 2025–2030 · activities 4.2.3 and 3.3.2
+</div>
+
+<aside class="notes">
+Forty-five minutes: roughly thirty of material and fifteen of discussion, because
+this is the session where the room has specific questions about their own
+situation, and those questions are more useful than any slide.
+
+Set the frame at the start: the aim is not to make anyone a systems engineer. It
+is that when a vendor quotes a configuration, or a minister asks "can we do this
+ourselves", the people in this room can answer with arithmetic instead of
+impressions.
+</aside>
+<!--FR-->
+<div class="eyebrow">Banque africaine de développement · UA STATAFRIC · STG17 · Jour 1</div>
+<h1>Infrastructure de l'IA</h1>
+<h2>Ce qu'exige réellement l'exploitation de l'IA dans un office statistique — et ce qu'il ne faut pas acheter</h2>
+<div class="meta">
+Jour 1 · 14h00-14h45<br>
+Plan d'action STG17 2025-2030 · activités 4.2.3 et 3.3.2
+</div>
+
+<aside class="notes">
+Quarante-cinq minutes : environ trente de matière et quinze de discussion, car
+c'est la session où la salle a des questions précises sur sa propre situation, et
+ces questions sont plus utiles que n'importe quelle diapositive.
+
+Posez le cadre d'entrée : l'objectif n'est pas de faire de quiconque un ingénieur
+système. C'est que lorsqu'un prestataire chiffre une configuration, ou qu'un
+ministre demande « pouvons-nous le faire nous-mêmes », les personnes de cette
+salle puissent répondre par du calcul plutôt que par des impressions.
+</aside>
+</section>
+
+<!-- 2 ==================================================================== -->
+<section class="split wide">
+<span class="timing">2 min</span>
+<!--EN-->
+<div class="panel">
+<div class="eyebrow">The question you were sent with</div>
+<h2>“What do we need to buy?”</h2>
+<p>It is the wrong first question, and answering it first is how offices end up
+with an expensive machine and no use case.</p>
+</div>
+<div class="body">
+<div class="key">
+<b>The order that works</b>
+Name the use case. Classify the data it touches. <em>Then</em> the infrastructure
+follows almost mechanically — often to a laptop you already own.
+</div>
+</div>
+
+<aside class="notes">
+Ask directly whether anyone arrived with a budget line for AI hardware and no
+agreed use case. It is common, it is not embarrassing, and naming it early makes
+the rest of the session land.
+
+The reason the order matters: the same task can require nothing, a good laptop,
+or a server room, depending on one thing — whether the data may leave the
+building. That is a legal question, not a technical one, and it is answered by
+your statistics act and your data protection authority.
+</aside>
+<!--FR-->
+<div class="panel">
+<div class="eyebrow">La question qu'on vous a confiée</div>
+<h2>« Qu'est-ce qu'il faut acheter ? »</h2>
+<p>C'est la mauvaise première question, et y répondre d'abord est la façon dont
+un office se retrouve avec une machine coûteuse et aucun cas d'usage.</p>
+</div>
+<div class="body">
+<div class="key">
+<b>L'ordre qui fonctionne</b>
+Nommez le cas d'usage. Classez les données qu'il touche. <em>Ensuite</em>
+l'infrastructure en découle presque mécaniquement — souvent vers un portable que
+vous possédez déjà.
+</div>
+</div>
+
+<aside class="notes">
+Demandez directement si quelqu'un est arrivé avec une ligne budgétaire pour du
+matériel d'IA et aucun cas d'usage arrêté. C'est fréquent, ce n'est pas gênant,
+et le nommer tôt fait porter le reste de la session.
+
+Pourquoi l'ordre compte : la même tâche peut n'exiger rien, un bon portable, ou
+une salle serveurs, selon une seule chose — si les données peuvent quitter le
+bâtiment. C'est une question juridique, pas technique, et elle est tranchée par
+votre loi statistique et votre autorité de protection des données.
+</aside>
+</section>
+
+<!-- 3 ==================================================================== -->
+<section>
+<span class="timing">1 min</span>
+<!--EN-->
+<div class="eyebrow">The decision that determines everything after it</div>
+<div class="statement">
+May this data<br><span class="hl">leave the building</span>?
+</div>
+<p class="statement-sub">
+Yes → a cloud API, and the hardware question disappears.<br>
+No → the model comes to the data, and now you are buying something.
+</p>
+
+<aside class="notes">
+Everything in the next forty minutes descends from this one question, so let it
+sit.
+
+Notice what it is not: it is not "is the cloud secure". Commercial clouds are
+generally more secure than a server under a desk. The question is whether your
+legal mandate permits the transfer at all — and for identifiable microdata, in
+most member states, it does not, regardless of how good the provider's security
+is.
+
+That single answer splits the room into two very different procurement
+conversations.
+</aside>
+<!--FR-->
+<div class="eyebrow">La décision qui détermine tout le reste</div>
+<div class="statement">
+Ces données peuvent-elles<br><span class="hl">quitter le bâtiment</span> ?
+</div>
+<p class="statement-sub">
+Oui → une API en nuage, et la question du matériel disparaît.<br>
+Non → le modèle vient aux données, et là vous achetez quelque chose.
+</p>
+
+<aside class="notes">
+Tout ce qui suit dans les quarante prochaines minutes découle de cette seule
+question : laissez-la reposer.
+
+Remarquez ce qu'elle n'est pas : elle n'est pas « le nuage est-il sûr ». Les
+nuages commerciaux sont généralement plus sûrs qu'un serveur sous un bureau. La
+question est de savoir si votre mandat juridique autorise le transfert — et pour
+des microdonnées identifiantes, dans la plupart des États membres, il ne
+l'autorise pas, quelle que soit la qualité de la sécurité du prestataire.
+
+Cette seule réponse scinde la salle en deux conversations d'achat très
+différentes.
+</aside>
+</section>
+
+<!-- 4 ==================================================================== -->
+<section class="divider">
+<!--EN-->
+<div class="eyebrow" style="color:var(--afdb-amber);">Part 1 of 3</div>
+<h2>What the machine is actually doing</h2>
+<p>Three workloads that get confused, and cost three different amounts.</p>
+<!--FR-->
+<div class="eyebrow" style="color:var(--afdb-amber);">Partie 1 sur 3</div>
+<h2>Ce que la machine fait réellement</h2>
+<p>Trois charges de travail qu'on confond, et qui coûtent trois montants différents.</p>
+</section>
+
+<!-- 5 ==================================================================== -->
+<section>
+<span class="timing">4 min</span>
+<!--EN-->
+<h2>Training, adapting, running</h2>
+<figure>
+<svg viewBox="0 0 1180 268" xmlns="http://www.w3.org/2000/svg" role="img"
+     aria-label="Three workloads compared: pre-training, fine-tuning and inference, at very different scales">
+ <g font-family="Inter,sans-serif">
+  <rect x="20" y="30" width="360" height="150" rx="14" fill="#F7F7F8" stroke="#C0392B" stroke-width="2.5"/>
+  <text x="200" y="64" text-anchor="middle" font-size="21" font-weight="800" fill="#C0392B">PRE-TRAINING</text>
+  <text x="200" y="92"  text-anchor="middle" font-size="16" fill="#0B2545" font-weight="700">Build a model from scratch</text>
+  <text x="200" y="122" text-anchor="middle" font-size="15" fill="#33403A">Thousands of GPUs, months,</text>
+  <text x="200" y="144" text-anchor="middle" font-size="15" fill="#33403A">an industrial power supply</text>
+  <text x="200" y="170" text-anchor="middle" font-size="16" fill="#C0392B" font-weight="800">Not for any NSO. Ever.</text>
+
+  <rect x="410" y="30" width="360" height="150" rx="14" fill="#FEF9EC" stroke="#F2A900" stroke-width="2.5"/>
+  <text x="590" y="64" text-anchor="middle" font-size="21" font-weight="800" fill="#8a6100">FINE-TUNING</text>
+  <text x="590" y="92"  text-anchor="middle" font-size="16" fill="#0B2545" font-weight="700">Adapt an existing model</text>
+  <text x="590" y="122" text-anchor="middle" font-size="15" fill="#33403A">1–8 GPUs, hours to days,</text>
+  <text x="590" y="144" text-anchor="middle" font-size="15" fill="#33403A">plus a labelled dataset you built</text>
+  <text x="590" y="170" text-anchor="middle" font-size="16" fill="#8a6100" font-weight="800">Rarely what you need</text>
+
+  <rect x="800" y="30" width="360" height="150" rx="14" fill="#F4F8F5" stroke="#1B7A43" stroke-width="2.5"/>
+  <text x="980" y="64" text-anchor="middle" font-size="21" font-weight="800" fill="#1B7A43">INFERENCE</text>
+  <text x="980" y="92"  text-anchor="middle" font-size="16" fill="#0B2545" font-weight="700">Run a model you did not build</text>
+  <text x="980" y="122" text-anchor="middle" font-size="15" fill="#33403A">0–1 GPU, milliseconds to seconds,</text>
+  <text x="980" y="144" text-anchor="middle" font-size="15" fill="#33403A">per request</text>
+  <text x="980" y="170" text-anchor="middle" font-size="16" fill="#1B7A43" font-weight="800">This is 95 % of your work</text>
+
+  <text x="590" y="222" text-anchor="middle" font-size="18" fill="#8a6100" font-weight="700">
+   A vendor who quotes you training hardware for an inference workload is selling you a factory to buy bread.</text>
+  <text x="590" y="252" text-anchor="middle" font-size="16" fill="#0B2545">
+   The three differ by orders of magnitude in cost, time and skill — and they are constantly conflated.</text>
+ </g>
+</svg>
+</figure>
+
+<aside class="notes">
+The red box exists to close a conversation before it starts. No African NSO —
+and no European one either — pre-trains a foundation model. That is a
+capital-intensive activity for a handful of firms and states, and proposing it is
+a signal that a proposal has not been thought through.
+
+The amber box is the one from this morning: fine-tuning teaches style, not facts,
+and needs a labelled dataset that someone in your office has to build and
+maintain.
+
+The green box is where the work is. And crucially, inference is the workload that
+either needs no hardware at all — because someone else runs it — or needs
+surprisingly little.
+</aside>
+<!--FR-->
+<h2>Entraîner, adapter, exécuter</h2>
+<figure>
+<svg viewBox="0 0 1180 268" xmlns="http://www.w3.org/2000/svg" role="img"
+     aria-label="Trois charges comparées : pré-entraînement, affinage et inférence, à des échelles très différentes">
+ <g font-family="Inter,sans-serif">
+  <rect x="20" y="30" width="360" height="150" rx="14" fill="#F7F7F8" stroke="#C0392B" stroke-width="2.5"/>
+  <text x="200" y="64" text-anchor="middle" font-size="21" font-weight="800" fill="#C0392B">PRÉ-ENTRAÎNEMENT</text>
+  <text x="200" y="92"  text-anchor="middle" font-size="16" fill="#0B2545" font-weight="700">Construire un modèle de zéro</text>
+  <text x="200" y="122" text-anchor="middle" font-size="15" fill="#33403A">Des milliers de GPU, des mois,</text>
+  <text x="200" y="144" text-anchor="middle" font-size="15" fill="#33403A">une alimentation industrielle</text>
+  <text x="200" y="170" text-anchor="middle" font-size="16" fill="#C0392B" font-weight="800">Pour aucun INS. Jamais.</text>
+
+  <rect x="410" y="30" width="360" height="150" rx="14" fill="#FEF9EC" stroke="#F2A900" stroke-width="2.5"/>
+  <text x="590" y="64" text-anchor="middle" font-size="21" font-weight="800" fill="#8a6100">AFFINAGE</text>
+  <text x="590" y="92"  text-anchor="middle" font-size="16" fill="#0B2545" font-weight="700">Adapter un modèle existant</text>
+  <text x="590" y="122" text-anchor="middle" font-size="15" fill="#33403A">1 à 8 GPU, des heures à des jours,</text>
+  <text x="590" y="144" text-anchor="middle" font-size="15" fill="#33403A">plus un jeu étiqueté que vous avez bâti</text>
+  <text x="590" y="170" text-anchor="middle" font-size="16" fill="#8a6100" font-weight="800">Rarement ce dont vous avez besoin</text>
+
+  <rect x="800" y="30" width="360" height="150" rx="14" fill="#F4F8F5" stroke="#1B7A43" stroke-width="2.5"/>
+  <text x="980" y="64" text-anchor="middle" font-size="21" font-weight="800" fill="#1B7A43">INFÉRENCE</text>
+  <text x="980" y="92"  text-anchor="middle" font-size="16" fill="#0B2545" font-weight="700">Exécuter un modèle non construit par vous</text>
+  <text x="980" y="122" text-anchor="middle" font-size="15" fill="#33403A">0 à 1 GPU, de la milliseconde</text>
+  <text x="980" y="144" text-anchor="middle" font-size="15" fill="#33403A">à la seconde, par requête</text>
+  <text x="980" y="170" text-anchor="middle" font-size="16" fill="#1B7A43" font-weight="800">C'est 95 % de votre travail</text>
+
+  <text x="590" y="222" text-anchor="middle" font-size="18" fill="#8a6100" font-weight="700">
+   Un prestataire qui chiffre du matériel d'entraînement pour de l'inférence vous vend une usine pour acheter du pain.</text>
+  <text x="590" y="252" text-anchor="middle" font-size="16" fill="#0B2545">
+   Les trois diffèrent d'ordres de grandeur en coût, en temps et en compétence — et on les confond sans cesse.</text>
+ </g>
+</svg>
+</figure>
+
+<aside class="notes">
+L'encadré rouge existe pour clore une conversation avant qu'elle ne commence.
+Aucun INS africain — ni européen — ne pré-entraîne un modèle de fondation. C'est
+une activité à forte intensité capitalistique réservée à une poignée
+d'entreprises et d'États, et la proposer signale une proposition mal réfléchie.
+
+L'encadré ambre est celui de ce matin : l'affinage enseigne le style, pas les
+faits, et exige un jeu de données étiqueté que quelqu'un dans votre office doit
+construire et maintenir.
+
+L'encadré vert est là où se trouve le travail. Et surtout, l'inférence est la
+charge qui n'exige aucun matériel — parce qu'un autre l'exécute — ou en exige
+étonnamment peu.
+</aside>
+</section>
+
+<!-- 6 ==================================================================== -->
+<section>
+<span class="timing">4 min</span>
+<!--EN-->
+<h2>The only arithmetic you need</h2>
+
+<table>
+<tr><th>Open-weight model</th><th>Full precision</th><th>8-bit</th><th>4-bit</th></tr>
+<tr><td><strong>3 billion</strong> parameters</td><td>6 GB</td><td>3 GB</td><td>≈ 2 GB</td></tr>
+<tr><td><strong>8 billion</strong> parameters</td><td>16 GB</td><td>8 GB</td><td>≈ 5 GB</td></tr>
+<tr><td><strong>30 billion</strong> parameters</td><td>60 GB</td><td>30 GB</td><td>≈ 17 GB</td></tr>
+<tr><td><strong>70 billion</strong> parameters</td><td>140 GB</td><td>70 GB</td><td>≈ 39 GB</td></tr>
+</table>
+
+<div class="key">
+<b>The rule</b>
+Memory needed ≈ parameters × bytes per parameter, plus about 20 % overhead.
+Full precision is 2 bytes, 8-bit is 1, 4-bit is ½. <strong>A 24 GB card runs a
+30-billion-parameter model at 4-bit.</strong>
+</div>
+
+<aside class="notes">
+Write the rule on the flipchart. It is the single most useful thing in this
+session, because it converts a vendor's claim into a number you can check in your
+head.
+
+Quantisation — running at 8-bit or 4-bit — costs some quality, and how much
+depends on the task. For extraction and classification, which is most of what a
+statistical office wants, the loss is usually small. For careful reasoning it is
+larger. Test it on your own task rather than trusting either the vendor or me.
+
+Note what the last row means: a model that would need two data-centre cards at
+full precision fits on one good workstation card at 4-bit.
+</aside>
+<!--FR-->
+<h2>Le seul calcul dont vous avez besoin</h2>
+
+<table>
+<tr><th>Modèle à poids ouverts</th><th>Précision pleine</th><th>8 bits</th><th>4 bits</th></tr>
+<tr><td><strong>3 milliards</strong> de paramètres</td><td>6 Go</td><td>3 Go</td><td>≈ 2 Go</td></tr>
+<tr><td><strong>8 milliards</strong> de paramètres</td><td>16 Go</td><td>8 Go</td><td>≈ 5 Go</td></tr>
+<tr><td><strong>30 milliards</strong> de paramètres</td><td>60 Go</td><td>30 Go</td><td>≈ 17 Go</td></tr>
+<tr><td><strong>70 milliards</strong> de paramètres</td><td>140 Go</td><td>70 Go</td><td>≈ 39 Go</td></tr>
+</table>
+
+<div class="key">
+<b>La règle</b>
+Mémoire nécessaire ≈ paramètres × octets par paramètre, plus environ 20 % de
+marge. La précision pleine fait 2 octets, le 8 bits 1, le 4 bits ½.
+<strong>Une carte de 24 Go exécute un modèle de 30 milliards de paramètres en
+4 bits.</strong>
+</div>
+
+<aside class="notes">
+Écrivez la règle au tableau. C'est l'élément le plus utile de cette session, car
+il convertit l'affirmation d'un prestataire en un nombre vérifiable de tête.
+
+La quantification — exécuter en 8 ou 4 bits — coûte de la qualité, et combien
+dépend de la tâche. Pour l'extraction et la classification, qui constituent
+l'essentiel de ce qu'un office statistique veut, la perte est généralement
+faible. Pour du raisonnement soigné, elle est plus forte. Testez sur votre propre
+tâche plutôt que de croire le prestataire ou moi.
+
+Notez ce que dit la dernière ligne : un modèle qui exigerait deux cartes de
+centre de données en précision pleine tient sur une bonne carte de station de
+travail en 4 bits.
+</aside>
+</section>
+
+<!-- 7 ==================================================================== -->
+<section class="split">
+<span class="timing">3 min</span>
+<!--EN-->
+<div class="panel is-jade">
+<div class="eyebrow">The cost nobody quotes</div>
+<h2>Context is memory too</h2>
+<p>The model's weights are only the floor. Every token you feed it is also held
+in memory, for the whole request.</p>
+</div>
+<div class="body">
+<div class="warn">
+<b>Where a working setup falls over</b>
+A configuration sized for short questions will fail the moment someone pastes a
+150-page methodological report. <strong>Size for your longest realistic
+document</strong>, not your average one — and measure it, because “our documents”
+is not a number.
+</div>
+</div>
+
+<aside class="notes">
+This is the most common cause of a pilot that worked in the demonstration and
+failed in the office. The demonstration used a paragraph; the real task uses a
+survey manual.
+
+The mechanism, if anyone asks: the model keeps a cache of intermediate values for
+every token in the context, and that cache grows with context length and with
+the number of simultaneous users. Long documents and several concurrent users
+multiply.
+
+The practical instruction: before buying anything, take your five longest real
+documents, count their tokens — roughly 0.75 words per token for English, more
+for French — and size for the largest.
+</aside>
+<!--FR-->
+<div class="panel is-jade">
+<div class="eyebrow">Le coût que personne ne chiffre</div>
+<h2>Le contexte, c'est aussi de la mémoire</h2>
+<p>Les poids du modèle ne sont que le plancher. Chaque token que vous lui donnez
+occupe aussi la mémoire, pendant toute la requête.</p>
+</div>
+<div class="body">
+<div class="warn">
+<b>Là où une installation qui marche s'effondre</b>
+Une configuration dimensionnée pour des questions courtes échouera dès que
+quelqu'un collera un rapport méthodologique de 150 pages. <strong>Dimensionnez
+pour votre document réaliste le plus long</strong>, pas pour le moyen — et
+mesurez-le, car « nos documents » n'est pas un nombre.
+</div>
+</div>
+
+<aside class="notes">
+C'est la cause la plus fréquente d'un pilote qui fonctionnait en démonstration et
+a échoué dans l'office. La démonstration utilisait un paragraphe ; la tâche
+réelle utilise un manuel d'enquête.
+
+Le mécanisme, si on le demande : le modèle conserve un cache de valeurs
+intermédiaires pour chaque token du contexte, et ce cache croît avec la longueur
+du contexte et avec le nombre d'utilisateurs simultanés. Documents longs et
+utilisateurs concurrents se multiplient.
+
+L'instruction pratique : avant tout achat, prenez vos cinq plus longs documents
+réels, comptez leurs tokens — environ 0,75 mot par token en anglais, davantage en
+français — et dimensionnez pour le plus grand.
+</aside>
+</section>
+
+<!-- 8 ==================================================================== -->
+<section class="divider">
+<!--EN-->
+<div class="eyebrow" style="color:var(--afdb-amber);">Part 2 of 3</div>
+<h2>Where it runs, and who decides</h2>
+<p>A legal question wearing a technical costume.</p>
+<!--FR-->
+<div class="eyebrow" style="color:var(--afdb-amber);">Partie 2 sur 3</div>
+<h2>Où cela s'exécute, et qui décide</h2>
+<p>Une question juridique déguisée en question technique.</p>
+</section>
+
+<!-- 9 ==================================================================== -->
+<section>
+<span class="timing">4 min</span>
+<!--EN-->
+<h2>Cloud API, or your own machine</h2>
+
+<div class="compare">
+<div>
+<h4>Cloud API</h4>
+<ul>
+<li>Running the same afternoon</li>
+<li>No capital expenditure, no staff to hire</li>
+<li>The best available models</li>
+<li><strong>Your text leaves your jurisdiction</strong></li>
+<li>Cost scales with use, forever</li>
+<li>The model can change under you</li>
+</ul>
+</div>
+<div>
+<h4>On-premise, open weights</h4>
+<ul>
+<li>Nothing leaves the building</li>
+<li>Fixed cost, unlimited use</li>
+<li>The version is frozen until you change it</li>
+<li><strong>You now operate a service</strong></li>
+<li>Weaker than the frontier, often enough</li>
+<li>Needs one person who owns it</li>
+</ul>
+</div>
+</div>
+
+<aside class="notes">
+Resist the temptation to declare a winner. Most offices in this room will end up
+with both, split by data classification — and that hybrid is the honest
+recommendation, not a compromise.
+
+Two lines deserve emphasis. "The model can change under you" is real: an API
+version is deprecated, behaviour shifts, and a process you validated last quarter
+produces different output. If you publish anything based on it, you need version
+pinning in the contract.
+
+"You now operate a service" is the cost that never appears in the quotation:
+patching, monitoring, backups, and someone answering the telephone when it stops.
+</aside>
+<!--FR-->
+<h2>API en nuage, ou votre propre machine</h2>
+
+<div class="compare">
+<div>
+<h4>API en nuage</h4>
+<ul>
+<li>Opérationnel le même après-midi</li>
+<li>Aucune dépense d'investissement, aucun recrutement</li>
+<li>Les meilleurs modèles disponibles</li>
+<li><strong>Votre texte quitte votre juridiction</strong></li>
+<li>Le coût croît avec l'usage, indéfiniment</li>
+<li>Le modèle peut changer sous vos pieds</li>
+</ul>
+</div>
+<div>
+<h4>Sur site, poids ouverts</h4>
+<ul>
+<li>Rien ne quitte le bâtiment</li>
+<li>Coût fixe, usage illimité</li>
+<li>La version est figée jusqu'à ce que vous la changiez</li>
+<li><strong>Vous exploitez désormais un service</strong></li>
+<li>Plus faible que la frontière, souvent suffisant</li>
+<li>Exige une personne qui en est propriétaire</li>
+</ul>
+</div>
+</div>
+
+<aside class="notes">
+Résistez à la tentation de désigner un vainqueur. La plupart des offices de cette
+salle finiront avec les deux, répartis selon la classification des données — et
+cet hybride est la recommandation honnête, pas un compromis.
+
+Deux lignes méritent d'être soulignées. « Le modèle peut changer sous vos pieds »
+est réel : une version d'API est dépréciée, le comportement se déplace, et un
+processus validé le trimestre dernier produit une sortie différente. Si vous
+publiez sur cette base, il faut un verrouillage de version dans le contrat.
+
+« Vous exploitez désormais un service » est le coût qui n'apparaît jamais dans le
+devis : correctifs, supervision, sauvegardes, et quelqu'un qui répond au
+téléphone quand cela s'arrête.
+</aside>
+</section>
+
+<!-- 10 =================================================================== -->
+<section>
+<span class="timing">3 min</span>
+<!--EN-->
+<h2>The sequence that decides it</h2>
+
+<div class="steps">
+<div><div class="i">1</div>
+     <div class="t">Classify the data</div>
+     <div class="d">Published, aggregated, confidential, or identifiable
+     microdata. Four boxes, one answer per use case.</div></div>
+<div><div class="i">2</div>
+     <div class="t">Check the mandate</div>
+     <div class="d">Your statistics act and data protection law, not the
+     provider's security certificate.</div></div>
+<div><div class="i">3</div>
+     <div class="t">Set the latency need</div>
+     <div class="d">Interactive, or a batch that may run overnight? Overnight is
+     far cheaper.</div></div>
+<div><div class="i">4</div>
+     <div class="t">Then price it</div>
+     <div class="d">Only now. Two quotations: per-request cloud, and a machine
+     you own.</div></div>
+</div>
+
+<div class="src">
+<b>Frameworks</b> · African Union <i>Data Policy Framework</i> (adopted 28 July 2022) —
+cross-border data flows, data sovereignty, and the Digital Single Market ·
+UNECE HLG-MOS <i>Cloud Computing</i> project — procurement considerations,
+vendor lock-in and exit strategy for statistical organisations.
+</div>
+
+<aside class="notes">
+Step 1 is the one offices skip, and it is the cheapest. Most AI use cases in a
+statistical office touch only published or aggregated data — a question-answering
+assistant over your own publications, drafting a methodological note, coding
+occupation strings that carry no identifiers. Those have no sovereignty
+constraint at all, and they can start on Monday.
+
+Step 3 saves real money and almost nobody asks it. If the task is "code last
+month's twelve thousand free-text responses", nobody is waiting for an answer,
+and an overnight batch on modest hardware costs a fraction of an interactive
+service.
+
+Point at both frameworks: the AU one is what a data protection authority will
+cite back at you, and the UNECE one gives you procurement language.
+</aside>
+<!--FR-->
+<h2>La séquence qui tranche</h2>
+
+<div class="steps">
+<div><div class="i">1</div>
+     <div class="t">Classer les données</div>
+     <div class="d">Publiées, agrégées, confidentielles, ou microdonnées
+     identifiantes. Quatre cases, une réponse par cas d'usage.</div></div>
+<div><div class="i">2</div>
+     <div class="t">Vérifier le mandat</div>
+     <div class="d">Votre loi statistique et votre loi de protection des données,
+     pas le certificat de sécurité du prestataire.</div></div>
+<div><div class="i">3</div>
+     <div class="t">Fixer le besoin de latence</div>
+     <div class="d">Interactif, ou un lot qui peut tourner la nuit ? La nuit
+     coûte bien moins cher.</div></div>
+<div><div class="i">4</div>
+     <div class="t">Chiffrer, ensuite</div>
+     <div class="d">Seulement maintenant. Deux devis : nuage à la requête, et une
+     machine à vous.</div></div>
+</div>
+
+<div class="src">
+<b>Cadres</b> · Union africaine, <i>Cadre de politique des données</i> (adopté le
+28 juillet 2022) — flux transfrontaliers, souveraineté des données et Marché
+unique numérique · Projet <i>Cloud Computing</i> du HLG-MOS de la CEE-ONU —
+critères d'achat, dépendance au fournisseur et stratégie de sortie pour les
+organisations statistiques.
+</div>
+
+<aside class="notes">
+L'étape 1 est celle que les offices sautent, et c'est la moins chère. La plupart
+des cas d'usage d'IA dans un office statistique ne touchent que des données
+publiées ou agrégées — un assistant de questions-réponses sur vos propres
+publications, la rédaction d'une note méthodologique, le codage de libellés de
+profession sans identifiants. Ceux-là n'ont aucune contrainte de souveraineté et
+peuvent démarrer lundi.
+
+L'étape 3 économise réellement et presque personne ne la pose. Si la tâche est
+« coder les douze mille réponses libres du mois dernier », personne n'attend la
+réponse, et un lot nocturne sur du matériel modeste coûte une fraction d'un
+service interactif.
+
+Montrez les deux cadres : celui de l'UA est ce qu'une autorité de protection des
+données vous opposera, celui de la CEE-ONU vous donne un vocabulaire d'achat.
+</aside>
+</section>
+
+<!-- 11 =================================================================== -->
+<section class="jade">
+<span class="timing">1 min</span>
+<!--EN-->
+<div class="eyebrow">The line, again</div>
+<div class="statement">
+Identifiable microdata<br>does not go to a <span class="hl">third-party API</span>.
+</div>
+<p class="statement-sub">
+Not de-identified-and-probably-fine. Not under a non-disclosure agreement. Not
+for a pilot. If the use case needs microdata, the model comes to the data.
+</p>
+
+<aside class="notes">
+State this without qualification, because it is the one slide someone will be
+asked about by their own legal department.
+
+The reason is not that a provider is untrustworthy. It is that a statistical
+office's authority to hold microdata rests on a promise to respondents, and that
+promise was not written with a foreign inference endpoint in mind. Once the text
+has left, you cannot unsend it, and you cannot prove to a parliamentary committee
+that it was not retained.
+
+If someone objects that their provider offers a no-training, no-retention tier:
+that is a contractual assurance about behaviour, not a change to where the data
+physically went.
+</aside>
+<!--FR-->
+<div class="eyebrow">La limite, à nouveau</div>
+<div class="statement">
+Les microdonnées identifiantes<br>ne partent pas vers une <span class="hl">API tierce</span>.
+</div>
+<p class="statement-sub">
+Pas « désidentifiées et probablement acceptables ». Pas sous accord de
+confidentialité. Pas pour un pilote. Si le cas d'usage exige des microdonnées, le
+modèle vient aux données.
+</p>
+
+<aside class="notes">
+Énoncez-le sans nuance, car c'est la diapositive sur laquelle quelqu'un sera
+interrogé par son propre service juridique.
+
+La raison n'est pas qu'un prestataire soit indigne de confiance. C'est que
+l'autorité d'un office statistique à détenir des microdonnées repose sur une
+promesse faite aux répondants, et cette promesse n'a pas été rédigée en pensant à
+un point d'inférence étranger. Une fois le texte parti, vous ne pouvez pas le
+rappeler, et vous ne pouvez pas prouver à une commission parlementaire qu'il n'a
+pas été conservé.
+
+Si l'on objecte que le prestataire propose une offre sans entraînement ni
+conservation : c'est une assurance contractuelle sur un comportement, pas un
+changement du lieu où les données sont physiquement allées.
+</aside>
+</section>
+
+<!-- 12 =================================================================== -->
+<section>
+<span class="timing">3 min</span>
+<!--EN-->
+<h2>Which use case goes where</h2>
+
+<table>
+<tr><th>Use case</th><th>Data it touches</th><th>Where it may run</th></tr>
+<tr><td>Assistant over your own publications</td><td>Published</td>
+    <td><em>Either.</em> Start in the cloud</td></tr>
+<tr><td>Drafting methodological notes</td><td>Published or internal drafts</td>
+    <td><em>Either</em></td></tr>
+<tr><td>Extracting tables from PDF reports</td><td>Published</td>
+    <td><em>Either</em></td></tr>
+<tr><td>Coding free-text survey answers</td><td>Microdata</td>
+    <td><strong>On-premise only</strong></td></tr>
+<tr><td>Anything over the census file</td><td>Identifiable microdata</td>
+    <td><strong>On-premise only</strong></td></tr>
+</table>
+
+<aside class="notes">
+Note the shape of this table: three of five rows have no sovereignty constraint
+at all. That is the argument for starting there — you get a working service, an
+internal reference case and a trained team, without waiting for a hardware
+procurement cycle.
+
+The fourth row is the one that most often surprises people. Free-text answers
+feel harmless because they are short, but a single sentence can identify a
+respondent in a small stratum — "the mechanic on the road to the district
+hospital" needs no name.
+
+Ask the room to place their own top use case in this table before the break.
+</aside>
+<!--FR-->
+<h2>Quel cas d'usage va où</h2>
+
+<table>
+<tr><th>Cas d'usage</th><th>Données touchées</th><th>Où il peut s'exécuter</th></tr>
+<tr><td>Assistant sur vos propres publications</td><td>Publiées</td>
+    <td><em>Les deux.</em> Commencez en nuage</td></tr>
+<tr><td>Rédaction de notes méthodologiques</td><td>Publiées ou brouillons internes</td>
+    <td><em>Les deux</em></td></tr>
+<tr><td>Extraction de tableaux depuis des PDF</td><td>Publiées</td>
+    <td><em>Les deux</em></td></tr>
+<tr><td>Codage de réponses libres d'enquête</td><td>Microdonnées</td>
+    <td><strong>Sur site uniquement</strong></td></tr>
+<tr><td>Tout travail sur le fichier de recensement</td><td>Microdonnées identifiantes</td>
+    <td><strong>Sur site uniquement</strong></td></tr>
+</table>
+
+<aside class="notes">
+Notez la forme de ce tableau : trois lignes sur cinq n'ont aucune contrainte de
+souveraineté. C'est l'argument pour commencer là — vous obtenez un service qui
+fonctionne, un cas de référence interne et une équipe formée, sans attendre un
+cycle d'achat de matériel.
+
+La quatrième ligne est celle qui surprend le plus souvent. Les réponses libres
+paraissent inoffensives parce qu'elles sont courtes, mais une seule phrase peut
+identifier un répondant dans une petite strate — « le mécanicien sur la route de
+l'hôpital de district » n'a besoin d'aucun nom.
+
+Demandez à la salle de placer son propre cas d'usage principal dans ce tableau
+avant la pause.
+</aside>
+</section>
+
+<!-- 13 =================================================================== -->
+<section class="divider">
+<!--EN-->
+<div class="eyebrow" style="color:var(--afdb-amber);">Part 3 of 3</div>
+<h2>What it costs, and what to buy first</h2>
+<p>Orders of magnitude, and the costs that never appear in a quotation.</p>
+<!--FR-->
+<div class="eyebrow" style="color:var(--afdb-amber);">Partie 3 sur 3</div>
+<h2>Ce que cela coûte, et quoi acheter d'abord</h2>
+<p>Des ordres de grandeur, et les coûts qui n'apparaissent jamais dans un devis.</p>
+</section>
+
+<!-- 14 =================================================================== -->
+<section>
+<span class="timing">3 min</span>
+<!--EN-->
+<h2>Three configurations that exist</h2>
+
+<table>
+<tr><th>Tier</th><th>Memory</th><th>Runs</th><th>Good for</th></tr>
+<tr><td><strong>A · A laptop you own</strong></td><td>8–16 GB RAM</td>
+    <td>3B at 4-bit, slowly</td><td>This week's laboratories</td></tr>
+<tr><td><strong>B · One workstation card</strong></td><td>24 GB VRAM</td>
+    <td>8B, or 30B at 4-bit</td>
+    <td><em>The realistic entry point</em></td></tr>
+<tr><td><strong>C · A small server</strong></td><td>2 × 48 GB</td>
+    <td>70B, several users</td><td>Production, once B is proven</td></tr>
+</table>
+
+<div class="key">
+<b>Buy B, not C</b>
+Tier B serves a department, and most offices that bought C first run B workloads
+on it. <strong>No prices here: they move too fast to be right on a slide.</strong>
+</div>
+
+<aside class="notes">
+Deliberately no prices here, and say why: any figure I put on this slide is wrong
+by the time you procure, and a stale number in an AfDB deck becomes a negotiating
+weakness. Get two quotations, dated, and compare against the same specification.
+
+What is stable is the shape. Tier A is free and is what you use in the
+laboratories this week. Tier B is one card in one machine, and it is where a
+first genuine internal service should live. Tier C is a project with a budget
+line, a room, and a person.
+
+The trap in tier C is that it is easier to fund than tier B — capital is easier
+to obtain than a small purchase plus a post. That is how offices end up with an
+underused server.
+</aside>
+<!--FR-->
+<h2>Trois configurations qui existent</h2>
+
+<table>
+<tr><th>Palier</th><th>Mémoire</th><th>Exécute</th><th>Adapté à</th></tr>
+<tr><td><strong>A · Un portable que vous avez</strong></td><td>8 à 16 Go RAM</td>
+    <td>3B en 4 bits, lentement</td><td>Les labos de la semaine</td></tr>
+<tr><td><strong>B · Une carte de station</strong></td><td>24 Go VRAM</td>
+    <td>8B, ou 30B en 4 bits</td>
+    <td><em>Le point d'entrée réaliste</em></td></tr>
+<tr><td><strong>C · Un petit serveur</strong></td><td>2 × 48 Go</td>
+    <td>70B, plusieurs utilisateurs</td><td>Production, une fois B éprouvé</td></tr>
+</table>
+
+<div class="key">
+<b>Achetez B, pas C</b>
+Le palier B sert un département, et la plupart des offices ayant acheté C y
+exécutent des charges B. <strong>Aucun prix ici : ils bougent trop vite pour être
+justes sur une diapositive.</strong>
+</div>
+
+<aside class="notes">
+Délibérément aucun prix ici, et dites pourquoi : tout chiffre que je mettrais sur
+cette diapositive sera faux au moment de votre achat, et un nombre périmé dans
+une présentation de la BAD devient une faiblesse de négociation. Obtenez deux
+devis, datés, et comparez sur le même cahier des charges.
+
+Ce qui est stable, c'est la forme. Le palier A est gratuit et c'est celui des
+laboratoires de la semaine. Le palier B est une carte dans une machine, et c'est
+là qu'un premier vrai service interne doit vivre. Le palier C est un projet avec
+une ligne budgétaire, une salle et une personne.
+
+Le piège du palier C est qu'il est plus facile à financer que le B — le capital
+s'obtient plus aisément qu'un petit achat plus un poste. C'est ainsi qu'un office
+se retrouve avec un serveur sous-utilisé.
+</aside>
+</section>
+
+<!-- 15 =================================================================== -->
+<section class="tint">
+<span class="timing">3 min</span>
+<!--EN-->
+<h2>The costs that are not in the quotation</h2>
+
+<div class="metrics">
+<div><div class="n">1</div><div class="l">Person who owns it</div>
+     <div class="s">the largest cost, and the one that is never budgeted</div></div>
+<div><div class="n">24/7</div><div class="l">Power and cooling</div>
+     <div class="s">a GPU under sustained load is a heater</div></div>
+<div><div class="n">∞</div><div class="l">Patching and backup</div>
+     <div class="s">it is a service now, with a service's obligations</div></div>
+<div><div class="n">?</div><div class="l">Exit</div>
+     <div class="s">how do you leave a provider, and what does it cost</div></div>
+</div>
+
+<aside class="notes">
+The first card is the honest one. Hardware is a one-off; a person is annual and
+recurring, and an office that funds the machine without funding the post has
+bought an ornament. If you can only fund one, fund the person and rent the
+compute.
+
+Power deserves a specific warning for this audience: a sustained GPU load in a
+room without adequate cooling will throttle, and in a building with unstable
+supply it will corrupt work in progress. Ask about the room before the card.
+
+The last card is where the UNECE cloud work is directly useful — exit strategy
+and vendor lock-in are named procurement themes, so you have institutional
+language for a question that otherwise sounds like distrust.
+</aside>
+<!--FR-->
+<h2>Les coûts absents du devis</h2>
+
+<div class="metrics">
+<div><div class="n">1</div><div class="l">Personne qui en est propriétaire</div>
+     <div class="s">le plus gros coût, et celui qu'on ne budgète jamais</div></div>
+<div><div class="n">24/7</div><div class="l">Électricité et refroidissement</div>
+     <div class="s">un GPU en charge continue est un radiateur</div></div>
+<div><div class="n">∞</div><div class="l">Correctifs et sauvegardes</div>
+     <div class="s">c'est un service désormais, avec ses obligations</div></div>
+<div><div class="n">?</div><div class="l">Sortie</div>
+     <div class="s">comment quitter un prestataire, et à quel coût</div></div>
+</div>
+
+<aside class="notes">
+La première carte est la plus honnête. Le matériel est un coup unique ; une
+personne est annuelle et récurrente, et un office qui finance la machine sans
+financer le poste a acheté un ornement. Si vous ne pouvez financer qu'une chose,
+financez la personne et louez le calcul.
+
+L'électricité mérite un avertissement précis pour ce public : une charge GPU
+continue dans une salle sans refroidissement suffisant se bridera, et dans un
+bâtiment à alimentation instable elle corrompra les travaux en cours. Renseignez
+la salle avant la carte.
+
+La dernière carte est là où le travail de la CEE-ONU sur le nuage sert
+directement — stratégie de sortie et dépendance au fournisseur sont des thèmes
+d'achat nommés, vous disposez donc d'un vocabulaire institutionnel pour une
+question qui sonnerait sinon comme de la méfiance.
+</aside>
+</section>
+
+<!-- 16 =================================================================== -->
+<section class="split wide">
+<span class="timing">3 min</span>
+<!--EN-->
+<div class="panel">
+<div class="eyebrow">A choice that is not about price</div>
+<h2>Open weights, or a proprietary API</h2>
+<p>Both are legitimate. They differ in what you can promise.</p>
+</div>
+<div class="body">
+<div class="key">
+<b>Open weights buy you three things</b>
+The data never leaves. The version is frozen, so a validated process stays
+valid. And you can state exactly what produced a published figure —
+<strong>which is reproducibility, not a preference</strong>.
+</div>
+</div>
+
+<aside class="notes">
+The frontier proprietary models are better at hard reasoning, and pretending
+otherwise would be dishonest. For most statistical office tasks — extraction,
+classification, drafting, answering from a supplied document — an open-weight
+model in the eight to thirty billion range is sufficient, and the three
+properties on this slide matter more than the last few points of capability.
+
+The version-freezing point is the one methodologists react to. If a published
+indicator depended on a model, and that model was silently updated, you cannot
+reproduce your own output. An open-weight file on your own disk does not change.
+
+Say plainly that a hybrid is normal: proprietary for exploration and drafting,
+open weights for anything touching confidential data or feeding a publication.
+</aside>
+<!--FR-->
+<div class="panel">
+<div class="eyebrow">Un choix qui n'est pas une affaire de prix</div>
+<h2>Poids ouverts, ou API propriétaire</h2>
+<p>Les deux sont légitimes. Ils diffèrent par ce que vous pouvez promettre.</p>
+</div>
+<div class="body">
+<div class="key">
+<b>Les poids ouverts vous achètent trois choses</b>
+Les données ne partent jamais. La version est figée, donc un processus validé
+reste valide. Et vous pouvez déclarer exactement ce qui a produit un chiffre
+publié — <strong>c'est de la reproductibilité, pas une préférence</strong>.
+</div>
+</div>
+
+<aside class="notes">
+Les modèles propriétaires de frontière sont meilleurs en raisonnement difficile,
+et prétendre le contraire serait malhonnête. Pour la plupart des tâches d'un
+office statistique — extraction, classification, rédaction, réponse à partir d'un
+document fourni — un modèle à poids ouverts entre huit et trente milliards suffit,
+et les trois propriétés de cette diapositive comptent plus que les derniers points
+de capacité.
+
+Le gel de version est le point auquel les méthodologues réagissent. Si un
+indicateur publié dépendait d'un modèle et que ce modèle a été mis à jour
+silencieusement, vous ne pouvez pas reproduire votre propre sortie. Un fichier de
+poids ouverts sur votre disque ne change pas.
+
+Dites clairement qu'un hybride est normal : propriétaire pour l'exploration et la
+rédaction, poids ouverts pour tout ce qui touche des données confidentielles ou
+alimente une publication.
+</aside>
+</section>
+
+<!-- 17 =================================================================== -->
+<section class="bleed">
+<!--EN-->
+<div class="cap">
+<div class="eyebrow">What a realistic first installation looks like</div>
+<h2>One machine, three services, no cloud dependency</h2>
+</div>
+<figure>
+<svg viewBox="0 0 1180 300" xmlns="http://www.w3.org/2000/svg" role="img"
+     aria-label="An entry-level on-premise architecture: one GPU machine serving an inference endpoint, a vector index and a notebook environment, inside the office network">
+ <defs><marker id="i1" markerWidth="9" markerHeight="9" refX="7" refY="3.2" orient="auto">
+   <path d="M0,0 L8,3.2 L0,6.4 z" fill="#1B7A43"/></marker></defs>
+ <g font-family="Inter,sans-serif" font-size="14">
+  <rect x="14" y="14" width="1152" height="238" rx="14" fill="none"
+        stroke="#6B7B75" stroke-width="2" stroke-dasharray="8 6"/>
+  <text x="34" y="40" font-size="15" fill="#6B7B75" font-weight="700">YOUR NETWORK · nothing crosses this line</text>
+
+  <rect x="40" y="86" width="200" height="120" rx="12" fill="#0B2545"/>
+  <text x="140" y="118" text-anchor="middle" font-size="16" font-weight="800" fill="#fff">ONE MACHINE</text>
+  <text x="140" y="144" text-anchor="middle" fill="#b9c8d8">1 × 24 GB GPU</text>
+  <text x="140" y="166" text-anchor="middle" fill="#b9c8d8">64 GB RAM · 2 TB SSD</text>
+  <text x="140" y="190" text-anchor="middle" fill="#F2A900" font-weight="700">tier B</text>
+
+  <rect x="300" y="52" width="248" height="66" rx="11" fill="#F4F8F5" stroke="#1B7A43" stroke-width="1.8"/>
+  <text x="424" y="78" text-anchor="middle" font-weight="700" fill="#0B2545">Inference endpoint</text>
+  <text x="424" y="100" text-anchor="middle" fill="#33403A">open-weight model, 8B–30B</text>
+
+  <rect x="300" y="130" width="248" height="66" rx="11" fill="#F4F8F5" stroke="#1B7A43" stroke-width="1.8"/>
+  <text x="424" y="156" text-anchor="middle" font-weight="700" fill="#0B2545">Document index</text>
+  <text x="424" y="178" text-anchor="middle" fill="#33403A">your publications, for RAG</text>
+
+  <rect x="300" y="208" width="248" height="60" rx="11" fill="#F4F8F5" stroke="#1B7A43" stroke-width="1.8"/>
+  <text x="424" y="232" text-anchor="middle" font-weight="700" fill="#0B2545">Notebook environment</text>
+  <text x="424" y="254" text-anchor="middle" fill="#33403A">where methodologists work</text>
+
+  <g stroke="#1B7A43" stroke-width="2.2" marker-end="url(#i1)">
+   <line x1="242" y1="120" x2="294" y2="90"/>
+   <line x1="242" y1="146" x2="294" y2="160"/>
+   <line x1="242" y1="172" x2="294" y2="230"/>
+  </g>
+
+  <rect x="620" y="96" width="200" height="100" rx="11" fill="#fff" stroke="#6B7B75" stroke-width="1.6"/>
+  <text x="720" y="128" text-anchor="middle" font-weight="700" fill="#0B2545">Your staff</text>
+  <text x="720" y="150" text-anchor="middle" fill="#6B7B75">browser only</text>
+  <text x="720" y="174" text-anchor="middle" fill="#6B7B75">no installation</text>
+  <line x1="556" y1="146" x2="612" y2="146" stroke="#1B7A43" stroke-width="2.2" marker-end="url(#i1)"/>
+
+  <rect x="880" y="96" width="260" height="100" rx="11" fill="#FEF9EC" stroke="#F2A900" stroke-width="2"/>
+  <text x="1010" y="126" text-anchor="middle" font-weight="800" fill="#8a6100">ONE PERSON</text>
+  <text x="1010" y="150" text-anchor="middle" fill="#5c4200">owns it, patches it,</text>
+  <text x="1010" y="172" text-anchor="middle" fill="#5c4200">answers when it stops</text>
+
+  <text x="590" y="288" text-anchor="middle" font-size="17" fill="#8a6100" font-weight="700">
+   The amber box is not optional, and it is the one most often left out of the budget.</text>
+ </g>
+</svg>
+</figure>
+
+<aside class="notes">
+This is deliberately modest, and it is a real configuration rather than an
+aspiration. One machine, three services, everything inside your own network, and
+staff reaching it through a browser so there is nothing to install on forty
+desktops.
+
+Walk the three green boxes and connect them to the week: the inference endpoint
+and the document index together are exactly what the laboratory at 14:45 builds,
+and the notebook environment is what Day 4 uses.
+
+Then point at the amber box and stop talking for a moment. Everything else on
+this slide is procurable in a quarter. The person is the part that takes a year,
+and the part that determines whether any of it is still running next year.
+</aside>
+<!--FR-->
+<div class="cap">
+<div class="eyebrow">À quoi ressemble une première installation réaliste</div>
+<h2>Une machine, trois services, aucune dépendance au nuage</h2>
+</div>
+<figure>
+<svg viewBox="0 0 1180 300" xmlns="http://www.w3.org/2000/svg" role="img"
+     aria-label="Architecture sur site d'entrée de gamme : une machine GPU servant un point d'inférence, un index documentaire et un environnement de carnets, à l'intérieur du réseau de l'office">
+ <defs><marker id="i1f" markerWidth="9" markerHeight="9" refX="7" refY="3.2" orient="auto">
+   <path d="M0,0 L8,3.2 L0,6.4 z" fill="#1B7A43"/></marker></defs>
+ <g font-family="Inter,sans-serif" font-size="14">
+  <rect x="14" y="14" width="1152" height="238" rx="14" fill="none"
+        stroke="#6B7B75" stroke-width="2" stroke-dasharray="8 6"/>
+  <text x="34" y="40" font-size="15" fill="#6B7B75" font-weight="700">VOTRE RÉSEAU · rien ne franchit cette ligne</text>
+
+  <rect x="40" y="86" width="200" height="120" rx="12" fill="#0B2545"/>
+  <text x="140" y="118" text-anchor="middle" font-size="16" font-weight="800" fill="#fff">UNE MACHINE</text>
+  <text x="140" y="144" text-anchor="middle" fill="#b9c8d8">1 × GPU de 24 Go</text>
+  <text x="140" y="166" text-anchor="middle" fill="#b9c8d8">64 Go RAM · SSD 2 To</text>
+  <text x="140" y="190" text-anchor="middle" fill="#F2A900" font-weight="700">palier B</text>
+
+  <rect x="300" y="52" width="248" height="66" rx="11" fill="#F4F8F5" stroke="#1B7A43" stroke-width="1.8"/>
+  <text x="424" y="78" text-anchor="middle" font-weight="700" fill="#0B2545">Point d'inférence</text>
+  <text x="424" y="100" text-anchor="middle" fill="#33403A">modèle à poids ouverts, 8B-30B</text>
+
+  <rect x="300" y="130" width="248" height="66" rx="11" fill="#F4F8F5" stroke="#1B7A43" stroke-width="1.8"/>
+  <text x="424" y="156" text-anchor="middle" font-weight="700" fill="#0B2545">Index documentaire</text>
+  <text x="424" y="178" text-anchor="middle" fill="#33403A">vos publications, pour le RAG</text>
+
+  <rect x="300" y="208" width="248" height="60" rx="11" fill="#F4F8F5" stroke="#1B7A43" stroke-width="1.8"/>
+  <text x="424" y="232" text-anchor="middle" font-weight="700" fill="#0B2545">Environnement de carnets</text>
+  <text x="424" y="254" text-anchor="middle" fill="#33403A">où travaillent les méthodologues</text>
+
+  <g stroke="#1B7A43" stroke-width="2.2" marker-end="url(#i1f)">
+   <line x1="242" y1="120" x2="294" y2="90"/>
+   <line x1="242" y1="146" x2="294" y2="160"/>
+   <line x1="242" y1="172" x2="294" y2="230"/>
+  </g>
+
+  <rect x="620" y="96" width="200" height="100" rx="11" fill="#fff" stroke="#6B7B75" stroke-width="1.6"/>
+  <text x="720" y="128" text-anchor="middle" font-weight="700" fill="#0B2545">Vos agents</text>
+  <text x="720" y="150" text-anchor="middle" fill="#6B7B75">navigateur seulement</text>
+  <text x="720" y="174" text-anchor="middle" fill="#6B7B75">aucune installation</text>
+  <line x1="556" y1="146" x2="612" y2="146" stroke="#1B7A43" stroke-width="2.2" marker-end="url(#i1f)"/>
+
+  <rect x="880" y="96" width="260" height="100" rx="11" fill="#FEF9EC" stroke="#F2A900" stroke-width="2"/>
+  <text x="1010" y="126" text-anchor="middle" font-weight="800" fill="#8a6100">UNE PERSONNE</text>
+  <text x="1010" y="150" text-anchor="middle" fill="#5c4200">en est propriétaire, applique</text>
+  <text x="1010" y="172" text-anchor="middle" fill="#5c4200">les correctifs, répond en cas d'arrêt</text>
+
+  <text x="590" y="288" text-anchor="middle" font-size="17" fill="#8a6100" font-weight="700">
+   L'encadré ambre n'est pas optionnel, et c'est celui qu'on omet le plus souvent du budget.</text>
+ </g>
+</svg>
+</figure>
+
+<aside class="notes">
+C'est délibérément modeste, et c'est une configuration réelle plutôt qu'une
+aspiration. Une machine, trois services, tout à l'intérieur de votre réseau, et
+des agents qui y accèdent par un navigateur — donc rien à installer sur quarante
+postes.
+
+Parcourez les trois encadrés verts et reliez-les à la semaine : le point
+d'inférence et l'index documentaire réunis sont exactement ce que construit le
+laboratoire de 14h45, et l'environnement de carnets est celui du Jour 4.
+
+Puis montrez l'encadré ambre et cessez de parler un instant. Tout le reste de
+cette diapositive s'achète en un trimestre. La personne est la partie qui prend
+un an, et celle qui détermine si tout cela tournera encore l'an prochain.
+</aside>
+</section>
+
+<!-- 18 =================================================================== -->
+<section class="split even">
+<span class="timing">3 min</span>
+<!--EN-->
+<div class="panel is-amber">
+<div class="eyebrow">Take this to your vendor</div>
+<h2>Five questions that reveal a weak proposal</h2>
+</div>
+<div class="body">
+<ul style="font-size:.66em;">
+<li>Is this <strong>training or inference</strong> hardware, and why?</li>
+<li>What is the <strong>longest document</strong> it handles, in tokens?</li>
+<li>How many <strong>simultaneous users</strong> before it degrades?</li>
+<li>If the model version changes, <strong>who tells us</strong>?</li>
+<li>What does it cost to <strong>leave</strong>, and where does our data go?</li>
+</ul>
+</div>
+
+<aside class="notes">
+Tell the room to photograph this slide. It is the most directly usable artefact
+of the session.
+
+The five are ordered by how often they expose a proposal that was written from a
+template. A vendor who cannot answer the first has not read the use case. One who
+cannot answer the second has not sized anything. The fifth is the UNECE exit
+strategy theme in one sentence, and it is the one that changes contracts.
+
+Add one instruction: ask for the answers in writing, in the proposal, not in the
+meeting. A verbal assurance about concurrency is not procurable.
+</aside>
+<!--FR-->
+<div class="panel is-amber">
+<div class="eyebrow">À emporter chez votre prestataire</div>
+<h2>Cinq questions qui révèlent une proposition faible</h2>
+</div>
+<div class="body">
+<ul style="font-size:.66em;">
+<li>Est-ce du matériel d'<strong>entraînement ou d'inférence</strong>, et pourquoi ?</li>
+<li>Quel est le <strong>plus long document</strong> traité, en tokens ?</li>
+<li>Combien d'<strong>utilisateurs simultanés</strong> avant dégradation ?</li>
+<li>Si la version du modèle change, <strong>qui nous en informe</strong> ?</li>
+<li>Que coûte le <strong>départ</strong>, et où vont nos données ?</li>
+</ul>
+</div>
+
+<aside class="notes">
+Dites à la salle de photographier cette diapositive. C'est l'objet le plus
+directement utilisable de la session.
+
+Les cinq sont ordonnées selon la fréquence avec laquelle elles démasquent une
+proposition écrite depuis un gabarit. Un prestataire incapable de répondre à la
+première n'a pas lu le cas d'usage. Celui qui ne peut répondre à la deuxième n'a
+rien dimensionné. La cinquième est le thème « stratégie de sortie » de la CEE-ONU
+en une phrase, et c'est celle qui change les contrats.
+
+Ajoutez une consigne : demandez les réponses par écrit, dans la proposition, pas
+en réunion. Une assurance verbale sur la concurrence d'accès n'est pas
+contractualisable.
+</aside>
+</section>
+
+<!-- 19 =================================================================== -->
+<section>
+<span class="timing">1 min</span>
+<!--EN-->
+<div class="eyebrow">If you do one thing</div>
+<div class="statement">
+Start with the use case that has <span class="hl">no sovereignty constraint</span>.
+</div>
+<p class="statement-sub">
+It needs no procurement, no server room and no legal opinion. It gives you a
+working service, a trained team and an internal reference case — which is what
+you will need to fund anything larger.
+</p>
+
+<aside class="notes">
+This is the recommendation, and it is deliberately unambitious.
+
+An office that starts with the census file needs a legal opinion, a hardware
+purchase, a room and a post before it can demonstrate anything, and most such
+projects are still waiting two years later. An office that starts with a
+question-answering assistant over its own published reports has something running
+in a fortnight, and that running thing is the argument for the next budget.
+
+Connect it to the afternoon: the laboratory at 14:45 is exactly that use case,
+and every participant leaves with it working.
+</aside>
+<!--FR-->
+<div class="eyebrow">Si vous ne faites qu'une chose</div>
+<div class="statement">
+Commencez par le cas d'usage <span class="hl">sans contrainte de souveraineté</span>.
+</div>
+<p class="statement-sub">
+Il n'exige aucun achat, aucune salle serveurs et aucun avis juridique. Il vous
+donne un service qui fonctionne, une équipe formée et un cas de référence
+interne — ce qu'il vous faudra pour financer plus grand.
+</p>
+
+<aside class="notes">
+C'est la recommandation, et elle est délibérément peu ambitieuse.
+
+Un office qui commence par le fichier de recensement a besoin d'un avis
+juridique, d'un achat de matériel, d'une salle et d'un poste avant de pouvoir
+démontrer quoi que ce soit, et la plupart de ces projets attendent encore deux
+ans plus tard. Un office qui commence par un assistant de questions-réponses sur
+ses propres rapports publiés a quelque chose qui tourne en quinze jours, et cette
+chose qui tourne est l'argument du budget suivant.
+
+Reliez à l'après-midi : le laboratoire de 14h45 est exactement ce cas d'usage, et
+chaque participant en repart avec une version qui fonctionne.
+</aside>
+</section>
+
+<!-- 20 =================================================================== -->
+<section class="divider">
+<!--EN-->
+<div class="eyebrow" style="color:var(--afdb-amber);">Next</div>
+<h2>14:45 — Laboratory: build the RAG assistant</h2>
+<p>The first two green boxes of that architecture diagram, running on a laptop
+by the end of the afternoon.</p>
+<p style="font-size:.55em;color:#9fb4c6;margin-top:1.6rem;">
+15:45 · Laboratory — turn the assistant into an agent<br><br>
+Frameworks cited: AU <i>Data Policy Framework</i> (2022) ·
+UNECE HLG-MOS <i>Cloud Computing</i><br>
+Full reading list: workshop site → Resources → References
+</p>
+<!--FR-->
+<div class="eyebrow" style="color:var(--afdb-amber);">Ensuite</div>
+<h2>14h45 — Laboratoire : construire l'assistant RAG</h2>
+<p>Les deux premiers encadrés verts de ce schéma d'architecture, fonctionnant sur
+un portable avant la fin de l'après-midi.</p>
+<p style="font-size:.55em;color:#9fb4c6;margin-top:1.6rem;">
+15h45 · Laboratoire — transformer l'assistant en agent<br><br>
+Cadres cités : <i>Cadre de politique des données</i> de l'UA (2022) ·
+<i>Cloud Computing</i> du HLG-MOS de la CEE-ONU<br>
+Bibliographie complète : site de l'atelier → Ressources → Références
+</p>
+</section>

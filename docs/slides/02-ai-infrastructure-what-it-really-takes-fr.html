@@ -1,0 +1,677 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<title>Infrastructure de l'IA - Ce qu'elle exige réellement · STG17</title>
+<meta name="description" content="Jour 1 · 14h00-14h45 · Exposé — STG17 workshop, AfDB / AU STATAFRIC">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reset.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.css">
+<link rel="stylesheet" href="theme/_afdb-vars.css">
+<link rel="stylesheet" href="theme/afdb.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/plugin/highlight/monokai.css">
+</head>
+<body class="no-reveal">
+<div class="reveal">
+  <div class="slides">
+<section class="title">
+
+<div class="eyebrow">Banque africaine de développement · UA STATAFRIC · STG17 · Jour 1</div>
+<h1>Infrastructure de l'IA</h1>
+<h2>Ce qu'exige réellement l'exploitation de l'IA dans un office statistique — et ce qu'il ne faut pas acheter</h2>
+<div class="meta">
+Jour 1 · 14h00-14h45<br>
+Plan d'action STG17 2025-2030 · activités 4.2.3 et 3.3.2
+</div>
+
+<aside class="notes">
+Quarante-cinq minutes : environ trente de matière et quinze de discussion, car
+c'est la session où la salle a des questions précises sur sa propre situation, et
+ces questions sont plus utiles que n'importe quelle diapositive.
+
+Posez le cadre d'entrée : l'objectif n'est pas de faire de quiconque un ingénieur
+système. C'est que lorsqu'un prestataire chiffre une configuration, ou qu'un
+ministre demande « pouvons-nous le faire nous-mêmes », les personnes de cette
+salle puissent répondre par du calcul plutôt que par des impressions.
+</aside>
+</section>
+<section class="split wide">
+<span class="timing">2 min</span>
+
+<div class="panel">
+<div class="eyebrow">La question qu'on vous a confiée</div>
+<h2>« Qu'est-ce qu'il faut acheter ? »</h2>
+<p>C'est la mauvaise première question, et y répondre d'abord est la façon dont
+un office se retrouve avec une machine coûteuse et aucun cas d'usage.</p>
+</div>
+<div class="body">
+<div class="key">
+<b>L'ordre qui fonctionne</b>
+Nommez le cas d'usage. Classez les données qu'il touche. <em>Ensuite</em>
+l'infrastructure en découle presque mécaniquement — souvent vers un portable que
+vous possédez déjà.
+</div>
+</div>
+
+<aside class="notes">
+Demandez directement si quelqu'un est arrivé avec une ligne budgétaire pour du
+matériel d'IA et aucun cas d'usage arrêté. C'est fréquent, ce n'est pas gênant,
+et le nommer tôt fait porter le reste de la session.
+
+Pourquoi l'ordre compte : la même tâche peut n'exiger rien, un bon portable, ou
+une salle serveurs, selon une seule chose — si les données peuvent quitter le
+bâtiment. C'est une question juridique, pas technique, et elle est tranchée par
+votre loi statistique et votre autorité de protection des données.
+</aside>
+</section>
+<section>
+<span class="timing">1 min</span>
+
+<div class="eyebrow">La décision qui détermine tout le reste</div>
+<div class="statement">
+Ces données peuvent-elles<br><span class="hl">quitter le bâtiment</span> ?
+</div>
+<p class="statement-sub">
+Oui → une API en nuage, et la question du matériel disparaît.<br>
+Non → le modèle vient aux données, et là vous achetez quelque chose.
+</p>
+
+<aside class="notes">
+Tout ce qui suit dans les quarante prochaines minutes découle de cette seule
+question : laissez-la reposer.
+
+Remarquez ce qu'elle n'est pas : elle n'est pas « le nuage est-il sûr ». Les
+nuages commerciaux sont généralement plus sûrs qu'un serveur sous un bureau. La
+question est de savoir si votre mandat juridique autorise le transfert — et pour
+des microdonnées identifiantes, dans la plupart des États membres, il ne
+l'autorise pas, quelle que soit la qualité de la sécurité du prestataire.
+
+Cette seule réponse scinde la salle en deux conversations d'achat très
+différentes.
+</aside>
+</section>
+<section class="divider">
+
+<div class="eyebrow" style="color:var(--afdb-amber);">Partie 1 sur 3</div>
+<h2>Ce que la machine fait réellement</h2>
+<p>Trois charges de travail qu'on confond, et qui coûtent trois montants différents.</p>
+</section>
+<section>
+<span class="timing">4 min</span>
+
+<h2>Entraîner, adapter, exécuter</h2>
+<figure>
+<svg viewBox="0 0 1180 268" xmlns="http://www.w3.org/2000/svg" role="img"
+     aria-label="Trois charges comparées : pré-entraînement, affinage et inférence, à des échelles très différentes">
+ <g font-family="Inter,sans-serif">
+  <rect x="20" y="30" width="360" height="150" rx="14" fill="#F7F7F8" stroke="#C0392B" stroke-width="2.5"/>
+  <text x="200" y="64" text-anchor="middle" font-size="21" font-weight="800" fill="#C0392B">PRÉ-ENTRAÎNEMENT</text>
+  <text x="200" y="92"  text-anchor="middle" font-size="16" fill="#0B2545" font-weight="700">Construire un modèle de zéro</text>
+  <text x="200" y="122" text-anchor="middle" font-size="15" fill="#33403A">Des milliers de GPU, des mois,</text>
+  <text x="200" y="144" text-anchor="middle" font-size="15" fill="#33403A">une alimentation industrielle</text>
+  <text x="200" y="170" text-anchor="middle" font-size="16" fill="#C0392B" font-weight="800">Pour aucun INS. Jamais.</text>
+
+  <rect x="410" y="30" width="360" height="150" rx="14" fill="#FEF9EC" stroke="#F2A900" stroke-width="2.5"/>
+  <text x="590" y="64" text-anchor="middle" font-size="21" font-weight="800" fill="#8a6100">AFFINAGE</text>
+  <text x="590" y="92"  text-anchor="middle" font-size="16" fill="#0B2545" font-weight="700">Adapter un modèle existant</text>
+  <text x="590" y="122" text-anchor="middle" font-size="15" fill="#33403A">1 à 8 GPU, des heures à des jours,</text>
+  <text x="590" y="144" text-anchor="middle" font-size="15" fill="#33403A">plus un jeu étiqueté que vous avez bâti</text>
+  <text x="590" y="170" text-anchor="middle" font-size="16" fill="#8a6100" font-weight="800">Rarement ce dont vous avez besoin</text>
+
+  <rect x="800" y="30" width="360" height="150" rx="14" fill="#F4F8F5" stroke="#1B7A43" stroke-width="2.5"/>
+  <text x="980" y="64" text-anchor="middle" font-size="21" font-weight="800" fill="#1B7A43">INFÉRENCE</text>
+  <text x="980" y="92"  text-anchor="middle" font-size="16" fill="#0B2545" font-weight="700">Exécuter un modèle non construit par vous</text>
+  <text x="980" y="122" text-anchor="middle" font-size="15" fill="#33403A">0 à 1 GPU, de la milliseconde</text>
+  <text x="980" y="144" text-anchor="middle" font-size="15" fill="#33403A">à la seconde, par requête</text>
+  <text x="980" y="170" text-anchor="middle" font-size="16" fill="#1B7A43" font-weight="800">C'est 95 % de votre travail</text>
+
+  <text x="590" y="222" text-anchor="middle" font-size="18" fill="#8a6100" font-weight="700">
+   Un prestataire qui chiffre du matériel d'entraînement pour de l'inférence vous vend une usine pour acheter du pain.</text>
+  <text x="590" y="252" text-anchor="middle" font-size="16" fill="#0B2545">
+   Les trois diffèrent d'ordres de grandeur en coût, en temps et en compétence — et on les confond sans cesse.</text>
+ </g>
+</svg>
+</figure>
+
+<aside class="notes">
+L'encadré rouge existe pour clore une conversation avant qu'elle ne commence.
+Aucun INS africain — ni européen — ne pré-entraîne un modèle de fondation. C'est
+une activité à forte intensité capitalistique réservée à une poignée
+d'entreprises et d'États, et la proposer signale une proposition mal réfléchie.
+
+L'encadré ambre est celui de ce matin : l'affinage enseigne le style, pas les
+faits, et exige un jeu de données étiqueté que quelqu'un dans votre office doit
+construire et maintenir.
+
+L'encadré vert est là où se trouve le travail. Et surtout, l'inférence est la
+charge qui n'exige aucun matériel — parce qu'un autre l'exécute — ou en exige
+étonnamment peu.
+</aside>
+</section>
+<section>
+<span class="timing">4 min</span>
+
+<h2>Le seul calcul dont vous avez besoin</h2>
+
+<table>
+<tr><th>Modèle à poids ouverts</th><th>Précision pleine</th><th>8 bits</th><th>4 bits</th></tr>
+<tr><td><strong>3 milliards</strong> de paramètres</td><td>6 Go</td><td>3 Go</td><td>≈ 2 Go</td></tr>
+<tr><td><strong>8 milliards</strong> de paramètres</td><td>16 Go</td><td>8 Go</td><td>≈ 5 Go</td></tr>
+<tr><td><strong>30 milliards</strong> de paramètres</td><td>60 Go</td><td>30 Go</td><td>≈ 17 Go</td></tr>
+<tr><td><strong>70 milliards</strong> de paramètres</td><td>140 Go</td><td>70 Go</td><td>≈ 39 Go</td></tr>
+</table>
+
+<div class="key">
+<b>La règle</b>
+Mémoire nécessaire ≈ paramètres × octets par paramètre, plus environ 20 % de
+marge. La précision pleine fait 2 octets, le 8 bits 1, le 4 bits ½.
+<strong>Une carte de 24 Go exécute un modèle de 30 milliards de paramètres en
+4 bits.</strong>
+</div>
+
+<aside class="notes">
+Écrivez la règle au tableau. C'est l'élément le plus utile de cette session, car
+il convertit l'affirmation d'un prestataire en un nombre vérifiable de tête.
+
+La quantification — exécuter en 8 ou 4 bits — coûte de la qualité, et combien
+dépend de la tâche. Pour l'extraction et la classification, qui constituent
+l'essentiel de ce qu'un office statistique veut, la perte est généralement
+faible. Pour du raisonnement soigné, elle est plus forte. Testez sur votre propre
+tâche plutôt que de croire le prestataire ou moi.
+
+Notez ce que dit la dernière ligne : un modèle qui exigerait deux cartes de
+centre de données en précision pleine tient sur une bonne carte de station de
+travail en 4 bits.
+</aside>
+</section>
+<section class="split">
+<span class="timing">3 min</span>
+
+<div class="panel is-jade">
+<div class="eyebrow">Le coût que personne ne chiffre</div>
+<h2>Le contexte, c'est aussi de la mémoire</h2>
+<p>Les poids du modèle ne sont que le plancher. Chaque token que vous lui donnez
+occupe aussi la mémoire, pendant toute la requête.</p>
+</div>
+<div class="body">
+<div class="warn">
+<b>Là où une installation qui marche s'effondre</b>
+Une configuration dimensionnée pour des questions courtes échouera dès que
+quelqu'un collera un rapport méthodologique de 150 pages. <strong>Dimensionnez
+pour votre document réaliste le plus long</strong>, pas pour le moyen — et
+mesurez-le, car « nos documents » n'est pas un nombre.
+</div>
+</div>
+
+<aside class="notes">
+C'est la cause la plus fréquente d'un pilote qui fonctionnait en démonstration et
+a échoué dans l'office. La démonstration utilisait un paragraphe ; la tâche
+réelle utilise un manuel d'enquête.
+
+Le mécanisme, si on le demande : le modèle conserve un cache de valeurs
+intermédiaires pour chaque token du contexte, et ce cache croît avec la longueur
+du contexte et avec le nombre d'utilisateurs simultanés. Documents longs et
+utilisateurs concurrents se multiplient.
+
+L'instruction pratique : avant tout achat, prenez vos cinq plus longs documents
+réels, comptez leurs tokens — environ 0,75 mot par token en anglais, davantage en
+français — et dimensionnez pour le plus grand.
+</aside>
+</section>
+<section class="divider">
+
+<div class="eyebrow" style="color:var(--afdb-amber);">Partie 2 sur 3</div>
+<h2>Où cela s'exécute, et qui décide</h2>
+<p>Une question juridique déguisée en question technique.</p>
+</section>
+<section>
+<span class="timing">4 min</span>
+
+<h2>API en nuage, ou votre propre machine</h2>
+
+<div class="compare">
+<div>
+<h4>API en nuage</h4>
+<ul>
+<li>Opérationnel le même après-midi</li>
+<li>Aucune dépense d'investissement, aucun recrutement</li>
+<li>Les meilleurs modèles disponibles</li>
+<li><strong>Votre texte quitte votre juridiction</strong></li>
+<li>Le coût croît avec l'usage, indéfiniment</li>
+<li>Le modèle peut changer sous vos pieds</li>
+</ul>
+</div>
+<div>
+<h4>Sur site, poids ouverts</h4>
+<ul>
+<li>Rien ne quitte le bâtiment</li>
+<li>Coût fixe, usage illimité</li>
+<li>La version est figée jusqu'à ce que vous la changiez</li>
+<li><strong>Vous exploitez désormais un service</strong></li>
+<li>Plus faible que la frontière, souvent suffisant</li>
+<li>Exige une personne qui en est propriétaire</li>
+</ul>
+</div>
+</div>
+
+<aside class="notes">
+Résistez à la tentation de désigner un vainqueur. La plupart des offices de cette
+salle finiront avec les deux, répartis selon la classification des données — et
+cet hybride est la recommandation honnête, pas un compromis.
+
+Deux lignes méritent d'être soulignées. « Le modèle peut changer sous vos pieds »
+est réel : une version d'API est dépréciée, le comportement se déplace, et un
+processus validé le trimestre dernier produit une sortie différente. Si vous
+publiez sur cette base, il faut un verrouillage de version dans le contrat.
+
+« Vous exploitez désormais un service » est le coût qui n'apparaît jamais dans le
+devis : correctifs, supervision, sauvegardes, et quelqu'un qui répond au
+téléphone quand cela s'arrête.
+</aside>
+</section>
+<section>
+<span class="timing">3 min</span>
+
+<h2>La séquence qui tranche</h2>
+
+<div class="steps">
+<div><div class="i">1</div>
+     <div class="t">Classer les données</div>
+     <div class="d">Publiées, agrégées, confidentielles, ou microdonnées
+     identifiantes. Quatre cases, une réponse par cas d'usage.</div></div>
+<div><div class="i">2</div>
+     <div class="t">Vérifier le mandat</div>
+     <div class="d">Votre loi statistique et votre loi de protection des données,
+     pas le certificat de sécurité du prestataire.</div></div>
+<div><div class="i">3</div>
+     <div class="t">Fixer le besoin de latence</div>
+     <div class="d">Interactif, ou un lot qui peut tourner la nuit ? La nuit
+     coûte bien moins cher.</div></div>
+<div><div class="i">4</div>
+     <div class="t">Chiffrer, ensuite</div>
+     <div class="d">Seulement maintenant. Deux devis : nuage à la requête, et une
+     machine à vous.</div></div>
+</div>
+
+<div class="src">
+<b>Cadres</b> · Union africaine, <i>Cadre de politique des données</i> (adopté le
+28 juillet 2022) — flux transfrontaliers, souveraineté des données et Marché
+unique numérique · Projet <i>Cloud Computing</i> du HLG-MOS de la CEE-ONU —
+critères d'achat, dépendance au fournisseur et stratégie de sortie pour les
+organisations statistiques.
+</div>
+
+<aside class="notes">
+L'étape 1 est celle que les offices sautent, et c'est la moins chère. La plupart
+des cas d'usage d'IA dans un office statistique ne touchent que des données
+publiées ou agrégées — un assistant de questions-réponses sur vos propres
+publications, la rédaction d'une note méthodologique, le codage de libellés de
+profession sans identifiants. Ceux-là n'ont aucune contrainte de souveraineté et
+peuvent démarrer lundi.
+
+L'étape 3 économise réellement et presque personne ne la pose. Si la tâche est
+« coder les douze mille réponses libres du mois dernier », personne n'attend la
+réponse, et un lot nocturne sur du matériel modeste coûte une fraction d'un
+service interactif.
+
+Montrez les deux cadres : celui de l'UA est ce qu'une autorité de protection des
+données vous opposera, celui de la CEE-ONU vous donne un vocabulaire d'achat.
+</aside>
+</section>
+<section class="jade">
+<span class="timing">1 min</span>
+
+<div class="eyebrow">La limite, à nouveau</div>
+<div class="statement">
+Les microdonnées identifiantes<br>ne partent pas vers une <span class="hl">API tierce</span>.
+</div>
+<p class="statement-sub">
+Pas « désidentifiées et probablement acceptables ». Pas sous accord de
+confidentialité. Pas pour un pilote. Si le cas d'usage exige des microdonnées, le
+modèle vient aux données.
+</p>
+
+<aside class="notes">
+Énoncez-le sans nuance, car c'est la diapositive sur laquelle quelqu'un sera
+interrogé par son propre service juridique.
+
+La raison n'est pas qu'un prestataire soit indigne de confiance. C'est que
+l'autorité d'un office statistique à détenir des microdonnées repose sur une
+promesse faite aux répondants, et cette promesse n'a pas été rédigée en pensant à
+un point d'inférence étranger. Une fois le texte parti, vous ne pouvez pas le
+rappeler, et vous ne pouvez pas prouver à une commission parlementaire qu'il n'a
+pas été conservé.
+
+Si l'on objecte que le prestataire propose une offre sans entraînement ni
+conservation : c'est une assurance contractuelle sur un comportement, pas un
+changement du lieu où les données sont physiquement allées.
+</aside>
+</section>
+<section>
+<span class="timing">3 min</span>
+
+<h2>Quel cas d'usage va où</h2>
+
+<table>
+<tr><th>Cas d'usage</th><th>Données touchées</th><th>Où il peut s'exécuter</th></tr>
+<tr><td>Assistant sur vos propres publications</td><td>Publiées</td>
+    <td><em>Les deux.</em> Commencez en nuage</td></tr>
+<tr><td>Rédaction de notes méthodologiques</td><td>Publiées ou brouillons internes</td>
+    <td><em>Les deux</em></td></tr>
+<tr><td>Extraction de tableaux depuis des PDF</td><td>Publiées</td>
+    <td><em>Les deux</em></td></tr>
+<tr><td>Codage de réponses libres d'enquête</td><td>Microdonnées</td>
+    <td><strong>Sur site uniquement</strong></td></tr>
+<tr><td>Tout travail sur le fichier de recensement</td><td>Microdonnées identifiantes</td>
+    <td><strong>Sur site uniquement</strong></td></tr>
+</table>
+
+<aside class="notes">
+Notez la forme de ce tableau : trois lignes sur cinq n'ont aucune contrainte de
+souveraineté. C'est l'argument pour commencer là — vous obtenez un service qui
+fonctionne, un cas de référence interne et une équipe formée, sans attendre un
+cycle d'achat de matériel.
+
+La quatrième ligne est celle qui surprend le plus souvent. Les réponses libres
+paraissent inoffensives parce qu'elles sont courtes, mais une seule phrase peut
+identifier un répondant dans une petite strate — « le mécanicien sur la route de
+l'hôpital de district » n'a besoin d'aucun nom.
+
+Demandez à la salle de placer son propre cas d'usage principal dans ce tableau
+avant la pause.
+</aside>
+</section>
+<section class="divider">
+
+<div class="eyebrow" style="color:var(--afdb-amber);">Partie 3 sur 3</div>
+<h2>Ce que cela coûte, et quoi acheter d'abord</h2>
+<p>Des ordres de grandeur, et les coûts qui n'apparaissent jamais dans un devis.</p>
+</section>
+<section>
+<span class="timing">3 min</span>
+
+<h2>Trois configurations qui existent</h2>
+
+<table>
+<tr><th>Palier</th><th>Mémoire</th><th>Exécute</th><th>Adapté à</th></tr>
+<tr><td><strong>A · Un portable que vous avez</strong></td><td>8 à 16 Go RAM</td>
+    <td>3B en 4 bits, lentement</td><td>Les labos de la semaine</td></tr>
+<tr><td><strong>B · Une carte de station</strong></td><td>24 Go VRAM</td>
+    <td>8B, ou 30B en 4 bits</td>
+    <td><em>Le point d'entrée réaliste</em></td></tr>
+<tr><td><strong>C · Un petit serveur</strong></td><td>2 × 48 Go</td>
+    <td>70B, plusieurs utilisateurs</td><td>Production, une fois B éprouvé</td></tr>
+</table>
+
+<div class="key">
+<b>Achetez B, pas C</b>
+Le palier B sert un département, et la plupart des offices ayant acheté C y
+exécutent des charges B. <strong>Aucun prix ici : ils bougent trop vite pour être
+justes sur une diapositive.</strong>
+</div>
+
+<aside class="notes">
+Délibérément aucun prix ici, et dites pourquoi : tout chiffre que je mettrais sur
+cette diapositive sera faux au moment de votre achat, et un nombre périmé dans
+une présentation de la BAD devient une faiblesse de négociation. Obtenez deux
+devis, datés, et comparez sur le même cahier des charges.
+
+Ce qui est stable, c'est la forme. Le palier A est gratuit et c'est celui des
+laboratoires de la semaine. Le palier B est une carte dans une machine, et c'est
+là qu'un premier vrai service interne doit vivre. Le palier C est un projet avec
+une ligne budgétaire, une salle et une personne.
+
+Le piège du palier C est qu'il est plus facile à financer que le B — le capital
+s'obtient plus aisément qu'un petit achat plus un poste. C'est ainsi qu'un office
+se retrouve avec un serveur sous-utilisé.
+</aside>
+</section>
+<section class="tint">
+<span class="timing">3 min</span>
+
+<h2>Les coûts absents du devis</h2>
+
+<div class="metrics">
+<div><div class="n">1</div><div class="l">Personne qui en est propriétaire</div>
+     <div class="s">le plus gros coût, et celui qu'on ne budgète jamais</div></div>
+<div><div class="n">24/7</div><div class="l">Électricité et refroidissement</div>
+     <div class="s">un GPU en charge continue est un radiateur</div></div>
+<div><div class="n">∞</div><div class="l">Correctifs et sauvegardes</div>
+     <div class="s">c'est un service désormais, avec ses obligations</div></div>
+<div><div class="n">?</div><div class="l">Sortie</div>
+     <div class="s">comment quitter un prestataire, et à quel coût</div></div>
+</div>
+
+<aside class="notes">
+La première carte est la plus honnête. Le matériel est un coup unique ; une
+personne est annuelle et récurrente, et un office qui finance la machine sans
+financer le poste a acheté un ornement. Si vous ne pouvez financer qu'une chose,
+financez la personne et louez le calcul.
+
+L'électricité mérite un avertissement précis pour ce public : une charge GPU
+continue dans une salle sans refroidissement suffisant se bridera, et dans un
+bâtiment à alimentation instable elle corrompra les travaux en cours. Renseignez
+la salle avant la carte.
+
+La dernière carte est là où le travail de la CEE-ONU sur le nuage sert
+directement — stratégie de sortie et dépendance au fournisseur sont des thèmes
+d'achat nommés, vous disposez donc d'un vocabulaire institutionnel pour une
+question qui sonnerait sinon comme de la méfiance.
+</aside>
+</section>
+<section class="split wide">
+<span class="timing">3 min</span>
+
+<div class="panel">
+<div class="eyebrow">Un choix qui n'est pas une affaire de prix</div>
+<h2>Poids ouverts, ou API propriétaire</h2>
+<p>Les deux sont légitimes. Ils diffèrent par ce que vous pouvez promettre.</p>
+</div>
+<div class="body">
+<div class="key">
+<b>Les poids ouverts vous achètent trois choses</b>
+Les données ne partent jamais. La version est figée, donc un processus validé
+reste valide. Et vous pouvez déclarer exactement ce qui a produit un chiffre
+publié — <strong>c'est de la reproductibilité, pas une préférence</strong>.
+</div>
+</div>
+
+<aside class="notes">
+Les modèles propriétaires de frontière sont meilleurs en raisonnement difficile,
+et prétendre le contraire serait malhonnête. Pour la plupart des tâches d'un
+office statistique — extraction, classification, rédaction, réponse à partir d'un
+document fourni — un modèle à poids ouverts entre huit et trente milliards suffit,
+et les trois propriétés de cette diapositive comptent plus que les derniers points
+de capacité.
+
+Le gel de version est le point auquel les méthodologues réagissent. Si un
+indicateur publié dépendait d'un modèle et que ce modèle a été mis à jour
+silencieusement, vous ne pouvez pas reproduire votre propre sortie. Un fichier de
+poids ouverts sur votre disque ne change pas.
+
+Dites clairement qu'un hybride est normal : propriétaire pour l'exploration et la
+rédaction, poids ouverts pour tout ce qui touche des données confidentielles ou
+alimente une publication.
+</aside>
+</section>
+<section class="bleed">
+
+<div class="cap">
+<div class="eyebrow">À quoi ressemble une première installation réaliste</div>
+<h2>Une machine, trois services, aucune dépendance au nuage</h2>
+</div>
+<figure>
+<svg viewBox="0 0 1180 300" xmlns="http://www.w3.org/2000/svg" role="img"
+     aria-label="Architecture sur site d'entrée de gamme : une machine GPU servant un point d'inférence, un index documentaire et un environnement de carnets, à l'intérieur du réseau de l'office">
+ <defs><marker id="i1f" markerWidth="9" markerHeight="9" refX="7" refY="3.2" orient="auto">
+   <path d="M0,0 L8,3.2 L0,6.4 z" fill="#1B7A43"/></marker></defs>
+ <g font-family="Inter,sans-serif" font-size="14">
+  <rect x="14" y="14" width="1152" height="238" rx="14" fill="none"
+        stroke="#6B7B75" stroke-width="2" stroke-dasharray="8 6"/>
+  <text x="34" y="40" font-size="15" fill="#6B7B75" font-weight="700">VOTRE RÉSEAU · rien ne franchit cette ligne</text>
+
+  <rect x="40" y="86" width="200" height="120" rx="12" fill="#0B2545"/>
+  <text x="140" y="118" text-anchor="middle" font-size="16" font-weight="800" fill="#fff">UNE MACHINE</text>
+  <text x="140" y="144" text-anchor="middle" fill="#b9c8d8">1 × GPU de 24 Go</text>
+  <text x="140" y="166" text-anchor="middle" fill="#b9c8d8">64 Go RAM · SSD 2 To</text>
+  <text x="140" y="190" text-anchor="middle" fill="#F2A900" font-weight="700">palier B</text>
+
+  <rect x="300" y="52" width="248" height="66" rx="11" fill="#F4F8F5" stroke="#1B7A43" stroke-width="1.8"/>
+  <text x="424" y="78" text-anchor="middle" font-weight="700" fill="#0B2545">Point d'inférence</text>
+  <text x="424" y="100" text-anchor="middle" fill="#33403A">modèle à poids ouverts, 8B-30B</text>
+
+  <rect x="300" y="130" width="248" height="66" rx="11" fill="#F4F8F5" stroke="#1B7A43" stroke-width="1.8"/>
+  <text x="424" y="156" text-anchor="middle" font-weight="700" fill="#0B2545">Index documentaire</text>
+  <text x="424" y="178" text-anchor="middle" fill="#33403A">vos publications, pour le RAG</text>
+
+  <rect x="300" y="208" width="248" height="60" rx="11" fill="#F4F8F5" stroke="#1B7A43" stroke-width="1.8"/>
+  <text x="424" y="232" text-anchor="middle" font-weight="700" fill="#0B2545">Environnement de carnets</text>
+  <text x="424" y="254" text-anchor="middle" fill="#33403A">où travaillent les méthodologues</text>
+
+  <g stroke="#1B7A43" stroke-width="2.2" marker-end="url(#i1f)">
+   <line x1="242" y1="120" x2="294" y2="90"/>
+   <line x1="242" y1="146" x2="294" y2="160"/>
+   <line x1="242" y1="172" x2="294" y2="230"/>
+  </g>
+
+  <rect x="620" y="96" width="200" height="100" rx="11" fill="#fff" stroke="#6B7B75" stroke-width="1.6"/>
+  <text x="720" y="128" text-anchor="middle" font-weight="700" fill="#0B2545">Vos agents</text>
+  <text x="720" y="150" text-anchor="middle" fill="#6B7B75">navigateur seulement</text>
+  <text x="720" y="174" text-anchor="middle" fill="#6B7B75">aucune installation</text>
+  <line x1="556" y1="146" x2="612" y2="146" stroke="#1B7A43" stroke-width="2.2" marker-end="url(#i1f)"/>
+
+  <rect x="880" y="96" width="260" height="100" rx="11" fill="#FEF9EC" stroke="#F2A900" stroke-width="2"/>
+  <text x="1010" y="126" text-anchor="middle" font-weight="800" fill="#8a6100">UNE PERSONNE</text>
+  <text x="1010" y="150" text-anchor="middle" fill="#5c4200">en est propriétaire, applique</text>
+  <text x="1010" y="172" text-anchor="middle" fill="#5c4200">les correctifs, répond en cas d'arrêt</text>
+
+  <text x="590" y="288" text-anchor="middle" font-size="17" fill="#8a6100" font-weight="700">
+   L'encadré ambre n'est pas optionnel, et c'est celui qu'on omet le plus souvent du budget.</text>
+ </g>
+</svg>
+</figure>
+
+<aside class="notes">
+C'est délibérément modeste, et c'est une configuration réelle plutôt qu'une
+aspiration. Une machine, trois services, tout à l'intérieur de votre réseau, et
+des agents qui y accèdent par un navigateur — donc rien à installer sur quarante
+postes.
+
+Parcourez les trois encadrés verts et reliez-les à la semaine : le point
+d'inférence et l'index documentaire réunis sont exactement ce que construit le
+laboratoire de 14h45, et l'environnement de carnets est celui du Jour 4.
+
+Puis montrez l'encadré ambre et cessez de parler un instant. Tout le reste de
+cette diapositive s'achète en un trimestre. La personne est la partie qui prend
+un an, et celle qui détermine si tout cela tournera encore l'an prochain.
+</aside>
+</section>
+<section class="split even">
+<span class="timing">3 min</span>
+
+<div class="panel is-amber">
+<div class="eyebrow">À emporter chez votre prestataire</div>
+<h2>Cinq questions qui révèlent une proposition faible</h2>
+</div>
+<div class="body">
+<ul style="font-size:.66em;">
+<li>Est-ce du matériel d'<strong>entraînement ou d'inférence</strong>, et pourquoi ?</li>
+<li>Quel est le <strong>plus long document</strong> traité, en tokens ?</li>
+<li>Combien d'<strong>utilisateurs simultanés</strong> avant dégradation ?</li>
+<li>Si la version du modèle change, <strong>qui nous en informe</strong> ?</li>
+<li>Que coûte le <strong>départ</strong>, et où vont nos données ?</li>
+</ul>
+</div>
+
+<aside class="notes">
+Dites à la salle de photographier cette diapositive. C'est l'objet le plus
+directement utilisable de la session.
+
+Les cinq sont ordonnées selon la fréquence avec laquelle elles démasquent une
+proposition écrite depuis un gabarit. Un prestataire incapable de répondre à la
+première n'a pas lu le cas d'usage. Celui qui ne peut répondre à la deuxième n'a
+rien dimensionné. La cinquième est le thème « stratégie de sortie » de la CEE-ONU
+en une phrase, et c'est celle qui change les contrats.
+
+Ajoutez une consigne : demandez les réponses par écrit, dans la proposition, pas
+en réunion. Une assurance verbale sur la concurrence d'accès n'est pas
+contractualisable.
+</aside>
+</section>
+<section>
+<span class="timing">1 min</span>
+
+<div class="eyebrow">Si vous ne faites qu'une chose</div>
+<div class="statement">
+Commencez par le cas d'usage <span class="hl">sans contrainte de souveraineté</span>.
+</div>
+<p class="statement-sub">
+Il n'exige aucun achat, aucune salle serveurs et aucun avis juridique. Il vous
+donne un service qui fonctionne, une équipe formée et un cas de référence
+interne — ce qu'il vous faudra pour financer plus grand.
+</p>
+
+<aside class="notes">
+C'est la recommandation, et elle est délibérément peu ambitieuse.
+
+Un office qui commence par le fichier de recensement a besoin d'un avis
+juridique, d'un achat de matériel, d'une salle et d'un poste avant de pouvoir
+démontrer quoi que ce soit, et la plupart de ces projets attendent encore deux
+ans plus tard. Un office qui commence par un assistant de questions-réponses sur
+ses propres rapports publiés a quelque chose qui tourne en quinze jours, et cette
+chose qui tourne est l'argument du budget suivant.
+
+Reliez à l'après-midi : le laboratoire de 14h45 est exactement ce cas d'usage, et
+chaque participant en repart avec une version qui fonctionne.
+</aside>
+</section>
+<section class="divider">
+
+<div class="eyebrow" style="color:var(--afdb-amber);">Ensuite</div>
+<h2>14h45 — Laboratoire : construire l'assistant RAG</h2>
+<p>Les deux premiers encadrés verts de ce schéma d'architecture, fonctionnant sur
+un portable avant la fin de l'après-midi.</p>
+<p style="font-size:.55em;color:#9fb4c6;margin-top:1.6rem;">
+15h45 · Laboratoire — transformer l'assistant en agent<br><br>
+Cadres cités : <i>Cadre de politique des données</i> de l'UA (2022) ·
+<i>Cloud Computing</i> du HLG-MOS de la CEE-ONU<br>
+Bibliographie complète : site de l'atelier → Ressources → Références
+</p>
+</section>
+  </div>
+</div>
+<div class="footer">
+  <span class="brand">African Development Bank · AU STATAFRIC · STG17</span>
+  <span>Jour 1 · 14h00-14h45 · Exposé</span>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/plugin/notes/notes.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/plugin/highlight/highlight.js"></script>
+<script>
+// If the CDN is unreachable — a real possibility on the networks this workshop
+// runs on — Reveal is undefined and the body keeps its `no-reveal` class, so the
+// deck renders as a long scrollable document instead of a blank page.
+if (typeof Reveal !== 'undefined') {
+  document.body.classList.remove('no-reveal');
+  Reveal.initialize({
+    hash: true,
+    slideNumber: 'c/t',
+    controls: true,
+    progress: true,
+    center: false,
+    transition: 'fade',
+    transitionSpeed: 'fast',
+    width: 1280,
+    height: 720,
+    margin: 0.045,
+    minScale: 0.2,
+    maxScale: 1.6,
+    plugins: [ RevealNotes, RevealHighlight ]
+  });
+} else {
+  console.warn('reveal.js could not be loaded — falling back to document mode.');
+}
+</script>
+</body>
+</html>

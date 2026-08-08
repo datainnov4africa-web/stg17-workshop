@@ -53,7 +53,19 @@ souveraineté des microdonnées d'un INS, modélisation des coûts, modèles à 
 ouverts contre propriétaires. À quoi ressemble une configuration d'entrée de gamme
 réaliste pour un INS africain.
 
-:material-progress-clock: *Lot Jour 1*
+:material-check-circle:{ .ok } **Disponible**
+
+<p>
+<a class="md-button md-button--primary" href="../../slides/02-ai-infrastructure-what-it-really-takes-fr.html">Présenter (FR)</a>
+<a class="md-button" href="../../slides/02-ai-infrastructure-what-it-really-takes-en.html">Present (EN)</a>
+</p>
+
+<p>
+<a href="../../slides/02-ai-infrastructure-what-it-really-takes-fr.html?print-pdf">PDF (FR)</a> ·
+<a href="../../slides/02-ai-infrastructure-what-it-really-takes-en.html?print-pdf">PDF (EN)</a> ·
+<a href="../../slides/pptx/02-ai-infrastructure-fr.pptx">PPTX (FR)</a> ·
+<a href="../../slides/pptx/02-ai-infrastructure-en.pptx">PPTX (EN)</a>
+</p>
 
 ---
 

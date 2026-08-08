@@ -253,18 +253,22 @@ def main() -> int:
             warnings.extend(dense)
         warnings.extend(check_symmetry(source, built))
 
+    # Both lists carry findings from four different checks, so the headings say
+    # what the severity means rather than naming one check. They used to name
+    # the check that happened to be added first — "Asymmetries between the
+    # English and French builds" over a list of word counts — which made the
+    # output actively misleading about what had gone wrong.
     if warnings:
-        print("\nAsymmetries between the English and French builds:")
+        print("\nWorth fixing — the decks are usable as they are:")
         for warning in warnings:
             print("   !", warning)
-        print("  These are authoring omissions, not build failures — the decks are usable.")
 
-    # A broken stylesheet path is fatal, unlike an asymmetry. An unstyled deck
-    # still renders — reveal.js loads from the CDN — so nothing errors and the
-    # slides advance normally. It just looks like a browser default. That is not
-    # a usable deck in front of a room, and it must not reach one.
+    # These are fatal. An unstyled or overloaded deck still renders — reveal.js
+    # loads from the CDN, so nothing errors and the slides advance normally. It
+    # just cannot be read from the back of a room, which is why a visual check
+    # passes and the deck is still unusable.
     if broken:
-        print("\nBroken stylesheet references:")
+        print("\nMust be fixed before this deck is presented:")
         for problem in broken:
             print("   x", problem)
         return 1
