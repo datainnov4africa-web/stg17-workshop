@@ -74,7 +74,23 @@ réaliste pour un INS africain.
 ### Deck 03 { #deck-03 }
 **Parler aux machines : l'art de l'ingénierie de prompt** — 75 min
 
-:material-progress-clock: *Lot Jour 2*
+L'ingénierie de prompt comme rédaction de cahier des charges, les deux résultats
+publiés qui contredisent l'essentiel de ce qui circule, et comment bâtir le jeu
+d'évaluation qui transforme une opinion sur un prompt en un nombre.
+
+:material-check-circle:{ .ok } **Disponible**
+
+<p>
+<a class="md-button md-button--primary" href="../../slides/03-talking-to-machines-the-craft-of-prompt-engineer-fr.html">Présenter (FR)</a>
+<a class="md-button" href="../../slides/03-talking-to-machines-the-craft-of-prompt-engineer-en.html">Present (EN)</a>
+</p>
+
+<p>
+<a href="../../slides/03-talking-to-machines-the-craft-of-prompt-engineer-fr.html?print-pdf">PDF (FR)</a> ·
+<a href="../../slides/03-talking-to-machines-the-craft-of-prompt-engineer-en.html?print-pdf">PDF (EN)</a> ·
+<a href="../../slides/pptx/03-prompt-engineering-fr.pptx">PPTX (FR)</a> ·
+<a href="../../slides/pptx/03-prompt-engineering-en.pptx">PPTX (EN)</a>
+</p>
 
 ### Deck 04 { #deck-04 }
 **De bon à excellent : optimisation des prompts** — 45 min

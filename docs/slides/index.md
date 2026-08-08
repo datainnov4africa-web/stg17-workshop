@@ -71,7 +71,23 @@ What a realistic entry-level configuration looks like for an African NSO.
 ### Deck 03 { #deck-03 }
 **Talking to Machines: The Craft of Prompt Engineering** — 75 min
 
-:material-progress-clock: *Day 2 batch*
+Prompt engineering as specification writing, the two published findings that
+contradict most of what circulates, and how to build the evaluation set that turns
+an opinion about a prompt into a number.
+
+:material-check-circle:{ .ok } **Available**
+
+<p>
+<a class="md-button md-button--primary" href="03-talking-to-machines-the-craft-of-prompt-engineer-en.html">Present (EN)</a>
+<a class="md-button" href="03-talking-to-machines-the-craft-of-prompt-engineer-fr.html">Présenter (FR)</a>
+</p>
+
+<p>
+<a href="03-talking-to-machines-the-craft-of-prompt-engineer-en.html?print-pdf">PDF (EN)</a> ·
+<a href="03-talking-to-machines-the-craft-of-prompt-engineer-fr.html?print-pdf">PDF (FR)</a> ·
+<a href="pptx/03-prompt-engineering-en.pptx">PPTX (EN)</a> ·
+<a href="pptx/03-prompt-engineering-fr.pptx">PPTX (FR)</a>
+</p>
 
 ### Deck 04 { #deck-04 }
 **From Good to Great: Prompt Optimisation** — 45 min

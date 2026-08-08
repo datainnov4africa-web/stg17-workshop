@@ -10,12 +10,6 @@ writing it as well as laying it out.
 Tell me which of these you are building, then build it. If I named one in my
 message, build that one.
 
-  03 · Day 2 · 09:00–10:15 · talk
-     EN: Talking to Machines: The Craft of Prompt Engineering
-     FR: Parler aux machines : l'art de l'ingénierie de prompt
-     Scope: Task framing, role and context, explicit constraints, few-shot examples, decomposition, structured JSON outputs, guardrails and systematic iteration. Why models hallucinate and how prompt design reduces it. Common anti-patterns and how to detect them in your own prompts.
-     STG17 Action Plan: ['4.2.1']
-
   04 · Day 2 · 14:00–14:45 · talk
      EN: From Good to Great: Prompt Optimisation
      FR: De bon à excellent : optimisation des prompts

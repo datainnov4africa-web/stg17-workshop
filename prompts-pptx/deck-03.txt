@@ -1,0 +1,1293 @@
+You are building a PowerPoint deck for the African Development Bank and AU
+STATAFRIC, for the STG17 workshop on artificial intelligence for official
+statistics.
+
+The content is FIXED and given in full below. It has been written, reviewed and
+its references checked. Your job is the design and the layout — not the content.
+
+  Do not add slides. Do not remove slides. Do not reword a claim.
+  Do not add a citation, a statistic or an example that is not below.
+  Do not "improve" anything. If something reads oddly, leave it.
+
+Deck: Talking to Machines - The Craft of Prompt Engineering
+Session: Day 2 · 09:00-10:15 · Talk · 75 minutes
+Audience: heads of statistical methodology and IT at African national statistical
+offices — expert statisticians, non-expert in machine learning, many working in
+their second or third language.
+
+# THE STANDARD
+
+I am not asking for acceptable slides. I am asking for a deck that would pass as
+the work of a design studio commissioned by a development bank, and that a
+minister would not be embarrassed to sit through.
+
+Three things most generated decks fail, so check yourself against them:
+
+  1. EVERY SLIDE HAS A VISUAL IDEA, not only a verbal one. A title with two
+     paragraphs under it is a page, not a slide. If a slide's only content is
+     prose, you have not finished designing it — give it a colour panel, a
+     numeral, a card row or a table.
+
+  2. THE DECK HAS RHYTHM. White, white, white, white reads as one long document
+     and the audience stops noticing that anything changed. Never more than three
+     consecutive white slides; aim for roughly a third of the deck carrying a
+     full colour field.
+
+  3. TYPE DOES THE WORK. One family, a wide size range, decisive weight
+     contrast. A 46pt numeral beside 14pt supporting text carries more than any
+     decoration. Nothing is centred except the title slide.
+
+# VISUAL REGISTER — editorial-graphic
+
+Flat colour fields, oversized numerals, strong typography, clean tables.
+
+  NOT: stock photography, clip art, icon fonts, emoji, WordArt.
+  NOT: gradients other than the title slide, text shadows, glows, 3-D, bevels.
+  NOT: rounded-everything. Panels 10-14pt radius; full colour fields square.
+
+It must read on a badly calibrated projector in a lit room, print legibly in
+black and white, and not look dated in ten years.
+
+# PALETTE — these seven values and no eighth
+
+  NAVY  0B2545   structure, colour fields, headings, authority
+  JADE  1B7A43   primary accent, the normal path, rules
+  AMBER F2A900   the ONE element the eye should find; warnings
+  INK   33403A   body text
+  MUTED 6B7B75   captions, secondary text, source lines
+  LINE  D5E6DF   hairlines and table borders
+  WASH  F4F8F5   tinted ground and panel fill
+
+Amber is scarce by design: if two things on a slide are amber, neither is
+emphasised. Never carry meaning by colour alone — a colour-blind viewer and a
+monochrome printout must both still work.
+
+# TYPE SCALE — use these, invent no intermediate sizes
+
+  Font: Segoe UI throughout. No serif anywhere.
+
+  Deck title      54pt bold        Slide title      32pt bold, NAVY, with a 3pt
+  Statement       42pt bold                         AMBER rule directly beneath
+  Hero numeral    92pt bold JADE   Body             20pt, INK
+  Card title      17pt bold        Card body        14pt
+  Table cell      15pt             Table header     15pt bold, white on NAVY
+  Source line     11pt MUTED       Footer           10pt MUTED
+
+  Minimum anywhere: 11pt. DISABLE autofit shrink everywhere. If text does not fit
+  at these sizes the content is too long — but the content is fixed here, so
+  instead reduce the slide's padding or split the shape. Silently shrinking text
+  is the clearest signature of an amateur deck.
+
+# CANVAS AND FOOTER
+
+  16:9 widescreen, 13.333 x 7.5 inches.
+  Margins: left/right 0.8", top 0.6", bottom 0.9".
+  Reserve the bottom 0.55" for the footer; no content enters it.
+
+  Footer on every slide except the title: a 2pt AMBER rule across the content
+  width, and beneath it — left, "African Development Bank · AU STATAFRIC · STG17"
+  in NAVY bold 10pt; right, the slide number in MUTED 10pt.
+
+# ARCHETYPES — build each slide as one of these
+
+  TITLE       full-bleed NAVY, AMBER eyebrow in caps 12pt, title 54pt white,
+              subtitle 24pt at 80% white, metadata block bottom left 13pt
+  DIVIDER     solid NAVY, deliberately almost empty: eyebrow, title 44pt white
+              with an AMBER rule, one line of body in a pale blue-grey
+  STATEMENT   white ground, one sentence 42pt in the upper half with two or three
+              words in JADE, a qualifier beneath at 17pt MUTED, nothing else
+  SPLIT       a NAVY, JADE or AMBER rectangle over the left ~40% carrying the
+              eyebrow and title in white, the content in the remaining 60%
+  TABLE       header row NAVY with white text, body rows alternating white and
+              WASH, a 1pt LINE rule under each row, NO VERTICAL BORDERS AT ALL,
+              cells top-aligned and left-aligned
+  METRICS     2-4 white cards in a row, 1pt LINE border, a 4pt JADE bar across
+              the top, then numeral 46pt / label 13pt bold / qualifier 11pt
+  STEPS       3-5 cards, numeral 46pt JADE, title 17pt, two lines at 14pt, a 5pt
+              top bar — AMBER on the last card
+  COMPARE     two panels on WASH with a 5pt top bar: MUTED or red left, JADE right
+  CALLOUT     a WASH panel (or FEF9EC for a warning) with a 6pt left bar in the
+              accent colour, label in 13pt caps, body 18pt
+  HERO NUMBER one numeral 92pt with its unit beside it at 35pt MUTED, and a
+              caption of at most two lines
+  FIGURE      see FIGURES below
+  CLOSING     NAVY ground, what happens next. No "Thank you", no "Questions?"
+
+# TWO FILES, ONE PASS
+
+Build BOTH language versions: `03-prompt-engineering-en.pptx` and `03-prompt-engineering-fr.pptx`.
+
+Write ONE script. Put the content in a single list of slide dictionaries, each
+holding both languages, then loop over ('en', 'fr') and write two files. Do not
+write the deck out twice — two copies of the same structure drift the moment one
+is edited.
+
+The French is not a translation to be produced now; it is given in the source
+below and must be used verbatim. French typographic rules already applied there —
+« guillemets », a space before : ; ! ?, 09h30 not 09:30, decimal commas — must be
+preserved exactly. Do not "correct" them.
+
+Where a French text block is longer than its English counterpart, reduce the
+padding rather than the font size.
+
+# HOW TO READ THE SOURCE BELOW
+
+Each slide is given as the HTML this workshop authors its decks in. The class
+names tell you which archetype to build:
+
+  <section class="title">      -> TITLE            <div class="statement">  -> STATEMENT
+  <section class="divider">    -> DIVIDER          <div class="key">        -> CALLOUT, jade
+  <section class="split">      -> SPLIT            <div class="warn">       -> CALLOUT, amber
+  <section class="jade">       -> full JADE field   <div class="metrics">    -> METRICS
+  <section class="night">      -> near-black field  <div class="steps">      -> STEPS
+  <section class="tint">       -> WASH ground       <div class="compare">    -> COMPARE
+  <section class="bleed">      -> FIGURE, full width<div class="findings">   -> 2 evidence cards
+  <section class="appendix">   -> reference list    <div class="terms">      -> 2-column glossary
+                                                    <div class="chips">      -> pill labels
+  <div class="eyebrow">  the kicker above the title    <div class="hero-n">   -> HERO NUMBER
+  <p class="statement-sub"> the qualifier under a statement
+  <div class="src">      the source line, 11pt MUTED at the foot of the slide
+  <div class="panel">    inside a split: the colour side. is-jade / is-amber change its colour
+  <div class="body">     inside a split: the content side
+  <span class="timing">  presenter-only. DO NOT put this on the slide.
+  <aside class="notes">  the speaker notes. These go in the NOTES PANE, never on the slide face.
+
+Inside <div class="metrics"> and <div class="steps">, the inner classes are:
+  .n / .i = the number, .l / .t = the label or title, .s / .d = the qualifier.
+
+# FIGURES — do not invent them
+
+Where the source contains [FIGURE: ...], the original slide carries a hand-drawn
+diagram that cannot be transferred. Insert a placeholder: a rectangle at the full
+content width, 2.6 inches high, WASH fill, dashed LINE border, with the figure's
+description centred in MUTED 13pt.
+
+Do NOT attempt to redraw the diagram with PowerPoint shapes or SmartArt. A
+diagram guessed from its description loses the meaning it was drawn to carry, and
+looks worse than an honest gap.
+
+At the end, list every placeholder so I know which figures to screenshot from the
+HTML deck and drop in.
+
+# HOW TO PRODUCE IT
+
+Write Python using python-pptx, run it, and give me the two .pptx files to
+download. Build on the blank layout (`prs.slide_layouts[6]`) and place every
+shape explicitly — the built-in title and content placeholders carry theme
+formatting that cannot be fully overridden.
+
+Set `shape.shadow.inherit = False` on every shape you create. python-pptx
+inherits a theme shadow otherwise, which is invisible on screen and looks smeared
+on a projector.
+
+Put the palette, the type scale and the margins in module-level constants, and
+write one function per archetype, so the deck at the bottom of the script reads
+as a list of calls.
+
+# BEFORE YOU FINISH, VERIFY AND REPORT
+
+  1. Slide count matches the source, in both languages.
+  2. No slide face carries more than 110 words.
+  3. No table over 6 rows including the header.
+  4. No font below 11pt, and no autofit shrink anywhere.
+  5. Speaker notes present on every slide that has them in the source.
+  6. No colour outside the seven listed.
+  7. Every [FIGURE: ...] placeholder listed for me.
+
+Fix anything that fails before you output — do not output and then note it.
+
+##########################################################################
+# THE DECK — 17 slides, English and French
+##########################################################################
+
+==========================================================================
+SLIDE 1 of 17
+==========================================================================
+
+--- ENGLISH ---
+<section class="title">
+
+<div class="eyebrow">African Development Bank · AU STATAFRIC · STG17 · Day 2</div>
+<h1>Talking to machines</h1>
+<h2>Prompt engineering is specification writing — and this room has done it for thirty years</h2>
+<div class="meta">
+Day 2 · 09:00–10:15 · 75 minutes<br>
+STG17 Action Plan 2025–2030 · activities 3.3.2 and 4.1.1
+</div>
+
+<aside class="notes">
+Seventy-five minutes, and the longest talk of the week. Say at the outset what it
+is not: it is not a list of tricks, and there is no slide of magic phrases.
+
+The frame to establish in the first five minutes is that this audience already
+does the hard part of this work. Writing an instruction that a thousand
+enumerators will follow identically, in three languages, without you present, is a
+harder problem than prompting a model — and it is the same problem.
+</aside>
+</section>
+
+--- FRANÇAIS ---
+<section class="title">
+
+<div class="eyebrow">Banque africaine de développement · UA STATAFRIC · STG17 · Jour 2</div>
+<h1>Parler aux machines</h1>
+<h2>L'ingénierie de prompt est de la rédaction de cahier des charges — et cette salle en fait depuis trente ans</h2>
+<div class="meta">
+Jour 2 · 09h00-10h15 · 75 minutes<br>
+Plan d'action STG17 2025-2030 · activités 3.3.2 et 4.1.1
+</div>
+
+<aside class="notes">
+Soixante-quinze minutes, et l'exposé le plus long de la semaine. Dites d'emblée
+ce qu'il n'est pas : ce n'est pas une liste d'astuces, et il n'y a pas de
+diapositive de formules magiques.
+
+Le cadre à poser dans les cinq premières minutes : ce public fait déjà la partie
+difficile de ce travail. Rédiger une consigne que mille agents recenseurs
+suivront à l'identique, en trois langues, sans vous à leurs côtés, est un problème
+plus dur que de prompter un modèle — et c'est le même problème.
+</aside>
+</section>
+
+==========================================================================
+SLIDE 2 of 17
+==========================================================================
+
+--- ENGLISH ---
+<section class="split wide">
+<span class="timing">3 min</span>
+
+<div class="panel">
+<div class="eyebrow">You have written one of these</div>
+<h2>An enumerator's instruction manual</h2>
+<p>A specification for a worker you will never meet, who cannot ask you what you
+meant, and whose output becomes an official statistic.</p>
+</div>
+<div class="body">
+<div class="key">
+<b>That is the whole skill</b>
+State the task. Define the terms. Give worked examples, including the awkward
+ones. Say what to do when the case does not fit. <strong>Then test it on real
+material before you deploy it to a thousand people.</strong>
+</div>
+</div>
+
+<aside class="notes">
+Ask for a show of hands: who has written or reviewed enumerator instructions, or a
+coding manual for occupation or industry? Most hands go up, and that is the point
+of the slide.
+
+Then draw the parallel explicitly. Every failure mode of a bad enumerator manual
+has an exact counterpart in a bad prompt: an undefined term, a missing edge case,
+an example that contradicts the rule, an instruction that assumes context the
+worker does not have.
+
+The one difference worth naming now: the model does not get tired, and it does not
+tell you when the instruction was unclear. It guesses, fluently, every time.
+</aside>
+</section>
+
+--- FRANÇAIS ---
+<section class="split wide">
+<span class="timing">3 min</span>
+
+<div class="panel">
+<div class="eyebrow">Vous en avez rédigé un</div>
+<h2>Un manuel d'instructions pour agents recenseurs</h2>
+<p>Un cahier des charges pour un agent que vous ne rencontrerez jamais, qui ne
+peut pas vous demander ce que vous vouliez dire, et dont la sortie devient une
+statistique officielle.</p>
+</div>
+<div class="body">
+<div class="key">
+<b>C'est tout le savoir-faire</b>
+Énoncer la tâche. Définir les termes. Donner des exemples traités, y compris les
+gênants. Dire quoi faire quand le cas ne rentre pas. <strong>Puis tester sur du
+matériel réel avant de déployer auprès de mille personnes.</strong>
+</div>
+</div>
+
+<aside class="notes">
+Demandez à main levée : qui a rédigé ou relu des instructions d'agents
+recenseurs, ou un manuel de codage des professions ou des activités ? La plupart
+des mains se lèvent, et c'est l'objet de la diapositive.
+
+Tracez ensuite le parallèle explicitement. Chaque mode d'échec d'un mauvais manuel
+a son exact équivalent dans un mauvais prompt : un terme non défini, un cas limite
+oublié, un exemple qui contredit la règle, une consigne qui suppose un contexte
+que l'agent n'a pas.
+
+La seule différence à nommer maintenant : le modèle ne fatigue pas, et il ne vous
+dit pas que la consigne était ambiguë. Il devine, avec aisance, à chaque fois.
+</aside>
+</section>
+
+==========================================================================
+SLIDE 3 of 17
+==========================================================================
+
+--- ENGLISH ---
+<section>
+<span class="timing">1 min</span>
+
+<div class="eyebrow">The reframing this talk rests on</div>
+<div class="statement">
+A prompt is a <span class="hl">measurement instrument</span>.
+</div>
+<p class="statement-sub">
+Not a spell, not a knack, not a personal style. Something you specify, test,
+version and document — because the number that comes out of it will be attributed
+to your office.
+</p>
+
+<aside class="notes">
+Let this sit. It is the sentence the rest of the morning elaborates, and the one
+that changes how a methodologist treats the whole subject.
+
+The consequence, stated once here and returned to at the end: if a prompt is an
+instrument, then changing it is a methodological change. It goes in the
+documentation, it gets a version number, and a published figure names the version
+that produced it. That is not bureaucracy — it is the only way anyone reproduces
+your result, including you, next year.
+</aside>
+</section>
+
+--- FRANÇAIS ---
+<section>
+<span class="timing">1 min</span>
+
+<div class="eyebrow">Le recadrage sur lequel repose cet exposé</div>
+<div class="statement">
+Un prompt est un <span class="hl">instrument de mesure</span>.
+</div>
+<p class="statement-sub">
+Pas une formule magique, pas un tour de main, pas un style personnel. Quelque
+chose que l'on spécifie, teste, versionne et documente — car le nombre qui en sort
+sera attribué à votre office.
+</p>
+
+<aside class="notes">
+Laissez reposer. C'est la phrase que le reste de la matinée développe, et celle
+qui change la façon dont un méthodologue aborde tout le sujet.
+
+La conséquence, énoncée une fois ici et reprise à la fin : si un prompt est un
+instrument, alors le modifier est une modification méthodologique. Cela figure
+dans la documentation, cela reçoit un numéro de version, et un chiffre publié
+nomme la version qui l'a produit. Ce n'est pas de la bureaucratie — c'est le seul
+moyen pour quiconque de reproduire votre résultat, vous compris, l'an prochain.
+</aside>
+</section>
+
+==========================================================================
+SLIDE 4 of 17
+==========================================================================
+
+--- ENGLISH ---
+<section class="divider">
+
+<div class="eyebrow" style="color:var(--afdb-amber);">Part 1 of 3</div>
+<h2>What actually moves the number</h2>
+<p>Two published results that contradict most of what circulates.</p>
+</section>
+
+--- FRANÇAIS ---
+<section class="divider">
+
+<div class="eyebrow" style="color:var(--afdb-amber);">Partie 1 sur 3</div>
+<h2>Ce qui fait réellement bouger le chiffre</h2>
+<p>Deux résultats publiés qui contredisent l'essentiel de ce qui circule.</p>
+</section>
+
+==========================================================================
+SLIDE 5 of 17
+==========================================================================
+
+--- ENGLISH ---
+<section>
+<span class="timing">5 min</span>
+
+<h2>Two findings worth more than a hundred tips</h2>
+
+<div class="findings">
+<div class="finding">
+<span class="what">Formatting alone moved accuracy by up to 76 points</span>
+A separator, a space, the order of a field. The sensitivity persisted with larger
+models and more examples.
+<span class="who">Sclar, Choi, Tsvetkov &amp; Suhr (2024), <i>ICLR</i></span>
+<span class="so">→ Formatting is part of your method, not presentation.</span>
+</div>
+
+<div class="finding" style="border-left-color:var(--afdb-fail);">
+<span class="what">“You are an expert…” did not improve anything</span>
+Four model families, 2 410 factual questions: no improvement over adding none.
+<span class="who">Zheng, Pei, Logeswaran, Lee &amp; Jurgens (2024), <i>Findings of EMNLP</i></span>
+<span class="so">→ The most widespread technique has no measured benefit here.</span>
+</div>
+</div>
+
+<div class="src">
+<b>Sources</b> · Sclar et al. (2024), <i>Quantifying Language Models' Sensitivity to
+Spurious Features in Prompt Design</i>, ICLR,
+<span style="font-family:var(--afdb-mono)">arXiv:2310.11324</span> ·
+Zheng et al. (2024), <i>When “A Helpful Assistant” Is Not Really Helpful</i>,
+Findings of EMNLP, <span style="font-family:var(--afdb-mono)">arXiv:2311.10054</span>
+</div>
+
+<aside class="notes">
+These two are on the same slide deliberately, because together they say something
+uncomfortable: the thing everyone does has no measured effect, and the thing
+nobody documents has an enormous one.
+
+On the persona finding, be precise about its scope — it concerns objective,
+factual tasks, which is what a statistical office mostly has. Zheng and colleagues
+also found that the *best* persona per question does help, but that picking it
+automatically performs no better than random. So the honest reading is not
+"personas are useless", it is "you cannot know in advance which one helps, so it is
+not a technique you can specify".
+
+Someone will say their own experience contradicts this. The correct answer is: then
+measure it on your own task, and if you find an effect, report it. That is the
+entire posture of the morning.
+</aside>
+</section>
+
+--- FRANÇAIS ---
+<section>
+<span class="timing">5 min</span>
+
+<h2>Deux résultats qui valent plus que cent astuces</h2>
+
+<div class="findings">
+<div class="finding">
+<span class="what">Le seul formatage a déplacé la précision de 76 points</span>
+Un séparateur, une espace, l'ordre d'un champ. La sensibilité persiste sur des
+modèles plus grands et avec plus d'exemples.
+<span class="who">Sclar, Choi, Tsvetkov &amp; Suhr (2024), <i>ICLR</i></span>
+<span class="so">→ Le formatage fait partie de votre méthode, pas de la présentation.</span>
+</div>
+
+<div class="finding" style="border-left-color:var(--afdb-fail);">
+<span class="what">« Vous êtes un expert… » n'a rien amélioré</span>
+Quatre familles de modèles, 2 410 questions factuelles : aucune amélioration.
+<span class="who">Zheng, Pei, Logeswaran, Lee &amp; Jurgens (2024), <i>Findings of EMNLP</i></span>
+<span class="so">→ La technique la plus répandue n'a ici aucun bénéfice mesuré.</span>
+</div>
+</div>
+
+<div class="src">
+<b>Sources</b> · Sclar et al. (2024), <i>Quantifying Language Models' Sensitivity to
+Spurious Features in Prompt Design</i>, ICLR,
+<span style="font-family:var(--afdb-mono)">arXiv:2310.11324</span> ·
+Zheng et al. (2024), <i>When “A Helpful Assistant” Is Not Really Helpful</i>,
+Findings of EMNLP, <span style="font-family:var(--afdb-mono)">arXiv:2311.10054</span>
+</div>
+
+<aside class="notes">
+Ces deux résultats sont sur la même diapositive à dessein, car ensemble ils
+énoncent une chose inconfortable : ce que tout le monde fait n'a aucun effet
+mesuré, et ce que personne ne documente en a un énorme.
+
+Sur les personas, soyez précis quant à la portée : il s'agit de tâches objectives
+et factuelles, ce que sont l'essentiel des tâches d'un office statistique. Zheng
+et ses collègues constatent aussi que le *meilleur* persona par question aide,
+mais que le choisir automatiquement ne fait pas mieux que le hasard. La lecture
+honnête n'est donc pas « les personas sont inutiles » mais « vous ne pouvez pas
+savoir d'avance lequel aide, ce n'est donc pas une technique spécifiable ».
+
+Quelqu'un objectera que son expérience dit le contraire. La bonne réponse :
+mesurez-le sur votre tâche, et si vous trouvez un effet, publiez-le. C'est toute
+la posture de la matinée.
+</aside>
+</section>
+
+==========================================================================
+SLIDE 6 of 17
+==========================================================================
+
+--- ENGLISH ---
+<section class="jade">
+<span class="timing">1 min</span>
+
+<div class="eyebrow">Hold on to this number</div>
+<div class="hero-n">76<span class="unit">accuracy points</span></div>
+<p class="statement-sub" style="max-width:44ch;">
+The gap between the best and worst <em>meaning-preserving</em> format of the same
+prompt, on the same model, for the same task.
+</p>
+
+<div class="key">
+<b>What it means for a statistical office</b>
+An undocumented prompt format is an undocumented instrument setting. Two
+colleagues can follow the same written method and publish materially different
+figures.
+</div>
+
+<aside class="notes">
+Pause on this. Seventy-six accuracy points is not a subtle effect, and it comes
+from changes a methodologist would not think worth recording — a colon instead of
+a dash, the order of two fields, whether a list uses hyphens or numbers.
+
+The parallel this room will feel: it is the difference between two enumerators
+reading the same question with different emphasis. We have decades of practice
+controlling exactly that in questionnaire design, and none of it has been applied
+to prompts yet.
+
+If anyone asks whether this holds for the largest commercial models: the study
+covers open models, and the authors report that the sensitivity persists as models
+get larger. Do not overclaim beyond what they tested — measure it on the model you
+actually use.
+</aside>
+</section>
+
+--- FRANÇAIS ---
+<section class="jade">
+<span class="timing">1 min</span>
+
+<div class="eyebrow">Retenez ce nombre</div>
+<div class="hero-n">76<span class="unit">points de précision</span></div>
+<p class="statement-sub" style="max-width:44ch;">
+L'écart entre le meilleur et le pire format <em>préservant le sens</em> d'un même
+prompt, sur le même modèle, pour la même tâche.
+</p>
+
+<div class="key">
+<b>Ce que cela signifie pour un office statistique</b>
+Un format de prompt non documenté est un réglage d'instrument non documenté. Deux
+collègues peuvent suivre la même méthode écrite et publier des chiffres
+sensiblement différents.
+</div>
+
+<aside class="notes">
+Marquez une pause. Soixante-seize points de précision n'est pas un effet subtil,
+et il provient de changements qu'un méthodologue ne penserait pas à consigner : un
+deux-points au lieu d'un tiret, l'ordre de deux champs, une liste à tirets ou
+numérotée.
+
+Le parallèle que cette salle ressentira : c'est la différence entre deux agents
+lisant la même question avec une insistance différente. Nous avons des décennies
+de pratique pour contrôler exactement cela en conception de questionnaire, et rien
+de tout cela n'a encore été appliqué aux prompts.
+
+Si l'on demande si cela vaut pour les plus grands modèles commerciaux : l'étude
+porte sur des modèles ouverts, et les auteurs indiquent que la sensibilité
+persiste quand les modèles grandissent. N'allez pas au-delà de ce qu'ils ont
+testé — mesurez sur le modèle que vous utilisez réellement.
+</aside>
+</section>
+
+==========================================================================
+SLIDE 7 of 17
+==========================================================================
+
+--- ENGLISH ---
+<section class="tint">
+<span class="timing">4 min</span>
+
+<h2>What has evidence, and what does not</h2>
+
+<table>
+<tr><th>Technique</th><th>Evidence</th><th>Use it when</th></tr>
+<tr><td><strong>Worked examples</strong> in the prompt</td><td>Strong</td>
+    <td>Always, for classification and extraction</td></tr>
+<tr><td><strong>Step-by-step reasoning</strong></td><td>Strong, task-dependent</td>
+    <td>Arithmetic and multi-step logic; not for extraction</td></tr>
+<tr><td><strong>Fixed output format</strong></td><td>Strong</td>
+    <td>Always. It is also what makes output checkable</td></tr>
+<tr><td><strong>Repeat and take the majority</strong></td><td>Strong, costs 3–5×</td>
+    <td>When one answer is not enough to publish</td></tr>
+<tr><td><strong>“You are an expert…”</strong></td><td><em>None measured</em></td>
+    <td>Harmless. Do not count on it, do not specify it</td></tr>
+</table>
+
+<div class="src">
+<b>Sources</b> · Brown et al. (2020), <i>Language Models are Few-Shot Learners</i>, NeurIPS ·
+Wei et al. (2022), <i>Chain-of-Thought Prompting</i>, NeurIPS ·
+Wang et al. (2023), <i>Self-Consistency Improves Chain of Thought Reasoning</i>, ICLR ·
+Zheng et al. (2024), Findings of EMNLP.
+</div>
+
+<aside class="notes">
+Work down the table rather than reading it. The two rows that change behaviour in
+this room are the second and the last.
+
+Step-by-step reasoning is task-dependent, and the dependence matters: on
+extraction — "pull the total from this table" — asking for reasoning adds tokens,
+latency and an opportunity to talk itself out of the right answer. On arithmetic
+and multi-step logic it helps substantially. Match the technique to the task, not
+to fashion.
+
+Majority voting is the one nobody budgets for. Running the same prompt five times
+and taking the modal answer measurably improves reliability, and it costs five
+times as much. For a figure that will be published, that is often the right
+trade — and it is a decision to make explicitly, in advance.
+</aside>
+</section>
+
+--- FRANÇAIS ---
+<section class="tint">
+<span class="timing">4 min</span>
+
+<h2>Ce qui est étayé, et ce qui ne l'est pas</h2>
+
+<table>
+<tr><th>Technique</th><th>Preuves</th><th>À utiliser quand</th></tr>
+<tr><td><strong>Exemples traités</strong> dans le prompt</td><td>Solides</td>
+    <td>Toujours, pour la classification et l'extraction</td></tr>
+<tr><td><strong>Raisonnement pas à pas</strong></td><td>Solides, selon la tâche</td>
+    <td>Arithmétique et logique en plusieurs étapes ; pas pour l'extraction</td></tr>
+<tr><td><strong>Format de sortie fixé</strong></td><td>Solides</td>
+    <td>Toujours. C'est aussi ce qui rend la sortie vérifiable</td></tr>
+<tr><td><strong>Répéter et prendre la majorité</strong></td><td>Solides, coût ×3 à ×5</td>
+    <td>Quand une seule réponse ne suffit pas à publier</td></tr>
+<tr><td><strong>« Vous êtes un expert… »</strong></td><td><em>Aucune mesurée</em></td>
+    <td>Inoffensif. N'y comptez pas, ne le spécifiez pas</td></tr>
+</table>
+
+<div class="src">
+<b>Sources</b> · Brown et al. (2020), <i>Language Models are Few-Shot Learners</i>, NeurIPS ·
+Wei et al. (2022), <i>Chain-of-Thought Prompting</i>, NeurIPS ·
+Wang et al. (2023), <i>Self-Consistency Improves Chain of Thought Reasoning</i>, ICLR ·
+Zheng et al. (2024), Findings of EMNLP.
+</div>
+
+<aside class="notes">
+Parcourez le tableau plutôt que de le lire. Les deux lignes qui changent les
+comportements dans cette salle sont la deuxième et la dernière.
+
+Le raisonnement pas à pas dépend de la tâche, et cette dépendance compte : sur de
+l'extraction — « sortez le total de ce tableau » — demander un raisonnement ajoute
+des tokens, de la latence et une occasion de se convaincre du contraire. Sur
+l'arithmétique et la logique en plusieurs étapes, il aide nettement. Adaptez la
+technique à la tâche, pas à la mode.
+
+Le vote majoritaire est celui que personne ne budgète. Exécuter le même prompt cinq
+fois et prendre la réponse modale améliore mesurablement la fiabilité, et coûte
+cinq fois plus. Pour un chiffre destiné à publication, c'est souvent le bon
+arbitrage — et c'est une décision à prendre explicitement, à l'avance.
+</aside>
+</section>
+
+==========================================================================
+SLIDE 8 of 17
+==========================================================================
+
+--- ENGLISH ---
+<section class="bleed">
+
+<div class="cap">
+<div class="eyebrow">The anatomy of a prompt that works</div>
+<h2>Five parts, in this order, every time</h2>
+</div>
+[FIGURE: The five parts of a working prompt: role and task, definitions, worked examples, the case to handle, and the required output format]
+
+<aside class="notes">
+Spend real time here — three minutes, and point at parts three and five in turn.
+
+Part three is the specification. A rule stated in prose is interpreted; a worked
+example is imitated. This is exactly why coding manuals have example tables, and
+the same reason applies. Include the hard cases: examples that are all easy teach
+the model that the task is easy.
+
+Part five is what turns a conversation into a process. If the output shape is
+fixed, your code validates it — a missing field, a code outside the classification,
+a number where a string belongs. That check runs on every record, for free, and it
+catches things no human reviewer would notice on the four-hundredth row.
+
+Part four's delimiting matters more than it looks, and Part 3 of this deck explains
+why: an input that is not clearly separated from your instructions is an input that
+can rewrite them.
+</aside>
+</section>
+
+--- FRANÇAIS ---
+<section class="bleed">
+
+<div class="cap">
+<div class="eyebrow">L'anatomie d'un prompt qui fonctionne</div>
+<h2>Cinq parties, dans cet ordre, à chaque fois</h2>
+</div>
+[FIGURE: Les cinq parties d'un prompt qui fonctionne : la tâche, les définitions, les exemples traités, le cas à traiter, et le format de sortie exigé]
+
+<aside class="notes">
+Consacrez-y du temps réel — trois minutes, en montrant tour à tour les parties
+trois et cinq.
+
+La partie trois est le cahier des charges. Une règle énoncée en prose s'interprète ;
+un exemple traité s'imite. C'est exactement pourquoi les manuels de codage ont des
+tables d'exemples, et la même raison s'applique. Incluez les cas difficiles : des
+exemples tous faciles enseignent au modèle que la tâche est facile.
+
+La partie cinq transforme une conversation en processus. Si la forme de sortie est
+fixée, votre code la valide — un champ manquant, un code hors nomenclature, un
+nombre là où une chaîne est attendue. Ce contrôle tourne sur chaque
+enregistrement, gratuitement, et attrape ce qu'aucun relecteur humain ne
+remarquerait à la quatre-centième ligne.
+
+La séparation de la partie quatre compte plus qu'il n'y paraît, et la partie 3 de
+cette présentation dit pourquoi : une entrée mal séparée de vos consignes est une
+entrée qui peut les réécrire.
+</aside>
+</section>
+
+==========================================================================
+SLIDE 9 of 17
+==========================================================================
+
+--- ENGLISH ---
+<section class="divider">
+
+<div class="eyebrow" style="color:var(--afdb-amber);">Part 2 of 3</div>
+<h2>Evaluation is your home ground</h2>
+<p>This is the part where a statistical office has an advantage over a software team.</p>
+</section>
+
+--- FRANÇAIS ---
+<section class="divider">
+
+<div class="eyebrow" style="color:var(--afdb-amber);">Partie 2 sur 3</div>
+<h2>L'évaluation est votre terrain</h2>
+<p>C'est la partie où un office statistique a l'avantage sur une équipe informatique.</p>
+</section>
+
+==========================================================================
+SLIDE 10 of 17
+==========================================================================
+
+--- ENGLISH ---
+<section>
+<span class="timing">4 min</span>
+
+<h2>Build the evaluation set first</h2>
+
+<div class="steps">
+<div><div class="i">1</div>
+     <div class="t">Sample</div>
+     <div class="d">Draw 100–200 real records at random. Not the interesting ones —
+     at random, or your estimate is biased.</div></div>
+<div><div class="i">2</div>
+     <div class="t">Label</div>
+     <div class="d">A human assigns the correct answer. Two humans on a subset,
+     so you know your own agreement rate.</div></div>
+<div><div class="i">3</div>
+     <div class="t">Split</div>
+     <div class="d">Half to develop the prompt against, half untouched. The
+     untouched half is your only honest estimate.</div></div>
+<div><div class="i">4</div>
+     <div class="t">Measure</div>
+     <div class="d">One number, agreed in advance. Then change the prompt and
+     measure again.</div></div>
+</div>
+
+<aside class="notes">
+Say plainly that this is a sampling and measurement problem, and that everyone in
+this room already knows how to do it. That is not flattery — it is why an NSO can
+evaluate a prompt better than most software teams, who typically try three prompts
+and keep the one that looked best on two examples.
+
+Step two carries the point people miss: measure your *own* agreement rate first.
+If two experienced coders agree on only 88 per cent of occupation strings, a model
+at 85 per cent is close to human performance, and a target of 95 per cent is
+incoherent. Without that baseline you cannot tell whether a model is
+underperforming or the task is genuinely ambiguous.
+
+Step three is the one that gets skipped under time pressure, and skipping it is how
+an office reports a number that does not survive contact with next month's data.
+</aside>
+</section>
+
+--- FRANÇAIS ---
+<section>
+<span class="timing">4 min</span>
+
+<h2>Construisez d'abord le jeu d'évaluation</h2>
+
+<div class="steps">
+<div><div class="i">1</div>
+     <div class="t">Échantillonner</div>
+     <div class="d">Tirez 100 à 200 enregistrements réels au hasard. Pas les
+     intéressants — au hasard, sinon votre estimation est biaisée.</div></div>
+<div><div class="i">2</div>
+     <div class="t">Étiqueter</div>
+     <div class="d">Un humain assigne la bonne réponse. Deux humains sur un
+     sous-ensemble, pour connaître votre taux d'accord.</div></div>
+<div><div class="i">3</div>
+     <div class="t">Scinder</div>
+     <div class="d">Une moitié pour développer le prompt, une moitié intacte.
+     L'intacte est votre seule estimation honnête.</div></div>
+<div><div class="i">4</div>
+     <div class="t">Mesurer</div>
+     <div class="d">Un nombre, convenu à l'avance. Puis changez le prompt et
+     mesurez de nouveau.</div></div>
+</div>
+
+<aside class="notes">
+Dites clairement qu'il s'agit d'un problème d'échantillonnage et de mesure, et que
+toute la salle sait déjà le traiter. Ce n'est pas de la flatterie — c'est pourquoi
+un INS peut évaluer un prompt mieux que la plupart des équipes informatiques, qui
+essaient typiquement trois prompts et gardent celui qui paraissait le meilleur sur
+deux exemples.
+
+L'étape deux porte le point que l'on rate : mesurez d'abord votre *propre* taux
+d'accord. Si deux codeurs expérimentés s'accordent sur 88 % des libellés de
+profession, un modèle à 85 % est proche de la performance humaine, et une cible de
+95 % est incohérente. Sans cette référence, impossible de dire si le modèle
+sous-performe ou si la tâche est réellement ambiguë.
+
+L'étape trois est celle que l'on saute sous la pression du calendrier, et la
+sauter est la façon dont un office publie un nombre qui ne survit pas au contact
+des données du mois suivant.
+</aside>
+</section>
+
+==========================================================================
+SLIDE 11 of 17
+==========================================================================
+
+--- ENGLISH ---
+<section>
+<span class="timing">3 min</span>
+
+<h2>What to measure, by task</h2>
+
+<table>
+<tr><th>Task</th><th>Measure</th><th>The trap</th></tr>
+<tr><td>Coding to a classification</td><td>Accuracy at the level you publish</td>
+    <td>Four digits scores far below two</td></tr>
+<tr><td>Extracting a figure from a document</td><td>Exact match, then digits-only match</td>
+    <td>Right number, wrong unit</td></tr>
+<tr><td>Answering from a corpus</td><td>Correct answers <em>and</em> correct refusals</td>
+    <td>Never refusing scores well</td></tr>
+<tr><td>Drafting text</td><td>A human rubric, applied blind</td>
+    <td>A model scoring its own output</td></tr>
+</table>
+
+<div class="key">
+<b>One number, chosen before you start</b>
+Agree the metric before you see any results. Choosing it afterwards is choosing
+the metric your prompt happened to win on.
+</div>
+
+<aside class="notes">
+The first row is the one to dwell on with this audience, because it is the trap
+they will actually fall into. A model that codes occupation to two digits at 91
+per cent may be at 68 per cent on four digits — and if you publish four digits, 91
+is not your number. Measure at the level of publication.
+
+Row three connects back to yesterday's laboratory: an assistant evaluated only on
+questions the corpus answers will score beautifully and refuse nothing. Both sets
+are needed, and the refusal set is the one nobody builds.
+
+Row four's trap is worth naming out loud. Using a model to score another model's
+drafting is convenient and it is not evidence. There is a real literature on
+LLM-as-judge and its biases; if a team wants to go that way, they should read it
+first rather than assume it works.
+</aside>
+</section>
+
+--- FRANÇAIS ---
+<section>
+<span class="timing">3 min</span>
+
+<h2>Quoi mesurer, selon la tâche</h2>
+
+<table>
+<tr><th>Tâche</th><th>Mesure</th><th>Le piège</th></tr>
+<tr><td>Codage vers une nomenclature</td><td>Exactitude au niveau publié</td>
+    <td>Quatre chiffres score bien moins que deux</td></tr>
+<tr><td>Extraire un chiffre d'un document</td><td>Correspondance exacte, puis chiffres seuls</td>
+    <td>Bon nombre, mauvaise unité</td></tr>
+<tr><td>Répondre depuis un corpus</td><td>Bonnes réponses <em>et</em> bons refus</td>
+    <td>Ne jamais refuser réussit bien</td></tr>
+<tr><td>Rédiger du texte</td><td>Une grille humaine, appliquée en aveugle</td>
+    <td>Un modèle notant sa propre sortie</td></tr>
+</table>
+
+<div class="key">
+<b>Un seul nombre, choisi avant de commencer</b>
+Convenez de la mesure avant de voir un résultat. La choisir après, c'est choisir la
+mesure sur laquelle votre prompt a gagné.
+</div>
+
+<aside class="notes">
+La première ligne mérite qu'on s'y arrête avec ce public, car c'est le piège dans
+lequel il tombera réellement. Un modèle qui code la profession à deux chiffres à
+91 % peut être à 68 % à quatre chiffres — et si vous publiez quatre chiffres, 91
+n'est pas votre nombre. Mesurez au niveau de publication.
+
+La troisième ligne renvoie au laboratoire d'hier : un assistant évalué seulement
+sur des questions auxquelles le corpus répond obtiendra un score superbe et ne
+refusera rien. Les deux jeux sont nécessaires, et le jeu de refus est celui que
+personne ne construit.
+
+Le piège de la quatrième ligne mérite d'être dit à voix haute. Utiliser un modèle
+pour noter la rédaction d'un autre modèle est commode et ne constitue pas une
+preuve. Il existe une vraie littérature sur le modèle-juge et ses biais ; une
+équipe qui veut s'y engager devrait la lire d'abord plutôt que de supposer que
+cela fonctionne.
+</aside>
+</section>
+
+==========================================================================
+SLIDE 12 of 17
+==========================================================================
+
+--- ENGLISH ---
+<section class="split">
+<span class="timing">3 min</span>
+
+<div class="panel is-jade">
+<div class="eyebrow">A word that misleads</div>
+<h2>Temperature 0 is not reproducibility</h2>
+<p>It reduces variation. It does not promise the same output twice, and no
+provider offers that promise.</p>
+</div>
+<div class="body">
+<div class="warn">
+<b>What reproducible actually requires</b>
+The model name <strong>and its version</strong>, the exact prompt text, the
+parameters, and the date. Record all four beside any figure you publish — and
+expect the provider to retire that version while your series is still running.
+</div>
+</div>
+
+<aside class="notes">
+This is the slide that changes procurement conversations, so do not rush it.
+
+An office building a monthly indicator on a hosted model is building on something
+the vendor may deprecate. When the version changes, your process is measuring with
+a different instrument, and the discontinuity is in your series whether or not you
+noticed.
+
+Two practical consequences. First, ask for version pinning in the contract, in
+writing — it is the fifth question on the Day 1 procurement slide. Second, keep
+your evaluation set and rerun it when a version changes: that turns an invisible
+break into a measured one, which is the difference between a documented revision
+and an unexplained jump.
+
+This is also the honest argument for open weights on anything feeding a
+publication: a file on your disk does not change.
+</aside>
+</section>
+
+--- FRANÇAIS ---
+<section class="split">
+<span class="timing">3 min</span>
+
+<div class="panel is-jade">
+<div class="eyebrow">Un mot qui trompe</div>
+<h2>Température 0 n'est pas la reproductibilité</h2>
+<p>Elle réduit la variation. Elle ne promet pas deux fois la même sortie, et aucun
+fournisseur n'offre cette promesse.</p>
+</div>
+<div class="body">
+<div class="warn">
+<b>Ce qu'exige réellement la reproductibilité</b>
+Le nom du modèle <strong>et sa version</strong>, le texte exact du prompt, les
+paramètres, et la date. Consignez les quatre à côté de tout chiffre publié — et
+attendez-vous à ce que le fournisseur retire cette version pendant que votre série
+tourne encore.
+</div>
+</div>
+
+<aside class="notes">
+C'est la diapositive qui change les conversations d'achat : ne la précipitez pas.
+
+Un office qui construit un indicateur mensuel sur un modèle hébergé construit sur
+quelque chose que le fournisseur peut déprécier. Quand la version change, votre
+processus mesure avec un autre instrument, et la discontinuité est dans votre
+série que vous l'ayez remarquée ou non.
+
+Deux conséquences pratiques. D'abord, exigez un verrouillage de version dans le
+contrat, par écrit — c'est la cinquième question de la diapositive d'achat du Jour
+1. Ensuite, conservez votre jeu d'évaluation et relancez-le à chaque changement de
+version : cela transforme une rupture invisible en rupture mesurée, ce qui fait la
+différence entre une révision documentée et un saut inexpliqué.
+
+C'est aussi l'argument honnête pour les poids ouverts sur tout ce qui alimente une
+publication : un fichier sur votre disque ne change pas.
+</aside>
+</section>
+
+==========================================================================
+SLIDE 13 of 17
+==========================================================================
+
+--- ENGLISH ---
+<section class="divider">
+
+<div class="eyebrow" style="color:var(--afdb-amber);">Part 3 of 3</div>
+<h2>Three ways this goes wrong</h2>
+<p>Two are technical. The third is the one that ends a career.</p>
+</section>
+
+--- FRANÇAIS ---
+<section class="divider">
+
+<div class="eyebrow" style="color:var(--afdb-amber);">Partie 3 sur 3</div>
+<h2>Trois façons dont cela tourne mal</h2>
+<p>Deux sont techniques. La troisième est celle qui met fin à une carrière.</p>
+</section>
+
+==========================================================================
+SLIDE 14 of 17
+==========================================================================
+
+--- ENGLISH ---
+<section>
+<span class="timing">4 min</span>
+
+<h2>Three failure modes</h2>
+
+<table>
+<tr><th>What happens</th><th>Why</th><th>What stops it</th></tr>
+<tr><td><strong>The input rewrites your instructions</strong></td>
+    <td>Respondent text says “ignore the above…”, inside your prompt</td>
+    <td>Delimit the input, and validate the output shape</td></tr>
+<tr><td><strong>The output drifts silently</strong></td>
+    <td>The provider updated the model</td>
+    <td>Rerun the evaluation set on a schedule</td></tr>
+<tr><td><strong>Confidential text leaves the building</strong></td>
+    <td>A free-text field carried an identifier</td>
+    <td>Classify the data before choosing where the model runs</td></tr>
+</table>
+
+<div class="warn">
+<b>The third one is not a technical failure</b>
+It is a breach of statistical secrecy, and it is irreversible. Once the text has
+left, you cannot recall it and you cannot prove it was not retained.
+</div>
+
+<aside class="notes">
+On the first row: this is prompt injection, and a statistical office is unusually
+exposed because its inputs are text written by members of the public. An open
+comment field is untrusted input. Treat it the way you would treat text going into
+a database query.
+
+The second row is the quiet one. A prompt that scored 91 per cent in March can
+score 84 in September with no change on your side, and nothing will tell you. A
+scheduled rerun of the evaluation set is cheap insurance and almost nobody does it.
+
+Give the third row weight. A free-text occupation field saying "I am the only
+midwife in [village]" is identifying, and no de-identification step was ever
+applied to it because nobody classified it as microdata. Day 1's rule stands:
+classify the data before you choose where the model runs.
+</aside>
+</section>
+
+--- FRANÇAIS ---
+<section>
+<span class="timing">4 min</span>
+
+<h2>Trois modes d'échec</h2>
+
+<table>
+<tr><th>Ce qui se produit</th><th>Pourquoi</th><th>Ce qui l'arrête</th></tr>
+<tr><td><strong>L'entrée réécrit vos consignes</strong></td>
+    <td>Un texte de répondant dit « ignorez ce qui précède… »</td>
+    <td>Délimiter l'entrée, et valider la forme de sortie</td></tr>
+<tr><td><strong>La sortie dérive silencieusement</strong></td>
+    <td>Le fournisseur a mis le modèle à jour</td>
+    <td>Relancer le jeu d'évaluation périodiquement</td></tr>
+<tr><td><strong>Du texte confidentiel quitte le bâtiment</strong></td>
+    <td>Un champ libre portait un identifiant</td>
+    <td>Classer les données avant de choisir où le modèle s'exécute</td></tr>
+</table>
+
+<div class="warn">
+<b>Le troisième n'est pas un échec technique</b>
+C'est une violation du secret statistique, et elle est irréversible. Une fois le
+texte parti, vous ne pouvez ni le rappeler ni prouver qu'il n'a pas été conservé.
+</div>
+
+<aside class="notes">
+Sur la première ligne : c'est l'injection de prompt, et un office statistique y
+est particulièrement exposé, car ses entrées sont des textes rédigés par le
+public. Un champ de commentaire libre est une entrée non fiable. Traitez-le comme
+vous traiteriez un texte destiné à une requête en base.
+
+La deuxième ligne est la discrète. Un prompt à 91 % en mars peut être à 84 % en
+septembre sans aucun changement de votre côté, et rien ne vous le dira. Une
+relance programmée du jeu d'évaluation est une assurance bon marché et presque
+personne ne la fait.
+
+Donnez du poids à la troisième. Un champ profession libre disant « je suis la
+seule sage-femme de [village] » est identifiant, et aucune étape de
+désidentification ne lui a jamais été appliquée parce que personne ne l'a classé
+comme microdonnée. La règle du Jour 1 tient : classez les données avant de choisir
+où le modèle s'exécute.
+</aside>
+</section>
+
+==========================================================================
+SLIDE 15 of 17
+==========================================================================
+
+--- ENGLISH ---
+<section class="jade">
+<span class="timing">1 min</span>
+
+<div class="eyebrow">The line, restated for prompts</div>
+<div class="statement">
+A prompt that produced a published figure<br>is part of the <span class="hl">method</span>.
+</div>
+<p class="statement-sub">
+It gets a version number, it goes in the documentation, and the figure names the
+version that produced it. If you cannot show the prompt, you cannot defend the
+number.
+</p>
+
+<aside class="notes">
+This is the absolute of the morning, and it follows from everything before it. If
+formatting alone can move accuracy by seventy-six points, then an undocumented
+prompt is an undocumented instrument, and a figure produced by one is not
+reproducible by anyone — including the person who produced it.
+
+The practical test to leave them with: could a colleague, given only your
+documentation, reproduce your figure to the digit? If not, the documentation is
+incomplete, and the missing part is usually the prompt.
+
+This is also the argument that gets prompt work taken seriously internally. Framed
+as "tuning the AI", it sounds like fiddling. Framed as instrument documentation, it
+is recognisably the office's own discipline.
+</aside>
+</section>
+
+--- FRANÇAIS ---
+<section class="jade">
+<span class="timing">1 min</span>
+
+<div class="eyebrow">La limite, reformulée pour les prompts</div>
+<div class="statement">
+Un prompt ayant produit un chiffre publié<br>fait partie de la <span class="hl">méthode</span>.
+</div>
+<p class="statement-sub">
+Il reçoit un numéro de version, il figure dans la documentation, et le chiffre
+nomme la version qui l'a produit. Si vous ne pouvez pas montrer le prompt, vous ne
+pouvez pas défendre le nombre.
+</p>
+
+<aside class="notes">
+C'est l'absolu de la matinée, et il découle de tout ce qui précède. Si le seul
+formatage peut déplacer la précision de soixante-seize points, alors un prompt non
+documenté est un instrument non documenté, et un chiffre qui en sort n'est
+reproductible par personne — y compris par celui qui l'a produit.
+
+Le test pratique à leur laisser : un collègue, muni de votre seule documentation,
+pourrait-il reproduire votre chiffre au chiffre près ? Sinon, la documentation est
+incomplète, et la partie manquante est en général le prompt.
+
+C'est aussi l'argument qui fait prendre au sérieux le travail sur les prompts en
+interne. Présenté comme « régler l'IA », cela sonne comme du bricolage. Présenté
+comme de la documentation d'instrument, c'est reconnaissable comme la discipline
+propre de l'office.
+</aside>
+</section>
+
+==========================================================================
+SLIDE 16 of 17
+==========================================================================
+
+--- ENGLISH ---
+<section class="split even">
+<span class="timing">2 min</span>
+
+<div class="panel is-amber">
+<div class="eyebrow">Take this to your desk</div>
+<h2>What a documented prompt records</h2>
+</div>
+<div class="body">
+<ul style="font-size:.66em;">
+<li>The <strong>exact text</strong>, whitespace included</li>
+<li>Model name <strong>and version</strong>, and the date</li>
+<li>Parameters, and whether answers were <strong>repeated and voted</strong></li>
+<li>The <strong>evaluation set</strong>, its size and how it was drawn</li>
+<li>The <strong>score</strong>, and your own human agreement rate</li>
+<li>What it is <strong>not</strong> suitable for</li>
+</ul>
+</div>
+
+<aside class="notes">
+Tell them to photograph this. It is the artefact of the session, and it is short
+enough to become a template by Friday.
+
+The last line is the one that protects them. A prompt validated on occupation
+coding is not validated on industry coding, and someone will reuse it within a
+month. Writing down what it was not tested on is how that reuse gets caught in
+review rather than in a publication.
+
+The fifth line pairs the two numbers deliberately. A score of 87 per cent means
+nothing on its own; 87 against a human agreement rate of 89 means something quite
+specific, and it is the sentence a methodologist can defend in a committee.
+</aside>
+</section>
+
+--- FRANÇAIS ---
+<section class="split even">
+<span class="timing">2 min</span>
+
+<div class="panel is-amber">
+<div class="eyebrow">À emporter à votre bureau</div>
+<h2>Ce que consigne un prompt documenté</h2>
+</div>
+<div class="body">
+<ul style="font-size:.66em;">
+<li>Le <strong>texte exact</strong>, espaces comprises</li>
+<li>Nom du modèle <strong>et version</strong>, et la date</li>
+<li>Les paramètres, et si les réponses ont été <strong>répétées et votées</strong></li>
+<li>Le <strong>jeu d'évaluation</strong>, sa taille et son mode de tirage</li>
+<li>Le <strong>score</strong>, et votre propre taux d'accord humain</li>
+<li>Ce à quoi il n'est <strong>pas</strong> adapté</li>
+</ul>
+</div>
+
+<aside class="notes">
+Dites-leur de photographier. C'est l'objet de la session, et il est assez court
+pour devenir un gabarit d'ici vendredi.
+
+La dernière ligne est celle qui les protège. Un prompt validé sur le codage des
+professions n'est pas validé sur le codage des activités, et quelqu'un le
+réutilisera dans le mois. Écrire ce sur quoi il n'a pas été testé est la façon
+dont cette réutilisation est interceptée en revue plutôt qu'en publication.
+
+La cinquième ligne apparie les deux nombres à dessein. Un score de 87 % ne veut
+rien dire seul ; 87 face à un taux d'accord humain de 89 veut dire quelque chose
+de précis, et c'est la phrase qu'un méthodologue peut défendre en comité.
+</aside>
+</section>
+
+==========================================================================
+SLIDE 17 of 17
+==========================================================================
+
+--- ENGLISH ---
+<section class="divider">
+
+<div class="eyebrow" style="color:var(--afdb-amber);">Next</div>
+<h2>10:30 — From statistical document to public dashboard</h2>
+<p>Two hours. You will write the prompt, build the evaluation set, and measure the
+difference your changes make.</p>
+<p style="font-size:.55em;color:#9fb4c6;margin-top:1.6rem;">
+14:00 · From good to great — prompt optimisation<br>
+14:45 · Choosing your engine — speed, cost and sovereignty<br>
+15:45 · Laboratory — one model, many jobs<br><br>
+Full reading list: workshop site → Resources → References
+</p>
+</section>
+
+--- FRANÇAIS ---
+<section class="divider">
+
+<div class="eyebrow" style="color:var(--afdb-amber);">Ensuite</div>
+<h2>10h30 — Du document statistique au tableau de bord public</h2>
+<p>Deux heures. Vous rédigerez le prompt, construirez le jeu d'évaluation, et
+mesurerez la différence que font vos modifications.</p>
+<p style="font-size:.55em;color:#9fb4c6;margin-top:1.6rem;">
+14h00 · De bon à excellent — optimisation des prompts<br>
+14h45 · Choisir son moteur — vitesse, coût et souveraineté<br>
+15h45 · Laboratoire — un modèle, plusieurs métiers<br><br>
+Bibliographie complète : site de l'atelier → Ressources → Références
+</p>
+</section>
+
+==========================================================================
+END OF DECK. Build both files now.
