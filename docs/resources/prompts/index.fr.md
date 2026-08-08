@@ -24,6 +24,7 @@ atelier — précisément ce qu'un générateur rate quand on ne le lui dit pas.
 | **P7** | [Construction native](P7-native-deck.md) | Vous voulez un vrai PowerPoint conçu. **Commencez ici si le PPTX automatique vous a déçu** — voir la note ci-dessous. | Gamma, Copilot, Claude |
 | **P8** | [Version française](P8-translate-fr.md) | La présentation anglaise existe et le français doit l'égaler en densité, pas seulement en sens. | Claude, ChatGPT |
 | **P9** | [Présentation autonome](P9-standalone-deck.md) | Vous voulez une présentation `.html` autonome et finie, produite entièrement dans Claude — standard visuel maximal, hors pipeline. | Claude |
+| **P10** | [PowerPoint par script](P10-pptx-script.md) | Vous voulez un vrai `.pptx` qui **se régénère** quand le contenu change. Produit un programme `python-pptx` exécutable. | Claude |
 
 Une présentation normale suit **P1 → P2 (×n) → P3/P4 → P5 → P8 → P6**. Lancez P6
 en dernier, dans une conversation neuve, pour que le critique n'ait pas assisté à
@@ -41,10 +42,13 @@ dans le PPTX. Le corps de chaque diapositive est perdu.
 Ce n'est pas un problème de réglage. Une diapositive reveal.js est mise en page
 par CSS — des mesures en `ch`, des colonnes flex, un encadré dimensionné pour
 qu'un second ne tienne pas. PowerPoint n'a d'équivalent d'aucun de ces mécanismes,
-donc la conversion automatique fidèle n'existe pas. Les options honnêtes sont :
-garder le PPTX comme squelette de titres et le dire, ou construire le PowerPoint
-nativement avec **[P7](P7-native-deck.md)**, qui remet le système graphique
-complet à un outil qui met réellement des diapositives en page.
+donc la conversion automatique fidèle n'existe pas. Trois options honnêtes :
+garder le PPTX comme squelette de titres et l'étiqueter comme tel ; construire le
+PowerPoint dans un outil qui met réellement des diapositives en page, avec
+**[P7](P7-native-deck.md)** ; ou le générer par script avec
+**[P10](P10-pptx-script.md)**, qui produit un programme `python-pptx` à relancer
+à chaque changement de contenu — le bon choix pour une présentation qui sera
+révisée, ce qu'une présentation d'atelier est toujours.
 
 Dans les deux cas, la présentation reveal.js reste la source de vérité. C'est
 elle que la compilation valide pour la densité et la symétrie bilingue, et c'est

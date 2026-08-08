@@ -24,6 +24,7 @@ generator gets wrong when you do not state them.
 | **P7** | [Native deck build](P7-native-deck.md) | You want a genuinely designed PowerPoint or Gamma deck. **Start here if the automated PPTX disappointed you** — see the note below. | Gamma, Copilot, Claude |
 | **P8** | [French translation](P8-translate-fr.md) | An English deck exists and the French must match it in density, not just in meaning. | Claude, ChatGPT |
 | **P9** | [Standalone deck](P9-standalone-deck.md) | You want one finished, self-contained `.html` presentation built entirely in Claude — highest visual standard, outside the build. | Claude |
+| **P10** | [PowerPoint by script](P10-pptx-script.md) | You want a real `.pptx` that **regenerates** when the content changes. Produces a runnable `python-pptx` program. | Claude |
 
 A normal deck runs **P1 → P2 (×n) → P3/P4 → P5 → P8 → P6**. Run P6 last, in a
 fresh conversation, so the critic has not seen the drafting.
@@ -40,9 +41,12 @@ body of every slide is dropped.
 That is not a tuning problem. A reveal.js slide is laid out by CSS — measures in
 `ch`, flex columns, a callout sized so a second one will not fit. PowerPoint has
 no equivalent of any of that, so a faithful automatic conversion does not exist.
-The honest options are: keep the PPTX as a title-and-heading handout skeleton and
-say so, or build the PowerPoint natively with **[P7](P7-native-deck.md)**, which
-hands the full design system to a tool that actually lays out slides.
+There are three honest options. Keep the PPTX as a title-and-heading handout
+skeleton and label it as one. Build the PowerPoint inside a tool that actually
+lays out slides, with **[P7](P7-native-deck.md)**. Or generate it by script with
+**[P10](P10-pptx-script.md)**, which produces a `python-pptx` program you rerun
+whenever the content changes — the right choice for a deck that will be revised,
+which a workshop deck always is.
 
 The reveal.js deck stays the source of truth either way. It is what the build
 validates for density and bilingual symmetry, and it is what the site publishes.

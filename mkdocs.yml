@@ -181,6 +181,7 @@ nav:
           - P7 · Native deck build: resources/prompts/P7-native-deck.md
           - P8 · French rendering: resources/prompts/P8-translate-fr.md
           - P9 · Standalone deck: resources/prompts/P9-standalone-deck.md
+          - P10 · PowerPoint by script: resources/prompts/P10-pptx-script.md
           - Figure slots: resources/prompts/figure-slots.md
 
 extra:

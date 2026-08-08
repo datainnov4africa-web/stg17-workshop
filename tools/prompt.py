@@ -311,7 +311,11 @@ def main() -> int:
 
     if args.list or not args.prompt:
         print("Prompt library — docs/resources/prompts/\n")
-        for path in sorted(PROMPTS.glob("P*.md")):
+        # Sort on the number, not the string: plain order puts P10 before P2.
+        def order(p):
+            m = re.match(r"P(\d+)", p.stem)
+            return int(m.group(1)) if m else 999
+        for path in sorted(PROMPTS.glob("P*.md"), key=order):
             first = next(
                 (l.lstrip("# ").strip() for l in path.read_text(encoding="utf-8").splitlines() if l.startswith("# ")),
                 path.stem,
@@ -320,6 +324,7 @@ def main() -> int:
         print("\n  python tools/prompt.py P1 --deck 02")
         return 0
 
+    # The glob is anchored with the hyphen so "P1" cannot match "P10-...".
     matches = sorted(PROMPTS.glob(f"{args.prompt}-*.md")) or sorted(PROMPTS.glob(args.prompt))
     if not matches:
         raise SystemExit(f"No prompt {args.prompt!r} in {PROMPTS}. Try --list.")
