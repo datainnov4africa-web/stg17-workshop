@@ -214,6 +214,82 @@ def render_day(day: dict, labs: dict, lang: str, config: dict) -> str:
 # ---------------------------------------------------------------------------
 #  Laboratory register
 # ---------------------------------------------------------------------------
+def render_week(agenda: dict, labs: dict, lang: str, config: dict) -> str:
+    """
+    The whole week on one page.
+
+    The five day pages carry the detail; this one carries the shape. It exists
+    because "show me the agenda" is a request for one page, and answering it with
+    five links is answering a different question. It is also the page a
+    facilitator prints and pins to the wall.
+
+    Generated from the same agenda.yml as everything else, so it cannot drift
+    from the day pages it summarises.
+    """
+    fr = lang == "fr"
+    lines = [GENERATED[lang], ""]
+
+    lines += [
+        "# " + ("L'agenda de la semaine" if fr else "The week at a glance"),
+        "",
+        ("*Cinq jours, du concept au dépôt publié. Chaque séance renvoie à sa page "
+         "de jour, à sa présentation et à son laboratoire.*" if fr else
+         "*Five days, from the concepts to a published repository. Every session links "
+         "to its day page, its deck and its laboratory.*"),
+        "",
+    ]
+
+    icon = {"talk": ":material-presentation:", "lab": ":material-flask:",
+            "benchmark": ":material-speedometer:", "panel": ":material-account-group:",
+            "ceremony": ":material-star:", "wrap": ":material-flag-checkered:"}
+
+    for day in agenda["days"]:
+        n = day["n"]
+        lines += [
+            f"## {'Jour' if fr else 'Day'} {n} · {pick(day, 'title', lang)}",
+            "",
+            f"*{pick(day, 'weekday', lang)} · {pick(day, 'strap', lang)}* "
+            f"— [{'page détaillée' if fr else 'day page'} →](../day{n}/index.md)",
+            "",
+            ("| Heure | Séance | Type | Ressource |" if fr else
+             "| Time | Session | Kind | Resource |"),
+            "|---|---|---|---|",
+        ]
+        for s in day["sessions"]:
+            mode = s.get("mode", "talk")
+            kind = icon.get(mode, ":material-circle-small:")
+            link = "—"
+            if s.get("deck"):
+                link = (f"[{'Diapositives' if fr else 'Slides'}]"
+                        f"(../slides/index.md#deck-{s['deck']})")
+            elif mode == "lab":
+                link = f"[{'Laboratoires' if fr else 'Laboratories'}](../labs/index.md)"
+            title = pick(s, "title", lang).replace("|", "·")
+            lines.append(f"| {fmt_time(s['time'], lang)} | {title} | {kind} | {link} |")
+        lines.append("")
+
+    ready = sum(1 for v in labs.values() if v.get("status") == "ready")
+    lines += [
+        "---",
+        "",
+        "## " + ("Où en est la préparation" if fr else "Preparation status"),
+        "",
+        (f"**{ready} laboratoires sur {len(labs)}** sont prêts et exécutables. "
+         f"Les autres portent la mention *lot Jour N* sur leur page — la matière "
+         f"existe dans l'agenda, les carnets arrivent par phases." if fr else
+         f"**{ready} of {len(labs)} laboratories** are ready and runnable. The rest "
+         f"are marked *Day N batch* on their page — the material exists in the "
+         f"agenda; the notebooks arrive in phases."),
+        "",
+        ("Chaque laboratoire a un chemin de repli documenté, pour qu'une clé "
+         "manquante ou un réseau contraint ne mette jamais fin à une séance." if fr else
+         "Every laboratory has a documented fallback, so that a missing key or a "
+         "constrained network never ends a session."),
+        "",
+    ]
+    return "\n".join(lines)
+
+
 def render_labs(agenda: dict, lang: str, config: dict) -> str:
     fr = lang == "fr"
     labs = agenda["labs"]
@@ -611,6 +687,12 @@ def main() -> int:
         for lang, name in (("en", "index.md"), ("fr", "index.fr.md")):
             (target / name).write_text(render_day(day, labs, lang, config), encoding="utf-8")
             written += 1
+
+    (DOCS / "week").mkdir(parents=True, exist_ok=True)
+    for lang, name in (("en", "index.md"), ("fr", "index.fr.md")):
+        (DOCS / "week" / name).write_text(
+            render_week(agenda, labs, lang, config), encoding="utf-8")
+        written += 1
 
     (DOCS / "labs").mkdir(parents=True, exist_ok=True)
     for lang, name in (("en", "index.md"), ("fr", "index.fr.md")):

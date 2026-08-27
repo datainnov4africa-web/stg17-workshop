@@ -127,6 +127,7 @@ plugins:
             Environment check: Vérification de l'environnement
             Country slides template: Gabarit des diapositives pays
             The week: La semaine
+            Agenda at a glance: L'agenda en un coup d'œil
             Day 1 · AI concepts: Jour 1 · Concepts de l'IA
             Day 2 · Prompt engineering: Jour 2 · Ingénierie de prompt
             Day 3 · Non-traditional data: Jour 3 · Données non traditionnelles
@@ -155,6 +156,7 @@ nav:
       - Environment check: before/environment-check.md
       - Country slides template: before/country-slides.md
   - The week:
+      - Agenda at a glance: week/index.md
       - Day 1 · AI concepts: day1/index.md
       - Day 2 · Prompt engineering: day2/index.md
       - Day 3 · Non-traditional data: day3/index.md
