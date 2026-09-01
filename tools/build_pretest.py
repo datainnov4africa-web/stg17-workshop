@@ -75,8 +75,17 @@ SKILLS = [
            "Acquérir et traiter un jeu de données non traditionnel sous licence ouverte, en respectant sa licence."),
     ("D4", "Compute a subnational indicator from night-time lights for my own country.",
            "Calculer un indicateur infranational à partir des lumières nocturnes pour mon propre pays."),
-    ("D4", "Validate a proxy indicator against official statistics and state its limitations honestly.",
-           "Valider un indicateur indirect contre des statistiques officielles et en énoncer honnêtement les limites."),
+    # Replaced the former A9 ("validate a proxy indicator ... and state its
+    # limitations honestly"). Two faults: it asked people to rate themselves on
+    # honesty, which nobody scores low and which produces a ceiling effect; and
+    # it overlapped A8, already on night-time lights. What went in instead fills
+    # a real gap — coverage and selection bias in non-probabilistic sources is
+    # one of the five Kigali obstacles the workshop is built around, Day 3 was
+    # carrying only one statement of ten, and no item measured data quality.
+    ("D3", "Assess the coverage and the selection bias of a non-probabilistic data source "
+           "before deciding whether my office can use it.",
+           "Évaluer la couverture et le biais de sélection d'une source de données non "
+           "probabiliste avant de décider si mon office peut l'utiliser."),
     ("D5", "Publish a reproducible analysis on GitHub with its licence, metadata and documentation.",
            "Publier une analyse reproductible sur GitHub avec sa licence, ses métadonnées et sa documentation."),
 ]
