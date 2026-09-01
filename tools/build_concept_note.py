@@ -58,8 +58,23 @@ MODE_LABEL = {
     "plenary": "Plenary · countries",
     "facilitated": "Facilitated",
     "ceremony": "Ceremony",
-    "benchmark": "Benchmark · teams",
+    "benchmark": "Benchmark",
 }
+
+#: The original document's Mode column carried the team composition — "Laboratory
+#: · pairs". That is not a property of the mode, it is a property of the specific
+#: laboratory, and hard-coding it here got it wrong: the provider benchmark was
+#: labelled "· teams" when the register says solo. It is now read from the lab.
+def mode_label(session: dict, labs: dict) -> str:
+    mode = session.get("mode", "")
+    label = MODE_LABEL.get(mode, mode)
+    # Only hands-on modes carry a team composition. A talk that links to a
+    # laboratory — because it introduces one — is still a talk, and labelling it
+    # "Talk · teams" says the audience listens in pairs.
+    if mode not in {"lab", "benchmark"}:
+        return label
+    lab = labs.get(session.get("lab", ""))
+    return f"{label} · {lab['team_en']}" if lab and lab.get("team_en") else label
 
 
 # ---------------------------------------------------------------------------
@@ -366,7 +381,7 @@ def fmt_plan(plan, sep: str) -> str:
     return str(plan)
 
 
-def add_agenda(doc, agenda: dict) -> None:
+def add_agenda(doc, agenda: dict, labs: dict) -> None:
     for day in agenda["days"]:
         banner = doc.add_table(rows=1, cols=1)
         cell = banner.cell(0, 0)
@@ -402,7 +417,7 @@ def add_agenda(doc, agenda: dict) -> None:
                 rows.append((
                     s["time"],
                     f"{s['title_en']}\n{s.get('desc_en', '')}",
-                    MODE_LABEL.get(s.get("mode", ""), s.get("mode", "")),
+                    mode_label(s, labs),
                     plan,
                 ))
             grid(doc, rows, [0.85, 4.0, 1.05, 0.9], sizes=8.0)
@@ -523,7 +538,7 @@ def build(agenda: dict, labs: dict) -> Document:
               "so that every hour of the week can be justified against the 2025–2030 commitments. "
               "Session titles and descriptions below are generated from the workshop’s own agenda "
               "file, which is also what produces the website and the laboratory register.")
-    add_agenda(doc, agenda)
+    add_agenda(doc, agenda, labs)
 
     heading(doc, "5  Topic ↔ Action Plan mapping", 1)
     add_mapping(doc, agenda)
