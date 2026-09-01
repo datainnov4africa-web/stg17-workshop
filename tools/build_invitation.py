@@ -13,11 +13,14 @@ subject, the dates and venue, and the signature block are reproduced exactly as
 they stand in `STG17_Lettre_invitation_BAD.docx`; they are the sender's, not
 mine to revise.
 
-  1. A paragraph recommending the profile of the experts to be designated —
+  1. A paragraph recommending the profile of the PARTICIPANTS to be designated —
      the Data Innovation Lab or Unit, the Data Science Unit, or the Innovation
-     Unit or Lab. The English unit names are kept verbatim inside the French
-     letter, in parentheses, because they are organisational designations and
-     translating them would make them harder to match against a real org chart.
+     Unit or Lab. It is written about "the persons designated to take part", not
+     about facilitators, and its justification is the format of the week: each
+     half-day is a laboratory, and everyone leaves with a product they built.
+     The English unit names are kept verbatim inside the French letter, in
+     parentheses, because they are organisational designations and translating
+     them would make them harder to match against a real org chart.
 
   2. An English version of the whole letter.
 
@@ -83,15 +86,16 @@ LETTER = {
             "cette rencontre.",
 
             # --- the paragraph this version adds -------------------------------
-            "Compte tenu du caractère résolument technique et pratique des travaux — chaque "
-            "demi-journée associe un exposé bref à un laboratoire prolongé sur machine — nous "
-            "recommandons que les experts désignés soient issus en priorité du laboratoire ou de "
-            "l’unité d’innovation par les données (Data Innovation Lab or Unit), de l’unité de "
+            "L’atelier est résolument pratique : chaque demi-journée associe un exposé bref à "
+            "un laboratoire prolongé sur machine, et chaque participant repart avec un produit "
+            "analytique reproductible, publié et documenté. Aussi recommandons-nous que les "
+            "personnes désignées pour y prendre part soient issues en priorité du laboratoire ou "
+            "de l’unité d’innovation par les données (Data Innovation Lab or Unit), de l’unité de "
             "science des données (Data science unit), ou de l’unité ou du laboratoire "
             "d’innovation (Innovation unit or lab). Une pratique effective de la programmation, "
             "de l’analyse de données ou du déploiement de solutions d’intelligence artificielle "
-            "sera particulièrement précieuse, les participants étant appelés à produire eux-mêmes "
-            "des résultats reproductibles tout au long de la semaine.",
+            "permettra à chaque participant de tirer pleinement parti des cinq journées de "
+            "travaux.",
 
             "Nous vous saurions gré de bien vouloir nous faire parvenir, dans les meilleurs "
             "délais, les noms, fonctions et coordonnées des experts de la Banque chargés de cette "
@@ -135,13 +139,14 @@ LETTER = {
             "inviting you, together with the experts you may wish to designate for this purpose, "
             "to take an active part in this meeting.",
 
-            "Given the decidedly technical and hands-on nature of the proceedings — each half-day "
-            "pairs a short presentation with an extended laboratory at the keyboard — we "
-            "recommend that the designated experts be drawn, as a priority, from the Data "
+            "The workshop is decidedly hands-on: each half-day pairs a short presentation with "
+            "an extended laboratory at the keyboard, and every participant leaves with a "
+            "reproducible analytical product, published and documented. We therefore recommend "
+            "that the persons designated to take part be drawn, as a priority, from the Data "
             "Innovation Lab or Unit, the Data Science Unit, or the Innovation Unit or Lab. "
             "Practical experience in programming, data analysis or the deployment of artificial "
-            "intelligence solutions will be particularly valuable, as participants are expected "
-            "to produce reproducible results themselves throughout the week.",
+            "intelligence solutions will allow each participant to take full advantage of the "
+            "five days of proceedings.",
 
             "We should be grateful if you would send us, at your earliest convenience, the names, "
             "positions and contact details of the Bank’s experts responsible for this technical "
