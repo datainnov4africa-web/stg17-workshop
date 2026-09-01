@@ -146,17 +146,25 @@ KNOWLEDGE = [
      "Quelle mémoire exige approximativement un modèle de 8 milliards de paramètres en 4 bits ?",
      ["Environ 0,5 Go", "Environ 5 Go", "Environ 32 Go", "Environ 140 Go"], "B"),
 
+    # Rewritten: the four options now complete the stem identically. In the first
+    # version three began "If ..." and the correct one began "Not without ...",
+    # so the option that broke the pattern announced itself as the answer — the
+    # question measured pattern recognition rather than knowledge. The jargon
+    # ("third-party inference API") also went: a baseline test must be readable
+    # by someone who has not yet attended the week that teaches the term.
     ("D1",
-     "Identifiable microdata may be sent to a third-party inference API:",
-     ["If the provider offers a no-retention tier",
-      "If a non-disclosure agreement is signed",
-      "For a pilot, before wider deployment",
-      "Not without a legal basis permitting the transfer"],
-     "Des microdonnées identifiantes peuvent être envoyées à une API d'inférence tierce :",
-     ["Si le fournisseur propose une offre sans conservation",
-      "Si un accord de confidentialité est signé",
-      "Pour un pilote, avant un déploiement plus large",
-      "Pas sans base juridique autorisant le transfert"], "D"),
+     "Your office wants to use an AI service hosted outside the country on data that "
+     "identifies individual respondents. When is that permitted?",
+     ["When the provider guarantees that it will not keep the data",
+      "When a confidentiality agreement has been signed with the provider",
+      "When it is only a pilot, on a small sample of records",
+      "When the law governing your statistics permits the transfer"],
+     "Votre office souhaite utiliser un service d'IA hébergé hors du pays sur des données qui "
+     "identifient des répondants. Quand cela est-il permis ?",
+     ["Lorsque le fournisseur garantit qu'il ne conservera pas les données",
+      "Lorsqu'un accord de confidentialité a été signé avec le fournisseur",
+      "Lorsqu'il ne s'agit que d'un pilote, sur un petit échantillon d'enregistrements",
+      "Lorsque la loi qui régit vos statistiques autorise ce transfert"], "D"),
 
     ("D2",
      "Which of these has published evidence of improving results on statistical tasks?",
@@ -460,7 +468,7 @@ def build_key() -> Workbook:
         "Correct refusal when the corpus cannot answer",
         "Where the approval gate sits in an agent",
         "Memory arithmetic: parameters × bytes per parameter",
-        "Microdata may not leave without a legal basis",
+        "Microdata leaving the country needs a legal basis, not a promise",
         "Evidence for worked examples; none for personas",
         "Temperature 0 is not reproducibility",
         "CC BY-NC-SA terms propagate into derivatives",
