@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-STG17 · The invitation letter to the African Development Bank, in French and English.
+STG17 · The workshop invitation letters, in French and English.
 
     python tools/build_invitation.py
     python tools/build_invitation.py --out "C:/AfDB/Momar/STG17/Workshop Sep 2026"
@@ -160,7 +160,144 @@ LETTER = {
                       "Head of the Economic Statistics Division, STATAFRIC",
                       "African Union Commission"],
     },
+    # -----------------------------------------------------------------------
+    #  To the Directors General of the national statistical institutes.
+    #
+    #  A different letter, not a re-addressing of the one above: the Bank is asked
+    #  for technical facilitation, the offices are asked to nominate participants
+    #  and to prepare them. The participant-profile recommendation belongs here.
+    #
+    #  Reference and date are left as visible placeholders. Reusing the AfDB
+    #  letter's reference on a different letter to a different recipient is how
+    #  two documents become impossible to tell apart in a registry.
+    # -----------------------------------------------------------------------
+    "nso_fr": {
+        "filename": "STG17_Lettre_invitation_INS_FR.docx",
+        "ref": "Réf. : [référence à compléter]",
+        "date": "Date : [date à compléter]",
+        "addressee": "À Madame, Monsieur le Directeur général de l’Institut national "
+                     "de la statistique",
+        "subject": "Objet : Invitation à l’atelier de renforcement des capacités du Groupe "
+                   "technique spécialisé sur les questions émergentes (GTS 17), du 28 septembre "
+                   "au 2 octobre 2026 à Kigali (Rwanda) — désignation des participants",
+        "salutation": "Madame, Monsieur le Directeur général,",
+        "body": [
+            "L’Institut de statistique de l’Union africaine (STATAFRIC) organise en collaboration "
+            "avec la Banque africaine de développement (BAD) un atelier de renforcement des "
+            "capacités du Groupe technique spécialisé sur les questions émergentes (GTS 17), "
+            "intitulé « Opérationnaliser les données non traditionnelles, les technologies du Big "
+            "Data et l’intelligence artificielle au service de la statistique publique africaine », "
+            "du 28 septembre au 2 octobre 2026 à Kigali, au Rwanda.",
+
+            "Cet atelier a pour objectif général de renforcer les capacités techniques et "
+            "méthodologiques des instituts nationaux de la statistique africains dans "
+            "l’utilisation des sources de données non traditionnelles, des technologies du Big "
+            "Data et de l’intelligence artificielle, en dotant chaque pays membre du GTS 17 d’un "
+            "cas d’usage national documenté et reproductible, construit sur un socle "
+            "technologique commun.",
+
+            "Nous avons le plaisir d’inviter votre Institut à y prendre part et vous saurions gré "
+            "de bien vouloir désigner les participants qui représenteront votre pays.",
+
+            "L’atelier est résolument pratique : chaque demi-journée associe un exposé bref à un "
+            "laboratoire prolongé sur machine, et chaque participant repart avec un produit "
+            "analytique reproductible, publié et documenté sous les couleurs de son office. Aussi "
+            "recommandons-nous que les personnes désignées soient issues en priorité du "
+            "laboratoire ou de l’unité d’innovation par les données (Data Innovation Lab or "
+            "Unit), de l’unité de science des données (Data science unit), ou de l’unité ou du "
+            "laboratoire d’innovation (Innovation unit or lab). Une pratique effective de la "
+            "programmation, de l’analyse de données ou du déploiement de solutions "
+            "d’intelligence artificielle permettra à chaque participant de tirer pleinement parti "
+            "des cinq journées de travaux.",
+
+            "Afin que chaque équipe puisse travailler dès le premier jour sur ses propres "
+            "données, trois éléments sont attendus de chaque participant au plus tard deux "
+            "semaines avant l’ouverture : une présentation nationale de six diapositives au "
+            "maximum sur ce qui a été entrepris dans le pays en matière d’intelligence "
+            "artificielle et de données non traditionnelles, y compris ce qui n’a pas abouti ; un "
+            "compte GitHub personnel, les productions des laboratoires étant publiées "
+            "publiquement à partir du deuxième jour ; et un jeu de données national comprenant "
+            "un fichier de limites administratives, une publication statistique nationale et au "
+            "moins un indicateur infranational officiel — produit intérieur brut, population ou "
+            "taux d’électrification.",
+
+            "Une séance de vérification de l’environnement informatique sera proposée à distance "
+            "dans la semaine précédant l’atelier, afin que les difficultés propres à chaque "
+            "machine soient résolues avant l’ouverture plutôt que pendant les travaux.",
+
+            "Nous vous saurions gré de bien vouloir nous faire parvenir, dans les meilleurs "
+            "délais, les noms, fonctions et coordonnées des participants désignés par votre "
+            "Institut.",
+
+            "Dans cette attente, et vous remerciant de votre engagement constant au sein du "
+            "GTS 17, nous vous prions d’agréer, Madame, Monsieur le Directeur général, "
+            "l’expression de notre haute considération.",
+        ],
+        "signature": ["M. Adoum GAGOLOUM",
+                      "Chef de la Division des statistiques économiques, STATAFRIC",
+                      "Commission de l’Union africaine"],
+    },
+    "nso_en": {
+        "filename": "STG17_Invitation_Letter_NSI_EN.docx",
+        "ref": "Ref.: [reference to be completed]",
+        "date": "Date: [date to be completed]",
+        "addressee": "To the Director General of the National Statistical Institute",
+        "subject": "Subject: Invitation to the capacity-building workshop of the Specialized "
+                   "Technical Group on Emerging Issues (STG 17), 28 September to 2 October 2026, "
+                   "Kigali (Rwanda) — designation of participants",
+        "salutation": "Dear Director General,",
+        "body": [
+            "The African Union Institute for Statistics (STATAFRIC), in collaboration with the "
+            "African Development Bank (AfDB), is organising a capacity-building workshop of the "
+            "Specialized Technical Group on Emerging Issues (STG 17), entitled “Operationalising "
+            "non-traditional data, Big Data technologies and artificial intelligence in the "
+            "service of African official statistics”, from 28 September to 2 October 2026 in "
+            "Kigali, Rwanda.",
+
+            "The general objective of the workshop is to strengthen the technical and "
+            "methodological capacity of African national statistical institutes in the use of "
+            "non-traditional data sources, Big Data technologies and artificial intelligence, by "
+            "equipping every STG 17 member country with a documented and reproducible national "
+            "use case, built on a common technological foundation.",
+
+            "We have the pleasure of inviting your Institute to take part, and should be grateful "
+            "if you would designate the participants who will represent your country.",
+
+            "The workshop is decidedly hands-on: each half-day pairs a short presentation with an "
+            "extended laboratory at the keyboard, and every participant leaves with a "
+            "reproducible analytical product, published and documented under their office’s own "
+            "name. We therefore recommend that the persons designated be drawn, as a priority, "
+            "from the Data Innovation Lab or Unit, the Data Science Unit, or the Innovation Unit "
+            "or Lab. Practical experience in programming, data analysis or the deployment of "
+            "artificial intelligence solutions will allow each participant to take full advantage "
+            "of the five days of proceedings.",
+
+            "So that every team can work on its own data from the first day, three items are "
+            "expected from each participant no later than two weeks before the opening: a country "
+            "input of at most six slides on what has been attempted at home in artificial "
+            "intelligence and non-traditional data, including what did not work; a personal "
+            "GitHub account, as laboratory outputs are published publicly from the second day "
+            "onwards; and a national data pack comprising an administrative boundary file, one "
+            "national statistical publication, and at least one official subnational indicator "
+            "— gross domestic product, population or electrification rate.",
+
+            "A remote environment-check session will be offered in the week preceding the "
+            "workshop, so that machine-level difficulties are resolved before the opening rather "
+            "than during the proceedings.",
+
+            "We should be grateful if you would send us, at your earliest convenience, the names, "
+            "positions and contact details of the participants designated by your Institute.",
+
+            "Pending your reply, and thanking you for your Institute’s continued engagement "
+            "within STG 17, please accept, Dear Director General, the assurance of our highest "
+            "consideration.",
+        ],
+        "signature": ["Mr Adoum GAGOLOUM",
+                      "Head of the Economic Statistics Division, STATAFRIC",
+                      "African Union Commission"],
+    },
 }
+
 
 
 def run(paragraph, text: str, *, size=12, bold=False, align=None, space_after=10,
@@ -264,6 +401,8 @@ def main() -> int:
     ap.add_argument("--out", default=str(ROOT / "concept-note"),
                     help="directory to write the two .docx files into")
     ap.add_argument("--lang", choices=["fr", "en", "both"], default="both")
+    ap.add_argument("--to", choices=["afdb", "nso", "both"], default="both",
+                    help="afdb: technical facilitation · nso: designation of participants")
     args = ap.parse_args()
 
     if not (LETTERHEAD / "image1.png").exists():
@@ -273,10 +412,13 @@ def main() -> int:
     out = Path(args.out)
     out.mkdir(parents=True, exist_ok=True)
     langs = ["fr", "en"] if args.lang == "both" else [args.lang]
+    recipients = ["afdb", "nso"] if args.to == "both" else [args.to]
+    keys = [lang if who == "afdb" else f"nso_{lang}"
+            for who in recipients for lang in langs]
 
     failed = []
-    for lang in langs:
-        letter = LETTER[lang]
+    for key in keys:
+        letter = LETTER[key]
         path = out / letter["filename"]
         try:
             build(letter).save(path)
