@@ -211,6 +211,35 @@ KNOWLEDGE = [
       "Rester interne et ne jamais être publié",
       "Seulement créditer la source, sans autre obligation"], "B"),
 
+    ("D3",
+     "Ookla Speedtest Open Data reports internet speeds aggregated into map tiles. "
+     "What do those measurements represent?",
+     ["A random sample of all internet connections in the tile",
+      "Every connection in the tile, measured continuously",
+      "Only the tests that users themselves chose to run, on the devices they used",
+      "The speeds advertised by operators for that area"],
+     "Les donn\u00e9es ouvertes Ookla Speedtest indiquent des d\u00e9bits internet agr\u00e9g\u00e9s par tuiles "
+     "cartographiques. Que repr\u00e9sentent ces mesures ?",
+     ["Un \u00e9chantillon al\u00e9atoire de toutes les connexions internet de la tuile",
+      "Toutes les connexions de la tuile, mesur\u00e9es en continu",
+      "Uniquement les tests que des utilisateurs ont eux-m\u00eames choisi de lancer, "
+      "depuis leurs appareils",
+      "Les d\u00e9bits annonc\u00e9s par les op\u00e9rateurs pour cette zone"], "C"),
+
+    ("D3",
+     "When is a search or big-data platform such as Elasticsearch the right choice for a "
+     "statistical office?",
+     ["Whenever the office starts working with non-traditional data",
+      "When the data no longer fits the simpler tools already in use",
+      "As soon as a dataset passes one million records",
+      "Whenever results have to be published on a website"],
+     "Quand une plateforme de recherche ou de m\u00e9gadonn\u00e9es comme Elasticsearch est-elle le bon "
+     "choix pour un office statistique ?",
+     ["D\u00e8s que l'office commence \u00e0 travailler avec des donn\u00e9es non traditionnelles",
+      "Lorsque les donn\u00e9es ne tiennent plus dans les outils plus simples d\u00e9j\u00e0 en place",
+      "D\u00e8s qu'un jeu de donn\u00e9es d\u00e9passe le million d'enregistrements",
+      "D\u00e8s que les r\u00e9sultats doivent \u00eatre publi\u00e9s sur un site web"], "B"),
+
     ("D4",
      "Night-time lights are most defensible as a proxy for:",
      ["The level of GDP, in absolute terms",
@@ -481,6 +510,8 @@ def build_key() -> Workbook:
         "Evidence for worked examples; none for personas",
         "Temperature 0 is not reproducibility",
         "CC BY-NC-SA terms propagate into derivatives",
+        "Ookla tiles are self-selected tests, not a probability sample",
+        "A platform is adopted when the data outgrows the tool, not by default",
         "What NTL proxies well, and what it does not",
     ]
     for n, ((day, q_en, o_en, _q, _o, correct), what) in enumerate(zip(KNOWLEDGE, tests), start=1):
