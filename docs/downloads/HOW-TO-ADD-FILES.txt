@@ -78,3 +78,39 @@ Session ids are carried across by title, so existing filenames keep working. If 
 session is renamed beyond recognition its id is regenerated, and
 `python tools/downloads.py` will list the old file as a stray so it can be
 renamed rather than silently disappearing from the site.
+
+
+6. AND THE NOTEBOOKS?
+---------------------
+
+Same command, same place:
+
+    python tools/downloads.py
+
+Under each laboratory session it now also prints the notebooks that session
+expects, how many exist, and the laboratory's status.
+
+But notebooks work the other way round from a PDF. You do NOT copy an .ipynb
+into notebooks/dayN/ — `tools/build_notebooks.py` would overwrite it on the next
+run. Each laboratory has ONE source in notebooks/_masters/, and the build
+produces the four variants from it:
+
+    notebooks/day1/D1_RAG_Assistant_EN.ipynb
+    notebooks/day1/D1_RAG_Assistant_FR.ipynb
+    notebooks/day1/D1_RAG_Assistant_EN_open.ipynb
+    notebooks/day1/D1_RAG_Assistant_FR_open.ipynb
+
+That is deliberate: English and French, guided and open, cannot drift apart if
+they come from the same file.
+
+To attach a notebook to a session:
+
+  a. write notebooks/_masters/<name>.master.py
+  b. run    python tools/build_notebooks.py
+  c. in config/agenda.yml, under `labs:`, set
+         notebook: <the stem, without _EN / _FR>
+         status: ready
+  d. link the session to it with    lab: <the fiche key>
+
+Until `status: ready`, no Colab badge is shown — deliberately. A badge that
+returns a 404 on Thursday morning is worse than no badge at all.

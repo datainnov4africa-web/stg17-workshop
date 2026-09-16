@@ -46,6 +46,39 @@ TAGS = ("EN", "FR")
 EXPECTED_MODES = {"talk", "talk_lab", "benchmark"}
 
 
+def print_notebooks(session: dict, labs: dict, day: dict) -> None:
+    """
+    The notebooks a laboratory session expects, and whether they exist.
+
+    Notebooks are NOT dropped into a folder like a PDF: they are generated from
+    a single master by `tools/build_notebooks.py`, so that the four variants —
+    English and French, guided and open — cannot drift apart. Copying an .ipynb
+    into notebooks/dayN/ by hand would be overwritten on the next build.
+
+    Listed here anyway, because "where do I find the expected names" is the same
+    question for both kinds of file, and it deserves one answer.
+    """
+    lab = labs.get(session.get("lab", ""))
+    if not lab or not lab.get("notebook"):
+        return
+
+    day_n = lab.get("day", day["n"])
+    stems = [f"{lab['notebook']}_{tag}" for tag in ("EN", "FR", "EN_open", "FR_open")]
+    if lab.get("gee_notebook"):
+        stems += [f"{lab['gee_notebook']}_{tag}" for tag in ("EN", "FR")]
+
+    folder = ROOT / "notebooks" / f"day{day_n}"
+    here = [s for s in stems if (folder / f"{s}.ipynb").exists()]
+    status = lab.get("status", "?")
+    flag = "" if status == "ready" else "   <- badges hidden until status: ready"
+
+    print(f"      notebooks ({len(here)}/{len(stems)} present, status: {status}){flag}")
+    print(f"        notebooks/day{day_n}/{lab['notebook']}_[EN|FR][_open].ipynb")
+    if lab.get("gee_notebook"):
+        print(f"        notebooks/day{day_n}/{lab['gee_notebook']}_[EN|FR].ipynb")
+    print(f"        generated from notebooks/_masters/ — run: python tools/build_notebooks.py")
+
+
 def main() -> int:
     if hasattr(sys.stdout, "reconfigure"):
         sys.stdout.reconfigure(encoding="utf-8", errors="replace")
@@ -56,6 +89,7 @@ def main() -> int:
     args = ap.parse_args()
 
     agenda = yaml.safe_load(AGENDA.read_text(encoding="utf-8"))
+    labs = agenda.get("labs", {})
     DOWNLOADS.mkdir(parents=True, exist_ok=True)
     on_disk = {p.name for p in DOWNLOADS.iterdir() if p.is_file()}
 
@@ -94,6 +128,7 @@ def main() -> int:
             else:
                 print(f"      expects: {sid}-EN.pdf | {sid}-FR.pdf | "
                       f"{sid}-EN.pptx | {sid}-FR.pptx   (any subset)")
+            print_notebooks(session, labs, day)
         print()
 
     stray = sorted(on_disk - expected - {".gitkeep"})
