@@ -251,5 +251,24 @@
 }
 
 /* The meta line carries `markdown`, so its content is wrapped in a paragraph.
-   Material's default paragraph margin would break the line off from the hero. */
-.stg-hero .stg-meta p { margin: 0; }
+   It is laid out as a flex row of indivisible items: an icon must never be
+   separated from the label it belongs to, which is what plain inline text did —
+   "English and French" wrapped away from its own icon. */
+.stg-hero .stg-meta p {
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  row-gap: .35rem;
+}
+.stg-hero .stg-meta .item {
+  display: inline-flex;
+  align-items: center;
+  gap: .45em;
+  white-space: nowrap;
+}
+.stg-hero .stg-meta .item:not(:last-child)::after {
+  content: "·";
+  margin: 0 1.05rem;
+  opacity: .5;
+}

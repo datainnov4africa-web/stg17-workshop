@@ -13,10 +13,10 @@ modèles de langage et mégadonnées pour la statistique officielle. Une règle 
 tout ce que vous construisez est publié, documenté et réutilisable par un autre pays africain.</p>
 
 <div class="stg-meta" markdown>
-:material-calendar-range: <b>28 septembre – 2 octobre 2026</b> &nbsp;·&nbsp;
-:material-map-marker: Kigali, Rwanda &nbsp;·&nbsp;
-:material-account-multiple: Hybride &nbsp;·&nbsp;
-:material-translate: Anglais et français
+<span class="item">:material-calendar-range: <b>28 septembre – 2 octobre 2026</b></span>
+<span class="item">:material-map-marker: Kigali, Rwanda</span>
+<span class="item">:material-account-multiple: Hybride</span>
+<span class="item">:material-translate: Anglais et français</span>
 </div>
 
 <div class="stg-stats">
