@@ -6,20 +6,22 @@
 
 ## Morning · 09:00 – 12:30
 
-### 09:00–10:15 &nbsp;·&nbsp; Talking to Machines: The Craft of Prompt Engineering
+### 09:00–10:30 &nbsp;·&nbsp; Talking to Machines: The Craft of Prompt Engineering
 
-:material-presentation: **Talk** &nbsp;·&nbsp; Action Plan 4.2.1
+:material-presentation-play: **Talk + laboratory** &nbsp;·&nbsp; Action Plan 4.2.1
 
 Task framing, role and context, explicit constraints, few-shot examples, decomposition, structured JSON outputs, guardrails and systematic iteration. Why models hallucinate and how prompt design reduces it. Common anti-patterns and how to detect them in your own prompts.
 
-[:material-presentation: Slides](../slides/index.md#deck-03)
+[:material-presentation: Slides](../slides/index.md#deck-03){ .md-button .md-button--primary }
 
 
-### 10:30–12:30 &nbsp;·&nbsp; Hands-on — From Statistical Document to Public Dashboard
+!!! quote "10:30–10:45 — Coffee break"
+
+### 10:45–12:30 &nbsp;·&nbsp; Hands-on — From Statistical Document to Public Dashboard
 
 :material-flask: **Laboratory** &nbsp;·&nbsp; Action Plan 4.2.1 · 2.1.1
 
-Take a national statistical publication (PDF or report), use an LLM to extract and structure its data, verify the extraction against the source, generate an interactive dashboard and publish it live on GitHub Pages. Each participant leaves with a public URL. The verification step is not optional — it is the part that makes the output publishable.
+Take a national statistical publication (PDF or report), use an LLM to extract and structure its data, verify the extraction against the source, generate an interactive dashboard and publish it live on GitHub Pages. Each participant leaves with a public URL.
 
 !!! example "Laboratory — Document to dashboard"
 
@@ -30,17 +32,17 @@ Take a national statistical publication (PDF or report), use an LLM to extract a
     **Status:** :material-progress-clock: Day 2 batch
 
 
-!!! quote "10:15–10:30 — Coffee break"
+!!! quote "12:30–14:00 — Lunch"
 
 ## Afternoon · 14:00 – 17:00
 
 ### 14:00–14:45 &nbsp;·&nbsp; From Good to Great: Prompt Optimisation
 
-:material-presentation: **Talk** &nbsp;·&nbsp; Action Plan 4.2.1 · 4.2.3
+:material-presentation-play: **Talk + laboratory** &nbsp;·&nbsp; Action Plan 4.2.1 · 4.2.3
 
 Systematic improvement rather than trial and error — building an evaluation set, measuring output quality, controlling variance, managing context length and token cost, caching, and choosing between prompting, RAG and fine-tuning.
 
-[:material-presentation: Slides](../slides/index.md#deck-04)
+[:material-presentation: Slides](../slides/index.md#deck-04){ .md-button .md-button--primary }
 
 
 ### 14:45–15:30 &nbsp;·&nbsp; Choosing your engine: speed, cost and sovereignty — working with Groq
@@ -49,7 +51,7 @@ Systematic improvement rather than trial and error — building an evaluation se
 
 How inference speed changes what is feasible in a production statistical pipeline. Participants run the same prompt against two providers, including Groq, and record latency, cost per thousand documents and output quality in a shared comparison sheet. The sheet becomes a reusable procurement input for their office.
 
-[:material-presentation: Slides](../slides/index.md#deck-05)
+[:material-presentation: Slides](../slides/index.md#deck-05){ .md-button .md-button--primary }
 
 !!! example "Laboratory — Provider benchmark"
 
@@ -60,11 +62,11 @@ How inference speed changes what is feasible in a production statistical pipelin
     **Status:** :material-progress-clock: Day 2 batch
 
 
-### 15:45–17:00 &nbsp;·&nbsp; Hands-on — One Model, Many Jobs: an LLM Toolkit for Statisticians
+### 15:30–16:45 &nbsp;·&nbsp; Hands-on — One Model, Many Jobs: an LLM Toolkit for Statisticians
 
 :material-flask: **Laboratory** &nbsp;·&nbsp; Action Plan 4.2.1
 
-Rotating stations across professional use cases — writing and debugging code; drafting reports and methodological notes; producing presentations; generating charts and graphics; image and visual identity work, including logo design; document analysis and audio briefings with NotebookLM; multimodal work with Gemini. Each participant selects two stations relevant to their office and leaves with a finished deliverable from each.
+Rotating stations across professional use cases — writing and debugging code; drafting reports and methodological notes; producing presentations; generating charts and graphics; image and visual identity work, including logo design; document analysis and audio briefings with NotebookLM; multimodal work with Gemini. Each participant selects two stations relevant to their office and leaves with a deliverable from each.
 
 !!! example "Laboratory — Toolkit stations"
 
@@ -75,5 +77,5 @@ Rotating stations across professional use cases — writing and debugging code; 
     **Status:** :material-progress-clock: Day 2 batch
 
 
-!!! quote "15:30–15:45 — Coffee break"
+!!! quote "16:45–17:00 — Coffee break"
 

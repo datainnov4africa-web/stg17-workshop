@@ -6,16 +6,16 @@
 
 ## Morning · 09:00 – 12:30
 
-### 09:00–09:30 &nbsp;·&nbsp; Night-Time Lights: What the Darkness Tells Us
+### 09:00–09:30 &nbsp;·&nbsp; Night-Time Lights: What the darkness tells us
 
 :material-presentation: **Talk** &nbsp;·&nbsp; Action Plan 2.1.1
 
-Concepts and utility, kept deliberately short so the day is spent in the data — from DMSP-OLS (1992–2013) to VIIRS/DNB; the NASA Black Marble products (VNP46A2 daily, A3 monthly, A4 annual) and the EOG annual VNL series; radiance units, resolution and temporal availability; what NTL proxies well — economic activity, electrification, urbanisation, crisis monitoring. The known artefacts are introduced here by name only and met hands-on in Part 2.
+Concepts and utility, kept deliberately short so the day is spent in the data — from DMSP-OLS (1992–2013) to VIIRS/DNB; the NASA Black Marble products (VNP46A2 daily, A3 monthly, A4 annual); what NTL proxies well — economic activity, electrification, urbanisation, crisis monitoring. The known artefacts are introduced here by name only and met hands-on in Part 2.
 
-[:material-presentation: Slides](../slides/index.md#deck-08)
+[:material-presentation: Slides](../slides/index.md#deck-08){ .md-button .md-button--primary }
 
 
-### 09:30–10:15 &nbsp;·&nbsp; Hands-on part 1 — Collect
+### 09:30–10:30 &nbsp;·&nbsp; Hands-on part 1 — Collect
 
 :material-flask: **Laboratory** &nbsp;·&nbsp; Action Plan 4.2.1
 
@@ -36,7 +36,9 @@ Access NTL rasters (NASA Earthdata, EOG or Google Earth Engine); understand the 
     [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/STG17-Africa/stg17-workshop/blob/main/notebooks/day4/D4_NTL_GEE_EN.ipynb) **Earth Engine variant** &nbsp; [:material-github:](https://github.com/STG17-Africa/stg17-workshop/blob/main/notebooks/day4/D4_NTL_GEE_EN.ipynb)
 
 
-### 10:30–12:30 &nbsp;·&nbsp; Hands-on part 2 — Explore and Understand
+!!! quote "10:30–10:45 — Coffee break"
+
+### 10:45–12:30 &nbsp;·&nbsp; Hands-on part 2 — Explore and Understand
 
 :material-flask: **Laboratory** &nbsp;·&nbsp; Action Plan 4.2.1 · 2.1.1
 
@@ -57,7 +59,7 @@ Visualise and interrogate the raster before computing on it — distribution of 
     [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/STG17-Africa/stg17-workshop/blob/main/notebooks/day4/D4_NTL_GEE_EN.ipynb) **Earth Engine variant** &nbsp; [:material-github:](https://github.com/STG17-Africa/stg17-workshop/blob/main/notebooks/day4/D4_NTL_GEE_EN.ipynb)
 
 
-!!! quote "10:15–10:30 — Coffee break"
+!!! quote "12:30–14:00 — Lunch"
 
 ## Afternoon · 14:00 – 17:00
 
@@ -76,11 +78,11 @@ Zonal statistics by administrative level (sum of radiance, mean radiance, lit ar
     **Status:** :material-progress-clock: Day 4 batch
 
 
-### 15:45–16:30 &nbsp;·&nbsp; Hands-on part 4 — Validation
+### 15:30–16:30 &nbsp;·&nbsp; Hands-on part 4 — Validation
 
 :material-flask: **Laboratory** &nbsp;·&nbsp; Action Plan 2.1.1 · 4.3
 
-Correlate the NTL proxy with official subnational statistics (GDP, population, electrification rate) and, where relevant, with the Day 3 connectivity indicators. Decide, with evidence, whether the proxy is usable for dissemination in your country or remains a diagnostic tool only. Document the limitations explicitly — this statement is part of the deliverable.
+Correlate the NTL proxy with official subnational statistics (population, electrification rate). Decide, with evidence, whether the proxy is usable for dissemination in your country or remains a diagnostic tool only. Document the limitations explicitly — this statement is part of the deliverable.
 
 !!! example "Laboratory — NTL validation"
 
@@ -91,12 +93,12 @@ Correlate the NTL proxy with official subnational statistics (GDP, population, e
     **Status:** :material-progress-clock: Day 4 batch
 
 
-### 16:30–17:00 &nbsp;·&nbsp; Publication and preparation for Day 5
+### 16:30–16:45 &nbsp;·&nbsp; Publication and preparation for Day 5
 
 :material-flask: **Laboratory** &nbsp;·&nbsp; Action Plan 4.2.1 · 3.1.1
 
-Commit notebooks, maps and the limitations statement to GitHub; assemble the week's three outputs — dashboard, connectivity indicators, NTL analysis — into the 8-minute country presentation for Friday.
+Commit notebooks, maps and the limitations statement to GitHub; assemble the week's three outputs — dashboard, connectivity scores, NTL analysis — into the country presentation for Friday.
 
 
-!!! quote "15:30–15:45 — Coffee break"
+!!! quote "16:45–17:00 — Coffee break"
 

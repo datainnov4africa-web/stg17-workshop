@@ -6,54 +6,63 @@
 
 ## Morning · 09:00 – 12:30
 
-### 09:00–09:45 &nbsp;·&nbsp; Opening ceremony
+### 09:00–09:30 &nbsp;·&nbsp; Opening ceremony
 
 :material-account-group: **Ceremony** &nbsp;·&nbsp; Action Plan 4.2 · 4.1.1
 
-Welcome and opening remarks by the African Development Bank and AU STATAFRIC. Objectives of the week, presentation of the STG17 Action Plan 2025–2030 and of where this workshop sits within it. Tour de table.
+Welcome and opening remarks by the African Development Bank, AU STATAFRIC, and NISR. Objectives of the week, presentation of the STG17 Action Plan 2025–2030 and of where this workshop sits within it. Tour de table.
 
 
-### 09:45–10:15 &nbsp;·&nbsp; The AI Family Tree: How the Concepts Fit Together
+### 09:30–10:00 &nbsp;·&nbsp; The UN Big Data Regional Hub in Rwanda: milestones and use cases
+
+:material-presentation: **Talk** &nbsp;·&nbsp; *NISR*
+
+Ten years of the UN Committee of Experts on Big Data and Data Science for Official Statistics, and what the Regional Hub hosted by NISR has delivered since its launch: the use cases taken furthest
+
+
+### 10:00–10:30 &nbsp;·&nbsp; The AI Family Tree: How the concepts fit together
 
 :material-presentation: **Talk** &nbsp;·&nbsp; Action Plan 3.3.2 · 4.1.1
 
 Building a shared concept map — AI, LLM, prompt engineering, RAG, fine-tuning, agentic systems, agents, MCP. What each concept can and cannot do for official statistics, and the vocabulary discipline that avoids costly misunderstandings. This half-hour sets the language used for the rest of the week.
 
-[:material-presentation: Slides](../slides/index.md#deck-01)
+[:material-presentation: Slides](../slides/index.md#deck-01){ .md-button .md-button--primary }
 
 
-### 10:30–11:45 &nbsp;·&nbsp; Country experiences in AI and the use of non-traditional big data
+!!! quote "10:30–10:45 — Coffee break"
+
+### 10:45–11:45 &nbsp;·&nbsp; Country experiences in AI and the use of non-traditional big data
 
 :material-forum: **Plenary** &nbsp;·&nbsp; Action Plan 3.3.2 · 3.1.2 · 2.1.1
 
-Short country presentations (8 minutes each, no more than 6 slides) on what has actually been attempted at home — pilots launched, data partnerships signed, obstacles met, results published. Countries are invited to be candid about what did not work; that is the more useful half of the exchange.
+Short country presentations on what has actually been attempted at home — pilots launched, data partnerships signed, obstacles met, results published. Countries are invited to be candid about what did not work; that is the more useful half of the exchange.
 
 
 ### 11:45–12:30 &nbsp;·&nbsp; Synthesis: where the continent stands
 
 :material-lightbulb-on: **Facilitated** &nbsp;·&nbsp; Action Plan 3.1.2 · 4.1.1
 
-Facilitated discussion structured around four questions drawn from the presentations — which use cases recur, which data partnerships are replicable, which obstacles are shared, and where pooling effort would pay. Outputs are recorded on a wall board kept open all week. Closes with the baseline skills self-assessment.
+Facilitated discussion structured around four questions drawn from the presentations — which use cases recur, which data partnerships are replicable, which obstacles are shared, and where pooling effort would pay.
 
 
-!!! quote "10:15–10:30 — Coffee break"
+!!! quote "12:30–14:00 — Lunch"
 
 ## Afternoon · 14:00 – 17:00
 
-### 14:00–14:45 &nbsp;·&nbsp; AI Infrastructure: What It Really Takes to Run AI in a Statistical Office
+### 14:00–14:30 &nbsp;·&nbsp; AI Infrastructure: What it really takes to run AI in a Statistical Office
 
 :material-presentation: **Talk** &nbsp;·&nbsp; Action Plan 4.2.3 · 3.3.2
 
-Fundamentals and needs — GPUs and accelerators, memory and context, inference versus training, latency and throughput. Cloud, hybrid or on-premise; data sovereignty and confidentiality constraints for NSO microdata; cost modelling per use case; open-weight versus proprietary models. What a realistic entry-level configuration looks like for an African NSO, with indicative orders of magnitude.
+Fundamentals and needs — GPUs and accelerators, memory and context, inference versus training, latency and throughput. Cloud, hybrid or on-premise; data sovereignty and confidentiality constraints for NSO microdata; cost modelling per use case; open-weight versus proprietary models.
 
-[:material-presentation: Slides](../slides/index.md#deck-02)
+[:material-presentation: Slides](../slides/index.md#deck-02){ .md-button .md-button--primary }
 
 
-### 14:45–15:30 &nbsp;·&nbsp; Hands-on part 1 — Retrieval-Augmented Generation
+### 14:30–15:30 &nbsp;·&nbsp; Hands-on part 1 — Retrieval-Augmented Generation
 
 :material-flask: **Laboratory** &nbsp;·&nbsp; Action Plan 4.2.1 · 2.1.1
 
-Build a working RAG assistant over a statistical corpus (STG17 Concept Note, Action Plan, SHaSA II, national methodological documents) — chunking, embeddings, vector store, retrieval, grounded answering. Test it against questions with known answers and observe where retrieval fails, and why.
+Build a working RAG assistant over a statistical corpus — chunking, embeddings, vector store, retrieval, grounded answering. Test it against questions with known answers and observe where retrieval fails, and why.
 
 !!! example "Laboratory — RAG assistant"
 
@@ -68,7 +77,7 @@ Build a working RAG assistant over a statistical corpus (STG17 Concept Note, Act
     [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/STG17-Africa/stg17-workshop/blob/main/notebooks/day1/D1_RAG_Assistant_EN_open.ipynb) **open** &nbsp; [:material-github:](https://github.com/STG17-Africa/stg17-workshop/blob/main/notebooks/day1/D1_RAG_Assistant_EN_open.ipynb)
 
 
-### 15:45–17:00 &nbsp;·&nbsp; Hands-on part 2 — From RAG to Agent
+### 15:30–16:45 &nbsp;·&nbsp; Hands-on part 2 — From RAG to Agent
 
 :material-flask: **Laboratory** &nbsp;·&nbsp; Action Plan 4.2.1 · 4.2.3
 
@@ -87,5 +96,5 @@ Turn the retriever built before the break into a tool, and wrap it in an agent �
     [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/STG17-Africa/stg17-workshop/blob/main/notebooks/day1/D1_Agent_EN_open.ipynb) **open** &nbsp; [:material-github:](https://github.com/STG17-Africa/stg17-workshop/blob/main/notebooks/day1/D1_Agent_EN_open.ipynb)
 
 
-!!! quote "15:30–15:45 — Coffee break"
+!!! quote "16:45–17:00 — Coffee break"
 

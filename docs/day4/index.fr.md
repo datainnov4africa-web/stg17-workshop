@@ -12,10 +12,10 @@
 
 Concepts et utilité, délibérément brefs pour que la journée se passe dans les données — de DMSP-OLS (1992-2013) à VIIRS/DNB ; les produits NASA Black Marble (VNP46A2 journalier, A3 mensuel, A4 annuel) et la série VNL annuelle de l'EOG ; unités de radiance, résolution et disponibilité temporelle ; ce que les NTL approchent bien — activité économique, électrification, urbanisation, suivi de crise. Les artefacts connus ne sont ici que nommés ; on les rencontre concrètement en partie 2.
 
-[:material-presentation: Diapositives](../slides/index.md#deck-08)
+[:material-presentation: Diapositives](../slides/index.md#deck-08){ .md-button .md-button--primary }
 
 
-### 09h30–10h15 &nbsp;·&nbsp; Atelier partie 1 — Collecter
+### 09h30–10h30 &nbsp;·&nbsp; Atelier partie 1 — Collecter
 
 :material-flask: **Laboratoire** &nbsp;·&nbsp; Plan d’action 4.2.1
 
@@ -36,7 +36,9 @@ Accéder aux rasters NTL (NASA Earthdata, EOG ou Google Earth Engine) ; comprend
     [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/STG17-Africa/stg17-workshop/blob/main/notebooks/day4/D4_NTL_GEE_FR.ipynb) **variante Earth Engine** &nbsp; [:material-github:](https://github.com/STG17-Africa/stg17-workshop/blob/main/notebooks/day4/D4_NTL_GEE_FR.ipynb)
 
 
-### 10h30–12h30 &nbsp;·&nbsp; Atelier partie 2 — Explorer et comprendre
+!!! quote "10h30–10h45 — Pause café"
+
+### 10h45–12h30 &nbsp;·&nbsp; Atelier partie 2 — Explorer et comprendre
 
 :material-flask: **Laboratoire** &nbsp;·&nbsp; Plan d’action 4.2.1 · 2.1.1
 
@@ -57,7 +59,7 @@ Visualiser et interroger le raster avant de calculer dessus — distribution des
     [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/STG17-Africa/stg17-workshop/blob/main/notebooks/day4/D4_NTL_GEE_FR.ipynb) **variante Earth Engine** &nbsp; [:material-github:](https://github.com/STG17-Africa/stg17-workshop/blob/main/notebooks/day4/D4_NTL_GEE_FR.ipynb)
 
 
-!!! quote "10h15–10h30 — Pause café"
+!!! quote "12h30–14h00 — Déjeuner"
 
 ## Après-midi · 14h00 – 17h00
 
@@ -76,7 +78,7 @@ Statistiques zonales par niveau administratif (somme de radiance, radiance moyen
     **Statut :** :material-progress-clock: Lot Jour 4
 
 
-### 15h45–16h30 &nbsp;·&nbsp; Atelier partie 4 — Validation
+### 15h30–16h30 &nbsp;·&nbsp; Atelier partie 4 — Validation
 
 :material-flask: **Laboratoire** &nbsp;·&nbsp; Plan d’action 2.1.1 · 4.3
 
@@ -91,12 +93,12 @@ Corréler l'indicateur indirect NTL avec des statistiques infranationales offici
     **Statut :** :material-progress-clock: Lot Jour 4
 
 
-### 16h30–17h00 &nbsp;·&nbsp; Publication et préparation du Jour 5
+### 16h30–16h45 &nbsp;·&nbsp; Publication et préparation du Jour 5
 
 :material-flask: **Laboratoire** &nbsp;·&nbsp; Plan d’action 4.2.1 · 3.1.1
 
 Verser carnets, cartes et déclaration de limites sur GitHub ; assembler les trois productions de la semaine — tableau de bord, indicateurs de connectivité, analyse NTL — dans la présentation pays de 8 minutes pour vendredi.
 
 
-!!! quote "15h30–15h45 — Pause café"
+!!! quote "16h45–17h00 — Pause café"
 

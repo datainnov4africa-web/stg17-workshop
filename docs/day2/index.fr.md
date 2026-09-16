@@ -6,16 +6,18 @@
 
 ## Matinée · 09h00 – 12h30
 
-### 09h00–10h15 &nbsp;·&nbsp; Parler aux machines : l'art de l'ingénierie de prompt
+### 09h00–10h30 &nbsp;·&nbsp; Parler aux machines : l'art de l'ingénierie de prompt
 
-:material-presentation: **Exposé** &nbsp;·&nbsp; Plan d’action 4.2.1
+:material-presentation-play: **Exposé + laboratoire** &nbsp;·&nbsp; Plan d’action 4.2.1
 
 Cadrage de la tâche, rôle et contexte, contraintes explicites, exemples few-shot, décomposition, sorties JSON structurées, garde-fous et itération systématique. Pourquoi les modèles hallucinent et comment la conception du prompt réduit le phénomène. Anti-patrons courants et comment les détecter dans vos propres prompts.
 
-[:material-presentation: Diapositives](../slides/index.md#deck-03)
+[:material-presentation: Diapositives](../slides/index.md#deck-03){ .md-button .md-button--primary }
 
 
-### 10h30–12h30 &nbsp;·&nbsp; Atelier — Du document statistique au tableau de bord public
+!!! quote "10h30–10h45 — Pause café"
+
+### 10h45–12h30 &nbsp;·&nbsp; Atelier — Du document statistique au tableau de bord public
 
 :material-flask: **Laboratoire** &nbsp;·&nbsp; Plan d’action 4.2.1 · 2.1.1
 
@@ -30,17 +32,17 @@ Prendre une publication statistique nationale (PDF ou rapport), utiliser un LLM 
     **Statut :** :material-progress-clock: Lot Jour 2
 
 
-!!! quote "10h15–10h30 — Pause café"
+!!! quote "12h30–14h00 — Déjeuner"
 
 ## Après-midi · 14h00 – 17h00
 
 ### 14h00–14h45 &nbsp;·&nbsp; De bon à excellent : optimisation des prompts
 
-:material-presentation: **Exposé** &nbsp;·&nbsp; Plan d’action 4.2.1 · 4.2.3
+:material-presentation-play: **Exposé + laboratoire** &nbsp;·&nbsp; Plan d’action 4.2.1 · 4.2.3
 
 L'amélioration systématique plutôt que le tâtonnement — construire un jeu d'évaluation, mesurer la qualité des sorties, maîtriser la variance, gérer la longueur de contexte et le coût en tokens, la mise en cache, et arbitrer entre prompt, RAG et affinage.
 
-[:material-presentation: Diapositives](../slides/index.md#deck-04)
+[:material-presentation: Diapositives](../slides/index.md#deck-04){ .md-button .md-button--primary }
 
 
 ### 14h45–15h30 &nbsp;·&nbsp; Choisir son moteur : vitesse, coût et souveraineté — travailler avec Groq
@@ -49,7 +51,7 @@ L'amélioration systématique plutôt que le tâtonnement — construire un jeu 
 
 Comment la vitesse d'inférence change ce qui est faisable dans une chaîne statistique de production. Les participants exécutent le même prompt chez deux fournisseurs, dont Groq, et consignent latence, coût pour mille documents et qualité de sortie dans une feuille de comparaison partagée. Cette feuille devient un intrant réutilisable pour les achats de leur office.
 
-[:material-presentation: Diapositives](../slides/index.md#deck-05)
+[:material-presentation: Diapositives](../slides/index.md#deck-05){ .md-button .md-button--primary }
 
 !!! example "Laboratoire — Benchmark des fournisseurs"
 
@@ -60,7 +62,7 @@ Comment la vitesse d'inférence change ce qui est faisable dans une chaîne stat
     **Statut :** :material-progress-clock: Lot Jour 2
 
 
-### 15h45–17h00 &nbsp;·&nbsp; Atelier — Un modèle, plusieurs métiers : une boîte à outils LLM pour statisticiens
+### 15h30–16h45 &nbsp;·&nbsp; Atelier — Un modèle, plusieurs métiers : une boîte à outils LLM pour statisticiens
 
 :material-flask: **Laboratoire** &nbsp;·&nbsp; Plan d’action 4.2.1
 
@@ -75,5 +77,5 @@ Ateliers tournants sur des cas d'usage professionnels — écrire et déboguer d
     **Statut :** :material-progress-clock: Lot Jour 2
 
 
-!!! quote "15h30–15h45 — Pause café"
+!!! quote "16h45–17h00 — Pause café"
 

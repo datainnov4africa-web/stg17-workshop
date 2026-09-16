@@ -1,0 +1,80 @@
+STG17 — HOW TO ADD A PRESENTATION TO THE WORKSHOP SITE
+=======================================================
+
+Put the file in THIS folder, with the exact name the site expects. It appears on
+the agenda page the next time the site is built. Nothing else to edit.
+
+
+1. FIND THE FILENAME
+--------------------
+
+    cd c:\Users\ASUS\stg17-workshop
+    python tools/downloads.py
+
+That prints, for every session of every day, the exact name to use — and marks
+with "!!" the sessions that have nothing yet.
+
+    python tools/downloads.py --missing     only what is still needed
+    python tools/downloads.py --day 2       one day at a time
+
+
+2. NAME THE FILE
+----------------
+
+    <session id>-EN.pdf        <session id>-FR.pdf
+    <session id>-EN.pptx       <session id>-FR.pptx
+
+For example, for the Day 1 talk on AI infrastructure:
+
+    d1-ai-infrastructure-what-it-really-EN.pdf
+    d1-ai-infrastructure-what-it-really-FR.pptx
+
+Any subset is fine. Supply PDF only, PPTX only, or both; English only, French
+only, or both. Only the files that exist are shown on the site — a session with
+nothing yet simply shows no download buttons.
+
+IMPORTANT: the language tag is separated by a HYPHEN, never a dot.
+
+    d1-opening-ceremony-EN.pdf     correct
+    d1-opening-ceremony.en.pdf     WRONG — the site would publish only one of
+                                   the two languages, silently
+
+The reason: the site's bilingual plugin treats any ".en." or ".fr." segment in
+any filename as its own language convention and claims the file. This already
+cost half the slide decks once.
+
+
+3. REBUILD
+----------
+
+    python tools/build_site.py
+
+Or, to regenerate everything at once:
+
+    python tools/build_all.py
+
+Then check the day page. The buttons appear under the session description.
+
+
+4. BEFORE PUBLISHING TO GITHUB
+------------------------------
+
+Files in this folder are committed to the repository and served publicly from
+GitHub Pages. Before adding one, check that it contains nothing that cannot be
+public: unreleased figures, microdata, internal drafts, or personal data.
+
+Large files matter here. Every megabyte is cloned by everyone who clones the
+repository. Keep a deck under about 10 MB; compress images before exporting.
+
+
+5. IF THE AGENDA CHANGES
+------------------------
+
+When the Word agenda is updated, re-import it:
+
+    python tools/import_agenda.py --from "C:/AfDB/Momar/STG17/Workshop Sep 2026/<file>.docx"
+
+Session ids are carried across by title, so existing filenames keep working. If a
+session is renamed beyond recognition its id is regenerated, and
+`python tools/downloads.py` will list the old file as a stray so it can be
+renamed rather than silently disappearing from the site.

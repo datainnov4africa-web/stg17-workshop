@@ -6,16 +6,18 @@
 
 ## Matinée · 09h00 – 12h30
 
-### 09h00–10h15 &nbsp;·&nbsp; Sources de données non traditionnelles : le trésor caché
+### 09h00–10h30 &nbsp;·&nbsp; Sources de données non traditionnelles : le trésor caché
 
-:material-presentation: **Exposé** &nbsp;·&nbsp; Plan d’action 2.1.1 · 3.1 · 4.3
+:material-presentation-play: **Exposé + laboratoire** &nbsp;·&nbsp; Plan d’action 2.1.1 · 3.1 · 4.3
 
 Taxonomie des sources non traditionnelles — imagerie satellitaire, mesure participative, données de caisse et de transaction, moissonnage web, capteurs et IdO, données produites par les citoyens. Cadres de qualité et biais de couverture des sources non probabilistes ; modèles d'accès et de partenariat avec les détenteurs privés ; éthique et confidentialité.
 
-[:material-presentation: Diapositives](../slides/index.md#deck-06)
+[:material-presentation: Diapositives](../slides/index.md#deck-06){ .md-button .md-button--primary }
 
 
-### 10h30–12h30 &nbsp;·&nbsp; Atelier — Données ouvertes Ookla Speedtest et WorldPop
+!!! quote "10h30–10h45 — Pause café"
+
+### 10h45–12h30 &nbsp;·&nbsp; Atelier — Données ouvertes Ookla Speedtest et WorldPop
 
 :material-flask: **Laboratoire** &nbsp;·&nbsp; Plan d’action 2.1.1 · 3.1
 
@@ -30,17 +32,17 @@ Ookla : tuiles de performance au zoom 16 en Mercator web (environ 611 m à l'éq
     **Statut :** :material-progress-clock: Lot Jour 3
 
 
-!!! quote "10h15–10h30 — Pause café"
+!!! quote "12h30–14h00 — Déjeuner"
 
 ## Après-midi · 14h00 – 17h00
 
-### 14h00–14h45 &nbsp;·&nbsp; Moteurs de passage à l'échelle : technologies big data pour les systèmes statistiques
+### 14h00–14h30 &nbsp;·&nbsp; Moteurs de passage à l'échelle : technologies big data pour les systèmes statistiques
 
 :material-presentation: **Exposé** &nbsp;·&nbsp; Plan d’action 4.2.3 · 4.2.2
 
 Fondamentaux — ingestion, stockage (lac de données et lakehouse), traitement distribué (par lots contre flux, Spark), indexation et recherche, orchestration, métadonnées et versionnement. Où chaque technologie mérite sa place dans un INS, et où un outil plus simple ferait l'affaire. La Plateforme mondiale des Nations unies et le Centre ONU pour les mégadonnées de Kigali comme infrastructures partagées.
 
-[:material-presentation: Diapositives](../slides/index.md#deck-07)
+[:material-presentation: Diapositives](../slides/index.md#deck-07){ .md-button .md-button--primary }
 
 
 ### 14h45–15h30 &nbsp;·&nbsp; Atelier partie 1 — Ookla à l'échelle avec Elasticsearch
@@ -58,7 +60,7 @@ Indexer les tuiles Ookla dans un cluster Elasticsearch pré-provisionné ; compr
     **Statut :** :material-progress-clock: Lot Jour 3
 
 
-### 15h45–16h45 &nbsp;·&nbsp; Atelier partie 2 — Exploration pilotée par la recherche
+### 15h30–16h45 &nbsp;·&nbsp; Atelier partie 2 — Exploration pilotée par la recherche
 
 :material-flask: **Laboratoire** &nbsp;·&nbsp; Plan d’action 4.2.1 · 4.2.3
 
@@ -73,12 +75,5 @@ Construire une exploration de la connectivité par région et par trimestre pilo
     **Statut :** :material-progress-clock: Lot Jour 3
 
 
-### 16h45–17h00 &nbsp;·&nbsp; Publication sur GitHub
-
-:material-flask: **Laboratoire** &nbsp;·&nbsp; Plan d’action 2.1.1 · 4.2.1
-
-Chaque équipe verse ses carnets, requêtes et résultats dans l'organisation GitHub de l'atelier, avec un README documentant méthode, sources et licence.
-
-
-!!! quote "15h30–15h45 — Pause café"
+!!! quote "16h45–17h00 — Pause café"
 

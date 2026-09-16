@@ -6,23 +6,32 @@
 
 ## Matinée · 09h00 – 12h30
 
-### 09h00–09h45 &nbsp;·&nbsp; Cérémonie d'ouverture
+### 09h00–09h30 &nbsp;·&nbsp; Cérémonie d'ouverture
 
 :material-account-group: **Cérémonie** &nbsp;·&nbsp; Plan d’action 4.2 · 4.1.1
 
 Mots de bienvenue et d'ouverture de la Banque africaine de développement et de l'UA STATAFRIC. Objectifs de la semaine, présentation du Plan d'action STG17 2025-2030 et de la place de cet atelier en son sein. Tour de table.
 
 
-### 09h45–10h15 &nbsp;·&nbsp; L'arbre généalogique de l'IA : comment les concepts s'articulent
+### 09h30–10h00 &nbsp;·&nbsp; Le Hub régional des Nations Unies pour les mégadonnées au Rwanda : jalons et cas d'usage
+
+:material-presentation: **Exposé** &nbsp;·&nbsp; *NISR*
+
+Dix ans du Comité d'experts des Nations Unies sur les mégadonnées et la science des données pour la statistique officielle, et ce que le Hub régional hébergé par le NISR a produit depuis son lancement : les cas d'usage menés le plus loin
+
+
+### 10h00–10h30 &nbsp;·&nbsp; L'arbre généalogique de l'IA : comment les concepts s'articulent
 
 :material-presentation: **Exposé** &nbsp;·&nbsp; Plan d’action 3.3.2 · 4.1.1
 
 Construction d'une carte conceptuelle commune — IA, LLM, ingénierie de prompt, RAG, affinage, systèmes agentiques, agents, MCP. Ce que chaque concept peut et ne peut pas faire pour la statistique officielle, et la discipline de vocabulaire qui évite les malentendus coûteux. Cette demi-heure fixe le langage de toute la semaine.
 
-[:material-presentation: Diapositives](../slides/index.md#deck-01)
+[:material-presentation: Diapositives](../slides/index.md#deck-01){ .md-button .md-button--primary }
 
 
-### 10h30–11h45 &nbsp;·&nbsp; Expériences des pays en IA et en usage des mégadonnées non traditionnelles
+!!! quote "10h30–10h45 — Pause café"
+
+### 10h45–11h45 &nbsp;·&nbsp; Expériences des pays en IA et en usage des mégadonnées non traditionnelles
 
 :material-forum: **Plénière** &nbsp;·&nbsp; Plan d’action 3.3.2 · 3.1.2 · 2.1.1
 
@@ -36,20 +45,20 @@ Brèves présentations pays (8 minutes chacune, 6 diapositives maximum) sur ce q
 Discussion animée structurée autour de quatre questions tirées des présentations — quels cas d'usage reviennent, quels partenariats de données sont réplicables, quels obstacles sont partagés, et où la mutualisation serait payante. Les productions sont consignées sur un mur ouvert toute la semaine. Se termine par l'auto-évaluation initiale des compétences.
 
 
-!!! quote "10h15–10h30 — Pause café"
+!!! quote "12h30–14h00 — Déjeuner"
 
 ## Après-midi · 14h00 – 17h00
 
-### 14h00–14h45 &nbsp;·&nbsp; Infrastructure de l'IA : ce qu'exige réellement l'exploitation de l'IA dans un office statistique
+### 14h00–14h30 &nbsp;·&nbsp; Infrastructure de l'IA : ce qu'exige réellement l'exploitation de l'IA dans un office statistique
 
 :material-presentation: **Exposé** &nbsp;·&nbsp; Plan d’action 4.2.3 · 3.3.2
 
 Fondamentaux et besoins — GPU et accélérateurs, mémoire et contexte, inférence contre entraînement, latence et débit. Nuage, hybride ou sur site ; souveraineté des données et contraintes de confidentialité des microdonnées d'un INS ; modélisation des coûts par cas d'usage ; modèles à poids ouverts contre propriétaires. À quoi ressemble une configuration d'entrée de gamme réaliste pour un INS africain, avec des ordres de grandeur indicatifs.
 
-[:material-presentation: Diapositives](../slides/index.md#deck-02)
+[:material-presentation: Diapositives](../slides/index.md#deck-02){ .md-button .md-button--primary }
 
 
-### 14h45–15h30 &nbsp;·&nbsp; Atelier partie 1 — Génération augmentée par récupération (RAG)
+### 14h30–15h30 &nbsp;·&nbsp; Atelier partie 1 — Génération augmentée par récupération (RAG)
 
 :material-flask: **Laboratoire** &nbsp;·&nbsp; Plan d’action 4.2.1 · 2.1.1
 
@@ -68,7 +77,7 @@ Construire un assistant RAG fonctionnel sur un corpus statistique (note de conce
     [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/STG17-Africa/stg17-workshop/blob/main/notebooks/day1/D1_RAG_Assistant_FR_open.ipynb) **ouverte** &nbsp; [:material-github:](https://github.com/STG17-Africa/stg17-workshop/blob/main/notebooks/day1/D1_RAG_Assistant_FR_open.ipynb)
 
 
-### 15h45–17h00 &nbsp;·&nbsp; Atelier partie 2 — Du RAG à l'agent
+### 15h30–16h45 &nbsp;·&nbsp; Atelier partie 2 — Du RAG à l'agent
 
 :material-flask: **Laboratoire** &nbsp;·&nbsp; Plan d’action 4.2.1 · 4.2.3
 
@@ -87,5 +96,5 @@ Transformer le récupérateur construit avant la pause en outil, et l'envelopper
     [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/STG17-Africa/stg17-workshop/blob/main/notebooks/day1/D1_Agent_FR_open.ipynb) **ouverte** &nbsp; [:material-github:](https://github.com/STG17-Africa/stg17-workshop/blob/main/notebooks/day1/D1_Agent_FR_open.ipynb)
 
 
-!!! quote "15h30–15h45 — Pause café"
+!!! quote "16h45–17h00 — Pause café"
 

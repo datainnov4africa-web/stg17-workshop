@@ -10,13 +10,14 @@
 
 | Time | Session | Kind | Resource |
 |---|---|---|---|
-| 09:00–09:45 | Opening ceremony | :material-star: | — |
-| 09:45–10:15 | The AI Family Tree: How the Concepts Fit Together | :material-presentation: | [Slides](../slides/index.md#deck-01) |
-| 10:30–11:45 | Country experiences in AI and the use of non-traditional big data | :material-circle-small: | — |
+| 09:00–09:30 | Opening ceremony | :material-star: | — |
+| 09:30–10:00 | The UN Big Data Regional Hub in Rwanda: milestones and use cases | :material-presentation: | — |
+| 10:00–10:30 | The AI Family Tree: How the concepts fit together | :material-presentation: | [Slides](../slides/index.md#deck-01) |
+| 10:45–11:45 | Country experiences in AI and the use of non-traditional big data | :material-circle-small: | — |
 | 11:45–12:30 | Synthesis: where the continent stands | :material-circle-small: | — |
-| 14:00–14:45 | AI Infrastructure: What It Really Takes to Run AI in a Statistical Office | :material-presentation: | [Slides](../slides/index.md#deck-02) |
-| 14:45–15:30 | Hands-on part 1 — Retrieval-Augmented Generation | :material-flask: | [Laboratories](../labs/index.md) |
-| 15:45–17:00 | Hands-on part 2 — From RAG to Agent | :material-flask: | [Laboratories](../labs/index.md) |
+| 14:00–14:30 | AI Infrastructure: What it really takes to run AI in a Statistical Office | :material-presentation: | [Slides](../slides/index.md#deck-02) |
+| 14:30–15:30 | Hands-on part 1 — Retrieval-Augmented Generation | :material-flask: | [Laboratories](../labs/index.md) |
+| 15:30–16:45 | Hands-on part 2 — From RAG to Agent | :material-flask: | [Laboratories](../labs/index.md) |
 
 ## Day 2 · Prompt Engineering and the Optimised Use of LLMs
 
@@ -24,11 +25,11 @@
 
 | Time | Session | Kind | Resource |
 |---|---|---|---|
-| 09:00–10:15 | Talking to Machines: The Craft of Prompt Engineering | :material-presentation: | [Slides](../slides/index.md#deck-03) |
-| 10:30–12:30 | Hands-on — From Statistical Document to Public Dashboard | :material-flask: | [Laboratories](../labs/index.md) |
-| 14:00–14:45 | From Good to Great: Prompt Optimisation | :material-presentation: | [Slides](../slides/index.md#deck-04) |
+| 09:00–10:30 | Talking to Machines: The Craft of Prompt Engineering | :material-circle-small: | [Slides](../slides/index.md#deck-03) |
+| 10:45–12:30 | Hands-on — From Statistical Document to Public Dashboard | :material-flask: | [Laboratories](../labs/index.md) |
+| 14:00–14:45 | From Good to Great: Prompt Optimisation | :material-circle-small: | [Slides](../slides/index.md#deck-04) |
 | 14:45–15:30 | Choosing your engine: speed, cost and sovereignty — working with Groq | :material-speedometer: | [Slides](../slides/index.md#deck-05) |
-| 15:45–17:00 | Hands-on — One Model, Many Jobs: an LLM Toolkit for Statisticians | :material-flask: | [Laboratories](../labs/index.md) |
+| 15:30–16:45 | Hands-on — One Model, Many Jobs: an LLM Toolkit for Statisticians | :material-flask: | [Laboratories](../labs/index.md) |
 
 ## Day 3 · Beyond the Survey: Non-Traditional Data and the Technologies That Handle Them
 
@@ -36,12 +37,11 @@
 
 | Time | Session | Kind | Resource |
 |---|---|---|---|
-| 09:00–10:15 | Non-Traditional Data Sources: The Hidden Treasure | :material-presentation: | [Slides](../slides/index.md#deck-06) |
-| 10:30–12:30 | Hands-on — Ookla Speedtest Open Data and WorldPop | :material-flask: | [Laboratories](../labs/index.md) |
-| 14:00–14:45 | Engines of Scale: Big Data Technologies for Statistical Systems | :material-presentation: | [Slides](../slides/index.md#deck-07) |
+| 09:00–10:30 | Non-Traditional Data Sources: The Hidden Treasure | :material-circle-small: | [Slides](../slides/index.md#deck-06) |
+| 10:45–12:30 | Hands-on — Ookla Speedtest Open Data and WorldPop | :material-flask: | [Laboratories](../labs/index.md) |
+| 14:00–14:30 | Engines of Scale: Big Data Technologies for Statistical Systems | :material-presentation: | [Slides](../slides/index.md#deck-07) |
 | 14:45–15:30 | Hands-on part 1 — Ookla at Scale with Elasticsearch | :material-flask: | [Laboratories](../labs/index.md) |
-| 15:45–16:45 | Hands-on part 2 — Search-driven exploration | :material-flask: | [Laboratories](../labs/index.md) |
-| 16:45–17:00 | Publication on GitHub | :material-flask: | [Laboratories](../labs/index.md) |
+| 15:30–16:45 | Hands-on part 2 — Search-driven exploration | :material-flask: | [Laboratories](../labs/index.md) |
 
 ## Day 4 · Africa after dark: Reading development from Night-Time Lights
 
@@ -49,12 +49,12 @@
 
 | Time | Session | Kind | Resource |
 |---|---|---|---|
-| 09:00–09:30 | Night-Time Lights: What the Darkness Tells Us | :material-presentation: | [Slides](../slides/index.md#deck-08) |
-| 09:30–10:15 | Hands-on part 1 — Collect | :material-flask: | [Laboratories](../labs/index.md) |
-| 10:30–12:30 | Hands-on part 2 — Explore and Understand | :material-flask: | [Laboratories](../labs/index.md) |
+| 09:00–09:30 | Night-Time Lights: What the darkness tells us | :material-presentation: | [Slides](../slides/index.md#deck-08) |
+| 09:30–10:30 | Hands-on part 1 — Collect | :material-flask: | [Laboratories](../labs/index.md) |
+| 10:45–12:30 | Hands-on part 2 — Explore and Understand | :material-flask: | [Laboratories](../labs/index.md) |
 | 14:00–15:30 | Hands-on part 3 — Analysis | :material-flask: | [Laboratories](../labs/index.md) |
-| 15:45–16:30 | Hands-on part 4 — Validation | :material-flask: | [Laboratories](../labs/index.md) |
-| 16:30–17:00 | Publication and preparation for Day 5 | :material-flask: | [Laboratories](../labs/index.md) |
+| 15:30–16:30 | Hands-on part 4 — Validation | :material-flask: | [Laboratories](../labs/index.md) |
+| 16:30–16:45 | Publication and preparation for Day 5 | :material-flask: | [Laboratories](../labs/index.md) |
 
 ## Day 5 · Shared Resources, Country Results and the Way Forward
 
@@ -62,10 +62,10 @@
 
 | Time | Session | Kind | Resource |
 |---|---|---|---|
-| 09:00–10:15 | Assisting countries in publishing their work | :material-presentation: | [Slides](../slides/index.md#deck-09) |
-| 10:30–12:00 | Country presentations | :material-circle-small: | — |
-| 12:00–12:15 | Key takeaways and way forward | :material-circle-small: | — |
-| 12:15–12:30 | Closing ceremony | :material-star: | [Slides](../slides/index.md#deck-10) |
+| 09:00–10:30 | Assisting countries in publishing their work | :material-flask: | [Slides](../slides/index.md#deck-09) |
+| 10:45–12:15 | Country presentations | :material-circle-small: | — |
+| 12:15–12:30 | Key takeaways and way forward | :material-circle-small: | — |
+| 12:30–12:45 | Closing ceremony | :material-star: | [Slides](../slides/index.md#deck-10) |
 
 ---
 

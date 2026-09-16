@@ -6,16 +6,18 @@
 
 ## Morning · 09:00 – 12:30
 
-### 09:00–10:15 &nbsp;·&nbsp; Non-Traditional Data Sources: The Hidden Treasure
+### 09:00–10:30 &nbsp;·&nbsp; Non-Traditional Data Sources: The Hidden Treasure
 
-:material-presentation: **Talk** &nbsp;·&nbsp; Action Plan 2.1.1 · 3.1 · 4.3
+:material-presentation-play: **Talk + laboratory** &nbsp;·&nbsp; Action Plan 2.1.1 · 3.1 · 4.3
 
 Taxonomy of non-traditional sources — satellite imagery, crowdsourced measurement, scanner and transaction data, web scraping, sensors and IoT, citizen-generated data. Quality frameworks and coverage bias in non-probabilistic sources; access and partnership models with private data holders; ethics and confidentiality.
 
-[:material-presentation: Slides](../slides/index.md#deck-06)
+[:material-presentation: Slides](../slides/index.md#deck-06){ .md-button .md-button--primary }
 
 
-### 10:30–12:30 &nbsp;·&nbsp; Hands-on — Ookla Speedtest Open Data and WorldPop
+!!! quote "10:30–10:45 — Coffee break"
+
+### 10:45–12:30 &nbsp;·&nbsp; Hands-on — Ookla Speedtest Open Data and WorldPop
 
 :material-flask: **Laboratory** &nbsp;·&nbsp; Action Plan 2.1.1 · 3.1
 
@@ -30,17 +32,17 @@ Ookla: performance tiles at web-Mercator zoom 16 (about 611 m at the equator), q
     **Status:** :material-progress-clock: Day 3 batch
 
 
-!!! quote "10:15–10:30 — Coffee break"
+!!! quote "12:30–14:00 — Lunch"
 
 ## Afternoon · 14:00 – 17:00
 
-### 14:00–14:45 &nbsp;·&nbsp; Engines of Scale: Big Data Technologies for Statistical Systems
+### 14:00–14:30 &nbsp;·&nbsp; Engines of Scale: Big Data Technologies for Statistical Systems
 
 :material-presentation: **Talk** &nbsp;·&nbsp; Action Plan 4.2.3 · 4.2.2
 
-Fundamentals — ingestion, storage (data lake and lakehouse), distributed processing (batch versus streaming, Spark), indexing and search, orchestration, metadata and versioning. Where each technology earns its place in an NSO, and where a simpler tool would do the job. The UN Global Platform and the UN Big Data Hub in Kigali as shared infrastructure.
+Fundamentals — ingestion, storage (data lake and lakehouse), distributed processing (batch versus streaming, Spark), indexing and search, orchestration, metadata and versioning.
 
-[:material-presentation: Slides](../slides/index.md#deck-07)
+[:material-presentation: Slides](../slides/index.md#deck-07){ .md-button .md-button--primary }
 
 
 ### 14:45–15:30 &nbsp;·&nbsp; Hands-on part 1 — Ookla at Scale with Elasticsearch
@@ -58,11 +60,11 @@ Index the Ookla tiles in a pre-provisioned Elasticsearch cluster; understand the
     **Status:** :material-progress-clock: Day 3 batch
 
 
-### 15:45–16:45 &nbsp;·&nbsp; Hands-on part 2 — Search-driven exploration
+### 15:30–16:45 &nbsp;·&nbsp; Hands-on part 2 — Search-driven exploration
 
 :material-flask: **Laboratory** &nbsp;·&nbsp; Action Plan 4.2.1 · 4.2.3
 
-Build a search-driven exploration of connectivity by region and quarter; compare query time and memory footprint against the pandas approach of the morning, and draw the practical conclusion about when the added complexity is worth it.
+Build a search-driven exploration of connectivity by region and quarter; compare query time and memory footprint against the pandas approach of the morning, and draw the practical conclusion about when the added complexity is worth it. Publication on GitHub Each team commits its notebooks, queries and outputs to the workshop GitHub organisation, with a README documenting method, sources and licence.
 
 !!! example "Laboratory — Search-driven exploration"
 
@@ -73,12 +75,5 @@ Build a search-driven exploration of connectivity by region and quarter; compare
     **Status:** :material-progress-clock: Day 3 batch
 
 
-### 16:45–17:00 &nbsp;·&nbsp; Publication on GitHub
-
-:material-flask: **Laboratory** &nbsp;·&nbsp; Action Plan 2.1.1 · 4.2.1
-
-Each team commits its notebooks, queries and outputs to the workshop GitHub organisation, with a README documenting method, sources and licence.
-
-
-!!! quote "15:30–15:45 — Coffee break"
+!!! quote "16:45–17:00 — Coffee break"
 

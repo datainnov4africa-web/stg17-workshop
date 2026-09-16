@@ -38,11 +38,14 @@ MODE_LABEL = {
     "plenary":   ("Plenary", "Plénière"),
     "facilitated": ("Facilitated", "Animée"),
     "benchmark": ("Talk + benchmark", "Exposé + benchmark"),
+    # V16 pairs a short talk with the laboratory that follows it, in one slot.
+    "talk_lab": ("Talk + laboratory", "Exposé + laboratoire"),
 }
 MODE_ICON = {
     "ceremony": ":material-account-group:", "talk": ":material-presentation:",
     "lab": ":material-flask:", "plenary": ":material-forum:",
     "facilitated": ":material-lightbulb-on:", "benchmark": ":material-speedometer:",
+    "talk_lab": ":material-presentation-play:",
 }
 STATUS_LABEL = {
     "ready":  (":material-check-circle:{ .ok } Available",
@@ -54,10 +57,13 @@ STATUS_LABEL = {
     "phase5": (":material-progress-clock: Day 5 batch", ":material-progress-clock: Lot Jour 5"),
 }
 
+# The breaks as the V16 document schedules them. Kept here rather than in the
+# agenda file because they are the same every day and carry no content; the
+# importer skips the "Coffee Break" rows for the same reason.
 BREAKS = {
-    "10:15–10:30": ("Coffee break", "Pause café"),
+    "10:30–10:45": ("Coffee break", "Pause café"),
     "12:30–14:00": ("Lunch", "Déjeuner"),
-    "15:30–15:45": ("Coffee break", "Pause café"),
+    "16:45–17:00": ("Coffee break", "Pause café"),
 }
 
 GENERATED = {
@@ -92,6 +98,43 @@ def fmt_time(value: str, lang: str) -> str:
 # ---------------------------------------------------------------------------
 #  Notebook links
 # ---------------------------------------------------------------------------
+#: Where organisers drop the presentation files. One flat folder, because a
+#: person copying a file should not have to work out which subfolder it belongs
+#: in. The expected name for every session is printed by `tools/downloads.py`.
+DOWNLOADS = ROOT / "docs" / "downloads"
+
+#: Hyphen before the language code, never a dot: mkdocs-static-i18n claims any
+#: `.en.` or `.fr.` segment in ANY filename as its own suffix convention, and
+#: would publish only one of the two files. This already broke the decks once.
+DOWNLOAD_KINDS = (
+    ("pdf", ":material-file-pdf-box:"),
+    ("pptx", ":material-microsoft-powerpoint:"),
+)
+
+
+def download_links(session: dict, lang: str) -> str:
+    """
+    Buttons for the files that exist, and nothing for the files that do not.
+
+    A greyed-out button for material nobody has produced yet tells a visitor the
+    workshop is unfinished; an absent button tells them nothing at all, which is
+    what was asked for. The moment a file is dropped into docs/downloads/ under
+    the expected name, its button appears on the next build.
+    """
+    session_id = session.get("id")
+    if not session_id:
+        return ""
+
+    found = []
+    for code, icon in DOWNLOAD_KINDS:
+        for tag in ("EN", "FR"):
+            name = f"{session_id}-{tag}.{code}"
+            if (DOWNLOADS / name).exists():
+                found.append(f"[{icon} {code.upper()} · {tag}](../downloads/{name})"
+                             "{ .md-button }")
+    return " ".join(found)
+
+
 def notebook_links(lab: dict, lang: str, github: dict) -> str:
     """
     Colab badges and repository links for one laboratory, in the active language.
@@ -158,13 +201,38 @@ def render_day(day: dict, labs: dict, lang: str, config: dict) -> str:
         if not block:
             continue
         lines += [f"## {label}", ""]
-        for session in block:
+
+        # Sessions and breaks on one timeline. A break belongs to the half-day
+        # it starts in — lunch at 12:30 closes the morning — and is printed in
+        # sequence, so the reader can follow the day without reconstructing it.
+        timeline = [(s["time"], "session", s) for s in block]
+        # A break earns its line only when it separates something. Day 5 closes
+        # at 12:45, so lunch must not print after the closing ceremony; the
+        # 16:45 coffee, which V16 schedules after the last session, must.
+        starts = [s["time"].split("–")[0] for s in block]
+        last_end = max((s["time"].split("–")[-1] for s in block), default="")
+        timeline += [
+            (span, "break", names) for span, names in BREAKS.items()
+            if (span < "13:00") == (block is morning)
+            and (any(start >= span.split("–")[-1] for start in starts)
+                 or span.split("–")[0] == last_end)
+        ]
+
+        for start, kind, payload in sorted(timeline, key=lambda item: item[0]):
+            if kind == "break":
+                break_en, break_fr = payload
+                lines += [f'!!! quote "{fmt_time(start, lang)} — '
+                          f'{break_fr if fr else break_en}"', ""]
+                continue
+            session = payload
             icon = MODE_ICON.get(session.get("mode", "talk"), "")
             mode = MODE_LABEL.get(session.get("mode", "talk"), ("", ""))[1 if fr else 0]
             lines += [
                 f"### {fmt_time(session['time'], lang)} &nbsp;·&nbsp; {pick(session, 'title', lang)}",
                 "",
                 f"{icon} **{mode}**"
+                + (f" &nbsp;·&nbsp; *{session['presenter']}*"
+                   if session.get("presenter") else "")
                 + (f" &nbsp;·&nbsp; {'Plan d’action' if fr else 'Action Plan'} "
                    f"{' · '.join(str(p) for p in session.get('plan', []))}"
                    if session.get("plan") else ""),
@@ -176,7 +244,12 @@ def render_day(day: dict, labs: dict, lang: str, config: dict) -> str:
             deck = session.get("deck")
             if deck:
                 verb = "Diapositives" if fr else "Slides"
-                lines += [f"[:material-presentation: {verb}](../slides/index.md#deck-{deck})", ""]
+                lines += [f"[:material-presentation: {verb}](../slides/index.md#deck-{deck})"
+                          "{ .md-button .md-button--primary }", ""]
+
+            files = download_links(session, lang)
+            if files:
+                lines += [files, ""]
 
             lab_id = session.get("lab")
             if lab_id and lab_id in labs:
@@ -201,12 +274,6 @@ def render_day(day: dict, labs: dict, lang: str, config: dict) -> str:
                     lines += ["    " + line for line in links.splitlines()] + [""]
             lines.append("")
 
-        # Breaks, rendered as a quiet line so the timing stays legible
-        for time_range, (en, frn) in BREAKS.items():
-            in_block = any(s["time"] < time_range for s in block) and \
-                       any(s["time"] > time_range for s in block)
-            if in_block:
-                lines += [f"!!! quote \"{fmt_time(time_range, lang)} — {frn if fr else en}\"", ""]
 
     return "\n".join(lines) + "\n"
 
