@@ -15,7 +15,6 @@ tout ce que vous construisez est publié, documenté et réutilisable par un aut
 <div class="stg-meta" markdown>
 <span class="item">:material-calendar-range: <b>28 septembre – 2 octobre 2026</b></span>
 <span class="item">:material-map-marker: Kigali, Rwanda</span>
-<span class="item">:material-account-multiple: Hybride</span>
 <span class="item">:material-translate: Anglais et français</span>
 </div>
 

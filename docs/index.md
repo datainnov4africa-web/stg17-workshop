@@ -15,7 +15,6 @@ published, documented, and reusable by another African country.</p>
 <div class="stg-meta" markdown>
 <span class="item">:material-calendar-range: <b>28 September – 2 October 2026</b></span>
 <span class="item">:material-map-marker: Kigali, Rwanda</span>
-<span class="item">:material-account-multiple: Hybrid</span>
 <span class="item">:material-translate: English and French</span>
 </div>
 
