@@ -12,7 +12,7 @@ hide:
 modèles de langage et mégadonnées pour la statistique officielle. Une règle tient la semaine :
 tout ce que vous construisez est publié, documenté et réutilisable par un autre pays africain.</p>
 
-<div class="stg-meta">
+<div class="stg-meta" markdown>
 :material-calendar-range: <b>28 septembre – 2 octobre 2026</b> &nbsp;·&nbsp;
 :material-map-marker: Kigali, Rwanda &nbsp;·&nbsp;
 :material-account-multiple: Hybride &nbsp;·&nbsp;

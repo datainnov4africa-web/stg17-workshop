@@ -249,3 +249,7 @@
   .stg-hero { padding: 26px 22px; }
   .stg-hero .stg-stats .n { font-size: 1.7rem; }
 }
+
+/* The meta line carries `markdown`, so its content is wrapped in a paragraph.
+   Material's default paragraph margin would break the line off from the hero. */
+.stg-hero .stg-meta p { margin: 0; }

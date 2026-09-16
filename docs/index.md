@@ -12,7 +12,7 @@ hide:
 and big data for official statistics. One rule holds the week together: everything you build is
 published, documented, and reusable by another African country.</p>
 
-<div class="stg-meta">
+<div class="stg-meta" markdown>
 :material-calendar-range: <b>28 September – 2 October 2026</b> &nbsp;·&nbsp;
 :material-map-marker: Kigali, Rwanda &nbsp;·&nbsp;
 :material-account-multiple: Hybrid &nbsp;·&nbsp;
