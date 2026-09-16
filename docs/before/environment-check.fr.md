@@ -1,7 +1,7 @@
 # Vérification de l'environnement
 
 Un carnet. Environ cinq minutes. Il vous dit, point par point, si votre machine
-peut exécuter les neuf laboratoires — puis produit une courte chaîne de
+peut exécuter les treize laboratoires — puis produit une courte chaîne de
 diagnostic à envoyer aux assistants techniques.
 
 [![Ouvrir dans Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/STG17-Africa/stg17-workshop/blob/main/notebooks/00_Environment_Check_FR.ipynb)

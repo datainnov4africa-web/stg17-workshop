@@ -366,11 +366,11 @@ def render_labs(agenda: dict, lang: str, config: dict) -> str:
     lines += [
         "# " + ("Les laboratoires" if fr else "The laboratories"),
         "",
-        ("Neuf laboratoires portent la semaine. Chacun est spécifié ci-dessous avec "
+        (f"{len(labs)} laboratoires portent la semaine. Chacun est spécifié ci-dessous avec "
          "l'environnement qu'il exige, la production que l'équipe doit livrer, et le chemin de "
          "repli appliqué par l'équipe d'animation quand quelque chose casse — ce qui arrivera."
          if fr else
-         "Nine laboratories carry the week. Each is specified below with the environment it "
+         f"{len(labs)} laboratories carry the week. Each is specified below with the environment it "
          "needs, the artefact the team must produce, and the fallback the facilitation team "
          "applies when something breaks — which it will."),
         "",

@@ -1,7 +1,7 @@
 # Quand Kaggle est nécessaire — et quand il ne l'est pas
 
-Réponse courte : **la plupart des participants n'en auront jamais besoin.** Sept
-des neuf laboratoires tournent très bien sur un portable ou sur Colab gratuit.
+Réponse courte : **la plupart des participants n'en auront jamais besoin.** La
+plupart des laboratoires tournent très bien sur un portable ou sur Colab gratuit.
 Cette page existe pour que les deux qui bénéficient de Kaggle ne soient pas une
 surprise le jour venu, et pour que personne ne crée un compte qu'il n'utilisera
 pas.

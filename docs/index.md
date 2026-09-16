@@ -1,18 +1,35 @@
+---
+hide:
+  - navigation
+---
+
 <div class="stg-hero" markdown>
 <div class="eyebrow">African Development Bank · African Union STATAFRIC · SHaSA II</div>
 
 # Emerging Issues, Emerging Practice
 
-<p>Innovating the Data Value Chain — artificial intelligence, large language models and big data
-for official statistics. Five days, nine laboratories, and one rule: everything you build this
-week is published, documented and reusable by another African country.</p>
+<p class="lede">Innovating the Data Value Chain — artificial intelligence, large language models
+and big data for official statistics. One rule holds the week together: everything you build is
+published, documented, and reusable by another African country.</p>
 
-<div class="facts">
-<span>5 days · 27 contact hours</span>
-<span>Hybrid</span>
-<span>Notebooks in EN and FR</span>
-<span>Specialized Technical Group 17</span>
+<div class="stg-meta">
+:material-calendar-range: <b>28 September – 2 October 2026</b> &nbsp;·&nbsp;
+:material-map-marker: Kigali, Rwanda &nbsp;·&nbsp;
+:material-account-multiple: Hybrid &nbsp;·&nbsp;
+:material-translate: English and French
 </div>
+
+<div class="stg-stats">
+<div><span class="n">5</span><span class="l">days<br>27 contact hours</span></div>
+<div><span class="n">13</span><span class="l">hands-on<br>laboratories</span></div>
+<div><span class="n">55</span><span class="l">AU member states<br>supported</span></div>
+<div><span class="n">2</span><span class="l">languages, from<br>a single source</span></div>
+</div>
+</div>
+
+<div class="stg-cta" markdown>
+[:material-rocket-launch: Start here — what to prepare](before/prerequisites.md){ .md-button .md-button--primary }
+[:material-calendar-week: See the week](week/index.md){ .md-button }
 </div>
 
 ## Start here
@@ -29,7 +46,7 @@ to run. Three things are due **two weeks** before the workshop opens.
 
 <div markdown>
 ### :material-calendar-week: The week
-Five days, session by session, with the slide deck and the notebooks attached to
+Five days, session by session, with the presentation and the notebooks attached to
 each one. Generated from the agenda itself, so it cannot drift.
 
 [Day 1 →](day1/index.md)
@@ -37,8 +54,8 @@ each one. Generated from the agenda itself, so it cannot drift.
 
 <div markdown>
 ### :material-flask: The laboratories
-Nine hands-on laboratories, each in **English and French**, each in a **guided**
-and an **open** track, each parameterised by a single country variable.
+Thirteen hands-on laboratories, each in **English and French**, each in a
+**guided** and an **open** track, each parameterised by a single country variable.
 
 [Laboratory register →](labs/index.md)
 </div>
@@ -124,6 +141,6 @@ By the end of the workshop, participants will be able to:
 !!! tip "Working language"
 
     Sessions run in English with simultaneous interpretation. **All laboratory
-    material — every notebook, every slide deck and this entire site — exists in
+    material — every notebook, every presentation and this entire site — exists in
     English and French.** Use the language selector in the header, or the
     :material-web: link at the top of any notebook.

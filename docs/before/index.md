@@ -7,7 +7,7 @@ purpose — six pages, and the first is the only one that is mandatory reading.
 
 <div markdown>
 ### :material-clipboard-check: Prerequisites
-The complete list, derived from the nine laboratories. **Start here.**
+The complete list, derived from the thirteen laboratories. **Start here.**
 
 [Read →](prerequisites.md)
 </div>

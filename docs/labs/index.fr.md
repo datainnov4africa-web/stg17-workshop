@@ -2,7 +2,7 @@
 
 # Les laboratoires
 
-Neuf laboratoires portent la semaine. Chacun est spécifié ci-dessous avec l'environnement qu'il exige, la production que l'équipe doit livrer, et le chemin de repli appliqué par l'équipe d'animation quand quelque chose casse — ce qui arrivera.
+13 laboratoires portent la semaine. Chacun est spécifié ci-dessous avec l'environnement qu'il exige, la production que l'équipe doit livrer, et le chemin de repli appliqué par l'équipe d'animation quand quelque chose casse — ce qui arrivera.
 
 !!! tip "Deux pistes dans chaque laboratoire"
 

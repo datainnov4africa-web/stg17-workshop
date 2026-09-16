@@ -2,7 +2,7 @@
 
 # The laboratories
 
-Nine laboratories carry the week. Each is specified below with the environment it needs, the artefact the team must produce, and the fallback the facilitation team applies when something breaks — which it will.
+13 laboratories carry the week. Each is specified below with the environment it needs, the artefact the team must produce, and the fallback the facilitation team applies when something breaks — which it will.
 
 !!! tip "Two tracks in every laboratory"
 

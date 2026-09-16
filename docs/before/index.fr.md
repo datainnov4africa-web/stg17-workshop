@@ -7,7 +7,7 @@ volontairement brève — six pages, et seule la première est de lecture obliga
 
 <div markdown>
 ### :material-clipboard-check: Prérequis
-La liste complète, déduite des neuf laboratoires. **Commencez ici.**
+La liste complète, déduite des treize laboratoires. **Commencez ici.**
 
 [Lire →](prerequisites.md)
 </div>

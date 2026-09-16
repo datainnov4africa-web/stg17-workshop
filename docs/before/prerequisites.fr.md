@@ -1,6 +1,6 @@
 # Prérequis
 
-Tout ce qui figure sur cette page découle des neuf laboratoires qui composent la
+Tout ce qui figure sur cette page découle des treize laboratoires qui composent la
 semaine. Rien n'y est pour la forme : chaque élément est quelque chose sans quoi
 un laboratoire échouera.
 
@@ -120,7 +120,7 @@ Les Jours 1 et 4 partent tous deux des principes de base.
 ## 5 · Exécutez la vérification d'environnement
 
 Un carnet, cinq minutes, et il vous dit point par point si votre machine peut
-exécuter les neuf laboratoires — puis produit une courte chaîne de diagnostic à
+exécuter les treize laboratoires — puis produit une courte chaîne de diagnostic à
 envoyer aux assistants techniques.
 
 [:material-notebook: Vérification d'environnement →](environment-check.md){ .md-button .md-button--primary }

@@ -1,6 +1,6 @@
 # Prerequisites
 
-Everything on this page is derived from the nine laboratories that make up the
+Everything on this page is derived from the thirteen laboratories that make up the
 week. Nothing is here for form's sake: each item is something a laboratory will
 fail without.
 
@@ -118,7 +118,7 @@ principles.
 ## 5 · Run the environment check
 
 One notebook, five minutes, and it tells you item by item whether your machine
-can run the nine laboratories — then produces a short diagnostic string to send
+can run the thirteen laboratories — then produces a short diagnostic string to send
 to the technical assistants.
 
 [:material-notebook: Environment check →](environment-check.md){ .md-button .md-button--primary }

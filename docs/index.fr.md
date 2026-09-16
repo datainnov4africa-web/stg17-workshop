@@ -1,19 +1,35 @@
+---
+hide:
+  - navigation
+---
+
 <div class="stg-hero" markdown>
 <div class="eyebrow">Banque africaine de développement · Union africaine STATAFRIC · SHaSA II</div>
 
 # Enjeux émergents, pratiques émergentes
 
-<p>Innover dans la chaîne de valeur des données — intelligence artificielle, grands modèles de
-langage et mégadonnées pour la statistique officielle. Cinq jours, neuf laboratoires, et une
-règle : tout ce que vous construisez cette semaine est publié, documenté et réutilisable par un
-autre pays africain.</p>
+<p class="lede">Innover dans la chaîne de valeur des données — intelligence artificielle, grands
+modèles de langage et mégadonnées pour la statistique officielle. Une règle tient la semaine :
+tout ce que vous construisez est publié, documenté et réutilisable par un autre pays africain.</p>
 
-<div class="facts">
-<span>5 jours · 27 heures de contact</span>
-<span>Hybride</span>
-<span>Carnets en EN et FR</span>
-<span>Groupe technique spécialisé 17</span>
+<div class="stg-meta">
+:material-calendar-range: <b>28 septembre – 2 octobre 2026</b> &nbsp;·&nbsp;
+:material-map-marker: Kigali, Rwanda &nbsp;·&nbsp;
+:material-account-multiple: Hybride &nbsp;·&nbsp;
+:material-translate: Anglais et français
 </div>
+
+<div class="stg-stats">
+<div><span class="n">5</span><span class="l">jours<br>27 heures de contact</span></div>
+<div><span class="n">13</span><span class="l">laboratoires<br>pratiques</span></div>
+<div><span class="n">55</span><span class="l">États membres<br>de l'UA couverts</span></div>
+<div><span class="n">2</span><span class="l">langues, depuis<br>une source unique</span></div>
+</div>
+</div>
+
+<div class="stg-cta" markdown>
+[:material-rocket-launch: Commencez ici — ce qu'il faut préparer](before/prerequisites.md){ .md-button .md-button--primary }
+[:material-calendar-week: Voir la semaine](week/index.md){ .md-button }
 </div>
 
 ## Commencez ici
@@ -39,7 +55,7 @@ chacune. Générée depuis l'agenda lui-même : elle ne peut pas diverger.
 
 <div markdown>
 ### :material-flask: Les laboratoires
-Neuf laboratoires pratiques, chacun en **anglais et en français**, chacun en
+Treize laboratoires pratiques, chacun en **anglais et en français**, chacun en
 piste **guidée** et **ouverte**, chacun paramétré par une seule variable pays.
 
 [Registre des laboratoires →](labs/index.md)

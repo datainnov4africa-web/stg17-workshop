@@ -1,6 +1,6 @@
 # When you need Kaggle — and when you do not
 
-Short answer: **most participants never need it.** Seven of the nine laboratories
+Short answer: **most participants never need it.** Most of the laboratories
 run perfectly well on a laptop or on free Colab. This page exists so that the two
 that benefit from Kaggle are not a surprise on the day, and so that nobody
 creates an account they will not use.
