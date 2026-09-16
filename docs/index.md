@@ -22,7 +22,6 @@ published, documented, and reusable by another African country.</p>
 <div class="stg-stats">
 <div><span class="n">5</span><span class="l">days<br>27 contact hours</span></div>
 <div><span class="n">13</span><span class="l">hands-on<br>laboratories</span></div>
-<div><span class="n">55</span><span class="l">AU member states<br>supported</span></div>
 <div><span class="n">2</span><span class="l">languages, from<br>a single source</span></div>
 </div>
 </div>

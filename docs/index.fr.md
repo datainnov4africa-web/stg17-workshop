@@ -22,7 +22,6 @@ tout ce que vous construisez est publié, documenté et réutilisable par un aut
 <div class="stg-stats">
 <div><span class="n">5</span><span class="l">jours<br>27 heures de contact</span></div>
 <div><span class="n">13</span><span class="l">laboratoires<br>pratiques</span></div>
-<div><span class="n">55</span><span class="l">États membres<br>de l'UA couverts</span></div>
 <div><span class="n">2</span><span class="l">langues, depuis<br>une source unique</span></div>
 </div>
 </div>
