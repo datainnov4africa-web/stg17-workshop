@@ -62,6 +62,8 @@ Fondamentaux et besoins — GPU et accélérateurs, mémoire et contexte, infér
 
 Construire un assistant RAG fonctionnel sur un corpus statistique (note de concept STG17, plan d'action, SHaSA II, documents méthodologiques nationaux) — découpage, plongements, base vectorielle, récupération, réponse ancrée. Le tester sur des questions à réponse connue et observer où la récupération échoue, et pourquoi.
 
+[:material-microsoft-powerpoint: PPTX · EN](../downloads/Day1/1430_hands-on-part-1_EN.pptx){ .md-button } [:material-microsoft-powerpoint: PPTX · FR](../downloads/Day1/1430_hands-on-part-1_FR.pptx){ .md-button }
+
 !!! example "Laboratoire — Assistant RAG"
 
     **Livrable :** Un relevé de réponses avec les passages exacts qui les fondent, et une évaluation de la récupération séparant les échecs de récupération des échecs de génération

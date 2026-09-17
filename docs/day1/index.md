@@ -62,6 +62,8 @@ Fundamentals and needs — GPUs and accelerators, memory and context, inference 
 
 Build a working RAG assistant over a statistical corpus — chunking, embeddings, vector store, retrieval, grounded answering. Test it against questions with known answers and observe where retrieval fails, and why.
 
+[:material-microsoft-powerpoint: PPTX · EN](../downloads/Day1/1430_hands-on-part-1_EN.pptx){ .md-button } [:material-microsoft-powerpoint: PPTX · FR](../downloads/Day1/1430_hands-on-part-1_FR.pptx){ .md-button }
+
 !!! example "Laboratory — RAG assistant"
 
     **Deliverable:** A transcript of answers with the exact passages behind each one, and a retrieval evaluation separating retrieval failures from generation failures
