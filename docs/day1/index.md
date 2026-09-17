@@ -55,6 +55,8 @@ Facilitated discussion structured around four questions drawn from the presentat
 
 Fundamentals and needs — GPUs and accelerators, memory and context, inference versus training, latency and throughput. Cloud, hybrid or on-premise; data sovereignty and confidentiality constraints for NSO microdata; cost modelling per use case; open-weight versus proprietary models.
 
+[:material-microsoft-powerpoint: PPTX · EN](../downloads/Day1/1400_ai-infrastructure_EN.pptx){ .md-button } [:material-microsoft-powerpoint: PPTX · FR](../downloads/Day1/1400_ai-infrastructure_FR.pptx){ .md-button }
+
 
 ### 14:30–15:30 &nbsp;·&nbsp; Hands-on part 1 — Retrieval-Augmented Generation
 
@@ -79,11 +81,15 @@ Build a working RAG assistant over a statistical corpus — chunking, embeddings
 
 Turn the retriever built before the break into a tool, and wrap it in an agent — tools and function calling, planning and iteration, memory, error handling and human-in-the-loop checkpoints. The agent answers a question, retrieves the supporting figures and drafts a short note; participants then examine exactly where it must stay supervised.
 
+[:material-microsoft-powerpoint: PPTX · EN](../downloads/Day1/1530_hands-on-part-2_EN.pptx){ .md-button } [:material-microsoft-powerpoint: PPTX · FR](../downloads/Day1/1530_hands-on-part-2_FR.pptx){ .md-button } [:material-notebook-outline: IPYNB · EN](../downloads/Day1/1530_hands-on-part-2_EN.ipynb){ .md-button } [:material-notebook-outline: IPYNB · FR](../downloads/Day1/1530_hands-on-part-2_FR.ipynb){ .md-button }
+
 !!! example "Laboratory — From RAG to agent"
 
     **Deliverable:** An audit log recording every tool the model asked for, whether policy allowed it, and the raw reply behind each request — plus the note the agent wrote once a policy permitted it
 
     **Fallback:** A scripted model replays fixed replies, so the loop, the approval gate, the error recovery and the audit log are all exercised with no API key. That is deliberate rather than a consolation path — those four things are what an office writes and owns; the model is what it rents
+
+    [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/STG17-Africa/stg17-workshop/blob/main/docs/downloads/Day1/1530_hands-on-part-2_EN.ipynb) **EN** &nbsp; [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/STG17-Africa/stg17-workshop/blob/main/docs/downloads/Day1/1530_hands-on-part-2_FR.ipynb) **FR**
 
 
 !!! quote "16:45–17:00 — Coffee break"

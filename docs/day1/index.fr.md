@@ -55,6 +55,8 @@ Discussion animée structurée autour de quatre questions tirées des présentat
 
 Fondamentaux et besoins — GPU et accélérateurs, mémoire et contexte, inférence contre entraînement, latence et débit. Nuage, hybride ou sur site ; souveraineté des données et contraintes de confidentialité des microdonnées d'un INS ; modélisation des coûts par cas d'usage ; modèles à poids ouverts contre propriétaires. À quoi ressemble une configuration d'entrée de gamme réaliste pour un INS africain, avec des ordres de grandeur indicatifs.
 
+[:material-microsoft-powerpoint: PPTX · EN](../downloads/Day1/1400_ai-infrastructure_EN.pptx){ .md-button } [:material-microsoft-powerpoint: PPTX · FR](../downloads/Day1/1400_ai-infrastructure_FR.pptx){ .md-button }
+
 
 ### 14h30–15h30 &nbsp;·&nbsp; Atelier partie 1 — Génération augmentée par récupération (RAG)
 
@@ -79,11 +81,15 @@ Construire un assistant RAG fonctionnel sur un corpus statistique (note de conce
 
 Transformer le récupérateur construit avant la pause en outil, et l'envelopper dans un agent — outils et appel de fonctions, planification et itération, mémoire, gestion d'erreurs et points de contrôle humains. L'agent répond à une question, retrouve les chiffres à l'appui et rédige une courte note ; les participants examinent ensuite précisément où il doit rester supervisé.
 
+[:material-microsoft-powerpoint: PPTX · EN](../downloads/Day1/1530_hands-on-part-2_EN.pptx){ .md-button } [:material-microsoft-powerpoint: PPTX · FR](../downloads/Day1/1530_hands-on-part-2_FR.pptx){ .md-button } [:material-notebook-outline: IPYNB · EN](../downloads/Day1/1530_hands-on-part-2_EN.ipynb){ .md-button } [:material-notebook-outline: IPYNB · FR](../downloads/Day1/1530_hands-on-part-2_FR.ipynb){ .md-button }
+
 !!! example "Laboratoire — Du RAG à l'agent"
 
     **Livrable :** Un journal d'audit consignant chaque outil demandé par le modèle, son autorisation par la politique, et la réponse brute derrière chaque demande — plus la note écrite par l'agent une fois une politique l'y autorisant
 
     **Repli :** Un modèle scripté rejoue des réponses fixes : la boucle, le point d'approbation, la reprise sur erreur et le journal d'audit s'exercent donc sans clé API. C'est délibéré et non un chemin de repli — ces quatre éléments sont ce qu'un office écrit et possède ; le modèle est ce qu'il loue
+
+    [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/STG17-Africa/stg17-workshop/blob/main/docs/downloads/Day1/1530_hands-on-part-2_EN.ipynb) **EN** &nbsp; [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/STG17-Africa/stg17-workshop/blob/main/docs/downloads/Day1/1530_hands-on-part-2_FR.ipynb) **FR**
 
 
 !!! quote "16h45–17h00 — Pause café"
