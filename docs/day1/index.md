@@ -26,7 +26,7 @@ Ten years of the UN Committee of Experts on Big Data and Data Science for Offici
 
 Building a shared concept map — AI, LLM, prompt engineering, RAG, fine-tuning, agentic systems, agents, MCP. What each concept can and cannot do for official statistics, and the vocabulary discipline that avoids costly misunderstandings. This half-hour sets the language used for the rest of the week.
 
-[:material-microsoft-powerpoint: PPTX · EN](../downloads/Day1/1000_ai-family-tree_EN.pptx){ .md-button } [:material-microsoft-powerpoint: PPTX · FR](../downloads/Day1/1000_ai-family-tree_FR.pptx){ .md-button }
+[:material-file-pdf-box: PDF · EN](../downloads/Day1/1000_ai-family-tree_EN.pdf){ .md-button } [:material-file-pdf-box: PDF · FR](../downloads/Day1/1000_ai-family-tree_FR.pdf){ .md-button } [:material-microsoft-powerpoint: PPTX · EN](../downloads/Day1/1000_ai-family-tree_EN.pptx){ .md-button } [:material-microsoft-powerpoint: PPTX · FR](../downloads/Day1/1000_ai-family-tree_FR.pptx){ .md-button }
 
 
 !!! quote "10:30–10:45 — Coffee break"
@@ -62,13 +62,15 @@ Fundamentals and needs — GPUs and accelerators, memory and context, inference 
 
 Build a working RAG assistant over a statistical corpus — chunking, embeddings, vector store, retrieval, grounded answering. Test it against questions with known answers and observe where retrieval fails, and why.
 
-[:material-microsoft-powerpoint: PPTX · EN](../downloads/Day1/1430_hands-on-part-1_EN.pptx){ .md-button } [:material-microsoft-powerpoint: PPTX · FR](../downloads/Day1/1430_hands-on-part-1_FR.pptx){ .md-button }
+[:material-file-pdf-box: PDF · EN](../downloads/Day1/1430_hands-on-part-1_EN.pdf){ .md-button } [:material-file-pdf-box: PDF · FR](../downloads/Day1/1430_hands-on-part-1_FR.pdf){ .md-button } [:material-microsoft-powerpoint: PPTX · EN](../downloads/Day1/1430_hands-on-part-1_EN.pptx){ .md-button } [:material-microsoft-powerpoint: PPTX · FR](../downloads/Day1/1430_hands-on-part-1_FR.pptx){ .md-button } [:material-notebook-outline: IPYNB · FR](../downloads/Day1/1430_hands-on-part-1_FR.ipynb){ .md-button }
 
 !!! example "Laboratory — RAG assistant"
 
     **Deliverable:** A transcript of answers with the exact passages behind each one, and a retrieval evaluation separating retrieval failures from generation failures
 
     **Fallback:** A fictional five-document corpus ships with the toolkit, so no team is blocked by uncleared publications; without any model provider, the retrieval half of the laboratory still runs — and that is where most RAG problems are
+
+    [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/STG17-Africa/stg17-workshop/blob/main/docs/downloads/Day1/1430_hands-on-part-1_FR.ipynb) **FR**
 
 
 ### 15:30–16:45 &nbsp;·&nbsp; Hands-on part 2 — From RAG to Agent
