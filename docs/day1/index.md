@@ -26,8 +26,6 @@ Ten years of the UN Committee of Experts on Big Data and Data Science for Offici
 
 Building a shared concept map — AI, LLM, prompt engineering, RAG, fine-tuning, agentic systems, agents, MCP. What each concept can and cannot do for official statistics, and the vocabulary discipline that avoids costly misunderstandings. This half-hour sets the language used for the rest of the week.
 
-[:material-presentation: Slides](../slides/index.md#deck-01){ .md-button .md-button--primary }
-
 
 !!! quote "10:30–10:45 — Coffee break"
 
@@ -55,8 +53,6 @@ Facilitated discussion structured around four questions drawn from the presentat
 
 Fundamentals and needs — GPUs and accelerators, memory and context, inference versus training, latency and throughput. Cloud, hybrid or on-premise; data sovereignty and confidentiality constraints for NSO microdata; cost modelling per use case; open-weight versus proprietary models.
 
-[:material-presentation: Slides](../slides/index.md#deck-02){ .md-button .md-button--primary }
-
 
 ### 14:30–15:30 &nbsp;·&nbsp; Hands-on part 1 — Retrieval-Augmented Generation
 
@@ -70,11 +66,7 @@ Build a working RAG assistant over a statistical corpus — chunking, embeddings
 
     **Fallback:** A fictional five-document corpus ships with the toolkit, so no team is blocked by uncleared publications; without any model provider, the retrieval half of the laboratory still runs — and that is where most RAG problems are
 
-    **Status:** :material-check-circle:{ .ok } Available
-
-    [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/STG17-Africa/stg17-workshop/blob/main/notebooks/day1/D1_RAG_Assistant_EN.ipynb) **guided** &nbsp; [:material-github:](https://github.com/STG17-Africa/stg17-workshop/blob/main/notebooks/day1/D1_RAG_Assistant_EN.ipynb)
-    
-    [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/STG17-Africa/stg17-workshop/blob/main/notebooks/day1/D1_RAG_Assistant_EN_open.ipynb) **open** &nbsp; [:material-github:](https://github.com/STG17-Africa/stg17-workshop/blob/main/notebooks/day1/D1_RAG_Assistant_EN_open.ipynb)
+    **Status:** :material-progress-clock: In preparation
 
 
 ### 15:30–16:45 &nbsp;·&nbsp; Hands-on part 2 — From RAG to Agent
@@ -89,11 +81,7 @@ Turn the retriever built before the break into a tool, and wrap it in an agent �
 
     **Fallback:** A scripted model replays fixed replies, so the loop, the approval gate, the error recovery and the audit log are all exercised with no API key. That is deliberate rather than a consolation path — those four things are what an office writes and owns; the model is what it rents
 
-    **Status:** :material-check-circle:{ .ok } Available
-
-    [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/STG17-Africa/stg17-workshop/blob/main/notebooks/day1/D1_Agent_EN.ipynb) **guided** &nbsp; [:material-github:](https://github.com/STG17-Africa/stg17-workshop/blob/main/notebooks/day1/D1_Agent_EN.ipynb)
-    
-    [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/STG17-Africa/stg17-workshop/blob/main/notebooks/day1/D1_Agent_EN_open.ipynb) **open** &nbsp; [:material-github:](https://github.com/STG17-Africa/stg17-workshop/blob/main/notebooks/day1/D1_Agent_EN_open.ipynb)
+    **Status:** :material-progress-clock: In preparation
 
 
 !!! quote "16:45–17:00 — Coffee break"

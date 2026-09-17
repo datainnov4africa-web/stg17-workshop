@@ -20,11 +20,7 @@
 | **Team deliverable** | A transcript of answers with the exact passages behind each one, and a retrieval evaluation separating retrieval failures from generation failures |
 | **Fallback** | A fictional five-document corpus ships with the toolkit, so no team is blocked by uncleared publications; without any model provider, the retrieval half of the laboratory still runs — and that is where most RAG problems are |
 | **Earth Engine variant** | — |
-| **Status** | :material-check-circle:{ .ok } Available |
-
-[![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/STG17-Africa/stg17-workshop/blob/main/notebooks/day1/D1_RAG_Assistant_EN.ipynb) **guided** &nbsp; [:material-github:](https://github.com/STG17-Africa/stg17-workshop/blob/main/notebooks/day1/D1_RAG_Assistant_EN.ipynb)
-
-[![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/STG17-Africa/stg17-workshop/blob/main/notebooks/day1/D1_RAG_Assistant_EN_open.ipynb) **open** &nbsp; [:material-github:](https://github.com/STG17-Africa/stg17-workshop/blob/main/notebooks/day1/D1_RAG_Assistant_EN_open.ipynb)
+| **Status** | :material-progress-clock: In preparation |
 
 ### From RAG to agent
 
@@ -36,11 +32,7 @@
 | **Team deliverable** | An audit log recording every tool the model asked for, whether policy allowed it, and the raw reply behind each request — plus the note the agent wrote once a policy permitted it |
 | **Fallback** | A scripted model replays fixed replies, so the loop, the approval gate, the error recovery and the audit log are all exercised with no API key. That is deliberate rather than a consolation path — those four things are what an office writes and owns; the model is what it rents |
 | **Earth Engine variant** | — |
-| **Status** | :material-check-circle:{ .ok } Available |
-
-[![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/STG17-Africa/stg17-workshop/blob/main/notebooks/day1/D1_Agent_EN.ipynb) **guided** &nbsp; [:material-github:](https://github.com/STG17-Africa/stg17-workshop/blob/main/notebooks/day1/D1_Agent_EN.ipynb)
-
-[![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/STG17-Africa/stg17-workshop/blob/main/notebooks/day1/D1_Agent_EN_open.ipynb) **open** &nbsp; [:material-github:](https://github.com/STG17-Africa/stg17-workshop/blob/main/notebooks/day1/D1_Agent_EN_open.ipynb)
+| **Status** | :material-progress-clock: In preparation |
 
 ## Day 2
 
@@ -130,13 +122,7 @@
 | **Team deliverable** | A documented national raster subset and an inventory of the artefacts present in that country |
 | **Fallback** | Pre-clipped national subsets are prepared for every participating country; the Earth Engine variant downloads nothing at all |
 | **Earth Engine variant** | yes — nothing downloaded |
-| **Status** | :material-check-circle:{ .ok } Available |
-
-[![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/STG17-Africa/stg17-workshop/blob/main/notebooks/day4/D4_NTL_Collect_Explore_EN.ipynb) **guided** &nbsp; [:material-github:](https://github.com/STG17-Africa/stg17-workshop/blob/main/notebooks/day4/D4_NTL_Collect_Explore_EN.ipynb)
-
-[![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/STG17-Africa/stg17-workshop/blob/main/notebooks/day4/D4_NTL_Collect_Explore_EN_open.ipynb) **open** &nbsp; [:material-github:](https://github.com/STG17-Africa/stg17-workshop/blob/main/notebooks/day4/D4_NTL_Collect_Explore_EN_open.ipynb)
-
-[![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/STG17-Africa/stg17-workshop/blob/main/notebooks/day4/D4_NTL_GEE_EN.ipynb) **Earth Engine variant** &nbsp; [:material-github:](https://github.com/STG17-Africa/stg17-workshop/blob/main/notebooks/day4/D4_NTL_GEE_EN.ipynb)
+| **Status** | :material-progress-clock: In preparation |
 
 ### NTL explore and understand
 
@@ -148,13 +134,7 @@
 | **Team deliverable** | The artefact inventory for your country, with evidence |
 | **Fallback** | The reference country (Côte d'Ivoire) is prepared end to end |
 | **Earth Engine variant** | yes — nothing downloaded |
-| **Status** | :material-check-circle:{ .ok } Available |
-
-[![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/STG17-Africa/stg17-workshop/blob/main/notebooks/day4/D4_NTL_Collect_Explore_EN.ipynb) **guided** &nbsp; [:material-github:](https://github.com/STG17-Africa/stg17-workshop/blob/main/notebooks/day4/D4_NTL_Collect_Explore_EN.ipynb)
-
-[![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/STG17-Africa/stg17-workshop/blob/main/notebooks/day4/D4_NTL_Collect_Explore_EN_open.ipynb) **open** &nbsp; [:material-github:](https://github.com/STG17-Africa/stg17-workshop/blob/main/notebooks/day4/D4_NTL_Collect_Explore_EN_open.ipynb)
-
-[![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/STG17-Africa/stg17-workshop/blob/main/notebooks/day4/D4_NTL_GEE_EN.ipynb) **Earth Engine variant** &nbsp; [:material-github:](https://github.com/STG17-Africa/stg17-workshop/blob/main/notebooks/day4/D4_NTL_GEE_EN.ipynb)
+| **Status** | :material-progress-clock: In preparation |
 
 ### NTL analysis
 

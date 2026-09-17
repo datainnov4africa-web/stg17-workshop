@@ -4,7 +4,7 @@ Un carnet. Environ cinq minutes. Il vous dit, point par point, si votre machine
 peut exécuter les treize laboratoires — puis produit une courte chaîne de
 diagnostic à envoyer aux assistants techniques.
 
-[![Ouvrir dans Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/STG17-Africa/stg17-workshop/blob/main/notebooks/00_Environment_Check_FR.ipynb)
+Le carnet de vérification d'environnement est distribué avec le matériel de l'atelier. Votre animateur vous enverra le lien, ou ouvrez-le depuis la clé USB.
 &nbsp; [:material-github: Voir sur GitHub](https://github.com/STG17-Africa/stg17-workshop/blob/main/notebooks/00_Environment_Check_FR.ipynb)
 
 !!! tip "Exécutez-le deux fois"

@@ -4,7 +4,7 @@ One notebook. About five minutes. It tells you, item by item, whether your
 machine can run the thirteen laboratories — and then produces a short diagnostic
 string to send to the technical assistants.
 
-[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/STG17-Africa/stg17-workshop/blob/main/notebooks/00_Environment_Check_EN.ipynb)
+The environment-check notebook is distributed with the workshop materials. Your facilitator will send the link, or open it from the USB key.
 &nbsp; [:material-github: View on GitHub](https://github.com/STG17-Africa/stg17-workshop/blob/main/notebooks/00_Environment_Check_EN.ipynb)
 
 !!! tip "Run it twice"

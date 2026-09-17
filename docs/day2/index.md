@@ -12,8 +12,6 @@
 
 Task framing, role and context, explicit constraints, few-shot examples, decomposition, structured JSON outputs, guardrails and systematic iteration. Why models hallucinate and how prompt design reduces it. Common anti-patterns and how to detect them in your own prompts.
 
-[:material-presentation: Slides](../slides/index.md#deck-03){ .md-button .md-button--primary }
-
 
 !!! quote "10:30–10:45 — Coffee break"
 
@@ -42,16 +40,12 @@ Take a national statistical publication (PDF or report), use an LLM to extract a
 
 Systematic improvement rather than trial and error — building an evaluation set, measuring output quality, controlling variance, managing context length and token cost, caching, and choosing between prompting, RAG and fine-tuning.
 
-[:material-presentation: Slides](../slides/index.md#deck-04){ .md-button .md-button--primary }
-
 
 ### 14:45–15:30 &nbsp;·&nbsp; Choosing your engine: speed, cost and sovereignty — working with Groq
 
 :material-speedometer: **Talk + benchmark** &nbsp;·&nbsp; Action Plan 4.2.3
 
 How inference speed changes what is feasible in a production statistical pipeline. Participants run the same prompt against two providers, including Groq, and record latency, cost per thousand documents and output quality in a shared comparison sheet. The sheet becomes a reusable procurement input for their office.
-
-[:material-presentation: Slides](../slides/index.md#deck-05){ .md-button .md-button--primary }
 
 !!! example "Laboratory — Provider benchmark"
 

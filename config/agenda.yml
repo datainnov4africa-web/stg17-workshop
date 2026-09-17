@@ -366,7 +366,7 @@ labs:
     deliverable_fr: Un relevé de réponses avec les passages exacts qui les fondent, et une évaluation de la récupération séparant les échecs de récupération des échecs de génération
     fallback_en: A fictional five-document corpus ships with the toolkit, so no team is blocked by uncleared publications; without any model provider, the retrieval half of the laboratory still runs — and that is where most RAG problems are
     fallback_fr: Un corpus fictif de cinq documents est fourni avec la boîte à outils, donc aucune équipe n'est bloquée par des publications non validées ; sans aucun fournisseur de modèle, la moitié « récupération » du laboratoire fonctionne quand même — et c'est là que sont la plupart des problèmes du RAG
-    status: ready
+    status: draft
   d1_agent:
     day: 1
     title_en: From RAG to agent
@@ -383,7 +383,7 @@ labs:
     # Quoted: French puts a space before a colon, and an unquoted YAML scalar
     # reads " : " as a key/value separator.
     fallback_fr: "Un modèle scripté rejoue des réponses fixes : la boucle, le point d'approbation, la reprise sur erreur et le journal d'audit s'exercent donc sans clé API. C'est délibéré et non un chemin de repli — ces quatre éléments sont ce qu'un office écrit et possède ; le modèle est ce qu'il loue"
-    status: ready
+    status: draft
   d2_dashboard:
     day: 2
     title_en: Document to dashboard
@@ -485,7 +485,7 @@ labs:
     deliverable_fr: Un sous-ensemble raster national documenté et un inventaire des artefacts présents dans ce pays
     fallback_en: Pre-clipped national subsets are prepared for every participating country; the Earth Engine variant downloads nothing at all
     fallback_fr: Des sous-ensembles nationaux pré-découpés sont préparés pour chaque pays participant ; la variante Earth Engine ne télécharge rien
-    status: ready
+    status: draft
   d4_ntl_explore:
     day: 4
     title_en: NTL explore and understand
@@ -502,7 +502,7 @@ labs:
     deliverable_fr: L'inventaire des artefacts de votre pays, avec les preuves
     fallback_en: The reference country (Côte d'Ivoire) is prepared end to end
     fallback_fr: Le pays de référence (Côte d'Ivoire) est préparé de bout en bout
-    status: ready
+    status: draft
   d4_ntl_analysis:
     day: 4
     title_en: NTL analysis

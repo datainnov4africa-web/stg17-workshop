@@ -12,8 +12,6 @@
 
 Concepts et utilité, délibérément brefs pour que la journée se passe dans les données — de DMSP-OLS (1992-2013) à VIIRS/DNB ; les produits NASA Black Marble (VNP46A2 journalier, A3 mensuel, A4 annuel) et la série VNL annuelle de l'EOG ; unités de radiance, résolution et disponibilité temporelle ; ce que les NTL approchent bien — activité économique, électrification, urbanisation, suivi de crise. Les artefacts connus ne sont ici que nommés ; on les rencontre concrètement en partie 2.
 
-[:material-presentation: Diapositives](../slides/index.md#deck-08){ .md-button .md-button--primary }
-
 
 ### 09h30–10h30 &nbsp;·&nbsp; Atelier partie 1 — Collecter
 
@@ -27,13 +25,7 @@ Accéder aux rasters NTL (NASA Earthdata, EOG ou Google Earth Engine) ; comprend
 
     **Repli :** Des sous-ensembles nationaux pré-découpés sont préparés pour chaque pays participant ; la variante Earth Engine ne télécharge rien
 
-    **Statut :** :material-check-circle:{ .ok } Disponible
-
-    [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/STG17-Africa/stg17-workshop/blob/main/notebooks/day4/D4_NTL_Collect_Explore_FR.ipynb) **guidée** &nbsp; [:material-github:](https://github.com/STG17-Africa/stg17-workshop/blob/main/notebooks/day4/D4_NTL_Collect_Explore_FR.ipynb)
-    
-    [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/STG17-Africa/stg17-workshop/blob/main/notebooks/day4/D4_NTL_Collect_Explore_FR_open.ipynb) **ouverte** &nbsp; [:material-github:](https://github.com/STG17-Africa/stg17-workshop/blob/main/notebooks/day4/D4_NTL_Collect_Explore_FR_open.ipynb)
-    
-    [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/STG17-Africa/stg17-workshop/blob/main/notebooks/day4/D4_NTL_GEE_FR.ipynb) **variante Earth Engine** &nbsp; [:material-github:](https://github.com/STG17-Africa/stg17-workshop/blob/main/notebooks/day4/D4_NTL_GEE_FR.ipynb)
+    **Statut :** :material-progress-clock: En préparation
 
 
 !!! quote "10h30–10h45 — Pause café"
@@ -50,13 +42,7 @@ Visualiser et interroger le raster avant de calculer dessus — distribution des
 
     **Repli :** Le pays de référence (Côte d'Ivoire) est préparé de bout en bout
 
-    **Statut :** :material-check-circle:{ .ok } Disponible
-
-    [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/STG17-Africa/stg17-workshop/blob/main/notebooks/day4/D4_NTL_Collect_Explore_FR.ipynb) **guidée** &nbsp; [:material-github:](https://github.com/STG17-Africa/stg17-workshop/blob/main/notebooks/day4/D4_NTL_Collect_Explore_FR.ipynb)
-    
-    [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/STG17-Africa/stg17-workshop/blob/main/notebooks/day4/D4_NTL_Collect_Explore_FR_open.ipynb) **ouverte** &nbsp; [:material-github:](https://github.com/STG17-Africa/stg17-workshop/blob/main/notebooks/day4/D4_NTL_Collect_Explore_FR_open.ipynb)
-    
-    [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/STG17-Africa/stg17-workshop/blob/main/notebooks/day4/D4_NTL_GEE_FR.ipynb) **variante Earth Engine** &nbsp; [:material-github:](https://github.com/STG17-Africa/stg17-workshop/blob/main/notebooks/day4/D4_NTL_GEE_FR.ipynb)
+    **Statut :** :material-progress-clock: En préparation
 
 
 !!! quote "12h30–14h00 — Déjeuner"

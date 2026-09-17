@@ -71,6 +71,6 @@
 
 ## Preparation status
 
-**4 of 13 laboratories** are ready and runnable. The rest are marked *Day N batch* on their page — the material exists in the agenda; the notebooks arrive in phases.
+**0 of 13 laboratories** are ready and runnable. The rest are marked *In preparation* on their page — the material exists in the agenda; the notebooks arrive in phases.
 
 Every laboratory has a documented fallback, so that a missing key or a constrained network never ends a session.

@@ -26,8 +26,6 @@ Dix ans du Comité d'experts des Nations Unies sur les mégadonnées et la scien
 
 Construction d'une carte conceptuelle commune — IA, LLM, ingénierie de prompt, RAG, affinage, systèmes agentiques, agents, MCP. Ce que chaque concept peut et ne peut pas faire pour la statistique officielle, et la discipline de vocabulaire qui évite les malentendus coûteux. Cette demi-heure fixe le langage de toute la semaine.
 
-[:material-presentation: Diapositives](../slides/index.md#deck-01){ .md-button .md-button--primary }
-
 
 !!! quote "10h30–10h45 — Pause café"
 
@@ -55,8 +53,6 @@ Discussion animée structurée autour de quatre questions tirées des présentat
 
 Fondamentaux et besoins — GPU et accélérateurs, mémoire et contexte, inférence contre entraînement, latence et débit. Nuage, hybride ou sur site ; souveraineté des données et contraintes de confidentialité des microdonnées d'un INS ; modélisation des coûts par cas d'usage ; modèles à poids ouverts contre propriétaires. À quoi ressemble une configuration d'entrée de gamme réaliste pour un INS africain, avec des ordres de grandeur indicatifs.
 
-[:material-presentation: Diapositives](../slides/index.md#deck-02){ .md-button .md-button--primary }
-
 
 ### 14h30–15h30 &nbsp;·&nbsp; Atelier partie 1 — Génération augmentée par récupération (RAG)
 
@@ -70,11 +66,7 @@ Construire un assistant RAG fonctionnel sur un corpus statistique (note de conce
 
     **Repli :** Un corpus fictif de cinq documents est fourni avec la boîte à outils, donc aucune équipe n'est bloquée par des publications non validées ; sans aucun fournisseur de modèle, la moitié « récupération » du laboratoire fonctionne quand même — et c'est là que sont la plupart des problèmes du RAG
 
-    **Statut :** :material-check-circle:{ .ok } Disponible
-
-    [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/STG17-Africa/stg17-workshop/blob/main/notebooks/day1/D1_RAG_Assistant_FR.ipynb) **guidée** &nbsp; [:material-github:](https://github.com/STG17-Africa/stg17-workshop/blob/main/notebooks/day1/D1_RAG_Assistant_FR.ipynb)
-    
-    [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/STG17-Africa/stg17-workshop/blob/main/notebooks/day1/D1_RAG_Assistant_FR_open.ipynb) **ouverte** &nbsp; [:material-github:](https://github.com/STG17-Africa/stg17-workshop/blob/main/notebooks/day1/D1_RAG_Assistant_FR_open.ipynb)
+    **Statut :** :material-progress-clock: En préparation
 
 
 ### 15h30–16h45 &nbsp;·&nbsp; Atelier partie 2 — Du RAG à l'agent
@@ -89,11 +81,7 @@ Transformer le récupérateur construit avant la pause en outil, et l'envelopper
 
     **Repli :** Un modèle scripté rejoue des réponses fixes : la boucle, le point d'approbation, la reprise sur erreur et le journal d'audit s'exercent donc sans clé API. C'est délibéré et non un chemin de repli — ces quatre éléments sont ce qu'un office écrit et possède ; le modèle est ce qu'il loue
 
-    **Statut :** :material-check-circle:{ .ok } Disponible
-
-    [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/STG17-Africa/stg17-workshop/blob/main/notebooks/day1/D1_Agent_FR.ipynb) **guidée** &nbsp; [:material-github:](https://github.com/STG17-Africa/stg17-workshop/blob/main/notebooks/day1/D1_Agent_FR.ipynb)
-    
-    [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/STG17-Africa/stg17-workshop/blob/main/notebooks/day1/D1_Agent_FR_open.ipynb) **ouverte** &nbsp; [:material-github:](https://github.com/STG17-Africa/stg17-workshop/blob/main/notebooks/day1/D1_Agent_FR_open.ipynb)
+    **Statut :** :material-progress-clock: En préparation
 
 
 !!! quote "16h45–17h00 — Pause café"

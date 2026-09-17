@@ -35,6 +35,16 @@ organisers:
   framework_en: "SHaSA II · Specialized Technical Group 17 · Action Plan 2025–2030"
   framework_fr: "SHaSA II · Groupe technique spécialisé 17 · Plan d'action 2025-2030"
 
+# ---------------------------------------------------------------------------
+#  What the site publishes
+# ---------------------------------------------------------------------------
+site:
+  # The workshop opens with no presentations of its own: every deck is supplied
+  # by its session owner and dropped into docs/downloads/. Set this to true to
+  # publish the reveal.js decks under slides/decks/ as well — the sources are
+  # kept, they are simply not built while this is false.
+  publish_slides: false
+
 github:
   # --- PLACEHOLDER: replace with the real organisation once created ---------
   org: STG17-Africa

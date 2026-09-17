@@ -55,6 +55,10 @@ STATUS_LABEL = {
     "phase3": (":material-progress-clock: Day 3 batch", ":material-progress-clock: Lot Jour 3"),
     "phase4": (":material-progress-clock: Day 4 batch", ":material-progress-clock: Lot Jour 4"),
     "phase5": (":material-progress-clock: Day 5 batch", ":material-progress-clock: Lot Jour 5"),
+    # The workshop opens with no notebooks published; a laboratory returns to
+    # `ready` when its notebooks exist and have been run end to end.
+    "draft":  (":material-progress-clock: In preparation",
+               ":material-progress-clock: En préparation"),
 }
 
 # The breaks as the V16 document schedules them. Kept here rather than in the
@@ -235,8 +239,12 @@ def render_day(day: dict, labs: dict, lang: str, config: dict) -> str:
                 "",
             ]
 
+            # The agenda still records which deck a session is meant to have, but
+            # the button only appears once that deck is actually published — the
+            # same rule the download buttons follow. A link to a deck that is not
+            # there is worse than no link.
             deck = session.get("deck")
-            if deck:
+            if deck and any((ROOT / "docs" / "slides").glob(f"{deck}-*.html")):
                 verb = "Diapositives" if fr else "Slides"
                 lines += [f"[:material-presentation: {verb}](../slides/index.md#deck-{deck})"
                           "{ .md-button .md-button--primary }", ""]
@@ -336,10 +344,10 @@ def render_week(agenda: dict, labs: dict, lang: str, config: dict) -> str:
         "## " + ("Où en est la préparation" if fr else "Preparation status"),
         "",
         (f"**{ready} laboratoires sur {len(labs)}** sont prêts et exécutables. "
-         f"Les autres portent la mention *lot Jour N* sur leur page — la matière "
+         f"Les autres portent la mention *En préparation* — la matière "
          f"existe dans l'agenda, les carnets arrivent par phases." if fr else
          f"**{ready} of {len(labs)} laboratories** are ready and runnable. The rest "
-         f"are marked *Day N batch* on their page — the material exists in the "
+         f"are marked *In preparation* on their page — the material exists in the "
          f"agenda; the notebooks arrive in phases."),
         "",
         ("Chaque laboratoire a un chemin de repli documenté, pour qu'une clé "

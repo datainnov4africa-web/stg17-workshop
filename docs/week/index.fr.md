@@ -71,6 +71,6 @@
 
 ## Où en est la préparation
 
-**4 laboratoires sur 13** sont prêts et exécutables. Les autres portent la mention *lot Jour N* sur leur page — la matière existe dans l'agenda, les carnets arrivent par phases.
+**0 laboratoires sur 13** sont prêts et exécutables. Les autres portent la mention *En préparation* — la matière existe dans l'agenda, les carnets arrivent par phases.
 
 Chaque laboratoire a un chemin de repli documenté, pour qu'une clé manquante ou un réseau contraint ne mette jamais fin à une séance.

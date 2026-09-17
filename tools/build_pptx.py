@@ -337,6 +337,20 @@ def build(source: Path, lang: str) -> Path:
     return path
 
 
+def publishing() -> bool:
+    """
+    Whether derived PowerPoint belongs in docs/ at all.
+
+    Shares the switch with build_slides.py: the PPTX are derived from the same
+    deck sources, so publishing one without the other would leave the site
+    offering PowerPoint for presentations it does not show.
+    """
+    import yaml  # noqa: PLC0415
+
+    config = yaml.safe_load((ROOT / "config" / "workshop.yml").read_text(encoding="utf-8"))
+    return bool(config.get("site", {}).get("publish_slides", True))
+
+
 def main() -> int:
     try:
         import pptx  # noqa: F401
@@ -347,6 +361,20 @@ def main() -> int:
     parser = argparse.ArgumentParser(description="Derive PPTX decks from the reveal.js sources")
     parser.add_argument("--only", help="build only decks whose filename contains this")
     args = parser.parse_args()
+
+    # Checked here, not inside build(): that function must return a Path, and
+    # returning 0 from it made main() call .relative_to() on an int — the whole
+    # PowerPoint step failed while printing a reassuring "not published" message.
+    if not publishing():
+        removed = 0
+        if OUT.is_dir():
+            for stale in OUT.glob("*.pptx"):
+                stale.unlink()
+                removed += 1
+        print("site.publish_slides is false in config/workshop.yml — no PowerPoint "
+              "is published.")
+        print(f"Deck sources are untouched; {removed} built file(s) removed from docs/.")
+        return 0
 
     sources = sorted(DECKS.glob("*.deck.html"))
     if args.only:

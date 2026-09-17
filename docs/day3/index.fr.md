@@ -12,8 +12,6 @@
 
 Taxonomie des sources non traditionnelles — imagerie satellitaire, mesure participative, données de caisse et de transaction, moissonnage web, capteurs et IdO, données produites par les citoyens. Cadres de qualité et biais de couverture des sources non probabilistes ; modèles d'accès et de partenariat avec les détenteurs privés ; éthique et confidentialité.
 
-[:material-presentation: Diapositives](../slides/index.md#deck-06){ .md-button .md-button--primary }
-
 
 !!! quote "10h30–10h45 — Pause café"
 
@@ -41,8 +39,6 @@ Ookla : tuiles de performance au zoom 16 en Mercator web (environ 611 m à l'éq
 :material-presentation: **Exposé** &nbsp;·&nbsp; Plan d’action 4.2.3 · 4.2.2
 
 Fondamentaux — ingestion, stockage (lac de données et lakehouse), traitement distribué (par lots contre flux, Spark), indexation et recherche, orchestration, métadonnées et versionnement. Où chaque technologie mérite sa place dans un INS, et où un outil plus simple ferait l'affaire. La Plateforme mondiale des Nations unies et le Centre ONU pour les mégadonnées de Kigali comme infrastructures partagées.
-
-[:material-presentation: Diapositives](../slides/index.md#deck-07){ .md-button .md-button--primary }
 
 
 ### 14h45–15h30 &nbsp;·&nbsp; Atelier partie 1 — Ookla à l'échelle avec Elasticsearch

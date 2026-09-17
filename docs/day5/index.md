@@ -12,8 +12,6 @@
 
 How a national team takes what it built this week to a durable public product — repository structure and README conventions, GitHub Pages, dataset and code licensing, DOI and citation, metadata, versioning and maintenance responsibility.
 
-[:material-presentation: Slides](../slides/index.md#deck-09){ .md-button .md-button--primary }
-
 !!! example "Laboratory — Publish your work"
 
     **Deliverable:** A public country repository with README, licence, metadata, GitHub Pages site and citation file
@@ -44,7 +42,5 @@ Consolidation of the wall board kept open all week, and agreement on the follow-
 :material-account-group: **Ceremony** &nbsp;·&nbsp; Action Plan 4.2
 
 Closing remarks by the African Development Bank and AU STATAFRIC.
-
-[:material-presentation: Slides](../slides/index.md#deck-10){ .md-button .md-button--primary }
 
 

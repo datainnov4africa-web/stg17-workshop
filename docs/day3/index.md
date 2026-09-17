@@ -12,8 +12,6 @@
 
 Taxonomy of non-traditional sources — satellite imagery, crowdsourced measurement, scanner and transaction data, web scraping, sensors and IoT, citizen-generated data. Quality frameworks and coverage bias in non-probabilistic sources; access and partnership models with private data holders; ethics and confidentiality.
 
-[:material-presentation: Slides](../slides/index.md#deck-06){ .md-button .md-button--primary }
-
 
 !!! quote "10:30–10:45 — Coffee break"
 
@@ -41,8 +39,6 @@ Ookla: performance tiles at web-Mercator zoom 16 (about 611 m at the equator), q
 :material-presentation: **Talk** &nbsp;·&nbsp; Action Plan 4.2.3 · 4.2.2
 
 Fundamentals — ingestion, storage (data lake and lakehouse), distributed processing (batch versus streaming, Spark), indexing and search, orchestration, metadata and versioning.
-
-[:material-presentation: Slides](../slides/index.md#deck-07){ .md-button .md-button--primary }
 
 
 ### 14:45–15:30 &nbsp;·&nbsp; Hands-on part 1 — Ookla at Scale with Elasticsearch

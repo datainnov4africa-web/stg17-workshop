@@ -12,8 +12,6 @@
 
 Comment une équipe nationale transforme ce qu'elle a construit cette semaine en produit public durable — structure de dépôt et conventions de README, GitHub Pages, licences des données et du code, DOI et citation, métadonnées, versionnement et responsabilité de maintenance. Se conclut par l'offre d'appui continu du Secrétariat et la voie de soumission des travaux nationaux au catalogue de bonnes pratiques du STG17.
 
-[:material-presentation: Diapositives](../slides/index.md#deck-09){ .md-button .md-button--primary }
-
 !!! example "Laboratoire — Publier vos travaux"
 
     **Livrable :** Un dépôt pays public avec README, licence, métadonnées, site GitHub Pages et fichier de citation
@@ -44,7 +42,5 @@ Consolidation du mur resté ouvert toute la semaine, et accord sur les thèmes d
 :material-account-group: **Cérémonie** &nbsp;·&nbsp; Plan d’action 4.2
 
 Mots de clôture de la Banque africaine de développement et de l'UA STATAFRIC. Certificats et prochaines étapes au titre du Plan d'action STG17.
-
-[:material-presentation: Diapositives](../slides/index.md#deck-10){ .md-button .md-button--primary }
 
 

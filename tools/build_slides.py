@@ -210,6 +210,21 @@ def slugify(text: str) -> str:
     return re.sub(r"-+", "-", text)[:48]
 
 
+def publishing() -> bool:
+    """
+    Whether built decks belong in docs/ at all.
+
+    The workshop starts with none of its own: presentations are supplied per
+    session and dropped into docs/downloads/. This keeps the deck sources in the
+    repository while leaving them out of the site, so turning them back on is one
+    line of configuration rather than a recovery from git.
+    """
+    import yaml  # noqa: PLC0415
+
+    config = yaml.safe_load((ROOT / "config" / "workshop.yml").read_text(encoding="utf-8"))
+    return bool(config.get("site", {}).get("publish_slides", True))
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description="Build the STG17 reveal.js decks")
     parser.add_argument("--only", help="build only decks whose filename contains this")
@@ -225,6 +240,17 @@ def main() -> int:
             return 1
         CDN = "../../slides/vendor"
         print("Offline mode: decks will load reveal.js from slides/vendor/.")
+
+    if not publishing():
+        removed = 0
+        for stale in list(OUT.glob("*.html")) + list((OUT / "pptx").glob("*.pptx")):
+            stale.unlink()
+            removed += 1
+        print("site.publish_slides is false in config/workshop.yml — decks are not "
+              "published.")
+        print(f"Sources under slides/decks/ are untouched; {removed} built file(s) "
+              f"removed from docs/.")
+        return 0
 
     OUT.mkdir(parents=True, exist_ok=True)
     # The reveal theme needs the generated variables file next to it in docs/,
