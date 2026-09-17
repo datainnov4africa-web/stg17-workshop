@@ -95,9 +95,8 @@ result is publishable.
 ## 4 · Skills
 
 There is no formal prerequisite. Participants arrive with markedly different
-levels, and every notebook exists in a **guided** track (steps written, gaps to
-fill) and an **open** track (objective and data only). You choose at the start of
-each laboratory and may switch mid-way.
+levels, and the facilitation team works with the room throughout each
+laboratory.
 
 That said, you will get more out of the week if you are comfortable with:
 

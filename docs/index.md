@@ -52,8 +52,8 @@ each one. Generated from the agenda itself, so it cannot drift.
 
 <div markdown>
 ### :material-flask: The laboratories
-Thirteen hands-on laboratories, each in **English and French**, each in a
-**guided** and an **open** track, each parameterised by a single country variable.
+Thirteen hands-on laboratories, each in **English and French**, each with its
+environment, its deliverable and a documented fallback.
 
 [Laboratory register →](labs/index.md)
 </div>

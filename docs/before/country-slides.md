@@ -65,9 +65,7 @@ the session into follow-up projects under activities 3.1.1 and 3.1.2.
 ## An AfDB-styled template
 
 A ready-made deck in the workshop identity, with the six slides laid out and the
-prompts above written into the speaker notes:
-
-- [:material-download: Country template (EN)](../slides/index.md#deck-11)
-- [:material-download: Modèle pays (FR)](../slides/index.md#deck-11)
+prompts above written into the speaker notes, is not published here yet. Ask the
+facilitation team for it, in English or in French.
 
 Using it is optional. Using six slides is not.

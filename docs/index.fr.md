@@ -53,8 +53,8 @@ chacune. Générée depuis l'agenda lui-même : elle ne peut pas diverger.
 
 <div markdown>
 ### :material-flask: Les laboratoires
-Treize laboratoires pratiques, chacun en **anglais et en français**, chacun en
-piste **guidée** et **ouverte**, chacun paramétré par une seule variable pays.
+Treize laboratoires pratiques, chacun en **anglais et en français**, chacun avec
+son environnement, son livrable et un chemin de repli documenté.
 
 [Registre des laboratoires →](labs/index.md)
 </div>

@@ -72,9 +72,7 @@ activités 3.1.1 et 3.1.2.
 
 Une présentation prête à l'emploi à l'identité de l'atelier, avec les six
 diapositives mises en page et les consignes ci-dessus inscrites dans les notes de
-l'orateur :
-
-- [:material-download: Modèle pays (FR)](../slides/index.md#deck-11)
-- [:material-download: Country template (EN)](../slides/index.md#deck-11)
+l'orateur, n'est pas encore publiée ici. Demandez-la à l'équipe d'animation, en
+français ou en anglais.
 
 Son usage est optionnel. Les six diapositives ne le sont pas.

@@ -96,9 +96,8 @@ c'est la validation qui décide si le résultat est publiable.
 ## 4 · Compétences
 
 Il n'y a aucun prérequis formel. Les participants arrivent avec des niveaux très
-différents, et chaque carnet existe en piste **guidée** (étapes écrites, trous à
-combler) et en piste **ouverte** (objectif et données seulement). Vous choisissez
-au début de chaque laboratoire et pouvez basculer en cours de route.
+différents, et l'équipe d'animation accompagne la salle tout au long de chaque
+laboratoire.
 
 Cela dit, vous tirerez davantage de la semaine si vous êtes à l'aise avec :
 
