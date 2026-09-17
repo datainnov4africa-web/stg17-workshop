@@ -2,162 +2,147 @@
 
 # The laboratories
 
-13 laboratories carry the week. Each is specified below with the environment it needs, the artefact the team must produce, and the fallback the facilitation team applies when something breaks — which it will.
+13 laboratories carry the week. Each is described below with the environment it needs, the artefact the team must produce, and the fallback applied when something breaks — which it will.
 
-!!! tip "Two tracks in every laboratory"
-
-    Participants arrive with markedly different levels. Each notebook therefore exists in two versions: a **guided** version in which the analytical steps are written and the participant fills the gaps, and an **open** version containing only the objective and the data. Teams choose at the start of each laboratory and may switch. The deliverable is identical either way, which keeps the Friday presentations comparable.
+A laboratory's slides and notebook are not on this page: they sit on the day page, beside the session that runs it. Each laboratory below links there.
 
 ## Day 1
 
 ### RAG assistant
 
-| | |
-|---|---|
-| **Team** | pairs |
-| **Default country** | `CIV` — change `COUNTRY_ISO3` to your own |
-| **Environment and data** | Python in Colab, Kaggle or local; scikit-learn for the word-matching retriever, which needs no download; sentence-transformers optional for the meaning-matching one; no vector database — the corpus is small enough that one is not warranted |
-| **Team deliverable** | A transcript of answers with the exact passages behind each one, and a retrieval evaluation separating retrieval failures from generation failures |
-| **Fallback** | A fictional five-document corpus ships with the toolkit, so no team is blocked by uncleared publications; without any model provider, the retrieval half of the laboratory still runs — and that is where most RAG problems are |
-| **Earth Engine variant** | — |
+:material-calendar-clock: **Day 1 · 14:30–15:30** &nbsp;·&nbsp; in pairs &nbsp;·&nbsp; [go to the session](../day1/index.md#14301530-hands-on-part-1-retrieval-augmented-generation)
+
+**Environment and data** — Python in Colab, Kaggle or local; scikit-learn for the word-matching retriever, which needs no download; sentence-transformers optional for the meaning-matching one; no vector database — the corpus is small enough that one is not warranted
+
+**What the team produces** — A transcript of answers with the exact passages behind each one, and a retrieval evaluation separating retrieval failures from generation failures
+
+**If something breaks** — A fictional five-document corpus ships with the toolkit, so no team is blocked by uncleared publications; without any model provider, the retrieval half of the laboratory still runs — and that is where most RAG problems are
 
 ### From RAG to agent
 
-| | |
-|---|---|
-| **Team** | pairs |
-| **Default country** | `CIV` — change `COUNTRY_ISO3` to your own |
-| **Environment and data** | Same environment as the RAG laboratory; four tools — retrieval, a document list, a guarded calculator and one that writes to disk. A JSON text protocol rather than native function calling, so the request-to-execution gap stays visible and the exercise runs on any provider including a local model |
-| **Team deliverable** | An audit log recording every tool the model asked for, whether policy allowed it, and the raw reply behind each request — plus the note the agent wrote once a policy permitted it |
-| **Fallback** | A scripted model replays fixed replies, so the loop, the approval gate, the error recovery and the audit log are all exercised with no API key. That is deliberate rather than a consolation path — those four things are what an office writes and owns; the model is what it rents |
-| **Earth Engine variant** | — |
+:material-calendar-clock: **Day 1 · 15:30–16:45** &nbsp;·&nbsp; in pairs &nbsp;·&nbsp; [go to the session](../day1/index.md#15301645-hands-on-part-2-from-rag-to-agent)
+
+**Environment and data** — Same environment as the RAG laboratory; four tools — retrieval, a document list, a guarded calculator and one that writes to disk. A JSON text protocol rather than native function calling, so the request-to-execution gap stays visible and the exercise runs on any provider including a local model
+
+**What the team produces** — An audit log recording every tool the model asked for, whether policy allowed it, and the raw reply behind each request — plus the note the agent wrote once a policy permitted it
+
+**If something breaks** — A scripted model replays fixed replies, so the loop, the approval gate, the error recovery and the audit log are all exercised with no API key. That is deliberate rather than a consolation path — those four things are what an office writes and owns; the model is what it rents
 
 ## Day 2
 
 ### Document to dashboard
 
-| | |
-|---|---|
-| **Team** | solo |
-| **Default country** | `CIV` — change `COUNTRY_ISO3` to your own |
-| **Environment and data** | LLM API; Python or plain HTML/JS; the participant's own national publication; GitHub Pages |
-| **Team deliverable** | A public dashboard URL and the extraction-verification table comparing output against the source |
-| **Fallback** | A sample publication and a static dashboard template are supplied; publishing can be done from the template alone |
-| **Earth Engine variant** | — |
+:material-calendar-clock: **Day 2 · 10:45–12:30** &nbsp;·&nbsp; individually &nbsp;·&nbsp; [go to the session](../day2/index.md#10451230-hands-on-from-statistical-document-to-public-dashboard)
+
+**Environment and data** — LLM API; Python or plain HTML/JS; the participant's own national publication; GitHub Pages
+
+**What the team produces** — A public dashboard URL and the extraction-verification table comparing output against the source
+
+**If something breaks** — A sample publication and a static dashboard template are supplied; publishing can be done from the template alone
 
 ### Provider benchmark
 
-| | |
-|---|---|
-| **Team** | solo |
-| **Default country** | `CIV` — change `COUNTRY_ISO3` to your own |
-| **Environment and data** | Two API endpoints including Groq; one shared spreadsheet |
-| **Team deliverable** | Three rows in the shared comparison sheet: latency, cost per thousand documents, quality score |
-| **Fallback** | The facilitator runs the benchmark live from the podium if participant keys fail |
-| **Earth Engine variant** | — |
+:material-calendar-clock: **Day 2 · 14:45–15:30** &nbsp;·&nbsp; individually &nbsp;·&nbsp; [go to the session](../day2/index.md#14451530-choosing-your-engine-speed-cost-and-sovereignty-working-with-groq)
+
+**Environment and data** — Two API endpoints including Groq; one shared spreadsheet
+
+**What the team produces** — Three rows in the shared comparison sheet: latency, cost per thousand documents, quality score
+
+**If something breaks** — The facilitator runs the benchmark live from the podium if participant keys fail
 
 ### Toolkit stations
 
-| | |
-|---|---|
-| **Team** | stations |
-| **Default country** | `CIV` — change `COUNTRY_ISO3` to your own |
-| **Environment and data** | Varies by station; all accessible from a browser |
-| **Team deliverable** | Two finished artefacts per participant, one from each chosen station |
-| **Fallback** | Stations are independent — a station that fails costs only itself |
-| **Earth Engine variant** | — |
+:material-calendar-clock: **Day 2 · 15:30–16:45** &nbsp;·&nbsp; rotating stations &nbsp;·&nbsp; [go to the session](../day2/index.md#15301645-hands-on-one-model-many-jobs-an-llm-toolkit-for-statisticians)
+
+**Environment and data** — Varies by station; all accessible from a browser
+
+**What the team produces** — Two finished artefacts per participant, one from each chosen station
+
+**If something breaks** — Stations are independent — a station that fails costs only itself
 
 ## Day 3
 
 ### Ookla and WorldPop
 
-| | |
-|---|---|
-| **Team** | teams |
-| **Default country** | `TUN` — change `COUNTRY_ISO3` to your own |
-| **Environment and data** | Python with geopandas and pyarrow; Ookla parquet tiles and WorldPop rasters mirrored locally; national administrative boundaries |
-| **Team deliverable** | A population-weighted download-speed and latency indicator per first-level administrative region, one map and one quarterly series |
-| **Fallback** | Pre-clipped country extracts are prepared in advance for every participating country |
-| **Earth Engine variant** | — |
+:material-calendar-clock: **Day 3 · 10:45–12:30** &nbsp;·&nbsp; in teams &nbsp;·&nbsp; [go to the session](../day3/index.md#10451230-hands-on-ookla-speedtest-open-data-and-worldpop)
+
+**Environment and data** — Python with geopandas and pyarrow; Ookla parquet tiles and WorldPop rasters mirrored locally; national administrative boundaries
+
+**What the team produces** — A population-weighted download-speed and latency indicator per first-level administrative region, one map and one quarterly series
+
+**If something breaks** — Pre-clipped country extracts are prepared in advance for every participating country
 
 ### Elasticsearch
 
-| | |
-|---|---|
-| **Team** | teams |
-| **Default country** | `TUN` — change `COUNTRY_ISO3` to your own |
-| **Environment and data** | Pre-provisioned and pre-loaded cluster, one index per country, Kibana available |
-| **Team deliverable** | Five saved queries and a timing comparison against the morning's pandas approach |
-| **Fallback** | If the cluster is unreachable, the same exercise runs locally in DuckDB with an identical query set |
-| **Earth Engine variant** | — |
+:material-calendar-clock: **Day 3 · 14:45–15:30** &nbsp;·&nbsp; in teams &nbsp;·&nbsp; [go to the session](../day3/index.md#14451530-hands-on-part-1-ookla-at-scale-with-elasticsearch)
+
+**Environment and data** — Pre-provisioned and pre-loaded cluster, one index per country, Kibana available
+
+**What the team produces** — Five saved queries and a timing comparison against the morning's pandas approach
+
+**If something breaks** — If the cluster is unreachable, the same exercise runs locally in DuckDB with an identical query set
 
 ### Search-driven exploration
 
-| | |
-|---|---|
-| **Team** | teams |
-| **Default country** | `TUN` — change `COUNTRY_ISO3` to your own |
-| **Environment and data** | The same cluster, or the DuckDB fallback |
-| **Team deliverable** | A search-driven exploration of connectivity by region and quarter, with the timing conclusion |
-| **Fallback** | Identical query set runs in DuckDB on the same parquet files |
-| **Earth Engine variant** | — |
+:material-calendar-clock: **Day 3 · 15:30–16:45** &nbsp;·&nbsp; in teams &nbsp;·&nbsp; [go to the session](../day3/index.md#15301645-hands-on-part-2-search-driven-exploration)
+
+**Environment and data** — The same cluster, or the DuckDB fallback
+
+**What the team produces** — A search-driven exploration of connectivity by region and quarter, with the timing conclusion
+
+**If something breaks** — Identical query set runs in DuckDB on the same parquet files
 
 ## Day 4
 
 ### NTL collect and explore
 
-| | |
-|---|---|
-| **Team** | teams |
-| **Default country** | `CIV` — change `COUNTRY_ISO3` to your own |
-| **Environment and data** | Python with rasterio and h5py; VIIRS monthly and annual subsets mirrored locally; Earth Engine account optional |
-| **Team deliverable** | A documented national raster subset and an inventory of the artefacts present in that country |
-| **Fallback** | Pre-clipped national subsets are prepared for every participating country; the Earth Engine variant downloads nothing at all |
-| **Earth Engine variant** | — |
+:material-calendar-clock: **Day 4 · 09:30–10:30** &nbsp;·&nbsp; in teams &nbsp;·&nbsp; [go to the session](../day4/index.md#09301030-hands-on-part-1-collect)
+
+**Environment and data** — Python with rasterio and h5py; VIIRS monthly and annual subsets mirrored locally; Earth Engine account optional
+
+**What the team produces** — A documented national raster subset and an inventory of the artefacts present in that country
+
+**If something breaks** — Pre-clipped national subsets are prepared for every participating country; the Earth Engine variant downloads nothing at all
 
 ### NTL explore and understand
 
-| | |
-|---|---|
-| **Team** | teams |
-| **Default country** | `CIV` — change `COUNTRY_ISO3` to your own |
-| **Environment and data** | Same notebook as part 1 — steps 7 and 8 |
-| **Team deliverable** | The artefact inventory for your country, with evidence |
-| **Fallback** | The reference country (Côte d'Ivoire) is prepared end to end |
-| **Earth Engine variant** | — |
+:material-calendar-clock: **Day 4 · 10:45–12:30** &nbsp;·&nbsp; in teams &nbsp;·&nbsp; [go to the session](../day4/index.md#10451230-hands-on-part-2-explore-and-understand)
+
+**Environment and data** — Same notebook as part 1 — steps 7 and 8
+
+**What the team produces** — The artefact inventory for your country, with evidence
+
+**If something breaks** — The reference country (Côte d'Ivoire) is prepared end to end
 
 ### NTL analysis
 
-| | |
-|---|---|
-| **Team** | teams |
-| **Default country** | `CIV` — change `COUNTRY_ISO3` to your own |
-| **Environment and data** | rasterstats or exactextract; the panel produced in the morning |
-| **Team deliverable** | Zonal statistics table, time series, change detection between two periods, and the maps |
-| **Fallback** | One reference country is prepared end to end and handed to any team whose national data proves incomplete |
-| **Earth Engine variant** | — |
+:material-calendar-clock: **Day 4 · 14:00–15:30** &nbsp;·&nbsp; in teams &nbsp;·&nbsp; [go to the session](../day4/index.md#14001530-hands-on-part-3-analysis)
+
+**Environment and data** — rasterstats or exactextract; the panel produced in the morning
+
+**What the team produces** — Zonal statistics table, time series, change detection between two periods, and the maps
+
+**If something breaks** — One reference country is prepared end to end and handed to any team whose national data proves incomplete
 
 ### NTL validation
 
-| | |
-|---|---|
-| **Team** | teams |
-| **Default country** | `CIV` — change `COUNTRY_ISO3` to your own |
-| **Environment and data** | The official subnational indicator brought by the team |
-| **Team deliverable** | Correlation against the official indicator, and a written limitations statement |
-| **Fallback** | A reference official indicator is supplied for the reference country |
-| **Earth Engine variant** | — |
+:material-calendar-clock: **Day 4 · 15:30–16:30** &nbsp;·&nbsp; in teams &nbsp;·&nbsp; [go to the session](../day4/index.md#15301630-hands-on-part-4-validation)
+
+**Environment and data** — The official subnational indicator brought by the team
+
+**What the team produces** — Correlation against the official indicator, and a written limitations statement
+
+**If something breaks** — A reference official indicator is supplied for the reference country
 
 ## Day 5
 
 ### Publish your work
 
-| | |
-|---|---|
-| **Team** | teams |
-| **Default country** | `CIV` — change `COUNTRY_ISO3` to your own |
-| **Environment and data** | A GitHub account and the country-template repository |
-| **Team deliverable** | A public country repository with README, licence, metadata, GitHub Pages site and citation file |
-| **Fallback** | The template can be published as-is and populated afterwards |
-| **Earth Engine variant** | — |
+:material-calendar-clock: **Day 5 · 09:00–10:30** &nbsp;·&nbsp; in teams &nbsp;·&nbsp; [go to the session](../day5/index.md#09001030-assisting-countries-in-publishing-their-work)
+
+**Environment and data** — A GitHub account and the country-template repository
+
+**What the team produces** — A public country repository with README, licence, metadata, GitHub Pages site and citation file
+
+**If something breaks** — The template can be published as-is and populated afterwards
 

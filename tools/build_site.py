@@ -26,6 +26,7 @@ from __future__ import annotations
 
 import re
 import sys
+import unicodedata
 from pathlib import Path
 
 import naming
@@ -86,6 +87,48 @@ def load_yaml(path: Path):
 
 def pick(entry: dict, key: str, lang: str, default: str = "") -> str:
     return entry.get(f"{key}_{lang}", entry.get(f"{key}_en", default))
+
+
+#: How a team is composed, as a phrase. The register stores a bare token, and
+#: "Team | teams" told a reader nothing at all.
+TEAM_PHRASE = {
+    "solo":     ("individually", "individuellement"),
+    "pairs":    ("in pairs", "en binômes"),
+    "teams":    ("in teams", "en équipes"),
+    "stations": ("rotating stations", "en ateliers tournants"),
+}
+
+
+def anchor(heading: str) -> str:
+    """
+    The id Material will give a heading, recomputed so a link can point at it.
+
+    Recomputed rather than read, because the id is assigned inside mkdocs at
+    render time and the laboratory register is written before that. The rule is
+    python-markdown's: fold accents, drop punctuation with NO separator, so
+    `d'ouverture` becomes `douverture` and `14:30–15:30` becomes `14301530`, then
+    turn runs of whitespace into a single hyphen.
+
+    A rule reproduced is a rule that can drift, so every link built from this is
+    checked against the rendered pages before the change is committed — see the
+    session note in maintainer/. Both languages matter here: `fmt_time` writes
+    `14h30` in French, which makes the French anchor a different string.
+    """
+    text = heading.replace("&nbsp;", " ")
+    text = unicodedata.normalize("NFKD", text)
+    text = "".join(c for c in text if not unicodedata.combining(c))
+    text = re.sub(r"[^\w\s-]", "", text.lower())
+    return re.sub(r"[-\s]+", "-", text).strip("-")
+
+
+def lab_sessions(agenda: dict) -> dict:
+    """Laboratory id -> the day number and the session that actually runs it."""
+    out = {}
+    for day in agenda["days"]:
+        for session in day["sessions"]:
+            if session.get("lab"):
+                out.setdefault(session["lab"], (day["n"], session))
+    return out
 
 
 def fmt_time(value: str, lang: str) -> str:
@@ -282,10 +325,10 @@ def render_week(agenda: dict, labs: dict, lang: str, config: dict) -> str:
     lines += [
         "# " + ("L'agenda de la semaine" if fr else "The week at a glance"),
         "",
-        ("*Cinq jours, du concept au dépôt publié. Chaque séance renvoie à sa page "
-         "de jour, à sa présentation et à son laboratoire.*" if fr else
-         "*Five days, from the concepts to a published repository. Every session links "
-         "to its day page, its deck and its laboratory.*"),
+        ("*Cinq jours, du concept au dépôt publié. Chaque titre de séance mène à "
+         "cette séance sur la page du jour, où se trouvent ses supports.*" if fr else
+         "*Five days, from the concepts to a published repository. Every session title "
+         "leads to that session on its day page, where its material sits.*"),
         "",
     ]
 
@@ -301,21 +344,23 @@ def render_week(agenda: dict, labs: dict, lang: str, config: dict) -> str:
             f"*{pick(day, 'weekday', lang)} · {pick(day, 'strap', lang)}* "
             f"— [{'page détaillée' if fr else 'day page'} →](../day{n}/index.md)",
             "",
-            ("| Heure | Séance | Type | Ressource |" if fr else
-             "| Time | Session | Kind | Resource |"),
-            "|---|---|---|---|",
+            ("| Heure | Séance | Type |" if fr else
+             "| Time | Session | Kind |"),
+            "|---|---|---|",
         ]
         for s in day["sessions"]:
             mode = s.get("mode", "talk")
             kind = icon.get(mode, ":material-circle-small:")
-            link = "—"
-            if s.get("deck"):
-                link = (f"[{'Diapositives' if fr else 'Slides'}]"
-                        f"(../slides/index.md#deck-{s['deck']})")
-            elif mode == "lab":
-                link = f"[{'Laboratoires' if fr else 'Laboratories'}](../labs/index.md)"
+            # The title carries the link, to the session itself on the day page,
+            # where its slides, its notebook and its laboratory note already sit.
+            # The fourth column this replaces held links to #deck-01..#deck-11,
+            # anchors no page has carried since the decks stopped being generated
+            # here; a dash on fifteen rows; and the same register link repeated
+            # on the thirteen others. One destination per row beats that.
+            heading = f"{fmt_time(s['time'], lang)} &nbsp;·&nbsp; {pick(s, 'title', lang)}"
             title = pick(s, "title", lang).replace("|", "·")
-            lines.append(f"| {fmt_time(s['time'], lang)} | {title} | {kind} | {link} |")
+            lines.append(f"| {fmt_time(s['time'], lang)} | "
+                         f"[{title}](../day{n}/index.md#{anchor(heading)}) | {kind} |")
         lines.append("")
 
     lines += [
@@ -331,36 +376,40 @@ def render_week(agenda: dict, labs: dict, lang: str, config: dict) -> str:
 
 
 def render_labs(agenda: dict, lang: str, config: dict) -> str:
+    """
+    The laboratory register: what each one needs, produces, and falls back on.
+
+    Three things this page used to claim are gone, because none of them was true
+    any more once the notebooks stopped being generated here and started being
+    supplied: a "guided and open version" of every notebook, which does not
+    exist; a `COUNTRY_ISO3` variable to change, which no supplied notebook
+    contains; and an "Earth Engine variant" row that read "—" thirteen times.
+
+    What replaces them is the one thing the page was missing: the way back to
+    the session that runs the laboratory.
+    """
     fr = lang == "fr"
     labs = agenda["labs"]
-    github = config.get("github", {})
+    sessions = lab_sessions(agenda)
     lines = [GENERATED[lang], ""]
 
     lines += [
         "# " + ("Les laboratoires" if fr else "The laboratories"),
         "",
-        (f"{len(labs)} laboratoires portent la semaine. Chacun est spécifié ci-dessous avec "
+        (f"{len(labs)} laboratoires portent la semaine. Chacun est décrit ci-dessous avec "
          "l'environnement qu'il exige, la production que l'équipe doit livrer, et le chemin de "
-         "repli appliqué par l'équipe d'animation quand quelque chose casse — ce qui arrivera."
+         "repli appliqué quand quelque chose casse — ce qui arrivera."
          if fr else
-         f"{len(labs)} laboratories carry the week. Each is specified below with the environment it "
-         "needs, the artefact the team must produce, and the fallback the facilitation team "
-         "applies when something breaks — which it will."),
+         f"{len(labs)} laboratories carry the week. Each is described below with the environment "
+         "it needs, the artefact the team must produce, and the fallback applied when something "
+         "breaks — which it will."),
         "",
-        ("!!! tip \"Deux pistes dans chaque laboratoire\"\n\n"
-         "    Les participants arrivent avec des niveaux très différents. Chaque carnet existe "
-         "donc en deux versions : une version **guidée**, où les étapes analytiques sont écrites "
-         "et où le participant comble les trous, et une version **ouverte**, ne contenant que "
-         "l'objectif et les données. Les équipes choisissent au début de chaque laboratoire et "
-         "peuvent basculer. Le livrable est identique dans les deux cas, ce qui garde les "
-         "présentations du vendredi comparables."
+        ("Les supports et le carnet d'un laboratoire ne sont pas sur cette page : ils sont sur "
+         "la page du jour, à côté de la séance qui le porte. Chaque laboratoire ci-dessous y "
+         "renvoie."
          if fr else
-         "!!! tip \"Two tracks in every laboratory\"\n\n"
-         "    Participants arrive with markedly different levels. Each notebook therefore exists "
-         "in two versions: a **guided** version in which the analytical steps are written and the "
-         "participant fills the gaps, and an **open** version containing only the objective and "
-         "the data. Teams choose at the start of each laboratory and may switch. The deliverable "
-         "is identical either way, which keeps the Friday presentations comparable."),
+         "A laboratory's slides and notebook are not on this page: they sit on the day page, "
+         "beside the session that runs it. Each laboratory below links there."),
         "",
     ]
 
@@ -371,28 +420,38 @@ def render_labs(agenda: dict, lang: str, config: dict) -> str:
     for day_n in sorted(by_day):
         lines += [f"## {'Jour' if fr else 'Day'} {day_n}", ""]
         for lab_id, lab in by_day[day_n]:
-            lines += [
-                f"### {pick(lab, 'title', lang)}",
-                "",
-                f"| | |",
-                f"|---|---|",
-                f"| **{'Équipe' if fr else 'Team'}** | {pick(lab, 'team', lang)} |",
-                f"| **{'Pays par défaut' if fr else 'Default country'}** | `{lab.get('country', 'CIV')}` "
-                + ("— changez `COUNTRY_ISO3` pour le vôtre |" if fr
-                   else "— change `COUNTRY_ISO3` to your own |"),
-                f"| **{'Environnement et données' if fr else 'Environment and data'}** | "
-                + pick(lab, "env", lang) + " |",
-                f"| **{'Livrable de l’équipe' if fr else 'Team deliverable'}** | "
-                + pick(lab, "deliverable", lang) + " |",
-                f"| **{'Repli' if fr else 'Fallback'}** | " + pick(lab, "fallback", lang) + " |",
-                f"| **{'Variante Earth Engine' if fr else 'Earth Engine variant'}** | "
-                + (("oui — aucun téléchargement" if fr else "yes — nothing downloaded")
-                   if lab.get("gee") else "—") + " |",
+            lines += [f"### {pick(lab, 'title', lang)}", ""]
+
+            # Where and how it is run: the day, the slot, the team composition,
+            # and a link straight to the session.
+            team = TEAM_PHRASE.get(lab.get("team_en", ""),
+                                   (pick(lab, "team", lang),) * 2)[1 if fr else 0]
+            where = sessions.get(lab_id)
+            if where:
+                session_day, session = where
+                heading = (f"{fmt_time(session['time'], lang)} &nbsp;·&nbsp; "
+                           f"{pick(session, 'title', lang)}")
+                link = f"../day{session_day}/index.md#{anchor(heading)}"
+                lines += [
+                    f":material-calendar-clock: **{'Jour' if fr else 'Day'} {session_day} · "
+                    f"{fmt_time(session['time'], lang)}** &nbsp;·&nbsp; {team} &nbsp;·&nbsp; "
+                    f"[{'voir la séance' if fr else 'go to the session'}]({link})",
                     "",
+                ]
+            else:
+                lines += [f":material-account-group: {team}", ""]
+
+            lines += [
+                f"**{'Environnement et données' if fr else 'Environment and data'}** — "
+                + pick(lab, "env", lang),
+                "",
+                f"**{'Ce que produit l’équipe' if fr else 'What the team produces'}** — "
+                + pick(lab, "deliverable", lang),
+                "",
+                f"**{'En cas de panne' if fr else 'If something breaks'}** — "
+                + pick(lab, "fallback", lang),
+                "",
             ]
-            links = ""  # notebooks are shown on the day page, beside their session
-            if links:
-                lines += [links, ""]
 
     return "\n".join(lines) + "\n"
 
