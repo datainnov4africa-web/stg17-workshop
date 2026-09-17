@@ -113,10 +113,10 @@ def download_links(session: dict, day: dict, lang: str) -> str:
     import naming
 
     found = []
-    for kind, tag, name in naming.supplied(ROOT, session, day["n"]):
-        icon = dict(naming.KINDS)[kind]
-        found.append(f"[{icon} {kind.upper()} · {tag}]"
-                     f"(../downloads/Day{day['n']}/{name})" "{ .md-button }")
+    for entry in naming.supplied(ROOT, session, day["n"]):
+        icon = dict(naming.KINDS)[entry["kind"]]
+        found.append(f"[{icon} {naming.button_text(entry)}]"
+                     f"(../downloads/Day{day['n']}/{entry['name']})" "{ .md-button }")
     return " ".join(found)
 
 
@@ -124,37 +124,46 @@ def notebook_links(lab: dict, lang: str, github: dict) -> str:
     """
     Colab badges and repository links for one laboratory, in the active language.
 
-    Only emitted for laboratories whose notebooks actually exist. A badge that
+    A laboratory may carry several notebooks: `notebooks:` takes a list, and
+    `notebook:` remains valid for the common case of one. Each produces a guided
+    and an open variant, so a laboratory with two notebooks shows four badges —
+    which is why the notebook's own name is printed above its pair as soon as
+    there is more than one. With a single notebook the heading would be noise.
+
+    Nothing is emitted unless the laboratory is `status: ready`. A badge that
     404s on Day 4 morning is worse than no badge, so the register shows the
     honest status instead.
     """
-    stem = lab.get("notebook")
-    if not stem or lab.get("status") != "ready":
+    stems = lab.get("notebooks") or ([lab["notebook"]] if lab.get("notebook") else [])
+    if not stems or lab.get("status") != "ready":
         return ""
 
     org, repo, branch = github.get("org"), github.get("repo"), github.get("branch", "main")
     day = lab.get("day")
-    out = []
     labels = {
         "en": ("guided", "open", "Earth Engine variant"),
         "fr": ("guidée", "ouverte", "variante Earth Engine"),
     }[lang]
 
-    for suffix, label in ((f"_{lang.upper()}", labels[0]), (f"_{lang.upper()}_open", labels[1])):
-        path = f"notebooks/day{day}/{stem}{suffix}.ipynb"
+    def badge(path: str, label: str) -> str:
         colab = f"https://colab.research.google.com/github/{org}/{repo}/blob/{branch}/{path}"
-        out.append(f"[![Colab]({{{{ colab_badge }}}})]({colab}) **{label}** &nbsp; "
-                   f"[:material-github:](https://github.com/{org}/{repo}/blob/{branch}/{path})")
+        return (f"[![Colab]({{{{ colab_badge }}}})]({colab}) **{label}** &nbsp; "
+                f"[:material-github:](https://github.com/{org}/{repo}/blob/{branch}/{path})")
 
-    gee_stem = lab.get("gee_notebook")
-    if gee_stem:
-        path = f"notebooks/day{day}/{gee_stem}_{lang.upper()}.ipynb"
-        colab = f"https://colab.research.google.com/github/{org}/{repo}/blob/{branch}/{path}"
-        out.append(f"[![Colab]({{{{ colab_badge }}}})]({colab}) **{labels[2]}** &nbsp; "
-                   f"[:material-github:](https://github.com/{org}/{repo}/blob/{branch}/{path})")
+    out = []
+    for stem in stems:
+        if len(stems) > 1:
+            out.append(f"**`{stem}`**")
+        for suffix, label in ((f"_{lang.upper()}", labels[0]),
+                              (f"_{lang.upper()}_open", labels[1])):
+            out.append(badge(f"notebooks/day{day}/{stem}{suffix}.ipynb", label))
+
+    for gee_stem in (lab.get("gee_notebooks")
+                     or ([lab["gee_notebook"]] if lab.get("gee_notebook") else [])):
+        out.append(badge(f"notebooks/day{day}/{gee_stem}_{lang.upper()}.ipynb", labels[2]))
 
     return "\n\n".join(out).replace("{{ colab_badge }}",
-                                    "https://colab.research.google.com/assets/colab-badge.svg")
+                                     "https://colab.research.google.com/assets/colab-badge.svg")
 
 
 # ---------------------------------------------------------------------------

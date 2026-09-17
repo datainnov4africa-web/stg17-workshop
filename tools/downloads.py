@@ -14,16 +14,23 @@ HOW A PRESENTATION IS SUPPLIED
 
     docs/downloads/Day1/1400_ai-infrastructure_EN-inactif.pdf
 
-Name your file exactly the same, minus `-inactif`, and drop it in that folder:
-
-    docs/downloads/Day1/1400_ai-infrastructure_EN.pdf
-
+Name your file exactly the same, minus `-inactif`, and drop it in that folder.
 The button appears on the day page at the next build. No file to edit, no name to
-invent, no id to copy. `.pptx` works the same way — rename the extension.
+invent. `.pptx` works the same way — rename the extension.
 
-A placeholder is never published as a download: `naming.supplied()` skips any
-name carrying the marker, and skips empty files, so an accidentally emptied file
-cannot produce a dead button either.
+Several files for one session: add a number, and the site shows one button each.
+
+    1400_ai-infrastructure_EN-1.pdf     ->  "PDF · EN (1)"
+    1400_ai-infrastructure_EN-2.pdf     ->  "PDF · EN (2)"
+
+A label after the number replaces the figure on the button, which is worth it
+when the two are not interchangeable:
+
+    1400_ai-infrastructure_EN-2-exercises.pdf   ->  "PDF · EN · exercises"
+
+This command reports the case the workflow makes easy to get wrong: an
+unnumbered file left beside a numbered one, which is neither an error nor what
+anybody meant.
 """
 
 from __future__ import annotations
@@ -51,13 +58,13 @@ def create_placeholders(agenda: dict) -> tuple[int, int]:
         folder = naming.day_dir(ROOT, day["n"])
         folder.mkdir(parents=True, exist_ok=True)
         for session in day["sessions"]:
+            supplied = {f["kind"] + f["tag"] for f in naming.supplied(ROOT, session, day["n"])}
             for kind, _icon in naming.KINDS:
                 for tag in naming.TAGS:
-                    real = folder / naming.filename(session, tag, kind)
-                    mark = folder / naming.filename(session, tag, kind, placeholder=True)
-                    if real.is_file():
+                    if kind + tag in supplied:
                         kept += 1          # already supplied — leave it alone
                         continue
+                    mark = folder / naming.filename(session, tag, kind, placeholder=True)
                     if not mark.exists():
                         mark.touch()
                         made += 1
@@ -69,24 +76,33 @@ def print_notebooks(session: dict, labs: dict, day: dict) -> None:
     The notebooks a laboratory session expects, and whether they exist.
 
     Notebooks work the other way round from a presentation: they are generated
-    from one master by `tools/build_notebooks.py`, so that English, French,
-    guided and open cannot drift apart. An .ipynb copied into notebooks/dayN/ by
-    hand is overwritten on the next build.
+    from a master by `tools/build_notebooks.py`, so that English, French, guided
+    and open cannot drift apart. An .ipynb copied into notebooks/dayN/ by hand is
+    overwritten on the next build. A laboratory may declare several with
+    `notebooks:`; `notebook:` stays valid for the usual single one.
     """
     lab = labs.get(session.get("lab", ""))
-    if not lab or not lab.get("notebook"):
+    if not lab:
+        return
+    stems = lab.get("notebooks") or ([lab["notebook"]] if lab.get("notebook") else [])
+    if not stems:
         return
 
     day_n = lab.get("day", day["n"])
-    stems = [f"{lab['notebook']}_{tag}" for tag in ("EN", "FR", "EN_open", "FR_open")]
-    if lab.get("gee_notebook"):
-        stems += [f"{lab['gee_notebook']}_{tag}" for tag in ("EN", "FR")]
-
     folder = ROOT / "notebooks" / f"day{day_n}"
-    here = [s for s in stems if (folder / f"{s}.ipynb").exists()]
+    wanted = [f"{s}_{tag}" for s in stems for tag in ("EN", "FR", "EN_open", "FR_open")]
+    wanted += [f"{g}_{tag}"
+               for g in (lab.get("gee_notebooks")
+                         or ([lab["gee_notebook"]] if lab.get("gee_notebook") else []))
+               for tag in ("EN", "FR")]
+    here = [s for s in wanted if (folder / f"{s}.ipynb").exists()]
+
     status = lab.get("status", "?")
     flag = "" if status == "ready" else "   <- no Colab badge until status: ready"
-    print(f"        notebooks: {len(here)}/{len(stems)} present, status {status}{flag}")
+    print(f"        notebooks: {len(here)}/{len(wanted)} present in notebooks/day{day_n}/, "
+          f"status {status}{flag}")
+    if len(stems) > 1:
+        print(f"                   {len(stems)} notebooks: {', '.join(stems)}")
 
 
 def main() -> int:
@@ -112,18 +128,19 @@ def main() -> int:
         print("    python tools/build_site.py\n")
         return 0
 
-    total_supplied, gaps = 0, 0
+    total, gaps, warnings = 0, 0, []
     for day in agenda["days"]:
         if args.day and day["n"] != args.day:
             continue
-        folder = naming.day_dir(ROOT, day["n"])
         rows = []
         for session in day["sessions"]:
             have = naming.supplied(ROOT, session, day["n"])
-            total_supplied += len(have)
+            total += len(have)
             wanted = session.get("mode") in EXPECTED_MODES
             if not have and wanted:
                 gaps += 1
+            for problem in naming.ambiguous(have):
+                warnings.append(f"Day {day['n']} · {session['time']} — {problem}")
             if args.missing and have:
                 continue
             rows.append((session, have, wanted))
@@ -131,19 +148,24 @@ def main() -> int:
         if not rows:
             continue
         print(f"\n--- Day {day['n']} · {day['title_en'][:56]}")
-        print(f"    {folder}")
+        print(f"    {naming.day_dir(ROOT, day['n'])}")
         for session, have, wanted in rows:
             mark = "OK" if have else ("!!" if wanted else "· ")
             print(f" {mark} {session['time']:<13} {session.get('mode','?'):<10} "
                   f"{session['title_en'][:44]}")
-            if have:
-                print(f"        supplied: {', '.join(n for _k, _t, n in have)}")
-            else:
+            for f in have:
+                print(f"        {f['name']}   ->  {naming.button_text(f)}")
+            if not have:
                 print(f"        name your file: {naming.stem(session)}_EN.pdf"
-                      f"   (or _FR, or .pptx)")
+                      f"   (or _FR, or .pptx, or -1 / -2 for several)")
             print_notebooks(session, labs, day)
 
-    print(f"\n{total_supplied} presentation file(s) supplied · "
+    if warnings:
+        print("\n[!] Numbering to sort out:")
+        for line in warnings:
+            print(f"      {line}")
+
+    print(f"\n{total} presentation file(s) supplied · "
           f"{gaps} talk-type session(s) with nothing yet")
     print("After dropping a file:  python tools/build_site.py")
     return 0

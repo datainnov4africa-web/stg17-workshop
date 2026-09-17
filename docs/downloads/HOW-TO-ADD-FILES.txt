@@ -10,14 +10,10 @@ Short version: find the placeholder, rename your file to match it minus
 
 One per day of the workshop:
 
-    docs/downloads/Day1/
-    docs/downloads/Day2/
-    docs/downloads/Day3/
-    docs/downloads/Day4/
-    docs/downloads/Day5/
+    docs/downloads/Day1/  Day2/  Day3/  Day4/  Day5/
 
-Inside each, one empty placeholder per session, per language, per format. They
-are sorted by start time, so the folder reads in the order of the day.
+Inside each, one empty placeholder per session, per language, per format, sorted
+by start time — so the folder reads in the order of the day.
 
 
 2. ACTIVATING A FILE
@@ -29,23 +25,43 @@ yet, and the site shows no button for it.
     1400_ai-infrastructure_EN-inactif.pdf     <- no file yet, link is dead
     1400_ai-infrastructure_EN.pdf             <- supplied, link is live
 
-So: take the presentation you prepared, name it exactly like the placeholder but
+Take the presentation you prepared, name it exactly like the placeholder but
 WITHOUT "-inactif", and put it in the same Day folder.
 
-You can delete the placeholder afterwards or leave it — it is ignored either way.
+PowerPoint works identically — rename the .pptx placeholder instead. Any subset
+is fine: PDF only, PPTX only, one language or both. Only what exists is shown.
 
-PowerPoint works identically: rename the .pptx placeholder instead.
-
-    1400_ai-infrastructure_FR.pptx
-
-Any subset is fine — PDF only, PPTX only, one language or both. Only what exists
-is shown.
+You can delete the placeholder afterwards or leave it; it is ignored either way.
 
 
-3. THE NAMING RULE, IF YOU EVER NEED IT
+3. SEVERAL FILES FOR THE SAME SESSION
+-------------------------------------
+
+Add a number. The site shows one button per file, in numeric order:
+
+    1400_ai-infrastructure_EN-1.pdf     ->  button "PDF · EN (1)"
+    1400_ai-infrastructure_EN-2.pdf     ->  button "PDF · EN (2)"
+
+When a second file arrives, number the first one as well. Leaving one unnumbered
+beside a numbered one is not an error and not what anyone means — so
+
+    python tools/downloads.py
+
+reports it under "Numbering to sort out".
+
+A label may follow the number, and the button then shows it instead of the bare
+figure. Worth it when the two files are not interchangeable:
+
+    1400_ai-infrastructure_EN-2-exercises.pdf   ->  "PDF · EN · exercises"
+
+Formats and languages are counted separately. A session may carry two English
+PDFs, one French PowerPoint and nothing else.
+
+
+4. THE NAMING RULE, IF YOU EVER NEED IT
 ---------------------------------------
 
-    <start time>_<short title>_<EN|FR>.<pdf|pptx>
+    <start time>_<short title>_<EN|FR>[-<n>][-<label>].<pdf|pptx>
 
     1400        session start, so files sort into running order
     ai-infra…   the title, cut at the first colon or dash
@@ -58,13 +74,13 @@ already cost half the slide decks once.
 You should not need to type any of this: the placeholder already has the name.
 
 
-4. REBUILD
+5. REBUILD
 ----------
 
     cd c:\Users\ASUS\stg17-workshop
     python tools/build_site.py
 
-Then reload the day page with Ctrl+F5. The button appears under the session
+Then reload the day page with Ctrl+F5. The buttons appear under the session
 description.
 
 To see what is supplied and what is still missing:
@@ -80,40 +96,50 @@ To recreate placeholders after the agenda changes:
 That never overwrites a file you supplied.
 
 
-5. BEFORE PUBLISHING TO GITHUB
+6. BEFORE PUBLISHING TO GITHUB
 ------------------------------
 
 These files are committed to the repository and served publicly from GitHub
 Pages. Check that a presentation contains nothing that cannot be public:
 unreleased figures, microdata, internal drafts, personal data.
 
-Size matters here — every megabyte is cloned by everyone who clones the
-repository. Keep a deck under about 10 MB; compress images before exporting.
+Size matters — every megabyte is cloned by everyone who clones the repository.
+Keep a deck under about 10 MB; compress images before exporting.
 
 
-6. AND THE NOTEBOOKS?
+7. AND THE NOTEBOOKS?
 ---------------------
 
 Notebooks work the other way round. You do NOT drop an .ipynb anywhere:
-`tools/build_notebooks.py` would overwrite it on the next run. Each laboratory
-has ONE source in notebooks/_masters/, and the build produces the four variants:
+`tools/build_notebooks.py` would overwrite it on the next run. Each notebook has
+ONE source in notebooks/_masters/, and the build produces the four variants:
 
     notebooks/day1/D1_RAG_Assistant_EN.ipynb
     notebooks/day1/D1_RAG_Assistant_FR.ipynb
     notebooks/day1/D1_RAG_Assistant_EN_open.ipynb
     notebooks/day1/D1_RAG_Assistant_FR_open.ipynb
 
-That is deliberate: English and French, guided and open, cannot drift apart if
-they come from the same file.
+English and French, guided and open, cannot drift apart if they come from the
+same file.
 
-To attach a notebook to a session:
+To attach notebooks to a session, in config/agenda.yml under `labs:`:
 
-  a. write notebooks/_masters/<name>.master.py
-  b. run    python tools/build_notebooks.py
-  c. in config/agenda.yml, under `labs:`, set
-         notebook: <the stem, without _EN / _FR>
-         status: ready
-  d. link the session to it with    lab: <the fiche key>
+    d3_ookla:
+      day: 3
+      notebook: D3_Ookla_WorldPop        # one notebook
+      status: ready
+
+    d4_ntl:
+      day: 4
+      notebooks:                          # or several
+        - D4_NTL_Collect
+        - D4_NTL_Analysis
+      status: ready
+
+then link the session to the fiche with    lab: d3_ookla
+
+With more than one notebook the site prints each notebook's name above its
+guided/open pair, so four badges do not read as one confusing block.
 
 Until `status: ready`, no Colab badge is shown — deliberately. A badge that
 returns a 404 on Thursday morning is worse than no badge at all.
