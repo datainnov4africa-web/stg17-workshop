@@ -27,8 +27,6 @@ Prendre une publication statistique nationale (PDF ou rapport), utiliser un LLM 
 
     **Repli :** Une publication d'exemple et un gabarit statique de tableau de bord sont fournis ; la publication peut se faire à partir du seul gabarit
 
-    **Statut :** :material-progress-clock: Lot Jour 2
-
 
 !!! quote "12h30–14h00 — Déjeuner"
 
@@ -53,8 +51,6 @@ Comment la vitesse d'inférence change ce qui est faisable dans une chaîne stat
 
     **Repli :** L'animateur exécute le benchmark en direct depuis le pupitre si les clés des participants échouent
 
-    **Statut :** :material-progress-clock: Lot Jour 2
-
 
 ### 15h30–16h45 &nbsp;·&nbsp; Atelier — Un modèle, plusieurs métiers : une boîte à outils LLM pour statisticiens
 
@@ -67,8 +63,6 @@ Ateliers tournants sur des cas d'usage professionnels — écrire et déboguer d
     **Livrable :** Deux productions achevées par participant, une de chaque atelier choisi
 
     **Repli :** Les ateliers sont indépendants — un atelier en panne ne coûte que lui-même
-
-    **Statut :** :material-progress-clock: Lot Jour 2
 
 
 !!! quote "16h45–17h00 — Pause café"

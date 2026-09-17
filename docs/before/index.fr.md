@@ -49,20 +49,18 @@ Six diapositives pour l'échange du Jour 1. Soyez francs sur ce qui n'a pas marc
 
 </div>
 
-## Le calendrier de préparation
+## Ce qui est attendu de vous, et quand
 
-| Quand | Qui | Quoi |
-|---|---|---|
-| T − 6 semaines | Secrétariat (BAD) | Confirmer dates, lieu, plateforme hybride et interprétation ; émettre les invitations portant la demande de contribution pays et la liste du paquet de données |
-| T − 4 semaines | Points focaux pays | Confirmer les participants et désigner l'équipe pays qui portera le travail jusqu'au vendredi |
-| T − 4 semaines | Animateur principal | Geler le jeu de carnets dans les deux versions, guidée et ouverte ; créer l'organisation GitHub et un dépôt par pays |
-| T − 3 semaines | Assistants techniques | Copier en miroir les tuiles Ookla, les rasters WorldPop et les sous-ensembles NTL pour chaque pays participant ; préparer les extraits pré-découpés et le pays de référence |
-| **T − 2 semaines** | **Participants** | **Envoyer les six diapositives pays ; créer un compte GitHub ; soumettre le paquet de données national** |
-| T − 2 semaines | Secrétariat | Fournir les clés API LLM et Groq avec quotas par participant ; provisionner et charger le cluster Elasticsearch |
-| T − 1 semaine | Assistants techniques | Animer la vérification d'environnement à distance — une heure, proposée deux fois dans deux fuseaux |
-| T − 1 semaine | Animateur principal | Répétition à blanc de chaque laboratoire de bout en bout sur une machine aux spécifications de l'atelier, en chronométrant chaque étape |
-| Jour 0 | Tous | Test de salle et de réseau ; distribution des clés USB contenant toutes les données, carnets et présentations |
-| T + 1 semaine | Secrétariat | Publier enregistrements et carnets ; consolider le mur d'engagements en un calendrier de suivi daté |
+| Quand | Quoi |
+|---|---|
+| **T − 4 semaines** | Votre office confirme les participants et désigne l'équipe qui portera le travail jusqu'au vendredi. |
+| **T − 2 semaines** | Envoyez vos six diapositives pays, créez un compte GitHub, transmettez votre paquet de données national. |
+| **T − 1 semaine** | Participez à la vérification d'environnement à distance — une heure, proposée deux fois sur deux fuseaux. |
+| **Jour 0** | Test de salle et de réseau sur place ; récupération de la clé USB contenant données et carnets. |
+
+Tout le reste — les jeux de données, les accès aux API, les machines — est préparé
+pour vous. Si quelque chose manque le jour venu, chaque laboratoire dispose d'un
+chemin de repli documenté : signalez-le, il sera appliqué.
 
 ## Risques connus, et leur traitement
 

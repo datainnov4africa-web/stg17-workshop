@@ -49,20 +49,18 @@ Six slides for the Day 1 exchange. Be candid about what did not work.
 
 </div>
 
-## The preparation timeline
+## What is expected of you, and when
 
-| When | Who | What |
-|---|---|---|
-| T − 6 weeks | Secretariat (AfDB) | Confirm dates, venue, hybrid platform and interpretation; issue invitations carrying the country input request and the data-pack list |
-| T − 4 weeks | Country focal points | Confirm participants and nominate the country team that will carry the work through to Friday |
-| T − 4 weeks | Lead facilitator | Freeze the notebook set in both guided and open versions; create the GitHub organisation and one repository per country |
-| T − 3 weeks | Technical assistants | Mirror the Ookla tiles, WorldPop rasters and NTL subsets for every participating country; prepare the pre-clipped extracts and the reference country |
-| **T − 2 weeks** | **Participants** | **Send the six country slides; create a GitHub account; submit the national data pack** |
-| T − 2 weeks | Secretariat | Provision LLM and Groq API keys with per-participant quotas; provision and load the Elasticsearch cluster |
-| T − 1 week | Technical assistants | Run the remote environment check — one hour, offered twice in two time zones |
-| T − 1 week | Lead facilitator | Dry-run every laboratory end to end on a workshop-specification machine, timing each step |
-| Day 0 | All | Room and network test; distribution of the USB keys carrying all data, notebooks and slides |
-| T + 1 week | Secretariat | Publish recordings and notebooks; consolidate the commitments board into a dated follow-up calendar |
+| When | What |
+|---|---|
+| **T − 4 weeks** | Your office confirms who attends, and names the team that will carry the work through to Friday. |
+| **T − 2 weeks** | Send your six country slides, create a GitHub account, and submit your national data pack. |
+| **T − 1 week** | Join the remote environment check — one hour, offered twice in two time zones. |
+| **Day 0** | Room and network test on site; collect the USB key carrying all data and notebooks. |
+
+Everything else — the datasets, the API access, the machines — is prepared for
+you. If something is missing on the day, there is a documented fallback for every
+laboratory; say so and it is applied.
 
 ## Known risks, and how they are handled
 

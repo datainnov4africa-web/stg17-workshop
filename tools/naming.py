@@ -90,7 +90,20 @@ def stem(session: dict) -> str:
 
 
 def day_dir(root: Path, day_n: int) -> Path:
+    """Where a supplied presentation goes. Published with the site."""
     return root / "docs" / "downloads" / f"Day{day_n}"
+
+
+def placeholder_dir(root: Path, day_n: int) -> Path:
+    """
+    Where the empty named placeholders live — outside docs/, so they are never
+    published.
+
+    They exist to tell whoever prepares a presentation what to call the file;
+    that is preparation scaffolding, not something a participant should find on
+    the site. Copy the placeholder's name, drop the real file in `day_dir`.
+    """
+    return root / "maintainer" / "placeholders" / f"Day{day_n}"
 
 
 def filename(session: dict, tag: str, kind: str, placeholder: bool = False) -> str:

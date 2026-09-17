@@ -20,7 +20,6 @@
 | **Livrable de l’équipe** | Un relevé de réponses avec les passages exacts qui les fondent, et une évaluation de la récupération séparant les échecs de récupération des échecs de génération |
 | **Repli** | Un corpus fictif de cinq documents est fourni avec la boîte à outils, donc aucune équipe n'est bloquée par des publications non validées ; sans aucun fournisseur de modèle, la moitié « récupération » du laboratoire fonctionne quand même — et c'est là que sont la plupart des problèmes du RAG |
 | **Variante Earth Engine** | — |
-| **Statut** | :material-progress-clock: En préparation |
 
 ### Du RAG à l'agent
 
@@ -32,7 +31,6 @@
 | **Livrable de l’équipe** | Un journal d'audit consignant chaque outil demandé par le modèle, son autorisation par la politique, et la réponse brute derrière chaque demande — plus la note écrite par l'agent une fois une politique l'y autorisant |
 | **Repli** | Un modèle scripté rejoue des réponses fixes : la boucle, le point d'approbation, la reprise sur erreur et le journal d'audit s'exercent donc sans clé API. C'est délibéré et non un chemin de repli — ces quatre éléments sont ce qu'un office écrit et possède ; le modèle est ce qu'il loue |
 | **Variante Earth Engine** | — |
-| **Statut** | :material-progress-clock: En préparation |
 
 ## Jour 2
 
@@ -46,7 +44,6 @@
 | **Livrable de l’équipe** | Une URL publique de tableau de bord et le tableau de vérification comparant l'extraction à la source |
 | **Repli** | Une publication d'exemple et un gabarit statique de tableau de bord sont fournis ; la publication peut se faire à partir du seul gabarit |
 | **Variante Earth Engine** | — |
-| **Statut** | :material-progress-clock: Lot Jour 2 |
 
 ### Benchmark des fournisseurs
 
@@ -58,7 +55,6 @@
 | **Livrable de l’équipe** | Trois lignes dans la feuille de comparaison partagée : latence, coût pour mille documents, score de qualité |
 | **Repli** | L'animateur exécute le benchmark en direct depuis le pupitre si les clés des participants échouent |
 | **Variante Earth Engine** | — |
-| **Statut** | :material-progress-clock: Lot Jour 2 |
 
 ### Ateliers boîte à outils
 
@@ -70,7 +66,6 @@
 | **Livrable de l’équipe** | Deux productions achevées par participant, une de chaque atelier choisi |
 | **Repli** | Les ateliers sont indépendants — un atelier en panne ne coûte que lui-même |
 | **Variante Earth Engine** | — |
-| **Statut** | :material-progress-clock: Lot Jour 2 |
 
 ## Jour 3
 
@@ -84,7 +79,6 @@
 | **Livrable de l’équipe** | Un indicateur de débit descendant et de latence pondéré par la population, par région administrative de premier niveau, une carte et une série trimestrielle |
 | **Repli** | Des extraits pays pré-découpés sont préparés à l'avance pour chaque pays participant |
 | **Variante Earth Engine** | oui — aucun téléchargement |
-| **Statut** | :material-progress-clock: Lot Jour 3 |
 
 ### Elasticsearch
 
@@ -96,7 +90,6 @@
 | **Livrable de l’équipe** | Cinq requêtes enregistrées et une comparaison de temps avec l'approche pandas du matin |
 | **Repli** | Si le cluster est injoignable, le même exercice tourne en local sous DuckDB avec un jeu de requêtes identique |
 | **Variante Earth Engine** | — |
-| **Statut** | :material-progress-clock: Lot Jour 3 |
 
 ### Exploration pilotée par la recherche
 
@@ -108,7 +101,6 @@
 | **Livrable de l’équipe** | Une exploration de la connectivité par région et trimestre pilotée par la recherche, avec la conclusion sur les temps |
 | **Repli** | Le jeu de requêtes identique tourne sous DuckDB sur les mêmes fichiers parquet |
 | **Variante Earth Engine** | — |
-| **Statut** | :material-progress-clock: Lot Jour 3 |
 
 ## Jour 4
 
@@ -122,7 +114,6 @@
 | **Livrable de l’équipe** | Un sous-ensemble raster national documenté et un inventaire des artefacts présents dans ce pays |
 | **Repli** | Des sous-ensembles nationaux pré-découpés sont préparés pour chaque pays participant ; la variante Earth Engine ne télécharge rien |
 | **Variante Earth Engine** | oui — aucun téléchargement |
-| **Statut** | :material-progress-clock: En préparation |
 
 ### NTL explorer et comprendre
 
@@ -134,7 +125,6 @@
 | **Livrable de l’équipe** | L'inventaire des artefacts de votre pays, avec les preuves |
 | **Repli** | Le pays de référence (Côte d'Ivoire) est préparé de bout en bout |
 | **Variante Earth Engine** | oui — aucun téléchargement |
-| **Statut** | :material-progress-clock: En préparation |
 
 ### NTL analyse
 
@@ -146,7 +136,6 @@
 | **Livrable de l’équipe** | Tableau de statistiques zonales, séries temporelles, détection de changement entre deux périodes, et les cartes |
 | **Repli** | Un pays de référence est préparé de bout en bout et remis à toute équipe dont les données nationales s'avèrent incomplètes |
 | **Variante Earth Engine** | oui — aucun téléchargement |
-| **Statut** | :material-progress-clock: Lot Jour 4 |
 
 ### NTL validation
 
@@ -158,7 +147,6 @@
 | **Livrable de l’équipe** | Corrélation avec l'indicateur officiel, et une déclaration écrite des limites |
 | **Repli** | Un indicateur officiel de référence est fourni pour le pays de référence |
 | **Variante Earth Engine** | — |
-| **Statut** | :material-progress-clock: Lot Jour 4 |
 
 ## Jour 5
 
@@ -172,5 +160,4 @@
 | **Livrable de l’équipe** | Un dépôt pays public avec README, licence, métadonnées, site GitHub Pages et fichier de citation |
 | **Repli** | Le gabarit peut être publié tel quel et rempli ensuite |
 | **Variante Earth Engine** | — |
-| **Statut** | :material-progress-clock: Lot Jour 5 |
 

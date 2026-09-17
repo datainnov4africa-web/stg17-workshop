@@ -27,8 +27,6 @@ Take a national statistical publication (PDF or report), use an LLM to extract a
 
     **Fallback:** A sample publication and a static dashboard template are supplied; publishing can be done from the template alone
 
-    **Status:** :material-progress-clock: Day 2 batch
-
 
 !!! quote "12:30–14:00 — Lunch"
 
@@ -53,8 +51,6 @@ How inference speed changes what is feasible in a production statistical pipelin
 
     **Fallback:** The facilitator runs the benchmark live from the podium if participant keys fail
 
-    **Status:** :material-progress-clock: Day 2 batch
-
 
 ### 15:30–16:45 &nbsp;·&nbsp; Hands-on — One Model, Many Jobs: an LLM Toolkit for Statisticians
 
@@ -67,8 +63,6 @@ Rotating stations across professional use cases — writing and debugging code; 
     **Deliverable:** Two finished artefacts per participant, one from each chosen station
 
     **Fallback:** Stations are independent — a station that fails costs only itself
-
-    **Status:** :material-progress-clock: Day 2 batch
 
 
 !!! quote "16:45–17:00 — Coffee break"

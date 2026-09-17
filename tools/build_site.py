@@ -257,7 +257,6 @@ def render_day(day: dict, labs: dict, lang: str, config: dict) -> str:
             if lab_id and lab_id in labs:
                 lab = labs[lab_id]
                 links = notebook_links(lab, lang, github)
-                status = STATUS_LABEL.get(lab.get("status", "phase1"), ("", ""))[1 if fr else 0]
                 lines += [
                     '!!! example "'
                     + ("Laboratoire — " if fr else "Laboratory — ")
@@ -268,8 +267,6 @@ def render_day(day: dict, labs: dict, lang: str, config: dict) -> str:
                     + pick(lab, "deliverable", lang),
                     "",
                     f"    **{'Repli :' if fr else 'Fallback:'}** " + pick(lab, "fallback", lang),
-                    "",
-                    f"    **{'Statut :' if fr else 'Status:'}** {status}",
                     "",
                 ]
                 if links:
@@ -337,18 +334,8 @@ def render_week(agenda: dict, labs: dict, lang: str, config: dict) -> str:
             lines.append(f"| {fmt_time(s['time'], lang)} | {title} | {kind} | {link} |")
         lines.append("")
 
-    ready = sum(1 for v in labs.values() if v.get("status") == "ready")
     lines += [
         "---",
-        "",
-        "## " + ("Où en est la préparation" if fr else "Preparation status"),
-        "",
-        (f"**{ready} laboratoires sur {len(labs)}** sont prêts et exécutables. "
-         f"Les autres portent la mention *En préparation* — la matière "
-         f"existe dans l'agenda, les carnets arrivent par phases." if fr else
-         f"**{ready} of {len(labs)} laboratories** are ready and runnable. The rest "
-         f"are marked *In preparation* on their page — the material exists in the "
-         f"agenda; the notebooks arrive in phases."),
         "",
         ("Chaque laboratoire a un chemin de repli documenté, pour qu'une clé "
          "manquante ou un réseau contraint ne mette jamais fin à une séance." if fr else
@@ -400,7 +387,6 @@ def render_labs(agenda: dict, lang: str, config: dict) -> str:
     for day_n in sorted(by_day):
         lines += [f"## {'Jour' if fr else 'Day'} {day_n}", ""]
         for lab_id, lab in by_day[day_n]:
-            status = STATUS_LABEL.get(lab.get("status", "phase1"), ("", ""))[1 if fr else 0]
             lines += [
                 f"### {pick(lab, 'title', lang)}",
                 "",
@@ -418,8 +404,7 @@ def render_labs(agenda: dict, lang: str, config: dict) -> str:
                 f"| **{'Variante Earth Engine' if fr else 'Earth Engine variant'}** | "
                 + (("oui — aucun téléchargement" if fr else "yes — nothing downloaded")
                    if lab.get("gee") else "—") + " |",
-                f"| **{'Statut' if fr else 'Status'}** | {status} |",
-                "",
+                    "",
             ]
             links = notebook_links(lab, lang, github)
             if links:
@@ -726,12 +711,11 @@ def render_glossary(lang: str) -> str:
     lines += [
         "---",
         "",
-        ("Un terme manque ? Ajoutez-le à `stg17/i18n.py` et à `tools/build_site.py`, "
-         "puis ré-exécutez `python tools/build_site.py`. Il apparaîtra dans les deux "
-         "langues."
+        ("Ce glossaire suit le vocabulaire employé pendant la semaine. Un terme "
+         "vous manque ? Signalez-le à l'équipe d'animation."
          if fr else
-         "A term missing? Add it to `stg17/i18n.py` and to `tools/build_site.py`, then "
-         "run `python tools/build_site.py`. It will appear in both languages."),
+         "This glossary follows the vocabulary used during the week. A term "
+         "missing? Tell the facilitation team."),
         "",
     ]
     return "\n".join(lines)

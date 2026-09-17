@@ -27,8 +27,6 @@ Ookla: performance tiles at web-Mercator zoom 16 (about 611 m at the equator), q
 
     **Fallback:** Pre-clipped country extracts are prepared in advance for every participating country
 
-    **Status:** :material-progress-clock: Day 3 batch
-
 
 !!! quote "12:30–14:00 — Lunch"
 
@@ -53,8 +51,6 @@ Index the Ookla tiles in a pre-provisioned Elasticsearch cluster; understand the
 
     **Fallback:** If the cluster is unreachable, the same exercise runs locally in DuckDB with an identical query set
 
-    **Status:** :material-progress-clock: Day 3 batch
-
 
 ### 15:30–16:45 &nbsp;·&nbsp; Hands-on part 2 — Search-driven exploration
 
@@ -67,8 +63,6 @@ Build a search-driven exploration of connectivity by region and quarter; compare
     **Deliverable:** A search-driven exploration of connectivity by region and quarter, with the timing conclusion
 
     **Fallback:** Identical query set runs in DuckDB on the same parquet files
-
-    **Status:** :material-progress-clock: Day 3 batch
 
 
 !!! quote "16:45–17:00 — Coffee break"

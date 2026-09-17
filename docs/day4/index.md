@@ -25,8 +25,6 @@ Access NTL rasters (NASA Earthdata, EOG or Google Earth Engine); understand the 
 
     **Fallback:** Pre-clipped national subsets are prepared for every participating country; the Earth Engine variant downloads nothing at all
 
-    **Status:** :material-progress-clock: In preparation
-
 
 !!! quote "10:30–10:45 — Coffee break"
 
@@ -41,8 +39,6 @@ Visualise and interrogate the raster before computing on it — distribution of 
     **Deliverable:** The artefact inventory for your country, with evidence
 
     **Fallback:** The reference country (Côte d'Ivoire) is prepared end to end
-
-    **Status:** :material-progress-clock: In preparation
 
 
 !!! quote "12:30–14:00 — Lunch"
@@ -61,8 +57,6 @@ Zonal statistics by administrative level (sum of radiance, mean radiance, lit ar
 
     **Fallback:** One reference country is prepared end to end and handed to any team whose national data proves incomplete
 
-    **Status:** :material-progress-clock: Day 4 batch
-
 
 ### 15:30–16:30 &nbsp;·&nbsp; Hands-on part 4 — Validation
 
@@ -75,8 +69,6 @@ Correlate the NTL proxy with official subnational statistics (population, electr
     **Deliverable:** Correlation against the official indicator, and a written limitations statement
 
     **Fallback:** A reference official indicator is supplied for the reference country
-
-    **Status:** :material-progress-clock: Day 4 batch
 
 
 ### 16:30–16:45 &nbsp;·&nbsp; Publication and preparation for Day 5

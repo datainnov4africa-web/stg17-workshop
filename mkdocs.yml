@@ -141,9 +141,6 @@ plugins:
             Glossary: Glossaire
             References: Références
             Licensing and ethics: Licences et éthique
-            For facilitators: Pour les animateurs
-            Prompt library: Bibliothèque de prompts
-            Figure slots: Emplacements d'illustration
 
 nav:
   - Home: index.md
@@ -171,20 +168,6 @@ nav:
       - Glossary: resources/glossary.md
       - References: resources/references.md
       - Licensing and ethics: resources/licensing.md
-      - For facilitators: resources/facilitators.md
-      - Prompt library:
-          - resources/prompts/index.md
-          - P1 · Deck architect: resources/prompts/P1-deck-architect.md
-          - P2 · Slide writer: resources/prompts/P2-slide-writer.md
-          - P3 · Diagram author: resources/prompts/P3-diagram-svg.md
-          - P4 · Illustration: resources/prompts/P4-illustration.md
-          - P5 · Speaker notes: resources/prompts/P5-speaker-notes.md
-          - P6 · Adversarial critic: resources/prompts/P6-critic.md
-          - P7 · Native deck build: resources/prompts/P7-native-deck.md
-          - P8 · French rendering: resources/prompts/P8-translate-fr.md
-          - P9 · Standalone deck: resources/prompts/P9-standalone-deck.md
-          - P10 · PowerPoint by script: resources/prompts/P10-pptx-script.md
-          - Figure slots: resources/prompts/figure-slots.md
 
 extra:
   social:

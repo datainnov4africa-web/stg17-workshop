@@ -27,8 +27,6 @@ Ookla : tuiles de performance au zoom 16 en Mercator web (environ 611 m à l'éq
 
     **Repli :** Des extraits pays pré-découpés sont préparés à l'avance pour chaque pays participant
 
-    **Statut :** :material-progress-clock: Lot Jour 3
-
 
 !!! quote "12h30–14h00 — Déjeuner"
 
@@ -53,8 +51,6 @@ Indexer les tuiles Ookla dans un cluster Elasticsearch pré-provisionné ; compr
 
     **Repli :** Si le cluster est injoignable, le même exercice tourne en local sous DuckDB avec un jeu de requêtes identique
 
-    **Statut :** :material-progress-clock: Lot Jour 3
-
 
 ### 15h30–16h45 &nbsp;·&nbsp; Atelier partie 2 — Exploration pilotée par la recherche
 
@@ -67,8 +63,6 @@ Construire une exploration de la connectivité par région et par trimestre pilo
     **Livrable :** Une exploration de la connectivité par région et trimestre pilotée par la recherche, avec la conclusion sur les temps
 
     **Repli :** Le jeu de requêtes identique tourne sous DuckDB sur les mêmes fichiers parquet
-
-    **Statut :** :material-progress-clock: Lot Jour 3
 
 
 !!! quote "16h45–17h00 — Pause café"

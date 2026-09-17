@@ -55,8 +55,15 @@ def create_placeholders(agenda: dict) -> tuple[int, int]:
     """One empty file per session, language and format. Never overwrites."""
     made = kept = 0
     for day in agenda["days"]:
-        folder = naming.day_dir(ROOT, day["n"])
+        folder = naming.placeholder_dir(ROOT, day["n"])
         folder.mkdir(parents=True, exist_ok=True)
+
+        # The drop target is published, so it must survive a clone even while
+        # empty — git does not track empty directories.
+        drop = naming.day_dir(ROOT, day["n"])
+        drop.mkdir(parents=True, exist_ok=True)
+        (drop / ".gitkeep").touch(exist_ok=True)
+
         for session in day["sessions"]:
             supplied = {f["kind"] + f["tag"] for f in naming.supplied(ROOT, session, day["n"])}
             for kind, _icon in naming.KINDS:
@@ -122,9 +129,11 @@ def main() -> int:
     if args.init:
         made, kept = create_placeholders(agenda)
         print(f"\n{made} placeholder(s) created, {kept} file(s) already supplied.")
-        print(f"Folders: {ROOT / 'docs' / 'downloads'}\\Day1 .. Day{len(agenda['days'])}")
-        print("\nTo supply a presentation: rename your file exactly like the placeholder,")
-        print("minus '-inactif', and drop it in the same folder. Then:")
+        print(f"Placeholders (never published): {ROOT / 'maintainer' / 'placeholders'}")
+        print(f"Drop your files in:             {ROOT / 'docs' / 'downloads'}")
+        print()
+        print("Copy a placeholder's name, remove '-inactif', and put the real")
+        print("file in the matching docs/downloads/DayN/ folder. Then:")
         print("    python tools/build_site.py\n")
         return 0
 

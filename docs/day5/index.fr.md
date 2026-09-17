@@ -18,8 +18,6 @@ Comment une équipe nationale transforme ce qu'elle a construit cette semaine en
 
     **Repli :** Le gabarit peut être publié tel quel et rempli ensuite
 
-    **Statut :** :material-progress-clock: Lot Jour 5
-
 
 !!! quote "10h30–10h45 — Pause café"
 

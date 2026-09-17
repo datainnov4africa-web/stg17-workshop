@@ -20,7 +20,6 @@
 | **Team deliverable** | A transcript of answers with the exact passages behind each one, and a retrieval evaluation separating retrieval failures from generation failures |
 | **Fallback** | A fictional five-document corpus ships with the toolkit, so no team is blocked by uncleared publications; without any model provider, the retrieval half of the laboratory still runs — and that is where most RAG problems are |
 | **Earth Engine variant** | — |
-| **Status** | :material-progress-clock: In preparation |
 
 ### From RAG to agent
 
@@ -32,7 +31,6 @@
 | **Team deliverable** | An audit log recording every tool the model asked for, whether policy allowed it, and the raw reply behind each request — plus the note the agent wrote once a policy permitted it |
 | **Fallback** | A scripted model replays fixed replies, so the loop, the approval gate, the error recovery and the audit log are all exercised with no API key. That is deliberate rather than a consolation path — those four things are what an office writes and owns; the model is what it rents |
 | **Earth Engine variant** | — |
-| **Status** | :material-progress-clock: In preparation |
 
 ## Day 2
 
@@ -46,7 +44,6 @@
 | **Team deliverable** | A public dashboard URL and the extraction-verification table comparing output against the source |
 | **Fallback** | A sample publication and a static dashboard template are supplied; publishing can be done from the template alone |
 | **Earth Engine variant** | — |
-| **Status** | :material-progress-clock: Day 2 batch |
 
 ### Provider benchmark
 
@@ -58,7 +55,6 @@
 | **Team deliverable** | Three rows in the shared comparison sheet: latency, cost per thousand documents, quality score |
 | **Fallback** | The facilitator runs the benchmark live from the podium if participant keys fail |
 | **Earth Engine variant** | — |
-| **Status** | :material-progress-clock: Day 2 batch |
 
 ### Toolkit stations
 
@@ -70,7 +66,6 @@
 | **Team deliverable** | Two finished artefacts per participant, one from each chosen station |
 | **Fallback** | Stations are independent — a station that fails costs only itself |
 | **Earth Engine variant** | — |
-| **Status** | :material-progress-clock: Day 2 batch |
 
 ## Day 3
 
@@ -84,7 +79,6 @@
 | **Team deliverable** | A population-weighted download-speed and latency indicator per first-level administrative region, one map and one quarterly series |
 | **Fallback** | Pre-clipped country extracts are prepared in advance for every participating country |
 | **Earth Engine variant** | yes — nothing downloaded |
-| **Status** | :material-progress-clock: Day 3 batch |
 
 ### Elasticsearch
 
@@ -96,7 +90,6 @@
 | **Team deliverable** | Five saved queries and a timing comparison against the morning's pandas approach |
 | **Fallback** | If the cluster is unreachable, the same exercise runs locally in DuckDB with an identical query set |
 | **Earth Engine variant** | — |
-| **Status** | :material-progress-clock: Day 3 batch |
 
 ### Search-driven exploration
 
@@ -108,7 +101,6 @@
 | **Team deliverable** | A search-driven exploration of connectivity by region and quarter, with the timing conclusion |
 | **Fallback** | Identical query set runs in DuckDB on the same parquet files |
 | **Earth Engine variant** | — |
-| **Status** | :material-progress-clock: Day 3 batch |
 
 ## Day 4
 
@@ -122,7 +114,6 @@
 | **Team deliverable** | A documented national raster subset and an inventory of the artefacts present in that country |
 | **Fallback** | Pre-clipped national subsets are prepared for every participating country; the Earth Engine variant downloads nothing at all |
 | **Earth Engine variant** | yes — nothing downloaded |
-| **Status** | :material-progress-clock: In preparation |
 
 ### NTL explore and understand
 
@@ -134,7 +125,6 @@
 | **Team deliverable** | The artefact inventory for your country, with evidence |
 | **Fallback** | The reference country (Côte d'Ivoire) is prepared end to end |
 | **Earth Engine variant** | yes — nothing downloaded |
-| **Status** | :material-progress-clock: In preparation |
 
 ### NTL analysis
 
@@ -146,7 +136,6 @@
 | **Team deliverable** | Zonal statistics table, time series, change detection between two periods, and the maps |
 | **Fallback** | One reference country is prepared end to end and handed to any team whose national data proves incomplete |
 | **Earth Engine variant** | yes — nothing downloaded |
-| **Status** | :material-progress-clock: Day 4 batch |
 
 ### NTL validation
 
@@ -158,7 +147,6 @@
 | **Team deliverable** | Correlation against the official indicator, and a written limitations statement |
 | **Fallback** | A reference official indicator is supplied for the reference country |
 | **Earth Engine variant** | — |
-| **Status** | :material-progress-clock: Day 4 batch |
 
 ## Day 5
 
@@ -172,5 +160,4 @@
 | **Team deliverable** | A public country repository with README, licence, metadata, GitHub Pages site and citation file |
 | **Fallback** | The template can be published as-is and populated afterwards |
 | **Earth Engine variant** | — |
-| **Status** | :material-progress-clock: Day 5 batch |
 

@@ -18,8 +18,6 @@ How a national team takes what it built this week to a durable public product �
 
     **Fallback:** The template can be published as-is and populated afterwards
 
-    **Status:** :material-progress-clock: Day 5 batch
-
 
 !!! quote "10:30–10:45 — Coffee break"
 

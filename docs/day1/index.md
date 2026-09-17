@@ -66,8 +66,6 @@ Build a working RAG assistant over a statistical corpus — chunking, embeddings
 
     **Fallback:** A fictional five-document corpus ships with the toolkit, so no team is blocked by uncleared publications; without any model provider, the retrieval half of the laboratory still runs — and that is where most RAG problems are
 
-    **Status:** :material-progress-clock: In preparation
-
 
 ### 15:30–16:45 &nbsp;·&nbsp; Hands-on part 2 — From RAG to Agent
 
@@ -80,8 +78,6 @@ Turn the retriever built before the break into a tool, and wrap it in an agent �
     **Deliverable:** An audit log recording every tool the model asked for, whether policy allowed it, and the raw reply behind each request — plus the note the agent wrote once a policy permitted it
 
     **Fallback:** A scripted model replays fixed replies, so the loop, the approval gate, the error recovery and the audit log are all exercised with no API key. That is deliberate rather than a consolation path — those four things are what an office writes and owns; the model is what it rents
-
-    **Status:** :material-progress-clock: In preparation
 
 
 !!! quote "16:45–17:00 — Coffee break"

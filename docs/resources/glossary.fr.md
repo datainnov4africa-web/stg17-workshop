@@ -195,4 +195,4 @@ Le vocabulaire commun de la semaine. Ces termes sont tirés du paquet `stg17` lu
 
 ---
 
-Un terme manque ? Ajoutez-le à `stg17/i18n.py` et à `tools/build_site.py`, puis ré-exécutez `python tools/build_site.py`. Il apparaîtra dans les deux langues.
+Ce glossaire suit le vocabulaire employé pendant la semaine. Un terme vous manque ? Signalez-le à l'équipe d'animation.

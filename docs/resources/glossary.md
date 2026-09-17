@@ -195,4 +195,4 @@ The shared vocabulary of the week. These terms come from the `stg17` package its
 
 ---
 
-A term missing? Add it to `stg17/i18n.py` and to `tools/build_site.py`, then run `python tools/build_site.py`. It will appear in both languages.
+This glossary follows the vocabulary used during the week. A term missing? Tell the facilitation team.

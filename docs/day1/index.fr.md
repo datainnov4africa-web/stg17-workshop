@@ -66,8 +66,6 @@ Construire un assistant RAG fonctionnel sur un corpus statistique (note de conce
 
     **Repli :** Un corpus fictif de cinq documents est fourni avec la boîte à outils, donc aucune équipe n'est bloquée par des publications non validées ; sans aucun fournisseur de modèle, la moitié « récupération » du laboratoire fonctionne quand même — et c'est là que sont la plupart des problèmes du RAG
 
-    **Statut :** :material-progress-clock: En préparation
-
 
 ### 15h30–16h45 &nbsp;·&nbsp; Atelier partie 2 — Du RAG à l'agent
 
@@ -80,8 +78,6 @@ Transformer le récupérateur construit avant la pause en outil, et l'envelopper
     **Livrable :** Un journal d'audit consignant chaque outil demandé par le modèle, son autorisation par la politique, et la réponse brute derrière chaque demande — plus la note écrite par l'agent une fois une politique l'y autorisant
 
     **Repli :** Un modèle scripté rejoue des réponses fixes : la boucle, le point d'approbation, la reprise sur erreur et le journal d'audit s'exercent donc sans clé API. C'est délibéré et non un chemin de repli — ces quatre éléments sont ce qu'un office écrit et possède ; le modèle est ce qu'il loue
-
-    **Statut :** :material-progress-clock: En préparation
 
 
 !!! quote "16h45–17h00 — Pause café"
