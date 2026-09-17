@@ -10,7 +10,7 @@ A laboratory's slides and notebook are not on this page: they sit on the day pag
 
 ### RAG assistant
 
-:material-calendar-clock: **Day 1 · 14:30–15:30** &nbsp;·&nbsp; in pairs &nbsp;·&nbsp; [go to the session](../day1/index.md#14301530-hands-on-part-1-retrieval-augmented-generation)
+:material-calendar-clock: **Day 1 · 14:30–15:30** &nbsp;·&nbsp; [go to the session](../day1/index.md#14301530-hands-on-part-1-retrieval-augmented-generation)
 
 **Environment and data** — Python in Colab, Kaggle or local; scikit-learn for the word-matching retriever, which needs no download; sentence-transformers optional for the meaning-matching one; no vector database — the corpus is small enough that one is not warranted
 
@@ -20,7 +20,7 @@ A laboratory's slides and notebook are not on this page: they sit on the day pag
 
 ### From RAG to agent
 
-:material-calendar-clock: **Day 1 · 15:30–16:45** &nbsp;·&nbsp; in pairs &nbsp;·&nbsp; [go to the session](../day1/index.md#15301645-hands-on-part-2-from-rag-to-agent)
+:material-calendar-clock: **Day 1 · 15:30–16:45** &nbsp;·&nbsp; [go to the session](../day1/index.md#15301645-hands-on-part-2-from-rag-to-agent)
 
 **Environment and data** — Same environment as the RAG laboratory; four tools — retrieval, a document list, a guarded calculator and one that writes to disk. A JSON text protocol rather than native function calling, so the request-to-execution gap stays visible and the exercise runs on any provider including a local model
 
@@ -32,7 +32,7 @@ A laboratory's slides and notebook are not on this page: they sit on the day pag
 
 ### Document to dashboard
 
-:material-calendar-clock: **Day 2 · 10:45–12:30** &nbsp;·&nbsp; individually &nbsp;·&nbsp; [go to the session](../day2/index.md#10451230-hands-on-from-statistical-document-to-public-dashboard)
+:material-calendar-clock: **Day 2 · 10:45–12:30** &nbsp;·&nbsp; [go to the session](../day2/index.md#10451230-hands-on-from-statistical-document-to-public-dashboard)
 
 **Environment and data** — LLM API; Python or plain HTML/JS; the participant's own national publication; GitHub Pages
 
@@ -42,7 +42,7 @@ A laboratory's slides and notebook are not on this page: they sit on the day pag
 
 ### Provider benchmark
 
-:material-calendar-clock: **Day 2 · 14:45–15:30** &nbsp;·&nbsp; individually &nbsp;·&nbsp; [go to the session](../day2/index.md#14451530-choosing-your-engine-speed-cost-and-sovereignty-working-with-groq)
+:material-calendar-clock: **Day 2 · 14:45–15:30** &nbsp;·&nbsp; [go to the session](../day2/index.md#14451530-choosing-your-engine-speed-cost-and-sovereignty-working-with-groq)
 
 **Environment and data** — Two API endpoints including Groq; one shared spreadsheet
 

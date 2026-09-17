@@ -89,11 +89,14 @@ def pick(entry: dict, key: str, lang: str, default: str = "") -> str:
     return entry.get(f"{key}_{lang}", entry.get(f"{key}_en", default))
 
 
-#: How a team is composed, as a phrase. The register stores a bare token, and
-#: "Team | teams" told a reader nothing at all.
+#: How a team is composed, as a phrase, for the laboratories where the page says
+#: so. The register stores a bare token, and "Team | teams" told a reader nothing.
+#:
+#: `solo` and `pairs` are deliberately absent: the register still carries those
+#: tokens, but the page no longer asserts that a laboratory is done alone or in
+#: twos. A token with no entry here contributes nothing — never the raw token,
+#: which would read worse than saying nothing at all.
 TEAM_PHRASE = {
-    "solo":     ("individually", "individuellement"),
-    "pairs":    ("in pairs", "en binômes"),
     "teams":    ("in teams", "en équipes"),
     "stations": ("rotating stations", "en ateliers tournants"),
 }
@@ -422,23 +425,29 @@ def render_labs(agenda: dict, lang: str, config: dict) -> str:
         for lab_id, lab in by_day[day_n]:
             lines += [f"### {pick(lab, 'title', lang)}", ""]
 
-            # Where and how it is run: the day, the slot, the team composition,
-            # and a link straight to the session.
-            team = TEAM_PHRASE.get(lab.get("team_en", ""),
-                                   (pick(lab, "team", lang),) * 2)[1 if fr else 0]
+            # Where and how it is run: the day, the slot, the team composition
+            # where the page states one, and a link straight to the session.
+            # An unmapped token yields nothing at all — falling back to the raw
+            # register value would print "solo" and "pairs" on the page, which is
+            # the opposite of the intent.
+            composition = TEAM_PHRASE.get(lab.get("team_en", ""))
+            team = composition[1 if fr else 0] if composition else ""
             where = sessions.get(lab_id)
             if where:
                 session_day, session = where
                 heading = (f"{fmt_time(session['time'], lang)} &nbsp;·&nbsp; "
                            f"{pick(session, 'title', lang)}")
                 link = f"../day{session_day}/index.md#{anchor(heading)}"
+                # The separator belongs to the phrase: without this the line
+                # renders an empty "·  ·" for every laboratory that states none.
+                middle = f"{team} &nbsp;·&nbsp; " if team else ""
                 lines += [
                     f":material-calendar-clock: **{'Jour' if fr else 'Day'} {session_day} · "
-                    f"{fmt_time(session['time'], lang)}** &nbsp;·&nbsp; {team} &nbsp;·&nbsp; "
+                    f"{fmt_time(session['time'], lang)}** &nbsp;·&nbsp; {middle}"
                     f"[{'voir la séance' if fr else 'go to the session'}]({link})",
                     "",
                 ]
-            else:
+            elif team:
                 lines += [f":material-account-group: {team}", ""]
 
             lines += [

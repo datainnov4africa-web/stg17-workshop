@@ -10,7 +10,7 @@ Les supports et le carnet d'un laboratoire ne sont pas sur cette page : ils sont
 
 ### Assistant RAG
 
-:material-calendar-clock: **Jour 1 · 14h30–15h30** &nbsp;·&nbsp; en binômes &nbsp;·&nbsp; [voir la séance](../day1/index.md#14h3015h30-atelier-partie-1-generation-augmentee-par-recuperation-rag)
+:material-calendar-clock: **Jour 1 · 14h30–15h30** &nbsp;·&nbsp; [voir la séance](../day1/index.md#14h3015h30-atelier-partie-1-generation-augmentee-par-recuperation-rag)
 
 **Environnement et données** — Python dans Colab, Kaggle ou en local ; scikit-learn pour le récupérateur par mots, sans téléchargement ; sentence-transformers en option pour le récupérateur sémantique ; pas de base vectorielle — le corpus est trop petit pour la justifier
 
@@ -20,7 +20,7 @@ Les supports et le carnet d'un laboratoire ne sont pas sur cette page : ils sont
 
 ### Du RAG à l'agent
 
-:material-calendar-clock: **Jour 1 · 15h30–16h45** &nbsp;·&nbsp; en binômes &nbsp;·&nbsp; [voir la séance](../day1/index.md#15h3016h45-atelier-partie-2-du-rag-a-lagent)
+:material-calendar-clock: **Jour 1 · 15h30–16h45** &nbsp;·&nbsp; [voir la séance](../day1/index.md#15h3016h45-atelier-partie-2-du-rag-a-lagent)
 
 **Environnement et données** — Même environnement que le laboratoire RAG ; quatre outils — récupération, liste de documents, calculatrice protégée et un outil qui écrit sur disque. Un protocole textuel JSON plutôt que l'appel de fonctions natif, pour que l'interstice demande-exécution reste visible et que l'exercice tourne sur tout fournisseur, y compris un modèle local
 
@@ -32,7 +32,7 @@ Les supports et le carnet d'un laboratoire ne sont pas sur cette page : ils sont
 
 ### Du document au tableau de bord
 
-:material-calendar-clock: **Jour 2 · 10h45–12h30** &nbsp;·&nbsp; individuellement &nbsp;·&nbsp; [voir la séance](../day2/index.md#10h4512h30-atelier-du-document-statistique-au-tableau-de-bord-public)
+:material-calendar-clock: **Jour 2 · 10h45–12h30** &nbsp;·&nbsp; [voir la séance](../day2/index.md#10h4512h30-atelier-du-document-statistique-au-tableau-de-bord-public)
 
 **Environnement et données** — API LLM ; Python ou simple HTML/JS ; la publication nationale du participant ; GitHub Pages
 
@@ -42,7 +42,7 @@ Les supports et le carnet d'un laboratoire ne sont pas sur cette page : ils sont
 
 ### Benchmark des fournisseurs
 
-:material-calendar-clock: **Jour 2 · 14h45–15h30** &nbsp;·&nbsp; individuellement &nbsp;·&nbsp; [voir la séance](../day2/index.md#14h4515h30-choisir-son-moteur-vitesse-cout-et-souverainete-travailler-avec-groq)
+:material-calendar-clock: **Jour 2 · 14h45–15h30** &nbsp;·&nbsp; [voir la séance](../day2/index.md#14h4515h30-choisir-son-moteur-vitesse-cout-et-souverainete-travailler-avec-groq)
 
 **Environnement et données** — Deux points d'accès API dont Groq ; une feuille de calcul partagée
 
