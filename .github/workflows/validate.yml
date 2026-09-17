@@ -47,8 +47,5 @@ jobs:
           git diff --exit-code docs/ || \
             (echo "::error::docs/ is stale. Run: python tools/build_site.py" && exit 1)
 
-      - name: Slide decks build
-        run: python tools/build_slides.py
-
       - name: Site builds strictly
         run: mkdocs build --strict

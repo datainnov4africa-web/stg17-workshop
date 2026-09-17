@@ -19,9 +19,9 @@ SHaSA II · Groupe technique spécialisé 17 · Plan d'action 2025-2030, PT 4.2
 
 ---
 
-Cinq jours, 27 heures de contact, neuf laboratoires pratiques. Chaque carnet
-existe en **anglais et en français**, en piste **guidée** et **ouverte**, et
-s'exécute sur **n'importe lequel des 55 États membres de l'Union africaine** en
+Cinq jours, 27 heures de contact, treize laboratoires pratiques. Chaque
+présentation et chaque carnet sont fournis en **anglais et en français**, et
+s'exécutent sur **n'importe lequel des 55 États membres de l'Union africaine** en
 changeant une seule variable.
 
 ```python
@@ -32,9 +32,10 @@ COUNTRY_ISO3 = "CIV"   # ← changez ceci, et rien d'autre
 
 **Participants** — lisez les
 [prérequis](https://stg17-africa.github.io/stg17-workshop/fr/before/prerequisites/),
-puis exécutez la vérification d'environnement :
-
-[![Ouvrir dans Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/STG17-Africa/stg17-workshop/blob/main/notebooks/00_Environment_Check_FR.ipynb)
+puis faites la
+[vérification d'environnement](https://stg17-africa.github.io/stg17-workshop/fr/before/environment-check/).
+Le carnet est distribué avec le matériel de l'atelier : votre animateur vous en
+envoie le lien, ou vous l'ouvrez depuis la clé USB.
 
 **Animateurs et contributeurs :**
 
@@ -56,13 +57,11 @@ python tools/serve.py          # régénère tout, puis prévisualise
 | `config/workshop.yml` | Toutes les valeurs à figer : organisation GitHub, points d'accès, pays par défaut |
 | `config/agenda.yml` | **L'agenda, sous forme de données.** Les pages jour du site en sont le rendu |
 | `stg17/` | Le paquet Python partagé — registre pays, thème BAD, runtime bilingue, moteurs NTL et frontières |
-| `notebooks/_masters/` | **Là où vous modifiez.** Un master bilingue par laboratoire |
-| `notebooks/dayN/` | Généré : `_EN` / `_FR` × guidé / ouvert |
-| `slides/decks/` | **Là où vous modifiez.** Une source de deck bilingue par session |
+| `docs/downloads/DayN/` | **Là où vous déposez** une présentation ou un carnet. Voir `maintainer/HOW-TO-ADD-FILES.txt` |
 | `docs/` | Le site MkDocs. `page.md` est l'anglais, `page.fr.md` le français |
 | `country-template/` | Le dépôt que chaque pays copie pour publier ses résultats |
 | `tools/` | Les scripts de build. Tout ce qui est dérivé est régénéré par `build_all.py` |
-| `prep/` | Kit animateur : calendrier de préparation, répétition à blanc, manifeste de clé USB |
+| `maintainer/` | Non publié : gabarits de noms, kit animateur, répétition à blanc, manifeste de clé USB |
 
 ## Les décisions de conception à connaître
 
@@ -95,56 +94,33 @@ propres chiffres infranationaux officiels du participant.
 | Pour changer | Modifiez | Puis exécutez |
 |---|---|---|
 | Une session, son horaire, son rattachement au Plan d'action | `config/agenda.yml` | `python tools/build_site.py` |
-| Une présentation | `slides/decks/<id>.deck.html` | `python tools/build_slides.py` |
+| Une présentation ou un carnet | déposez le fichier dans `docs/downloads/DayN/` | `python tools/build_site.py` |
 | La palette BAD | `stg17/theme.py` | `python -m stg17.theme --emit-css` |
 | Le vocabulaire partagé | `stg17/i18n.py` | `python tools/build_site.py` |
 | L'organisation GitHub, les points d'accès, les dates | `config/workshop.yml` | `python tools/build_all.py` |
 
-Ne modifiez jamais un fichier sous `notebooks/dayN/` ou `docs/dayN/` — ils sont
-générés, et la CI vous le signalera.
+Ne modifiez jamais un fichier sous `docs/dayN/` — il est généré depuis
+`config/agenda.yml`, et la CI vous le signalera.
 
-### Le format des masters de carnets
-
-```python
-# %% [meta]
-'''
-id: d4_ntl_collect_explore
-day: 4
-outdir: notebooks/day4
-stem: D4_NTL_Collect_Explore
-tracks: guided, open
-'''
-
-# %% [markdown]
-'''
-<!--EN-->
-## Step 3 — Read a real granule
-<!--FR-->
-## Étape 3 — Lire un granule réel
-'''
-
-# %%
-# EN: Read the layer and scale it | FR: Lire la couche et la mettre à l'échelle
-# <solution hint="Read one granule" hint_fr="Lisez un granule">
-radiance, meta = ntl.read_layer(path)
-# </solution>
-```
-
-Les cellules markdown portent les deux langues. Les cellules de code sont
-identiques octet pour octet entre les langues — seuls les commentaires diffèrent,
-et tout ce qui est affiché passe par `stg17.i18n.T()`, résolu à l'exécution. Les
-blocs de solution sont ce que la piste ouverte retire.
+Les présentations et les carnets ne sont pas générés ici : ils sont tous
+fournis. Déposez le fichier dans `docs/downloads/DayN/` sous le nom que lui donne
+le gabarit correspondant dans `maintainer/placeholders/DayN/`, puis lancez
+`python tools/build_site.py`. La règle complète est dans
+`maintainer/HOW-TO-ADD-FILES.txt`.
 
 ## État d'avancement
 
 | Phase | Contenu | État |
 |---|---|---|
-| **0 · Socle** | Dépôt, design system, registre pays, moteur de build, site bilingue, vérification d'environnement, laboratoire pilote (Jour 4 NTL, + variante Earth Engine), présentation pilote, prérequis, gabarit pays, CI | ✅ Terminé |
-| 1 · Jour 1 | Laboratoires RAG et agent, présentations 01-02 | ⏳ |
-| 2 · Jour 2 | Tableau de bord, benchmark fournisseurs, ateliers boîte à outils, présentations 03-05 | ⏳ |
-| 3 · Jour 3 | Ookla + WorldPop, Elasticsearch, exploration par recherche, présentations 06-07 | ⏳ |
+| **0 · Socle** | Dépôt, design system, registre pays, moteur de build, site bilingue, vérification d'environnement, prérequis, gabarit pays, CI | ✅ Terminé |
+| 1 · Jour 1 | Laboratoires RAG et agent | ⏳ |
+| 2 · Jour 2 | Tableau de bord, benchmark fournisseurs, ateliers boîte à outils | ⏳ |
+| 3 · Jour 3 | Ookla + WorldPop, Elasticsearch, exploration par recherche | ⏳ |
 | 4 · Jour 4 | Analyse et validation NTL | ⏳ |
-| 5 · Jour 5 | Laboratoire de publication, présentations 09-12, kit animateur | ⏳ |
+| 5 · Jour 5 | Laboratoire de publication, kit animateur | ⏳ |
+
+Les présentations et les carnets sont fournis par séance, non par phase — ce qui
+est déjà en place s'obtient avec `python tools/downloads.py`.
 
 ## Licence
 

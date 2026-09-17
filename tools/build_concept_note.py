@@ -194,7 +194,7 @@ PREPARATION = [
     ("T − 4 weeks", "Country focal points",
      "Confirm participants and nominate the country team that will carry the work through to Friday"),
     ("T − 4 weeks", "Lead facilitator",
-     "Freeze the notebook set in both guided and open versions; create the GitHub organisation and "
+     "Freeze the set of supplied presentations and notebooks; create the GitHub organisation and "
      "one repository per country"),
     ("T − 3 weeks", "Technical assistants",
      "Mirror the Ookla tiles, WorldPop rasters and NTL subsets for every participating country and "
@@ -223,8 +223,9 @@ RISKS = (
     "a facilitator-run demonstration path for each API-dependent step; in addition, every "
     "laboratory that uses a model has a documented path that runs without one. Heterogeneous "
     "laptops are absorbed by the Colab fallback, tested during the environment check rather than "
-    "discovered on Day 1. Uneven skill levels are handled by the two-track notebooks and by "
-    "pairing participants across levels from Day 3 onwards. Incomplete national data — a missing "
+    "discovered on Day 1. Uneven skill levels are handled by the facilitation team, which "
+    "circulates throughout every laboratory, and by pairing participants across levels from Day 3 "
+    "onwards. Incomplete national data — a missing "
     "boundary file, an indicator available only at national level — is handled by the fully "
     "prepared reference country, so that no team loses a day. Finally, the Day 1 country exchange "
     "is the session most likely to overrun; a timekeeper is appointed and the synthesis slot "
@@ -449,26 +450,31 @@ def add_mapping(doc, agenda: dict) -> None:
 
 
 def add_materials(doc, agenda: dict, labs: dict) -> None:
-    ready = [k for k, v in labs.items() if v.get("status") == "ready"]
-    decks = sorted({s["deck"] for d in agenda["days"] for s in d["sessions"] if s.get("deck")})
-    built = sorted(p.name for p in (ROOT / "slides" / "decks").glob("*.deck.html"))
-    notebooks = sorted(p.name for p in (ROOT / "notebooks").rglob("*.ipynb"))
+    # Counted from what is on disk. Presentations and notebooks are supplied by
+    # their session owners, not generated here, so the drop folder is the only
+    # honest source. The previous version counted deck sources in slides/decks
+    # and generated notebooks in notebooks/ — two directories that no longer
+    # exist — and laboratories whose status is "ready", a value none carries. It
+    # would have printed zero for all three while reading as a statement of fact.
+    supplied = [p for p in (ROOT / "docs" / "downloads").rglob("*")
+                if p.is_file() and p.suffix.lower() in {".pdf", ".pptx", ".ipynb"}
+                and p.stat().st_size > 0]
+    covered = {(p.parent.name, p.name.split("_")[0]) for p in supplied}
+    sessions = sum(len(day["sessions"]) for day in agenda["days"])
 
     heading(doc, "State of the material", 3)
     body(doc,
          f"This section reports what exists at the date of this note, not what is planned. "
-         f"Of {len(decks)} presentations in the agenda, {len(built)} are written and published in "
-         f"both languages. Of {len(labs)} specified laboratories, {len(ready)} are complete and "
-         f"runnable end to end. They are distributed as {len(notebooks)} notebooks: each "
-         f"laboratory exists in English and French and in a guided and an open version, and the "
-         f"environment-check notebook is supplied in both languages.")
+         f"The week holds {sessions} sessions and {len(labs)} specified laboratories, each "
+         f"specified below with the environment it needs, the artefact the team must produce "
+         f"and the fallback applied when something breaks. {len(supplied)} presentation and "
+         f"notebook files have been supplied so far — PDF, PowerPoint and Jupyter — covering "
+         f"{len(covered)} of those sessions.")
     body(doc,
-         "Two tracks in every laboratory. Participants arrive with markedly different levels. "
-         "Each notebook therefore exists in two versions: a guided version in which the "
-         "analytical steps are written and the participant fills the gaps, and an open version "
-         "containing only the objective and the data. Teams choose at the start of each "
-         "laboratory and may switch. The deliverable is identical either way, which keeps the "
-         "Friday presentations comparable.")
+         "Presentations and notebooks are supplied by their session owners rather than "
+         "generated with the site. A file is published by being placed in its day folder "
+         "under the agreed name, which is why this count moves without any change to the "
+         "repository. Each is offered in English and in French as its owner provides them.")
     body(doc,
          "Every laboratory has a documented fallback, listed in the table above. The rule adopted "
          "throughout is that no laboratory may depend on a step that has not been tested in "
@@ -575,7 +581,7 @@ def main() -> int:
         sys.stdout.reconfigure(encoding="utf-8", errors="replace")
 
     ap = argparse.ArgumentParser(description="Regenerate the STG17 concept note and agenda.")
-    ap.add_argument("--out", default=str(ROOT / "concept-note"),
+    ap.add_argument("--out", default=str(ROOT / "maintainer" / "documents"),
                     help="directory to write the .docx into")
     ap.add_argument("--name",
                     default="STG17_Workshop_Agenda_Emerging_Issues_Emerging_Practice.docx")
@@ -589,11 +595,10 @@ def main() -> int:
     path = out / args.name
     build(agenda, labs).save(path)
 
-    ready = sum(1 for v in labs.values() if v.get("status") == "ready")
     print(f"Written: {path}")
     print(f"  {len(agenda['days'])} days · "
           f"{sum(len(d['sessions']) for d in agenda['days'])} sessions · "
-          f"{len(labs)} laboratories ({ready} ready) · "
+          f"{len(labs)} laboratories · "
           f"{path.stat().st_size / 1024:.0f} KB")
     return 0
 

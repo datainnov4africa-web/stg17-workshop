@@ -76,8 +76,9 @@ API-dependent step.
 **Heterogeneous laptops** are absorbed by the Colab fallback, tested during the
 environment check rather than discovered on Day 1.
 
-**Uneven skill levels** are handled by the two-track notebooks and by pairing
-participants across levels from Day 3 onwards.
+**Uneven skill levels** are handled by the facilitation team, which circulates
+throughout every laboratory, and by pairing participants across levels from Day 3
+onwards.
 
 **Incomplete national data** — a missing boundary file, an indicator available
 only at national level — is handled by the fully prepared reference country, so

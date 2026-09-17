@@ -76,8 +76,9 @@ facilitateur pour chaque étape dépendant d'une API.
 **L'hétérogénéité des portables** est absorbée par le repli Colab, testé pendant
 la vérification d'environnement plutôt que découvert au Jour 1.
 
-**Les niveaux inégaux** sont traités par les carnets à deux pistes et par
-l'appariement de participants de niveaux différents à partir du Jour 3.
+**Les niveaux inégaux** sont traités par l'équipe d'animation, qui circule tout
+au long de chaque laboratoire, et par l'appariement de participants de niveaux
+différents à partir du Jour 3.
 
 **Les données nationales incomplètes** — fichier de frontières manquant,
 indicateur disponible seulement au niveau national — sont traitées par le pays de

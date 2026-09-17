@@ -5,16 +5,12 @@ participants. Remote participants are grouped into virtual breakout teams, each
 with a dedicated assistant. A resource person supports the visual identity and
 image-generation station on Day 2.
 
-## The two-track mechanic
+## Mixed levels
 
-Every laboratory notebook exists in a **guided** and an **open** version, in both
-languages. Teams choose at the start of each laboratory and may switch mid-way.
-The deliverable is identical, which is what keeps the Friday presentations
-comparable.
-
-Announce it once, at the start of Day 1 afternoon, and then stop mentioning it.
-Participants who need the guided track should not have to ask for it in front of
-the room.
+Participants arrive with markedly different levels. Nothing in the material
+separates them, so the handling is entirely yours: circulate, and give the person
+who is behind the next step quietly, at their table. Someone who needs help
+should not have to ask for it in front of the room.
 
 ## Running a laboratory
 
@@ -70,6 +66,5 @@ laboratory at 14:00 is the densest hour of the week.
 - [ ] Dry-run every laboratory end to end on a workshop-specification machine, timing each step
 - [ ] Confirm the Elasticsearch cluster is loaded, one index per participating country
 - [ ] Confirm the reference country runs end to end from a clean machine
-- [ ] Vendor reveal.js for offline presentation: `python tools/vendor_reveal.py`
 - [ ] Check every Colab badge resolves
-- [ ] Prepare the USB keys — see `prep/usb-manifest.md`
+- [ ] Prepare the USB keys — see `maintainer/prep/usb-manifest.md`

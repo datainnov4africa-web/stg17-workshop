@@ -5,16 +5,12 @@ participants. Les participants à distance sont regroupés en équipes virtuelle
 chacune avec un assistant dédié. Une personne-ressource appuie l'atelier identité
 visuelle et génération d'images du Jour 2.
 
-## La mécanique des deux pistes
+## Les niveaux inégaux
 
-Chaque carnet de laboratoire existe en version **guidée** et **ouverte**, dans les
-deux langues. Les équipes choisissent au début de chaque laboratoire et peuvent
-basculer en cours de route. Le livrable est identique, ce qui garde les
-présentations du vendredi comparables.
-
-Annoncez-le une fois, au début du Jour 1 après-midi, puis n'y revenez plus. Les
-participants qui ont besoin de la piste guidée ne devraient pas avoir à la
-demander devant la salle.
+Les participants arrivent avec des niveaux très différents. Rien dans le matériel
+ne les sépare : la gestion vous revient entièrement. Circulez, et donnez l'étape
+suivante discrètement, à la table de celui qui est en retard. Personne ne devrait
+avoir à demander de l'aide devant la salle.
 
 ## Animer un laboratoire
 
@@ -73,6 +69,5 @@ la semaine.
 - [ ] Répétition à blanc de chaque laboratoire de bout en bout sur une machine aux spécifications de l'atelier, en chronométrant chaque étape
 - [ ] Confirmer que le cluster Elasticsearch est chargé, un index par pays participant
 - [ ] Confirmer que le pays de référence s'exécute de bout en bout depuis une machine propre
-- [ ] Embarquer reveal.js pour la présentation hors ligne : `python tools/vendor_reveal.py`
 - [ ] Vérifier que chaque badge Colab se résout
-- [ ] Préparer les clés USB — voir `prep/usb-manifest.md`
+- [ ] Préparer les clés USB — voir `maintainer/prep/usb-manifest.md`

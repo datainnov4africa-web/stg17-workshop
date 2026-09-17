@@ -30,10 +30,8 @@ STG17_KEY/
 │   │   └── <iso3>_pop_2024_100m.tif
 │   └── outputs/                  ← empty; participants write here
 │
-├── notebooks/                    ← the full set, EN and FR, guided and open
-├── slides/                       ← decks with reveal.js vendored (no CDN needed)
-│   ├── vendor/                   ← run tools/vendor_reveal.py before copying
-│   └── pptx/
+├── downloads/                    ← every supplied deck and notebook, EN and FR,
+│                                   copied from docs/downloads/DayN/
 ├── country-template/             ← so a team can start their repository offline
 ├── wheels/                       ← pip wheels for the whole stack, offline install
 │   └── install-offline.txt       ← the one pip command to run
@@ -42,9 +40,12 @@ STG17_KEY/
 
 ## Preparation checklist
 
-- [ ] `python tools/fetch_data.py --iso <ISO3>` for every participating country
-- [ ] `python tools/build_all.py --pptx`
-- [ ] `python tools/vendor_reveal.py` then `python tools/build_slides.py --offline`
+- [ ] Assemble `STG17_LOCAL/` for every participating country — boundaries, NTL
+      extracts, Ookla tiles, WorldPop rasters, laid out as the tree above. No
+      tool in this repository does it; budget real time for it
+- [ ] `python tools/build_all.py`
+- [ ] Copy `docs/downloads/` to `downloads/` — the decks and notebooks work from
+      the key with no network, which the Colab badges do not
 - [ ] `mkdocs build` → copy `site/` to `docs-offline/`
 - [ ] `pip download -r requirements-dev.txt -d wheels/` on a machine matching the
       workshop specification — wheels are platform-specific, and a Linux wheel on

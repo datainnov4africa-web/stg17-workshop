@@ -398,7 +398,7 @@ def main() -> int:
 
     ap = argparse.ArgumentParser(
         description="Build the STG17 invitation letter in French and English.")
-    ap.add_argument("--out", default=str(ROOT / "concept-note"),
+    ap.add_argument("--out", default=str(ROOT / "maintainer" / "documents"),
                     help="directory to write the two .docx files into")
     ap.add_argument("--lang", choices=["fr", "en", "both"], default="both")
     ap.add_argument("--to", choices=["afdb", "nso", "both"], default="both",

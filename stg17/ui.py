@@ -199,7 +199,7 @@ def info(body, title=None):
 
 
 def your_turn(body, title=None):
-    """Hands on keyboard. Present in both the guided and the open track."""
+    """Hands on keyboard — the point in a notebook where the participant acts."""
     return _callout(_t(title) or phrase("your_turn"), _t(body), theme.NAVY, "#EEF1F6", "✎")
 
 

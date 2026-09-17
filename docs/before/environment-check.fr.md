@@ -5,7 +5,6 @@ peut exécuter les treize laboratoires — puis produit une courte chaîne de
 diagnostic à envoyer aux assistants techniques.
 
 Le carnet de vérification d'environnement est distribué avec le matériel de l'atelier. Votre animateur vous enverra le lien, ou ouvrez-le depuis la clé USB.
-&nbsp; [:material-github: Voir sur GitHub](https://github.com/STG17-Africa/stg17-workshop/blob/main/notebooks/00_Environment_Check_FR.ipynb)
 
 !!! tip "Exécutez-le deux fois"
     Une fois chez vous, dès réception de votre invitation, et une fois pendant la

@@ -9,12 +9,14 @@ Run this after editing any source of truth:
 
     config/workshop.yml            org name, endpoints, default countries
     config/agenda.yml              the agenda -> day pages, lab register, mapping
-    stg17/theme.py                 the palette -> site CSS, slide CSS
+    stg17/theme.py                 the palette -> the site CSS
     stg17/i18n.py                  the shared vocabulary -> the glossary
-    slides/decks/*.deck.html       -> the EN and FR reveal decks
 
-The order matters: the CSS variables must exist before the site is built, and
-the notebooks must exist before the agenda pages link to them.
+Presentations and notebooks are not derived: they are supplied, dropped into
+docs/downloads/DayN/, and picked up by build_site.py. See
+maintainer/HOW-TO-ADD-FILES.txt.
+
+The order matters: the CSS variables must exist before the site is built.
 """
 
 from __future__ import annotations
@@ -40,19 +42,17 @@ def main() -> int:
     parser = argparse.ArgumentParser(description="Regenerate every derived artefact")
     parser.add_argument("--check", action="store_true",
                         help="verify freshness without writing (for CI)")
-    parser.add_argument("--pptx", action="store_true",
-                        help="also derive the PowerPoint files (needs python-pptx)")
     args = parser.parse_args()
 
+    # No slide-deck step any more: every presentation and every notebook is
+    # supplied, not generated here, so there is nothing left to derive from a
+    # deck source.
     steps: list[tuple[str, list[str]]] = [
         ("Country registry self-check", ["-m", "stg17.countries"]),
         ("AfDB palette -> CSS variables", ["-m", "stg17.theme", "--emit-css"]),
-                ("Notebook validation", ["tools/check_notebooks.py"]),
+        ("Notebook validation", ["tools/check_notebooks.py"]),
         ("Agenda -> day pages, lab register, mapping, glossary", ["tools/build_site.py"]),
-        ("Slide decks", ["tools/build_slides.py"]),
     ]
-    if args.pptx:
-        steps.append(("PowerPoint derivatives", ["tools/build_pptx.py"]))
 
     failures = [description for description, command in steps if not run(description, command)]
 

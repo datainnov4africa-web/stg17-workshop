@@ -540,7 +540,7 @@ def main() -> int:
         sys.stdout.reconfigure(encoding="utf-8", errors="replace")
 
     ap = argparse.ArgumentParser(description="Build the STG17 baseline/end-line assessment.")
-    ap.add_argument("--out", default=str(ROOT / "concept-note"))
+    ap.add_argument("--out", default=str(ROOT / "maintainer" / "documents"))
     args = ap.parse_args()
     out = Path(args.out)
     out.mkdir(parents=True, exist_ok=True)

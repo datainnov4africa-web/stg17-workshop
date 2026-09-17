@@ -1,7 +1,7 @@
 # Build and publish the workshop site to GitHub Pages.
 #
-# The build regenerates the agenda pages, the laboratory register, the glossary
-# and the slide decks first, so the published site can never be out of date with
+# The build regenerates the agenda pages, the laboratory register and the
+# glossary first, so the published site can never be out of date with
 # config/agenda.yml. If a source file changed and the generated page did not,
 # --strict makes the build fail rather than publish a stale page.
 name: Publish site
@@ -33,8 +33,8 @@ jobs:
       - name: Install
         run: pip install -r requirements-dev.txt
 
-      - name: Regenerate everything derived, including the PowerPoint files
-        run: python tools/build_all.py --pptx
+      - name: Regenerate everything derived
+        run: python tools/build_all.py
 
       - name: Build site
         run: mkdocs build --strict
