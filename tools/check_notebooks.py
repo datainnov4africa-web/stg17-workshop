@@ -28,7 +28,7 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-NOTEBOOKS = ROOT / "notebooks"
+NOTEBOOKS = ROOT / "docs" / "downloads"
 
 # Patterns for credentials that must never appear in a committed notebook.
 # Deliberately conservative: a false positive costs a minute, a false negative
@@ -138,7 +138,7 @@ def check(path: Path) -> list[str]:
                     if c.get("cell_type") == "code" and c.get("outputs")]
     if with_outputs:
         problems.append(f"{relative}: {len(with_outputs)} cell(s) carry execution outputs "
-                        f"— run tools/build_notebooks.py to regenerate")
+                        f"— clear them before supplying the notebook")
 
     return problems
 
@@ -147,7 +147,7 @@ def main() -> int:
     paths = sorted(NOTEBOOKS.rglob("*.ipynb"))
     paths = [p for p in paths if ".ipynb_checkpoints" not in p.parts]
     if not paths:
-        print("No notebooks found under notebooks/.")
+        print("No notebooks supplied yet under docs/downloads/.")
         return 0
 
     all_problems: list[str] = []

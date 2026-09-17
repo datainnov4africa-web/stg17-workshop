@@ -11,7 +11,6 @@ Run this after editing any source of truth:
     config/agenda.yml              the agenda -> day pages, lab register, mapping
     stg17/theme.py                 the palette -> site CSS, slide CSS
     stg17/i18n.py                  the shared vocabulary -> the glossary
-    notebooks/_masters/*.py        -> the 4 published variants of each laboratory
     slides/decks/*.deck.html       -> the EN and FR reveal decks
 
 The order matters: the CSS variables must exist before the site is built, and
@@ -48,9 +47,7 @@ def main() -> int:
     steps: list[tuple[str, list[str]]] = [
         ("Country registry self-check", ["-m", "stg17.countries"]),
         ("AfDB palette -> CSS variables", ["-m", "stg17.theme", "--emit-css"]),
-        ("Notebooks from their bilingual masters",
-         ["tools/build_notebooks.py"] + (["--check"] if args.check else [])),
-        ("Notebook validation", ["tools/check_notebooks.py"]),
+                ("Notebook validation", ["tools/check_notebooks.py"]),
         ("Agenda -> day pages, lab register, mapping, glossary", ["tools/build_site.py"]),
         ("Slide decks", ["tools/build_slides.py"]),
     ]

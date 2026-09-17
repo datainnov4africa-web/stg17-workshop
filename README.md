@@ -92,7 +92,6 @@ participant's own official subnational figures.
 
 | To change | Edit | Then run |
 |---|---|---|
-| A laboratory | `notebooks/_masters/<id>.master.py` | `python tools/build_notebooks.py` |
 | A session, its time or its Action Plan mapping | `config/agenda.yml` | `python tools/build_site.py` |
 | A slide deck | `slides/decks/<id>.deck.html` | `python tools/build_slides.py` |
 | The AfDB palette | `stg17/theme.py` | `python -m stg17.theme --emit-css` |

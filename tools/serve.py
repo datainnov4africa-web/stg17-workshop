@@ -73,7 +73,7 @@ def main() -> int:
     print(f"    Français  http://127.0.0.1:{port}{path}fr/")
     print()
     print("  Ctrl-C to stop. Edits to docs/ reload automatically;")
-    print("  edits to config/ or notebooks/_masters/ need this script re-run.")
+    print("  edits to config/ need this script re-run.")
     print("=" * 70 + "\n")
 
     return subprocess.run(

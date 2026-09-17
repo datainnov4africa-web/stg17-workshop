@@ -25,12 +25,6 @@ jobs:
       - name: Country registry self-check
         run: python -m stg17.countries
 
-      # Generated notebooks must match their masters. If they do not, someone
-      # edited a published file directly and their change will be lost on the
-      # next build.
-      - name: Notebooks are in sync with their masters
-        run: python tools/build_notebooks.py --check
-
       - name: Notebooks are valid and carry no secrets
         run: python tools/check_notebooks.py
 

@@ -28,6 +28,8 @@ import re
 import sys
 from pathlib import Path
 
+import naming
+
 ROOT = Path(__file__).resolve().parent.parent
 DOCS = ROOT / "docs"
 
@@ -114,8 +116,6 @@ def download_links(session: dict, day: dict, lang: str) -> str:
     The naming rule itself lives in tools/naming.py, shared with downloads.py:
     if the two disagreed, a correctly placed file would silently never appear.
     """
-    import naming
-
     found = []
     for entry in naming.supplied(ROOT, session, day["n"]):
         icon = dict(naming.KINDS)[entry["kind"]]
@@ -124,50 +124,34 @@ def download_links(session: dict, day: dict, lang: str) -> str:
     return " ".join(found)
 
 
-def notebook_links(lab: dict, lang: str, github: dict) -> str:
+def colab_badges(session: dict, day: dict, lang: str, github: dict) -> str:
     """
-    Colab badges and repository links for one laboratory, in the active language.
+    A Colab badge for every notebook supplied for this session.
 
-    A laboratory may carry several notebooks: `notebooks:` takes a list, and
-    `notebook:` remains valid for the common case of one. Each produces a guided
-    and an open variant, so a laboratory with two notebooks shows four badges —
-    which is why the notebook's own name is printed above its pair as soon as
-    there is more than one. With a single notebook the heading would be noise.
+    Notebooks are dropped into docs/downloads/DayN/ like any other file, so this
+    reads the same folder as the download buttons — there is no second place to
+    look and no status flag to remember.
 
-    Nothing is emitted unless the laboratory is `status: ready`. A badge that
-    404s on Day 4 morning is worse than no badge, so the register shows the
-    honest status instead.
+    Colab opens a notebook from a public GitHub URL, so a badge only works once
+    this repository is pushed under the real organisation. Until then the
+    download button beside it is the path that works, which is why both are
+    offered rather than one.
     """
-    stems = lab.get("notebooks") or ([lab["notebook"]] if lab.get("notebook") else [])
-    if not stems or lab.get("status") != "ready":
+    org, repo = github.get("org"), github.get("repo")
+    branch = github.get("branch", "main")
+    if not org or not repo:
         return ""
 
-    org, repo, branch = github.get("org"), github.get("repo"), github.get("branch", "main")
-    day = lab.get("day")
-    labels = {
-        "en": ("guided", "open", "Earth Engine variant"),
-        "fr": ("guidée", "ouverte", "variante Earth Engine"),
-    }[lang]
-
-    def badge(path: str, label: str) -> str:
-        colab = f"https://colab.research.google.com/github/{org}/{repo}/blob/{branch}/{path}"
-        return (f"[![Colab]({{{{ colab_badge }}}})]({colab}) **{label}** &nbsp; "
-                f"[:material-github:](https://github.com/{org}/{repo}/blob/{branch}/{path})")
-
     out = []
-    for stem in stems:
-        if len(stems) > 1:
-            out.append(f"**`{stem}`**")
-        for suffix, label in ((f"_{lang.upper()}", labels[0]),
-                              (f"_{lang.upper()}_open", labels[1])):
-            out.append(badge(f"notebooks/day{day}/{stem}{suffix}.ipynb", label))
-
-    for gee_stem in (lab.get("gee_notebooks")
-                     or ([lab["gee_notebook"]] if lab.get("gee_notebook") else [])):
-        out.append(badge(f"notebooks/day{day}/{gee_stem}_{lang.upper()}.ipynb", labels[2]))
-
-    return "\n\n".join(out).replace("{{ colab_badge }}",
-                                     "https://colab.research.google.com/assets/colab-badge.svg")
+    for entry in naming.supplied(ROOT, session, day["n"]):
+        if entry["kind"] != "ipynb":
+            continue
+        path = f"docs/downloads/Day{day['n']}/{entry['name']}"
+        colab = f"https://colab.research.google.com/github/{org}/{repo}/blob/{branch}/{path}"
+        label = naming.button_text(entry).replace("IPYNB · ", "")
+        out.append(f"[![Colab](https://colab.research.google.com/assets/colab-badge.svg)]"
+                   f"({colab}) **{label}**")
+    return " &nbsp; ".join(out)
 
 
 # ---------------------------------------------------------------------------
@@ -256,7 +240,7 @@ def render_day(day: dict, labs: dict, lang: str, config: dict) -> str:
             lab_id = session.get("lab")
             if lab_id and lab_id in labs:
                 lab = labs[lab_id]
-                links = notebook_links(lab, lang, github)
+                links = colab_badges(session, day, lang, github)
                 lines += [
                     '!!! example "'
                     + ("Laboratoire — " if fr else "Laboratory — ")
@@ -406,7 +390,7 @@ def render_labs(agenda: dict, lang: str, config: dict) -> str:
                    if lab.get("gee") else "—") + " |",
                     "",
             ]
-            links = notebook_links(lab, lang, github)
+            links = ""  # notebooks are shown on the day page, beside their session
             if links:
                 lines += [links, ""]
 

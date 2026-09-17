@@ -78,7 +78,7 @@
 | **Environment and data** | Python with geopandas and pyarrow; Ookla parquet tiles and WorldPop rasters mirrored locally; national administrative boundaries |
 | **Team deliverable** | A population-weighted download-speed and latency indicator per first-level administrative region, one map and one quarterly series |
 | **Fallback** | Pre-clipped country extracts are prepared in advance for every participating country |
-| **Earth Engine variant** | yes — nothing downloaded |
+| **Earth Engine variant** | — |
 
 ### Elasticsearch
 
@@ -113,7 +113,7 @@
 | **Environment and data** | Python with rasterio and h5py; VIIRS monthly and annual subsets mirrored locally; Earth Engine account optional |
 | **Team deliverable** | A documented national raster subset and an inventory of the artefacts present in that country |
 | **Fallback** | Pre-clipped national subsets are prepared for every participating country; the Earth Engine variant downloads nothing at all |
-| **Earth Engine variant** | yes — nothing downloaded |
+| **Earth Engine variant** | — |
 
 ### NTL explore and understand
 
@@ -124,7 +124,7 @@
 | **Environment and data** | Same notebook as part 1 — steps 7 and 8 |
 | **Team deliverable** | The artefact inventory for your country, with evidence |
 | **Fallback** | The reference country (Côte d'Ivoire) is prepared end to end |
-| **Earth Engine variant** | yes — nothing downloaded |
+| **Earth Engine variant** | — |
 
 ### NTL analysis
 
@@ -135,7 +135,7 @@
 | **Environment and data** | rasterstats or exactextract; the panel produced in the morning |
 | **Team deliverable** | Zonal statistics table, time series, change detection between two periods, and the maps |
 | **Fallback** | One reference country is prepared end to end and handed to any team whose national data proves incomplete |
-| **Earth Engine variant** | yes — nothing downloaded |
+| **Earth Engine variant** | — |
 
 ### NTL validation
 

@@ -78,40 +78,6 @@ def create_placeholders(agenda: dict) -> tuple[int, int]:
     return made, kept
 
 
-def print_notebooks(session: dict, labs: dict, day: dict) -> None:
-    """
-    The notebooks a laboratory session expects, and whether they exist.
-
-    Notebooks work the other way round from a presentation: they are generated
-    from a master by `tools/build_notebooks.py`, so that English, French, guided
-    and open cannot drift apart. An .ipynb copied into notebooks/dayN/ by hand is
-    overwritten on the next build. A laboratory may declare several with
-    `notebooks:`; `notebook:` stays valid for the usual single one.
-    """
-    lab = labs.get(session.get("lab", ""))
-    if not lab:
-        return
-    stems = lab.get("notebooks") or ([lab["notebook"]] if lab.get("notebook") else [])
-    if not stems:
-        return
-
-    day_n = lab.get("day", day["n"])
-    folder = ROOT / "notebooks" / f"day{day_n}"
-    wanted = [f"{s}_{tag}" for s in stems for tag in ("EN", "FR", "EN_open", "FR_open")]
-    wanted += [f"{g}_{tag}"
-               for g in (lab.get("gee_notebooks")
-                         or ([lab["gee_notebook"]] if lab.get("gee_notebook") else []))
-               for tag in ("EN", "FR")]
-    here = [s for s in wanted if (folder / f"{s}.ipynb").exists()]
-
-    status = lab.get("status", "?")
-    flag = "" if status == "ready" else "   <- no Colab badge until status: ready"
-    print(f"        notebooks: {len(here)}/{len(wanted)} present in notebooks/day{day_n}/, "
-          f"status {status}{flag}")
-    if len(stems) > 1:
-        print(f"                   {len(stems)} notebooks: {', '.join(stems)}")
-
-
 def main() -> int:
     if hasattr(sys.stdout, "reconfigure"):
         sys.stdout.reconfigure(encoding="utf-8", errors="replace")
@@ -124,7 +90,6 @@ def main() -> int:
     args = ap.parse_args()
 
     agenda = yaml.safe_load(AGENDA.read_text(encoding="utf-8"))
-    labs = agenda.get("labs", {})
 
     if args.init:
         made, kept = create_placeholders(agenda)
@@ -167,7 +132,6 @@ def main() -> int:
             if not have:
                 print(f"        name your file: {naming.stem(session)}_EN.pdf"
                       f"   (or _FR, or .pptx, or -1 / -2 for several)")
-            print_notebooks(session, labs, day)
 
     if warnings:
         print("\n[!] Numbering to sort out:")

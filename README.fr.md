@@ -94,7 +94,6 @@ propres chiffres infranationaux officiels du participant.
 
 | Pour changer | Modifiez | Puis exécutez |
 |---|---|---|
-| Un laboratoire | `notebooks/_masters/<id>.master.py` | `python tools/build_notebooks.py` |
 | Une session, son horaire, son rattachement au Plan d'action | `config/agenda.yml` | `python tools/build_site.py` |
 | Une présentation | `slides/decks/<id>.deck.html` | `python tools/build_slides.py` |
 | La palette BAD | `stg17/theme.py` | `python -m stg17.theme --emit-css` |

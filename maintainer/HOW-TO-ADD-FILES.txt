@@ -1,71 +1,94 @@
-STG17 — HOW TO ADD A PRESENTATION TO THE WORKSHOP SITE
-=======================================================
+STG17 — HOW TO ADD A PRESENTATION OR A NOTEBOOK
+================================================
 
-Short version: find the placeholder, rename your file to match it minus
-"-inactif", drop it in the same folder, rebuild. Nothing else to edit.
+One rule for both. Nothing is generated: you supply every file.
+
+Find the placeholder, rename your file to match it minus "-inactif", drop it in
+the matching docs/downloads/DayN/ folder, rebuild. Nothing else to edit.
 
 
-1. THE FOLDERS
---------------
+1. THE TWO FOLDERS
+------------------
 
-One per day of the workshop:
+    maintainer/placeholders/Day1..Day5/    the names, never published
+    docs/downloads/Day1..Day5/             where you put the real file
 
-    docs/downloads/Day1/  Day2/  Day3/  Day4/  Day5/
+The first tells you what to call your file. The second receives it. Only the
+second is published with the site.
 
-Inside each, one empty placeholder per session, per language, per format, sorted
-by start time — so the folder reads in the order of the day.
+Placeholders are sorted by session start time, so each folder reads in the order
+of the day.
 
 
 2. ACTIVATING A FILE
 --------------------
 
 A placeholder carries "-inactif" before the extension. It means: nothing supplied
-yet, and the site shows no button for it.
+yet, and the site shows nothing for it.
 
-    1400_ai-infrastructure_EN-inactif.pdf     <- no file yet, link is dead
-    1400_ai-infrastructure_EN.pdf             <- supplied, link is live
+    1430_hands-on-part-1_EN-inactif.ipynb     <- no file yet
+    1430_hands-on-part-1_EN.ipynb             <- supplied, appears on the site
 
-Take the presentation you prepared, name it exactly like the placeholder but
-WITHOUT "-inactif", and put it in the same Day folder.
+Copy the placeholder's name, remove "-inactif", and put your file in
+docs/downloads/Day1/. Then:
 
-PowerPoint works identically — rename the .pptx placeholder instead. Any subset
-is fine: PDF only, PPTX only, one language or both. Only what exists is shown.
+    cd c:\Users\ASUS\stg17-workshop
+    python tools/build_site.py
 
-You can delete the placeholder afterwards or leave it; it is ignored either way.
+Reload the day page with Ctrl+F5.
 
 
-3. SEVERAL FILES FOR THE SAME SESSION
--------------------------------------
+3. THREE FORMATS, TWO LANGUAGES
+-------------------------------
 
-Add a number. The site shows one button per file, in numeric order:
+    .pdf     a presentation to read or print
+    .pptx    a presentation to edit
+    .ipynb   a notebook
 
-    1400_ai-infrastructure_EN-1.pdf     ->  button "PDF · EN (1)"
-    1400_ai-infrastructure_EN-2.pdf     ->  button "PDF · EN (2)"
+    _EN      English        _FR      French
 
-When a second file arrives, number the first one as well. Leaving one unnumbered
-beside a numbered one is not an error and not what anyone means — so
+Any subset is fine. A session may carry an English PDF and nothing else, or a
+French notebook and two English PowerPoints. Only what exists is shown.
+
+
+4. SEVERAL FILES FOR ONE SESSION
+--------------------------------
+
+Add a number. One button per file, in numeric order:
+
+    1430_hands-on-part-1_EN-1.ipynb     ->  "IPYNB · EN (1)"
+    1430_hands-on-part-1_EN-2.ipynb     ->  "IPYNB · EN (2)"
+
+When a second file arrives, number the first one too. An unnumbered file left
+beside a numbered one is neither an error nor what anyone meant, so
 
     python tools/downloads.py
 
 reports it under "Numbering to sort out".
 
-A label may follow the number, and the button then shows it instead of the bare
-figure. Worth it when the two files are not interchangeable:
+A label may follow the number, and the button shows it instead of the figure:
 
-    1400_ai-infrastructure_EN-2-exercises.pdf   ->  "PDF · EN · exercises"
-
-Formats and languages are counted separately. A session may carry two English
-PDFs, one French PowerPoint and nothing else.
+    1430_hands-on-part-1_EN-2-exercises.ipynb   ->  "IPYNB · EN · exercises"
 
 
-4. THE NAMING RULE, IF YOU EVER NEED IT
+5. WHAT A NOTEBOOK GETS
+-----------------------
+
+A supplied .ipynb produces two things on the day page:
+
+  - a download button, which works immediately, offline, and from the USB key
+  - a Colab badge, which opens the notebook in one click
+
+The Colab badge builds a URL into this repository on GitHub. It only resolves
+once the repository is pushed under the real organisation — `github.org` in
+config/workshop.yml is still a placeholder. Until then the download button is the
+path that works, which is why both are offered.
+
+
+6. THE NAMING RULE, IF YOU EVER NEED IT
 ---------------------------------------
 
-    <start time>_<short title>_<EN|FR>[-<n>][-<label>].<pdf|pptx>
-
-    1400        session start, so files sort into running order
-    ai-infra…   the title, cut at the first colon or dash
-    _EN         language, after an UNDERSCORE
+    <start time>_<short title>_<EN|FR>[-<n>][-<label>].<pdf|pptx|ipynb>
 
 Never write ".en." or ".fr.". The site's bilingual plugin claims any such segment
 in any filename and would publish only one of the two languages, silently. That
@@ -74,72 +97,27 @@ already cost half the slide decks once.
 You should not need to type any of this: the placeholder already has the name.
 
 
-5. REBUILD
-----------
+7. USEFUL COMMANDS
+------------------
 
-    cd c:\Users\ASUS\stg17-workshop
-    python tools/build_site.py
+    python tools/downloads.py             what is supplied, what is missing
+    python tools/downloads.py --missing   only what is still needed
+    python tools/downloads.py --day 2     one day at a time
+    python tools/downloads.py --init      recreate placeholders after an agenda change
+    python tools/build_site.py            publish what you have dropped
 
-Then reload the day page with Ctrl+F5. The buttons appear under the session
-description.
-
-To see what is supplied and what is still missing:
-
-    python tools/downloads.py
-    python tools/downloads.py --missing
-    python tools/downloads.py --day 2
-
-To recreate placeholders after the agenda changes:
-
-    python tools/downloads.py --init
-
-That never overwrites a file you supplied.
+`--init` never overwrites a file you supplied.
 
 
-6. BEFORE PUBLISHING TO GITHUB
+8. BEFORE PUBLISHING TO GITHUB
 ------------------------------
 
-These files are committed to the repository and served publicly from GitHub
-Pages. Check that a presentation contains nothing that cannot be public:
-unreleased figures, microdata, internal drafts, personal data.
+These files are committed and served publicly from GitHub Pages.
 
-Size matters — every megabyte is cloned by everyone who clones the repository.
-Keep a deck under about 10 MB; compress images before exporting.
-
-
-7. AND THE NOTEBOOKS?
----------------------
-
-Notebooks work the other way round. You do NOT drop an .ipynb anywhere:
-`tools/build_notebooks.py` would overwrite it on the next run. Each notebook has
-ONE source in notebooks/_masters/, and the build produces the four variants:
-
-    notebooks/day1/D1_RAG_Assistant_EN.ipynb
-    notebooks/day1/D1_RAG_Assistant_FR.ipynb
-    notebooks/day1/D1_RAG_Assistant_EN_open.ipynb
-    notebooks/day1/D1_RAG_Assistant_FR_open.ipynb
-
-English and French, guided and open, cannot drift apart if they come from the
-same file.
-
-To attach notebooks to a session, in config/agenda.yml under `labs:`:
-
-    d3_ookla:
-      day: 3
-      notebook: D3_Ookla_WorldPop        # one notebook
-      status: ready
-
-    d4_ntl:
-      day: 4
-      notebooks:                          # or several
-        - D4_NTL_Collect
-        - D4_NTL_Analysis
-      status: ready
-
-then link the session to the fiche with    lab: d3_ookla
-
-With more than one notebook the site prints each notebook's name above its
-guided/open pair, so four badges do not read as one confusing block.
-
-Until `status: ready`, no Colab badge is shown — deliberately. A badge that
-returns a 404 on Thursday morning is worse than no badge at all.
+  - Check a notebook carries no API key, token or password. `python
+    tools/check_notebooks.py` scans docs/downloads/ for exactly that, and also
+    refuses notebooks that still carry execution outputs.
+  - Check a presentation contains nothing unpublishable: unreleased figures,
+    microdata, internal drafts, personal data.
+  - Keep files under about 10 MB. Every megabyte is cloned by everyone who clones
+    the repository.

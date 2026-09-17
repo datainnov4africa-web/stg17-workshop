@@ -16,7 +16,8 @@ THE CONVENTION
     1400        the session start time, so files sort into running order
     ai-infra…   a short readable slug, cut at the first colon or dash
     _EN         the language, after an UNDERSCORE
-    .pdf        or .pptx — both are offered, either may be supplied
+    .pdf        .pptx or .ipynb — presentations and notebooks follow one rule,
+                because two rules for two kinds of file is one too many
 
 A session with nothing yet carries an empty placeholder, `-inactif` before the
 extension. Removing that marker is what publishes the file:
@@ -65,7 +66,9 @@ from pathlib import Path
 PLACEHOLDER = "-inactif"
 
 #: Offered formats, with the icon the site uses for each.
-KINDS = (("pdf", ":material-file-pdf-box:"), ("pptx", ":material-microsoft-powerpoint:"))
+KINDS = (("pdf", ":material-file-pdf-box:"),
+         ("pptx", ":material-microsoft-powerpoint:"),
+         ("ipynb", ":material-notebook-outline:"))
 TAGS = ("EN", "FR")
 
 #: Cut the title at the first colon or dash — everything after it is a subtitle,

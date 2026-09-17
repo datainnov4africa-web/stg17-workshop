@@ -5,7 +5,7 @@ STG17 · Build the reveal.js decks from their bilingual sources.
     python tools/build_slides.py             # build every deck, EN and FR
     python tools/build_slides.py --only 08
 
-Same principle as `build_notebooks.py`, and for the same reason: twelve decks in
+Twelve decks in two languages is twenty-four files, and twenty-four
 two languages is twenty-four files, and twenty-four hand-maintained files drift.
 
 --------------------------------------------------------------------------

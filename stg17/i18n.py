@@ -4,7 +4,7 @@ STG17 · Bilingual runtime (EN / FR).
 Two mechanisms keep the English and French notebooks from drifting apart:
 
   1. **Build time** — markdown cells are written once in the master notebook
-     inside <!--EN--> / <!--FR--> blocks, and `tools/build_notebooks.py` emits
+     inside <!--EN--> / <!--FR--> blocks.
      one file per language. See that script for the full convention.
 
   2. **Run time** — anything a *code* cell prints goes through `T()`:

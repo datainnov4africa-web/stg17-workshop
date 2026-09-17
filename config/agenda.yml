@@ -359,7 +359,6 @@ labs:
     team_en: pairs
     team_fr: binômes
     country: CIV
-    notebook: D1_RAG_Assistant
     env_en: Python in Colab, Kaggle or local; scikit-learn for the word-matching retriever, which needs no download; sentence-transformers optional for the meaning-matching one; no vector database — the corpus is small enough that one is not warranted
     env_fr: Python dans Colab, Kaggle ou en local ; scikit-learn pour le récupérateur par mots, sans téléchargement ; sentence-transformers en option pour le récupérateur sémantique ; pas de base vectorielle — le corpus est trop petit pour la justifier
     deliverable_en: A transcript of answers with the exact passages behind each one, and a retrieval evaluation separating retrieval failures from generation failures
@@ -374,7 +373,6 @@ labs:
     team_en: pairs
     team_fr: binômes
     country: CIV
-    notebook: D1_Agent
     env_en: Same environment as the RAG laboratory; four tools — retrieval, a document list, a guarded calculator and one that writes to disk. A JSON text protocol rather than native function calling, so the request-to-execution gap stays visible and the exercise runs on any provider including a local model
     env_fr: Même environnement que le laboratoire RAG ; quatre outils — récupération, liste de documents, calculatrice protégée et un outil qui écrit sur disque. Un protocole textuel JSON plutôt que l'appel de fonctions natif, pour que l'interstice demande-exécution reste visible et que l'exercice tourne sur tout fournisseur, y compris un modèle local
     deliverable_en: An audit log recording every tool the model asked for, whether policy allowed it, and the raw reply behind each request — plus the note the agent wrote once a policy permitted it
@@ -433,7 +431,6 @@ labs:
     team_en: teams
     team_fr: équipes
     country: TUN
-    gee: true
     env_en: Python with geopandas and pyarrow; Ookla parquet tiles and WorldPop rasters mirrored locally; national administrative boundaries
     env_fr: Python avec geopandas et pyarrow ; tuiles parquet Ookla et rasters WorldPop en miroir local ; frontières administratives nationales
     deliverable_en: A population-weighted download-speed and latency indicator per first-level administrative region, one map and one quarterly series
@@ -476,9 +473,6 @@ labs:
     team_en: teams
     team_fr: équipes
     country: CIV
-    gee: true
-    notebook: D4_NTL_Collect_Explore
-    gee_notebook: D4_NTL_GEE
     env_en: Python with rasterio and h5py; VIIRS monthly and annual subsets mirrored locally; Earth Engine account optional
     env_fr: Python avec rasterio et h5py ; sous-ensembles VIIRS mensuels et annuels en miroir local ; compte Earth Engine optionnel
     deliverable_en: A documented national raster subset and an inventory of the artefacts present in that country
@@ -493,9 +487,6 @@ labs:
     team_en: teams
     team_fr: équipes
     country: CIV
-    gee: true
-    notebook: D4_NTL_Collect_Explore
-    gee_notebook: D4_NTL_GEE
     env_en: Same notebook as part 1 — steps 7 and 8
     env_fr: Même carnet que la partie 1 — étapes 7 et 8
     deliverable_en: The artefact inventory for your country, with evidence
@@ -510,7 +501,6 @@ labs:
     team_en: teams
     team_fr: équipes
     country: CIV
-    gee: true
     env_en: rasterstats or exactextract; the panel produced in the morning
     env_fr: rasterstats ou exactextract ; le panel produit le matin
     deliverable_en: Zonal statistics table, time series, change detection between two periods, and the maps

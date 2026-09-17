@@ -78,7 +78,7 @@
 | **Environnement et données** | Python avec geopandas et pyarrow ; tuiles parquet Ookla et rasters WorldPop en miroir local ; frontières administratives nationales |
 | **Livrable de l’équipe** | Un indicateur de débit descendant et de latence pondéré par la population, par région administrative de premier niveau, une carte et une série trimestrielle |
 | **Repli** | Des extraits pays pré-découpés sont préparés à l'avance pour chaque pays participant |
-| **Variante Earth Engine** | oui — aucun téléchargement |
+| **Variante Earth Engine** | — |
 
 ### Elasticsearch
 
@@ -113,7 +113,7 @@
 | **Environnement et données** | Python avec rasterio et h5py ; sous-ensembles VIIRS mensuels et annuels en miroir local ; compte Earth Engine optionnel |
 | **Livrable de l’équipe** | Un sous-ensemble raster national documenté et un inventaire des artefacts présents dans ce pays |
 | **Repli** | Des sous-ensembles nationaux pré-découpés sont préparés pour chaque pays participant ; la variante Earth Engine ne télécharge rien |
-| **Variante Earth Engine** | oui — aucun téléchargement |
+| **Variante Earth Engine** | — |
 
 ### NTL explorer et comprendre
 
@@ -124,7 +124,7 @@
 | **Environnement et données** | Même carnet que la partie 1 — étapes 7 et 8 |
 | **Livrable de l’équipe** | L'inventaire des artefacts de votre pays, avec les preuves |
 | **Repli** | Le pays de référence (Côte d'Ivoire) est préparé de bout en bout |
-| **Variante Earth Engine** | oui — aucun téléchargement |
+| **Variante Earth Engine** | — |
 
 ### NTL analyse
 
@@ -135,7 +135,7 @@
 | **Environnement et données** | rasterstats ou exactextract ; le panel produit le matin |
 | **Livrable de l’équipe** | Tableau de statistiques zonales, séries temporelles, détection de changement entre deux périodes, et les cartes |
 | **Repli** | Un pays de référence est préparé de bout en bout et remis à toute équipe dont les données nationales s'avèrent incomplètes |
-| **Variante Earth Engine** | oui — aucun téléchargement |
+| **Variante Earth Engine** | — |
 
 ### NTL validation
 
