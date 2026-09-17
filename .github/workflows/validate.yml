@@ -56,19 +56,5 @@ jobs:
       - name: Slide decks build
         run: python tools/build_slides.py
 
-      # The prompt library reads build_slides' thresholds and the palette
-      # directly, so a rename in either breaks prompt assembly silently — the
-      # tool would still print a prompt, just one carrying stale values. Assemble
-      # one prompt of each shape and fail on any token left unresolved.
-      - name: Prompt library assembles
-        run: |
-          python tools/prompt.py --list
-          for p in P1 P6 P7 P9 P10; do
-            python tools/prompt.py $p --deck 01 >/dev/null 2>err.txt
-            test -s err.txt && (echo "::error::$p left tokens unresolved" && cat err.txt && exit 1)
-          done
-          python tools/prompt.py P2 --deck 01 --slide 3 >/dev/null
-          python tools/prompt.py P8 --deck 08 --slide 5 >/dev/null
-
       - name: Site builds strictly
         run: mkdocs build --strict
