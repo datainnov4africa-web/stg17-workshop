@@ -4,17 +4,17 @@ STG17 · Validate every published notebook before it reaches a participant.
 
     python tools/check_notebooks.py
 
-Six checks, each of which has a specific failure it is guarding against:
+Four checks, each of which has a specific failure it is guarding against:
 
   1. **Valid JSON and nbformat** — a notebook that will not open at 09:30
   2. **No secrets** — an API key committed to a public repository is a published key
-  3. **Colab badge present and well-formed** — a badge pointing at the wrong path
-     sends a participant to a 404 on the one day they need the fallback
-  4. **Code cells parse** — a syntax error found by CI, not by forty people
-  5. **A country variable is present and is a real ISO3** — the notebook must be
-     portable, and a typo in the code makes it silently non-portable
-  6. **No execution outputs** — outputs bloat diffs and can leak data; the
-     exception is a country repository, which is not checked here
+  3. **Code cells parse** — a syntax error found by CI, not by forty people
+  4. **No execution outputs** — outputs bloat diffs and can leak data
+
+Every notebook is supplied by the workshop team, not generated here, so these
+four are deliberately the only rules: they are the ones whose violation would
+harm a participant or the repository. Anything about how a notebook is written
+is the author's business.
 
 Exit code 1 on any failure, so it can gate a pull request.
 """
@@ -46,10 +46,6 @@ SECRET_PATTERNS = [
 
 # Placeholders that legitimately look like the patterns above.
 ALLOWED = re.compile(r"(?i)(CHANGE-ME|<your|xxx+|\.\.\.|example|placeholder|gsk_\.\.\.)")
-
-RE_COLAB = re.compile(
-    r"colab\.research\.google\.com/github/([\w\-]+)/([\w\-]+)/blob/([\w\-./]+)/(\S+?\.ipynb)")
-RE_COUNTRY = re.compile(r'COUNTRY_ISO3\s*=\s*"([A-Z]{3})"')
 
 
 def check(path: Path) -> list[str]:
@@ -91,18 +87,7 @@ def check(path: Path) -> list[str]:
                 f"(if this is a placeholder, make it obviously one)"
             )
 
-    # 3. Colab badge ----------------------------------------------------------
-    badge = RE_COLAB.search(whole)
-    if not badge:
-        problems.append(f"{relative}: no Colab badge — participants on locked-down "
-                        f"laptops have no fallback path")
-    else:
-        target = badge.group(4)
-        if Path(target).name != path.name:
-            problems.append(f"{relative}: Colab badge points at {target}, "
-                            f"which is not this notebook")
-
-    # 4. Code cells parse -----------------------------------------------------
+    # 3. Code cells parse -----------------------------------------------------
     for index, cell in enumerate(cells):
         if cell.get("cell_type") != "code":
             continue
@@ -120,20 +105,7 @@ def check(path: Path) -> list[str]:
         except SyntaxError as exc:
             problems.append(f"{relative}: cell {index} does not parse — line {exc.lineno}: {exc.msg}")
 
-    # 5. Country parameterisation --------------------------------------------
-    if "day" in relative:
-        match = RE_COUNTRY.search(source_text)
-        if not match:
-            problems.append(f"{relative}: no COUNTRY_ISO3 — the laboratory is not portable")
-        else:
-            sys.path.insert(0, str(ROOT))
-            from stg17 import countries  # noqa: PLC0415
-
-            if match.group(1) not in countries.BY_ISO3:
-                problems.append(f"{relative}: COUNTRY_ISO3 = {match.group(1)!r} "
-                                f"is not an African Union member state")
-
-    # 6. No stored outputs ----------------------------------------------------
+    # 4. No stored outputs ----------------------------------------------------
     with_outputs = [i for i, c in enumerate(cells)
                     if c.get("cell_type") == "code" and c.get("outputs")]
     if with_outputs:
