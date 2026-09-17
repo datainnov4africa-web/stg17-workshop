@@ -1,99 +1,102 @@
 STG17 — HOW TO ADD A PRESENTATION TO THE WORKSHOP SITE
 =======================================================
 
-Put the file in THIS folder, with the exact name the site expects. It appears on
-the agenda page the next time the site is built. Nothing else to edit.
+Short version: find the placeholder, rename your file to match it minus
+"-inactif", drop it in the same folder, rebuild. Nothing else to edit.
 
 
-1. FIND THE FILENAME
+1. THE FOLDERS
+--------------
+
+One per day of the workshop:
+
+    docs/downloads/Day1/
+    docs/downloads/Day2/
+    docs/downloads/Day3/
+    docs/downloads/Day4/
+    docs/downloads/Day5/
+
+Inside each, one empty placeholder per session, per language, per format. They
+are sorted by start time, so the folder reads in the order of the day.
+
+
+2. ACTIVATING A FILE
 --------------------
 
-    cd c:\Users\ASUS\stg17-workshop
-    python tools/downloads.py
+A placeholder carries "-inactif" before the extension. It means: nothing supplied
+yet, and the site shows no button for it.
 
-That prints, for every session of every day, the exact name to use — and marks
-with "!!" the sessions that have nothing yet.
+    1400_ai-infrastructure_EN-inactif.pdf     <- no file yet, link is dead
+    1400_ai-infrastructure_EN.pdf             <- supplied, link is live
 
-    python tools/downloads.py --missing     only what is still needed
-    python tools/downloads.py --day 2       one day at a time
+So: take the presentation you prepared, name it exactly like the placeholder but
+WITHOUT "-inactif", and put it in the same Day folder.
 
+You can delete the placeholder afterwards or leave it — it is ignored either way.
 
-2. NAME THE FILE
-----------------
+PowerPoint works identically: rename the .pptx placeholder instead.
 
-    <session id>-EN.pdf        <session id>-FR.pdf
-    <session id>-EN.pptx       <session id>-FR.pptx
+    1400_ai-infrastructure_FR.pptx
 
-For example, for the Day 1 talk on AI infrastructure:
-
-    d1-ai-infrastructure-what-it-really-EN.pdf
-    d1-ai-infrastructure-what-it-really-FR.pptx
-
-Any subset is fine. Supply PDF only, PPTX only, or both; English only, French
-only, or both. Only the files that exist are shown on the site — a session with
-nothing yet simply shows no download buttons.
-
-IMPORTANT: the language tag is separated by a HYPHEN, never a dot.
-
-    d1-opening-ceremony-EN.pdf     correct
-    d1-opening-ceremony.en.pdf     WRONG — the site would publish only one of
-                                   the two languages, silently
-
-The reason: the site's bilingual plugin treats any ".en." or ".fr." segment in
-any filename as its own language convention and claims the file. This already
-cost half the slide decks once.
+Any subset is fine — PDF only, PPTX only, one language or both. Only what exists
+is shown.
 
 
-3. REBUILD
+3. THE NAMING RULE, IF YOU EVER NEED IT
+---------------------------------------
+
+    <start time>_<short title>_<EN|FR>.<pdf|pptx>
+
+    1400        session start, so files sort into running order
+    ai-infra…   the title, cut at the first colon or dash
+    _EN         language, after an UNDERSCORE
+
+Never write ".en." or ".fr.". The site's bilingual plugin claims any such segment
+in any filename and would publish only one of the two languages, silently. That
+already cost half the slide decks once.
+
+You should not need to type any of this: the placeholder already has the name.
+
+
+4. REBUILD
 ----------
 
+    cd c:\Users\ASUS\stg17-workshop
     python tools/build_site.py
 
-Or, to regenerate everything at once:
+Then reload the day page with Ctrl+F5. The button appears under the session
+description.
 
-    python tools/build_all.py
+To see what is supplied and what is still missing:
 
-Then check the day page. The buttons appear under the session description.
+    python tools/downloads.py
+    python tools/downloads.py --missing
+    python tools/downloads.py --day 2
+
+To recreate placeholders after the agenda changes:
+
+    python tools/downloads.py --init
+
+That never overwrites a file you supplied.
 
 
-4. BEFORE PUBLISHING TO GITHUB
+5. BEFORE PUBLISHING TO GITHUB
 ------------------------------
 
-Files in this folder are committed to the repository and served publicly from
-GitHub Pages. Before adding one, check that it contains nothing that cannot be
-public: unreleased figures, microdata, internal drafts, or personal data.
+These files are committed to the repository and served publicly from GitHub
+Pages. Check that a presentation contains nothing that cannot be public:
+unreleased figures, microdata, internal drafts, personal data.
 
-Large files matter here. Every megabyte is cloned by everyone who clones the
+Size matters here — every megabyte is cloned by everyone who clones the
 repository. Keep a deck under about 10 MB; compress images before exporting.
-
-
-5. IF THE AGENDA CHANGES
-------------------------
-
-When the Word agenda is updated, re-import it:
-
-    python tools/import_agenda.py --from "C:/AfDB/Momar/STG17/Workshop Sep 2026/<file>.docx"
-
-Session ids are carried across by title, so existing filenames keep working. If a
-session is renamed beyond recognition its id is regenerated, and
-`python tools/downloads.py` will list the old file as a stray so it can be
-renamed rather than silently disappearing from the site.
 
 
 6. AND THE NOTEBOOKS?
 ---------------------
 
-Same command, same place:
-
-    python tools/downloads.py
-
-Under each laboratory session it now also prints the notebooks that session
-expects, how many exist, and the laboratory's status.
-
-But notebooks work the other way round from a PDF. You do NOT copy an .ipynb
-into notebooks/dayN/ — `tools/build_notebooks.py` would overwrite it on the next
-run. Each laboratory has ONE source in notebooks/_masters/, and the build
-produces the four variants from it:
+Notebooks work the other way round. You do NOT drop an .ipynb anywhere:
+`tools/build_notebooks.py` would overwrite it on the next run. Each laboratory
+has ONE source in notebooks/_masters/, and the build produces the four variants:
 
     notebooks/day1/D1_RAG_Assistant_EN.ipynb
     notebooks/day1/D1_RAG_Assistant_FR.ipynb

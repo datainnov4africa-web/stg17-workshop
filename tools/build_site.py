@@ -98,40 +98,25 @@ def fmt_time(value: str, lang: str) -> str:
 # ---------------------------------------------------------------------------
 #  Notebook links
 # ---------------------------------------------------------------------------
-#: Where organisers drop the presentation files. One flat folder, because a
-#: person copying a file should not have to work out which subfolder it belongs
-#: in. The expected name for every session is printed by `tools/downloads.py`.
-DOWNLOADS = ROOT / "docs" / "downloads"
-
-#: Hyphen before the language code, never a dot: mkdocs-static-i18n claims any
-#: `.en.` or `.fr.` segment in ANY filename as its own suffix convention, and
-#: would publish only one of the two files. This already broke the decks once.
-DOWNLOAD_KINDS = (
-    ("pdf", ":material-file-pdf-box:"),
-    ("pptx", ":material-microsoft-powerpoint:"),
-)
-
-
-def download_links(session: dict, lang: str) -> str:
+def download_links(session: dict, day: dict, lang: str) -> str:
     """
-    Buttons for the files that exist, and nothing for the files that do not.
+    Buttons for the files actually supplied, and nothing for the rest.
 
-    A greyed-out button for material nobody has produced yet tells a visitor the
-    workshop is unfinished; an absent button tells them nothing at all, which is
-    what was asked for. The moment a file is dropped into docs/downloads/ under
-    the expected name, its button appears on the next build.
+    `tools/downloads.py --init` writes an empty placeholder for every session,
+    carrying `-inactif` before the extension. Removing that marker from the
+    filename is what publishes the file — so an organiser never has to invent a
+    name, and a session with nothing yet simply shows no buttons.
+
+    The naming rule itself lives in tools/naming.py, shared with downloads.py:
+    if the two disagreed, a correctly placed file would silently never appear.
     """
-    session_id = session.get("id")
-    if not session_id:
-        return ""
+    import naming
 
     found = []
-    for code, icon in DOWNLOAD_KINDS:
-        for tag in ("EN", "FR"):
-            name = f"{session_id}-{tag}.{code}"
-            if (DOWNLOADS / name).exists():
-                found.append(f"[{icon} {code.upper()} · {tag}](../downloads/{name})"
-                             "{ .md-button }")
+    for kind, tag, name in naming.supplied(ROOT, session, day["n"]):
+        icon = dict(naming.KINDS)[kind]
+        found.append(f"[{icon} {kind.upper()} · {tag}]"
+                     f"(../downloads/Day{day['n']}/{name})" "{ .md-button }")
     return " ".join(found)
 
 
@@ -247,7 +232,7 @@ def render_day(day: dict, labs: dict, lang: str, config: dict) -> str:
                 lines += [f"[:material-presentation: {verb}](../slides/index.md#deck-{deck})"
                           "{ .md-button .md-button--primary }", ""]
 
-            files = download_links(session, lang)
+            files = download_links(session, day, lang)
             if files:
                 lines += [files, ""]
 
