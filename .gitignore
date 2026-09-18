@@ -24,6 +24,12 @@ __pycache__/
 venv/
 .ipynb_checkpoints/
 
+# Office lock files, written beside a document while it is open in PowerPoint or
+# Word. Never publishable, and worse than clutter: mkdocs build fails outright
+# with a PermissionError trying to copy one out of docs/downloads/ while Office
+# still holds it. That is how this line came to be here.
+~$*
+
 # OS
 .DS_Store
 Thumbs.db
