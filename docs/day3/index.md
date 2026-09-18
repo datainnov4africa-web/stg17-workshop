@@ -23,6 +23,10 @@ Taxonomy of non-traditional sources — satellite imagery, crowdsourced measurem
 
 Ookla: performance tiles at web-Mercator zoom 16 (about 611 m at the equator), quarterly since Q1 2019; key fields (quadkey, avg_d_kbps, avg_lat_ms, tests, devices); CC BY-NC-SA 4.0 licence and its consequences for NSO publication; verify national coverage before designing any indicator. WorldPop: gridded population rasters used to weight and normalise. Teams join the tiles to administrative boundaries and produce a first population-weighted connectivity indicator per region.
 
+[:material-microsoft-powerpoint: PPTX · EN](../downloads/Day3/1045_hands-on_EN.pptx){ .md-button } [:material-microsoft-powerpoint: PPTX · FR](../downloads/Day3/1045_hands-on_FR.pptx){ .md-button } [:material-notebook-outline: IPYNB · EN](../downloads/Day3/1045_hands-on_EN.ipynb){ .md-button } [:material-notebook-outline: IPYNB · FR](../downloads/Day3/1045_hands-on_FR.ipynb){ .md-button }
+
+[![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/datainnov4africa-web/stg17-workshop/blob/main/docs/downloads/Day3/1045_hands-on_EN.ipynb) **EN** &nbsp; [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/datainnov4africa-web/stg17-workshop/blob/main/docs/downloads/Day3/1045_hands-on_FR.ipynb) **FR**
+
 !!! example "Laboratory — Ookla and WorldPop"
 
     **Deliverable:** A population-weighted download-speed and latency indicator per first-level administrative region, one map and one quarterly series

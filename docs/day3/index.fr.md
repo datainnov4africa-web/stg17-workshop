@@ -23,6 +23,10 @@ Taxonomie des sources non traditionnelles — imagerie satellitaire, mesure part
 
 Ookla : tuiles de performance au zoom 16 en Mercator web (environ 611 m à l'équateur), trimestrielles depuis le T1 2019 ; champs clés (quadkey, avg_d_kbps, avg_lat_ms, tests, devices) ; licence CC BY-NC-SA 4.0 et ses conséquences pour la publication par un INS ; vérifier la couverture nationale avant de concevoir tout indicateur. WorldPop : rasters de population maillés servant à pondérer et normaliser. Les équipes joignent les tuiles aux frontières administratives et produisent un premier indicateur de connectivité pondéré par la population, par région.
 
+[:material-microsoft-powerpoint: PPTX · EN](../downloads/Day3/1045_hands-on_EN.pptx){ .md-button } [:material-microsoft-powerpoint: PPTX · FR](../downloads/Day3/1045_hands-on_FR.pptx){ .md-button } [:material-notebook-outline: IPYNB · EN](../downloads/Day3/1045_hands-on_EN.ipynb){ .md-button } [:material-notebook-outline: IPYNB · FR](../downloads/Day3/1045_hands-on_FR.ipynb){ .md-button }
+
+[![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/datainnov4africa-web/stg17-workshop/blob/main/docs/downloads/Day3/1045_hands-on_EN.ipynb) **EN** &nbsp; [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/datainnov4africa-web/stg17-workshop/blob/main/docs/downloads/Day3/1045_hands-on_FR.ipynb) **FR**
+
 !!! example "Laboratoire — Ookla et WorldPop"
 
     **Livrable :** Un indicateur de débit descendant et de latence pondéré par la population, par région administrative de premier niveau, une carte et une série trimestrielle
