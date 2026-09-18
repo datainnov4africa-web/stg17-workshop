@@ -40,6 +40,8 @@ Ookla: performance tiles at web-Mercator zoom 16 (about 611 m at the equator), q
 
 Fundamentals — ingestion, storage (data lake and lakehouse), distributed processing (batch versus streaming, Spark), indexing and search, orchestration, metadata and versioning.
 
+[:material-microsoft-powerpoint: PPTX · EN](../downloads/Day3/1400_engines-of-scale_EN.pptx){ .md-button } [:material-microsoft-powerpoint: PPTX · FR](../downloads/Day3/1400_engines-of-scale_FR.pptx){ .md-button }
+
 
 ### 14:45–15:30 &nbsp;·&nbsp; Hands-on part 1 — Ookla at Scale with Elasticsearch
 

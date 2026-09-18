@@ -40,6 +40,8 @@ Ookla : tuiles de performance au zoom 16 en Mercator web (environ 611 m à l'éq
 
 Fondamentaux — ingestion, stockage (lac de données et lakehouse), traitement distribué (par lots contre flux, Spark), indexation et recherche, orchestration, métadonnées et versionnement. Où chaque technologie mérite sa place dans un INS, et où un outil plus simple ferait l'affaire. La Plateforme mondiale des Nations unies et le Centre ONU pour les mégadonnées de Kigali comme infrastructures partagées.
 
+[:material-microsoft-powerpoint: PPTX · EN](../downloads/Day3/1400_engines-of-scale_EN.pptx){ .md-button } [:material-microsoft-powerpoint: PPTX · FR](../downloads/Day3/1400_engines-of-scale_FR.pptx){ .md-button }
+
 
 ### 14h45–15h30 &nbsp;·&nbsp; Atelier partie 1 — Ookla à l'échelle avec Elasticsearch
 
