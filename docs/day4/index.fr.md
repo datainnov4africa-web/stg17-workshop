@@ -12,6 +12,8 @@
 
 Concepts et utilité, délibérément brefs pour que la journée se passe dans les données — de DMSP-OLS (1992-2013) à VIIRS/DNB ; les produits NASA Black Marble (VNP46A2 journalier, A3 mensuel, A4 annuel) et la série VNL annuelle de l'EOG ; unités de radiance, résolution et disponibilité temporelle ; ce que les NTL approchent bien — activité économique, électrification, urbanisation, suivi de crise. Les artefacts connus ne sont ici que nommés ; on les rencontre concrètement en partie 2.
 
+[:material-microsoft-powerpoint: PPTX · EN](../downloads/Day4/0900_night-time-lights_EN.pptx){ .md-button } [:material-microsoft-powerpoint: PPTX · FR](../downloads/Day4/0900_night-time-lights_FR.pptx){ .md-button }
+
 
 ### 09h30–10h30 &nbsp;·&nbsp; Atelier partie 1 — Collecter
 
