@@ -51,8 +51,9 @@ Ne construisez pas la structure à la main. Le gabarit porte les conventions don
 le Secrétariat a besoin pour agréger les travaux entre pays — et il porte le
 workflow GitHub Actions qui publie votre site.
 
-1. Rendez-vous sur [`STG17-Africa/country-template`](https://github.com/STG17-Africa/country-template)
-2. Cliquez sur **Use this template** → **Create a new repository**
+1. Prenez le gabarit pays fourni avec le matériel de l'atelier — il est sur la clé
+   USB, et l'équipe d'animation vous en enverra le lien
+2. Créez un nouveau dépôt sur GitHub et copiez-y les fichiers du gabarit
 3. Propriétaire : l'organisation GitHub de votre office si elle existe, sinon votre compte
 4. Nom : **`stg17-<iso3>`** en minuscules — `stg17-civ`, `stg17-tun`, `stg17-ken`
 5. Visibilité : **Public**
@@ -376,12 +377,10 @@ suffit, et c'est ce dont a besoin un utilisateur qui compare deux de vos version
 
 Une fois votre dépôt public et doté d'un DOI :
 
-1. Ouvrez une issue sur
-   [`STG17-Africa/catalogue`](https://github.com/STG17-Africa/catalogue) avec le
-   gabarit **New country submission**
-2. Donnez l'URL du dépôt, le DOI, et un paragraphe sur ce qui est réutilisable
-3. Le Secrétariat l'examine au regard de la liste ci-dessous et l'ajoute au
-   catalogue continental
+1. Transmettez au Secrétariat l'URL du dépôt, le DOI, et un paragraphe sur ce qui
+   est réutilisable
+2. Il est examiné au regard de la liste ci-dessous et ajouté au catalogue
+   continental
 
 Vos travaux alimentent alors l'**activité 2.1.1** (lignes directrices
 méthodologiques pour l'usage des nouvelles sources de données) et deviennent

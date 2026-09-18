@@ -50,8 +50,9 @@ Do not build the structure by hand. The template carries the conventions the
 Secretariat needs in order to aggregate work across countries — and it carries the
 GitHub Actions workflow that publishes your site.
 
-1. Go to [`STG17-Africa/country-template`](https://github.com/STG17-Africa/country-template)
-2. Click **Use this template** → **Create a new repository**
+1. Take the country template supplied with the workshop materials — it is on the
+   USB key, and the facilitation team will send you the link
+2. Create a new repository on GitHub and copy the template's files into it
 3. Owner: your office's GitHub organisation if it has one, otherwise your account
 4. Name: **`stg17-<iso3>`** in lowercase — `stg17-civ`, `stg17-tun`, `stg17-ken`
 5. Visibility: **Public**
@@ -362,12 +363,10 @@ and it is what a user comparing two of your releases needs.
 
 Once your repository is public and has a DOI:
 
-1. Open an issue on
-   [`STG17-Africa/catalogue`](https://github.com/STG17-Africa/catalogue) using the
-   **New country submission** template
-2. Give the repository URL, the DOI, and one paragraph on what is reusable
-3. The Secretariat reviews it against the checklist below and adds it to the
-   continental catalogue
+1. Send the Secretariat the repository URL, the DOI, and one paragraph on what is
+   reusable
+2. It is reviewed against the checklist below and added to the continental
+   catalogue
 
 Your work then feeds **activity 2.1.1** (methodological guidelines for the use of
 new data sources) and becomes a candidate for the brown-bag webinar series
