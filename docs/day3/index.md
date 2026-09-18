@@ -12,7 +12,7 @@
 
 Taxonomy of non-traditional sources — satellite imagery, crowdsourced measurement, scanner and transaction data, web scraping, sensors and IoT, citizen-generated data. Quality frameworks and coverage bias in non-probabilistic sources; access and partnership models with private data holders; ethics and confidentiality.
 
-[:material-microsoft-powerpoint: PPTX · EN](../downloads/Day3/0900_non-traditional-data-sources_EN.pptx){ .md-button } [:material-microsoft-powerpoint: PPTX · FR](../downloads/Day3/0900_non-traditional-data-sources_FR.pptx){ .md-button }
+[:material-file-pdf-box: PDF · EN](../downloads/Day3/0900_non-traditional-data-sources_EN.pdf){ .md-button } [:material-file-pdf-box: PDF · FR](../downloads/Day3/0900_non-traditional-data-sources_FR.pdf){ .md-button } [:material-microsoft-powerpoint: PPTX · EN](../downloads/Day3/0900_non-traditional-data-sources_EN.pptx){ .md-button } [:material-microsoft-powerpoint: PPTX · FR](../downloads/Day3/0900_non-traditional-data-sources_FR.pptx){ .md-button }
 
 
 !!! quote "10:30–10:45 — Coffee break"

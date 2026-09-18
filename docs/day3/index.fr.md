@@ -12,7 +12,7 @@
 
 Taxonomie des sources non traditionnelles — imagerie satellitaire, mesure participative, données de caisse et de transaction, moissonnage web, capteurs et IdO, données produites par les citoyens. Cadres de qualité et biais de couverture des sources non probabilistes ; modèles d'accès et de partenariat avec les détenteurs privés ; éthique et confidentialité.
 
-[:material-microsoft-powerpoint: PPTX · EN](../downloads/Day3/0900_non-traditional-data-sources_EN.pptx){ .md-button } [:material-microsoft-powerpoint: PPTX · FR](../downloads/Day3/0900_non-traditional-data-sources_FR.pptx){ .md-button }
+[:material-file-pdf-box: PDF · EN](../downloads/Day3/0900_non-traditional-data-sources_EN.pdf){ .md-button } [:material-file-pdf-box: PDF · FR](../downloads/Day3/0900_non-traditional-data-sources_FR.pdf){ .md-button } [:material-microsoft-powerpoint: PPTX · EN](../downloads/Day3/0900_non-traditional-data-sources_EN.pptx){ .md-button } [:material-microsoft-powerpoint: PPTX · FR](../downloads/Day3/0900_non-traditional-data-sources_FR.pptx){ .md-button }
 
 
 !!! quote "10h30–10h45 — Pause café"

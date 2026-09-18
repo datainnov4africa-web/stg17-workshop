@@ -177,5 +177,14 @@ extra:
       link: https://www.afdb.org
   generator: false
 
+# Office writes a `~$name` lock file beside any document it has open. mkdocs
+# copies everything under docs/ and knows nothing of .gitignore, so while
+# PowerPoint holds one of the decks in docs/downloads/ the build does not warn —
+# it dies with a PermissionError. This line is what keeps the build alive; the
+# .gitignore entry only keeps the lock file out of the repository. Both are
+# needed, and the distinction cost one failed build to learn.
+exclude_docs: |
+  ~$*
+
 not_in_nav: |
   /**/*.fr.md
