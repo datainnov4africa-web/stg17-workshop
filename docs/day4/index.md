@@ -12,7 +12,7 @@
 
 Concepts and utility, kept deliberately short so the day is spent in the data — from DMSP-OLS (1992–2013) to VIIRS/DNB; the NASA Black Marble products (VNP46A2 daily, A3 monthly, A4 annual); what NTL proxies well — economic activity, electrification, urbanisation, crisis monitoring. The known artefacts are introduced here by name only and met hands-on in Part 2.
 
-[:material-microsoft-powerpoint: PPTX · EN](../downloads/Day4/0900_night-time-lights_EN.pptx){ .md-button } [:material-microsoft-powerpoint: PPTX · FR](../downloads/Day4/0900_night-time-lights_FR.pptx){ .md-button }
+[:material-file-pdf-box: PDF · EN](../downloads/Day4/0900_night-time-lights_EN.pdf){ .md-button } [:material-file-pdf-box: PDF · FR](../downloads/Day4/0900_night-time-lights_FR.pdf){ .md-button } [:material-microsoft-powerpoint: PPTX · EN](../downloads/Day4/0900_night-time-lights_EN.pptx){ .md-button } [:material-microsoft-powerpoint: PPTX · FR](../downloads/Day4/0900_night-time-lights_FR.pptx){ .md-button }
 
 
 ### 09:30–10:30 &nbsp;·&nbsp; Hands-on part 1 — Collect

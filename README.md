@@ -10,10 +10,10 @@ SHaSA II · Specialized Technical Group 17 · Action Plan 2025–2030, WP 4.2
 
 🇬🇧 English · [🇫🇷 Français](README.fr.md)
 
-[**Website**](https://stg17-africa.github.io/stg17-workshop/) ·
-[Prerequisites](https://stg17-africa.github.io/stg17-workshop/before/prerequisites/) ·
-[Laboratories](https://stg17-africa.github.io/stg17-workshop/labs/) ·
-[Publish your work](https://stg17-africa.github.io/stg17-workshop/publish/)
+[**Website**](https://datainnov4africa-web.github.io/stg17-workshop/) ·
+[Prerequisites](https://datainnov4africa-web.github.io/stg17-workshop/before/prerequisites/) ·
+[Laboratories](https://datainnov4africa-web.github.io/stg17-workshop/labs/) ·
+[Publish your work](https://datainnov4africa-web.github.io/stg17-workshop/publish/)
 
 </div>
 
@@ -30,16 +30,16 @@ COUNTRY_ISO3 = "CIV"   # ← change this, and nothing else
 ## Quick start
 
 **Participants** — read the
-[prerequisites](https://stg17-africa.github.io/stg17-workshop/before/prerequisites/),
+[prerequisites](https://datainnov4africa-web.github.io/stg17-workshop/before/prerequisites/),
 then run the
-[environment check](https://stg17-africa.github.io/stg17-workshop/before/environment-check/).
+[environment check](https://datainnov4africa-web.github.io/stg17-workshop/before/environment-check/).
 The notebook is distributed with the workshop materials: your facilitator sends
 the link, or you open it from the USB key.
 
 **Facilitators and contributors:**
 
 ```bash
-git clone https://github.com/STG17-Africa/stg17-workshop.git
+git clone https://github.com/datainnov4africa-web/stg17-workshop.git
 cd stg17-workshop
 pip install -r requirements-dev.txt
 python tools/serve.py          # regenerate everything, then preview
@@ -70,11 +70,12 @@ codes are *computed*, not tabulated. A boundary file is resolved from the local
 mirror, then geoBoundaries, then a file the participant brings — normalised into
 the same column names whichever it was, so the analysis code has no conditionals.
 
-**Nothing is written twice.** A laboratory is one bilingual master; the build
-emits four notebooks. A session is one deck source; the build emits two decks.
-The agenda is one YAML file; the build emits ten pages. CI fails if a generated
-file drifts from its source — which is what stops the French material quietly
-falling a month behind the English.
+**Nothing is written twice.** The agenda is one YAML file, and the build emits
+every day page, the laboratory register and the week view from it, in both
+languages. CI fails if a generated page drifts from its source — which is what
+stops the French material quietly falling a month behind the English.
+Presentations and notebooks are not generated at all: they are supplied, and the
+build renders buttons only for the files that are actually there.
 
 **Every laboratory has a fallback that actually runs.** Pre-clipped country
 extracts on a USB key, an Earth Engine variant that downloads nothing, DuckDB
@@ -122,7 +123,7 @@ already in place is listed by `python tools/downloads.py`.
 ## Licence
 
 Code MIT · content CC BY 4.0. Third-party data retains its own licence — see
-[licensing and ethics](https://stg17-africa.github.io/stg17-workshop/resources/licensing/).
+[licensing and ethics](https://datainnov4africa-web.github.io/stg17-workshop/resources/licensing/).
 
 > ⚠️ Products derived from Ookla open data inherit **CC BY-NC-SA 4.0**. The
 > NonCommercial and ShareAlike terms propagate, which means such a product cannot

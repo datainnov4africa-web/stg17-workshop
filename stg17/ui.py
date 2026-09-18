@@ -363,7 +363,7 @@ def metric_row(metrics: Sequence[tuple]):
                  f'font-family:{FONT};">{cards}</div>')
 
 
-def colab_badge(notebook_path: str, org: str = "STG17-Africa",
+def colab_badge(notebook_path: str, org: str = "datainnov4africa-web",
                 repo: str = "stg17-workshop", branch: str = "main"):
     """
     The 'Open in Colab' badge, pointing at this notebook in the workshop repository.

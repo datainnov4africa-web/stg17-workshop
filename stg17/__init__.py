@@ -11,7 +11,7 @@ so the notebook a participant reads shows the method and nothing else.
 
 Typical first two cells of any laboratory
 -----------------------------------------
-    !pip install -q "stg17 @ git+https://github.com/STG17-Africa/stg17-workshop"
+    !pip install -q "stg17 @ git+https://github.com/datainnov4africa-web/stg17-workshop"
 
     from stg17 import setup, countries, ui
     S = setup({"geopandas": "geopandas>=0.14"}, lang="EN")

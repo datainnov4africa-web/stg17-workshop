@@ -142,7 +142,7 @@ le récupérer.
 > de la **CC BY-NC-SA 4.0** — le « pas d'usage commercial » et le « partage dans
 > les mêmes conditions » se propagent tous deux. Elle ne peut pas être diffusée
 > sous la licence de données ouvertes standard de votre office. Voir
-> [le guide de publication](https://stg17-africa.github.io/stg17-workshop/fr/publish/).
+> [le guide de publication](https://datainnov4africa-web.github.io/stg17-workshop/fr/publish/).
 
 ## Citation
 

@@ -165,7 +165,7 @@ If you reuse a notebook or a figure from this repository:
 ```
 STG17 Workshop — Emerging Issues, Emerging Practice.
 African Development Bank (Secretariat of STG17) and African Union STATAFRIC,
-under SHaSA II, STG17 Action Plan 2025–2030. https://github.com/STG17-Africa/stg17-workshop
+under SHaSA II, STG17 Action Plan 2025–2030. https://github.com/datainnov4africa-web/stg17-workshop
 ```
 
 And if you publish a national product built with it, [give it its own DOI](../publish/index.md#step-6-a-doi-so-the-work-can-be-cited)

@@ -1,5 +1,5 @@
 # Pinned, so that a rerun in two years produces the same numbers.
-stg17 @ git+https://github.com/STG17-Africa/stg17-workshop
+stg17 @ git+https://github.com/datainnov4africa-web/stg17-workshop
 numpy>=1.24
 pandas>=2.0
 matplotlib>=3.7

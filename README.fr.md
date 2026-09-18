@@ -10,10 +10,10 @@ SHaSA II · Groupe technique spécialisé 17 · Plan d'action 2025-2030, PT 4.2
 
 🇫🇷 Français · [🇬🇧 English](README.md)
 
-[**Site**](https://stg17-africa.github.io/stg17-workshop/fr/) ·
-[Prérequis](https://stg17-africa.github.io/stg17-workshop/fr/before/prerequisites/) ·
-[Laboratoires](https://stg17-africa.github.io/stg17-workshop/fr/labs/) ·
-[Publier vos travaux](https://stg17-africa.github.io/stg17-workshop/fr/publish/)
+[**Site**](https://datainnov4africa-web.github.io/stg17-workshop/fr/) ·
+[Prérequis](https://datainnov4africa-web.github.io/stg17-workshop/fr/before/prerequisites/) ·
+[Laboratoires](https://datainnov4africa-web.github.io/stg17-workshop/fr/labs/) ·
+[Publier vos travaux](https://datainnov4africa-web.github.io/stg17-workshop/fr/publish/)
 
 </div>
 
@@ -31,16 +31,16 @@ COUNTRY_ISO3 = "CIV"   # ← changez ceci, et rien d'autre
 ## Démarrage rapide
 
 **Participants** — lisez les
-[prérequis](https://stg17-africa.github.io/stg17-workshop/fr/before/prerequisites/),
+[prérequis](https://datainnov4africa-web.github.io/stg17-workshop/fr/before/prerequisites/),
 puis faites la
-[vérification d'environnement](https://stg17-africa.github.io/stg17-workshop/fr/before/environment-check/).
+[vérification d'environnement](https://datainnov4africa-web.github.io/stg17-workshop/fr/before/environment-check/).
 Le carnet est distribué avec le matériel de l'atelier : votre animateur vous en
 envoie le lien, ou vous l'ouvrez depuis la clé USB.
 
 **Animateurs et contributeurs :**
 
 ```bash
-git clone https://github.com/STG17-Africa/stg17-workshop.git
+git clone https://github.com/datainnov4africa-web/stg17-workshop.git
 cd stg17-workshop
 pip install -r requirements-dev.txt
 python tools/serve.py          # régénère tout, puis prévisualise
@@ -72,11 +72,13 @@ frontières est résolu depuis le miroir local, puis geoBoundaries, puis un fich
 apporté par le participant — normalisé vers les mêmes noms de colonnes quelle que
 soit la source, de sorte que le code d'analyse ne contient aucune condition.
 
-**Rien n'est écrit deux fois.** Un laboratoire est un master bilingue ; le build
-produit quatre carnets. Une session est une source de deck ; le build produit deux
-présentations. L'agenda est un fichier YAML ; le build produit dix pages. La CI
-échoue si un fichier généré s'écarte de sa source — c'est ce qui empêche le
-matériel français de prendre discrètement un mois de retard sur l'anglais.
+**Rien n'est écrit deux fois.** L'agenda est un fichier YAML, et le build en tire
+toutes les pages de jour, le registre des laboratoires et la vue de la semaine,
+dans les deux langues. La CI échoue si une page générée s'écarte de sa source —
+c'est ce qui empêche le matériel français de prendre discrètement un mois de
+retard sur l'anglais. Les présentations et les carnets, eux, ne sont pas générés
+du tout : ils sont fournis, et le build n'affiche de bouton que pour les fichiers
+réellement présents.
 
 **Chaque laboratoire dispose d'un repli qui fonctionne réellement.** Extraits pays
 pré-découpés sur clé USB, variante Earth Engine qui ne télécharge rien, DuckDB
@@ -125,7 +127,7 @@ est déjà en place s'obtient avec `python tools/downloads.py`.
 ## Licence
 
 Code MIT · contenus CC BY 4.0. Les données tierces conservent leur propre licence
-— voir [licences et éthique](https://stg17-africa.github.io/stg17-workshop/fr/resources/licensing/).
+— voir [licences et éthique](https://datainnov4africa-web.github.io/stg17-workshop/fr/resources/licensing/).
 
 > ⚠️ Les produits dérivés des données ouvertes Ookla héritent de la
 > **CC BY-NC-SA 4.0**. Le « pas d'usage commercial » et le « partage dans les

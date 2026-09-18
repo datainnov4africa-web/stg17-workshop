@@ -36,13 +36,14 @@ organisers:
   framework_fr: "SHaSA II · Groupe technique spécialisé 17 · Plan d'action 2025-2030"
 
 github:
-  # --- PLACEHOLDER: replace with the real organisation once created ---------
-  org: STG17-Africa
+  # The account the site is published from. Changing `org` moves every Colab
+  # badge and every generated link — run `python tools/build_site.py` after.
+  org: datainnov4africa-web
   repo: stg17-workshop
   branch: main
   # Country repositories are named:  stg17-<iso3 lowercase>   e.g. stg17-civ
   country_repo_prefix: stg17-
-  pages_url: "https://stg17-africa.github.io/stg17-workshop"
+  pages_url: "https://datainnov4africa-web.github.io/stg17-workshop"
 
 services:
   # --- PLACEHOLDERS: filled by the technical assistants at T-2 weeks --------

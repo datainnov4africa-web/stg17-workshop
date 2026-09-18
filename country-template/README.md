@@ -139,7 +139,7 @@ came from and how to fetch it.
 > ⚠️ **If any input is Ookla open data**, the derived output inherits
 > **CC BY-NC-SA 4.0** — NonCommercial and ShareAlike both propagate. It cannot be
 > released under your office's standard open-data licence. See
-> [the publication guide](https://stg17-africa.github.io/stg17-workshop/publish/).
+> [the publication guide](https://datainnov4africa-web.github.io/stg17-workshop/publish/).
 
 ## Citation
 

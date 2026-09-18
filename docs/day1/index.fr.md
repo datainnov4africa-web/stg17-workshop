@@ -66,7 +66,7 @@ Construire un assistant RAG fonctionnel sur un corpus statistique (note de conce
 
 [:material-file-pdf-box: PDF · EN](../downloads/Day1/1430_hands-on-part-1_EN.pdf){ .md-button } [:material-file-pdf-box: PDF · FR](../downloads/Day1/1430_hands-on-part-1_FR.pdf){ .md-button } [:material-microsoft-powerpoint: PPTX · EN](../downloads/Day1/1430_hands-on-part-1_EN.pptx){ .md-button } [:material-microsoft-powerpoint: PPTX · FR](../downloads/Day1/1430_hands-on-part-1_FR.pptx){ .md-button } [:material-notebook-outline: IPYNB · EN](../downloads/Day1/1430_hands-on-part-1_EN.ipynb){ .md-button } [:material-notebook-outline: IPYNB · FR](../downloads/Day1/1430_hands-on-part-1_FR.ipynb){ .md-button }
 
-[![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/STG17-Africa/stg17-workshop/blob/main/docs/downloads/Day1/1430_hands-on-part-1_EN.ipynb) **EN** &nbsp; [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/STG17-Africa/stg17-workshop/blob/main/docs/downloads/Day1/1430_hands-on-part-1_FR.ipynb) **FR**
+[![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/datainnov4africa-web/stg17-workshop/blob/main/docs/downloads/Day1/1430_hands-on-part-1_EN.ipynb) **EN** &nbsp; [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/datainnov4africa-web/stg17-workshop/blob/main/docs/downloads/Day1/1430_hands-on-part-1_FR.ipynb) **FR**
 
 !!! example "Laboratoire — Assistant RAG"
 
@@ -83,7 +83,7 @@ Transformer le récupérateur construit avant la pause en outil, et l'envelopper
 
 [:material-file-pdf-box: PDF · EN](../downloads/Day1/1530_hands-on-part-2_EN.pdf){ .md-button } [:material-file-pdf-box: PDF · FR](../downloads/Day1/1530_hands-on-part-2_FR.pdf){ .md-button } [:material-microsoft-powerpoint: PPTX · EN](../downloads/Day1/1530_hands-on-part-2_EN.pptx){ .md-button } [:material-microsoft-powerpoint: PPTX · FR](../downloads/Day1/1530_hands-on-part-2_FR.pptx){ .md-button } [:material-notebook-outline: IPYNB · EN](../downloads/Day1/1530_hands-on-part-2_EN.ipynb){ .md-button } [:material-notebook-outline: IPYNB · FR](../downloads/Day1/1530_hands-on-part-2_FR.ipynb){ .md-button }
 
-[![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/STG17-Africa/stg17-workshop/blob/main/docs/downloads/Day1/1530_hands-on-part-2_EN.ipynb) **EN** &nbsp; [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/STG17-Africa/stg17-workshop/blob/main/docs/downloads/Day1/1530_hands-on-part-2_FR.ipynb) **FR**
+[![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/datainnov4africa-web/stg17-workshop/blob/main/docs/downloads/Day1/1530_hands-on-part-2_EN.ipynb) **EN** &nbsp; [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/datainnov4africa-web/stg17-workshop/blob/main/docs/downloads/Day1/1530_hands-on-part-2_FR.ipynb) **FR**
 
 !!! example "Laboratoire — Du RAG à l'agent"
 

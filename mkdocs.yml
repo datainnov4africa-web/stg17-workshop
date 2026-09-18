@@ -16,9 +16,9 @@ site_description: >-
   Artificial intelligence, large language models and big data for official statistics —
   hands-on applications to Ookla, WorldPop and Night-Time Lights.
 site_author: African Development Bank — Secretariat of STG17
-site_url: https://stg17-africa.github.io/stg17-workshop/
-repo_url: https://github.com/STG17-Africa/stg17-workshop
-repo_name: STG17-Africa/stg17-workshop
+site_url: https://datainnov4africa-web.github.io/stg17-workshop/
+repo_url: https://github.com/datainnov4africa-web/stg17-workshop
+repo_name: datainnov4africa-web/stg17-workshop
 edit_uri: edit/main/docs/
 copyright: >-
   © African Development Bank and African Union STATAFRIC ·
@@ -172,7 +172,7 @@ nav:
 extra:
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/STG17-Africa
+      link: https://github.com/datainnov4africa-web
     - icon: fontawesome/solid/globe
       link: https://www.afdb.org
   generator: false
