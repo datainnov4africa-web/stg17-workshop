@@ -283,10 +283,19 @@ def render_day(day: dict, labs: dict, lang: str, config: dict) -> str:
             if files:
                 lines += [files, ""]
 
+            # The Colab badge follows the notebook, not the laboratory register.
+            # It used to be emitted only inside the laboratory block below, which
+            # meant a session carrying a notebook but no registered lab id — both
+            # `talk_lab` sessions on Day 2 — got a download button and no way to
+            # open the notebook at all. The notebook belongs to the session, so
+            # the badge goes with it, in the same place on every session.
+            badges = colab_badges(session, day, lang, github)
+            if badges:
+                lines += [badges, ""]
+
             lab_id = session.get("lab")
             if lab_id and lab_id in labs:
                 lab = labs[lab_id]
-                links = colab_badges(session, day, lang, github)
                 lines += [
                     '!!! example "'
                     + ("Laboratoire — " if fr else "Laboratory — ")
@@ -299,8 +308,6 @@ def render_day(day: dict, labs: dict, lang: str, config: dict) -> str:
                     f"    **{'Repli :' if fr else 'Fallback:'}** " + pick(lab, "fallback", lang),
                     "",
                 ]
-                if links:
-                    lines += ["    " + line for line in links.splitlines()] + [""]
             lines.append("")
 
 

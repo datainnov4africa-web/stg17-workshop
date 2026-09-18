@@ -12,6 +12,10 @@
 
 Cadrage de la tâche, rôle et contexte, contraintes explicites, exemples few-shot, décomposition, sorties JSON structurées, garde-fous et itération systématique. Pourquoi les modèles hallucinent et comment la conception du prompt réduit le phénomène. Anti-patrons courants et comment les détecter dans vos propres prompts.
 
+[:material-microsoft-powerpoint: PPTX · EN](../downloads/Day2/0900_talking-to-machines_EN.pptx){ .md-button } [:material-microsoft-powerpoint: PPTX · FR](../downloads/Day2/0900_talking-to-machines_FR.pptx){ .md-button } [:material-notebook-outline: IPYNB · EN](../downloads/Day2/0900_talking-to-machines_EN.ipynb){ .md-button } [:material-notebook-outline: IPYNB · FR](../downloads/Day2/0900_talking-to-machines_FR.ipynb){ .md-button }
+
+[![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/STG17-Africa/stg17-workshop/blob/main/docs/downloads/Day2/0900_talking-to-machines_EN.ipynb) **EN** &nbsp; [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/STG17-Africa/stg17-workshop/blob/main/docs/downloads/Day2/0900_talking-to-machines_FR.ipynb) **FR**
+
 
 !!! quote "10h30–10h45 — Pause café"
 
@@ -37,6 +41,10 @@ Prendre une publication statistique nationale (PDF ou rapport), utiliser un LLM 
 :material-presentation-play: **Exposé + laboratoire** &nbsp;·&nbsp; Plan d’action 4.2.1 · 4.2.3
 
 L'amélioration systématique plutôt que le tâtonnement — construire un jeu d'évaluation, mesurer la qualité des sorties, maîtriser la variance, gérer la longueur de contexte et le coût en tokens, la mise en cache, et arbitrer entre prompt, RAG et affinage.
+
+[:material-microsoft-powerpoint: PPTX · EN](../downloads/Day2/1400_from-good-to-great_EN.pptx){ .md-button } [:material-microsoft-powerpoint: PPTX · FR](../downloads/Day2/1400_from-good-to-great_FR.pptx){ .md-button } [:material-notebook-outline: IPYNB · EN](../downloads/Day2/1400_from-good-to-great_EN.ipynb){ .md-button } [:material-notebook-outline: IPYNB · FR](../downloads/Day2/1400_from-good-to-great_FR.ipynb){ .md-button }
+
+[![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/STG17-Africa/stg17-workshop/blob/main/docs/downloads/Day2/1400_from-good-to-great_EN.ipynb) **EN** &nbsp; [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/STG17-Africa/stg17-workshop/blob/main/docs/downloads/Day2/1400_from-good-to-great_FR.ipynb) **FR**
 
 
 ### 14h45–15h30 &nbsp;·&nbsp; Choisir son moteur : vitesse, coût et souveraineté — travailler avec Groq

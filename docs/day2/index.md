@@ -12,6 +12,10 @@
 
 Task framing, role and context, explicit constraints, few-shot examples, decomposition, structured JSON outputs, guardrails and systematic iteration. Why models hallucinate and how prompt design reduces it. Common anti-patterns and how to detect them in your own prompts.
 
+[:material-microsoft-powerpoint: PPTX · EN](../downloads/Day2/0900_talking-to-machines_EN.pptx){ .md-button } [:material-microsoft-powerpoint: PPTX · FR](../downloads/Day2/0900_talking-to-machines_FR.pptx){ .md-button } [:material-notebook-outline: IPYNB · EN](../downloads/Day2/0900_talking-to-machines_EN.ipynb){ .md-button } [:material-notebook-outline: IPYNB · FR](../downloads/Day2/0900_talking-to-machines_FR.ipynb){ .md-button }
+
+[![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/STG17-Africa/stg17-workshop/blob/main/docs/downloads/Day2/0900_talking-to-machines_EN.ipynb) **EN** &nbsp; [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/STG17-Africa/stg17-workshop/blob/main/docs/downloads/Day2/0900_talking-to-machines_FR.ipynb) **FR**
+
 
 !!! quote "10:30–10:45 — Coffee break"
 
@@ -37,6 +41,10 @@ Take a national statistical publication (PDF or report), use an LLM to extract a
 :material-presentation-play: **Talk + laboratory** &nbsp;·&nbsp; Action Plan 4.2.1 · 4.2.3
 
 Systematic improvement rather than trial and error — building an evaluation set, measuring output quality, controlling variance, managing context length and token cost, caching, and choosing between prompting, RAG and fine-tuning.
+
+[:material-microsoft-powerpoint: PPTX · EN](../downloads/Day2/1400_from-good-to-great_EN.pptx){ .md-button } [:material-microsoft-powerpoint: PPTX · FR](../downloads/Day2/1400_from-good-to-great_FR.pptx){ .md-button } [:material-notebook-outline: IPYNB · EN](../downloads/Day2/1400_from-good-to-great_EN.ipynb){ .md-button } [:material-notebook-outline: IPYNB · FR](../downloads/Day2/1400_from-good-to-great_FR.ipynb){ .md-button }
+
+[![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/STG17-Africa/stg17-workshop/blob/main/docs/downloads/Day2/1400_from-good-to-great_EN.ipynb) **EN** &nbsp; [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/STG17-Africa/stg17-workshop/blob/main/docs/downloads/Day2/1400_from-good-to-great_FR.ipynb) **FR**
 
 
 ### 14:45–15:30 &nbsp;·&nbsp; Choosing your engine: speed, cost and sovereignty — working with Groq
