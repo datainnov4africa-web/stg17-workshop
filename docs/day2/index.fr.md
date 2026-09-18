@@ -25,6 +25,10 @@ Cadrage de la tâche, rôle et contexte, contraintes explicites, exemples few-sh
 
 Prendre une publication statistique nationale (PDF ou rapport), utiliser un LLM pour en extraire et structurer les données, vérifier l'extraction contre la source, générer un tableau de bord interactif et le publier en ligne sur GitHub Pages. Chaque participant repart avec une URL publique. L'étape de vérification n'est pas optionnelle — c'est elle qui rend le résultat publiable.
 
+[:material-notebook-outline: IPYNB · EN](../downloads/Day2/1045_hands-on_EN.ipynb){ .md-button } [:material-notebook-outline: IPYNB · FR](../downloads/Day2/1045_hands-on_FR.ipynb){ .md-button }
+
+[![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/datainnov4africa-web/stg17-workshop/blob/main/docs/downloads/Day2/1045_hands-on_EN.ipynb) **EN** &nbsp; [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/datainnov4africa-web/stg17-workshop/blob/main/docs/downloads/Day2/1045_hands-on_FR.ipynb) **FR**
+
 !!! example "Laboratoire — Du document au tableau de bord"
 
     **Livrable :** Une URL publique de tableau de bord et le tableau de vérification comparant l'extraction à la source

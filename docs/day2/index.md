@@ -25,6 +25,10 @@ Task framing, role and context, explicit constraints, few-shot examples, decompo
 
 Take a national statistical publication (PDF or report), use an LLM to extract and structure its data, verify the extraction against the source, generate an interactive dashboard and publish it live on GitHub Pages. Each participant leaves with a public URL.
 
+[:material-notebook-outline: IPYNB · EN](../downloads/Day2/1045_hands-on_EN.ipynb){ .md-button } [:material-notebook-outline: IPYNB · FR](../downloads/Day2/1045_hands-on_FR.ipynb){ .md-button }
+
+[![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/datainnov4africa-web/stg17-workshop/blob/main/docs/downloads/Day2/1045_hands-on_EN.ipynb) **EN** &nbsp; [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/datainnov4africa-web/stg17-workshop/blob/main/docs/downloads/Day2/1045_hands-on_FR.ipynb) **FR**
+
 !!! example "Laboratory — Document to dashboard"
 
     **Deliverable:** A public dashboard URL and the extraction-verification table comparing output against the source
