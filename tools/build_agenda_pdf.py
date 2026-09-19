@@ -42,6 +42,7 @@ from reportlab.lib.enums import TA_JUSTIFY, TA_RIGHT
 from reportlab.lib.pagesizes import A4
 from reportlab.lib.styles import ParagraphStyle
 from reportlab.lib.units import mm
+from reportlab.lib.utils import ImageReader
 from reportlab.platypus import (CondPageBreak, Image, Paragraph,
                                 SimpleDocTemplate, Spacer, Table, TableStyle)
 
@@ -132,6 +133,28 @@ def pick(item: dict, field: str, lang: str) -> str:
 def fmt_time(value: str, lang: str) -> str:
     """`09:00–09:15` reads `09h00–09h15` in French, as it does on the site."""
     return value.replace(":", "h") if lang == "fr" else value
+
+
+#: The common optical height of both marks, in millimetres. Height rather than
+#: width, because the two are shaped quite differently — the Bank's is nearly
+#: twice as wide as it is tall, the Union's almost square — and matching their
+#: widths would leave the square one towering over the other. A letterhead
+#: aligns logos on the height of the ink, which is why both files are trimmed
+#: of their white margin: file height and ink height must be the same thing.
+LOGO_MM = 20.0
+
+
+def logo_size(path: Path, height_mm: float = LOGO_MM) -> tuple[float, float]:
+    """The width and height, in points, of this logo at the common height."""
+    iw, ih = ImageReader(str(path)).getSize()
+    h = height_mm * mm
+    return h * iw / ih, h
+
+
+def logo(path: Path, height_mm: float = LOGO_MM) -> Image:
+    """A logo at the common height, keeping its own proportions."""
+    w, h = logo_size(path, height_mm)
+    return Image(str(path), width=w, height=h)
 
 
 def styles(lang: str) -> dict:
@@ -244,25 +267,49 @@ def title_block(config: dict, agenda: dict, lang: str, st: dict) -> list:
     width = A4[0] - 2 * MARGIN
     out = []
 
-    # A letterhead line: the African Union emblem beside the two organisers, as
-    # on the invitation letters this agenda accompanies. Absent emblem, the text
-    # simply takes the full width — a missing image must not cost the identity.
-    emblem = ROOT / "assets" / "letterhead" / "image1.png"
-    org_line = [Paragraph(f"{lead}<br/>{partner}", st["org"]),
-                Paragraph(escape(framework), st["orgr"])]
-    if emblem.exists():
-        head = Table([[Image(str(emblem), width=13 * mm, height=13 * mm)] + org_line],
-                     colWidths=[17 * mm, (width - 17 * mm) * 0.52,
-                                (width - 17 * mm) * 0.48])
-    else:
-        head = Table([org_line], colWidths=[width * 0.52, width * 0.48])
-    head.setStyle(TableStyle([
+    # A letterhead with a mark at each edge: the convening Bank on the left, the
+    # African Union on the right, the two organisers named between them. Each
+    # logo is optional — a missing file costs its own corner and nothing else,
+    # because a build that fails for want of an image is worse than a plain page.
+    AFDB = ROOT / "assets" / "letterhead" / "afdb-logo.png"
+    AU = ROOT / "assets" / "letterhead" / "au-emblem.png"
+    if not AU.exists():                      # untrimmed original, still usable
+        AU = ROOT / "assets" / "letterhead" / "image1.png"
+
+    cells: list = []
+    widths: list = []
+    if AFDB.exists():
+        cells.append(logo(AFDB)); widths.append(logo_size(AFDB)[0] + 6 * mm)
+    # Organisers and framework stacked in one column rather than split across
+    # two. At 28mm the Bank's mark was an unreadable smudge; widening it to a
+    # legible size squeezed the middle column until the French line broke after
+    # "Secrétariat du", orphaning "STG17". One column absorbs both.
+    cells.append(Paragraph(
+        f"{lead}<br/>{partner}<br/>"
+        f'<font size="7.2" color="{theme.MUTED}">{escape(framework)}</font>',
+        st["org"]))
+    widths.append(None)
+    if AU.exists():
+        cells.append(logo(AU)); widths.append(logo_size(AU)[0] + 6 * mm)
+
+    libre = next(i for i, w in enumerate(widths) if w is None)
+    widths[libre] = width - sum(w for w in widths if w)
+
+    head = Table([cells], colWidths=widths)
+    style = [
         ("VALIGN", (0, 0), (-1, -1), "MIDDLE"),
-        ("LEFTPADDING", (0, 0), (0, -1), 0),
+        ("LEFTPADDING", (0, 0), (-1, -1), 0),
         ("RIGHTPADDING", (0, 0), (-1, -1), 0),
         ("TOPPADDING", (0, 0), (-1, -1), 0), ("BOTTOMPADDING", (0, 0), (-1, -1), 0),
         ("LINEBELOW", (0, 0), (-1, -1), 0.6, LINE),
-    ]))
+    ]
+    if AFDB.exists():
+        style += [("ALIGN", (0, 0), (0, 0), "LEFT"),
+                  ("RIGHTPADDING", (0, 0), (0, 0), 6)]
+    if AU.exists():
+        style += [("ALIGN", (-1, 0), (-1, 0), "RIGHT"),
+                  ("LEFTPADDING", (-1, 0), (-1, 0), 6)]
+    head.setStyle(TableStyle(style))
     out += [head, Spacer(1, 6 * mm)]
 
     out += [

@@ -10,7 +10,7 @@
 
 All five days session by session, with times, laboratories and deliverables — to keep, to print, to circulate.
 </div>
-[:material-tray-arrow-down: Download the agenda · PDF · 30 KB](../downloads/STG17_Agenda_EN.pdf){ .md-button .stg-agenda__btn download="STG17_Agenda_EN.pdf" }
+[:material-tray-arrow-down: Download the agenda · PDF · 47 KB](../downloads/STG17_Agenda_EN.pdf){ .md-button .stg-agenda__btn download="STG17_Agenda_EN.pdf" }
 </div>
 
 ## Day 1 · AI concepts and the infrastructure behind them

@@ -10,7 +10,7 @@
 
 Les cinq jours séance par séance, avec les horaires, les laboratoires et les livrables — à emporter, à imprimer, à diffuser.
 </div>
-[:material-tray-arrow-down: Télécharger l'agenda · PDF · 32 Ko](../downloads/STG17_Agenda_FR.pdf){ .md-button .stg-agenda__btn download="STG17_Agenda_FR.pdf" }
+[:material-tray-arrow-down: Télécharger l'agenda · PDF · 49 Ko](../downloads/STG17_Agenda_FR.pdf){ .md-button .stg-agenda__btn download="STG17_Agenda_FR.pdf" }
 </div>
 
 ## Jour 1 · Concepts de l'IA et l'infrastructure qui les porte
