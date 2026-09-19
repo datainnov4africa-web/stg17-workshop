@@ -10,9 +10,10 @@
 
 | Time | Session | Kind |
 |---|---|---|
-| 09:00–09:30 | [Opening ceremony](../day1/index.md#09000930-opening-ceremony) | :material-star: |
-| 09:30–10:00 | [The UN Big Data Regional Hub in Rwanda: milestones and use cases](../day1/index.md#09301000-the-un-big-data-regional-hub-in-rwanda-milestones-and-use-cases) | :material-presentation: |
-| 10:00–10:30 | [The AI Family Tree: How the concepts fit together](../day1/index.md#10001030-the-ai-family-tree-how-the-concepts-fit-together) | :material-presentation: |
+| 09:00–09:15 | [Opening ceremony](../day1/index.md#09000915-opening-ceremony) | :material-star: |
+| 09:15–09:35 | [The AfDB Data Innovation for Africa (DI4A): mission, current portfolio and upcoming milestones](../day1/index.md#09150935-the-afdb-data-innovation-for-africa-di4a-mission-current-portfolio-and-upcoming-milestones) | :material-presentation: |
+| 09:35–10:05 | [The UN Big Data Regional Hub in Rwanda: milestones and use cases](../day1/index.md#09351005-the-un-big-data-regional-hub-in-rwanda-milestones-and-use-cases) | :material-presentation: |
+| 10:05–10:30 | [The AI Family Tree: How the concepts fit together](../day1/index.md#10051030-the-ai-family-tree-how-the-concepts-fit-together) | :material-presentation: |
 | 10:45–11:45 | [Country experiences in AI and the use of non-traditional big data](../day1/index.md#10451145-country-experiences-in-ai-and-the-use-of-non-traditional-big-data) | :material-circle-small: |
 | 11:45–12:30 | [Synthesis: where the continent stands](../day1/index.md#11451230-synthesis-where-the-continent-stands) | :material-circle-small: |
 | 14:00–14:30 | [AI Infrastructure: What it really takes to run AI in a Statistical Office](../day1/index.md#14001430-ai-infrastructure-what-it-really-takes-to-run-ai-in-a-statistical-office) | :material-presentation: |

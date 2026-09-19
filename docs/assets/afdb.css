@@ -272,3 +272,320 @@
   margin: 0 1.05rem;
   opacity: .5;
 }
+
+/* ===========================================================================
+   DI4A hero — Data Innovation for Africa, an African Information Highway
+   initiative at the African Development Bank.
+
+   Reading order follows the brief: DI4A first, the joint delivery with
+   STATAFRIC under STG17 second, the workshop facts third.
+
+   COMPOSITION. The artwork is a 1.5:1 landscape scene, not a portrait: the
+   robot occupies the left half, the continent the right, and it is opaque to
+   its very last row. So it is NOT bled and cropped — that would cut the robot
+   off — it is anchored to the panel's bottom-right corner and sized to fill
+   its column. The panel takes its height from the artwork, which is what
+   removes the empty dark space the first attempt left underneath.
+
+   TYPOGRAPHY is fluid. Every size that matters is a clamp() between a phone
+   value and a desktop value, so the hero degrades continuously across widths
+   instead of jumping at two breakpoints.
+   =========================================================================== */
+.stg-hero--di4a {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
+  align-items: stretch;
+  gap: clamp(8px, 1.5vw, 20px);
+  padding: 0;                      /* each column pads itself */
+  overflow: hidden;
+  position: relative;
+  isolation: isolate;
+}
+
+/* A hairline of the house amber, so the panel reads as deliberate. */
+.stg-hero--di4a::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  border: 1px solid rgba(242, 169, 0, .22);
+  pointer-events: none;
+}
+
+.di4a-col {
+  padding: clamp(20px, 2.8vw, 36px) 0 clamp(20px, 2.8vw, 34px) clamp(20px, 3vw, 38px);
+  align-self: center;
+  min-width: 0;
+}
+
+/* --- First rank: the DI4A mark ------------------------------------------- */
+.di4a-brand { display: flex; align-items: center; gap: clamp(9px, 1.1vw, 14px); }
+.di4a-mark {
+  font-size: clamp(1.35rem, 2.5vw, 1.72rem);
+  font-weight: 900;
+  letter-spacing: -.02em;
+  line-height: 1;
+  color: var(--afdb-amber);
+  text-shadow: 0 2px 0 rgba(0, 0, 0, .22);
+}
+.di4a-name {
+  font-size: clamp(.58rem, .85vw, .7rem);
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: #fff;
+  border-left: 2px solid rgba(242, 169, 0, .55);
+  padding-left: clamp(9px, 1vw, 13px);
+}
+.di4a-parent {
+  margin-top: 7px;
+  font-size: clamp(.68rem, .95vw, .8rem);
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #b9cfc2;
+}
+
+/* --- The title: fluid, and deliberately no longer the loudest thing ------ */
+.stg-hero--di4a h1 {
+  font-size: clamp(1.02rem, 1.55vw, 1.22rem);
+  line-height: 1.18;
+  font-weight: 800;
+  margin: clamp(.5em, 1.2vw, .7em) 0 .45em;
+  max-width: 18ch;
+  letter-spacing: -.01em;
+}
+
+/* --- Second rank: who it is run with ------------------------------------- */
+.stg-hero--di4a .di4a-with {
+  margin: 0 0 clamp(10px, 1.4vw, 14px);
+  font-size: clamp(.68rem, .92vw, .76rem);
+  line-height: 1.5;
+  color: #cfe0d6;
+  padding: 8px clamp(10px, 1.2vw, 14px);
+  border-left: 3px solid var(--afdb-green);
+  background: rgba(255, 255, 255, .07);
+  border-radius: 0 8px 8px 0;
+  max-width: 46ch;
+}
+.stg-hero--di4a .di4a-with b { color: #fff; font-weight: 700; }
+
+/* --- Third rank: the facts ----------------------------------------------- */
+.stg-hero--di4a .lede {
+  font-size: clamp(.76rem, 1vw, .86rem);
+  line-height: 1.55;
+  color: #dbe7e0;
+  max-width: 44ch;
+}
+.stg-hero--di4a .stg-meta {
+  margin-top: clamp(10px, 1.4vw, 15px);
+  padding-top: clamp(9px, 1.2vw, 13px);
+  font-size: clamp(.66rem, .88vw, .74rem);
+  line-height: 1.8;
+}
+.stg-hero--di4a .stg-stats { margin-top: clamp(12px, 1.6vw, 17px); gap: clamp(7px, .9vw, 11px); }
+.stg-hero--di4a .stg-stats > div { padding: clamp(7px, .9vw, 10px) clamp(10px, 1.2vw, 14px); }
+.stg-hero--di4a .stg-stats .n { font-size: clamp(1.25rem, 2.3vw, 1.65rem); }
+.stg-hero--di4a .stg-stats .l { font-size: clamp(.55rem, .72vw, .63rem); margin-top: 4px; }
+
+/* --- The artwork: anchored to the corner, never floating ----------------- */
+.di4a-art {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+}
+.di4a-art::before {                /* depth behind the subject */
+  content: "";
+  position: absolute;
+  inset: 8% -6% -4% 2%;
+  background: radial-gradient(ellipse at 52% 55%,
+              rgba(111, 215, 154, .22) 0%,
+              rgba(27, 122, 67, .11) 45%,
+              rgba(11, 37, 69, 0) 72%);
+  filter: blur(10px);
+  pointer-events: none;
+  z-index: -1;
+}
+/* The render carried a grey contact shadow painted on white, which is what
+   made the figure read as a sticker. It is removed from the file and drawn
+   here instead, tinted to the panel: a shadow on a surface that exists. This
+   ellipse is the strongest depth cue in the hero — the layered drop-shadows
+   and the slight perspective only reinforce it. */
+.di4a-art::after {
+  content: "";
+  position: absolute;
+  left: 14%;
+  right: 14%;
+  bottom: 7%;
+  height: 22px;
+  border-radius: 50%;
+  background: radial-gradient(ellipse at center,
+              rgba(3, 18, 11, .55) 0%,
+              rgba(3, 18, 11, .24) 48%,
+              rgba(3, 18, 11, 0) 74%);
+  filter: blur(8px);
+  pointer-events: none;
+  z-index: -1;
+  transition: transform .55s cubic-bezier(.22, .61, .36, 1), opacity .55s ease;
+}
+.stg-hero--di4a .di4a-art img,
+.di4a-robot {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 300px;
+  object-fit: contain;
+  object-position: center;
+  transform: perspective(1200px) rotateX(1.1deg) rotateY(-3.2deg);
+  transform-origin: 50% 90%;
+  filter:
+    drop-shadow(0 2px 3px rgba(0, 0, 0, .36))
+    drop-shadow(0 14px 20px rgba(0, 0, 0, .28))
+    drop-shadow(0 32px 46px rgba(0, 0, 0, .16));
+  transition: transform .55s cubic-bezier(.22, .61, .36, 1), filter .55s ease;
+}
+.stg-hero--di4a:hover .di4a-art img {
+  transform: perspective(1200px) rotateX(0deg) rotateY(0deg) translateY(-7px);
+}
+.stg-hero--di4a:hover .di4a-art::after { transform: scale(1.07); opacity: .78; }
+
+/* --- Tablet: the artwork leads, whole, above the words ------------------- */
+@media screen and (max-width: 76.1875em) {
+  .stg-hero--di4a { grid-template-columns: minmax(0, 1fr) minmax(0, .95fr); }
+  .stg-hero--di4a .di4a-art img, .di4a-robot { max-height: 290px; }
+}
+
+@media screen and (max-width: 59.9em) {
+  .stg-hero--di4a { grid-template-columns: 1fr; gap: 0; }
+  .di4a-art { order: -1; justify-content: center; padding: clamp(14px, 3vw, 22px) clamp(14px, 3vw, 22px) 0; }
+  .stg-hero--di4a .di4a-art img, .di4a-robot {
+    max-height: none;
+    max-width: 520px;
+    margin: 0 auto;
+    object-position: center bottom;
+  }
+  .di4a-col { padding: clamp(16px, 4vw, 26px); align-self: start; }
+  .stg-hero--di4a h1 { max-width: none; }
+  .stg-hero--di4a .lede, .stg-hero--di4a .di4a-with { max-width: none; }
+}
+
+@media screen and (max-width: 29.9em) {
+  .stg-hero--di4a .stg-stats { grid-template-columns: repeat(3, 1fr); gap: 6px; }
+  .stg-hero--di4a .stg-stats > div { padding: 7px 8px; }
+  .di4a-brand { flex-wrap: wrap; gap: 8px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .stg-hero--di4a .di4a-art img, .di4a-robot { transition: none; transform: none; }
+  .di4a-art::after { transition: none; }
+  .stg-hero--di4a:hover .di4a-art img { transform: none; }
+}
+
+@media print {
+  .stg-hero--di4a { display: block; }
+  .di4a-art { display: none; }
+  .di4a-mark, .di4a-parent, .stg-hero--di4a .di4a-with { color: #000 !important; }
+}
+
+/* ===========================================================================
+   The facts, lifted OUT of the hero panel.
+
+   They used to live inside it, and their height — three meta lines plus three
+   stat blocks — is what pushed the artwork off the bottom of the screen. A
+   hero is an assertion, not a dashboard. Below the panel they get their own
+   treatment on the page's light ground, which means every colour here has to
+   be restated: the originals were light-on-dark and would be invisible.
+   =========================================================================== */
+.di4a-facts {
+  display: grid;
+  grid-template-columns: minmax(0, .9fr) minmax(0, 1.5fr);
+  gap: clamp(12px, 2vw, 26px);
+  align-items: center;
+  margin: 0 0 22px;
+  padding: clamp(14px, 1.8vw, 20px) clamp(16px, 2vw, 24px);
+  background: var(--afdb-wash);
+  border: 1px solid var(--afdb-line);
+  border-radius: var(--afdb-radius);
+}
+.di4a-facts .stg-meta {
+  margin: 0;
+  padding: 0;
+  border-top: 0;
+  color: var(--afdb-ink);
+  font-size: clamp(.68rem, .9vw, .78rem);
+  line-height: 1.85;
+}
+.di4a-facts .stg-meta b { color: var(--afdb-navy); }
+.di4a-facts .stg-meta svg { fill: var(--afdb-green); }
+.di4a-facts .stg-meta .item:not(:last-child)::after { color: var(--afdb-muted); }
+
+.di4a-facts .stg-stats { margin: 0; gap: clamp(8px, 1vw, 12px); }
+.di4a-facts .stg-stats > div {
+  background: #fff;
+  border: 1px solid var(--afdb-line);
+  border-left: 3px solid var(--afdb-amber);
+  border-radius: 0 8px 8px 0;
+  padding: clamp(8px, 1vw, 11px) clamp(11px, 1.3vw, 15px);
+}
+.di4a-facts .stg-stats .n {
+  color: var(--afdb-navy);
+  font-size: clamp(1.3rem, 2.2vw, 1.7rem);
+}
+.di4a-facts .stg-stats .l { color: var(--afdb-muted); font-size: clamp(.56rem, .74vw, .64rem); }
+
+[data-md-color-scheme="slate"] .di4a-facts {
+  background: rgba(255, 255, 255, .04);
+  border-color: #2a3441;
+}
+[data-md-color-scheme="slate"] .di4a-facts .stg-meta { color: #c9d6cf; }
+[data-md-color-scheme="slate"] .di4a-facts .stg-meta b { color: #fff; }
+[data-md-color-scheme="slate"] .di4a-facts .stg-stats > div {
+  background: rgba(255, 255, 255, .06);
+  border-color: #2a3441;
+  border-left-color: var(--afdb-amber);
+}
+[data-md-color-scheme="slate"] .di4a-facts .stg-stats .n { color: #E8EEF5; }
+
+@media screen and (max-width: 59.9em) {
+  .di4a-facts { grid-template-columns: 1fr; gap: 14px; }
+}
+@media print {
+  .di4a-facts { background: none; border: 1px solid #0B2545; }
+  .di4a-facts .stg-meta, .di4a-facts .stg-stats .n { color: #000 !important; }
+}
+
+/* ===========================================================================
+   Panel ground, chosen on a measurement rather than on taste.
+
+   The subject averages RGB 95,131,100 — hue 127deg, green. The original
+   gradient put #1B7A43 (hue 145deg, green) directly beneath it: a contrast
+   ratio of 1.26:1, which is why the robot dissolved into its own background.
+   Deep navy scores 4.17:1 and ink 4.34:1 against the same subject.
+
+   So the green is pushed LEFT, behind the text where it belongs, and the
+   right half — where the artwork stands — is dark and cool. The subject gains
+   more than three times the separation it had.
+   =========================================================================== */
+.stg-hero--di4a {
+  background:
+    radial-gradient(120% 140% at 8% 18%, rgba(27, 122, 67, .55) 0%, rgba(27, 122, 67, 0) 58%),
+    radial-gradient(90% 120% at 96% 92%, rgba(17, 60, 42, .45) 0%, rgba(17, 60, 42, 0) 62%),
+    linear-gradient(118deg, #0E2B45 0%, #0A1B2E 46%, #08182E 100%);
+}
+
+/* A cool rim behind the artwork, so the figure reads as lit from the front. */
+.di4a-art::before {
+  background: radial-gradient(ellipse at 50% 46%,
+              rgba(120, 220, 170, .20) 0%,
+              rgba(60, 150, 110, .10) 46%,
+              rgba(8, 24, 46, 0) 74%);
+}
+
+[data-md-color-scheme="slate"] .stg-hero--di4a {
+  background:
+    radial-gradient(120% 140% at 8% 18%, rgba(27, 122, 67, .42) 0%, rgba(27, 122, 67, 0) 58%),
+    linear-gradient(118deg, #0B2136 0%, #071523 48%, #050F1C 100%);
+}

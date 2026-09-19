@@ -3,15 +3,32 @@ hide:
   - navigation
 ---
 
-<div class="stg-hero" markdown>
-<div class="eyebrow">Banque africaine de développement · Union africaine STATAFRIC · SHaSA II</div>
+<div class="stg-hero stg-hero--di4a" markdown>
+<div class="di4a-col" markdown>
+
+<div class="di4a-brand">
+<span class="di4a-mark">DI4A</span>
+<span class="di4a-name">Data Innovation<br>for Africa</span>
+</div>
+
+<div class="di4a-parent">African Information Highway · Banque africaine de développement</div>
 
 # Enjeux émergents, pratiques émergentes
 
-<p class="lede">Innover dans la chaîne de valeur des données — intelligence artificielle, grands
-modèles de langage et mégadonnées pour la statistique officielle. Une règle tient la semaine :
-tout ce que vous construisez est publié, documenté et réutilisable par un autre pays africain.</p>
+<p class="di4a-with">Un atelier de renforcement des capacités mené conjointement avec
+<b>STATAFRIC (Union africaine)</b>, dans le cadre du <b>Groupe technique spécialisé 17</b> · SHaSA II</p>
 
+<p class="lede">Innover dans la chaîne de valeur des données — intelligence artificielle,
+grands modèles de langage et mégadonnées pour la statistique officielle.</p>
+
+</div>
+
+<div class="di4a-art" markdown>
+![Data Innovation for Africa](assets/img/di4a-robot.webp){ .di4a-robot }
+</div>
+</div>
+
+<div class="di4a-facts" markdown>
 <div class="stg-meta" markdown>
 <span class="item">:material-calendar-range: <b>28 septembre – 2 octobre 2026</b></span>
 <span class="item">:material-map-marker: Kigali, Rwanda</span>

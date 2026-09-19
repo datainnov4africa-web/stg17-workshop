@@ -6,27 +6,34 @@
 
 ## Morning · 09:00 – 12:30
 
-### 09:00–09:30 &nbsp;·&nbsp; Opening ceremony
+### 09:00–09:15 &nbsp;·&nbsp; Opening ceremony
 
 :material-account-group: **Ceremony** &nbsp;·&nbsp; Action Plan 4.2 · 4.1.1
 
 Welcome and opening remarks by the African Development Bank, AU STATAFRIC, and NISR. Objectives of the week, presentation of the STG17 Action Plan 2025–2030 and of where this workshop sits within it. Tour de table.
 
 
-### 09:30–10:00 &nbsp;·&nbsp; The UN Big Data Regional Hub in Rwanda: milestones and use cases
+### 09:15–09:35 &nbsp;·&nbsp; The AfDB Data Innovation for Africa (DI4A): mission, current portfolio and upcoming milestones
+
+:material-presentation: **Talk** &nbsp;·&nbsp; *AfDB*
+
+Why the Bank set up DI4A, what the current portfolio funds, and the milestones ahead. The initiative sits within the African Information Highway and is the Bank's vehicle for data innovation with African statistical offices.
+
+
+### 09:35–10:05 &nbsp;·&nbsp; The UN Big Data Regional Hub in Rwanda: milestones and use cases
 
 :material-presentation: **Talk** &nbsp;·&nbsp; *NISR*
 
 Ten years of the UN Committee of Experts on Big Data and Data Science for Official Statistics, and what the Regional Hub hosted by NISR has delivered since its launch: the use cases taken furthest
 
 
-### 10:00–10:30 &nbsp;·&nbsp; The AI Family Tree: How the concepts fit together
+### 10:05–10:30 &nbsp;·&nbsp; The AI Family Tree: How the concepts fit together
 
 :material-presentation: **Talk** &nbsp;·&nbsp; Action Plan 3.3.2 · 4.1.1
 
 Building a shared concept map — AI, LLM, prompt engineering, RAG, fine-tuning, agentic systems, agents, MCP. What each concept can and cannot do for official statistics, and the vocabulary discipline that avoids costly misunderstandings. This half-hour sets the language used for the rest of the week.
 
-[:material-file-pdf-box: PDF · EN](../downloads/Day1/1000_ai-family-tree_EN.pdf){ .md-button } [:material-file-pdf-box: PDF · FR](../downloads/Day1/1000_ai-family-tree_FR.pdf){ .md-button } [:material-microsoft-powerpoint: PPTX · EN](../downloads/Day1/1000_ai-family-tree_EN.pptx){ .md-button } [:material-microsoft-powerpoint: PPTX · FR](../downloads/Day1/1000_ai-family-tree_FR.pptx){ .md-button }
+[:material-file-pdf-box: PDF · EN](../downloads/Day1/1005_ai-family-tree_EN.pdf){ .md-button } [:material-file-pdf-box: PDF · FR](../downloads/Day1/1005_ai-family-tree_FR.pdf){ .md-button } [:material-microsoft-powerpoint: PPTX · EN](../downloads/Day1/1005_ai-family-tree_EN.pptx){ .md-button } [:material-microsoft-powerpoint: PPTX · FR](../downloads/Day1/1005_ai-family-tree_FR.pptx){ .md-button }
 
 
 !!! quote "10:30–10:45 — Coffee break"

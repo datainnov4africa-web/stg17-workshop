@@ -34,3 +34,8 @@ venv/
 .DS_Store
 Thumbs.db
 desktop.ini
+
+# Source artwork, kept local. The cut-out that the site actually serves is
+# docs/assets/img/di4a-robot.webp at 167 KB; the 2 MB original does not need
+# to travel in the history, which already weighs 44 MB.
+images/

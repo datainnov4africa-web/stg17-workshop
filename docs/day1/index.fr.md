@@ -6,27 +6,34 @@
 
 ## Matinée · 09h00 – 12h30
 
-### 09h00–09h30 &nbsp;·&nbsp; Cérémonie d'ouverture
+### 09h00–09h15 &nbsp;·&nbsp; Cérémonie d'ouverture
 
 :material-account-group: **Cérémonie** &nbsp;·&nbsp; Plan d’action 4.2 · 4.1.1
 
 Mots de bienvenue et d'ouverture de la Banque africaine de développement et de l'UA STATAFRIC. Objectifs de la semaine, présentation du Plan d'action STG17 2025-2030 et de la place de cet atelier en son sein. Tour de table.
 
 
-### 09h30–10h00 &nbsp;·&nbsp; Le Hub régional des Nations Unies pour les mégadonnées au Rwanda : jalons et cas d'usage
+### 09h15–09h35 &nbsp;·&nbsp; Data Innovation for Africa (DI4A) à la BAD : mission, portefeuille actuel et prochaines étapes
+
+:material-presentation: **Exposé** &nbsp;·&nbsp; *AfDB*
+
+Pourquoi la Banque a créé DI4A, ce que finance le portefeuille actuel, et les prochaines étapes. L'initiative s'inscrit dans l'African Information Highway et constitue le véhicule de la Banque pour l'innovation par les données avec les offices statistiques africains.
+
+
+### 09h35–10h05 &nbsp;·&nbsp; Le Hub régional des Nations Unies pour les mégadonnées au Rwanda : jalons et cas d'usage
 
 :material-presentation: **Exposé** &nbsp;·&nbsp; *NISR*
 
 Dix ans du Comité d'experts des Nations Unies sur les mégadonnées et la science des données pour la statistique officielle, et ce que le Hub régional hébergé par le NISR a produit depuis son lancement : les cas d'usage menés le plus loin
 
 
-### 10h00–10h30 &nbsp;·&nbsp; L'arbre généalogique de l'IA : comment les concepts s'articulent
+### 10h05–10h30 &nbsp;·&nbsp; L'arbre généalogique de l'IA : comment les concepts s'articulent
 
 :material-presentation: **Exposé** &nbsp;·&nbsp; Plan d’action 3.3.2 · 4.1.1
 
 Construction d'une carte conceptuelle commune — IA, LLM, ingénierie de prompt, RAG, affinage, systèmes agentiques, agents, MCP. Ce que chaque concept peut et ne peut pas faire pour la statistique officielle, et la discipline de vocabulaire qui évite les malentendus coûteux. Cette demi-heure fixe le langage de toute la semaine.
 
-[:material-file-pdf-box: PDF · EN](../downloads/Day1/1000_ai-family-tree_EN.pdf){ .md-button } [:material-file-pdf-box: PDF · FR](../downloads/Day1/1000_ai-family-tree_FR.pdf){ .md-button } [:material-microsoft-powerpoint: PPTX · EN](../downloads/Day1/1000_ai-family-tree_EN.pptx){ .md-button } [:material-microsoft-powerpoint: PPTX · FR](../downloads/Day1/1000_ai-family-tree_FR.pptx){ .md-button }
+[:material-file-pdf-box: PDF · EN](../downloads/Day1/1005_ai-family-tree_EN.pdf){ .md-button } [:material-file-pdf-box: PDF · FR](../downloads/Day1/1005_ai-family-tree_FR.pdf){ .md-button } [:material-microsoft-powerpoint: PPTX · EN](../downloads/Day1/1005_ai-family-tree_EN.pptx){ .md-button } [:material-microsoft-powerpoint: PPTX · FR](../downloads/Day1/1005_ai-family-tree_FR.pptx){ .md-button }
 
 
 !!! quote "10h30–10h45 — Pause café"

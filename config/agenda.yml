@@ -18,7 +18,7 @@ days:
   strap_en: Shared vocabulary, country experience, and what it really takes to build and run AI
   strap_fr: Un vocabulaire commun, l'expérience des pays, et ce qu'exige réellement la construction et l'exploitation de l'IA
   sessions:
-  - time: 09:00–09:30
+  - time: 09:00–09:15
     mode: ceremony
     id: d1-opening-ceremony
     title_en: Opening ceremony
@@ -28,7 +28,15 @@ days:
     plan:
     - 4.2
     - 4.1.1
-  - time: 09:30–10:00
+  - time: 09:15–09:35
+    mode: talk
+    presenter: AfDB
+    id: d1-afdb-data-innovation-for-africa
+    title_en: 'The AfDB Data Innovation for Africa (DI4A): mission, current portfolio and upcoming milestones'
+    title_fr: 'Data Innovation for Africa (DI4A) à la BAD : mission, portefeuille actuel et prochaines étapes'
+    desc_en: Why the Bank set up DI4A, what the current portfolio funds, and the milestones ahead. The initiative sits within the African Information Highway and is the Bank's vehicle for data innovation with African statistical offices.
+    desc_fr: Pourquoi la Banque a créé DI4A, ce que finance le portefeuille actuel, et les prochaines étapes. L'initiative s'inscrit dans l'African Information Highway et constitue le véhicule de la Banque pour l'innovation par les données avec les offices statistiques africains.
+  - time: 09:35–10:05
     mode: talk
     presenter: NISR
     id: d1-un-big-data-regional-hub-in-rwanda
@@ -36,7 +44,7 @@ days:
     title_fr: 'Le Hub régional des Nations Unies pour les mégadonnées au Rwanda : jalons et cas d''usage'
     desc_en: 'Ten years of the UN Committee of Experts on Big Data and Data Science for Official Statistics, and what the Regional Hub hosted by NISR has delivered since its launch: the use cases taken furthest'
     desc_fr: 'Dix ans du Comité d''experts des Nations Unies sur les mégadonnées et la science des données pour la statistique officielle, et ce que le Hub régional hébergé par le NISR a produit depuis son lancement : les cas d''usage menés le plus loin'
-  - time: 10:00–10:30
+  - time: 10:05–10:30
     mode: talk
     id: d1-ai-family-tree-how-the-concepts-fit
     deck: '01'

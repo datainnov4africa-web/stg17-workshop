@@ -10,9 +10,10 @@
 
 | Heure | Séance | Type |
 |---|---|---|
-| 09h00–09h30 | [Cérémonie d'ouverture](../day1/index.md#09h0009h30-ceremonie-douverture) | :material-star: |
-| 09h30–10h00 | [Le Hub régional des Nations Unies pour les mégadonnées au Rwanda : jalons et cas d'usage](../day1/index.md#09h3010h00-le-hub-regional-des-nations-unies-pour-les-megadonnees-au-rwanda-jalons-et-cas-dusage) | :material-presentation: |
-| 10h00–10h30 | [L'arbre généalogique de l'IA : comment les concepts s'articulent](../day1/index.md#10h0010h30-larbre-genealogique-de-lia-comment-les-concepts-sarticulent) | :material-presentation: |
+| 09h00–09h15 | [Cérémonie d'ouverture](../day1/index.md#09h0009h15-ceremonie-douverture) | :material-star: |
+| 09h15–09h35 | [Data Innovation for Africa (DI4A) à la BAD : mission, portefeuille actuel et prochaines étapes](../day1/index.md#09h1509h35-data-innovation-for-africa-di4a-a-la-bad-mission-portefeuille-actuel-et-prochaines-etapes) | :material-presentation: |
+| 09h35–10h05 | [Le Hub régional des Nations Unies pour les mégadonnées au Rwanda : jalons et cas d'usage](../day1/index.md#09h3510h05-le-hub-regional-des-nations-unies-pour-les-megadonnees-au-rwanda-jalons-et-cas-dusage) | :material-presentation: |
+| 10h05–10h30 | [L'arbre généalogique de l'IA : comment les concepts s'articulent](../day1/index.md#10h0510h30-larbre-genealogique-de-lia-comment-les-concepts-sarticulent) | :material-presentation: |
 | 10h45–11h45 | [Expériences des pays en IA et en usage des mégadonnées non traditionnelles](../day1/index.md#10h4511h45-experiences-des-pays-en-ia-et-en-usage-des-megadonnees-non-traditionnelles) | :material-circle-small: |
 | 11h45–12h30 | [Synthèse : où en est le continent](../day1/index.md#11h4512h30-synthese-ou-en-est-le-continent) | :material-circle-small: |
 | 14h00–14h30 | [Infrastructure de l'IA : ce qu'exige réellement l'exploitation de l'IA dans un office statistique](../day1/index.md#14h0014h30-infrastructure-de-lia-ce-quexige-reellement-lexploitation-de-lia-dans-un-office-statistique) | :material-presentation: |

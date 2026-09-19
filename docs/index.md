@@ -3,15 +3,32 @@ hide:
   - navigation
 ---
 
-<div class="stg-hero" markdown>
-<div class="eyebrow">African Development Bank · African Union STATAFRIC · SHaSA II</div>
+<div class="stg-hero stg-hero--di4a" markdown>
+<div class="di4a-col" markdown>
+
+<div class="di4a-brand">
+<span class="di4a-mark">DI4A</span>
+<span class="di4a-name">Data Innovation<br>for Africa</span>
+</div>
+
+<div class="di4a-parent">African Information Highway · African Development Bank</div>
 
 # Emerging Issues, Emerging Practice
 
-<p class="lede">Innovating the Data Value Chain — artificial intelligence, large language models
-and big data for official statistics. One rule holds the week together: everything you build is
-published, documented, and reusable by another African country.</p>
+<p class="di4a-with">A capacity-building workshop delivered jointly with
+<b>African Union STATAFRIC</b>, under <b>Specialized Technical Group 17</b> · SHaSA II</p>
 
+<p class="lede">Innovating the Data Value Chain — artificial intelligence, large language
+models and big data for official statistics.</p>
+
+</div>
+
+<div class="di4a-art" markdown>
+![Data Innovation for Africa](assets/img/di4a-robot.webp){ .di4a-robot }
+</div>
+</div>
+
+<div class="di4a-facts" markdown>
 <div class="stg-meta" markdown>
 <span class="item">:material-calendar-range: <b>28 September – 2 October 2026</b></span>
 <span class="item">:material-map-marker: Kigali, Rwanda</span>
