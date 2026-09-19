@@ -4,8 +4,8 @@ STG17 · Environment detection, dependency installation and secrets.
 The same notebook has to run in four places without editing:
 
   * **Google Colab**       — the fallback path for restricted laptops
-  * **Kaggle**             — where a GPU or a long run is needed (see docs/before/kaggle)
-  * **a local machine**    — the normal path, reading the USB-key mirror
+  * **Kaggle**             — a spare route when Colab is blocked (see docs/before/kaggle)
+  * **a local machine**    — the normal path, reading the local data mirror
   * **plain CI**           — where notebooks are only validated, never executed
 
 `setup()` works out which one it is in, installs what is missing, resolves the
@@ -59,8 +59,8 @@ def has_gpu() -> tuple[bool, str]:
     """
     Is a CUDA device visible, and which one?
 
-    Reported by the environment check because it decides whether the Day 1
-    fine-tuning demonstration is a two-minute exercise or a twenty-minute one.
+    Reported by the environment check so a participant knows what their machine
+    has. No laboratory in the current agenda requires a GPU.
     """
     try:
         import torch  # noqa: PLC0415

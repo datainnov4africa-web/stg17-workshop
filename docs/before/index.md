@@ -28,7 +28,7 @@ Three files that make the week produce *your* country's indicators.
 
 <div markdown>
 ### :material-gpu: When you need Kaggle
-Usually never. Two laboratories are the exception.
+No laboratory requires it. A spare route if Colab is blocked.
 
 [Read →](kaggle.md)
 </div>

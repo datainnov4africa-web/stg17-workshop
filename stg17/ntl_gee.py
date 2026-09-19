@@ -4,8 +4,9 @@ STG17 · Night-Time Lights through Google Earth Engine — the zero-download pat
 Why this module exists
 ----------------------
 Section 7 of the concept note names bandwidth as the single most common cause of
-laboratory failure. The local path (`stg17.ntl`) answers that by mirroring data
-on USB keys. Earth Engine answers it differently and just as usefully: the
+laboratory failure. The local path (`stg17.ntl`) answers that by preparing and
+mirroring the data locally in advance. Earth Engine answers it differently and
+just as usefully: the
 rasters never move. You send an expression, Google runs it on their copy, and a
 table of numbers comes back. A country-year zonal statistic that costs 800 MB of
 download locally costs a few kilobytes here.

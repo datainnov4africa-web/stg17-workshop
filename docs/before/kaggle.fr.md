@@ -1,45 +1,39 @@
 # Quand Kaggle est nécessaire — et quand il ne l'est pas
 
-Réponse courte : **la plupart des participants n'en auront jamais besoin.** La
-plupart des laboratoires tournent très bien sur un portable ou sur Colab gratuit.
-Cette page existe pour que les deux qui bénéficient de Kaggle ne soient pas une
-surprise le jour venu, et pour que personne ne crée un compte qu'il n'utilisera
-pas.
+Réponse courte : **aucun laboratoire ne l'exige.** Tous les laboratoires de la
+semaine tournent sur un portable ou sur Colab gratuit. Cette page existe pour que
+vous sachiez à quoi sert Kaggle ici, et pour que personne ne crée un compte qu'il
+n'utilisera pas.
 
 ---
 
-## Les deux cas où Kaggle mérite sa place
+## Ce qu'est Kaggle, dans cet atelier
 
-### 1 · La démonstration d'affinage du Jour 1
+Kaggle est l'un des endroits où un carnet de l'atelier peut s'exécuter, aux côtés
+de Colab, de votre propre machine et d'un simple exécuteur d'intégration
+continue. La boîte à outils le détecte automatiquement, et plusieurs des carnets
+fournis lisent leurs clés API dans le gestionnaire de secrets de Kaggle
+exactement comme ils le feraient dans celui de Colab — sans rien à modifier.
 
-Le matériel du Jour 1 après-midi comprend une démonstration d'affinage LoRA —
-modifier les poids d'un modèle pour qu'il réponde toujours dans un style maison,
-plutôt que de le lui demander dans le prompt. C'est le seul moment de la semaine
-où un GPU change l'expérience, et pas seulement la vitesse.
+## Quand le compte vaut la peine d'être créé
 
-| Environnement | Ce que donne la démo |
-|---|---|
-| Processeur de portable | fonctionne, environ 15 à 25 minutes pour la boucle d'entraînement |
-| Colab, offre gratuite | fonctionne, mais l'attribution du GPU n'est pas garantie et les sessions sont coupées |
-| **Kaggle** | **deux GPU T4 ou un P100, ~30 heures par semaine, garanti pour la session** |
+**Si votre machine est verrouillée et que Colab est bloqué.** Les réseaux
+institutionnels autorisent parfois l'un et pas l'autre. Disposer d'une seconde
+voie testée vers un carnet qui s'exécute, c'est la valeur réelle de Kaggle pour
+cette semaine — et le moment de découvrir quelles voies votre réseau autorise est
+la vérification d'environnement, pas le Jour 1.
 
-Le quota GPU hebdomadaire de Kaggle est l'allocation gratuite la plus généreuse
-accessible sans compte institutionnel — et, contrairement à l'offre gratuite de
-Colab, c'est un quota et non une loterie. Si vous voulez exécuter l'affinage
-vous-même plutôt que de regarder l'animateur, c'est là qu'il faut le faire.
+**Si un exercice optionnel exige un jour un GPU garanti.** Le quota hebdomadaire
+de Kaggle — deux GPU T4 ou un P100, environ 30 heures par semaine — est
+l'allocation gratuite la plus généreuse accessible sans compte institutionnel et,
+contrairement à l'offre gratuite de Colab, c'est un quota et non une loterie.
 
-### 2 · Exécuter un modèle à poids ouverts en local, pour la discussion de souveraineté
+!!! note "Aucun laboratoire de l'agenda n'a besoin d'un GPU"
 
-Le Jour 1 après-midi pose une vraie question : que coûte réellement à un INS
-l'exploitation de son propre modèle plutôt que l'envoi de microdonnées vers une
-API commerciale ? La manière honnête d'y répondre est d'en exécuter un. Un modèle
-à poids ouverts de 7 milliards de paramètres réclame environ 16 Go de mémoire GPU
-en demi-précision, ce qu'aucun portable de participant n'aura et que Kaggle
-fournit gratuitement.
-
-Le résultat n'est pas un benchmark à publier. C'est le chiffre dont vous avez
-besoin pour avoir une conversation informée avec votre direction informatique sur
-ce qu'impliquerait une option sur site.
+    Les treize laboratoires portent sur la recherche d'information, le prompt,
+    les tableaux de bord, l'analyse géospatiale et la publication. Aucun
+    n'entraîne de modèle. Si un animateur ajoute un exercice optionnel qui le
+    fait, c'est ici qu'il faudra l'exécuter.
 
 ---
 
@@ -88,9 +82,9 @@ Pour en téléverser un :
 
 1. Kaggle → Create → New Notebook → File → Import Notebook
 2. Téléversez le `.ipynb`, ou collez l'URL GitHub
-3. Réglages du carnet à droite : **Accelerator → GPU T4 x2**, **Internet → On**
+3. Réglages du carnet à droite : **Internet → On**
 4. Pour les clés API : Add-ons → Secrets → attachez votre clé sous le nom exact
-   attendu par le carnet (`GROQ_API_KEY`, `ANTHROPIC_API_KEY`, …)
+   attendu par le carnet (`GROQ_API_KEY`, `GITHUB_TOKEN`, …)
 
 !!! warning "L'accès internet est désactivé par défaut sur Kaggle"
 
@@ -107,13 +101,17 @@ Pour en téléverser un :
 |---|---|
 | J1 · Assistant RAG | Non |
 | J1 · Du RAG à l'agent | Non |
-| J1 · Démonstration d'affinage | **Recommandé** — GPU gratuit garanti |
-| J1 · Modèle à poids ouverts, chiffrage de souveraineté | **Recommandé** — exige ~16 Go de mémoire GPU |
 | J2 · Du document au tableau de bord | Non |
 | J2 · Benchmark des fournisseurs | Non |
 | J2 · Ateliers boîte à outils | Non |
 | J3 · Ookla et WorldPop | Non |
 | J3 · Elasticsearch | Non |
+| J3 · Exploration pilotée par la recherche | Non |
 | J4 · NTL collecter et explorer | Non |
-| J4 · NTL analyse et validation | Non |
+| J4 · NTL explorer et comprendre | Non |
+| J4 · NTL analyse | Non |
+| J4 · NTL validation | Non |
 | J5 · Publier vos travaux | Non |
+
+Treize laboratoires, treize fois non. Ne créez le compte que si Colab est bloqué
+sur votre réseau.

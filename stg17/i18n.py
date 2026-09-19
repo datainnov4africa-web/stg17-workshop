@@ -170,9 +170,9 @@ PHRASES: dict[str, tuple[str, str]] = {
         "pour vous permettre de terminer le laboratoire — voir la note ci-dessus.",
     ),
     "no_network": (
-        "No network. Every step below works from the mirrored data on the USB key.",
+        "No network. Every step below works from the locally prepared data.",
         "Pas de réseau. Toutes les étapes ci-dessous fonctionnent depuis les données "
-        "de la clé USB.",
+        "préparées localement.",
     ),
     "deliverable": ("Team deliverable", "Livrable de l'équipe"),
     "checkpoint": ("Checkpoint — test yourself", "Point de contrôle — testez-vous"),

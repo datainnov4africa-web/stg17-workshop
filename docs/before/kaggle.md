@@ -1,43 +1,35 @@
 # When you need Kaggle — and when you do not
 
-Short answer: **most participants never need it.** Most of the laboratories
-run perfectly well on a laptop or on free Colab. This page exists so that the two
-that benefit from Kaggle are not a surprise on the day, and so that nobody
-creates an account they will not use.
+Short answer: **no laboratory requires it.** Every laboratory in the week runs on
+a laptop or on free Colab. This page exists so that you know what Kaggle is for
+here, and so that nobody creates an account they will not use.
 
 ---
 
-## The two cases where Kaggle earns its place
+## What Kaggle is, in this workshop
 
-### 1 · The Day 1 fine-tuning demonstration
+Kaggle is one of the places a workshop notebook can run, alongside Colab, your
+own machine and a plain CI runner. The toolkit detects it automatically, and
+several of the supplied notebooks read their API keys from the Kaggle secret
+manager exactly as they would from Colab's — with nothing to edit.
 
-The Day 1 afternoon material includes a LoRA fine-tuning demonstration — changing
-a model's weights so it always answers in a house style, rather than being asked
-to in the prompt. It is the one moment in the week where a GPU changes the
-experience rather than merely the speed.
+## When it is worth creating the account
 
-| Environment | What the demo feels like |
-|---|---|
-| Laptop CPU | works, roughly 15–25 minutes for the training loop |
-| Colab free tier | works, but GPU allocation is not guaranteed and sessions are cut |
-| **Kaggle** | **two T4 GPUs or one P100, ~30 hours per week, guaranteed for the session** |
+**If your machine is locked down and Colab is blocked.** Institutional networks
+sometimes allow one and not the other. A second tested route to a running
+notebook is the real value of Kaggle for this week — and the time to discover
+which routes your network allows is the environment check, not Day 1.
 
-Kaggle's weekly GPU quota is the most generous free allocation available without
-an institutional account, and — unlike Colab's free tier — it is a quota rather
-than a lottery. If you want to run the fine-tuning yourself rather than watch the
-facilitator, this is where to do it.
+**If an optional exercise ever needs a guaranteed GPU.** Kaggle's weekly quota —
+two T4 GPUs or one P100, around 30 hours per week — is the most generous free
+allocation available without an institutional account, and unlike Colab's free
+tier it is a quota rather than a lottery.
 
-### 2 · Running an open-weight model locally, for the sovereignty discussion
+!!! note "No laboratory in the agenda needs a GPU"
 
-Day 1 afternoon asks a real question: what does it actually cost an NSO to run
-its own model instead of sending microdata to a commercial API? The honest way to
-answer is to run one. A 7-billion-parameter open-weight model needs roughly 16 GB
-of GPU memory in half precision, which no participant laptop will have and which
-Kaggle provides for free.
-
-The result is not a benchmark to publish. It is the number you need in order to
-have an informed conversation with your IT department about what an on-premise
-option would involve.
+    The thirteen laboratories are retrieval, prompting, dashboards, geospatial
+    analysis and publication. None of them trains a model. If a facilitator adds
+    an optional exercise that does, this is where to run it.
 
 ---
 
@@ -84,9 +76,9 @@ To upload one:
 
 1. Kaggle → Create → New Notebook → File → Import Notebook
 2. Upload the `.ipynb`, or paste the GitHub URL
-3. Notebook settings on the right: **Accelerator → GPU T4 x2**, **Internet → On**
+3. Notebook settings on the right: **Internet → On**
 4. For API keys: Add-ons → Secrets → attach your key with the same name the
-   notebook expects (`GROQ_API_KEY`, `ANTHROPIC_API_KEY`, …)
+   notebook expects (`GROQ_API_KEY`, `GITHUB_TOKEN`, …)
 
 !!! warning "Internet is off by default on Kaggle"
 
@@ -103,13 +95,17 @@ To upload one:
 |---|---|
 | D1 · RAG assistant | No |
 | D1 · From RAG to agent | No |
-| D1 · Fine-tuning demonstration | **Recommended** — free guaranteed GPU |
-| D1 · Open-weight model, sovereignty costing | **Recommended** — needs ~16 GB GPU memory |
 | D2 · Document to dashboard | No |
 | D2 · Provider benchmark | No |
 | D2 · Toolkit stations | No |
 | D3 · Ookla and WorldPop | No |
 | D3 · Elasticsearch | No |
+| D3 · Search-driven exploration | No |
 | D4 · NTL collect and explore | No |
-| D4 · NTL analysis and validation | No |
+| D4 · NTL explore and understand | No |
+| D4 · NTL analysis | No |
+| D4 · NTL validation | No |
 | D5 · Publish your work | No |
+
+Thirteen laboratories, thirteen times no. Create the account only if Colab is
+blocked on your network.

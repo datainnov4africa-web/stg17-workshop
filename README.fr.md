@@ -20,13 +20,10 @@ SHaSA II · Groupe technique spécialisé 17 · Plan d'action 2025-2030, PT 4.2
 ---
 
 Cinq jours, 27 heures de contact, treize laboratoires pratiques. Chaque
-présentation et chaque carnet sont fournis en **anglais et en français**, et
-s'exécutent sur **n'importe lequel des 55 États membres de l'Union africaine** en
-changeant une seule variable.
-
-```python
-COUNTRY_ISO3 = "CIV"   # ← changez ceci, et rien d'autre
-```
+présentation et chaque carnet sont fournis en **anglais et en français**. Le
+registre des pays couvre **les 55 États membres de l'Union africaine** : à partir
+d'un code ISO3, `stg17.countries` résout l'emprise géographique, la zone UTM, les
+tuiles satellitaires et les codes WorldPop — calculés plutôt que tabulés.
 
 ## Démarrage rapide
 
@@ -35,7 +32,7 @@ COUNTRY_ISO3 = "CIV"   # ← changez ceci, et rien d'autre
 puis faites la
 [vérification d'environnement](https://datainnov4africa-web.github.io/stg17-workshop/fr/before/environment-check/).
 Le carnet est distribué avec le matériel de l'atelier : votre animateur vous en
-envoie le lien, ou vous l'ouvrez depuis la clé USB.
+envoie le lien.
 
 **Animateurs et contributeurs :**
 
@@ -61,7 +58,7 @@ python tools/serve.py          # régénère tout, puis prévisualise
 | `docs/` | Le site MkDocs. `page.md` est l'anglais, `page.fr.md` le français |
 | `country-template/` | Le dépôt que chaque pays copie pour publier ses résultats |
 | `tools/` | Les scripts de build. Tout ce qui est dérivé est régénéré par `build_all.py` |
-| `maintainer/` | Non publié : gabarits de noms, kit animateur, répétition à blanc, manifeste de clé USB |
+| `maintainer/` | Non publié : gabarits de noms, kit animateur, répétition à blanc |
 
 ## Les décisions de conception à connaître
 
@@ -81,7 +78,7 @@ du tout : ils sont fournis, et le build n'affiche de bouton que pour les fichier
 réellement présents.
 
 **Chaque laboratoire dispose d'un repli qui fonctionne réellement.** Extraits pays
-pré-découpés sur clé USB, variante Earth Engine qui ne télécharge rien, DuckDB
+pré-découpés préparés à l'avance, variante Earth Engine qui ne télécharge rien, DuckDB
 quand le cluster Elasticsearch est injoignable, et un pays de référence préparé de
 bout en bout. La bande passante est la cause d'échec la plus fréquente, et le
 matériel est bâti sur ce constat plutôt que sur l'espoir du contraire.

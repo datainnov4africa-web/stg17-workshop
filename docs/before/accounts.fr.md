@@ -16,6 +16,16 @@ livrable.
    pays.
 3. Transmettez l'identifiant au Secrétariat afin d'être ajouté à l'organisation
    GitHub de l'atelier avant le Jour 2.
+4. Créez un **jeton d'accès personnel** : Settings → Developer settings →
+   Personal access tokens → *Fine-grained tokens* → Generate new token.
+   Accordez-lui **Contents : Read and write** sur vos propres dépôts, et
+   stockez-le sous `GITHUB_TOKEN` — voir [où placer vos clés](#ou-placer-vos-cles).
+
+!!! info "Pourquoi un jeton, et pas seulement le compte"
+    Les carnets des Jours 2 et 3 publient votre livrable sur GitHub depuis le
+    carnet lui-même. Sans `GITHUB_TOKEN`, le carnet conserve vos fichiers et saute
+    l'étape de publication : vous avez toujours le travail, mais pas l'URL
+    publique — et c'est l'URL publique qui *est* le livrable.
 
 !!! tip "Vous avez déjà un compte personnel ?"
     Utilisez-le. Un second compte n'apporte rien, et une identité unique simplifie
@@ -66,8 +76,9 @@ les granules exige un compte gratuit et un jeton porteur.
 
 ## 5 · Kaggle — optionnel
 
-Uniquement si vous comptez exécuter vous-même la démonstration d'affinage du
-Jour 1. [Guide complet →](kaggle.md)
+Une seconde voie testée vers un carnet qui s'exécute, utile si votre machine est
+verrouillée et que Colab est bloqué sur votre réseau. Aucun laboratoire ne
+l'exige. [Guide complet →](kaggle.md)
 
 ## 6 · Un fournisseur LLM — fourni par le Secrétariat
 
@@ -106,6 +117,7 @@ la révoquer est le moindre des désagréments.
     ```
     GROQ_API_KEY=gsk_...
     EARTHDATA_TOKEN=eyJ0eXAi...
+    GITHUB_TOKEN=github_pat_...
     ```
 
     Le `.gitignore` du dépôt exclut déjà `.env` : il ne peut pas être versionné par

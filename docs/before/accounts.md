@@ -14,6 +14,16 @@ you can follow the laboratories but you cannot produce the deliverable.
    work — it will appear in the commit history of your country repository.
 3. Send the username to the Secretariat so you can be added to the workshop
    organisation before Day 2.
+4. Create a **personal access token**: Settings → Developer settings → Personal
+   access tokens → *Fine-grained tokens* → Generate new token. Grant it
+   **Contents: Read and write** on your own repositories, and store it as
+   `GITHUB_TOKEN` — see [where to put your keys](#where-to-put-your-keys).
+
+!!! info "Why a token, and not just the account"
+    The Day 2 and Day 3 notebooks publish your deliverable to GitHub from inside
+    the notebook. Without `GITHUB_TOKEN` the notebook keeps your files and skips
+    the publishing step: you still have the work, but not the public URL — and
+    the public URL *is* the deliverable.
 
 !!! tip "Already have a personal account?"
     Use it. There is no need for a separate one, and a single identity makes the
@@ -62,7 +72,8 @@ needs a free account and a bearer token.
 
 ## 5 · Kaggle — optional
 
-Only if you intend to run the Day 1 fine-tuning demonstration yourself.
+A second tested route to a running notebook, worth having if your machine is
+locked down and Colab is blocked on your network. No laboratory requires it.
 [Full guidance →](kaggle.md)
 
 ## 6 · An LLM provider — provisioned for you
@@ -102,6 +113,7 @@ consequences.
     ```
     GROQ_API_KEY=gsk_...
     EARTHDATA_TOKEN=eyJ0eXAi...
+    GITHUB_TOKEN=github_pat_...
     ```
 
     The repository `.gitignore` already excludes `.env`, so it cannot be committed

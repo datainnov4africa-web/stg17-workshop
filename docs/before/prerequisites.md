@@ -24,7 +24,7 @@ fail without.
 | **Python** | 3.9 | 3.11 | Colab ships 3.11 |
 | **Rights** | ability to install packages | administrator | Colab needs no rights at all |
 | **Network** | intermittent is fine | stable | The datasets are prepared in advance by the facilitation team |
-| **GPU** | not needed | not needed | Only the Day 1 fine-tuning demonstration benefits, and [Kaggle](kaggle.md) provides one free |
+| **GPU** | not needed | not needed | No laboratory needs one. [Kaggle](kaggle.md) provides a free GPU should an optional exercise ever call for it |
 
 **On the 8 GB case.** The geospatial laboratories still work. Every heavy step
 processes one satellite tile at a time rather than loading a country at once,
@@ -45,11 +45,11 @@ Six accounts, none of them paid. Full instructions on the
 
 | Account | Needed for | Time to create |
 |---|---|---|
-| **GitHub** | Days 2–5. All outputs are published publicly | 5 min |
+| **GitHub** | Days 2–5. All outputs are published publicly — **and a personal access token**, because the Day 2 and Day 3 notebooks publish from inside the notebook | 10 min |
 | **Google** | Colab — the fallback path for every notebook | you probably have one |
 | **Google Earth Engine** | the zero-download path for Days 3 and 4 | 10 min, plus approval |
 | **NASA Earthdata** | downloading Black Marble granules on Day 4 | 5 min |
-| **Kaggle** | GPU for the Day 1 fine-tuning demo — see [when you need Kaggle](kaggle.md) | 5 min |
+| **Kaggle** | Optional — a spare route to a running notebook if Colab is blocked. See [when you need Kaggle](kaggle.md) | 5 min |
 | **An LLM provider** | Days 1 and 2 | provisioned centrally by the Secretariat |
 
 !!! warning "Earth Engine approval is not instant"
@@ -145,10 +145,11 @@ and the synthesis session is designed to pool them.
 
 - [ ] Laptop with 8 GB RAM minimum, ideally 16 GB and administrator rights
 - [ ] GitHub account created, username sent to the Secretariat
+- [ ] GitHub personal access token created and stored as `GITHUB_TOKEN`
 - [ ] Google account working, Colab tested once
 - [ ] Google Earth Engine registered and approved
 - [ ] NASA Earthdata account and a bearer token generated
-- [ ] Kaggle account (only if you plan to run the Day 1 fine-tuning demo yourself)
+- [ ] Kaggle account (optional — only if Colab is blocked on your network)
 - [ ] Administrative boundary file located and shareable
 - [ ] One national statistical publication chosen
 - [ ] One official subnational indicator located

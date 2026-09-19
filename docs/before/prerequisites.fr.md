@@ -24,7 +24,7 @@ un laboratoire échouera.
 | **Python** | 3.9 | 3.11 | Colab fournit 3.11 |
 | **Droits** | pouvoir installer des paquets | administrateur | Colab ne demande aucun droit |
 | **Réseau** | intermittent suffit | stable | Les jeux de données sont préparés à l'avance par l'équipe d'animation |
-| **GPU** | non nécessaire | non nécessaire | Seule la démo d'affinage du Jour 1 en profite, et [Kaggle](kaggle.md) en fournit un gratuitement |
+| **GPU** | non nécessaire | non nécessaire | Aucun laboratoire n'en a besoin. [Kaggle](kaggle.md) en fournit un gratuitement si un exercice optionnel venait à l'exiger |
 
 **Sur le cas des 8 Go.** Les laboratoires géospatiaux fonctionnent quand même.
 Chaque étape lourde traite une tuile satellitaire à la fois plutôt que de charger
@@ -46,11 +46,11 @@ Six comptes, aucun payant. Instructions complètes sur la
 
 | Compte | Nécessaire pour | Temps de création |
 |---|---|---|
-| **GitHub** | Jours 2 à 5. Toutes les productions sont publiées publiquement | 5 min |
+| **GitHub** | Jours 2 à 5. Toutes les productions sont publiées publiquement — **et un jeton d'accès personnel**, car les carnets des Jours 2 et 3 publient depuis le carnet lui-même | 10 min |
 | **Google** | Colab — le chemin de repli de tous les carnets | vous en avez probablement un |
 | **Google Earth Engine** | la voie sans téléchargement des Jours 3 et 4 | 10 min, plus l'approbation |
 | **NASA Earthdata** | télécharger les granules Black Marble au Jour 4 | 5 min |
-| **Kaggle** | GPU pour la démo d'affinage du Jour 1 — voir [quand Kaggle est nécessaire](kaggle.md) | 5 min |
+| **Kaggle** | Optionnel — une voie de secours vers un carnet qui s'exécute si Colab est bloqué. Voir [quand Kaggle est nécessaire](kaggle.md) | 5 min |
 | **Un fournisseur LLM** | Jours 1 et 2 | fourni par le Secrétariat |
 
 !!! warning "L'approbation Earth Engine n'est pas instantanée"
@@ -148,10 +148,11 @@ l'échange, et la session de synthèse est conçue pour les mutualiser.
 
 - [ ] Portable avec 8 Go de RAM minimum, idéalement 16 Go et droits administrateur
 - [ ] Compte GitHub créé, identifiant transmis au Secrétariat
+- [ ] Jeton d'accès personnel GitHub créé et stocké sous `GITHUB_TOKEN`
 - [ ] Compte Google fonctionnel, Colab testé une fois
 - [ ] Google Earth Engine inscrit et approuvé
 - [ ] Compte NASA Earthdata et jeton porteur généré
-- [ ] Compte Kaggle (uniquement si vous comptez exécuter vous-même la démo d'affinage du Jour 1)
+- [ ] Compte Kaggle (optionnel — uniquement si Colab est bloqué sur votre réseau)
 - [ ] Fichier de frontières administratives localisé et partageable
 - [ ] Une publication statistique nationale choisie
 - [ ] Un indicateur infranational officiel localisé

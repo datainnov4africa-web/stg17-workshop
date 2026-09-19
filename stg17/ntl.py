@@ -287,10 +287,10 @@ def download_granules(granules: list[dict], dest_dir: str | Path, token: str | N
     dest.mkdir(parents=True, exist_ok=True)
 
     if not token:
-        print(T("No Earthdata token. Set EARTHDATA_TOKEN, or use the mirrored data "
-                "from the USB key, or run the Earth Engine variant of this laboratory.",
+        print(T("No Earthdata token. Set EARTHDATA_TOKEN, or use the locally prepared "
+                "data, or run the Earth Engine variant of this laboratory.",
                 "Pas de jeton Earthdata. Définissez EARTHDATA_TOKEN, ou utilisez les données "
-                "de la clé USB, ou exécutez la variante Earth Engine de ce laboratoire."))
+                "préparées localement, ou exécutez la variante Earth Engine de ce laboratoire."))
         return []
 
     headers = {"Authorization": f"Bearer {token}"}

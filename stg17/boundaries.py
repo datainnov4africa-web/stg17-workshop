@@ -7,9 +7,9 @@ them wrong and every number downstream is wrong, silently.
 
 Three sources are supported, tried in this order:
 
-  1. **The local mirror** — what the technical assistants pre-clipped and put on
-     the USB key. Always tried first: it is the only source that works without
-     network, and bandwidth is the single most common cause of laboratory delay.
+  1. **The local mirror** — what the technical assistants pre-clipped and
+     prepared in advance. Always tried first: it is the only source that works
+     without network, and bandwidth is the single most common cause of delay.
   2. **geoBoundaries** (www.geoboundaries.org) — open, CC BY 4.0, consistent
      ADM0-ADM3 coverage for the whole continent, downloadable without an account.
   3. **A file the participant brings** — the national boundary file from their
@@ -194,10 +194,10 @@ def load(country: str | Country,
     if src is None:
         raise FileNotFoundError(
             T(f"No ADM{level} boundary found for {c.name_en} ({c.iso3}). "
-              f"Either put the file on the USB-key mirror, pass path=..., "
+              f"Either put the file in the local mirror, pass path=..., "
               f"or check that geoBoundaries publishes ADM{level} for this country.",
               f"Aucune frontière ADM{level} trouvée pour {c.name_fr} ({c.iso3}). "
-              f"Placez le fichier dans le miroir de la clé USB, passez path=..., "
+              f"Placez le fichier dans le miroir local, passez path=..., "
               f"ou vérifiez que geoBoundaries publie l'ADM{level} pour ce pays.")
         )
 
