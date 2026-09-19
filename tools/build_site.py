@@ -317,6 +317,56 @@ def render_day(day: dict, labs: dict, lang: str, config: dict) -> str:
 # ---------------------------------------------------------------------------
 #  Laboratory register
 # ---------------------------------------------------------------------------
+def agenda_download(lang: str) -> str:
+    """
+    The agenda as a PDF, offered in the language of the page being read.
+
+    Rendered only when the file is actually on disk — the same discipline the
+    session download buttons follow. A button that 404s costs more than the one
+    it saves, because a reader who is disappointed once stops trusting the rest.
+
+    The file size is read from the file rather than written down. A hand-typed
+    "180 KB" is a fact with an expiry date; this one cannot fall out of step
+    with the document it describes.
+
+    Built by `python tools/build_agenda_pdf.py` from the same config/agenda.yml
+    that renders this page, so the download and the site cannot disagree.
+    """
+    fr = lang == "fr"
+    name = f"STG17_Agenda_{'FR' if fr else 'EN'}.pdf"
+    path = ROOT / "docs" / "downloads" / name
+    if not path.exists():
+        return ""
+
+    kb = max(1, round(path.stat().st_size / 1024))
+    size = f"{kb / 1024:.1f} Mo" if kb >= 1024 else f"{kb} Ko"
+    if not fr:
+        size = f"{kb / 1024:.1f} MB" if kb >= 1024 else f"{kb} KB"
+
+    if fr:
+        title = "L'agenda complet, en PDF"
+        blurb = ("Les cinq jours séance par séance, avec les horaires, les "
+                 "laboratoires et les livrables — à emporter, à imprimer, à diffuser.")
+        label = f"Télécharger l'agenda · PDF · {size}"
+    else:
+        title = "The full agenda, as a PDF"
+        blurb = ("All five days session by session, with times, laboratories and "
+                 "deliverables — to keep, to print, to circulate.")
+        label = f"Download the agenda · PDF · {size}"
+
+    return "\n".join([
+        '<div class="stg-agenda" markdown>',
+        '<div class="stg-agenda__text" markdown>',
+        f":material-calendar-text: {title}",
+        "",
+        blurb,
+        "</div>",
+        f"[:material-tray-arrow-down: {label}](../downloads/{name})"
+        '{ .md-button .stg-agenda__btn download="' + name + '" }',
+        "</div>",
+    ])
+
+
 def render_week(agenda: dict, labs: dict, lang: str, config: dict) -> str:
     """
     The whole week on one page.
@@ -341,6 +391,13 @@ def render_week(agenda: dict, labs: dict, lang: str, config: dict) -> str:
          "leads to that session on its day page, where its material sits.*"),
         "",
     ]
+
+    # Directly under the lede, above Day 1: the page answers "show me the
+    # agenda", and the offer to take it away belongs where that question is
+    # answered, not at the foot of a page five days long.
+    card = agenda_download(lang)
+    if card:
+        lines += [card, ""]
 
     icon = {"talk": ":material-presentation:", "lab": ":material-flask:",
             "benchmark": ":material-speedometer:", "panel": ":material-account-group:",

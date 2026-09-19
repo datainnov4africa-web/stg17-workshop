@@ -4,6 +4,15 @@
 
 *Cinq jours, du concept au dépôt publié. Chaque titre de séance mène à cette séance sur la page du jour, où se trouvent ses supports.*
 
+<div class="stg-agenda" markdown>
+<div class="stg-agenda__text" markdown>
+:material-calendar-text: L'agenda complet, en PDF
+
+Les cinq jours séance par séance, avec les horaires, les laboratoires et les livrables — à emporter, à imprimer, à diffuser.
+</div>
+[:material-tray-arrow-down: Télécharger l'agenda · PDF · 32 Ko](../downloads/STG17_Agenda_FR.pdf){ .md-button .stg-agenda__btn download="STG17_Agenda_FR.pdf" }
+</div>
+
 ## Jour 1 · Concepts de l'IA et l'infrastructure qui les porte
 
 *Lundi · Un vocabulaire commun, l'expérience des pays, et ce qu'exige réellement la construction et l'exploitation de l'IA* — [page détaillée →](../day1/index.md)

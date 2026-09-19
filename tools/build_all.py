@@ -16,7 +16,10 @@ Presentations and notebooks are not derived: they are supplied, dropped into
 docs/downloads/DayN/, and picked up by build_site.py. See
 maintainer/HOW-TO-ADD-FILES.txt.
 
-The order matters: the CSS variables must exist before the site is built.
+The order matters twice over: the CSS variables must exist before the site is
+built, and so must the agenda PDF — the week page prints the size of that file
+on its download button, and reads it off the file itself rather than trusting a
+number someone typed.
 """
 
 from __future__ import annotations
@@ -51,6 +54,7 @@ def main() -> int:
         ("Country registry self-check", ["-m", "stg17.countries"]),
         ("AfDB palette -> CSS variables", ["-m", "stg17.theme", "--emit-css"]),
         ("Notebook validation", ["tools/check_notebooks.py"]),
+        ("Agenda -> downloadable PDF, English and French", ["tools/build_agenda_pdf.py"]),
         ("Agenda -> day pages, lab register, mapping, glossary", ["tools/build_site.py"]),
     ]
 

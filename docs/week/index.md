@@ -4,6 +4,15 @@
 
 *Five days, from the concepts to a published repository. Every session title leads to that session on its day page, where its material sits.*
 
+<div class="stg-agenda" markdown>
+<div class="stg-agenda__text" markdown>
+:material-calendar-text: The full agenda, as a PDF
+
+All five days session by session, with times, laboratories and deliverables — to keep, to print, to circulate.
+</div>
+[:material-tray-arrow-down: Download the agenda · PDF · 30 KB](../downloads/STG17_Agenda_EN.pdf){ .md-button .stg-agenda__btn download="STG17_Agenda_EN.pdf" }
+</div>
+
 ## Day 1 · AI concepts and the infrastructure behind them
 
 *Monday · Shared vocabulary, country experience, and what it really takes to build and run AI* — [day page →](../day1/index.md)
