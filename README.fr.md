@@ -21,7 +21,7 @@ SHaSA II · Groupe technique spécialisé 17 · Plan d'action 2025-2030, PT 4.2
 
 Cinq jours, 27 heures de contact, treize laboratoires pratiques. Chaque
 présentation et chaque carnet sont fournis en **anglais et en français**. Le
-registre des pays couvre **les 55 États membres de l'Union africaine** : à partir
+registre des pays couvre **tous les États membres de l'Union africaine** : à partir
 d'un code ISO3, `stg17.countries` résout l'emprise géographique, la zone UTM, les
 tuiles satellitaires et les codes WorldPop — calculés plutôt que tabulés.
 
@@ -62,7 +62,7 @@ python tools/serve.py          # régénère tout, puis prévisualise
 
 ## Les décisions de conception à connaître
 
-**Une seule variable pays.** `stg17.countries` porte les 55 États membres de l'UA
+**Une seule variable pays.** `stg17.countries` porte les États membres de l'UA
 avec leur emprise ; la sélection des tuiles VIIRS, la zone UTM, l'emprise
 cartographique et les codes WorldPop sont *calculés*, non tabulés. Un fichier de
 frontières est résolu depuis le miroir local, puis geoBoundaries, puis un fichier

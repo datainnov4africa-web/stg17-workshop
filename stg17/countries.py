@@ -273,7 +273,7 @@ def get(code_or_name: str) -> Country:
     raise KeyError(
         f"Unknown country: {raw!r}. "
         f"Did you mean one of: {hint}? "
-        f"Use stg17.countries.table() to list all 55 AU member states."
+        f"Use stg17.countries.table() to list the AU member states."
     )
 
 

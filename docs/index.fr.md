@@ -88,7 +88,7 @@ citable et doté d'un DOI que votre office peut assumer.
 
 ## Ce qui distingue cet atelier
 
-**Le registre des pays couvre les 55 États membres de l'Union africaine.** À
+**Le registre des pays couvre tous les États membres de l'Union africaine.** À
 partir d'un code ISO3, `stg17.countries` résout l'emprise géographique, la zone
 UTM, les tuiles satellitaires et les codes WorldPop — calculés plutôt que
 tabulés. Le laboratoire Ookla du Jour 3 est bâti dessus : fixez votre propre pays

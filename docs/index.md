@@ -87,7 +87,7 @@ citable, DOI-bearing repository your office can stand behind.
 
 ## What makes this workshop different
 
-**The country registry covers all 55 African Union member states.** From an ISO3
+**The country registry covers every African Union member state.** From an ISO3
 code, `stg17.countries` resolves the bounding box, the UTM zone, the satellite
 tiles and the WorldPop codes — computed rather than tabulated. The Day 3 Ookla
 laboratory is built on it: set your own country at the top of that notebook and

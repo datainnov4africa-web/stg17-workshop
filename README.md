@@ -21,7 +21,7 @@ SHaSA II · Specialized Technical Group 17 · Action Plan 2025–2030, WP 4.2
 
 Five days, 27 contact hours, thirteen hands-on laboratories. Every presentation
 and notebook is supplied in **English and French**. The country registry covers
-**all 55 African Union member states**: from an ISO3 code, `stg17.countries`
+**every African Union member state**: from an ISO3 code, `stg17.countries`
 resolves the bounding box, the UTM zone, the satellite tiles and the WorldPop
 codes — computed rather than tabulated.
 
@@ -62,7 +62,7 @@ python tools/serve.py          # regenerate everything, then preview
 
 ## The design decisions worth knowing
 
-**One country variable.** `stg17.countries` holds the 55 AU member states with
+**One country variable.** `stg17.countries` holds the AU member states with
 their bounding boxes; VIIRS tile selection, UTM zone, map extent and WorldPop
 codes are *computed*, not tabulated. A boundary file is resolved from the local
 mirror, then geoBoundaries, then a file the participant brings — normalised into

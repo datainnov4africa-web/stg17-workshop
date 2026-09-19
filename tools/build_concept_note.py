@@ -362,9 +362,9 @@ def key_facts(agenda: dict, labs: dict) -> list[tuple[str, str]]:
         ("Working languages", "English and French throughout. Every presentation and every "
                               "notebook is produced in both languages from a single source, so "
                               "the two versions cannot drift apart"),
-        ("Country coverage", "All 55 African Union member states. Each notebook is driven by one "
-                             "country parameter; the registry supplies boundaries, satellite "
-                             "tiles and projection for every member state"),
+        ("Country coverage", "Every African Union member state. Each notebook is driven by one "
+                             "country parameter; the registry supplies the boundaries, satellite "
+                             "tiles and projection for each of them"),
         ("Shared output", "All laboratory work published on the workshop GitHub organisation"),
         ("Anchored in", "STG17 Action Plan 2025–2030 — Work Package 4.2, feeding WP 1, 2, 3 and 4"),
     ]
