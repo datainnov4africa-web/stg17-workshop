@@ -1,11 +1,18 @@
-# Everything needed to build the site, the notebooks and the decks.
-# Participants do not need this file - each notebook installs what it needs.
+# Everything needed to build the site, the notebooks, the decks and the
+# downloadable agenda. Participants do not need this file - each notebook
+# installs what it needs.
+#
+# This list is what CI installs before running tools/build_all.py, so a tool
+# added to build_all.py must have its dependency added here in the same commit:
+# the Publish workflow fails at "Regenerate everything derived" otherwise, and
+# the site simply stops being deployed while Validate still passes.
 mkdocs-material>=9.5
 mkdocs-static-i18n>=1.2
 pymdown-extensions>=10.7
 pyyaml>=6.0
 nbformat>=5.9
 python-pptx>=0.6.23
+reportlab>=4.0
 numpy>=1.24
 pandas>=2.0
 matplotlib>=3.7

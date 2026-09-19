@@ -366,6 +366,11 @@ def build(agenda: dict, config: dict, lang: str, path: Path) -> None:
         author=pick_raw(config.get("organisers", {}).get("lead", {}), "name", lang),
         subject=pick_raw(ws, "subtitle", lang),
         creator="config/agenda.yml via tools/build_agenda_pdf.py — regenerate, do not edit",
+        # Without this, reportlab stamps the current time into /CreationDate and
+        # /ID, so two runs a second apart differ in about forty bytes. The file
+        # is committed and build_all.py regenerates it, which would show both
+        # PDFs as modified on every run with nothing having changed.
+        invariant=True,
     )
 
     story = title_block(config, agenda, lang, st)
