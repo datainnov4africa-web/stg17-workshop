@@ -51,8 +51,8 @@ Ne construisez pas la structure à la main. Le gabarit porte les conventions don
 le Secrétariat a besoin pour agréger les travaux entre pays — et il porte le
 workflow GitHub Actions qui publie votre site.
 
-1. Prenez le gabarit pays fourni avec le matériel de l'atelier — il est sur la clé
-   USB, et l'équipe d'animation vous en enverra le lien
+1. Prenez le gabarit pays fourni avec le matériel de l'atelier — l'équipe
+   d'animation vous en enverra le lien
 2. Créez un nouveau dépôt sur GitHub et copiez-y les fichiers du gabarit
 3. Propriétaire : l'organisation GitHub de votre office si elle existe, sinon votre compte
 4. Nom : **`stg17-<iso3>`** en minuscules — `stg17-civ`, `stg17-tun`, `stg17-ken`

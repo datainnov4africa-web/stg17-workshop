@@ -87,21 +87,17 @@ citable, DOI-bearing repository your office can stand behind.
 
 ## What makes this workshop different
 
-**Every notebook runs on your country.** One variable — `COUNTRY_ISO3` — resolves
-the administrative boundaries, the satellite tiles, the projection used for areas
-and every figure title. The registry covers all 55 African Union member states.
-Change one line, re-run, and the pipeline you learned on Côte d'Ivoire produces
-your own national indicator.
-
-```python
-COUNTRY_ISO3 = "CIV"   # ← change this, and nothing else
-```
+**The country registry covers all 55 African Union member states.** From an ISO3
+code, `stg17.countries` resolves the bounding box, the UTM zone, the satellite
+tiles and the WorldPop codes — computed rather than tabulated. The Day 3 Ookla
+laboratory is built on it: set your own country at the top of that notebook and
+the same pipeline produces your national indicator.
 
 **Nothing depends on a step that has not been tested.** Every laboratory has a
-documented fallback that actually works: pre-clipped country extracts on a USB
-key, an Earth Engine variant that downloads nothing, a DuckDB path when the
-Elasticsearch cluster is unreachable, and one reference country prepared end to
-end so that no team loses a day to a missing file.
+documented fallback that actually works: pre-clipped country extracts supplied by
+the facilitation team, an Earth Engine variant that downloads nothing, a DuckDB
+path when the Elasticsearch cluster is unreachable, and one reference country
+prepared end to end so that no team loses a day to a missing file.
 
 **The limitations statement is part of the deliverable.** A proxy indicator
 published without an honest account of what it cannot support is not a

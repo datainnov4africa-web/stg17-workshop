@@ -23,7 +23,7 @@ fail without.
 | **Free disk** | 10 GB | 25 GB | Use the Earth Engine variants, which download nothing |
 | **Python** | 3.9 | 3.11 | Colab ships 3.11 |
 | **Rights** | ability to install packages | administrator | Colab needs no rights at all |
-| **Network** | intermittent is fine | stable | All datasets are mirrored on the USB key distributed on Day 0 |
+| **Network** | intermittent is fine | stable | The datasets are prepared in advance by the facilitation team |
 | **GPU** | not needed | not needed | Only the Day 1 fine-tuning demonstration benefits, and [Kaggle](kaggle.md) provides one free |
 
 **On the 8 GB case.** The geospatial laboratories still work. Every heavy step
@@ -49,7 +49,7 @@ Six accounts, none of them paid. Full instructions on the
 | **Google** | Colab — the fallback path for every notebook | you probably have one |
 | **Google Earth Engine** | the zero-download path for Days 3 and 4 | 10 min, plus approval |
 | **NASA Earthdata** | downloading Black Marble granules on Day 4 | 5 min |
-| **Kaggle** | GPU for the Day 1 fine-tuning demo, and dataset mirrors — see [when you need Kaggle](kaggle.md) | 5 min |
+| **Kaggle** | GPU for the Day 1 fine-tuning demo — see [when you need Kaggle](kaggle.md) | 5 min |
 | **An LLM provider** | Days 1 and 2 | provisioned centrally by the Secretariat |
 
 !!! warning "Earth Engine approval is not instant"

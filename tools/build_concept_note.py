@@ -210,7 +210,7 @@ PREPARATION = [
     ("T − 1 week", "Lead facilitator",
      "Dry-run every laboratory end to end on a workshop-specification machine, timing each step"),
     ("Day 0", "All",
-     "Room and network test; distribution of the USB keys carrying all data, notebooks and slides"),
+     "Room and network test; distribution of the workshop material — data, notebooks and slides"),
     ("T + 1 week", "Secretariat",
      "Publish recordings and notebooks; consolidate the commitments board into a dated follow-up "
      "calendar circulated to the Bureau"),
@@ -218,7 +218,7 @@ PREPARATION = [
 
 RISKS = (
     "Bandwidth is the most frequent cause of laboratory failure, which is why every dataset is "
-    "mirrored locally and distributed on USB keys rather than downloaded during sessions. Failed "
+    "prepared in advance by the facilitation team rather than downloaded during sessions. Failed "
     "or rate-limited API keys are handled by per-participant quotas provisioned in advance and by "
     "a facilitator-run demonstration path for each API-dependent step; in addition, every "
     "laboratory that uses a model has a documented path that runs without one. Heterogeneous "
@@ -256,7 +256,7 @@ PRACTICAL = [
     ("Technical set-up",
      "A workshop GitHub organisation is created in advance and hosts all notebooks, dashboards "
      "and outputs. Every notebook opens directly in Google Colab from a badge and is also "
-     "distributed on a USB key, so a restricted machine is never a blocker. API access to LLM "
+     "available as a direct download, so a restricted machine is never a blocker. API access to LLM "
      "providers, including Groq, is provisioned centrally with per-participant keys. Datasets — "
      "Ookla tiles, WorldPop rasters and the NTL subsets — are downloaded and mirrored locally in "
      "advance, since bandwidth is the single most common cause of laboratory delay. An "

@@ -96,7 +96,6 @@ defaults:
 paths:
   # Local data mirror. No tool in this repository builds it: the boundaries, the
   # NTL extracts, the Ookla tiles and the WorldPop rasters are assembled by hand.
-  # See maintainer/prep/usb-manifest.md for what goes in it.
   local_root_windows: "C:/STG17_LOCAL"
   local_root_posix: "~/STG17_LOCAL"
   colab_root: "/content/STG17_LOCAL"

@@ -56,7 +56,7 @@ Six slides for the Day 1 exchange. Be candid about what did not work.
 | **T − 4 weeks** | Your office confirms who attends, and names the team that will carry the work through to Friday. |
 | **T − 2 weeks** | Send your six country slides, create a GitHub account, and submit your national data pack. |
 | **T − 1 week** | Join the remote environment check — one hour, offered twice in two time zones. |
-| **Day 0** | Room and network test on site; collect the USB key carrying all data and notebooks. |
+| **Day 0** | Room and network test on site; collect the workshop material from the facilitation team. |
 
 Everything else — the datasets, the API access, the machines — is prepared for
 you. If something is missing on the day, there is a documented fallback for every
@@ -64,8 +64,8 @@ laboratory; say so and it is applied.
 
 ## Known risks, and how they are handled
 
-**Bandwidth** is the most frequent cause of laboratory failure, which is why every
-dataset is mirrored locally and distributed on USB keys rather than downloaded
+**Bandwidth** is the most frequent cause of laboratory failure, which is why the
+datasets are prepared in advance by the facilitation team rather than downloaded
 during sessions — and why every geospatial laboratory has an Earth Engine variant
 that downloads nothing at all.
 

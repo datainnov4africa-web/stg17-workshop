@@ -34,7 +34,7 @@ avoir à demander de l'aide devant la salle.
 | Les données nationales d'une équipe s'avèrent inexploitables | Basculez-la immédiatement sur le pays de référence. Ne la laissez pas déboguer un problème de données pendant un laboratoire de méthode. |
 | Le cluster Elasticsearch est injoignable | Annoncez la voie DuckDB pour tout le monde en une fois, pas équipe par équipe. |
 | Clés API limitées | Chemin de démonstration animé. Ne consacrez pas la séance à l'administration des quotas. |
-| Réseau totalement coupé | Miroir de la clé USB. Chaque laboratoire fonctionne depuis elle. |
+| Réseau totalement coupé | Les copies locales des jeux de données préparées à l'avance. Chaque laboratoire fonctionne depuis elles. |
 
 ## Le mur
 
@@ -70,4 +70,3 @@ la semaine.
 - [ ] Confirmer que le cluster Elasticsearch est chargé, un index par pays participant
 - [ ] Confirmer que le pays de référence s'exécute de bout en bout depuis une machine propre
 - [ ] Vérifier que chaque badge Colab se résout
-- [ ] Préparer les clés USB — voir `maintainer/prep/usb-manifest.md`

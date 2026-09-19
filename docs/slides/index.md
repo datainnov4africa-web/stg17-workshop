@@ -20,9 +20,8 @@ the session in your working language and keep the file afterwards.
 
 ## During the workshop
 
-You do not need to download anything in advance. Everything is also distributed
-on the USB key handed out on Day 0, and every laboratory carries its own material
-in the notebook you will be given.
+You do not need to download anything in advance. Every laboratory carries its own
+material in the notebook you will be given.
 
 If a presentation you need is not here on the day, ask — the facilitation team
 has it.

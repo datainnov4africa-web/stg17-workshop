@@ -23,7 +23,7 @@ un laboratoire échouera.
 | **Disque libre** | 10 Go | 25 Go | Utilisez les variantes Earth Engine, qui ne téléchargent rien |
 | **Python** | 3.9 | 3.11 | Colab fournit 3.11 |
 | **Droits** | pouvoir installer des paquets | administrateur | Colab ne demande aucun droit |
-| **Réseau** | intermittent suffit | stable | Toutes les données sont copiées sur la clé USB du Jour 0 |
+| **Réseau** | intermittent suffit | stable | Les jeux de données sont préparés à l'avance par l'équipe d'animation |
 | **GPU** | non nécessaire | non nécessaire | Seule la démo d'affinage du Jour 1 en profite, et [Kaggle](kaggle.md) en fournit un gratuitement |
 
 **Sur le cas des 8 Go.** Les laboratoires géospatiaux fonctionnent quand même.
@@ -50,7 +50,7 @@ Six comptes, aucun payant. Instructions complètes sur la
 | **Google** | Colab — le chemin de repli de tous les carnets | vous en avez probablement un |
 | **Google Earth Engine** | la voie sans téléchargement des Jours 3 et 4 | 10 min, plus l'approbation |
 | **NASA Earthdata** | télécharger les granules Black Marble au Jour 4 | 5 min |
-| **Kaggle** | GPU pour la démo d'affinage du Jour 1, et miroirs de données — voir [quand Kaggle est nécessaire](kaggle.md) | 5 min |
+| **Kaggle** | GPU pour la démo d'affinage du Jour 1 — voir [quand Kaggle est nécessaire](kaggle.md) | 5 min |
 | **Un fournisseur LLM** | Jours 1 et 2 | fourni par le Secrétariat |
 
 !!! warning "L'approbation Earth Engine n'est pas instantanée"

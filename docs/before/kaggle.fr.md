@@ -8,7 +8,7 @@ pas.
 
 ---
 
-## Les trois cas où Kaggle mérite sa place
+## Les deux cas où Kaggle mérite sa place
 
 ### 1 · La démonstration d'affinage du Jour 1
 
@@ -40,25 +40,6 @@ fournit gratuitement.
 Le résultat n'est pas un benchmark à publier. C'est le chiffre dont vous avez
 besoin pour avoir une conversation informée avec votre direction informatique sur
 ce qu'impliquerait une option sur site.
-
-### 3 · Comme miroir de données, quand la clé USB n'est pas avec vous
-
-Kaggle Datasets héberge les extraits pays pré-découpés des laboratoires
-géospatiaux. Cela compte pour deux publics :
-
-- **Les participants à distance**, qui ne reçoivent pas la clé USB distribuée au Jour 0
-- **Quiconque poursuit le travail après l'atelier**, quand la clé est dans un tiroir
-
-Un jeu de données Kaggle attaché à un carnet est disponible instantanément, sans
-téléchargement sur la machine du participant, et survit à un redémarrage de
-l'exécution — ce que le dossier `/content` de Colab ne fait pas.
-
-!!! note "Les miroirs sont publiés sous l'organisation de l'atelier"
-
-    Les identifiants de jeux de données suivent le motif `stg17/ookla-<iso3>` et
-    `stg17/ntl-<iso3>`. Ils sont annoncés à la séance de vérification
-    d'environnement, une fois le travail de miroir achevé par les assistants
-    techniques, à T-3 semaines.
 
 ---
 
@@ -131,8 +112,8 @@ Pour en téléverser un :
 | J2 · Du document au tableau de bord | Non |
 | J2 · Benchmark des fournisseurs | Non |
 | J2 · Ateliers boîte à outils | Non |
-| J3 · Ookla et WorldPop | Non — mais Kaggle Datasets miroite les extraits |
+| J3 · Ookla et WorldPop | Non |
 | J3 · Elasticsearch | Non |
-| J4 · NTL collecter et explorer | Non — mais Kaggle Datasets miroite les extraits |
+| J4 · NTL collecter et explorer | Non |
 | J4 · NTL analyse et validation | Non |
 | J5 · Publier vos travaux | Non |

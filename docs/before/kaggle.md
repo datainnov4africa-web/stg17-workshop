@@ -7,7 +7,7 @@ creates an account they will not use.
 
 ---
 
-## The three cases where Kaggle earns its place
+## The two cases where Kaggle earns its place
 
 ### 1 · The Day 1 fine-tuning demonstration
 
@@ -38,24 +38,6 @@ Kaggle provides for free.
 The result is not a benchmark to publish. It is the number you need in order to
 have an informed conversation with your IT department about what an on-premise
 option would involve.
-
-### 3 · As a data mirror, when the USB key is not with you
-
-Kaggle Datasets host the pre-clipped country extracts for the geospatial
-laboratories. That matters for two groups:
-
-- **Remote participants**, who do not receive the USB key distributed on Day 0
-- **Anyone continuing the work after the workshop**, when the key is in a drawer
-
-A Kaggle dataset attached to a notebook is available instantly, with no download
-to the participant's machine, and survives a runtime restart — which the `/content`
-folder in Colab does not.
-
-!!! note "The mirrors are published under the workshop organisation"
-
-    Dataset slugs follow the pattern `stg17/ookla-<iso3>` and `stg17/ntl-<iso3>`.
-    They are announced at the environment check session once the technical
-    assistants have finished mirroring, at T-3 weeks.
 
 ---
 
@@ -126,8 +108,8 @@ To upload one:
 | D2 · Document to dashboard | No |
 | D2 · Provider benchmark | No |
 | D2 · Toolkit stations | No |
-| D3 · Ookla and WorldPop | No — but Kaggle Datasets mirror the extracts |
+| D3 · Ookla and WorldPop | No |
 | D3 · Elasticsearch | No |
-| D4 · NTL collect and explore | No — but Kaggle Datasets mirror the extracts |
+| D4 · NTL collect and explore | No |
 | D4 · NTL analysis and validation | No |
 | D5 · Publish your work | No |

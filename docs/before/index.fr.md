@@ -56,7 +56,7 @@ Six diapositives pour l'échange du Jour 1. Soyez francs sur ce qui n'a pas marc
 | **T − 4 semaines** | Votre office confirme les participants et désigne l'équipe qui portera le travail jusqu'au vendredi. |
 | **T − 2 semaines** | Envoyez vos six diapositives pays, créez un compte GitHub, transmettez votre paquet de données national. |
 | **T − 1 semaine** | Participez à la vérification d'environnement à distance — une heure, proposée deux fois sur deux fuseaux. |
-| **Jour 0** | Test de salle et de réseau sur place ; récupération de la clé USB contenant données et carnets. |
+| **Jour 0** | Test de salle et de réseau sur place ; récupération du matériel de l'atelier auprès de l'équipe d'animation. |
 
 Tout le reste — les jeux de données, les accès aux API, les machines — est préparé
 pour vous. Si quelque chose manque le jour venu, chaque laboratoire dispose d'un
@@ -65,8 +65,8 @@ chemin de repli documenté : signalez-le, il sera appliqué.
 ## Risques connus, et leur traitement
 
 **La bande passante** est la cause d'échec la plus fréquente des laboratoires,
-d'où le fait que chaque jeu de données soit copié en miroir localement et
-distribué sur clé USB plutôt que téléchargé pendant les séances — et que chaque
+d'où le fait que les jeux de données soient préparés à l'avance par l'équipe
+d'animation plutôt que téléchargés pendant les séances — et que chaque
 laboratoire géospatial dispose d'une variante Earth Engine qui ne télécharge rien.
 
 **Les clés API en échec ou limitées** sont traitées par des quotas par participant

@@ -50,8 +50,8 @@ Do not build the structure by hand. The template carries the conventions the
 Secretariat needs in order to aggregate work across countries — and it carries the
 GitHub Actions workflow that publishes your site.
 
-1. Take the country template supplied with the workshop materials — it is on the
-   USB key, and the facilitation team will send you the link
+1. Take the country template supplied with the workshop materials — the
+   facilitation team will send you the link
 2. Create a new repository on GitHub and copy the template's files into it
 3. Owner: your office's GitHub organisation if it has one, otherwise your account
 4. Name: **`stg17-<iso3>`** in lowercase — `stg17-civ`, `stg17-tun`, `stg17-ken`

@@ -33,7 +33,7 @@ should not have to ask for it in front of the room.
 | A team's national data proves unusable | Switch them to the reference country immediately. Do not let them debug a data problem during a method laboratory. |
 | The Elasticsearch cluster is unreachable | Announce the DuckDB path for everyone at once, not team by team. |
 | API keys rate-limited | Facilitator-run demonstration path. Do not spend the session on quota administration. |
-| Network down entirely | USB key mirror. Every laboratory works from it. |
+| Network down entirely | The locally prepared copies of the datasets. Every laboratory works from them. |
 
 ## The wall board
 
@@ -67,4 +67,3 @@ laboratory at 14:00 is the densest hour of the week.
 - [ ] Confirm the Elasticsearch cluster is loaded, one index per participating country
 - [ ] Confirm the reference country runs end to end from a clean machine
 - [ ] Check every Colab badge resolves
-- [ ] Prepare the USB keys — see `maintainer/prep/usb-manifest.md`

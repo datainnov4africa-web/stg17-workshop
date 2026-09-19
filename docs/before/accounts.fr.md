@@ -67,8 +67,7 @@ les granules exige un compte gratuit et un jeton porteur.
 ## 5 · Kaggle — optionnel
 
 Uniquement si vous comptez exécuter vous-même la démonstration d'affinage du
-Jour 1, ou si vous participez à distance et ne recevrez pas la clé USB.
-[Guide complet →](kaggle.md)
+Jour 1. [Guide complet →](kaggle.md)
 
 ## 6 · Un fournisseur LLM — fourni par le Secrétariat
 

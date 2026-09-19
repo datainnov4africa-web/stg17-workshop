@@ -34,7 +34,7 @@ Disconnect, revoke, or unplug — do not simulate.
 - [ ] **D2 benchmark** — facilitator-run path with participant keys unset
 - [ ] **D3 Ookla** — pre-clipped extract, network disabled
 - [ ] **D3 Elasticsearch** — DuckDB path with the cluster unreachable, same query set
-- [ ] **D4 NTL** — (a) USB mirror with network disabled; (b) Earth Engine variant;
+- [ ] **D4 NTL** — (a) pre-prepared local extract, network disabled; (b) Earth Engine variant;
       (c) reference country substitution
 - [ ] **D5 publish** — country template published with no prior repository
 

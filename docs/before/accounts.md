@@ -62,8 +62,7 @@ needs a free account and a bearer token.
 
 ## 5 · Kaggle — optional
 
-Only if you intend to run the Day 1 fine-tuning demonstration yourself, or if you
-are a remote participant who will not receive the USB key.
+Only if you intend to run the Day 1 fine-tuning demonstration yourself.
 [Full guidance →](kaggle.md)
 
 ## 6 · An LLM provider — provisioned for you

@@ -5,7 +5,7 @@ machine can run the thirteen laboratories — and then produces a short diagnost
 string to send to the technical assistants.
 
 The environment-check notebook is distributed with the workshop materials. Your
-facilitator will send the link, or open it from the USB key.
+facilitator will send you the link.
 
 !!! tip "Run it twice"
     Once at home, as soon as you receive your invitation, and once during the
@@ -36,8 +36,8 @@ prints the exact `pip install` line for whatever is missing.
 has a documented path that works without one.
 
 **Amber on a network endpoint** is not a failure either. Blocked endpoints are
-common on institutional networks, and every dataset is mirrored on the USB key
-distributed on Day 0.
+common on institutional networks, and every dataset is prepared in advance by the
+facilitation team.
 
 **Red on the boundary load** is worth reporting. It usually means geoBoundaries
 does not publish the level you asked for, which is useful to know before Thursday.

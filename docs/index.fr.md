@@ -88,21 +88,18 @@ citable et doté d'un DOI que votre office peut assumer.
 
 ## Ce qui distingue cet atelier
 
-**Chaque carnet tourne sur votre pays.** Une seule variable — `COUNTRY_ISO3` —
-résout les frontières administratives, les tuiles satellitaires, la projection
-utilisée pour les aires et tous les titres de figures. Le registre couvre les 55
-États membres de l'Union africaine. Changez une ligne, ré-exécutez, et la chaîne
-apprise sur la Côte d'Ivoire produit votre propre indicateur national.
-
-```python
-COUNTRY_ISO3 = "CIV"   # ← changez ceci, et rien d'autre
-```
+**Le registre des pays couvre les 55 États membres de l'Union africaine.** À
+partir d'un code ISO3, `stg17.countries` résout l'emprise géographique, la zone
+UTM, les tuiles satellitaires et les codes WorldPop — calculés plutôt que
+tabulés. Le laboratoire Ookla du Jour 3 est bâti dessus : fixez votre propre pays
+en tête de ce carnet et la même chaîne produit votre indicateur national.
 
 **Rien ne dépend d'une étape non testée.** Chaque laboratoire dispose d'un chemin
-de repli qui fonctionne réellement : extraits pays pré-découpés sur clé USB,
-variante Earth Engine ne téléchargeant rien, voie DuckDB quand le cluster
-Elasticsearch est injoignable, et un pays de référence préparé de bout en bout
-pour qu'aucune équipe ne perde une journée sur un fichier manquant.
+de repli qui fonctionne réellement : extraits pays pré-découpés fournis par
+l'équipe d'animation, variante Earth Engine ne téléchargeant rien, voie DuckDB
+quand le cluster Elasticsearch est injoignable, et un pays de référence préparé
+de bout en bout pour qu'aucune équipe ne perde une journée sur un fichier
+manquant.
 
 **La déclaration de limites fait partie du livrable.** Un indicateur indirect
 publié sans exposé honnête de ce qu'il ne peut pas soutenir n'est pas un produit

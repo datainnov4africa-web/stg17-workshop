@@ -4,7 +4,7 @@ Un carnet. Environ cinq minutes. Il vous dit, point par point, si votre machine
 peut exécuter les treize laboratoires — puis produit une courte chaîne de
 diagnostic à envoyer aux assistants techniques.
 
-Le carnet de vérification d'environnement est distribué avec le matériel de l'atelier. Votre animateur vous enverra le lien, ou ouvrez-le depuis la clé USB.
+Le carnet de vérification d'environnement est distribué avec le matériel de l'atelier. Votre animateur vous enverra le lien.
 
 !!! tip "Exécutez-le deux fois"
     Une fois chez vous, dès réception de votre invitation, et une fois pendant la
@@ -36,7 +36,7 @@ une clé dispose aussi d'un chemin documenté fonctionnant sans clé.
 
 **De l'orange sur un point d'accès réseau** n'est pas davantage un échec. Les
 points bloqués sont fréquents sur les réseaux institutionnels, et chaque jeu de
-données est copié sur la clé USB distribuée au Jour 0.
+données est préparé à l'avance par l'équipe d'animation.
 
 **Du rouge sur le chargement des frontières** mérite d'être signalé. Cela signifie
 généralement que geoBoundaries ne publie pas le niveau demandé, ce qu'il est utile

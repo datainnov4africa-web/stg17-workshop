@@ -76,7 +76,7 @@ A label may follow the number, and the button shows it instead of the figure:
 
 A supplied .ipynb produces two things on the day page:
 
-  - a download button, which works immediately, offline, and from the USB key
+  - a download button, which works immediately and offline
   - a Colab badge, which opens the notebook in one click
 
 The Colab badge builds a URL into this repository on GitHub. It only resolves
