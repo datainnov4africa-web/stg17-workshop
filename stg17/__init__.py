@@ -19,7 +19,7 @@ Typical first two cells of any laboratory
 
 Modules
 -------
-    countries   the 55 African Union member states, VIIRS tiles, UTM zones
+    countries   the African Union member states, VIIRS tiles, UTM zones
     env         platform detection, dependency install, secrets, data root
     i18n        EN/FR runtime, shared glossary
     theme       the AfDB palette and the matplotlib style

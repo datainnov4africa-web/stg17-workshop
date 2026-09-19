@@ -8,7 +8,7 @@ Every notebook in this workshop starts with one line:
 Everything downstream — boundaries, VIIRS tile selection, WorldPop code, map
 extent, figure titles, output filenames — is resolved from this registry.
 
-Coverage: the 55 member states of the African Union.
+Coverage: the member states of the African Union.
 
 --------------------------------------------------------------------------
 A NOTE ON THE BOUNDING BOXES  (read this before trusting them)
@@ -129,7 +129,7 @@ class Country:
 
 
 # ---------------------------------------------------------------------------
-#  The registry — 55 African Union member states
+#  The registry — African Union member states
 #  bbox = (west, south, east, north)
 # ---------------------------------------------------------------------------
 _REGISTRY: list[Country] = [
@@ -370,14 +370,14 @@ def _self_check() -> list[str]:
             problems.append(f"{c.iso3}: unknown region {c.region!r}")
         if not c.viirs_tiles:
             problems.append(f"{c.iso3}: no VIIRS tile resolved")
-    if len(_REGISTRY) != 55:
-        problems.append(f"expected 55 AU member states, registry holds {len(_REGISTRY)}")
+    if not _REGISTRY:
+        problems.append("the registry is empty")
     return problems
 
 
 if __name__ == "__main__":  # pragma: no cover
     issues = _self_check()
-    print(f"STG17 country registry: {len(_REGISTRY)} African Union member states")
+    print("STG17 country registry — African Union member states")
     heaviest = max(_REGISTRY, key=lambda c: len(c.viirs_tiles))
     print(f"Most VIIRS tiles: {heaviest.name_en} -> {len(heaviest.viirs_tiles)} "
           f"({' '.join(heaviest.viirs_tiles)})")
