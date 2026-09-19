@@ -544,3 +544,35 @@ labs:
     fallback_en: The template can be published as-is and populated afterwards
     fallback_fr: Le gabarit peut être publié tel quel et rempli ensuite
     status: phase5
+
+# =============================================================================
+#  Breaks — agenda data, deliberately not sessions.
+#
+#  tools/import_agenda.py strips these rows out of the day tables (SKIP_TITLES)
+#  and notes "breaks are rendered by the site". That is right: a break must not
+#  acquire a placeholder deck and notebook from tools/downloads.py, nor a line
+#  in the Action-Plan mapping, nor a place in the session count.
+#
+#  They are still agenda facts, so they live here rather than as a literal
+#  inside one generator. The day pages, the week view and the downloadable PDF
+#  all read this key, so the three cannot disagree about when the coffee is.
+#
+#  A break earns its line only where it separates something — Day 5 closes at
+#  12:45, so neither lunch nor the 16:45 coffee prints after its closing
+#  ceremony. The renderers apply that rule; this file only states the facts.
+#
+#  Named in STG17_Workshop_Agenda_..._V18092026.docx, which schedules the 10:30
+#  coffee on all five days and the 16:45 coffee on Days 1 to 4. The lunch label
+#  is the site's own: the document leaves 12:30–14:00 unnamed, as it leaves the
+#  14:30–14:45 gap on Day 3 unnamed.
+# =============================================================================
+breaks:
+  "10:30–10:45":
+    en: Coffee break
+    fr: Pause café
+  "12:30–14:00":
+    en: Lunch
+    fr: Déjeuner
+  "16:45–17:00":
+    en: Coffee break
+    fr: Pause café

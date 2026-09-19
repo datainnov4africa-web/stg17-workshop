@@ -67,11 +67,43 @@ STATUS_LABEL = {
 # The breaks as the V16 document schedules them. Kept here rather than in the
 # agenda file because they are the same every day and carry no content; the
 # importer skips the "Coffee Break" rows for the same reason.
+#: Fallback only. The breaks belong to config/agenda.yml, so that the day
+#: pages, the week view and the downloadable PDF cannot drift apart about when
+#: the coffee is. This literal survives so that an agenda file without the key
+#: still renders a complete day rather than silently losing its breaks.
 BREAKS = {
     "10:30–10:45": ("Coffee break", "Pause café"),
     "12:30–14:00": ("Lunch", "Déjeuner"),
     "16:45–17:00": ("Coffee break", "Pause café"),
 }
+
+
+def breaks_of(agenda: dict) -> dict:
+    """The breaks as {span: (en, fr)}, taken from the agenda when it states them."""
+    declared = agenda.get("breaks") or {}
+    if not declared:
+        return BREAKS
+    return {span: (names.get("en", ""), names.get("fr", ""))
+            for span, names in declared.items()}
+
+
+def earned_breaks(sessions: list, breaks: dict) -> list:
+    """
+    The breaks that actually separate something in this run of sessions.
+
+    A break prints when some session starts at or after it ends, or when it
+    opens exactly as the last session closes — the 16:45 coffee that follows
+    the final laboratory. Day 5 closes at 12:45, so neither lunch nor that
+    coffee prints after its closing ceremony.
+
+    The same rule is applied in tools/build_agenda_pdf.py, which cannot import
+    this module. Change it in one place and change it in the other.
+    """
+    starts = [s["time"].split("–")[0] for s in sessions]
+    last_end = max((s["time"].split("–")[-1] for s in sessions), default="")
+    return [(span, names) for span, names in breaks.items()
+            if any(start >= span.split("–")[-1] for start in starts)
+            or span.split("–")[0] == last_end]
 
 GENERATED = {
     "en": "<!-- GENERATED from config/agenda.yml by tools/build_site.py. Do not edit. -->",
@@ -203,7 +235,8 @@ def colab_badges(session: dict, day: dict, lang: str, github: dict) -> str:
 # ---------------------------------------------------------------------------
 #  Day pages
 # ---------------------------------------------------------------------------
-def render_day(day: dict, labs: dict, lang: str, config: dict) -> str:
+def render_day(day: dict, labs: dict, lang: str, config: dict,
+               breaks: dict | None = None) -> str:
     fr = lang == "fr"
     github = config.get("github", {})
     lines = [GENERATED[lang], ""]
@@ -234,17 +267,12 @@ def render_day(day: dict, labs: dict, lang: str, config: dict) -> str:
         # it starts in — lunch at 12:30 closes the morning — and is printed in
         # sequence, so the reader can follow the day without reconstructing it.
         timeline = [(s["time"], "session", s) for s in block]
-        # A break earns its line only when it separates something. Day 5 closes
-        # at 12:45, so lunch must not print after the closing ceremony; the
-        # 16:45 coffee, which V16 schedules after the last session, must.
-        starts = [s["time"].split("–")[0] for s in block]
-        last_end = max((s["time"].split("–")[-1] for s in block), default="")
-        timeline += [
-            (span, "break", names) for span, names in BREAKS.items()
-            if (span < "13:00") == (block is morning)
-            and (any(start >= span.split("–")[-1] for start in starts)
-                 or span.split("–")[0] == last_end)
-        ]
+        # A break belongs to the half-day it opens in; whether it earns a line
+        # at all is decided by earned_breaks, which the week view and the PDF
+        # apply to the same data.
+        timeline += [(span, "break", names)
+                     for span, names in earned_breaks(block, breaks or BREAKS)
+                     if (span < "13:00") == (block is morning)]
 
         for start, kind, payload in sorted(timeline, key=lambda item: item[0]):
             if kind == "break":
@@ -415,7 +443,22 @@ def render_week(agenda: dict, labs: dict, lang: str, config: dict) -> str:
              "| Time | Session | Kind |"),
             "|---|---|---|",
         ]
-        for s in day["sessions"]:
+        # Sessions and breaks on one timeline, so the week view shows the shape
+        # of the day rather than a list with unexplained holes in it. A break
+        # carries no link — there is no session to jump to — and no icon: it
+        # has no mode, and an invented glyph is a glyph that may not exist.
+        pause_label = {"en": 0, "fr": 1}[lang]
+        frise = [(s["time"].split("–")[0], "s", s) for s in day["sessions"]]
+        frise += [(span.split("–")[0], "b", (span, names))
+                  for span, names in earned_breaks(day["sessions"],
+                                                   breaks_of(agenda))]
+        for _, genre, charge in sorted(frise, key=lambda item: item[0]):
+            if genre == "b":
+                span, names = charge
+                lines.append(f"| *{fmt_time(span, lang)}* | "
+                             f"*{names[pause_label]}* | |")
+                continue
+            s = charge
             mode = s.get("mode", "talk")
             kind = icon.get(mode, ":material-circle-small:")
             # The title carries the link, to the session itself on the day page,
@@ -854,7 +897,9 @@ def main() -> int:
         target = DOCS / f"day{day['n']}"
         target.mkdir(parents=True, exist_ok=True)
         for lang, name in (("en", "index.md"), ("fr", "index.fr.md")):
-            (target / name).write_text(render_day(day, labs, lang, config), encoding="utf-8")
+            (target / name).write_text(
+                render_day(day, labs, lang, config, breaks_of(agenda)),
+                encoding="utf-8")
             written += 1
 
     (DOCS / "week").mkdir(parents=True, exist_ok=True)

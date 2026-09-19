@@ -192,6 +192,12 @@ def styles(lang: str) -> dict:
                                 alignment=TA_JUSTIFY, fontName="Helvetica"),
         "tag": ParagraphStyle("tag", fontName="Helvetica-Bold", fontSize=7,
                               leading=10, textColor=GREEN, spaceBefore=2),
+        # Breaks read as a pause in the page, not as another session: italic,
+        # muted, no mode tag, no description.
+        "ptime": ParagraphStyle("ptime", fontName="Helvetica-Oblique", fontSize=8.2,
+                                leading=11, textColor=MUTED),
+        "pause": ParagraphStyle("pause", fontName="Helvetica-Oblique", fontSize=8.2,
+                                leading=11, textColor=MUTED),
         "foot": ParagraphStyle("foot", fontSize=7.4, leading=10, textColor=MUTED,
                                fontName="Helvetica"),
     }
@@ -360,8 +366,31 @@ def day_block(day: dict, agenda: dict, lang: str, st: dict) -> list:
         ("TOPPADDING", (0, 1), (0, 1), 0), ("BOTTOMPADDING", (0, 1), (0, 1), 7),
     ]))
 
+    # Sessions and breaks on one timeline. Printing the sessions alone leaves
+    # unexplained holes — ninety minutes between 12:30 and 14:00 — in a document
+    # people read to know where to be. The rule for which breaks earn a line is
+    # the one in tools/build_site.py: change it there and change it here.
+    declared = agenda.get("breaks") or {}
+    starts = [s["time"].split("–")[0] for s in day["sessions"]]
+    last_end = max((s["time"].split("–")[-1] for s in day["sessions"]), default="")
+    pauses = [(span, names) for span, names in declared.items()
+              if any(start >= span.split("–")[-1] for start in starts)
+              or span.split("–")[0] == last_end]
+
+    frise = [(s["time"].split("–")[0], "s", s) for s in day["sessions"]]
+    frise += [(span.split("–")[0], "b", (span, names)) for span, names in pauses]
+
     rows = [[Paragraph(S["time"], st["th"]), Paragraph(S["session"], st["th"])]]
-    for s in day["sessions"]:
+    lignes_pause: list[int] = []
+    for _, genre, charge in sorted(frise, key=lambda item: item[0]):
+        if genre == "b":
+            span, names = charge
+            libelle = names.get(lang) or names.get("en") or ""
+            lignes_pause.append(len(rows))
+            rows.append([Paragraph(fmt_time(span, lang), st["ptime"]),
+                         Paragraph(escape(libelle), st["pause"])])
+            continue
+        s = charge
         cell = [Paragraph(pick(s, "title", lang), st["stitle"])]
         desc = pick(s, "desc", lang)
         if desc:
