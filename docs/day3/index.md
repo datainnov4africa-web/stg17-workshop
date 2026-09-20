@@ -53,6 +53,10 @@ Fundamentals — ingestion, storage (data lake and lakehouse), distributed proce
 
 Index the Ookla tiles in a pre-provisioned Elasticsearch cluster; understand the mapping and the geo_shape type; run the first aggregation and geospatial queries.
 
+[:material-microsoft-powerpoint: PPTX · EN](../downloads/Day3/1445_hands-on-part-1_EN.pptx){ .md-button } [:material-microsoft-powerpoint: PPTX · FR](../downloads/Day3/1445_hands-on-part-1_FR.pptx){ .md-button } [:material-notebook-outline: IPYNB · EN](../downloads/Day3/1445_hands-on-part-1_EN.ipynb){ .md-button } [:material-notebook-outline: IPYNB · FR](../downloads/Day3/1445_hands-on-part-1_FR.ipynb){ .md-button }
+
+[![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/datainnov4africa-web/stg17-workshop/blob/main/docs/downloads/Day3/1445_hands-on-part-1_EN.ipynb) **EN** &nbsp; [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/datainnov4africa-web/stg17-workshop/blob/main/docs/downloads/Day3/1445_hands-on-part-1_FR.ipynb) **FR**
+
 !!! example "Laboratory — Elasticsearch"
 
     **Deliverable:** Five saved queries and a timing comparison against the morning's pandas approach
