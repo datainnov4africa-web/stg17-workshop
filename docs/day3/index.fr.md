@@ -53,7 +53,7 @@ Fondamentaux — ingestion, stockage (lac de données et lakehouse), traitement 
 
 Indexer les tuiles Ookla dans un cluster Elasticsearch pré-provisionné ; comprendre le mapping et le type geo_shape ; exécuter les premières agrégations et requêtes géospatiales.
 
-[:material-microsoft-powerpoint: PPTX · EN](../downloads/Day3/1445_hands-on-part-1_EN.pptx){ .md-button } [:material-microsoft-powerpoint: PPTX · FR](../downloads/Day3/1445_hands-on-part-1_FR.pptx){ .md-button } [:material-notebook-outline: IPYNB · EN](../downloads/Day3/1445_hands-on-part-1_EN.ipynb){ .md-button } [:material-notebook-outline: IPYNB · FR](../downloads/Day3/1445_hands-on-part-1_FR.ipynb){ .md-button }
+[:material-file-pdf-box: PDF · EN](../downloads/Day3/1445_hands-on-part-1_EN.pdf){ .md-button } [:material-file-pdf-box: PDF · FR](../downloads/Day3/1445_hands-on-part-1_FR.pdf){ .md-button } [:material-microsoft-powerpoint: PPTX · EN](../downloads/Day3/1445_hands-on-part-1_EN.pptx){ .md-button } [:material-microsoft-powerpoint: PPTX · FR](../downloads/Day3/1445_hands-on-part-1_FR.pptx){ .md-button } [:material-notebook-outline: IPYNB · EN](../downloads/Day3/1445_hands-on-part-1_EN.ipynb){ .md-button } [:material-notebook-outline: IPYNB · FR](../downloads/Day3/1445_hands-on-part-1_FR.ipynb){ .md-button }
 
 [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/datainnov4africa-web/stg17-workshop/blob/main/docs/downloads/Day3/1445_hands-on-part-1_EN.ipynb) **EN** &nbsp; [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/datainnov4africa-web/stg17-workshop/blob/main/docs/downloads/Day3/1445_hands-on-part-1_FR.ipynb) **FR**
 

@@ -21,6 +21,10 @@ Concepts and utility, kept deliberately short so the day is spent in the data �
 
 Access NTL rasters (NASA Earthdata, EOG or Google Earth Engine); understand the file structure, bands and quality flags; clip to the national extent and save a working subset.
 
+[:material-notebook-outline: IPYNB · EN](../downloads/Day4/0930_hands-on-part-1_EN.ipynb){ .md-button } [:material-notebook-outline: IPYNB · FR](../downloads/Day4/0930_hands-on-part-1_FR.ipynb){ .md-button }
+
+[![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/datainnov4africa-web/stg17-workshop/blob/main/docs/downloads/Day4/0930_hands-on-part-1_EN.ipynb) **EN** &nbsp; [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/datainnov4africa-web/stg17-workshop/blob/main/docs/downloads/Day4/0930_hands-on-part-1_FR.ipynb) **FR**
+
 !!! example "Laboratory — NTL collect and explore"
 
     **Deliverable:** A documented national raster subset and an inventory of the artefacts present in that country
@@ -35,6 +39,10 @@ Access NTL rasters (NASA Earthdata, EOG or Google Earth Engine); understand the 
 :material-flask: **Laboratory** &nbsp;·&nbsp; Action Plan 4.2.1 · 2.1.1
 
 Visualise and interrogate the raster before computing on it — distribution of radiance values, effect of the cloud and quality masks, month-to-month variation. Teams deliberately hunt for the artefacts named in the morning talk (blooming around cities, saturation, gas flares, seasonality, sensor discontinuity, rural low-light noise) and document which ones are present in their own country. Closes with a short round of comparisons across teams.
+
+[:material-notebook-outline: IPYNB · EN](../downloads/Day4/1045_hands-on-part-2_EN.ipynb){ .md-button } [:material-notebook-outline: IPYNB · FR](../downloads/Day4/1045_hands-on-part-2_FR.ipynb){ .md-button }
+
+[![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/datainnov4africa-web/stg17-workshop/blob/main/docs/downloads/Day4/1045_hands-on-part-2_EN.ipynb) **EN** &nbsp; [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/datainnov4africa-web/stg17-workshop/blob/main/docs/downloads/Day4/1045_hands-on-part-2_FR.ipynb) **FR**
 
 !!! example "Laboratory — NTL explore and understand"
 
