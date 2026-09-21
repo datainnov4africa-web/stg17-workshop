@@ -427,10 +427,6 @@ def render_week(agenda: dict, labs: dict, lang: str, config: dict) -> str:
     if card:
         lines += [card, ""]
 
-    icon = {"talk": ":material-presentation:", "lab": ":material-flask:",
-            "benchmark": ":material-speedometer:", "panel": ":material-account-group:",
-            "ceremony": ":material-star:", "wrap": ":material-flag-checkered:"}
-
     for day in agenda["days"]:
         n = day["n"]
         lines += [
@@ -460,7 +456,13 @@ def render_week(agenda: dict, labs: dict, lang: str, config: dict) -> str:
                 continue
             s = charge
             mode = s.get("mode", "talk")
-            kind = icon.get(mode, ":material-circle-small:")
+            # MODE_ICON, not a second table: the private one this replaced
+            # covered six modes, two of which (`panel`, `wrap`) no longer exist,
+            # and omitted three that do — so `talk_lab`, `plenary` and
+            # `facilitated` fell through to the dot on seven of twenty-seven
+            # rows while the day pages showed them a proper glyph. One table
+            # means a mode added to the agenda cannot render here and not there.
+            kind = MODE_ICON.get(mode, ":material-circle-small:")
             # The title carries the link, to the session itself on the day page,
             # where its slides, its notebook and its laboratory note already sit.
             # The fourth column this replaces held links to #deck-01..#deck-11,

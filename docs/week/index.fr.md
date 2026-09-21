@@ -19,13 +19,13 @@ Les cinq jours séance par séance, avec les horaires, les laboratoires et les l
 
 | Heure | Séance | Type |
 |---|---|---|
-| 09h00–09h15 | [Cérémonie d'ouverture](../day1/index.md#09h0009h15-ceremonie-douverture) | :material-star: |
+| 09h00–09h15 | [Cérémonie d'ouverture](../day1/index.md#09h0009h15-ceremonie-douverture) | :material-account-group: |
 | 09h15–09h35 | [Data Innovation for Africa (DI4A) à la BAD : mission, portefeuille actuel et prochaines étapes](../day1/index.md#09h1509h35-data-innovation-for-africa-di4a-a-la-bad-mission-portefeuille-actuel-et-prochaines-etapes) | :material-presentation: |
 | 09h35–10h05 | [Le Hub régional des Nations Unies pour les mégadonnées au Rwanda : jalons et cas d'usage](../day1/index.md#09h3510h05-le-hub-regional-des-nations-unies-pour-les-megadonnees-au-rwanda-jalons-et-cas-dusage) | :material-presentation: |
 | 10h05–10h30 | [L'arbre généalogique de l'IA : comment les concepts s'articulent](../day1/index.md#10h0510h30-larbre-genealogique-de-lia-comment-les-concepts-sarticulent) | :material-presentation: |
 | *10h30–10h45* | *Pause café* | |
-| 10h45–11h45 | [Expériences des pays en IA et en usage des mégadonnées non traditionnelles](../day1/index.md#10h4511h45-experiences-des-pays-en-ia-et-en-usage-des-megadonnees-non-traditionnelles) | :material-circle-small: |
-| 11h45–12h30 | [Synthèse : où en est le continent](../day1/index.md#11h4512h30-synthese-ou-en-est-le-continent) | :material-circle-small: |
+| 10h45–11h45 | [Expériences des pays en IA et en usage des mégadonnées non traditionnelles](../day1/index.md#10h4511h45-experiences-des-pays-en-ia-et-en-usage-des-megadonnees-non-traditionnelles) | :material-forum: |
+| 11h45–12h30 | [Synthèse : où en est le continent](../day1/index.md#11h4512h30-synthese-ou-en-est-le-continent) | :material-lightbulb-on: |
 | *12h30–14h00* | *Déjeuner* | |
 | 14h00–14h30 | [Infrastructure de l'IA : ce qu'exige réellement l'exploitation de l'IA dans un office statistique](../day1/index.md#14h0014h30-infrastructure-de-lia-ce-quexige-reellement-lexploitation-de-lia-dans-un-office-statistique) | :material-presentation: |
 | 14h30–15h30 | [Atelier partie 1 — Génération augmentée par récupération (RAG)](../day1/index.md#14h3015h30-atelier-partie-1-generation-augmentee-par-recuperation-rag) | :material-flask: |
@@ -38,11 +38,11 @@ Les cinq jours séance par séance, avec les horaires, les laboratoires et les l
 
 | Heure | Séance | Type |
 |---|---|---|
-| 09h00–10h30 | [Parler aux machines : l'art de l'ingénierie de prompt](../day2/index.md#09h0010h30-parler-aux-machines-lart-de-lingenierie-de-prompt) | :material-circle-small: |
+| 09h00–10h30 | [Parler aux machines : l'art de l'ingénierie de prompt](../day2/index.md#09h0010h30-parler-aux-machines-lart-de-lingenierie-de-prompt) | :material-presentation-play: |
 | *10h30–10h45* | *Pause café* | |
 | 10h45–12h30 | [Atelier — Du document statistique au tableau de bord public](../day2/index.md#10h4512h30-atelier-du-document-statistique-au-tableau-de-bord-public) | :material-flask: |
 | *12h30–14h00* | *Déjeuner* | |
-| 14h00–14h45 | [De bon à excellent : optimisation des prompts](../day2/index.md#14h0014h45-de-bon-a-excellent-optimisation-des-prompts) | :material-circle-small: |
+| 14h00–14h45 | [De bon à excellent : optimisation des prompts](../day2/index.md#14h0014h45-de-bon-a-excellent-optimisation-des-prompts) | :material-presentation-play: |
 | 14h45–15h30 | [Choisir son moteur : vitesse, coût et souveraineté — travailler avec Groq](../day2/index.md#14h4515h30-choisir-son-moteur-vitesse-cout-et-souverainete-travailler-avec-groq) | :material-speedometer: |
 | 15h30–16h45 | [Atelier — Un modèle, plusieurs métiers : une boîte à outils LLM pour statisticiens](../day2/index.md#15h3016h45-atelier-un-modele-plusieurs-metiers-une-boite-a-outils-llm-pour-statisticiens) | :material-flask: |
 | *16h45–17h00* | *Pause café* | |
@@ -53,7 +53,7 @@ Les cinq jours séance par séance, avec les horaires, les laboratoires et les l
 
 | Heure | Séance | Type |
 |---|---|---|
-| 09h00–10h30 | [Sources de données non traditionnelles : le trésor caché](../day3/index.md#09h0010h30-sources-de-donnees-non-traditionnelles-le-tresor-cache) | :material-circle-small: |
+| 09h00–10h30 | [Sources de données non traditionnelles : le trésor caché](../day3/index.md#09h0010h30-sources-de-donnees-non-traditionnelles-le-tresor-cache) | :material-presentation-play: |
 | *10h30–10h45* | *Pause café* | |
 | 10h45–12h30 | [Atelier — Données ouvertes Ookla Speedtest et WorldPop](../day3/index.md#10h4512h30-atelier-donnees-ouvertes-ookla-speedtest-et-worldpop) | :material-flask: |
 | *12h30–14h00* | *Déjeuner* | |
@@ -84,9 +84,9 @@ Les cinq jours séance par séance, avec les horaires, les laboratoires et les l
 |---|---|---|
 | 09h00–10h30 | [Aider les pays à publier leurs travaux](../day5/index.md#09h0010h30-aider-les-pays-a-publier-leurs-travaux) | :material-flask: |
 | *10h30–10h45* | *Pause café* | |
-| 10h45–12h15 | [Présentations des pays](../day5/index.md#10h4512h15-presentations-des-pays) | :material-circle-small: |
-| 12h15–12h30 | [Enseignements clés et voie à suivre](../day5/index.md#12h1512h30-enseignements-cles-et-voie-a-suivre) | :material-circle-small: |
-| 12h30–12h45 | [Cérémonie de clôture](../day5/index.md#12h3012h45-ceremonie-de-cloture) | :material-star: |
+| 10h45–12h15 | [Présentations des pays](../day5/index.md#10h4512h15-presentations-des-pays) | :material-forum: |
+| 12h15–12h30 | [Enseignements clés et voie à suivre](../day5/index.md#12h1512h30-enseignements-cles-et-voie-a-suivre) | :material-forum: |
+| 12h30–12h45 | [Cérémonie de clôture](../day5/index.md#12h3012h45-ceremonie-de-cloture) | :material-account-group: |
 
 ---
 

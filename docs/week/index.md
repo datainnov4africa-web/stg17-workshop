@@ -19,13 +19,13 @@ All five days session by session, with times, laboratories and deliverables — 
 
 | Time | Session | Kind |
 |---|---|---|
-| 09:00–09:15 | [Opening ceremony](../day1/index.md#09000915-opening-ceremony) | :material-star: |
+| 09:00–09:15 | [Opening ceremony](../day1/index.md#09000915-opening-ceremony) | :material-account-group: |
 | 09:15–09:35 | [The AfDB Data Innovation for Africa (DI4A): Mission, current portfolio and upcoming milestones](../day1/index.md#09150935-the-afdb-data-innovation-for-africa-di4a-mission-current-portfolio-and-upcoming-milestones) | :material-presentation: |
 | 09:35–10:05 | [The UN Big Data Regional Hub in Rwanda: milestones and use cases](../day1/index.md#09351005-the-un-big-data-regional-hub-in-rwanda-milestones-and-use-cases) | :material-presentation: |
 | 10:05–10:30 | [The AI Family Tree: How the concepts fit together](../day1/index.md#10051030-the-ai-family-tree-how-the-concepts-fit-together) | :material-presentation: |
 | *10:30–10:45* | *Coffee break* | |
-| 10:45–11:45 | [Country experiences in AI and the use of non-traditional big data](../day1/index.md#10451145-country-experiences-in-ai-and-the-use-of-non-traditional-big-data) | :material-circle-small: |
-| 11:45–12:30 | [Synthesis: where the continent stands](../day1/index.md#11451230-synthesis-where-the-continent-stands) | :material-circle-small: |
+| 10:45–11:45 | [Country experiences in AI and the use of non-traditional big data](../day1/index.md#10451145-country-experiences-in-ai-and-the-use-of-non-traditional-big-data) | :material-forum: |
+| 11:45–12:30 | [Synthesis: where the continent stands](../day1/index.md#11451230-synthesis-where-the-continent-stands) | :material-lightbulb-on: |
 | *12:30–14:00* | *Lunch* | |
 | 14:00–14:30 | [AI Infrastructure: What it really takes to run AI in a Statistical Office](../day1/index.md#14001430-ai-infrastructure-what-it-really-takes-to-run-ai-in-a-statistical-office) | :material-presentation: |
 | 14:30–15:30 | [Hands-on part 1 — Retrieval-Augmented Generation](../day1/index.md#14301530-hands-on-part-1-retrieval-augmented-generation) | :material-flask: |
@@ -38,11 +38,11 @@ All five days session by session, with times, laboratories and deliverables — 
 
 | Time | Session | Kind |
 |---|---|---|
-| 09:00–10:30 | [Talking to Machines: The Craft of Prompt Engineering](../day2/index.md#09001030-talking-to-machines-the-craft-of-prompt-engineering) | :material-circle-small: |
+| 09:00–10:30 | [Talking to Machines: The Craft of Prompt Engineering](../day2/index.md#09001030-talking-to-machines-the-craft-of-prompt-engineering) | :material-presentation-play: |
 | *10:30–10:45* | *Coffee break* | |
 | 10:45–12:30 | [Hands-on — From Statistical Document to Public Dashboard](../day2/index.md#10451230-hands-on-from-statistical-document-to-public-dashboard) | :material-flask: |
 | *12:30–14:00* | *Lunch* | |
-| 14:00–14:45 | [From Good to Great: Prompt Optimisation](../day2/index.md#14001445-from-good-to-great-prompt-optimisation) | :material-circle-small: |
+| 14:00–14:45 | [From Good to Great: Prompt Optimisation](../day2/index.md#14001445-from-good-to-great-prompt-optimisation) | :material-presentation-play: |
 | 14:45–15:30 | [Choosing your engine: speed, cost and sovereignty — working with Groq](../day2/index.md#14451530-choosing-your-engine-speed-cost-and-sovereignty-working-with-groq) | :material-speedometer: |
 | 15:30–16:45 | [Hands-on — One Model, Many Jobs: an LLM Toolkit for Statisticians](../day2/index.md#15301645-hands-on-one-model-many-jobs-an-llm-toolkit-for-statisticians) | :material-flask: |
 | *16:45–17:00* | *Coffee break* | |
@@ -53,7 +53,7 @@ All five days session by session, with times, laboratories and deliverables — 
 
 | Time | Session | Kind |
 |---|---|---|
-| 09:00–10:30 | [Non-Traditional Data Sources: The Hidden Treasure](../day3/index.md#09001030-non-traditional-data-sources-the-hidden-treasure) | :material-circle-small: |
+| 09:00–10:30 | [Non-Traditional Data Sources: The Hidden Treasure](../day3/index.md#09001030-non-traditional-data-sources-the-hidden-treasure) | :material-presentation-play: |
 | *10:30–10:45* | *Coffee break* | |
 | 10:45–12:30 | [Hands-on — Ookla Speedtest Open Data and WorldPop](../day3/index.md#10451230-hands-on-ookla-speedtest-open-data-and-worldpop) | :material-flask: |
 | *12:30–14:00* | *Lunch* | |
@@ -84,9 +84,9 @@ All five days session by session, with times, laboratories and deliverables — 
 |---|---|---|
 | 09:00–10:30 | [Assisting countries in publishing their work](../day5/index.md#09001030-assisting-countries-in-publishing-their-work) | :material-flask: |
 | *10:30–10:45* | *Coffee break* | |
-| 10:45–12:15 | [Country presentations](../day5/index.md#10451215-country-presentations) | :material-circle-small: |
-| 12:15–12:30 | [Key takeaways and way forward](../day5/index.md#12151230-key-takeaways-and-way-forward) | :material-circle-small: |
-| 12:30–12:45 | [Closing ceremony](../day5/index.md#12301245-closing-ceremony) | :material-star: |
+| 10:45–12:15 | [Country presentations](../day5/index.md#10451215-country-presentations) | :material-forum: |
+| 12:15–12:30 | [Key takeaways and way forward](../day5/index.md#12151230-key-takeaways-and-way-forward) | :material-forum: |
+| 12:30–12:45 | [Closing ceremony](../day5/index.md#12301245-closing-ceremony) | :material-account-group: |
 
 ---
 
