@@ -61,6 +61,10 @@ Visualise and interrogate the raster before computing on it — distribution of 
 
 Compute zonal statistics by administrative level (sum of radiance, mean radiance, lit area); build annual and monthly time series; detect change between two periods; map and visualise the results. Then validate the NTL proxy by correlating it with official subnational statistics (population, electrification rate) and decide, with evidence, whether it is usable for dissemination in your country or remains a diagnostic tool only. Document the limitations explicitly; this statement is part of the deliverable. The resulting maps, charts and limitations statement can be published as a public website via GitHub Pages.
 
+[:material-microsoft-powerpoint: PPTX · EN · Earth Engine](../downloads/Day4/1400_hands-on-part-3_EN-Earth-Engine.pptx){ .md-button } [:material-microsoft-powerpoint: PPTX · FR · Earth Engine](../downloads/Day4/1400_hands-on-part-3_FR-Earth-Engine.pptx){ .md-button } [:material-notebook-outline: IPYNB · EN](../downloads/Day4/1400_hands-on-part-3_EN.ipynb){ .md-button } [:material-notebook-outline: IPYNB · FR](../downloads/Day4/1400_hands-on-part-3_FR.ipynb){ .md-button }
+
+[![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/datainnov4africa-web/stg17-workshop/blob/main/docs/downloads/Day4/1400_hands-on-part-3_EN.ipynb) **EN** &nbsp; [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/datainnov4africa-web/stg17-workshop/blob/main/docs/downloads/Day4/1400_hands-on-part-3_FR.ipynb) **FR**
+
 !!! example "Laboratory — NTL analysis and validation"
 
     **Deliverable:** Zonal statistics table, time series, change detection between two periods and the maps; correlation against the official indicator, and a written limitations statement

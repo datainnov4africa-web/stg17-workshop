@@ -61,6 +61,10 @@ Visualiser et interroger le raster avant de calculer dessus — distribution des
 
 Calculer les statistiques zonales par niveau administratif (somme de radiance, radiance moyenne, superficie éclairée) ; construire des séries temporelles annuelles et mensuelles ; détecter le changement entre deux périodes ; cartographier et visualiser les résultats. Valider ensuite l'indicateur indirect NTL en le corrélant avec des statistiques infranationales officielles (population, taux d'électrification) et décider, preuves à l'appui, s'il est utilisable pour la diffusion dans votre pays ou s'il reste un simple outil de diagnostic. Documenter explicitement les limites ; cette déclaration fait partie du livrable. Les cartes, graphiques et la déclaration de limites qui en résultent peuvent être publiés en site public via GitHub Pages.
 
+[:material-microsoft-powerpoint: PPTX · EN · Earth Engine](../downloads/Day4/1400_hands-on-part-3_EN-Earth-Engine.pptx){ .md-button } [:material-microsoft-powerpoint: PPTX · FR · Earth Engine](../downloads/Day4/1400_hands-on-part-3_FR-Earth-Engine.pptx){ .md-button } [:material-notebook-outline: IPYNB · EN](../downloads/Day4/1400_hands-on-part-3_EN.ipynb){ .md-button } [:material-notebook-outline: IPYNB · FR](../downloads/Day4/1400_hands-on-part-3_FR.ipynb){ .md-button }
+
+[![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/datainnov4africa-web/stg17-workshop/blob/main/docs/downloads/Day4/1400_hands-on-part-3_EN.ipynb) **EN** &nbsp; [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/datainnov4africa-web/stg17-workshop/blob/main/docs/downloads/Day4/1400_hands-on-part-3_FR.ipynb) **FR**
+
 !!! example "Laboratoire — NTL analyse et validation"
 
     **Livrable :** Tableau de statistiques zonales, séries temporelles, détection de changement entre deux périodes et les cartes ; corrélation avec l'indicateur officiel, et une déclaration écrite des limites
