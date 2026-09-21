@@ -11,7 +11,7 @@ hide:
 <span class="di4a-name">Data Innovation<br>for Africa</span>
 </div>
 
-<div class="di4a-parent">African Information Highway · African Development Bank</div>
+<div class="di4a-parent">Africa Information Highway · African Development Bank</div>
 
 # Emerging Issues, Emerging Practice
 
