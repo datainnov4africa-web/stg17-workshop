@@ -13,11 +13,11 @@
 Welcome and opening remarks by the African Development Bank, AU STATAFRIC, and NISR. Objectives of the week, presentation of the STG17 Action Plan 2025–2030 and of where this workshop sits within it. Tour de table.
 
 
-### 09:15–09:35 &nbsp;·&nbsp; The AfDB Data Innovation for Africa (DI4A): mission, current portfolio and upcoming milestones
+### 09:15–09:35 &nbsp;·&nbsp; The AfDB Data Innovation for Africa (DI4A): Mission, current portfolio and upcoming milestones
 
 :material-presentation: **Talk** &nbsp;·&nbsp; *AfDB*
 
-Why the Bank set up DI4A, what the current portfolio funds, and the milestones ahead. The initiative sits within the African Information Highway and is the Bank's vehicle for data innovation with African statistical offices.
+Why the Bank set up DI4A, what the current portfolio funds, and the milestones ahead — including what national statistical offices can expect to draw on over the next two years.
 
 
 ### 09:35–10:05 &nbsp;·&nbsp; The UN Big Data Regional Hub in Rwanda: milestones and use cases

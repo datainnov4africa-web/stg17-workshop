@@ -20,7 +20,7 @@ All five days session by session, with times, laboratories and deliverables — 
 | Time | Session | Kind |
 |---|---|---|
 | 09:00–09:15 | [Opening ceremony](../day1/index.md#09000915-opening-ceremony) | :material-star: |
-| 09:15–09:35 | [The AfDB Data Innovation for Africa (DI4A): mission, current portfolio and upcoming milestones](../day1/index.md#09150935-the-afdb-data-innovation-for-africa-di4a-mission-current-portfolio-and-upcoming-milestones) | :material-presentation: |
+| 09:15–09:35 | [The AfDB Data Innovation for Africa (DI4A): Mission, current portfolio and upcoming milestones](../day1/index.md#09150935-the-afdb-data-innovation-for-africa-di4a-mission-current-portfolio-and-upcoming-milestones) | :material-presentation: |
 | 09:35–10:05 | [The UN Big Data Regional Hub in Rwanda: milestones and use cases](../day1/index.md#09351005-the-un-big-data-regional-hub-in-rwanda-milestones-and-use-cases) | :material-presentation: |
 | 10:05–10:30 | [The AI Family Tree: How the concepts fit together](../day1/index.md#10051030-the-ai-family-tree-how-the-concepts-fit-together) | :material-presentation: |
 | *10:30–10:45* | *Coffee break* | |

@@ -50,6 +50,12 @@ MODE_MAP = {
     "ceremony": ("ceremony", None),
     "talk": ("talk", None),
     "talk (nisr)": ("talk", "NISR"),
+    # V21 introduced "Talk (AfDB)" on the DI4A session. Without this line the
+    # importer files it as a plain talk and drops the presenter; it survived the
+    # V21 import only because merge() carries `presenter` across by title — a
+    # rescue that fails the moment a title changes, which V21 did to that very
+    # session's capitalisation.
+    "talk (afdb)": ("talk", "AfDB"),
     "talk & laboratory": ("talk_lab", None),
     "laboratory": ("lab", None),
     "plenary · countries": ("plenary", None),
