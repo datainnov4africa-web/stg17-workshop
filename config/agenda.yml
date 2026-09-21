@@ -6,8 +6,13 @@
 #  the Action-Plan mapping table. Edit the agenda here and the site follows —
 #  there is no second copy to forget.
 #
-#  Imported from: STG17_Workshop_Agenda_Emerging_Issues_Emerging_Practice_V16092026.docx
+#  Imported from: STG17_Workshop_Agenda_Emerging_Issues_Emerging_Practice_V21092026.docx
 #  Re-run `python tools/import_agenda.py` after editing that document.
+#
+#  For a small change, hand-edit both languages instead: merge() carries
+#  `desc_fr` across by title match and its `untranslated` report fires only on
+#  *missing* French, never on French that has gone stale against a rewritten
+#  English. The V21 alignment was done by hand for exactly that reason.
 
 days:
 - n: 1

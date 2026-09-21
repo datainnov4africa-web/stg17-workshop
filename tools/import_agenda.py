@@ -233,7 +233,11 @@ def write_agenda(days: list[dict], source: Path) -> None:
     end = text.index("\nlabs:") + 1
 
     header = text[:start]
-    header = re.sub(r"#  Transcribed from:.*?\n(#.*?\n)*",
+    # Both spellings: the file says "Imported from:", which is what this very
+    # function writes, but the pattern only looked for "Transcribed from:". It
+    # therefore never matched, re.sub left the header untouched, and the
+    # provenance line sat at V16 through later imports without anyone noticing.
+    header = re.sub(r"#  (?:Transcribed|Imported) from:.*?\n(#.*?\n)*",
                     f"#  Imported from: {source.name}\n"
                     f"#  Re-run `python tools/import_agenda.py` after editing that document.\n",
                     header, count=1, flags=re.S)
