@@ -20,8 +20,11 @@ site_url: https://datainnov4africa-web.github.io/stg17-workshop/
 repo_url: https://github.com/datainnov4africa-web/stg17-workshop
 repo_name: datainnov4africa-web/stg17-workshop
 edit_uri: edit/main/docs/
+# One declaration, no French override: mkdocs-static-i18n overrides site_name,
+# site_description and nav_translations for the fr build but not this, so both
+# languages render the same footer.
 copyright: >-
-  © African Development Bank and African Union STATAFRIC ·
+  © Data Innovation for Africa - AfDB ·
   Content CC BY 4.0 · Code MIT
 
 theme:
