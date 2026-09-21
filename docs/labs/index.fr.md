@@ -2,7 +2,7 @@
 
 # Les laboratoires
 
-13 laboratoires portent la semaine. Chacun est décrit ci-dessous avec l'environnement qu'il exige, la production que l'équipe doit livrer, et le chemin de repli appliqué quand quelque chose casse — ce qui arrivera.
+12 laboratoires portent la semaine. Chacun est décrit ci-dessous avec l'environnement qu'il exige, la production que l'équipe doit livrer, et le chemin de repli appliqué quand quelque chose casse — ce qui arrivera.
 
 Les supports et le carnet d'un laboratoire ne sont pas sur cette page : ils sont sur la page du jour, à côté de la séance qui le porte. Chaque laboratoire ci-dessous y renvoie.
 
@@ -114,25 +114,15 @@ Les supports et le carnet d'un laboratoire ne sont pas sur cette page : ils sont
 
 **En cas de panne** — Le pays de référence (Côte d'Ivoire) est préparé de bout en bout
 
-### NTL analyse
+### NTL analyse et validation
 
-:material-calendar-clock: **Jour 4 · 14h00–15h30** &nbsp;·&nbsp; en équipes &nbsp;·&nbsp; [voir la séance](../day4/index.md#14h0015h30-atelier-partie-3-analyse)
+:material-calendar-clock: **Jour 4 · 14h00–16h45** &nbsp;·&nbsp; en équipes &nbsp;·&nbsp; [voir la séance](../day4/index.md#14h0016h45-atelier-partie-3-analyse-et-validation-ntl)
 
-**Environnement et données** — rasterstats ou exactextract ; le panel produit le matin
+**Environnement et données** — rasterstats ou exactextract ; le panel produit le matin ; l'indicateur infranational officiel apporté par l'équipe
 
-**Ce que produit l’équipe** — Tableau de statistiques zonales, séries temporelles, détection de changement entre deux périodes, et les cartes
+**Ce que produit l’équipe** — Tableau de statistiques zonales, séries temporelles, détection de changement entre deux périodes et les cartes ; corrélation avec l'indicateur officiel, et une déclaration écrite des limites
 
-**En cas de panne** — Un pays de référence est préparé de bout en bout et remis à toute équipe dont les données nationales s'avèrent incomplètes
-
-### NTL validation
-
-:material-calendar-clock: **Jour 4 · 15h30–16h30** &nbsp;·&nbsp; en équipes &nbsp;·&nbsp; [voir la séance](../day4/index.md#15h3016h30-atelier-partie-4-validation)
-
-**Environnement et données** — L'indicateur infranational officiel apporté par l'équipe
-
-**Ce que produit l’équipe** — Corrélation avec l'indicateur officiel, et une déclaration écrite des limites
-
-**En cas de panne** — Un indicateur officiel de référence est fourni pour le pays de référence
+**En cas de panne** — Un pays de référence est préparé de bout en bout et remis à toute équipe dont les données nationales s'avèrent incomplètes, avec un indicateur officiel de référence fourni pour ce pays
 
 ## Jour 5
 

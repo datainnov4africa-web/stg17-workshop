@@ -55,37 +55,17 @@ Visualiser et interroger le raster avant de calculer dessus — distribution des
 
 ## Après-midi · 14h00 – 17h00
 
-### 14h00–15h30 &nbsp;·&nbsp; Atelier partie 3 — Analyse
+### 14h00–16h45 &nbsp;·&nbsp; Atelier partie 3 — Analyse et validation NTL
 
-:material-flask: **Laboratoire** &nbsp;·&nbsp; Plan d’action 4.2.1 · 2.1.1
+:material-flask: **Laboratoire** &nbsp;·&nbsp; Plan d’action 4.2.1 · 2.1.1 · 4.3 · 3.1.1
 
-Statistiques zonales par niveau administratif (somme de radiance, radiance moyenne, superficie éclairée) ; séries temporelles annuelles et mensuelles ; détection de changement entre deux périodes ; cartographie et visualisation des résultats.
+Calculer les statistiques zonales par niveau administratif (somme de radiance, radiance moyenne, superficie éclairée) ; construire des séries temporelles annuelles et mensuelles ; détecter le changement entre deux périodes ; cartographier et visualiser les résultats. Valider ensuite l'indicateur indirect NTL en le corrélant avec des statistiques infranationales officielles (population, taux d'électrification) et décider, preuves à l'appui, s'il est utilisable pour la diffusion dans votre pays ou s'il reste un simple outil de diagnostic. Documenter explicitement les limites ; cette déclaration fait partie du livrable. Les cartes, graphiques et la déclaration de limites qui en résultent peuvent être publiés en site public via GitHub Pages.
 
-!!! example "Laboratoire — NTL analyse"
+!!! example "Laboratoire — NTL analyse et validation"
 
-    **Livrable :** Tableau de statistiques zonales, séries temporelles, détection de changement entre deux périodes, et les cartes
+    **Livrable :** Tableau de statistiques zonales, séries temporelles, détection de changement entre deux périodes et les cartes ; corrélation avec l'indicateur officiel, et une déclaration écrite des limites
 
-    **Repli :** Un pays de référence est préparé de bout en bout et remis à toute équipe dont les données nationales s'avèrent incomplètes
-
-
-### 15h30–16h30 &nbsp;·&nbsp; Atelier partie 4 — Validation
-
-:material-flask: **Laboratoire** &nbsp;·&nbsp; Plan d’action 2.1.1 · 4.3
-
-Corréler l'indicateur indirect NTL avec des statistiques infranationales officielles (PIB, population, taux d'électrification) et, le cas échéant, avec les indicateurs de connectivité du Jour 3. Décider, preuves à l'appui, si l'indicateur est utilisable pour la diffusion dans votre pays ou s'il reste un simple outil de diagnostic. Documenter explicitement les limites — cette déclaration fait partie du livrable.
-
-!!! example "Laboratoire — NTL validation"
-
-    **Livrable :** Corrélation avec l'indicateur officiel, et une déclaration écrite des limites
-
-    **Repli :** Un indicateur officiel de référence est fourni pour le pays de référence
-
-
-### 16h30–16h45 &nbsp;·&nbsp; Publication et préparation du Jour 5
-
-:material-flask: **Laboratoire** &nbsp;·&nbsp; Plan d’action 4.2.1 · 3.1.1
-
-Verser carnets, cartes et déclaration de limites sur GitHub ; assembler les trois productions de la semaine — tableau de bord, indicateurs de connectivité, analyse NTL — dans la présentation pays de 8 minutes pour vendredi.
+    **Repli :** Un pays de référence est préparé de bout en bout et remis à toute équipe dont les données nationales s'avèrent incomplètes, avec un indicateur officiel de référence fourni pour ce pays
 
 
 !!! quote "16h45–17h00 — Pause café"

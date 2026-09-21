@@ -278,37 +278,18 @@ days:
     plan:
     - 4.2.1
     - 2.1.1
-  - time: 14:00–15:30
+  - time: 14:00–16:45
     mode: lab
-    id: d4-hands-on-part-3-analysis
+    id: d4-hands-on-part-3-ntl-analysis
     lab: d4_ntl_analysis
-    title_en: Hands-on part 3 — Analysis
-    title_fr: Atelier partie 3 — Analyse
-    desc_en: Zonal statistics by administrative level (sum of radiance, mean radiance, lit area); annual and monthly time series; change detection between two periods; mapping and visualisation of the results.
-    desc_fr: Statistiques zonales par niveau administratif (somme de radiance, radiance moyenne, superficie éclairée) ; séries temporelles annuelles et mensuelles ; détection de changement entre deux périodes ; cartographie et visualisation des résultats.
+    title_en: Hands-on part 3 — NTL Analysis & Validation
+    title_fr: Atelier partie 3 — Analyse et validation NTL
+    desc_en: Compute zonal statistics by administrative level (sum of radiance, mean radiance, lit area); build annual and monthly time series; detect change between two periods; map and visualise the results. Then validate the NTL proxy by correlating it with official subnational statistics (population, electrification rate) and decide, with evidence, whether it is usable for dissemination in your country or remains a diagnostic tool only. Document the limitations explicitly; this statement is part of the deliverable. The resulting maps, charts and limitations statement can be published as a public website via GitHub Pages.
+    desc_fr: Calculer les statistiques zonales par niveau administratif (somme de radiance, radiance moyenne, superficie éclairée) ; construire des séries temporelles annuelles et mensuelles ; détecter le changement entre deux périodes ; cartographier et visualiser les résultats. Valider ensuite l'indicateur indirect NTL en le corrélant avec des statistiques infranationales officielles (population, taux d'électrification) et décider, preuves à l'appui, s'il est utilisable pour la diffusion dans votre pays ou s'il reste un simple outil de diagnostic. Documenter explicitement les limites ; cette déclaration fait partie du livrable. Les cartes, graphiques et la déclaration de limites qui en résultent peuvent être publiés en site public via GitHub Pages.
     plan:
     - 4.2.1
-    - 2.1.1
-  - time: 15:30–16:30
-    mode: lab
-    id: d4-hands-on-part-4-validation
-    lab: d4_ntl_validation
-    title_en: Hands-on part 4 — Validation
-    title_fr: Atelier partie 4 — Validation
-    desc_en: Correlate the NTL proxy with official subnational statistics (population, electrification rate). Decide, with evidence, whether the proxy is usable for dissemination in your country or remains a diagnostic tool only. Document the limitations explicitly — this statement is part of the deliverable.
-    desc_fr: Corréler l'indicateur indirect NTL avec des statistiques infranationales officielles (PIB, population, taux d'électrification) et, le cas échéant, avec les indicateurs de connectivité du Jour 3. Décider, preuves à l'appui, si l'indicateur est utilisable pour la diffusion dans votre pays ou s'il reste un simple outil de diagnostic. Documenter explicitement les limites — cette déclaration fait partie du livrable.
-    plan:
     - 2.1.1
     - '4.3'
-  - time: 16:30–16:45
-    mode: lab
-    id: d4-publication-and-preparation-for-day
-    title_en: Publication and preparation for Day 5
-    title_fr: Publication et préparation du Jour 5
-    desc_en: Commit notebooks, maps and the limitations statement to GitHub; assemble the week's three outputs — dashboard, connectivity scores, NTL analysis — into the country presentation for Friday.
-    desc_fr: Verser carnets, cartes et déclaration de limites sur GitHub ; assembler les trois productions de la semaine — tableau de bord, indicateurs de connectivité, analyse NTL — dans la présentation pays de 8 minutes pour vendredi.
-    plan:
-    - 4.2.1
     - 3.1.1
 - n: 5
   weekday_en: Friday (morning only)
@@ -509,31 +490,17 @@ labs:
     status: draft
   d4_ntl_analysis:
     day: 4
-    title_en: NTL analysis
-    title_fr: NTL analyse
+    title_en: NTL analysis and validation
+    title_fr: NTL analyse et validation
     team_en: teams
     team_fr: équipes
     country: CIV
-    env_en: rasterstats or exactextract; the panel produced in the morning
-    env_fr: rasterstats ou exactextract ; le panel produit le matin
-    deliverable_en: Zonal statistics table, time series, change detection between two periods, and the maps
-    deliverable_fr: Tableau de statistiques zonales, séries temporelles, détection de changement entre deux périodes, et les cartes
-    fallback_en: One reference country is prepared end to end and handed to any team whose national data proves incomplete
-    fallback_fr: Un pays de référence est préparé de bout en bout et remis à toute équipe dont les données nationales s'avèrent incomplètes
-    status: phase4
-  d4_ntl_validation:
-    day: 4
-    title_en: NTL validation
-    title_fr: NTL validation
-    team_en: teams
-    team_fr: équipes
-    country: CIV
-    env_en: The official subnational indicator brought by the team
-    env_fr: L'indicateur infranational officiel apporté par l'équipe
-    deliverable_en: Correlation against the official indicator, and a written limitations statement
-    deliverable_fr: Corrélation avec l'indicateur officiel, et une déclaration écrite des limites
-    fallback_en: A reference official indicator is supplied for the reference country
-    fallback_fr: Un indicateur officiel de référence est fourni pour le pays de référence
+    env_en: rasterstats or exactextract; the panel produced in the morning; the official subnational indicator brought by the team
+    env_fr: rasterstats ou exactextract ; le panel produit le matin ; l'indicateur infranational officiel apporté par l'équipe
+    deliverable_en: Zonal statistics table, time series, change detection between two periods and the maps; correlation against the official indicator, and a written limitations statement
+    deliverable_fr: Tableau de statistiques zonales, séries temporelles, détection de changement entre deux périodes et les cartes ; corrélation avec l'indicateur officiel, et une déclaration écrite des limites
+    fallback_en: One reference country is prepared end to end and handed to any team whose national data proves incomplete, with a reference official indicator supplied for it
+    fallback_fr: Un pays de référence est préparé de bout en bout et remis à toute équipe dont les données nationales s'avèrent incomplètes, avec un indicateur officiel de référence fourni pour ce pays
     status: phase4
   d5_publish:
     day: 5

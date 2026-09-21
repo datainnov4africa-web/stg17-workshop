@@ -73,9 +73,7 @@ All five days session by session, with times, laboratories and deliverables — 
 | *10:30–10:45* | *Coffee break* | |
 | 10:45–12:30 | [Hands-on part 2 — Explore and Understand](../day4/index.md#10451230-hands-on-part-2-explore-and-understand) | :material-flask: |
 | *12:30–14:00* | *Lunch* | |
-| 14:00–15:30 | [Hands-on part 3 — Analysis](../day4/index.md#14001530-hands-on-part-3-analysis) | :material-flask: |
-| 15:30–16:30 | [Hands-on part 4 — Validation](../day4/index.md#15301630-hands-on-part-4-validation) | :material-flask: |
-| 16:30–16:45 | [Publication and preparation for Day 5](../day4/index.md#16301645-publication-and-preparation-for-day-5) | :material-flask: |
+| 14:00–16:45 | [Hands-on part 3 — NTL Analysis & Validation](../day4/index.md#14001645-hands-on-part-3-ntl-analysis-validation) | :material-flask: |
 | *16:45–17:00* | *Coffee break* | |
 
 ## Day 5 · Shared Resources, Country Results and the Way Forward

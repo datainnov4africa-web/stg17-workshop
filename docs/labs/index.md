@@ -2,7 +2,7 @@
 
 # The laboratories
 
-13 laboratories carry the week. Each is described below with the environment it needs, the artefact the team must produce, and the fallback applied when something breaks — which it will.
+12 laboratories carry the week. Each is described below with the environment it needs, the artefact the team must produce, and the fallback applied when something breaks — which it will.
 
 A laboratory's slides and notebook are not on this page: they sit on the day page, beside the session that runs it. Each laboratory below links there.
 
@@ -114,25 +114,15 @@ A laboratory's slides and notebook are not on this page: they sit on the day pag
 
 **If something breaks** — The reference country (Côte d'Ivoire) is prepared end to end
 
-### NTL analysis
+### NTL analysis and validation
 
-:material-calendar-clock: **Day 4 · 14:00–15:30** &nbsp;·&nbsp; in teams &nbsp;·&nbsp; [go to the session](../day4/index.md#14001530-hands-on-part-3-analysis)
+:material-calendar-clock: **Day 4 · 14:00–16:45** &nbsp;·&nbsp; in teams &nbsp;·&nbsp; [go to the session](../day4/index.md#14001645-hands-on-part-3-ntl-analysis-validation)
 
-**Environment and data** — rasterstats or exactextract; the panel produced in the morning
+**Environment and data** — rasterstats or exactextract; the panel produced in the morning; the official subnational indicator brought by the team
 
-**What the team produces** — Zonal statistics table, time series, change detection between two periods, and the maps
+**What the team produces** — Zonal statistics table, time series, change detection between two periods and the maps; correlation against the official indicator, and a written limitations statement
 
-**If something breaks** — One reference country is prepared end to end and handed to any team whose national data proves incomplete
-
-### NTL validation
-
-:material-calendar-clock: **Day 4 · 15:30–16:30** &nbsp;·&nbsp; in teams &nbsp;·&nbsp; [go to the session](../day4/index.md#15301630-hands-on-part-4-validation)
-
-**Environment and data** — The official subnational indicator brought by the team
-
-**What the team produces** — Correlation against the official indicator, and a written limitations statement
-
-**If something breaks** — A reference official indicator is supplied for the reference country
+**If something breaks** — One reference country is prepared end to end and handed to any team whose national data proves incomplete, with a reference official indicator supplied for it
 
 ## Day 5
 

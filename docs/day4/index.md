@@ -55,37 +55,17 @@ Visualise and interrogate the raster before computing on it — distribution of 
 
 ## Afternoon · 14:00 – 17:00
 
-### 14:00–15:30 &nbsp;·&nbsp; Hands-on part 3 — Analysis
+### 14:00–16:45 &nbsp;·&nbsp; Hands-on part 3 — NTL Analysis & Validation
 
-:material-flask: **Laboratory** &nbsp;·&nbsp; Action Plan 4.2.1 · 2.1.1
+:material-flask: **Laboratory** &nbsp;·&nbsp; Action Plan 4.2.1 · 2.1.1 · 4.3 · 3.1.1
 
-Zonal statistics by administrative level (sum of radiance, mean radiance, lit area); annual and monthly time series; change detection between two periods; mapping and visualisation of the results.
+Compute zonal statistics by administrative level (sum of radiance, mean radiance, lit area); build annual and monthly time series; detect change between two periods; map and visualise the results. Then validate the NTL proxy by correlating it with official subnational statistics (population, electrification rate) and decide, with evidence, whether it is usable for dissemination in your country or remains a diagnostic tool only. Document the limitations explicitly; this statement is part of the deliverable. The resulting maps, charts and limitations statement can be published as a public website via GitHub Pages.
 
-!!! example "Laboratory — NTL analysis"
+!!! example "Laboratory — NTL analysis and validation"
 
-    **Deliverable:** Zonal statistics table, time series, change detection between two periods, and the maps
+    **Deliverable:** Zonal statistics table, time series, change detection between two periods and the maps; correlation against the official indicator, and a written limitations statement
 
-    **Fallback:** One reference country is prepared end to end and handed to any team whose national data proves incomplete
-
-
-### 15:30–16:30 &nbsp;·&nbsp; Hands-on part 4 — Validation
-
-:material-flask: **Laboratory** &nbsp;·&nbsp; Action Plan 2.1.1 · 4.3
-
-Correlate the NTL proxy with official subnational statistics (population, electrification rate). Decide, with evidence, whether the proxy is usable for dissemination in your country or remains a diagnostic tool only. Document the limitations explicitly — this statement is part of the deliverable.
-
-!!! example "Laboratory — NTL validation"
-
-    **Deliverable:** Correlation against the official indicator, and a written limitations statement
-
-    **Fallback:** A reference official indicator is supplied for the reference country
-
-
-### 16:30–16:45 &nbsp;·&nbsp; Publication and preparation for Day 5
-
-:material-flask: **Laboratory** &nbsp;·&nbsp; Action Plan 4.2.1 · 3.1.1
-
-Commit notebooks, maps and the limitations statement to GitHub; assemble the week's three outputs — dashboard, connectivity scores, NTL analysis — into the country presentation for Friday.
+    **Fallback:** One reference country is prepared end to end and handed to any team whose national data proves incomplete, with a reference official indicator supplied for it
 
 
 !!! quote "16:45–17:00 — Coffee break"

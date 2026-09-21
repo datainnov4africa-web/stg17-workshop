@@ -90,7 +90,6 @@ defaults:
     d4_ntl_collect: CIV        # VNP46A4 2012-2025 + ADM0-3 available
     d4_ntl_explore: CIV
     d4_ntl_analysis: CIV
-    d4_ntl_validation: CIV
     d5_publish: CIV
 
 paths:

@@ -73,9 +73,7 @@ Les cinq jours séance par séance, avec les horaires, les laboratoires et les l
 | *10h30–10h45* | *Pause café* | |
 | 10h45–12h30 | [Atelier partie 2 — Explorer et comprendre](../day4/index.md#10h4512h30-atelier-partie-2-explorer-et-comprendre) | :material-flask: |
 | *12h30–14h00* | *Déjeuner* | |
-| 14h00–15h30 | [Atelier partie 3 — Analyse](../day4/index.md#14h0015h30-atelier-partie-3-analyse) | :material-flask: |
-| 15h30–16h30 | [Atelier partie 4 — Validation](../day4/index.md#15h3016h30-atelier-partie-4-validation) | :material-flask: |
-| 16h30–16h45 | [Publication et préparation du Jour 5](../day4/index.md#16h3016h45-publication-et-preparation-du-jour-5) | :material-flask: |
+| 14h00–16h45 | [Atelier partie 3 — Analyse et validation NTL](../day4/index.md#14h0016h45-atelier-partie-3-analyse-et-validation-ntl) | :material-flask: |
 | *16h45–17h00* | *Pause café* | |
 
 ## Jour 5 · Ressources partagées, résultats des pays et voie à suivre
