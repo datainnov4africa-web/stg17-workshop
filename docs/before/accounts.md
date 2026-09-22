@@ -76,17 +76,31 @@ A second tested route to a running notebook, worth having if your machine is
 locked down and Colab is blocked on your network. No laboratory requires it.
 [Full guidance →](kaggle.md)
 
-## 6 · An LLM provider — provisioned for you
+## 6 · An LLM provider — required, and you create it yourself
 
-The Secretariat provisions per-participant keys with quotas, distributed at
-registration on Day 1. You do not need to create these accounts or pay anything.
+You create these accounts and obtain your own keys, before you travel. Both
+providers below issue a free key from a web console in a few minutes; the
+notebooks read it from a secret or an environment variable, never from a cell
+you edit.
 
-| Provider | Used in | Why this one |
-|---|---|---|
-| **Groq** | Day 2 benchmark | Named in the agenda; its inference speed is the point of the session |
-| **Anthropic** | Days 1–2 | Long context, used for the document-extraction laboratory |
-| **An OpenAI-compatible endpoint** | Days 1–2 | The comparison baseline |
-| **Ollama** (local) | Day 1 | The sovereign path — no key, no data leaving the building |
+Have them **before Day 1**: the first laboratory that calls a model runs on
+Day 1 at 14:30, not on Day 2.
+
+| Provider | Used in | Key name | Create it at |
+|---|---|---|---|
+| **Groq** | Every LLM laboratory, Days 1 and 2 | `GROQ_API_KEY` | [console.groq.com/keys](https://console.groq.com/keys) |
+| **Google Gemini** | Day 2 morning, where it is the default provider | `GEMINI_API_KEY` | [aistudio.google.com/apikey](https://aistudio.google.com/apikey) |
+| **Ollama** (local) | Days 1 and 2 | *none* | Installed on your laptop — the sovereign path, no key and no data leaving the building |
+
+Groq is the one to create first: it is the provider every LLM notebook accepts,
+and the default of all but one.
+
+!!! tip "If you already hold a key elsewhere"
+
+    The Day 2 dashboard notebook also accepts **Mistral**, **Z.ai**,
+    **Cerebras** and **OpenRouter**, and two notebooks accept any
+    **OpenAI-compatible endpoint**. Change one line at the top of the notebook.
+    None of these is an account you need to create for the workshop.
 
 ---
 

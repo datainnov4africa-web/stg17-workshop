@@ -69,9 +69,12 @@ datasets are prepared in advance by the facilitation team rather than downloaded
 during sessions — and why every geospatial laboratory has an Earth Engine variant
 that downloads nothing at all.
 
-**Failed or rate-limited API keys** are handled by per-participant quotas
-provisioned in advance, and by a facilitator-run demonstration path for each
-API-dependent step.
+**Failed or rate-limited API keys** are handled by a facilitator-run
+demonstration path for each API-dependent step, and by the notebooks themselves:
+most laboratories that call a model also run without a key, through a local
+Ollama model or a built-in offline mode. The Day 2 morning notebook is the
+exception and does need one, Gemini or Groq. Your keys are your own, created
+before you travel — see [accounts to create](accounts.md).
 
 **Heterogeneous laptops** are absorbed by the Colab fallback, tested during the
 environment check rather than discovered on Day 1.

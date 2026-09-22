@@ -69,9 +69,13 @@ d'où le fait que les jeux de données soient préparés à l'avance par l'équi
 d'animation plutôt que téléchargés pendant les séances — et que chaque
 laboratoire géospatial dispose d'une variante Earth Engine qui ne télécharge rien.
 
-**Les clés API en échec ou limitées** sont traitées par des quotas par participant
-provisionnés à l'avance, et par un chemin de démonstration animé par le
-facilitateur pour chaque étape dépendant d'une API.
+**Les clés API en échec ou limitées** sont traitées par un chemin de
+démonstration animé par le facilitateur pour chaque étape dépendant d'une API, et
+par les carnets eux-mêmes : la plupart des laboratoires qui appellent un modèle
+fonctionnent aussi sans clé, via un modèle Ollama local ou un mode hors ligne
+intégré. Le carnet de la matinée du Jour 2 fait exception et en exige une,
+Gemini ou Groq. Vos clés sont les vôtres, créées avant votre départ — voir
+[les comptes à créer](accounts.md).
 
 **L'hétérogénéité des portables** est absorbée par le repli Colab, testé pendant
 la vérification d'environnement plutôt que découvert au Jour 1.

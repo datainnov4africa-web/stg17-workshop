@@ -80,17 +80,31 @@ Une seconde voie testée vers un carnet qui s'exécute, utile si votre machine e
 verrouillée et que Colab est bloqué sur votre réseau. Aucun laboratoire ne
 l'exige. [Guide complet →](kaggle.md)
 
-## 6 · Un fournisseur LLM — fourni par le Secrétariat
+## 6 · Un fournisseur LLM — nécessaire, et c'est vous qui le créez
 
-Le Secrétariat provisionne des clés par participant avec quotas, distribuées à
-l'inscription du Jour 1. Vous n'avez ni compte à créer ni frais à engager.
+Vous créez ces comptes et obtenez vos propres clés, avant votre départ. Les deux
+fournisseurs ci-dessous délivrent une clé gratuite depuis une console web en
+quelques minutes ; les carnets la lisent depuis un secret ou une variable
+d'environnement, jamais depuis une cellule que vous modifiez.
 
-| Fournisseur | Utilisé au | Pourquoi celui-ci |
-|---|---|---|
-| **Groq** | Benchmark du Jour 2 | Cité dans l'agenda ; sa vitesse d'inférence est l'objet même de la session |
-| **Anthropic** | Jours 1-2 | Contexte long, utilisé pour le laboratoire d'extraction documentaire |
-| **Un point d'accès compatible OpenAI** | Jours 1-2 | La référence de comparaison |
-| **Ollama** (local) | Jour 1 | La voie souveraine — aucune clé, aucune donnée ne sort du bâtiment |
+Ayez-les **avant le Jour 1** : le premier laboratoire qui appelle un modèle
+s'exécute le Jour 1 à 14h30, pas au Jour 2.
+
+| Fournisseur | Utilisé au | Nom de la clé | À créer sur |
+|---|---|---|---|
+| **Groq** | Tous les laboratoires LLM, Jours 1 et 2 | `GROQ_API_KEY` | [console.groq.com/keys](https://console.groq.com/keys) |
+| **Google Gemini** | Matinée du Jour 2, où il est le fournisseur par défaut | `GEMINI_API_KEY` | [aistudio.google.com/apikey](https://aistudio.google.com/apikey) |
+| **Ollama** (local) | Jours 1 et 2 | *aucune* | Installé sur votre portable — la voie souveraine, aucune clé et aucune donnée ne sort du bâtiment |
+
+Groq est celui à créer en premier : c'est le fournisseur que tous les carnets LLM
+acceptent, et le défaut de tous sauf un.
+
+!!! tip "Si vous disposez déjà d'une clé ailleurs"
+
+    Le carnet tableau de bord du Jour 2 accepte aussi **Mistral**, **Z.ai**,
+    **Cerebras** et **OpenRouter**, et deux carnets acceptent n'importe quel
+    point d'accès **compatible OpenAI**. Une ligne à changer en tête du carnet.
+    Aucun de ces comptes n'est à créer pour l'atelier.
 
 ---
 

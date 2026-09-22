@@ -51,7 +51,8 @@ Six comptes, aucun payant. Instructions complètes sur la
 | **Google Earth Engine** | la voie sans téléchargement des Jours 3 et 4 | 10 min, plus l'approbation |
 | **NASA Earthdata** | télécharger les granules Black Marble au Jour 4 | 5 min |
 | **Kaggle** | Optionnel — une voie de secours vers un carnet qui s'exécute si Colab est bloqué. Voir [quand Kaggle est nécessaire](kaggle.md) | 5 min |
-| **Un fournisseur LLM** | Jours 1 et 2 | fourni par le Secrétariat |
+| **Groq** | Jours 1 et 2 — le fournisseur que tous les laboratoires LLM acceptent, dès le Jour 1 à 14h30 | 5 min, clé gratuite |
+| **Google Gemini** | Matinée du Jour 2, où il est le fournisseur par défaut | 5 min, clé gratuite |
 
 !!! warning "L'approbation Earth Engine n'est pas instantanée"
 
