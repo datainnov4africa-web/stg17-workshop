@@ -64,7 +64,7 @@ Comment la vitesse d'inférence change ce qui est faisable dans une chaîne stat
     **Repli :** L'animateur exécute le benchmark en direct depuis le pupitre si les clés des participants échouent
 
 
-### 15h30–16h45 &nbsp;·&nbsp; Atelier — Un modèle, plusieurs métiers : une boîte à outils LLM pour statisticiens
+### 15h30–16h45 &nbsp;·&nbsp; Atelier — Une boîte à outils LLM pour statisticiens
 
 :material-flask: **Laboratoire** &nbsp;·&nbsp; Plan d’action 4.2.1
 

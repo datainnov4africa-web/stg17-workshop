@@ -10,7 +10,7 @@
 
 All five days session by session, with times, laboratories and deliverables — to keep, to print, to circulate.
 </div>
-[:material-tray-arrow-down: Download the agenda · PDF · 48 KB](../downloads/STG17_Agenda_EN.pdf){ .md-button .stg-agenda__btn download="STG17_Agenda_EN.pdf" }
+[:material-tray-arrow-down: Download the agenda · PDF · 47 KB](../downloads/STG17_Agenda_EN.pdf){ .md-button .stg-agenda__btn download="STG17_Agenda_EN.pdf" }
 </div>
 
 ## Day 1 · AI concepts and the infrastructure behind them
@@ -44,7 +44,7 @@ All five days session by session, with times, laboratories and deliverables — 
 | *12:30–14:00* | *Lunch* | |
 | 14:00–14:45 | [From Good to Great: Prompt Optimisation](../day2/index.md#14001445-from-good-to-great-prompt-optimisation) | :material-presentation-play: |
 | 14:45–15:30 | [Choosing your engine: speed, cost and sovereignty — working with Groq](../day2/index.md#14451530-choosing-your-engine-speed-cost-and-sovereignty-working-with-groq) | :material-speedometer: |
-| 15:30–16:45 | [Hands-on — One Model, Many Jobs: an LLM Toolkit for Statisticians](../day2/index.md#15301645-hands-on-one-model-many-jobs-an-llm-toolkit-for-statisticians) | :material-flask: |
+| 15:30–16:45 | [Hands-on — LLM Toolkit for Statisticians](../day2/index.md#15301645-hands-on-llm-toolkit-for-statisticians) | :material-flask: |
 | *16:45–17:00* | *Coffee break* | |
 
 ## Day 3 · Beyond the Survey: Non-Traditional Data and the Technologies That Handle Them

@@ -52,7 +52,7 @@ Les supports et le carnet d'un laboratoire ne sont pas sur cette page : ils sont
 
 ### Ateliers boîte à outils
 
-:material-calendar-clock: **Jour 2 · 15h30–16h45** &nbsp;·&nbsp; en ateliers tournants &nbsp;·&nbsp; [voir la séance](../day2/index.md#15h3016h45-atelier-un-modele-plusieurs-metiers-une-boite-a-outils-llm-pour-statisticiens)
+:material-calendar-clock: **Jour 2 · 15h30–16h45** &nbsp;·&nbsp; en ateliers tournants &nbsp;·&nbsp; [voir la séance](../day2/index.md#15h3016h45-atelier-une-boite-a-outils-llm-pour-statisticiens)
 
 **Environnement et données** — Variable selon l'atelier ; tous accessibles depuis un navigateur
 

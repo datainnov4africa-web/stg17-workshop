@@ -169,8 +169,8 @@ days:
     mode: lab
     id: d2-hands-on-one-model-many-jobs-an-llm
     lab: d2_toolkit
-    title_en: 'Hands-on — One Model, Many Jobs: an LLM Toolkit for Statisticians'
-    title_fr: 'Atelier — Un modèle, plusieurs métiers : une boîte à outils LLM pour statisticiens'
+    title_en: 'Hands-on — LLM Toolkit for Statisticians'
+    title_fr: 'Atelier — Une boîte à outils LLM pour statisticiens'
     desc_en: Rotating stations across professional use cases — writing and debugging code; drafting reports and methodological notes; producing presentations; generating charts and graphics; image and visual identity work, including logo design; document analysis and audio briefings with NotebookLM; multimodal work with Gemini. Each participant selects two stations relevant to their office and leaves with a deliverable from each.
     desc_fr: Ateliers tournants sur des cas d'usage professionnels — écrire et déboguer du code ; rédiger rapports et notes méthodologiques ; produire des présentations ; générer graphiques et visuels ; travail sur l'image et l'identité visuelle, y compris la création de logos ; analyse documentaire et synthèses audio avec NotebookLM ; multimodalité avec Gemini. Chaque participant choisit deux ateliers pertinents pour son office et repart avec un livrable achevé de chacun.
     plan:

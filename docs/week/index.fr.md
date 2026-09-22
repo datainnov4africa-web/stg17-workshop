@@ -44,7 +44,7 @@ Les cinq jours séance par séance, avec les horaires, les laboratoires et les l
 | *12h30–14h00* | *Déjeuner* | |
 | 14h00–14h45 | [De bon à excellent : optimisation des prompts](../day2/index.md#14h0014h45-de-bon-a-excellent-optimisation-des-prompts) | :material-presentation-play: |
 | 14h45–15h30 | [Choisir son moteur : vitesse, coût et souveraineté — travailler avec Groq](../day2/index.md#14h4515h30-choisir-son-moteur-vitesse-cout-et-souverainete-travailler-avec-groq) | :material-speedometer: |
-| 15h30–16h45 | [Atelier — Un modèle, plusieurs métiers : une boîte à outils LLM pour statisticiens](../day2/index.md#15h3016h45-atelier-un-modele-plusieurs-metiers-une-boite-a-outils-llm-pour-statisticiens) | :material-flask: |
+| 15h30–16h45 | [Atelier — Une boîte à outils LLM pour statisticiens](../day2/index.md#15h3016h45-atelier-une-boite-a-outils-llm-pour-statisticiens) | :material-flask: |
 | *16h45–17h00* | *Pause café* | |
 
 ## Jour 3 · Au-delà de l'enquête : données non traditionnelles et technologies qui les traitent

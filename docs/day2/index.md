@@ -64,7 +64,7 @@ How inference speed changes what is feasible in a production statistical pipelin
     **Fallback:** The facilitator runs the benchmark live from the podium if participant keys fail
 
 
-### 15:30–16:45 &nbsp;·&nbsp; Hands-on — One Model, Many Jobs: an LLM Toolkit for Statisticians
+### 15:30–16:45 &nbsp;·&nbsp; Hands-on — LLM Toolkit for Statisticians
 
 :material-flask: **Laboratory** &nbsp;·&nbsp; Action Plan 4.2.1
 

@@ -52,7 +52,7 @@ A laboratory's slides and notebook are not on this page: they sit on the day pag
 
 ### Toolkit stations
 
-:material-calendar-clock: **Day 2 · 15:30–16:45** &nbsp;·&nbsp; rotating stations &nbsp;·&nbsp; [go to the session](../day2/index.md#15301645-hands-on-one-model-many-jobs-an-llm-toolkit-for-statisticians)
+:material-calendar-clock: **Day 2 · 15:30–16:45** &nbsp;·&nbsp; rotating stations &nbsp;·&nbsp; [go to the session](../day2/index.md#15301645-hands-on-llm-toolkit-for-statisticians)
 
 **Environment and data** — Varies by station; all accessible from a browser
 
