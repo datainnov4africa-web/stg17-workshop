@@ -37,7 +37,7 @@ models and big data for official statistics.</p>
 
 <div class="stg-stats">
 <div><span class="n">5</span><span class="l">days<br>27 contact hours</span></div>
-<div><span class="n">13</span><span class="l">hands-on<br>laboratories</span></div>
+<div><span class="n">12</span><span class="l">hands-on<br>laboratories</span></div>
 <div><span class="n">2</span><span class="l">languages, from<br>a single source</span></div>
 </div>
 </div>
@@ -69,7 +69,7 @@ each one. Generated from the agenda itself, so it cannot drift.
 
 <div markdown>
 ### :material-flask: The laboratories
-Thirteen hands-on laboratories, each in **English and French**, each with its
+Twelve hands-on laboratories, each in **English and French**, each with its
 environment, its deliverable and a documented fallback.
 
 [Laboratory register →](labs/index.md)
