@@ -1,8 +1,8 @@
 # Accounts to create
 
-Seven accounts. **None of them costs anything.** Create them in this order — the
-first two unblock everything else, and Earth Engine has an approval delay you
-want to start early.
+**None of them costs anything.** Create them in this order — the first two
+unblock everything else, and Earth Engine has an approval delay you want to
+start early.
 
 ## 1 · GitHub — required
 

@@ -1,8 +1,8 @@
 # Comptes à créer
 
-Sept comptes. **Aucun n'est payant.** Créez-les dans cet ordre — les deux premiers
-débloquent tout le reste, et Earth Engine comporte un délai d'approbation qu'il
-vaut mieux engager tôt.
+**Aucun n'est payant.** Créez-les dans cet ordre — les deux premiers débloquent
+tout le reste, et Earth Engine comporte un délai d'approbation qu'il vaut mieux
+engager tôt.
 
 ## 1 · GitHub — obligatoire
 
