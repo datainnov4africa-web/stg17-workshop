@@ -1,7 +1,7 @@
 # Vérification de l'environnement
 
 Un carnet. Environ cinq minutes. Il vous dit, point par point, si votre machine
-peut exécuter les treize laboratoires — puis produit une courte chaîne de
+peut exécuter les douze laboratoires — puis produit une courte chaîne de
 diagnostic à envoyer aux assistants techniques.
 
 Le carnet de vérification d'environnement est distribué avec le matériel de l'atelier. Votre animateur vous enverra le lien.
@@ -65,9 +65,9 @@ ce qui est nécessaire pour vous aider.
 
 ## Si le carnet lui-même refuse de s'exécuter
 
-C'est déjà un diagnostic, et un diagnostic fréquent. Prenez le badge Colab en haut
-de cette page : il exécute le même carnet sur les machines de Google, sans rien
-installer sur la vôtre. Si Colab fonctionne et que votre portable non, votre
-chemin de repli pour toute la semaine est Colab — ce qui est une réponse
-parfaitement valable. Signalez-le à la séance de vérification et les animateurs
-vous appareilleront en conséquence.
+C'est déjà un diagnostic, et un diagnostic fréquent. Ouvrez plutôt dans Google
+Colab le carnet que votre animateur vous a transmis : il s'exécute sur les
+machines de Google, sans rien installer sur la vôtre. Si Colab fonctionne et que
+votre portable non, votre chemin de repli pour toute la semaine est Colab — ce
+qui est une réponse parfaitement valable. Signalez-le à la séance de
+vérification et les animateurs vous appareilleront en conséquence.

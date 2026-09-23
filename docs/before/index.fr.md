@@ -7,14 +7,14 @@ volontairement brève — six pages, et seule la première est de lecture obliga
 
 <div markdown>
 ### :material-clipboard-check: Prérequis
-La liste complète, déduite des treize laboratoires. **Commencez ici.**
+La liste complète, déduite des douze laboratoires. **Commencez ici.**
 
 [Lire →](prerequisites.md)
 </div>
 
 <div markdown>
 ### :material-account-key: Comptes à créer
-Six comptes, aucun payant. À quoi sert chacun et combien de temps il prend.
+Sept comptes, aucun payant. À quoi sert chacun et combien de temps il prend.
 
 [Lire →](accounts.md)
 </div>
@@ -58,16 +58,16 @@ Six diapositives pour l'échange du Jour 1. Soyez francs sur ce qui n'a pas marc
 | **T − 1 semaine** | Participez à la vérification d'environnement à distance — une heure, proposée deux fois sur deux fuseaux. |
 | **Jour 0** | Test de salle et de réseau sur place ; récupération du matériel de l'atelier auprès de l'équipe d'animation. |
 
-Tout le reste — les jeux de données, les accès aux API, les machines — est préparé
-pour vous. Si quelque chose manque le jour venu, chaque laboratoire dispose d'un
-chemin de repli documenté : signalez-le, il sera appliqué.
+Tout le reste — les jeux de données et les machines — est préparé pour vous. Si
+quelque chose manque le jour venu, chaque laboratoire dispose d'un chemin de
+repli documenté : signalez-le, il sera appliqué.
 
 ## Risques connus, et leur traitement
 
 **La bande passante** est la cause d'échec la plus fréquente des laboratoires,
 d'où le fait que les jeux de données soient préparés à l'avance par l'équipe
-d'animation plutôt que téléchargés pendant les séances — et que chaque
-laboratoire géospatial dispose d'une variante Earth Engine qui ne télécharge rien.
+d'animation plutôt que téléchargés pendant les séances, et que chaque carnet
+publié s'exécute aussi sur Colab, où rien n'est téléchargé sur votre machine.
 
 **Les clés API en échec ou limitées** sont traitées par un chemin de
 démonstration animé par le facilitateur pour chaque étape dépendant d'une API, et

@@ -7,14 +7,14 @@ purpose — six pages, and the first is the only one that is mandatory reading.
 
 <div markdown>
 ### :material-clipboard-check: Prerequisites
-The complete list, derived from the thirteen laboratories. **Start here.**
+The complete list, derived from the twelve laboratories. **Start here.**
 
 [Read →](prerequisites.md)
 </div>
 
 <div markdown>
 ### :material-account-key: Accounts to create
-Six accounts, none paid. What each is for and how long it takes.
+Seven accounts, none paid. What each is for and how long it takes.
 
 [Read →](accounts.md)
 </div>
@@ -58,16 +58,16 @@ Six slides for the Day 1 exchange. Be candid about what did not work.
 | **T − 1 week** | Join the remote environment check — one hour, offered twice in two time zones. |
 | **Day 0** | Room and network test on site; collect the workshop material from the facilitation team. |
 
-Everything else — the datasets, the API access, the machines — is prepared for
-you. If something is missing on the day, there is a documented fallback for every
+Everything else — the datasets and the machines — is prepared for you. If
+something is missing on the day, there is a documented fallback for every
 laboratory; say so and it is applied.
 
 ## Known risks, and how they are handled
 
 **Bandwidth** is the most frequent cause of laboratory failure, which is why the
 datasets are prepared in advance by the facilitation team rather than downloaded
-during sessions — and why every geospatial laboratory has an Earth Engine variant
-that downloads nothing at all.
+during sessions, and why every published notebook also runs on Colab, where
+nothing is downloaded to your own machine.
 
 **Failed or rate-limited API keys** are handled by a facilitator-run
 demonstration path for each API-dependent step, and by the notebooks themselves:

@@ -1,7 +1,7 @@
 # Environment check
 
 One notebook. About five minutes. It tells you, item by item, whether your
-machine can run the thirteen laboratories — and then produces a short diagnostic
+machine can run the twelve laboratories — and then produces a short diagnostic
 string to send to the technical assistants.
 
 The environment-check notebook is distributed with the workshop materials. Your
@@ -64,8 +64,8 @@ no personal data** — only what is needed to help you.
 
 ## If the notebook itself will not run
 
-That is itself a diagnosis, and a common one. Take the Colab badge at the top of
-this page: it runs the same notebook on Google's machines with nothing installed
-on yours. If Colab works and your laptop does not, your fallback path for the
-whole week is Colab, which is a perfectly good answer — say so at the check
+That is itself a diagnosis, and a common one. Open the notebook your facilitator
+sent you in Google Colab instead: it runs on Google's machines, with nothing
+installed on yours. If Colab works and your laptop does not, your fallback path
+for the whole week is Colab, which is a perfectly good answer — say so at the check
 session and the facilitators will pair you accordingly.

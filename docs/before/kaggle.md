@@ -27,7 +27,7 @@ tier it is a quota rather than a lottery.
 
 !!! note "No laboratory in the agenda needs a GPU"
 
-    The thirteen laboratories are retrieval, prompting, dashboards, geospatial
+    The twelve laboratories are retrieval, prompting, dashboards, geospatial
     analysis and publication. None of them trains a model. If a facilitator adds
     an optional exercise that does, this is where to run it.
 
@@ -38,7 +38,7 @@ tier it is a quota rather than a lottery.
 | Situation | Use instead |
 |---|---|
 | Geospatial laboratories (Days 3 and 4) | Your laptop, or the Earth Engine variants. Kaggle's geospatial stack is fine but adds nothing here. |
-| Anything needing an API key you were given | Colab. Kaggle Secrets works, but Colab's secret manager is what the notebooks were tested against. |
+| Anything needing an API key you created | Colab. Kaggle Secrets works, but Colab's secret manager is what the notebooks were tested against. |
 | Publishing your results | GitHub Pages. A Kaggle notebook is not a citable public product; Day 5 covers what is. |
 | Long unattended runs | Kaggle sessions stop after 12 hours (9 with GPU). Nothing in this workshop runs that long. |
 
@@ -103,9 +103,8 @@ To upload one:
 | D3 · Search-driven exploration | No |
 | D4 · NTL collect and explore | No |
 | D4 · NTL explore and understand | No |
-| D4 · NTL analysis | No |
-| D4 · NTL validation | No |
+| D4 · NTL analysis and validation | No |
 | D5 · Publish your work | No |
 
-Thirteen laboratories, thirteen times no. Create the account only if Colab is
+Twelve laboratories, twelve times no. Create the account only if Colab is
 blocked on your network.

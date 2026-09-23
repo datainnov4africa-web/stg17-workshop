@@ -1,6 +1,6 @@
 # Prérequis
 
-Tout ce qui figure sur cette page découle des treize laboratoires qui composent la
+Tout ce qui figure sur cette page découle des douze laboratoires qui composent la
 semaine. Rien n'y est pour la forme : chaque élément est quelque chose sans quoi
 un laboratoire échouera.
 
@@ -19,8 +19,8 @@ un laboratoire échouera.
 
 | | Minimum | Recommandé | Si vous êtes en dessous |
 |---|---|---|---|
-| **RAM** | 8 Go | 16 Go | Chaque laboratoire porte un badge Colab. Utilisez-le. |
-| **Disque libre** | 10 Go | 25 Go | Utilisez les variantes Earth Engine, qui ne téléchargent rien |
+| **RAM** | 8 Go | 16 Go | Chaque laboratoire dont le carnet est publié porte un badge Colab sur sa page-jour. Utilisez-le. |
+| **Disque libre** | 10 Go | 25 Go | Exécutez le carnet sur Colab : rien n'est stocké sur votre machine |
 | **Python** | 3.9 | 3.11 | Colab fournit 3.11 |
 | **Droits** | pouvoir installer des paquets | administrateur | Colab ne demande aucun droit |
 | **Réseau** | intermittent suffit | stable | Les jeux de données sont préparés à l'avance par l'équipe d'animation |
@@ -33,22 +33,23 @@ navigateur et tout ira bien.
 
 **Sur les portables verrouillés.** Les machines institutionnelles interdisant
 l'installation de logiciels sont fréquentes et entièrement anticipées. Google
-Colab est le chemin de repli testé pour absolument tous les carnets, et le badge
-se trouve dans la première cellule de chacun. Testez-le pendant la vérification
-d'environnement plutôt que de le découvrir au Jour 1.
+Colab est le chemin de repli testé de tous les carnets publiés, et le badge se
+trouve à côté des boutons de téléchargement, sur la page-jour de chaque séance.
+Testez-le pendant la vérification d'environnement plutôt que de le découvrir au
+Jour 1.
 
 ---
 
 ## 2 · Comptes
 
-Six comptes, aucun payant. Instructions complètes sur la
+Sept comptes, aucun payant. Instructions complètes sur la
 [page des comptes](accounts.md).
 
 | Compte | Nécessaire pour | Temps de création |
 |---|---|---|
-| **GitHub** | Jours 2 à 5. Toutes les productions sont publiées publiquement — **et un jeton d'accès personnel**, car les carnets des Jours 2 et 3 publient depuis le carnet lui-même | 10 min |
+| **GitHub** | Jours 2 à 5. Toutes les productions sont publiées publiquement — **et un jeton d'accès personnel**, car les carnets des Jours 2, 3 et 4 publient depuis le carnet lui-même | 10 min |
 | **Google** | Colab — le chemin de repli de tous les carnets | vous en avez probablement un |
-| **Google Earth Engine** | la voie sans téléchargement des Jours 3 et 4 | 10 min, plus l'approbation |
+| **Google Earth Engine** | le carnet du Jour 4 après-midi y lit l'imagerie VIIRS | 10 min, plus l'approbation |
 | **NASA Earthdata** | télécharger les granules Black Marble au Jour 4 | 5 min |
 | **Kaggle** | Optionnel — une voie de secours vers un carnet qui s'exécute si Colab est bloqué. Voir [quand Kaggle est nécessaire](kaggle.md) | 5 min |
 | **Groq** | Jours 1 et 2 — le fournisseur que tous les laboratoires LLM acceptent, dès le Jour 1 à 14h30 | 5 min, clé gratuite |
@@ -120,7 +121,7 @@ Les Jours 1 et 4 partent tous deux des principes de base.
 ## 5 · Exécutez la vérification d'environnement
 
 Un carnet, cinq minutes, et il vous dit point par point si votre machine peut
-exécuter les treize laboratoires — puis produit une courte chaîne de diagnostic à
+exécuter les douze laboratoires — puis produit une courte chaîne de diagnostic à
 envoyer aux assistants techniques.
 
 [:material-notebook: Vérification d'environnement →](environment-check.md){ .md-button .md-button--primary }

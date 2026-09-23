@@ -1,6 +1,6 @@
 # Accounts to create
 
-Six accounts. **None of them costs anything.** Create them in this order — the
+Seven accounts. **None of them costs anything.** Create them in this order — the
 first two unblock everything else, and Earth Engine has an approval delay you
 want to start early.
 
@@ -20,9 +20,9 @@ you can follow the laboratories but you cannot produce the deliverable.
    `GITHUB_TOKEN` — see [where to put your keys](#where-to-put-your-keys).
 
 !!! info "Why a token, and not just the account"
-    The Day 2 and Day 3 notebooks publish your deliverable to GitHub from inside
-    the notebook. Without `GITHUB_TOKEN` the notebook keeps your files and skips
-    the publishing step: you still have the work, but not the public URL — and
+    The Day 2, Day 3 and Day 4 notebooks publish your deliverable to GitHub from
+    inside the notebook. Without `GITHUB_TOKEN` the notebook keeps your files and
+    skips the publishing step: you still have the work, but not the public URL — and
     the public URL *is* the deliverable.
 
 !!! tip "Already have a personal account?"
@@ -34,14 +34,15 @@ you can follow the laboratories but you cannot produce the deliverable.
 Used for Google Colab, the tested fallback path for every notebook in the
 workshop. Most participants already have one.
 
-Test it once before the workshop: open any notebook from the
-[laboratory register](../labs/index.md), click the Colab badge, and run the first
-cell. If it runs, your fallback path works.
+Test it once before the workshop: open any day page — [Day 1](../day1/index.md),
+for instance — click the Colab badge beside a notebook, and run the first cell.
+If it runs, your fallback path works.
 
 ## 3 · Google Earth Engine — strongly recommended
 
-The zero-download path for Days 3 and 4. On a constrained network this is not a
-convenience — it is the difference between finishing the laboratory and not.
+The Day 4 afternoon notebook reads VIIRS night-time lights through Earth Engine,
+and asks for your project id when it starts. Without an approved account that
+notebook cannot run at all, which is why this one is worth starting early.
 
 1. [code.earthengine.google.com/register](https://code.earthengine.google.com/register)
 2. Choose **non-commercial / research** use.
@@ -133,6 +134,7 @@ consequences.
     The repository `.gitignore` already excludes `.env`, so it cannot be committed
     by accident.
 
-All notebooks read keys through `stg17.env.get_secret()`, which searches Colab
+Most notebooks read keys through `stg17.env.get_secret()`, which searches Colab
 secrets, then Kaggle secrets, then the environment, then `.env` — and reports a
-missing key as a documented fallback rather than a crash.
+missing key as a documented fallback rather than a crash. The rest carry their own
+reader, which looks in the same places in the same order.

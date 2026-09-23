@@ -70,7 +70,7 @@ Comment la vitesse d'inférence change ce qui est faisable dans une chaîne stat
 
 Ateliers tournants sur des cas d'usage professionnels — écrire et déboguer du code ; rédiger rapports et notes méthodologiques ; produire des présentations ; générer graphiques et visuels ; travail sur l'image et l'identité visuelle, y compris la création de logos ; analyse documentaire et synthèses audio avec NotebookLM ; multimodalité avec Gemini. Chaque participant choisit deux ateliers pertinents pour son office et repart avec un livrable achevé de chacun.
 
-[:material-microsoft-powerpoint: PPTX · EN](../downloads/Day2/1530_hands-on_EN.pptx){ .md-button } [:material-microsoft-powerpoint: PPTX · FR](../downloads/Day2/1530_hands-on_FR.pptx){ .md-button }
+[:material-file-pdf-box: PDF · EN](../downloads/Day2/1530_hands-on_EN.pdf){ .md-button } [:material-file-pdf-box: PDF · FR](../downloads/Day2/1530_hands-on_FR.pdf){ .md-button } [:material-microsoft-powerpoint: PPTX · EN](../downloads/Day2/1530_hands-on_EN.pptx){ .md-button } [:material-microsoft-powerpoint: PPTX · FR](../downloads/Day2/1530_hands-on_FR.pptx){ .md-button }
 
 !!! example "Laboratoire — Ateliers boîte à outils"
 

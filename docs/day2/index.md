@@ -70,7 +70,7 @@ How inference speed changes what is feasible in a production statistical pipelin
 
 Rotating stations across professional use cases — writing and debugging code; drafting reports and methodological notes; producing presentations; generating charts and graphics; image and visual identity work, including logo design; document analysis and audio briefings with NotebookLM; multimodal work with Gemini. Each participant selects two stations relevant to their office and leaves with a deliverable from each.
 
-[:material-microsoft-powerpoint: PPTX · EN](../downloads/Day2/1530_hands-on_EN.pptx){ .md-button } [:material-microsoft-powerpoint: PPTX · FR](../downloads/Day2/1530_hands-on_FR.pptx){ .md-button }
+[:material-file-pdf-box: PDF · EN](../downloads/Day2/1530_hands-on_EN.pdf){ .md-button } [:material-file-pdf-box: PDF · FR](../downloads/Day2/1530_hands-on_FR.pdf){ .md-button } [:material-microsoft-powerpoint: PPTX · EN](../downloads/Day2/1530_hands-on_EN.pptx){ .md-button } [:material-microsoft-powerpoint: PPTX · FR](../downloads/Day2/1530_hands-on_FR.pptx){ .md-button }
 
 !!! example "Laboratory — Toolkit stations"
 

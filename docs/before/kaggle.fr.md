@@ -30,7 +30,7 @@ contrairement à l'offre gratuite de Colab, c'est un quota et non une loterie.
 
 !!! note "Aucun laboratoire de l'agenda n'a besoin d'un GPU"
 
-    Les treize laboratoires portent sur la recherche d'information, le prompt,
+    Les douze laboratoires portent sur la recherche d'information, le prompt,
     les tableaux de bord, l'analyse géospatiale et la publication. Aucun
     n'entraîne de modèle. Si un animateur ajoute un exercice optionnel qui le
     fait, c'est ici qu'il faudra l'exécuter.
@@ -42,7 +42,7 @@ contrairement à l'offre gratuite de Colab, c'est un quota et non une loterie.
 | Situation | Utilisez plutôt |
 |---|---|
 | Laboratoires géospatiaux (Jours 3 et 4) | Votre portable, ou les variantes Earth Engine. La pile géospatiale de Kaggle est correcte mais n'apporte rien ici. |
-| Tout ce qui nécessite une clé API qu'on vous a remise | Colab. Kaggle Secrets fonctionne, mais c'est le gestionnaire de Colab qui a été testé avec les carnets. |
+| Tout ce qui nécessite une clé API que vous avez créée | Colab. Kaggle Secrets fonctionne, mais c'est le gestionnaire de Colab qui a été testé avec les carnets. |
 | Publier vos résultats | GitHub Pages. Un carnet Kaggle n'est pas un produit public citable ; le Jour 5 explique ce qui l'est. |
 | Longues exécutions sans surveillance | Les sessions Kaggle s'arrêtent après 12 heures (9 avec GPU). Rien dans cet atelier ne dure aussi longtemps. |
 
@@ -109,9 +109,8 @@ Pour en téléverser un :
 | J3 · Exploration pilotée par la recherche | Non |
 | J4 · NTL collecter et explorer | Non |
 | J4 · NTL explorer et comprendre | Non |
-| J4 · NTL analyse | Non |
-| J4 · NTL validation | Non |
+| J4 · NTL analyse et validation | Non |
 | J5 · Publier vos travaux | Non |
 
-Treize laboratoires, treize fois non. Ne créez le compte que si Colab est bloqué
+Douze laboratoires, douze fois non. Ne créez le compte que si Colab est bloqué
 sur votre réseau.

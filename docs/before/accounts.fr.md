@@ -1,6 +1,6 @@
 # Comptes à créer
 
-Six comptes. **Aucun n'est payant.** Créez-les dans cet ordre — les deux premiers
+Sept comptes. **Aucun n'est payant.** Créez-les dans cet ordre — les deux premiers
 débloquent tout le reste, et Earth Engine comporte un délai d'approbation qu'il
 vaut mieux engager tôt.
 
@@ -22,7 +22,7 @@ livrable.
    stockez-le sous `GITHUB_TOKEN` — voir [où placer vos clés](#ou-placer-vos-cles).
 
 !!! info "Pourquoi un jeton, et pas seulement le compte"
-    Les carnets des Jours 2 et 3 publient votre livrable sur GitHub depuis le
+    Les carnets des Jours 2, 3 et 4 publient votre livrable sur GitHub depuis le
     carnet lui-même. Sans `GITHUB_TOKEN`, le carnet conserve vos fichiers et saute
     l'étape de publication : vous avez toujours le travail, mais pas l'URL
     publique — et c'est l'URL publique qui *est* le livrable.
@@ -36,15 +36,15 @@ livrable.
 Utilisé pour Google Colab, le chemin de repli testé de tous les carnets de
 l'atelier. La plupart des participants en ont déjà un.
 
-Testez-le une fois avant l'atelier : ouvrez n'importe quel carnet depuis le
-[registre des laboratoires](../labs/index.md), cliquez sur le badge Colab et
-exécutez la première cellule. Si elle s'exécute, votre chemin de repli fonctionne.
+Testez-le une fois avant l'atelier : ouvrez une page-jour — le [Jour 1](../day1/index.md),
+par exemple —, cliquez sur le badge Colab placé à côté d'un carnet et exécutez la
+première cellule. Si elle s'exécute, votre chemin de repli fonctionne.
 
 ## 3 · Google Earth Engine — vivement recommandé
 
-La voie sans téléchargement des Jours 3 et 4. Sur un réseau contraint, ce n'est
-pas un confort — c'est la différence entre terminer le laboratoire et ne pas le
-terminer.
+Le carnet du Jour 4 après-midi lit les lumières nocturnes VIIRS via Earth Engine
+et vous demande l'identifiant de votre projet au démarrage. Sans compte approuvé,
+ce carnet ne peut pas s'exécuter du tout — d'où l'intérêt de s'y prendre tôt.
 
 1. [code.earthengine.google.com/register](https://code.earthengine.google.com/register)
 2. Choisissez l'usage **non commercial / recherche**.
@@ -137,6 +137,8 @@ la révoquer est le moindre des désagréments.
     Le `.gitignore` du dépôt exclut déjà `.env` : il ne peut pas être versionné par
     accident.
 
-Tous les carnets lisent les clés via `stg17.env.get_secret()`, qui parcourt les
-secrets Colab, puis ceux de Kaggle, puis l'environnement, puis `.env` — et signale
-une clé absente comme un repli documenté plutôt que comme un plantage.
+La plupart des carnets lisent les clés via `stg17.env.get_secret()`, qui parcourt
+les secrets Colab, puis ceux de Kaggle, puis l'environnement, puis `.env` — et
+signale une clé absente comme un repli documenté plutôt que comme un plantage. Les
+autres embarquent leur propre lecteur, qui cherche aux mêmes endroits, dans le
+même ordre.

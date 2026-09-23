@@ -1,6 +1,6 @@
 # Prerequisites
 
-Everything on this page is derived from the thirteen laboratories that make up the
+Everything on this page is derived from the twelve laboratories that make up the
 week. Nothing is here for form's sake: each item is something a laboratory will
 fail without.
 
@@ -19,8 +19,8 @@ fail without.
 
 | | Minimum | Recommended | If you fall short |
 |---|---|---|---|
-| **RAM** | 8 GB | 16 GB | Every laboratory has a Colab badge. Use it. |
-| **Free disk** | 10 GB | 25 GB | Use the Earth Engine variants, which download nothing |
+| **RAM** | 8 GB | 16 GB | Every laboratory whose notebook is published carries a Colab badge on its day page. Use it. |
+| **Free disk** | 10 GB | 25 GB | Run the notebook on Colab: nothing is stored on your machine |
 | **Python** | 3.9 | 3.11 | Colab ships 3.11 |
 | **Rights** | ability to install packages | administrator | Colab needs no rights at all |
 | **Network** | intermittent is fine | stable | The datasets are prepared in advance by the facilitation team |
@@ -33,21 +33,22 @@ fine.
 
 **On restricted laptops.** Institutional machines that forbid installing software
 are common and entirely anticipated. Google Colab is the tested fallback path for
-every single notebook, and the badge sits in the first cell of each one. Test it
-during the environment check rather than discovering it on Day 1.
+every published notebook, and the badge sits beside the download buttons on the
+day page of each session. Test it during the environment check rather than
+discovering it on Day 1.
 
 ---
 
 ## 2 · Accounts
 
-Six accounts, none of them paid. Full instructions on the
+Seven accounts, none of them paid. Full instructions on the
 [accounts page](accounts.md).
 
 | Account | Needed for | Time to create |
 |---|---|---|
-| **GitHub** | Days 2–5. All outputs are published publicly — **and a personal access token**, because the Day 2 and Day 3 notebooks publish from inside the notebook | 10 min |
+| **GitHub** | Days 2–5. All outputs are published publicly — **and a personal access token**, because the Day 2, Day 3 and Day 4 notebooks publish from inside the notebook | 10 min |
 | **Google** | Colab — the fallback path for every notebook | you probably have one |
-| **Google Earth Engine** | the zero-download path for Days 3 and 4 | 10 min, plus approval |
+| **Google Earth Engine** | the Day 4 afternoon notebook reads VIIRS imagery through it | 10 min, plus approval |
 | **NASA Earthdata** | downloading Black Marble granules on Day 4 | 5 min |
 | **Kaggle** | Optional — a spare route to a running notebook if Colab is blocked. See [when you need Kaggle](kaggle.md) | 5 min |
 | **Groq** | Days 1 and 2 — the provider every LLM laboratory accepts, from Day 1 at 14:30 | 5 min, free key |
@@ -118,7 +119,7 @@ principles.
 ## 5 · Run the environment check
 
 One notebook, five minutes, and it tells you item by item whether your machine
-can run the thirteen laboratories — then produces a short diagnostic string to send
+can run the twelve laboratories — then produces a short diagnostic string to send
 to the technical assistants.
 
 [:material-notebook: Environment check →](environment-check.md){ .md-button .md-button--primary }
