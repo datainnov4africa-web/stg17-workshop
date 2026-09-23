@@ -123,12 +123,6 @@ plugins:
           nav_translations:
             Home: Accueil
             Before the workshop: Avant l'atelier
-            Prerequisites: Prérequis
-            Accounts to create: Comptes à créer
-            Your national data pack: Votre paquet de données national
-            When you need Kaggle: Quand Kaggle est nécessaire
-            Environment check: Vérification de l'environnement
-            Country slides template: Gabarit des diapositives pays
             The week: La semaine
             Agenda at a glance: L'agenda en un coup d'œil
             Day 1 · AI concepts: Jour 1 · Concepts de l'IA
@@ -147,14 +141,10 @@ plugins:
 
 nav:
   - Home: index.md
-  - Before the workshop:
-      - before/index.md
-      - Prerequisites: before/prerequisites.md
-      - Accounts to create: before/accounts.md
-      - Your national data pack: before/data-pack.md
-      - When you need Kaggle: before/kaggle.md
-      - Environment check: before/environment-check.md
-      - Country slides template: before/country-slides.md
+  # One page, so one entry: a section with a single child is just a page with
+  # an extra click. The rest of what this section held — prerequisites, the data
+  # pack, Kaggle, the environment check, the country slides — was removed.
+  - Before the workshop: before/accounts.md
   - The week:
       - Agenda at a glance: week/index.md
       - Day 1 · AI concepts: day1/index.md

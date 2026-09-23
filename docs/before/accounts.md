@@ -74,8 +74,8 @@ needs a free account and a bearer token.
 ## 5 · Kaggle — optional
 
 A second tested route to a running notebook, worth having if your machine is
-locked down and Colab is blocked on your network. No laboratory requires it.
-[Full guidance →](kaggle.md)
+locked down and Colab is blocked on your network. No laboratory requires it, and
+the notebooks read Kaggle's secret manager exactly as they read Colab's.
 
 ## 6 · An LLM provider — required, and you create it yourself
 

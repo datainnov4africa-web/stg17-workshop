@@ -43,7 +43,7 @@ grands modèles de langage et mégadonnées pour la statistique officielle.</p>
 </div>
 
 <div class="stg-cta" markdown>
-[:material-rocket-launch: Commencez ici — ce qu'il faut préparer](before/prerequisites.md){ .md-button .md-button--primary }
+[:material-rocket-launch: Commencez ici — les comptes à créer](before/accounts.md){ .md-button .md-button--primary }
 [:material-calendar-week: Voir la semaine](week/index.md){ .md-button }
 </div>
 
@@ -53,11 +53,10 @@ grands modèles de langage et mégadonnées pour la statistique officielle.</p>
 
 <div markdown>
 ### :material-clipboard-check: Avant votre arrivée
-Les comptes à créer, le paquet de données national à réunir et la vérification
-d'environnement à exécuter. Trois éléments sont attendus **deux semaines** avant
-l'ouverture.
+Les comptes à créer, et où placer les clés qu'ils délivrent. Aucun n'est payant,
+et Earth Engine comporte un délai d'approbation qu'il vaut mieux engager tôt.
 
-[Prérequis →](before/prerequisites.md)
+[Comptes à créer →](before/accounts.md)
 </div>
 
 <div markdown>

@@ -43,7 +43,7 @@ models and big data for official statistics.</p>
 </div>
 
 <div class="stg-cta" markdown>
-[:material-rocket-launch: Start here — what to prepare](before/prerequisites.md){ .md-button .md-button--primary }
+[:material-rocket-launch: Start here — the accounts to create](before/accounts.md){ .md-button .md-button--primary }
 [:material-calendar-week: See the week](week/index.md){ .md-button }
 </div>
 
@@ -53,10 +53,10 @@ models and big data for official statistics.</p>
 
 <div markdown>
 ### :material-clipboard-check: Before you arrive
-Accounts to create, the national data pack to assemble, and the environment check
-to run. Three things are due **two weeks** before the workshop opens.
+The accounts to create, and where to put the keys they give you. None of them
+costs anything, and Earth Engine has an approval delay worth starting early.
 
-[Prerequisites →](before/prerequisites.md)
+[Accounts to create →](before/accounts.md)
 </div>
 
 <div markdown>

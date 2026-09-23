@@ -78,7 +78,8 @@ les granules exige un compte gratuit et un jeton porteur.
 
 Une seconde voie testée vers un notebook qui s'exécute, utile si votre machine est
 verrouillée et que Colab est bloqué sur votre réseau. Aucun laboratoire ne
-l'exige. [Guide complet →](kaggle.md)
+l'exige, et les notebooks lisent le gestionnaire de secrets de Kaggle exactement
+comme celui de Colab.
 
 ## 6 · Un fournisseur LLM — nécessaire, et c'est vous qui le créez
 
