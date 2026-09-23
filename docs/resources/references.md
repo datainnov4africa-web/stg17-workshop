@@ -138,7 +138,7 @@ geoBoundaries: A global database of political administrative boundaries.
 [doi:10.1371/journal.pone.0231866](https://doi.org/10.1371/journal.pone.0231866)
 
 : The boundary source used throughout the laboratories. Cite it if you publish
-with it — and read the [caution about publishing with non-official boundaries](../publish/index.md#step-4-licensing-the-part-that-is-easy-to-get-wrong).
+with it — and read the [caution about publishing with non-official boundaries](licensing.md#4-boundaries).
 
 ---
 
@@ -168,5 +168,5 @@ African Development Bank (Secretariat of STG17) and African Union STATAFRIC,
 under SHaSA II, STG17 Action Plan 2025–2030. https://github.com/datainnov4africa-web/stg17-workshop
 ```
 
-And if you publish a national product built with it, [give it its own DOI](../publish/index.md#step-6-a-doi-so-the-work-can-be-cited)
-— that is what makes it citable in turn.
+And if you publish a national product built with it, give it its own DOI — that
+is what makes it citable in turn.

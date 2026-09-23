@@ -132,7 +132,6 @@ plugins:
             Day 5 · Publishing and results: Jour 5 · Publication et résultats
             Laboratories: Laboratoires
             Slides: Présentations
-            Publish your work: Publier vos travaux
             Resources: Ressources
             Action Plan mapping: Correspondance Plan d'action
             Glossary: Glossaire
@@ -154,8 +153,6 @@ nav:
       - Day 5 · Publishing and results: day5/index.md
   - Laboratories: labs/index.md
   - Slides: slides/index.md
-  - Publish your work:
-      - publish/index.md
   - Resources:
       - Action Plan mapping: resources/action-plan.md
       - Glossary: resources/glossary.md

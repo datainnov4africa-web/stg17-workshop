@@ -75,14 +75,6 @@ son environnement, son livrable et un chemin de repli documenté.
 [Registre des laboratoires →](labs/index.md)
 </div>
 
-<div markdown>
-### :material-github: Publier les travaux de votre pays
-Le parcours pas à pas du notebook qui tourne sur votre portable au dépôt public,
-citable et doté d'un DOI que votre office peut assumer.
-
-[Guide de publication →](publish/index.md)
-</div>
-
 </div>
 
 ## Ce qui distingue cet atelier

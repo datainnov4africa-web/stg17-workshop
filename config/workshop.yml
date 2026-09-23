@@ -103,5 +103,5 @@ paths:
 licences:
   code: "MIT"
   content: "CC BY 4.0"
-  # Ookla derivatives inherit NonCommercial + ShareAlike — see docs/publish/licensing
+  # Ookla derivatives inherit NonCommercial + ShareAlike — see docs/resources/licensing.md
   ookla_source: "CC BY-NC-SA 4.0"

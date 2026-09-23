@@ -75,14 +75,6 @@ environment, its deliverable and a documented fallback.
 [Laboratory register →](labs/index.md)
 </div>
 
-<div markdown>
-### :material-github: Publish your country's work
-The step-by-step route from a notebook that runs on your laptop to a public,
-citable, DOI-bearing repository your office can stand behind.
-
-[Publication guide →](publish/index.md)
-</div>
-
 </div>
 
 ## What makes this workshop different
