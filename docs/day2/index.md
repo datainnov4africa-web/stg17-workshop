@@ -70,9 +70,7 @@ How inference speed changes what is feasible in a production statistical pipelin
 
 Rotating stations across professional use cases — writing and debugging code; drafting reports and methodological notes; producing presentations; generating charts and graphics; image and visual identity work, including logo design; document analysis and audio briefings with NotebookLM; multimodal work with Gemini. Each participant selects two stations relevant to their office and leaves with a deliverable from each.
 
-[:material-file-pdf-box: PDF · EN · Station cards](../downloads/Day2/1530_hands-on_EN-Station-cards.pdf){ .md-button } [:material-microsoft-powerpoint: PPTX · EN · Beyond ChatGPT](../downloads/Day2/1530_hands-on_EN-Beyond-ChatGPT.pptx){ .md-button } [:material-microsoft-powerpoint: PPTX · EN · Toolkit stations](../downloads/Day2/1530_hands-on_EN-Toolkit-stations.pptx){ .md-button } [:material-microsoft-powerpoint: PPTX · FR · Beyond ChatGPT](../downloads/Day2/1530_hands-on_FR-Beyond-ChatGPT.pptx){ .md-button } [:material-notebook-outline: IPYNB · EN](../downloads/Day2/1530_hands-on_EN.ipynb){ .md-button } [:material-notebook-outline: IPYNB · EN · Free AI Studio](../downloads/Day2/1530_hands-on_EN-Free-AI-Studio.ipynb){ .md-button }
-
-[![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/datainnov4africa-web/stg17-workshop/blob/main/docs/downloads/Day2/1530_hands-on_EN.ipynb) **EN** &nbsp; [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/datainnov4africa-web/stg17-workshop/blob/main/docs/downloads/Day2/1530_hands-on_EN-Free-AI-Studio.ipynb) **EN · Free AI Studio**
+[:material-microsoft-powerpoint: PPTX · EN](../downloads/Day2/1530_hands-on_EN.pptx){ .md-button } [:material-microsoft-powerpoint: PPTX · FR](../downloads/Day2/1530_hands-on_FR.pptx){ .md-button }
 
 !!! example "Laboratory — Toolkit stations"
 

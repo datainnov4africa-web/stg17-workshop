@@ -70,9 +70,7 @@ Comment la vitesse d'inférence change ce qui est faisable dans une chaîne stat
 
 Ateliers tournants sur des cas d'usage professionnels — écrire et déboguer du code ; rédiger rapports et notes méthodologiques ; produire des présentations ; générer graphiques et visuels ; travail sur l'image et l'identité visuelle, y compris la création de logos ; analyse documentaire et synthèses audio avec NotebookLM ; multimodalité avec Gemini. Chaque participant choisit deux ateliers pertinents pour son office et repart avec un livrable achevé de chacun.
 
-[:material-file-pdf-box: PDF · EN · Station cards](../downloads/Day2/1530_hands-on_EN-Station-cards.pdf){ .md-button } [:material-microsoft-powerpoint: PPTX · EN · Beyond ChatGPT](../downloads/Day2/1530_hands-on_EN-Beyond-ChatGPT.pptx){ .md-button } [:material-microsoft-powerpoint: PPTX · EN · Toolkit stations](../downloads/Day2/1530_hands-on_EN-Toolkit-stations.pptx){ .md-button } [:material-microsoft-powerpoint: PPTX · FR · Beyond ChatGPT](../downloads/Day2/1530_hands-on_FR-Beyond-ChatGPT.pptx){ .md-button } [:material-notebook-outline: IPYNB · EN](../downloads/Day2/1530_hands-on_EN.ipynb){ .md-button } [:material-notebook-outline: IPYNB · EN · Free AI Studio](../downloads/Day2/1530_hands-on_EN-Free-AI-Studio.ipynb){ .md-button }
-
-[![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/datainnov4africa-web/stg17-workshop/blob/main/docs/downloads/Day2/1530_hands-on_EN.ipynb) **EN** &nbsp; [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/datainnov4africa-web/stg17-workshop/blob/main/docs/downloads/Day2/1530_hands-on_EN-Free-AI-Studio.ipynb) **EN · Free AI Studio**
+[:material-microsoft-powerpoint: PPTX · EN](../downloads/Day2/1530_hands-on_EN.pptx){ .md-button } [:material-microsoft-powerpoint: PPTX · FR](../downloads/Day2/1530_hands-on_FR.pptx){ .md-button }
 
 !!! example "Laboratoire — Ateliers boîte à outils"
 
