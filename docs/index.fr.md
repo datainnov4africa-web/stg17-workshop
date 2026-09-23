@@ -62,7 +62,7 @@ l'ouverture.
 
 <div markdown>
 ### :material-calendar-week: La semaine
-Cinq jours, session par session, avec la présentation et les carnets rattachés à
+Cinq jours, session par session, avec la présentation et les notebooks rattachés à
 chacune. Générée depuis l'agenda lui-même : elle ne peut pas diverger.
 
 [Jour 1 →](day1/index.md)
@@ -78,7 +78,7 @@ son environnement, son livrable et un chemin de repli documenté.
 
 <div markdown>
 ### :material-github: Publier les travaux de votre pays
-Le parcours pas à pas du carnet qui tourne sur votre portable au dépôt public,
+Le parcours pas à pas du notebook qui tourne sur votre portable au dépôt public,
 citable et doté d'un DOI que votre office peut assumer.
 
 [Guide de publication →](publish/index.md)
@@ -92,7 +92,7 @@ citable et doté d'un DOI que votre office peut assumer.
 partir d'un code ISO3, `stg17.countries` résout l'emprise géographique, la zone
 UTM, les tuiles satellitaires et les codes WorldPop — calculés plutôt que
 tabulés. Le laboratoire Ookla du Jour 3 est bâti dessus : fixez votre propre pays
-en tête de ce carnet et la même chaîne produit votre indicateur national.
+en tête de ce notebook et la même chaîne produit votre indicateur national.
 
 **Rien ne dépend d'une étape non testée.** Chaque laboratoire dispose d'un chemin
 de repli qui fonctionne réellement : extraits pays pré-découpés fournis par
@@ -124,7 +124,7 @@ opérationnel direct du **paquet de travail 4.2** du Plan d'action 2025-2030.
 | Obstacle identifié à Kigali | Réponse de cet atelier |
 |---|---|
 | Obstacles d'accès aux nouvelles sources — cadres juridiques, coût, exploitabilité | Modèles d'accès et de partenariat avec les détenteurs privés (Jour 3) ; travail direct sur une source à licence ouverte et ses restrictions (Ookla, CC BY-NC-SA) ; licences, DOI et citation (Jour 5) |
-| Absence de méthodologies harmonisées | Chaque équipe pays exécute la même chaîne documentée sur les mêmes trois sources ; tous les carnets aboutissent dans une seule organisation GitHub publique |
+| Absence de méthodologies harmonisées | Chaque équipe pays exécute la même chaîne documentée sur les mêmes trois sources ; tous les notebooks aboutissent dans une seule organisation GitHub publique |
 | Questions ouvertes sur la qualité des sources alternatives | Biais de couverture et de sélection des sources non probabilistes (Jour 3) ; validation de l'indicateur NTL contre les statistiques infranationales officielles (Jour 4) |
 | Faiblesses de l'informatique et de l'infrastructure mégadonnées des INS | Fondamentaux de l'infrastructure IA, modélisation des coûts et arbitrages de souveraineté (Jour 1) ; technologies mégadonnées et justification de la complexité ajoutée (Jour 3) |
 | Lacunes en ressources humaines, compétences et métiers de la donnée | L'atelier lui-même, encadré par une auto-évaluation initiale et finale alimentant le cadre de compétences |
@@ -156,7 +156,7 @@ opérationnel direct du **paquet de travail 4.2** du Plan d'action 2025-2030.
 !!! tip "Langue de travail"
 
     Les sessions se déroulent en anglais avec interprétation simultanée. **Tout le
-    matériel des laboratoires — chaque carnet, chaque présentation et l'intégralité
+    matériel des laboratoires — chaque notebook, chaque présentation et l'intégralité
     de ce site — existe en anglais et en français.** Utilisez le sélecteur de
     langue dans l'en-tête, ou le lien :material-web: en haut de n'importe quel
-    carnet.
+    notebook.

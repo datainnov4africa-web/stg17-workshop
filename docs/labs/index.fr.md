@@ -4,7 +4,7 @@
 
 12 laboratoires portent la semaine. Chacun est décrit ci-dessous avec l'environnement qu'il exige, la production que l'équipe doit livrer, et le chemin de repli appliqué quand quelque chose casse — ce qui arrivera.
 
-Les supports et le carnet d'un laboratoire ne sont pas sur cette page : ils sont sur la page du jour, à côté de la séance qui le porte. Chaque laboratoire ci-dessous y renvoie.
+Les supports et le notebook d'un laboratoire ne sont pas sur cette page : ils sont sur la page du jour, à côté de la séance qui le porte. Chaque laboratoire ci-dessous y renvoie.
 
 ## Jour 1
 
@@ -108,7 +108,7 @@ Les supports et le carnet d'un laboratoire ne sont pas sur cette page : ils sont
 
 :material-calendar-clock: **Jour 4 · 10h45–12h30** &nbsp;·&nbsp; en équipes &nbsp;·&nbsp; [voir la séance](../day4/index.md#10h4512h30-atelier-partie-2-explorer-et-comprendre)
 
-**Environnement et données** — Même carnet que la partie 1 — étapes 7 et 8
+**Environnement et données** — Même notebook que la partie 1 — étapes 7 et 8
 
 **Ce que produit l’équipe** — L'inventaire des artefacts de votre pays, avec les preuves
 

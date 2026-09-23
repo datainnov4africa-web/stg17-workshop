@@ -23,7 +23,7 @@ fichier ensuite.
 ## Pendant l'atelier
 
 Vous n'avez rien à télécharger à l'avance. Chaque laboratoire porte son propre
-matériel dans le carnet qui vous sera fourni.
+matériel dans le notebook qui vous sera fourni.
 
 Si une présentation dont vous avez besoin ne figure pas ici le jour venu,
 demandez-la : l'équipe d'animation l'a.

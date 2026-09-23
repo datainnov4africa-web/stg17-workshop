@@ -1,10 +1,10 @@
 # Vérification de l'environnement
 
-Un carnet. Environ cinq minutes. Il vous dit, point par point, si votre machine
+Un notebook. Environ cinq minutes. Il vous dit, point par point, si votre machine
 peut exécuter les douze laboratoires — puis produit une courte chaîne de
 diagnostic à envoyer aux assistants techniques.
 
-Le carnet de vérification d'environnement est distribué avec le matériel de l'atelier. Votre animateur vous enverra le lien.
+Le notebook de vérification d'environnement est distribué avec le matériel de l'atelier. Votre animateur vous enverra le lien.
 
 !!! tip "Exécutez-le deux fois"
     Une fois chez vous, dès réception de votre invitation, et une fois pendant la
@@ -29,7 +29,7 @@ Le carnet de vérification d'environnement est distribué avec le matériel de l
 La vérification est volontairement généreuse sur ce qui compte comme un problème.
 
 **Du rouge dans le groupe *bibliothèques cœur*** doit être corrigé avant le
-Jour 3. Le carnet affiche la ligne `pip install` exacte pour ce qui manque.
+Jour 3. Le notebook affiche la ligne `pip install` exacte pour ce qui manque.
 
 **De l'orange sur une clé API** n'est pas un échec. Chaque laboratoire utilisant
 une clé dispose aussi d'un chemin documenté fonctionnant sans clé.
@@ -63,10 +63,10 @@ discussion pendant la séance de vérification. **Elle ne contient aucune clé, 
 chemin issu de vos dossiers personnels et aucune donnée personnelle** — uniquement
 ce qui est nécessaire pour vous aider.
 
-## Si le carnet lui-même refuse de s'exécuter
+## Si le notebook lui-même refuse de s'exécuter
 
 C'est déjà un diagnostic, et un diagnostic fréquent. Ouvrez plutôt dans Google
-Colab le carnet que votre animateur vous a transmis : il s'exécute sur les
+Colab le notebook que votre animateur vous a transmis : il s'exécute sur les
 machines de Google, sans rien installer sur la vôtre. Si Colab fonctionne et que
 votre portable non, votre chemin de repli pour toute la semaine est Colab — ce
 qui est une réponse parfaitement valable. Signalez-le à la séance de

@@ -24,7 +24,7 @@ Chaque heure de la semaine est rattachée aux engagements du Plan d'action STG17
 
 | Production de l'atelier | Activité alimentée |
 |---|---|
-| Dépôt GitHub public : carnets, tableaux de bord et notes techniques sur Ookla, WorldPop et NTL | **2.1.1** |
+| Dépôt GitHub public : notebooks, tableaux de bord et notes techniques sur Ookla, WorldPop et NTL | **2.1.1** |
 | Projets de chapitres du manuel de référence sur les compétences clés en données | **4.2.1** |
 | Échange d'expériences pays sur l'IA et les données non traditionnelles | **3.3.2 · 3.1.2** |
 | Besoins d'infrastructure IA évalués par les participants | **4.2.3** |

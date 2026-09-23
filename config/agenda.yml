@@ -482,7 +482,7 @@ labs:
     team_fr: équipes
     country: CIV
     env_en: Same notebook as part 1 — steps 7 and 8
-    env_fr: Même carnet que la partie 1 — étapes 7 et 8
+    env_fr: Même notebook que la partie 1 — étapes 7 et 8
     deliverable_en: The artefact inventory for your country, with evidence
     deliverable_fr: L'inventaire des artefacts de votre pays, avec les preuves
     fallback_en: The reference country (Côte d'Ivoire) is prepared end to end

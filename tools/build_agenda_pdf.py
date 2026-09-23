@@ -104,7 +104,7 @@ STRINGS = {
         "day": "Jour",
         "l_dates": "DATES", "l_venue": "LIEU", "l_shape": "FORMAT",
         "shape": "{days} jours · {sessions} séances · {labs} laboratoires",
-        "site": "Détail complet, supports et carnets :",
+        "site": "Détail complet, supports et notebooks :",
     },
 }
 

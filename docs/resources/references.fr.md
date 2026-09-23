@@ -44,7 +44,7 @@ NASA's Black Marble nighttime lights product suite.
 [doi:10.1016/j.rse.2018.03.017](https://doi.org/10.1016/j.rse.2018.03.017)
 
 : La suite VNP46 — de VNP46A1 à A4, à 500 m depuis janvier 2012. C'est le produit
-qu'utilise le carnet local du Jour 4. À lire avant de citer une valeur de radiance.
+qu'utilise le notebook local du Jour 4. À lire avant de citer une valeur de radiance.
 
 **Elvidge, C.D., Zhizhin, M., Ghosh, T., Hsu, F.-C., Taneja, J.** (2021).
 Annual Time Series of Global VIIRS Nighttime Lights Derived from Monthly Averages: 2012 to 2019.
@@ -53,7 +53,7 @@ Annual Time Series of Global VIIRS Nighttime Lights Derived from Monthly Average
 
 : La série annuelle VNL v2 de l'EOG, et le filtrage appliqué pour retirer les feux
 de biomasse, les aurores et le fond. C'est le produit derrière la variante Earth
-Engine — et la raison pour laquelle les deux carnets donnent des chiffres
+Engine — et la raison pour laquelle les deux notebooks donnent des chiffres
 légèrement différents.
 
 **Li, X., Zhou, Y., Zhao, M., Zhao, X.** (2020).
@@ -164,7 +164,7 @@ Nations unies, et l'origine de la Plateforme mondiale citée dans l'exposé du J
 
 ## Comment citer le matériel de l'atelier
 
-Si vous réutilisez un carnet ou une figure de ce dépôt :
+Si vous réutilisez un notebook ou une figure de ce dépôt :
 
 ```
 STG17 Workshop — Emerging Issues, Emerging Practice.

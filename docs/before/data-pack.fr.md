@@ -17,7 +17,7 @@ trouvé sur internet. Tout l'objet de la semaine est que vos résultats se
 réconcilient avec ce que votre office publie déjà ; des frontières différentes des
 vôtres garantissent qu'ils ne s'y réconcilieront pas.
 
-Les carnets se replient sur [geoBoundaries](https://www.geoboundaries.org) si rien
+Les notebooks se replient sur [geoBoundaries](https://www.geoboundaries.org) si rien
 n'est fourni, et cela convient pour apprendre la méthode. Cela ne convient pas
 pour publier : geoBoundaries est ouvert et citable mais ne porte aucune valeur
 juridique dans votre pays, et la représentation des frontières est politiquement

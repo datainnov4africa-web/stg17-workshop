@@ -35,7 +35,7 @@ Aucun laboratoire ne l'exige. Une voie de secours si Colab est bloqué.
 
 <div markdown>
 ### :material-notebook-check: Vérification d'environnement
-Un carnet, cinq minutes, une chaîne de diagnostic à nous envoyer.
+Un notebook, cinq minutes, une chaîne de diagnostic à nous envoyer.
 
 [Exécuter →](environment-check.md)
 </div>
@@ -66,14 +66,14 @@ repli documenté : signalez-le, il sera appliqué.
 
 **La bande passante** est la cause d'échec la plus fréquente des laboratoires,
 d'où le fait que les jeux de données soient préparés à l'avance par l'équipe
-d'animation plutôt que téléchargés pendant les séances, et que chaque carnet
+d'animation plutôt que téléchargés pendant les séances, et que chaque notebook
 publié s'exécute aussi sur Colab, où rien n'est téléchargé sur votre machine.
 
 **Les clés API en échec ou limitées** sont traitées par un chemin de
 démonstration animé par le facilitateur pour chaque étape dépendant d'une API, et
-par les carnets eux-mêmes : la plupart des laboratoires qui appellent un modèle
+par les notebooks eux-mêmes : la plupart des laboratoires qui appellent un modèle
 fonctionnent aussi sans clé, via un modèle Ollama local ou un mode hors ligne
-intégré. Le carnet de la matinée du Jour 2 fait exception et en exige une,
+intégré. Le notebook de la matinée du Jour 2 fait exception et en exige une,
 Gemini ou Groq. Vos clés sont les vôtres, créées avant votre départ — voir
 [les comptes à créer](accounts.md).
 

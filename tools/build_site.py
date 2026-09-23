@@ -516,7 +516,7 @@ def render_labs(agenda: dict, lang: str, config: dict) -> str:
          "it needs, the artefact the team must produce, and the fallback applied when something "
          "breaks — which it will."),
         "",
-        ("Les supports et le carnet d'un laboratoire ne sont pas sur cette page : ils sont sur "
+        ("Les supports et le notebook d'un laboratoire ne sont pas sur cette page : ils sont sur "
          "la page du jour, à côté de la séance qui le porte. Chaque laboratoire ci-dessous y "
          "renvoie."
          if fr else
@@ -647,7 +647,7 @@ def render_action_plan(agenda: dict, lang: str) -> str:
     outputs = [
         (("Public GitHub repository: notebooks, dashboards and technical notes on Ookla, "
           "WorldPop and NTL",
-          "Dépôt GitHub public : carnets, tableaux de bord et notes techniques sur Ookla, "
+          "Dépôt GitHub public : notebooks, tableaux de bord et notes techniques sur Ookla, "
           "WorldPop et NTL"), "2.1.1"),
         (("Draft chapters for the reference manual on key data skills",
           "Projets de chapitres du manuel de référence sur les compétences clés en données"), "4.2.1"),
@@ -841,7 +841,7 @@ def render_glossary(lang: str) -> str:
         "# " + ("Glossaire" if fr else "Glossary"),
         "",
         ("Le vocabulaire commun de la semaine. Ces termes sont tirés du paquet `stg17` "
-         "lui-même : un carnet, une diapositive et cette page emploient nécessairement "
+         "lui-même : un notebook, une diapositive et cette page emploient nécessairement "
          "la même formulation."
          if fr else
          "The shared vocabulary of the week. These terms come from the `stg17` package "

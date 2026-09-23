@@ -97,7 +97,7 @@ office.
 - [ ] Chaque intrant listé, avec sa licence et la date de récupération
 - [ ] Licence de sortie déterminée par l'intrant le plus strict, non par préférence
 - [ ] Rien de confidentiel, rien de non diffusé, aucune donnée personnelle — **y compris dans l'historique git**
-- [ ] Aucune clé API, nulle part, y compris dans les sorties de carnets
+- [ ] Aucune clé API, nulle part, y compris dans les sorties de notebooks
 - [ ] Déclaration de limites présente, spécifique, et portant sur votre pays
 - [ ] Source des frontières nommée
 - [ ] Un mainteneur nommé avec une adresse institutionnelle

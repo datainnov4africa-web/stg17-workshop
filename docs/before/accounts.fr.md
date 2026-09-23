@@ -22,8 +22,8 @@ livrable.
    stockez-le sous `GITHUB_TOKEN` — voir [où placer vos clés](#ou-placer-vos-cles).
 
 !!! info "Pourquoi un jeton, et pas seulement le compte"
-    Les carnets des Jours 2, 3 et 4 publient votre livrable sur GitHub depuis le
-    carnet lui-même. Sans `GITHUB_TOKEN`, le carnet conserve vos fichiers et saute
+    Les notebooks des Jours 2, 3 et 4 publient votre livrable sur GitHub depuis le
+    notebook lui-même. Sans `GITHUB_TOKEN`, le notebook conserve vos fichiers et saute
     l'étape de publication : vous avez toujours le travail, mais pas l'URL
     publique — et c'est l'URL publique qui *est* le livrable.
 
@@ -33,18 +33,18 @@ livrable.
 
 ## 2 · Google — obligatoire
 
-Utilisé pour Google Colab, le chemin de repli testé de tous les carnets de
+Utilisé pour Google Colab, le chemin de repli testé de tous les notebooks de
 l'atelier. La plupart des participants en ont déjà un.
 
 Testez-le une fois avant l'atelier : ouvrez une page-jour — le [Jour 1](../day1/index.md),
-par exemple —, cliquez sur le badge Colab placé à côté d'un carnet et exécutez la
+par exemple —, cliquez sur le badge Colab placé à côté d'un notebook et exécutez la
 première cellule. Si elle s'exécute, votre chemin de repli fonctionne.
 
 ## 3 · Google Earth Engine — vivement recommandé
 
-Le carnet du Jour 4 après-midi lit les lumières nocturnes VIIRS via Earth Engine
+Le notebook du Jour 4 après-midi lit les lumières nocturnes VIIRS via Earth Engine
 et vous demande l'identifiant de votre projet au démarrage. Sans compte approuvé,
-ce carnet ne peut pas s'exécuter du tout — d'où l'intérêt de s'y prendre tôt.
+ce notebook ne peut pas s'exécuter du tout — d'où l'intérêt de s'y prendre tôt.
 
 1. [code.earthengine.google.com/register](https://code.earthengine.google.com/register)
 2. Choisissez l'usage **non commercial / recherche**.
@@ -56,7 +56,7 @@ ce carnet ne peut pas s'exécuter du tout — d'où l'intérêt de s'y prendre t
     participants découvrent le Jour 4 au matin que leur inscription est encore en
     attente.
 
-Notez l'identifiant du projet — il alimente la variable `GEE_PROJECT` des carnets
+Notez l'identifiant du projet — il alimente la variable `GEE_PROJECT` des notebooks
 Earth Engine.
 
 ## 4 · NASA Earthdata — obligatoire pour la voie locale du Jour 4
@@ -76,7 +76,7 @@ les granules exige un compte gratuit et un jeton porteur.
 
 ## 5 · Kaggle — optionnel
 
-Une seconde voie testée vers un carnet qui s'exécute, utile si votre machine est
+Une seconde voie testée vers un notebook qui s'exécute, utile si votre machine est
 verrouillée et que Colab est bloqué sur votre réseau. Aucun laboratoire ne
 l'exige. [Guide complet →](kaggle.md)
 
@@ -84,7 +84,7 @@ l'exige. [Guide complet →](kaggle.md)
 
 Vous créez ces comptes et obtenez vos propres clés, avant votre départ. Les deux
 fournisseurs ci-dessous délivrent une clé gratuite depuis une console web en
-quelques minutes ; les carnets la lisent depuis un secret ou une variable
+quelques minutes ; les notebooks la lisent depuis un secret ou une variable
 d'environnement, jamais depuis une cellule que vous modifiez.
 
 Ayez-les **avant le Jour 1** : le premier laboratoire qui appelle un modèle
@@ -96,28 +96,28 @@ s'exécute le Jour 1 à 14h30, pas au Jour 2.
 | **Google Gemini** | Matinée du Jour 2, où il est le fournisseur par défaut | `GEMINI_API_KEY` | [aistudio.google.com/apikey](https://aistudio.google.com/apikey) |
 | **Ollama** (local) | Jours 1 et 2 | *aucune* | Installé sur votre portable — la voie souveraine, aucune clé et aucune donnée ne sort du bâtiment |
 
-Groq est celui à créer en premier : c'est le fournisseur que tous les carnets LLM
+Groq est celui à créer en premier : c'est le fournisseur que tous les notebooks LLM
 acceptent, et le défaut de tous sauf un.
 
 !!! tip "Si vous disposez déjà d'une clé ailleurs"
 
-    Le carnet tableau de bord du Jour 2 accepte aussi **Mistral**, **Z.ai**,
-    **Cerebras** et **OpenRouter**, et deux carnets acceptent n'importe quel
-    point d'accès **compatible OpenAI**. Une ligne à changer en tête du carnet.
+    Le notebook tableau de bord du Jour 2 accepte aussi **Mistral**, **Z.ai**,
+    **Cerebras** et **OpenRouter**, et deux notebooks acceptent n'importe quel
+    point d'accès **compatible OpenAI**. Une ligne à changer en tête du notebook.
     Aucun de ces comptes n'est à créer pour l'atelier.
 
 ---
 
 ## Où placer vos clés
 
-**Ne collez jamais une clé dans une cellule de carnet.** Une clé collée dans un
-carnet que vous poussez ensuite sur GitHub est une clé que vous avez publiée, et
+**Ne collez jamais une clé dans une cellule de notebook.** Une clé collée dans un
+notebook que vous poussez ensuite sur GitHub est une clé que vous avez publiée, et
 la révoquer est le moindre des désagréments.
 
 === "Google Colab"
 
     Cliquez sur l'icône :material-key: dans la barre latérale gauche →
-    **Add new secret**. Nommez-la exactement comme le carnet l'attend
+    **Add new secret**. Nommez-la exactement comme le notebook l'attend
     (`GROQ_API_KEY`, `EARTHDATA_TOKEN`, …) et activez **Notebook access**.
 
 === "Kaggle"
@@ -126,7 +126,7 @@ la révoquer est le moindre des désagréments.
 
 === "Votre propre machine"
 
-    Créez un fichier nommé `.env` à côté des carnets :
+    Créez un fichier nommé `.env` à côté des notebooks :
 
     ```
     GROQ_API_KEY=gsk_...
@@ -137,7 +137,7 @@ la révoquer est le moindre des désagréments.
     Le `.gitignore` du dépôt exclut déjà `.env` : il ne peut pas être versionné par
     accident.
 
-La plupart des carnets lisent les clés via `stg17.env.get_secret()`, qui parcourt
+La plupart des notebooks lisent les clés via `stg17.env.get_secret()`, qui parcourt
 les secrets Colab, puis ceux de Kaggle, puis l'environnement, puis `.env` — et
 signale une clé absente comme un repli documenté plutôt que comme un plantage. Les
 autres embarquent leur propre lecteur, qui cherche aux mêmes endroits, dans le

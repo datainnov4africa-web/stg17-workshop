@@ -2,7 +2,7 @@
 
 # Glossaire
 
-Le vocabulaire commun de la semaine. Ces termes sont tirés du paquet `stg17` lui-même : un carnet, une diapositive et cette page emploient nécessairement la même formulation.
+Le vocabulaire commun de la semaine. Ces termes sont tirés du paquet `stg17` lui-même : un notebook, une diapositive et cette page emploient nécessairement la même formulation.
 
 !!! tip "Discipline de vocabulaire"
 

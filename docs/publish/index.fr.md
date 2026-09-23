@@ -25,7 +25,7 @@ Avant de toucher à GitHub, répartissez la production de la semaine en trois ta
 
 | Tas | Exemples | Que faire |
 |---|---|---|
-| **Publier** | Carnets, indicateurs agrégés, cartes, méthodologie, déclaration de limites | Tout ce qui suit s'applique |
+| **Publier** | Notebooks, indicateurs agrégés, cartes, méthodologie, déclaration de limites | Tout ce qui suit s'applique |
 | **Publier avec précaution** | Produits dérivés de sources à licence restrictive ; frontières dont la représentation est politiquement sensible | Lisez d'abord [l'étape 4 sur les licences](#etape-4-licences-la-partie-facile-a-rater) |
 | **Ne pas publier** | Microdonnées, tout ce qui relève du secret statistique, chiffres officiels non diffusés, clés API | À garder entièrement hors du dépôt — voir l'avertissement ci-dessous |
 
@@ -93,10 +93,10 @@ stg17-<iso3>/
 
 ## Étape 2 · Déposez vos travaux, et rédigez le README
 
-### Les carnets
+### Les notebooks
 
 Copiez-les **exactement tels que vous les avez exécutés**, sorties comprises.
-C'est le seul endroit où versionner les sorties d'un carnet est justifié : un
+C'est le seul endroit où versionner les sorties d'un notebook est justifié : un
 lecteur qui ne peut pas exécuter votre chaîne doit tout de même pouvoir voir ce
 qu'elle a produit.
 
@@ -104,7 +104,7 @@ Avant de versionner, vérifiez trois choses :
 
 - [ ] Aucune clé API dans une cellule — cherchez `sk-`, `gsk_`, `Bearer`
 - [ ] Le `COUNTRY_ISO3` en tête est bien le vôtre
-- [ ] Le carnet s'exécute de haut en bas sur un noyau neuf
+- [ ] Le notebook s'exécute de haut en bas sur un noyau neuf
 
 ### Le README
 
@@ -128,7 +128,7 @@ Deux ou trois figures, avec une phrase chacune. Montrez la réponse avant la mé
 | <Votre office> | Frontières ADM1 | 2024 | <votre licence> | — |
 
 ## Méthode
-Brève. Renvoyez au carnet pour le détail.
+Brève. Renvoyez au notebook pour le détail.
 
 ## Limites
 **Non optionnel.** Voir ci-dessous.
@@ -196,7 +196,7 @@ Trois choses distinctes ont besoin d'une licence, et ce n'est pas la même.
 
 ### Votre code → MIT
 
-Les carnets et scripts que vous avez écrits. MIT est permissive, courte, et c'est
+Les notebooks et scripts que vous avez écrits. MIT est permissive, courte, et c'est
 ce que fournit le gabarit. Rien à décider.
 
 ### Vos contenus rédigés → CC BY 4.0
@@ -393,7 +393,7 @@ candidats à la série de webinaires « brown bag » (activité 1.3.1).
 - [ ] Le tableau des sources liste chaque intrant, sa période et sa licence
 - [ ] Déclaration de limites présente et propre à votre pays
 - [ ] `LICENSE` et `LICENSE-DATA` présents, et la licence des données est *correcte* au regard des sources utilisées
-- [ ] Les carnets s'exécutent de haut en bas sur un noyau neuf
+- [ ] Les notebooks s'exécutent de haut en bas sur un noyau neuf
 - [ ] Aucune clé, aucune microdonnée, aucun chiffre non diffusé — y compris dans l'historique git
 - [ ] Site GitHub Pages en ligne
 - [ ] `metadata.json` rempli, sujets GitHub renseignés
