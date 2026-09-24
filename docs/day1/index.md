@@ -19,6 +19,8 @@ Welcome and opening remarks by the African Development Bank, AU STATAFRIC, and N
 
 Why the Bank set up DI4A, what the current portfolio funds, and the milestones ahead — including what national statistical offices can expect to draw on over the next two years.
 
+[:material-microsoft-powerpoint: PPTX · EN](../downloads/Day1/0915_afdb-data-innovation-for_EN.pptx){ .md-button }
+
 
 ### 09:35–10:05 &nbsp;·&nbsp; The UN Big Data Regional Hub in Rwanda: milestones and use cases
 

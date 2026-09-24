@@ -19,6 +19,8 @@ Mots de bienvenue et d'ouverture de la Banque africaine de développement et de 
 
 Pourquoi la Banque a créé DI4A, ce que finance le portefeuille actuel, et les prochaines étapes — et notamment ce sur quoi les offices statistiques nationaux pourront s'appuyer dans les deux années à venir.
 
+[:material-microsoft-powerpoint: PPTX · EN](../downloads/Day1/0915_afdb-data-innovation-for_EN.pptx){ .md-button }
+
 
 ### 09h35–10h05 &nbsp;·&nbsp; Le Hub régional des Nations Unies pour les mégadonnées au Rwanda : jalons et cas d'usage
 
