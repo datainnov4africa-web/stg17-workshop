@@ -27,7 +27,9 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
-          python-version: "3.11"
+          # 3.12 — see the note in validate.yml. The two must stay in step:
+          # this job runs build_all.py, which runs the same notebook check.
+          python-version: "3.12"
           cache: pip
 
       - name: Install

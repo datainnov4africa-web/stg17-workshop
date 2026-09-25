@@ -14,7 +14,12 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
-          python-version: "3.11"
+          # 3.12, because the supplied notebooks are written on it. PEP 701
+          # allows an f-string to nest the same quote character it opened with,
+          # and a notebook using that parses here and fails on 3.11 — which is
+          # how a green local check met a red CI. The runner must speak the
+          # version the material is authored in.
+          python-version: "3.12"
           cache: pip
 
       - name: Install
