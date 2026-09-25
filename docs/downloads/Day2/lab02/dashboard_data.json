@@ -1,0 +1,1564 @@
+{
+ "meta": {
+  "publisher": {
+   "en": "National Institute of Statistics",
+   "fr": "Institut National de la Statistique"
+  },
+  "country": {
+   "en": "",
+   "fr": ""
+  },
+  "docTitle": {
+   "en": "Bulletin statistique trimestriel",
+   "fr": "Bulletin statistique trimestriel"
+  },
+  "period": {
+   "en": "",
+   "fr": ""
+  },
+  "sourceUrl": "#",
+  "licence": {
+   "en": "Source data: as published by the institute. Dashboard code: MIT.",
+   "fr": "Données source : telles que publiées par l'institut. Code : MIT."
+  },
+  "contact": {
+   "en": "Built at the STG17 technical workshop, lab 02.",
+   "fr": "Réalisé lors de l'atelier technique STG17, labo 02."
+  },
+  "defaultLang": "fr",
+  "synthetic": true,
+  "generated": "2026-09-25"
+ },
+ "areas": [
+  {
+   "id": "nat",
+   "fr": "Ensemble du pays",
+   "en": "whole country",
+   "national": true
+  },
+  {
+   "id": "extreme-ouest",
+   "fr": "Extrême Ouest",
+   "en": "far west"
+  },
+  {
+   "id": "hauts-plateaux",
+   "fr": "Hauts Plateaux",
+   "en": "highlands"
+  },
+  {
+   "id": "littoral-nord",
+   "fr": "Littoral Nord",
+   "en": "north coast"
+  },
+  {
+   "id": "littoral-sud",
+   "fr": "Littoral Sud",
+   "en": "south coast"
+  },
+  {
+   "id": "plateau-central",
+   "fr": "Plateau Central",
+   "en": "central plateau"
+  },
+  {
+   "id": "vallee-de-l-est",
+   "fr": "Vallée de l'Est",
+   "en": "eastern valley"
+  }
+ ],
+ "kpis": [
+  {
+   "labels": {
+    "en": "National unemployment rate, 2025",
+    "fr": "Taux de chômage national, 2025"
+   },
+   "value": 12.8,
+   "unit": {
+    "en": "%",
+    "fr": "%"
+   },
+   "delta": null,
+   "deltaLabel": {
+    "en": "vs None",
+    "fr": "vs None"
+   },
+   "good": "down",
+   "highlight": false
+  },
+  {
+   "labels": {
+    "en": "Internet access in households, 2025",
+    "fr": "Accès Internet des ménages, 2025"
+   },
+   "value": 61.4,
+   "unit": {
+    "en": "%",
+    "fr": "%"
+   },
+   "delta": null,
+   "deltaLabel": {
+    "en": "vs None",
+    "fr": "vs None"
+   },
+   "good": "up",
+   "highlight": false
+  },
+  {
+   "labels": {
+    "en": "Total resident population, 2025",
+    "fr": "Population résidente totale, 2025"
+   },
+   "value": 18742,
+   "unit": {
+    "en": "thousands",
+    "fr": "thousands"
+   },
+   "delta": null,
+   "deltaLabel": {
+    "en": "vs None",
+    "fr": "vs None"
+   },
+   "good": "up",
+   "highlight": false
+  },
+  {
+   "labels": {
+    "en": "Unemployment rate Littoral Sud, 2025",
+    "fr": "Taux de chômage Littoral Sud, 2025"
+   },
+   "value": 11.8,
+   "unit": {
+    "en": "%",
+    "fr": "%"
+   },
+   "delta": null,
+   "deltaLabel": {
+    "en": "vs None",
+    "fr": "vs None"
+   },
+   "good": "down",
+   "highlight": false
+  }
+ ],
+ "series": {
+  "taux_chomage_par_region": {
+   "unit": {
+    "en": "%",
+    "fr": "%"
+   },
+   "periods": [
+    "2021",
+    "2022",
+    "2023",
+    "2024",
+    "2025"
+   ],
+   "values": {
+    "nat": [
+     14.9,
+     14.5,
+     13.9,
+     13.4,
+     12.8
+    ],
+    "extreme-ouest": [
+     17.1,
+     16.9,
+     16.3,
+     15.8,
+     15.1
+    ],
+    "hauts-plateaux": [
+     19.4,
+     19.0,
+     18.2,
+     17.8,
+     17.0
+    ],
+    "littoral-nord": [
+     11.2,
+     10.8,
+     10.1,
+     9.7,
+     8.9
+    ],
+    "littoral-sud": [
+     13.9,
+     13.4,
+     12.9,
+     12.6,
+     11.8
+    ],
+    "plateau-central": [
+     23.8,
+     23.1,
+     22.4,
+     21.9,
+     21.3
+    ],
+    "vallee-de-l-est": [
+     15.6,
+     15.2,
+     14.7,
+     14.1,
+     13.4
+    ]
+   }
+  },
+  "population_residente": {
+   "unit": {
+    "en": "thousands",
+    "fr": "thousands"
+   },
+   "periods": [
+    "Densité (hab/km2)",
+    "Part (%)",
+    "Population"
+   ],
+   "values": {
+    "extreme-ouest": [
+     23,
+     11.8,
+     2218
+    ],
+    "hauts-plateaux": [
+     null,
+     13.3,
+     2489
+    ],
+    "littoral-nord": [
+     312,
+     26.2,
+     4912
+    ],
+    "littoral-sud": [
+     188,
+     19.8,
+     3704
+    ],
+    "plateau-central": [
+     41,
+     11.5,
+     2158
+    ],
+    "nat": [
+     114,
+     100.0,
+     18742
+    ],
+    "vallee-de-l-est": [
+     97,
+     17.4,
+     3261
+    ]
+   }
+  },
+  "menages_internet": {
+   "unit": {
+    "en": "%",
+    "fr": "%"
+   },
+   "periods": [
+    "2023",
+    "2025",
+    "Variation (points)"
+   ],
+   "values": {
+    "nat": [
+     48.2,
+     61.4,
+     13.2
+    ],
+    "extreme-ouest": [
+     35.6,
+     47.9,
+     12.3
+    ],
+    "hauts-plateaux": [
+     38.4,
+     51.1,
+     12.7
+    ],
+    "littoral-nord": [
+     64.1,
+     78.3,
+     14.2
+    ],
+    "littoral-sud": [
+     55.7,
+     69.4,
+     13.7
+    ],
+    "plateau-central": [
+     33.2,
+     46.8,
+     13.6
+    ],
+    "vallee-de-l-est": [
+     47.9,
+     60.2,
+     12.3
+    ]
+   }
+  }
+ },
+ "views": [
+  {
+   "id": "taux_chomage_par_region",
+   "chart": "line",
+   "tab": {
+    "en": "Taux de chômage par région",
+    "fr": "Taux de chômage par région"
+   },
+   "title": {
+    "en": "Taux de chômage par région",
+    "fr": "Taux de chômage par région"
+   },
+   "sub": {
+    "en": "%",
+    "fr": "%"
+   },
+   "lede": {
+    "en": "",
+    "fr": ""
+   },
+   "src": {
+    "en": "Source: Bulletin statistique trimestriel",
+    "fr": "Source : Bulletin statistique trimestriel"
+   }
+  },
+  {
+   "id": "population_residente",
+   "chart": "grouped",
+   "tab": {
+    "en": "Population résidente par région au 1er juillet 2025 (en milliers)",
+    "fr": "Population résidente par région au 1er juillet 2025 (en milliers)"
+   },
+   "title": {
+    "en": "Population résidente par région au 1er juillet 2025 (en milliers)",
+    "fr": "Population résidente par région au 1er juillet 2025 (en milliers)"
+   },
+   "sub": {
+    "en": "thousands",
+    "fr": "thousands"
+   },
+   "lede": {
+    "en": "",
+    "fr": ""
+   },
+   "src": {
+    "en": "Source: Bulletin statistique trimestriel",
+    "fr": "Source : Bulletin statistique trimestriel"
+   }
+  },
+  {
+   "id": "menages_internet",
+   "chart": "line",
+   "tab": {
+    "en": "Ménages disposant d'une connexion Internet à domicile (en %)",
+    "fr": "Ménages disposant d'une connexion Internet à domicile (en %)"
+   },
+   "title": {
+    "en": "Ménages disposant d'une connexion Internet à domicile (en %)",
+    "fr": "Ménages disposant d'une connexion Internet à domicile (en %)"
+   },
+   "sub": {
+    "en": "%",
+    "fr": "%"
+   },
+   "lede": {
+    "en": "",
+    "fr": ""
+   },
+   "src": {
+    "en": "Source: Bulletin statistique trimestriel",
+    "fr": "Source : Bulletin statistique trimestriel"
+   }
+  }
+ ],
+ "facts": [
+  {
+   "indicator": "taux_chomage_par_region",
+   "area": "littoral-nord",
+   "period": "2021",
+   "value": 11.2,
+   "unit": {
+    "en": "%",
+    "fr": "%"
+   },
+   "page": 1,
+   "snippet": "Littoral Nord 11,2 10,8 10,1 9,7 8,9",
+   "status": "ok",
+   "note": null
+  },
+  {
+   "indicator": "taux_chomage_par_region",
+   "area": "littoral-nord",
+   "period": "2022",
+   "value": 10.8,
+   "unit": {
+    "en": "%",
+    "fr": "%"
+   },
+   "page": 1,
+   "snippet": "Littoral Nord 11,2 10,8 10,1 9,7 8,9",
+   "status": "ok",
+   "note": null
+  },
+  {
+   "indicator": "taux_chomage_par_region",
+   "area": "littoral-nord",
+   "period": "2023",
+   "value": 10.1,
+   "unit": {
+    "en": "%",
+    "fr": "%"
+   },
+   "page": 1,
+   "snippet": "Littoral Nord 11,2 10,8 10,1 9,7 8,9",
+   "status": "ok",
+   "note": null
+  },
+  {
+   "indicator": "taux_chomage_par_region",
+   "area": "littoral-nord",
+   "period": "2024",
+   "value": 9.7,
+   "unit": {
+    "en": "%",
+    "fr": "%"
+   },
+   "page": 1,
+   "snippet": "Littoral Nord 11,2 10,8 10,1 9,7 8,9",
+   "status": "ok",
+   "note": null
+  },
+  {
+   "indicator": "taux_chomage_par_region",
+   "area": "littoral-nord",
+   "period": "2025",
+   "value": 8.9,
+   "unit": {
+    "en": "%",
+    "fr": "%"
+   },
+   "page": 1,
+   "snippet": "Littoral Nord 11,2 10,8 10,1 9,7 8,9",
+   "status": "ok",
+   "note": null
+  },
+  {
+   "indicator": "taux_chomage_par_region",
+   "area": "littoral-sud",
+   "period": "2021",
+   "value": 13.9,
+   "unit": {
+    "en": "%",
+    "fr": "%"
+   },
+   "page": 1,
+   "snippet": "Littoral Sud 13,9 13,4 12,9 12,6 11,8",
+   "status": "ok",
+   "note": null
+  },
+  {
+   "indicator": "taux_chomage_par_region",
+   "area": "littoral-sud",
+   "period": "2022",
+   "value": 13.4,
+   "unit": {
+    "en": "%",
+    "fr": "%"
+   },
+   "page": 1,
+   "snippet": "Littoral Sud 13,9 13,4 12,9 12,6 11,8",
+   "status": "ok",
+   "note": null
+  },
+  {
+   "indicator": "taux_chomage_par_region",
+   "area": "littoral-sud",
+   "period": "2023",
+   "value": 12.9,
+   "unit": {
+    "en": "%",
+    "fr": "%"
+   },
+   "page": 1,
+   "snippet": "Littoral Sud 13,9 13,4 12,9 12,6 11,8",
+   "status": "ok",
+   "note": null
+  },
+  {
+   "indicator": "taux_chomage_par_region",
+   "area": "littoral-sud",
+   "period": "2024",
+   "value": 12.6,
+   "unit": {
+    "en": "%",
+    "fr": "%"
+   },
+   "page": 1,
+   "snippet": "Littoral Sud 13,9 13,4 12,9 12,6 11,8",
+   "status": "ok",
+   "note": null
+  },
+  {
+   "indicator": "taux_chomage_par_region",
+   "area": "littoral-sud",
+   "period": "2025",
+   "value": 11.8,
+   "unit": {
+    "en": "%",
+    "fr": "%"
+   },
+   "page": 1,
+   "snippet": "Littoral Sud 13,9 13,4 12,9 12,6 11,8",
+   "status": "ok",
+   "note": null
+  },
+  {
+   "indicator": "taux_chomage_par_region",
+   "area": "plateau-central",
+   "period": "2021",
+   "value": 23.8,
+   "unit": {
+    "en": "%",
+    "fr": "%"
+   },
+   "page": 1,
+   "snippet": "Plateau Central 23,8 23,1 22,4 21,9 21,3",
+   "status": "ok",
+   "note": null
+  },
+  {
+   "indicator": "taux_chomage_par_region",
+   "area": "plateau-central",
+   "period": "2022",
+   "value": 23.1,
+   "unit": {
+    "en": "%",
+    "fr": "%"
+   },
+   "page": 1,
+   "snippet": "Plateau Central 23,8 23,1 22,4 21,9 21,3",
+   "status": "ok",
+   "note": null
+  },
+  {
+   "indicator": "taux_chomage_par_region",
+   "area": "plateau-central",
+   "period": "2023",
+   "value": 22.4,
+   "unit": {
+    "en": "%",
+    "fr": "%"
+   },
+   "page": 1,
+   "snippet": "Plateau Central 23,8 23,1 22,4 21,9 21,3",
+   "status": "ok",
+   "note": null
+  },
+  {
+   "indicator": "taux_chomage_par_region",
+   "area": "plateau-central",
+   "period": "2024",
+   "value": 21.9,
+   "unit": {
+    "en": "%",
+    "fr": "%"
+   },
+   "page": 1,
+   "snippet": "Plateau Central 23,8 23,1 22,4 21,9 21,3",
+   "status": "ok",
+   "note": null
+  },
+  {
+   "indicator": "taux_chomage_par_region",
+   "area": "plateau-central",
+   "period": "2025",
+   "value": 21.3,
+   "unit": {
+    "en": "%",
+    "fr": "%"
+   },
+   "page": 1,
+   "snippet": "Plateau Central 23,8 23,1 22,4 21,9 21,3",
+   "status": "ok",
+   "note": null
+  },
+  {
+   "indicator": "taux_chomage_par_region",
+   "area": "vallee-de-l-est",
+   "period": "2021",
+   "value": 15.6,
+   "unit": {
+    "en": "%",
+    "fr": "%"
+   },
+   "page": 1,
+   "snippet": "Vallée de l'Est 15,6 15,2 14,7 14,1 13,4",
+   "status": "ok",
+   "note": null
+  },
+  {
+   "indicator": "taux_chomage_par_region",
+   "area": "vallee-de-l-est",
+   "period": "2022",
+   "value": 15.2,
+   "unit": {
+    "en": "%",
+    "fr": "%"
+   },
+   "page": 1,
+   "snippet": "Vallée de l'Est 15,6 15,2 14,7 14,1 13,4",
+   "status": "ok",
+   "note": null
+  },
+  {
+   "indicator": "taux_chomage_par_region",
+   "area": "vallee-de-l-est",
+   "period": "2023",
+   "value": 14.7,
+   "unit": {
+    "en": "%",
+    "fr": "%"
+   },
+   "page": 1,
+   "snippet": "Vallée de l'Est 15,6 15,2 14,7 14,1 13,4",
+   "status": "ok",
+   "note": null
+  },
+  {
+   "indicator": "taux_chomage_par_region",
+   "area": "vallee-de-l-est",
+   "period": "2024",
+   "value": 14.1,
+   "unit": {
+    "en": "%",
+    "fr": "%"
+   },
+   "page": 1,
+   "snippet": "Vallée de l'Est 15,6 15,2 14,7 14,1 13,4",
+   "status": "ok",
+   "note": null
+  },
+  {
+   "indicator": "taux_chomage_par_region",
+   "area": "vallee-de-l-est",
+   "period": "2025",
+   "value": 13.4,
+   "unit": {
+    "en": "%",
+    "fr": "%"
+   },
+   "page": 1,
+   "snippet": "Vallée de l'Est 15,6 15,2 14,7 14,1 13,4",
+   "status": "ok",
+   "note": null
+  },
+  {
+   "indicator": "taux_chomage_par_region",
+   "area": "hauts-plateaux",
+   "period": "2021",
+   "value": 19.4,
+   "unit": {
+    "en": "%",
+    "fr": "%"
+   },
+   "page": 1,
+   "snippet": "Hauts Plateaux 19,4 19,0 18,2 17,8 17,0 (1)",
+   "status": "ok",
+   "note": null
+  },
+  {
+   "indicator": "taux_chomage_par_region",
+   "area": "hauts-plateaux",
+   "period": "2022",
+   "value": 19.0,
+   "unit": {
+    "en": "%",
+    "fr": "%"
+   },
+   "page": 1,
+   "snippet": "Hauts Plateaux 19,4 19,0 18,2 17,8 17,0 (1)",
+   "status": "ok",
+   "note": null
+  },
+  {
+   "indicator": "taux_chomage_par_region",
+   "area": "hauts-plateaux",
+   "period": "2023",
+   "value": 18.2,
+   "unit": {
+    "en": "%",
+    "fr": "%"
+   },
+   "page": 1,
+   "snippet": "Hauts Plateaux 19,4 19,0 18,2 17,8 17,0 (1)",
+   "status": "ok",
+   "note": null
+  },
+  {
+   "indicator": "taux_chomage_par_region",
+   "area": "hauts-plateaux",
+   "period": "2024",
+   "value": 17.8,
+   "unit": {
+    "en": "%",
+    "fr": "%"
+   },
+   "page": 1,
+   "snippet": "Hauts Plateaux 19,4 19,0 18,2 17,8 17,0 (1)",
+   "status": "ok",
+   "note": null
+  },
+  {
+   "indicator": "taux_chomage_par_region",
+   "area": "hauts-plateaux",
+   "period": "2025",
+   "value": 17.0,
+   "unit": {
+    "en": "%",
+    "fr": "%"
+   },
+   "page": 1,
+   "snippet": "Hauts Plateaux 19,4 19,0 18,2 17,8 17,0 (1)",
+   "status": "ok",
+   "note": null
+  },
+  {
+   "indicator": "taux_chomage_par_region",
+   "area": "extreme-ouest",
+   "period": "2021",
+   "value": 17.1,
+   "unit": {
+    "en": "%",
+    "fr": "%"
+   },
+   "page": 1,
+   "snippet": "Extrême Ouest 17,1 16,9 16,3 15,8 15,1",
+   "status": "ok",
+   "note": null
+  },
+  {
+   "indicator": "taux_chomage_par_region",
+   "area": "extreme-ouest",
+   "period": "2022",
+   "value": 16.9,
+   "unit": {
+    "en": "%",
+    "fr": "%"
+   },
+   "page": 1,
+   "snippet": "Extrême Ouest 17,1 16,9 16,3 15,8 15,1",
+   "status": "ok",
+   "note": null
+  },
+  {
+   "indicator": "taux_chomage_par_region",
+   "area": "extreme-ouest",
+   "period": "2023",
+   "value": 16.3,
+   "unit": {
+    "en": "%",
+    "fr": "%"
+   },
+   "page": 1,
+   "snippet": "Extrême Ouest 17,1 16,9 16,3 15,8 15,1",
+   "status": "ok",
+   "note": null
+  },
+  {
+   "indicator": "taux_chomage_par_region",
+   "area": "extreme-ouest",
+   "period": "2024",
+   "value": 15.8,
+   "unit": {
+    "en": "%",
+    "fr": "%"
+   },
+   "page": 1,
+   "snippet": "Extrême Ouest 17,1 16,9 16,3 15,8 15,1",
+   "status": "ok",
+   "note": null
+  },
+  {
+   "indicator": "taux_chomage_par_region",
+   "area": "extreme-ouest",
+   "period": "2025",
+   "value": 15.1,
+   "unit": {
+    "en": "%",
+    "fr": "%"
+   },
+   "page": 1,
+   "snippet": "Extrême Ouest 17,1 16,9 16,3 15,8 15,1",
+   "status": "ok",
+   "note": null
+  },
+  {
+   "indicator": "taux_chomage_par_region",
+   "area": "nat",
+   "period": "2021",
+   "value": 14.9,
+   "unit": {
+    "en": "%",
+    "fr": "%"
+   },
+   "page": 1,
+   "snippet": "Ensemble du pays 14,9 14,5 13,9 13,4 12,8",
+   "status": "ok",
+   "note": null
+  },
+  {
+   "indicator": "taux_chomage_par_region",
+   "area": "nat",
+   "period": "2022",
+   "value": 14.5,
+   "unit": {
+    "en": "%",
+    "fr": "%"
+   },
+   "page": 1,
+   "snippet": "Ensemble du pays 14,9 14,5 13,9 13,4 12,8",
+   "status": "ok",
+   "note": null
+  },
+  {
+   "indicator": "taux_chomage_par_region",
+   "area": "nat",
+   "period": "2023",
+   "value": 13.9,
+   "unit": {
+    "en": "%",
+    "fr": "%"
+   },
+   "page": 1,
+   "snippet": "Ensemble du pays 14,9 14,5 13,9 13,4 12,8",
+   "status": "ok",
+   "note": null
+  },
+  {
+   "indicator": "taux_chomage_par_region",
+   "area": "nat",
+   "period": "2024",
+   "value": 13.4,
+   "unit": {
+    "en": "%",
+    "fr": "%"
+   },
+   "page": 1,
+   "snippet": "Ensemble du pays 14,9 14,5 13,9 13,4 12,8",
+   "status": "ok",
+   "note": null
+  },
+  {
+   "indicator": "taux_chomage_par_region",
+   "area": "nat",
+   "period": "2025",
+   "value": 12.8,
+   "unit": {
+    "en": "%",
+    "fr": "%"
+   },
+   "page": 1,
+   "snippet": "Ensemble du pays 14,9 14,5 13,9 13,4 12,8",
+   "status": "ok",
+   "note": null
+  },
+  {
+   "indicator": "population_residente",
+   "area": "littoral-nord",
+   "period": "Population",
+   "value": 4912,
+   "unit": {
+    "en": "thousands",
+    "fr": "thousands"
+   },
+   "page": 2,
+   "snippet": "Littoral Nord 4 912 26,2 312",
+   "status": "ok",
+   "note": null
+  },
+  {
+   "indicator": "population_residente",
+   "area": "littoral-nord",
+   "period": "Part (%)",
+   "value": 26.2,
+   "unit": {
+    "en": "%",
+    "fr": "%"
+   },
+   "page": 2,
+   "snippet": "Littoral Nord 4 912 26,2 312",
+   "status": "ok",
+   "note": null
+  },
+  {
+   "indicator": "population_residente",
+   "area": "littoral-nord",
+   "period": "Densité (hab/km2)",
+   "value": 312,
+   "unit": {
+    "en": "inhabitants/km²",
+    "fr": "hab/km2"
+   },
+   "page": 2,
+   "snippet": "Littoral Nord 4 912 26,2 312",
+   "status": "ok",
+   "note": null
+  },
+  {
+   "indicator": "population_residente",
+   "area": "littoral-sud",
+   "period": "Population",
+   "value": 3704,
+   "unit": {
+    "en": "thousands",
+    "fr": "thousands"
+   },
+   "page": 2,
+   "snippet": "Littoral Sud 3 704 19,8 188",
+   "status": "ok",
+   "note": null
+  },
+  {
+   "indicator": "population_residente",
+   "area": "littoral-sud",
+   "period": "Part (%)",
+   "value": 19.8,
+   "unit": {
+    "en": "%",
+    "fr": "%"
+   },
+   "page": 2,
+   "snippet": "Littoral Sud 3 704 19,8 188",
+   "status": "ok",
+   "note": null
+  },
+  {
+   "indicator": "population_residente",
+   "area": "littoral-sud",
+   "period": "Densité (hab/km2)",
+   "value": 188,
+   "unit": {
+    "en": "inhabitants/km²",
+    "fr": "hab/km2"
+   },
+   "page": 2,
+   "snippet": "Littoral Sud 3 704 19,8 188",
+   "status": "ok",
+   "note": null
+  },
+  {
+   "indicator": "population_residente",
+   "area": "plateau-central",
+   "period": "Population",
+   "value": 2158,
+   "unit": {
+    "en": "thousands",
+    "fr": "thousands"
+   },
+   "page": 2,
+   "snippet": "Plateau Central 2 158 11,5 41",
+   "status": "ok",
+   "note": null
+  },
+  {
+   "indicator": "population_residente",
+   "area": "plateau-central",
+   "period": "Part (%)",
+   "value": 11.5,
+   "unit": {
+    "en": "%",
+    "fr": "%"
+   },
+   "page": 2,
+   "snippet": "Plateau Central 2 158 11,5 41",
+   "status": "ok",
+   "note": null
+  },
+  {
+   "indicator": "population_residente",
+   "area": "plateau-central",
+   "period": "Densité (hab/km2)",
+   "value": 41,
+   "unit": {
+    "en": "inhabitants/km²",
+    "fr": "hab/km2"
+   },
+   "page": 2,
+   "snippet": "Plateau Central 2 158 11,5 41",
+   "status": "ok",
+   "note": null
+  },
+  {
+   "indicator": "population_residente",
+   "area": "vallee-de-l-est",
+   "period": "Population",
+   "value": 3261,
+   "unit": {
+    "en": "thousands",
+    "fr": "thousands"
+   },
+   "page": 2,
+   "snippet": "Vallée de l'Est 3 261 17,4 97",
+   "status": "ok",
+   "note": null
+  },
+  {
+   "indicator": "population_residente",
+   "area": "vallee-de-l-est",
+   "period": "Part (%)",
+   "value": 17.4,
+   "unit": {
+    "en": "%",
+    "fr": "%"
+   },
+   "page": 2,
+   "snippet": "Vallée de l'Est 3 261 17,4 97",
+   "status": "ok",
+   "note": null
+  },
+  {
+   "indicator": "population_residente",
+   "area": "vallee-de-l-est",
+   "period": "Densité (hab/km2)",
+   "value": 97,
+   "unit": {
+    "en": "inhabitants/km²",
+    "fr": "hab/km2"
+   },
+   "page": 2,
+   "snippet": "Vallée de l'Est 3 261 17,4 97",
+   "status": "ok",
+   "note": null
+  },
+  {
+   "indicator": "population_residente",
+   "area": "hauts-plateaux",
+   "period": "Population",
+   "value": 2489,
+   "unit": {
+    "en": "thousands",
+    "fr": "thousands"
+   },
+   "page": 2,
+   "snippet": "Hauts Plateaux 2 489 13,3 ...",
+   "status": "ok",
+   "note": null
+  },
+  {
+   "indicator": "population_residente",
+   "area": "hauts-plateaux",
+   "period": "Part (%)",
+   "value": 13.3,
+   "unit": {
+    "en": "%",
+    "fr": "%"
+   },
+   "page": 2,
+   "snippet": "Hauts Plateaux 2 489 13,3 ...",
+   "status": "ok",
+   "note": null
+  },
+  {
+   "indicator": "population_residente",
+   "area": "extreme-ouest",
+   "period": "Population",
+   "value": 2218,
+   "unit": {
+    "en": "thousands",
+    "fr": "thousands"
+   },
+   "page": 2,
+   "snippet": "Extrême Ouest 2 218 11,8 23",
+   "status": "ok",
+   "note": null
+  },
+  {
+   "indicator": "population_residente",
+   "area": "extreme-ouest",
+   "period": "Part (%)",
+   "value": 11.8,
+   "unit": {
+    "en": "%",
+    "fr": "%"
+   },
+   "page": 2,
+   "snippet": "Extrême Ouest 2 218 11,8 23",
+   "status": "ok",
+   "note": null
+  },
+  {
+   "indicator": "population_residente",
+   "area": "extreme-ouest",
+   "period": "Densité (hab/km2)",
+   "value": 23,
+   "unit": {
+    "en": "inhabitants/km²",
+    "fr": "hab/km2"
+   },
+   "page": 2,
+   "snippet": "Extrême Ouest 2 218 11,8 23",
+   "status": "ok",
+   "note": null
+  },
+  {
+   "indicator": "population_residente",
+   "area": "nat",
+   "period": "Population",
+   "value": 18742,
+   "unit": {
+    "en": "thousands",
+    "fr": "thousands"
+   },
+   "page": 2,
+   "snippet": "Total 18 742 100,0 114",
+   "status": "ok",
+   "note": null
+  },
+  {
+   "indicator": "population_residente",
+   "area": "nat",
+   "period": "Part (%)",
+   "value": 100.0,
+   "unit": {
+    "en": "%",
+    "fr": "%"
+   },
+   "page": 2,
+   "snippet": "Total 18 742 100,0 114",
+   "status": "ok",
+   "note": null
+  },
+  {
+   "indicator": "population_residente",
+   "area": "nat",
+   "period": "Densité (hab/km2)",
+   "value": 114,
+   "unit": {
+    "en": "inhabitants/km²",
+    "fr": "hab/km2"
+   },
+   "page": 2,
+   "snippet": "Total 18 742 100,0 114",
+   "status": "ok",
+   "note": null
+  },
+  {
+   "indicator": "menages_internet",
+   "area": "littoral-nord",
+   "period": "2023",
+   "value": 64.1,
+   "unit": {
+    "en": "%",
+    "fr": "%"
+   },
+   "page": 2,
+   "snippet": "Littoral Nord 64,1 78,3 +14,2",
+   "status": "ok",
+   "note": null
+  },
+  {
+   "indicator": "menages_internet",
+   "area": "littoral-nord",
+   "period": "2025",
+   "value": 78.3,
+   "unit": {
+    "en": "%",
+    "fr": "%"
+   },
+   "page": 2,
+   "snippet": "Littoral Nord 64,1 78,3 +14,2",
+   "status": "ok",
+   "note": null
+  },
+  {
+   "indicator": "menages_internet",
+   "area": "littoral-nord",
+   "period": "Variation (points)",
+   "value": 14.2,
+   "unit": {
+    "en": "points",
+    "fr": "points"
+   },
+   "page": 2,
+   "snippet": "Littoral Nord 64,1 78,3 +14,2",
+   "status": "ok",
+   "note": null
+  },
+  {
+   "indicator": "menages_internet",
+   "area": "littoral-sud",
+   "period": "2023",
+   "value": 55.7,
+   "unit": {
+    "en": "%",
+    "fr": "%"
+   },
+   "page": 2,
+   "snippet": "Littoral Sud 55,7 69,4 +13,7",
+   "status": "ok",
+   "note": null
+  },
+  {
+   "indicator": "menages_internet",
+   "area": "littoral-sud",
+   "period": "2025",
+   "value": 69.4,
+   "unit": {
+    "en": "%",
+    "fr": "%"
+   },
+   "page": 2,
+   "snippet": "Littoral Sud 55,7 69,4 +13,7",
+   "status": "ok",
+   "note": null
+  },
+  {
+   "indicator": "menages_internet",
+   "area": "littoral-sud",
+   "period": "Variation (points)",
+   "value": 13.7,
+   "unit": {
+    "en": "points",
+    "fr": "points"
+   },
+   "page": 2,
+   "snippet": "Littoral Sud 55,7 69,4 +13,7",
+   "status": "ok",
+   "note": null
+  },
+  {
+   "indicator": "menages_internet",
+   "area": "plateau-central",
+   "period": "2023",
+   "value": 33.2,
+   "unit": {
+    "en": "%",
+    "fr": "%"
+   },
+   "page": 2,
+   "snippet": "Plateau Central 33,2 46,8 +13,6",
+   "status": "ok",
+   "note": null
+  },
+  {
+   "indicator": "menages_internet",
+   "area": "plateau-central",
+   "period": "2025",
+   "value": 46.8,
+   "unit": {
+    "en": "%",
+    "fr": "%"
+   },
+   "page": 2,
+   "snippet": "Plateau Central 33,2 46,8 +13,6",
+   "status": "ok",
+   "note": null
+  },
+  {
+   "indicator": "menages_internet",
+   "area": "plateau-central",
+   "period": "Variation (points)",
+   "value": 13.6,
+   "unit": {
+    "en": "points",
+    "fr": "points"
+   },
+   "page": 2,
+   "snippet": "Plateau Central 33,2 46,8 +13,6",
+   "status": "ok",
+   "note": null
+  },
+  {
+   "indicator": "menages_internet",
+   "area": "vallee-de-l-est",
+   "period": "2023",
+   "value": 47.9,
+   "unit": {
+    "en": "%",
+    "fr": "%"
+   },
+   "page": 2,
+   "snippet": "Vallée de l'Est 47,9 60,2 +12,3",
+   "status": "ok",
+   "note": null
+  },
+  {
+   "indicator": "menages_internet",
+   "area": "vallee-de-l-est",
+   "period": "2025",
+   "value": 60.2,
+   "unit": {
+    "en": "%",
+    "fr": "%"
+   },
+   "page": 2,
+   "snippet": "Vallée de l'Est 47,9 60,2 +12,3",
+   "status": "ok",
+   "note": null
+  },
+  {
+   "indicator": "menages_internet",
+   "area": "vallee-de-l-est",
+   "period": "Variation (points)",
+   "value": 12.3,
+   "unit": {
+    "en": "points",
+    "fr": "points"
+   },
+   "page": 2,
+   "snippet": "Vallée de l'Est 47,9 60,2 +12,3",
+   "status": "ok",
+   "note": null
+  },
+  {
+   "indicator": "menages_internet",
+   "area": "hauts-plateaux",
+   "period": "2023",
+   "value": 38.4,
+   "unit": {
+    "en": "%",
+    "fr": "%"
+   },
+   "page": 2,
+   "snippet": "Hauts Plateaux 38,4 51,1 +12,7",
+   "status": "ok",
+   "note": null
+  },
+  {
+   "indicator": "menages_internet",
+   "area": "hauts-plateaux",
+   "period": "2025",
+   "value": 51.1,
+   "unit": {
+    "en": "%",
+    "fr": "%"
+   },
+   "page": 2,
+   "snippet": "Hauts Plateaux 38,4 51,1 +12,7",
+   "status": "ok",
+   "note": null
+  },
+  {
+   "indicator": "menages_internet",
+   "area": "hauts-plateaux",
+   "period": "Variation (points)",
+   "value": 12.7,
+   "unit": {
+    "en": "points",
+    "fr": "points"
+   },
+   "page": 2,
+   "snippet": "Hauts Plateaux 38,4 51,1 +12,7",
+   "status": "ok",
+   "note": null
+  },
+  {
+   "indicator": "menages_internet",
+   "area": "extreme-ouest",
+   "period": "2023",
+   "value": 35.6,
+   "unit": {
+    "en": "%",
+    "fr": "%"
+   },
+   "page": 2,
+   "snippet": "Extrême Ouest 35,6 47,9 +12,3",
+   "status": "ok",
+   "note": null
+  },
+  {
+   "indicator": "menages_internet",
+   "area": "extreme-ouest",
+   "period": "2025",
+   "value": 47.9,
+   "unit": {
+    "en": "%",
+    "fr": "%"
+   },
+   "page": 2,
+   "snippet": "Extrême Ouest 35,6 47,9 +12,3",
+   "status": "ok",
+   "note": null
+  },
+  {
+   "indicator": "menages_internet",
+   "area": "extreme-ouest",
+   "period": "Variation (points)",
+   "value": 12.3,
+   "unit": {
+    "en": "points",
+    "fr": "points"
+   },
+   "page": 2,
+   "snippet": "Extrême Ouest 35,6 47,9 +12,3",
+   "status": "ok",
+   "note": null
+  },
+  {
+   "indicator": "menages_internet",
+   "area": "nat",
+   "period": "2023",
+   "value": 48.2,
+   "unit": {
+    "en": "%",
+    "fr": "%"
+   },
+   "page": 2,
+   "snippet": "Ensemble du pays 48,2 61,4 +13,2",
+   "status": "ok",
+   "note": null
+  },
+  {
+   "indicator": "menages_internet",
+   "area": "nat",
+   "period": "2025",
+   "value": 61.4,
+   "unit": {
+    "en": "%",
+    "fr": "%"
+   },
+   "page": 2,
+   "snippet": "Ensemble du pays 48,2 61,4 +13,2",
+   "status": "ok",
+   "note": null
+  },
+  {
+   "indicator": "menages_internet",
+   "area": "nat",
+   "period": "Variation (points)",
+   "value": 13.2,
+   "unit": {
+    "en": "points",
+    "fr": "points"
+   },
+   "page": 2,
+   "snippet": "Ensemble du pays 48,2 61,4 +13,2",
+   "status": "ok",
+   "note": null
+  }
+ ],
+ "indicators": {
+  "taux_chomage_par_region": {
+   "fr": "Taux de chômage par région",
+   "en": "Unemployment rate by region"
+  },
+  "population_residente": {
+   "fr": "Population résidente par région au 1er juillet 2025 (en milliers)",
+   "en": "Resident population by region, 1 July 2025 (thousands)"
+  },
+  "menages_internet": {
+   "fr": "Ménages disposant d'une connexion Internet à domicile (en %)",
+   "en": "Households with a home internet connection (%)"
+  }
+ },
+ "i18n": {
+  "en": {
+   "sourceDoc": "Source publication",
+   "tabOverview": "Overview",
+   "tabData": "Data & sources",
+   "filterLabel": "Areas",
+   "reset": "Reset",
+   "searchPh": "Search an indicator, an area, a year…",
+   "btnCsv": "Download CSV",
+   "btnJson": "Download JSON",
+   "thIndicator": "Indicator",
+   "thArea": "Area",
+   "thPeriod": "Period",
+   "thValue": "Value",
+   "thUnit": "Unit",
+   "thPage": "Page",
+   "thStatus": "Check",
+   "noRows": "No figure matches this search.",
+   "statusOk": "Verified",
+   "statusWarn": "To review",
+   "provLabel": "Read from the source document, page",
+   "calloutTitle": "Read this before reusing the figures",
+   "calloutBody": "These figures were extracted from a PDF by a language model and then checked automatically against the source text. Rows marked “To review” failed at least one check and have not been confirmed by a statistician. Always cite the original publication, not this dashboard.",
+   "dataTitle": "Data & sources",
+   "dataLede": "Every figure on this dashboard, with the page it came from and the line of text it was read from. Search, sort, open a row to see the source, export.",
+   "limTitle": "Limitations",
+   "methTitle": "How this dashboard was built",
+   "methBody": "Text was extracted from the PDF page by page. A rules-based reader and a language model each transcribed the tables independently, and every cell was checked for page provenance, quoted evidence, unit and range, reconciliation with published totals, and agreement between the two readings. The notebook, the prompts and the verification report are in the repository.",
+   "fSource": "Source",
+   "fLicence": "Licence",
+   "fBuilt": "Built with",
+   "fContact": "Contact",
+   "fBuiltBody": "Python, an LLM extraction pipeline, Chart.js. No tracking, no cookies, no server — a single HTML file.",
+   "stamp": "Dashboard generated on {date}. Figures are the responsibility of the source institution; the presentation is the responsibility of the team that built this page.",
+   "syntheticWarn": "Demonstration data — fictional country, for training purposes only.",
+   "kicker": "Quarterly Statistical Bulletin",
+   "title": "Labour market, population and internet access",
+   "subtitle": "",
+   "ovTitle": "Key indicators",
+   "ovLede": "This bulletin presents the latest unemployment rates, resident population figures and household internet connectivity across regions.",
+   "limBody": "",
+   "publisher": "National Institute of Statistics",
+   "period": ""
+  },
+  "fr": {
+   "sourceDoc": "Publication source",
+   "tabOverview": "Vue d'ensemble",
+   "tabData": "Données et sources",
+   "filterLabel": "Zones",
+   "reset": "Réinitialiser",
+   "searchPh": "Chercher un indicateur, une zone, une année…",
+   "btnCsv": "Télécharger le CSV",
+   "btnJson": "Télécharger le JSON",
+   "thIndicator": "Indicateur",
+   "thArea": "Zone",
+   "thPeriod": "Période",
+   "thValue": "Valeur",
+   "thUnit": "Unité",
+   "thPage": "Page",
+   "thStatus": "Contrôle",
+   "noRows": "Aucun chiffre ne correspond à cette recherche.",
+   "statusOk": "Vérifié",
+   "statusWarn": "À revoir",
+   "provLabel": "Lu dans le document source, page",
+   "calloutTitle": "À lire avant de réutiliser les chiffres",
+   "calloutBody": "Ces chiffres ont été extraits d'un PDF par un modèle de langage, puis contrôlés automatiquement contre le texte source. Les lignes marquées « À revoir » ont échoué à au moins un contrôle et n'ont pas été confirmées par un statisticien. Citez toujours la publication d'origine, pas ce tableau de bord.",
+   "dataTitle": "Données et sources",
+   "dataLede": "Tous les chiffres de ce tableau de bord, avec la page dont ils proviennent et la ligne de texte dont ils ont été lus. Cherchez, triez, ouvrez une ligne pour voir la source, exportez.",
+   "limTitle": "Limites",
+   "methTitle": "Comment ce tableau de bord a été construit",
+   "methBody": "Le texte a été extrait du PDF page par page. Un lecteur à base de règles et un modèle de langage ont transcrit les tableaux indépendamment, et chaque cellule a été contrôlée : provenance de page, citation vérifiée, unité et plage, réconciliation avec les totaux publiés, et accord entre les deux lectures. Le notebook, les prompts et le rapport de vérification sont dans le dépôt.",
+   "fSource": "Source",
+   "fLicence": "Licence",
+   "fBuilt": "Réalisé avec",
+   "fContact": "Contact",
+   "fBuiltBody": "Python, une chaîne d'extraction par LLM, Chart.js. Aucun traceur, aucun cookie, aucun serveur — un seul fichier HTML.",
+   "stamp": "Tableau de bord généré le {date}. Les chiffres relèvent de la responsabilité de l'institution source ; la présentation relève de la responsabilité de l'équipe qui a construit cette page.",
+   "syntheticWarn": "Données de démonstration — pays fictif, à usage pédagogique uniquement.",
+   "kicker": "Bulletin statistique trimestriel",
+   "title": "Marché du travail, population et accès Internet",
+   "subtitle": "",
+   "ovTitle": "Indicateurs clés",
+   "ovLede": "Ce bulletin présente les derniers taux de chômage, les chiffres de la population résidente et la connectivité Internet des ménages par région.",
+   "limBody": "",
+   "publisher": "Institut National de la Statistique",
+   "period": ""
+  }
+ },
+ "overviewScatter": {
+  "x": "taux_chomage_par_region",
+  "y": "menages_internet",
+  "title": {
+   "en": "Households with a home internet connection (%) against Unemployment rate by region",
+   "fr": "Ménages disposant d'une connexion Internet à domicile (en %) et Taux de chômage par région"
+  },
+  "sub": {
+   "en": "One point per area — an association, not a causal claim",
+   "fr": "Un point par zone — une association, pas une relation causale"
+  },
+  "src": {
+   "en": "No significance test performed.",
+   "fr": "Aucun test de significativité réalisé."
+  }
+ }
+}

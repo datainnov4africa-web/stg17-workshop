@@ -175,6 +175,12 @@ extra:
 # needed, and the distinction cost one failed build to learn.
 exclude_docs: |
   ~$*
+  # mkdocs renders any README.md to index.html. A supplied folder that already
+  # contains its own index.html — a dashboard published from a laboratory, say —
+  # therefore has two files claiming one destination, and --strict turns that
+  # warning into a failed deploy. The README stays on disk; it is simply not
+  # rendered, because it cannot be.
+  **/README.md
 
 not_in_nav: |
   /**/*.fr.md

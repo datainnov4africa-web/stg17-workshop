@@ -12,7 +12,7 @@
 
 Cadrage de la tâche, rôle et contexte, contraintes explicites, exemples few-shot, décomposition, sorties JSON structurées, garde-fous et itération systématique. Pourquoi les modèles hallucinent et comment la conception du prompt réduit le phénomène. Anti-patrons courants et comment les détecter dans vos propres prompts.
 
-[:material-file-pdf-box: PDF · EN](../downloads/Day2/0900_talking-to-machines_EN.pdf){ .md-button } [:material-file-pdf-box: PDF · FR](../downloads/Day2/0900_talking-to-machines_FR.pdf){ .md-button } [:material-microsoft-powerpoint: PPTX · EN](../downloads/Day2/0900_talking-to-machines_EN.pptx){ .md-button } [:material-microsoft-powerpoint: PPTX · FR](../downloads/Day2/0900_talking-to-machines_FR.pptx){ .md-button } [:material-notebook-outline: IPYNB · EN](../downloads/Day2/0900_talking-to-machines_EN.ipynb){ .md-button } [:material-notebook-outline: IPYNB · FR](../downloads/Day2/0900_talking-to-machines_FR.ipynb){ .md-button }
+[:material-file-pdf-box: PDF · EN](../downloads/Day2/0900_talking-to-machines_EN.pdf){ .md-button } [:material-file-pdf-box: PDF · FR](../downloads/Day2/0900_talking-to-machines_FR.pdf){ .md-button } [:material-notebook-outline: IPYNB · EN](../downloads/Day2/0900_talking-to-machines_EN.ipynb){ .md-button } [:material-notebook-outline: IPYNB · FR](../downloads/Day2/0900_talking-to-machines_FR.ipynb){ .md-button }
 
 [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/datainnov4africa-web/stg17-workshop/blob/main/docs/downloads/Day2/0900_talking-to-machines_EN.ipynb) **EN** &nbsp; [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/datainnov4africa-web/stg17-workshop/blob/main/docs/downloads/Day2/0900_talking-to-machines_FR.ipynb) **FR**
 
@@ -46,7 +46,7 @@ Prendre une publication statistique nationale (PDF ou rapport), utiliser un LLM 
 
 L'amélioration systématique plutôt que le tâtonnement — construire un jeu d'évaluation, mesurer la qualité des sorties, maîtriser la variance, gérer la longueur de contexte et le coût en tokens, la mise en cache, et arbitrer entre prompt, RAG et affinage.
 
-[:material-file-pdf-box: PDF · EN](../downloads/Day2/1400_from-good-to-great_EN.pdf){ .md-button } [:material-file-pdf-box: PDF · FR](../downloads/Day2/1400_from-good-to-great_FR.pdf){ .md-button } [:material-microsoft-powerpoint: PPTX · EN](../downloads/Day2/1400_from-good-to-great_EN.pptx){ .md-button } [:material-microsoft-powerpoint: PPTX · FR](../downloads/Day2/1400_from-good-to-great_FR.pptx){ .md-button } [:material-notebook-outline: IPYNB · EN](../downloads/Day2/1400_from-good-to-great_EN.ipynb){ .md-button } [:material-notebook-outline: IPYNB · FR](../downloads/Day2/1400_from-good-to-great_FR.ipynb){ .md-button }
+[:material-file-pdf-box: PDF · EN](../downloads/Day2/1400_from-good-to-great_EN.pdf){ .md-button } [:material-file-pdf-box: PDF · FR](../downloads/Day2/1400_from-good-to-great_FR.pdf){ .md-button } [:material-notebook-outline: IPYNB · EN](../downloads/Day2/1400_from-good-to-great_EN.ipynb){ .md-button } [:material-notebook-outline: IPYNB · FR](../downloads/Day2/1400_from-good-to-great_FR.ipynb){ .md-button }
 
 [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/datainnov4africa-web/stg17-workshop/blob/main/docs/downloads/Day2/1400_from-good-to-great_EN.ipynb) **EN** &nbsp; [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/datainnov4africa-web/stg17-workshop/blob/main/docs/downloads/Day2/1400_from-good-to-great_FR.ipynb) **FR**
 
@@ -70,7 +70,7 @@ Comment la vitesse d'inférence change ce qui est faisable dans une chaîne stat
 
 Ateliers tournants sur des cas d'usage professionnels — écrire et déboguer du code ; rédiger rapports et notes méthodologiques ; produire des présentations ; générer graphiques et visuels ; travail sur l'image et l'identité visuelle, y compris la création de logos ; analyse documentaire et synthèses audio avec NotebookLM ; multimodalité avec Gemini. Chaque participant choisit deux ateliers pertinents pour son office et repart avec un livrable achevé de chacun.
 
-[:material-file-pdf-box: PDF · EN](../downloads/Day2/1530_hands-on_EN.pdf){ .md-button } [:material-file-pdf-box: PDF · FR](../downloads/Day2/1530_hands-on_FR.pdf){ .md-button } [:material-microsoft-powerpoint: PPTX · EN](../downloads/Day2/1530_hands-on_EN.pptx){ .md-button } [:material-microsoft-powerpoint: PPTX · FR](../downloads/Day2/1530_hands-on_FR.pptx){ .md-button }
+[:material-file-pdf-box: PDF · EN](../downloads/Day2/1530_hands-on_EN.pdf){ .md-button } [:material-file-pdf-box: PDF · FR](../downloads/Day2/1530_hands-on_FR.pdf){ .md-button }
 
 !!! example "Laboratoire — Ateliers boîte à outils"
 

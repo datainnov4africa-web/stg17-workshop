@@ -1,0 +1,4 @@
+label,provider,model,seconds,prompt_tokens,completion_tokens
+test de fumée,groq,openai/gpt-oss-120b,0.64,174,132
+extract p1,groq,openai/gpt-oss-120b,8.78,1230,3832
+extract p2,groq,openai/gpt-oss-120b,13.26,1126,5391

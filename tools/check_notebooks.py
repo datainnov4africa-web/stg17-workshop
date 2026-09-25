@@ -4,19 +4,26 @@ STG17 · Validate every published notebook before it reaches a participant.
 
     python tools/check_notebooks.py
 
-Four checks, each of which has a specific failure it is guarding against:
+Three checks that block, each guarding against a specific harm:
 
   1. **Valid JSON and nbformat** — a notebook that will not open at 09:30
   2. **No secrets** — an API key committed to a public repository is a published key
   3. **Code cells parse** — a syntax error found by CI, not by forty people
-  4. **No execution outputs** — outputs bloat diffs and can leak data
+
+And one note that does not block:
+
+  4. **Stored execution outputs** — they bloat the diff and can carry data, so
+     the check says so; it does not refuse to publish. `docs/downloads/` is the
+     author's folder and what it holds is what the site shows, so a check that
+     blocked the deploy over this would make that promise impossible to keep.
+     Check 2 reads the serialised notebook, outputs included, so a key printed
+     into an output still fails.
 
 Every notebook is supplied by the workshop team, not generated here, so these
-four are deliberately the only rules: they are the ones whose violation would
-harm a participant or the repository. Anything about how a notebook is written
-is the author's business.
+are deliberately the only rules. Anything about how a notebook is written is the
+author's business.
 
-Exit code 1 on any failure, so it can gate a pull request.
+Exit code 1 on a blocking problem, so it can gate a pull request.
 """
 
 from __future__ import annotations
@@ -48,8 +55,10 @@ SECRET_PATTERNS = [
 ALLOWED = re.compile(r"(?i)(CHANGE-ME|<your|xxx+|\.\.\.|example|placeholder|gsk_\.\.\.)")
 
 
-def check(path: Path) -> list[str]:
+def check(path: Path, warnings: list[str] | None = None) -> list[str]:
     problems: list[str] = []
+    if warnings is None:
+        warnings = []
     relative = path.relative_to(ROOT).as_posix()
 
     # 1. Valid notebook -------------------------------------------------------
@@ -106,11 +115,21 @@ def check(path: Path) -> list[str]:
             problems.append(f"{relative}: cell {index} does not parse — line {exc.lineno}: {exc.msg}")
 
     # 4. No stored outputs ----------------------------------------------------
+    # A warning, not a failure. The three checks above guard against something
+    # that harms a participant or the repository: a notebook that will not open,
+    # a published key, code that cannot run. Stored outputs do none of those —
+    # they bloat the diff and can carry data, which is worth saying out loud but
+    # is not worth refusing to publish over. docs/downloads/ is the author's
+    # folder, and what it holds is what the site shows; a check that blocks the
+    # deploy over a stylistic preference makes that impossible.
+    #
+    # Note that check 2 still reads the whole serialised notebook, outputs
+    # included, so a key printed into an output is still caught and still fails.
     with_outputs = [i for i, c in enumerate(cells)
                     if c.get("cell_type") == "code" and c.get("outputs")]
     if with_outputs:
-        problems.append(f"{relative}: {len(with_outputs)} cell(s) carry execution outputs "
-                        f"— clear them before supplying the notebook")
+        warnings.append(f"{relative}: {len(with_outputs)} cell(s) carry execution outputs "
+                        f"— they will be published as they are")
 
     return problems
 
@@ -123,11 +142,24 @@ def main() -> int:
         return 0
 
     all_problems: list[str] = []
+    all_warnings: list[str] = []
     for path in paths:
-        problems = check(path)
-        status = "OK" if not problems else f"{len(problems)} problem(s)"
+        warnings: list[str] = []
+        problems = check(path, warnings)
+        if problems:
+            status = f"{len(problems)} problem(s)"
+        elif warnings:
+            status = f"OK — {len(warnings)} note(s)"
+        else:
+            status = "OK"
         print(f"  {path.relative_to(ROOT).as_posix():<52} {status}")
         all_problems.extend(problems)
+        all_warnings.extend(warnings)
+
+    if all_warnings:
+        print(f"\n{len(all_warnings)} note(s), not blocking:\n")
+        for warning in all_warnings:
+            print("   ·", warning)
 
     if all_problems:
         print(f"\n{len(all_problems)} problem(s):\n")
@@ -135,7 +167,7 @@ def main() -> int:
             print("   -", problem)
         return 1
 
-    print(f"\n{len(paths)} notebook(s) checked. All clear.")
+    print(f"\n{len(paths)} notebook(s) checked. Nothing blocking.")
     return 0
 
 

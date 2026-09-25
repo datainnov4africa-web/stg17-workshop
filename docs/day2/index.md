@@ -12,7 +12,7 @@
 
 Task framing, role and context, explicit constraints, few-shot examples, decomposition, structured JSON outputs, guardrails and systematic iteration. Why models hallucinate and how prompt design reduces it. Common anti-patterns and how to detect them in your own prompts.
 
-[:material-file-pdf-box: PDF · EN](../downloads/Day2/0900_talking-to-machines_EN.pdf){ .md-button } [:material-file-pdf-box: PDF · FR](../downloads/Day2/0900_talking-to-machines_FR.pdf){ .md-button } [:material-microsoft-powerpoint: PPTX · EN](../downloads/Day2/0900_talking-to-machines_EN.pptx){ .md-button } [:material-microsoft-powerpoint: PPTX · FR](../downloads/Day2/0900_talking-to-machines_FR.pptx){ .md-button } [:material-notebook-outline: IPYNB · EN](../downloads/Day2/0900_talking-to-machines_EN.ipynb){ .md-button } [:material-notebook-outline: IPYNB · FR](../downloads/Day2/0900_talking-to-machines_FR.ipynb){ .md-button }
+[:material-file-pdf-box: PDF · EN](../downloads/Day2/0900_talking-to-machines_EN.pdf){ .md-button } [:material-file-pdf-box: PDF · FR](../downloads/Day2/0900_talking-to-machines_FR.pdf){ .md-button } [:material-notebook-outline: IPYNB · EN](../downloads/Day2/0900_talking-to-machines_EN.ipynb){ .md-button } [:material-notebook-outline: IPYNB · FR](../downloads/Day2/0900_talking-to-machines_FR.ipynb){ .md-button }
 
 [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/datainnov4africa-web/stg17-workshop/blob/main/docs/downloads/Day2/0900_talking-to-machines_EN.ipynb) **EN** &nbsp; [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/datainnov4africa-web/stg17-workshop/blob/main/docs/downloads/Day2/0900_talking-to-machines_FR.ipynb) **FR**
 
@@ -46,7 +46,7 @@ Take a national statistical publication (PDF or report), use an LLM to extract a
 
 Systematic improvement rather than trial and error — building an evaluation set, measuring output quality, controlling variance, managing context length and token cost, caching, and choosing between prompting, RAG and fine-tuning.
 
-[:material-file-pdf-box: PDF · EN](../downloads/Day2/1400_from-good-to-great_EN.pdf){ .md-button } [:material-file-pdf-box: PDF · FR](../downloads/Day2/1400_from-good-to-great_FR.pdf){ .md-button } [:material-microsoft-powerpoint: PPTX · EN](../downloads/Day2/1400_from-good-to-great_EN.pptx){ .md-button } [:material-microsoft-powerpoint: PPTX · FR](../downloads/Day2/1400_from-good-to-great_FR.pptx){ .md-button } [:material-notebook-outline: IPYNB · EN](../downloads/Day2/1400_from-good-to-great_EN.ipynb){ .md-button } [:material-notebook-outline: IPYNB · FR](../downloads/Day2/1400_from-good-to-great_FR.ipynb){ .md-button }
+[:material-file-pdf-box: PDF · EN](../downloads/Day2/1400_from-good-to-great_EN.pdf){ .md-button } [:material-file-pdf-box: PDF · FR](../downloads/Day2/1400_from-good-to-great_FR.pdf){ .md-button } [:material-notebook-outline: IPYNB · EN](../downloads/Day2/1400_from-good-to-great_EN.ipynb){ .md-button } [:material-notebook-outline: IPYNB · FR](../downloads/Day2/1400_from-good-to-great_FR.ipynb){ .md-button }
 
 [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/datainnov4africa-web/stg17-workshop/blob/main/docs/downloads/Day2/1400_from-good-to-great_EN.ipynb) **EN** &nbsp; [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/datainnov4africa-web/stg17-workshop/blob/main/docs/downloads/Day2/1400_from-good-to-great_FR.ipynb) **FR**
 
@@ -70,7 +70,7 @@ How inference speed changes what is feasible in a production statistical pipelin
 
 Rotating stations across professional use cases — writing and debugging code; drafting reports and methodological notes; producing presentations; generating charts and graphics; image and visual identity work, including logo design; document analysis and audio briefings with NotebookLM; multimodal work with Gemini. Each participant selects two stations relevant to their office and leaves with a deliverable from each.
 
-[:material-file-pdf-box: PDF · EN](../downloads/Day2/1530_hands-on_EN.pdf){ .md-button } [:material-file-pdf-box: PDF · FR](../downloads/Day2/1530_hands-on_FR.pdf){ .md-button } [:material-microsoft-powerpoint: PPTX · EN](../downloads/Day2/1530_hands-on_EN.pptx){ .md-button } [:material-microsoft-powerpoint: PPTX · FR](../downloads/Day2/1530_hands-on_FR.pptx){ .md-button }
+[:material-file-pdf-box: PDF · EN](../downloads/Day2/1530_hands-on_EN.pdf){ .md-button } [:material-file-pdf-box: PDF · FR](../downloads/Day2/1530_hands-on_FR.pdf){ .md-button }
 
 !!! example "Laboratory — Toolkit stations"
 
