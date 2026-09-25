@@ -130,6 +130,42 @@ def _pattern(session: dict) -> re.Pattern:
     )
 
 
+def _loose_pattern(session: dict) -> re.Pattern:
+    """
+    The time prefix alone: `1430_anything.pdf` belongs to the 14:30 session.
+
+    Tried only after `_pattern` has declined, so a name that follows the
+    convention keeps its clean button and never picks up a label made from its
+    own slug. This exists because the time prefix is what a person reaches for
+    when dropping a document next to a session — a source PDF the laboratory
+    reads, say — and a file that lands in the right folder with the right hour
+    should appear rather than be silently ignored.
+
+    The cost, accepted deliberately: a mistyped slug no longer hides the file,
+    it attaches it to whichever session owns that hour.
+    """
+    kinds = "|".join(k for k, _ in KINDS)
+    start = session["time"].split("–")[0].split("-")[0].strip().replace(":", "")
+    return re.compile(rf"^{start}_(.+)\.({kinds})$", re.IGNORECASE)
+
+
+#: A language marker anywhere in the free part of a loose name: `-EN-`, `_fr.`,
+#: `_FR_`. Delimited on both sides so that `GENERAL` or `INFRA` never read as a
+#: language.
+_LOOSE_TAG = re.compile(r"(?:^|[-_])(EN|FR)(?:[-_]|$)", re.IGNORECASE)
+
+
+def _loose_parts(reste: str) -> tuple[str | None, str]:
+    """`44004-doc-EN-_Continental_AI` -> ('EN', '44004 doc Continental AI')."""
+    tag = None
+    match = _LOOSE_TAG.search(reste)
+    if match:
+        tag = match.group(1).upper()
+        reste = reste[:match.start()] + "-" + reste[match.end():]
+    label = re.sub(r"[-_\s]+", " ", reste).strip(" -_")
+    return tag, label
+
+
 def supplied(root: Path, session: dict, day_n: int) -> list[dict]:
     """
     Every file actually supplied for a session, in the order it should be shown.
@@ -146,6 +182,7 @@ def supplied(root: Path, session: dict, day_n: int) -> list[dict]:
         return []
 
     pattern = _pattern(session)
+    loose = _loose_pattern(session)
     kind_order = {k: i for i, (k, _) in enumerate(KINDS)}
     tag_order = {t: i for i, t in enumerate(TAGS)}
 
@@ -154,12 +191,21 @@ def supplied(root: Path, session: dict, day_n: int) -> list[dict]:
         if not path.is_file() or is_placeholder(path.name) or path.stat().st_size == 0:
             continue
         match = pattern.match(path.name)
-        if not match:
-            continue
-        tag, number, label, kind = match.groups()
+        if match:
+            tag, number, label, kind = match.groups()
+            tag = tag.upper()
+        else:
+            # The time prefix on its own. Never reached by a name that follows
+            # the convention, because `pattern` is tried first.
+            match = loose.match(path.name)
+            if not match:
+                continue
+            reste, kind = match.groups()
+            tag, label = _loose_parts(reste)
+            number = None
         out.append({
             "kind": kind.lower(),
-            "tag": tag.upper(),
+            "tag": tag,
             "number": int(number) if number else None,
             "label": label,
             "name": path.name,
@@ -173,8 +219,12 @@ def supplied(root: Path, session: dict, day_n: int) -> list[dict]:
 
 
 def button_text(entry: dict) -> str:
-    """`PDF · EN`, `PDF · EN (2)`, or `PDF · EN · exercises`."""
-    base = f"{entry['kind'].upper()} · {entry['tag']}"
+    """`PDF · EN`, `PDF · EN (2)`, `PDF · EN · exercises`, or `PDF · exercises`.
+
+    A loosely named file may carry no language at all, in which case the tag is
+    dropped rather than printed as an empty field or a guess.
+    """
+    base = f"{entry['kind'].upper()} · {entry['tag']}" if entry.get("tag") else entry["kind"].upper()
     if entry.get("label"):
         return f"{base} · {entry['label'].replace('-', ' ')}"
     if entry.get("number"):
