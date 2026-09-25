@@ -19,7 +19,7 @@ Welcome and opening remarks by the African Development Bank, AU STATAFRIC, and N
 
 Why the Bank set up DI4A, what the current portfolio funds, and the milestones ahead — including what national statistical offices can expect to draw on over the next two years.
 
-[:material-microsoft-powerpoint: PPTX · EN](../downloads/Day1/0915_afdb-data-innovation-for_EN.pptx){ .md-button }
+[:material-file-pdf-box: PDF · EN](../downloads/Day1/0915_afdb-data-innovation-for_EN.pdf){ .md-button } [:material-microsoft-powerpoint: PPTX · EN](../downloads/Day1/0915_afdb-data-innovation-for_EN.pptx){ .md-button }
 
 
 ### 09:35–10:05 &nbsp;·&nbsp; The UN Big Data Regional Hub in Rwanda: milestones and use cases
@@ -35,7 +35,7 @@ Ten years of the UN Committee of Experts on Big Data and Data Science for Offici
 
 Building a shared concept map — AI, LLM, prompt engineering, RAG, fine-tuning, agentic systems, agents, MCP. What each concept can and cannot do for official statistics, and the vocabulary discipline that avoids costly misunderstandings. This half-hour sets the language used for the rest of the week.
 
-[:material-file-pdf-box: PDF · EN](../downloads/Day1/1005_ai-family-tree_EN.pdf){ .md-button } [:material-file-pdf-box: PDF · FR](../downloads/Day1/1005_ai-family-tree_FR.pdf){ .md-button } [:material-microsoft-powerpoint: PPTX · EN](../downloads/Day1/1005_ai-family-tree_EN.pptx){ .md-button } [:material-microsoft-powerpoint: PPTX · FR](../downloads/Day1/1005_ai-family-tree_FR.pptx){ .md-button }
+[:material-microsoft-powerpoint: PPTX · EN](../downloads/Day1/1005_ai-family-tree_EN.pptx){ .md-button } [:material-microsoft-powerpoint: PPTX · FR](../downloads/Day1/1005_ai-family-tree_FR.pptx){ .md-button }
 
 
 !!! quote "10:30–10:45 — Coffee break"
@@ -64,7 +64,7 @@ Facilitated discussion structured around four questions drawn from the presentat
 
 Fundamentals and needs — GPUs and accelerators, memory and context, inference versus training, latency and throughput. Cloud, hybrid or on-premise; data sovereignty and confidentiality constraints for NSO microdata; cost modelling per use case; open-weight versus proprietary models.
 
-[:material-file-pdf-box: PDF · EN](../downloads/Day1/1400_ai-infrastructure_EN.pdf){ .md-button } [:material-file-pdf-box: PDF · FR](../downloads/Day1/1400_ai-infrastructure_FR.pdf){ .md-button } [:material-microsoft-powerpoint: PPTX · EN](../downloads/Day1/1400_ai-infrastructure_EN.pptx){ .md-button } [:material-microsoft-powerpoint: PPTX · FR](../downloads/Day1/1400_ai-infrastructure_FR.pptx){ .md-button }
+[:material-microsoft-powerpoint: PPTX · EN](../downloads/Day1/1400_ai-infrastructure_EN.pptx){ .md-button } [:material-microsoft-powerpoint: PPTX · FR](../downloads/Day1/1400_ai-infrastructure_FR.pptx){ .md-button }
 
 
 ### 14:30–15:30 &nbsp;·&nbsp; Hands-on part 1 — Retrieval-Augmented Generation
@@ -73,7 +73,7 @@ Fundamentals and needs — GPUs and accelerators, memory and context, inference 
 
 Build a working RAG assistant over a statistical corpus — chunking, embeddings, vector store, retrieval, grounded answering. Test it against questions with known answers and observe where retrieval fails, and why.
 
-[:material-file-pdf-box: PDF · EN](../downloads/Day1/1430_hands-on-part-1_EN.pdf){ .md-button } [:material-file-pdf-box: PDF · FR](../downloads/Day1/1430_hands-on-part-1_FR.pdf){ .md-button } [:material-microsoft-powerpoint: PPTX · EN](../downloads/Day1/1430_hands-on-part-1_EN.pptx){ .md-button } [:material-microsoft-powerpoint: PPTX · FR](../downloads/Day1/1430_hands-on-part-1_FR.pptx){ .md-button } [:material-notebook-outline: IPYNB · EN](../downloads/Day1/1430_hands-on-part-1_EN.ipynb){ .md-button } [:material-notebook-outline: IPYNB · FR](../downloads/Day1/1430_hands-on-part-1_FR.ipynb){ .md-button }
+[:material-microsoft-powerpoint: PPTX · EN](../downloads/Day1/1430_hands-on-part-1_EN.pptx){ .md-button } [:material-microsoft-powerpoint: PPTX · FR](../downloads/Day1/1430_hands-on-part-1_FR.pptx){ .md-button } [:material-notebook-outline: IPYNB · EN](../downloads/Day1/1430_hands-on-part-1_EN.ipynb){ .md-button } [:material-notebook-outline: IPYNB · FR](../downloads/Day1/1430_hands-on-part-1_FR.ipynb){ .md-button }
 
 [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/datainnov4africa-web/stg17-workshop/blob/main/docs/downloads/Day1/1430_hands-on-part-1_EN.ipynb) **EN** &nbsp; [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/datainnov4africa-web/stg17-workshop/blob/main/docs/downloads/Day1/1430_hands-on-part-1_FR.ipynb) **FR**
 
@@ -90,7 +90,7 @@ Build a working RAG assistant over a statistical corpus — chunking, embeddings
 
 Turn the retriever built before the break into a tool, and wrap it in an agent — tools and function calling, planning and iteration, memory, error handling and human-in-the-loop checkpoints. The agent answers a question, retrieves the supporting figures and drafts a short note; participants then examine exactly where it must stay supervised.
 
-[:material-file-pdf-box: PDF · EN](../downloads/Day1/1530_hands-on-part-2_EN.pdf){ .md-button } [:material-file-pdf-box: PDF · FR](../downloads/Day1/1530_hands-on-part-2_FR.pdf){ .md-button } [:material-microsoft-powerpoint: PPTX · EN](../downloads/Day1/1530_hands-on-part-2_EN.pptx){ .md-button } [:material-microsoft-powerpoint: PPTX · FR](../downloads/Day1/1530_hands-on-part-2_FR.pptx){ .md-button } [:material-notebook-outline: IPYNB · EN](../downloads/Day1/1530_hands-on-part-2_EN.ipynb){ .md-button } [:material-notebook-outline: IPYNB · FR](../downloads/Day1/1530_hands-on-part-2_FR.ipynb){ .md-button }
+[:material-microsoft-powerpoint: PPTX · EN](../downloads/Day1/1530_hands-on-part-2_EN.pptx){ .md-button } [:material-microsoft-powerpoint: PPTX · FR](../downloads/Day1/1530_hands-on-part-2_FR.pptx){ .md-button } [:material-notebook-outline: IPYNB · EN](../downloads/Day1/1530_hands-on-part-2_EN.ipynb){ .md-button } [:material-notebook-outline: IPYNB · FR](../downloads/Day1/1530_hands-on-part-2_FR.ipynb){ .md-button }
 
 [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/datainnov4africa-web/stg17-workshop/blob/main/docs/downloads/Day1/1530_hands-on-part-2_EN.ipynb) **EN** &nbsp; [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/datainnov4africa-web/stg17-workshop/blob/main/docs/downloads/Day1/1530_hands-on-part-2_FR.ipynb) **FR**
 
