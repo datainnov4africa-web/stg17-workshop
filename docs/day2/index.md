@@ -57,6 +57,10 @@ Systematic improvement rather than trial and error — building an evaluation se
 
 How inference speed changes what is feasible in a production statistical pipeline. Participants run the same prompt against two providers, including Groq, and record latency, cost per thousand documents and output quality in a shared comparison sheet. The sheet becomes a reusable procurement input for their office.
 
+[:material-notebook-outline: IPYNB · EN](../downloads/Day2/1445_choosing-your-engine_EN.ipynb){ .md-button } [:material-notebook-outline: IPYNB · FR](../downloads/Day2/1445_choosing-your-engine_FR.ipynb){ .md-button }
+
+[![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/datainnov4africa-web/stg17-workshop/blob/main/docs/downloads/Day2/1445_choosing-your-engine_EN.ipynb) **EN** &nbsp; [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/datainnov4africa-web/stg17-workshop/blob/main/docs/downloads/Day2/1445_choosing-your-engine_FR.ipynb) **FR**
+
 !!! example "Laboratory — Provider benchmark"
 
     **Deliverable:** Three rows in the shared comparison sheet: latency, cost per thousand documents, quality score

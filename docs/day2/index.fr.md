@@ -57,6 +57,10 @@ L'amélioration systématique plutôt que le tâtonnement — construire un jeu 
 
 Comment la vitesse d'inférence change ce qui est faisable dans une chaîne statistique de production. Les participants exécutent le même prompt chez deux fournisseurs, dont Groq, et consignent latence, coût pour mille documents et qualité de sortie dans une feuille de comparaison partagée. Cette feuille devient un intrant réutilisable pour les achats de leur office.
 
+[:material-notebook-outline: IPYNB · EN](../downloads/Day2/1445_choosing-your-engine_EN.ipynb){ .md-button } [:material-notebook-outline: IPYNB · FR](../downloads/Day2/1445_choosing-your-engine_FR.ipynb){ .md-button }
+
+[![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/datainnov4africa-web/stg17-workshop/blob/main/docs/downloads/Day2/1445_choosing-your-engine_EN.ipynb) **EN** &nbsp; [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/datainnov4africa-web/stg17-workshop/blob/main/docs/downloads/Day2/1445_choosing-your-engine_FR.ipynb) **FR**
+
 !!! example "Laboratoire — Benchmark des fournisseurs"
 
     **Livrable :** Trois lignes dans la feuille de comparaison partagée : latence, coût pour mille documents, score de qualité
