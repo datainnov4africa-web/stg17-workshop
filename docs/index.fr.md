@@ -112,7 +112,7 @@ a identifié cinq obstacles freinant l'usage systématique des sources de donné
 alternatives. Cet atelier est bâti autour d'eux, et constitue un instrument
 opérationnel direct du **paquet de travail 4.2** du Plan d'action 2025-2030.
 
-| Obstacle identifié à Kigali | Réponse de cet atelier |
+| Obstacle identifié lors de la première réunion annuelle (Kigali, septembre 2025) | Réponse de cet atelier |
 |---|---|
 | Obstacles d'accès aux nouvelles sources — cadres juridiques, coût, exploitabilité | Modèles d'accès et de partenariat avec les détenteurs privés (Jour 3) ; travail direct sur une source à licence ouverte et ses restrictions (Ookla, CC BY-NC-SA) ; licences, DOI et citation (Jour 5) |
 | Absence de méthodologies harmonisées | Chaque équipe pays exécute la même chaîne documentée sur les mêmes trois sources ; tous les notebooks aboutissent dans une seule organisation GitHub publique |

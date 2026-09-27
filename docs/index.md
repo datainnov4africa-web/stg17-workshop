@@ -110,7 +110,7 @@ obstacles holding back the systematic use of alternative data sources. This
 workshop is built around them, and is a direct operational instrument of
 **Work Package 4.2** of the Action Plan 2025–2030.
 
-| Obstacle identified in Kigali | How this workshop responds |
+| Obstacle identified in the first annual meeting (Kigali, September 2025) | How this workshop responds |
 |---|---|
 | Obstacles to accessing new data sources — legal frameworks, cost, usability | Access and partnership models with private data holders (Day 3); working directly with an openly licensed source and its restrictions (Ookla, CC BY-NC-SA); licensing, DOI and citation (Day 5) |
 | Absence of harmonised methodologies | Every country team runs the same documented pipeline on the same three sources; all notebooks land in one public GitHub organisation |
