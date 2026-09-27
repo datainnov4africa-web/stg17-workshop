@@ -16,8 +16,9 @@ THE CONVENTION
     1400        the session start time, so files sort into running order
     ai-infra…   a short readable slug, cut at the first colon or dash
     _EN         the language, after an UNDERSCORE
-    .pdf        .pptx or .ipynb — presentations and notebooks follow one rule,
-                because two rules for two kinds of file is one too many
+    .pdf        .pptx, .ipynb or .html — presentations, notebooks and their
+                browser-readable exports follow one rule, because two rules for
+                two kinds of file is one too many
 
 A session with nothing yet carries an empty placeholder, `-inactif` before the
 extension. Removing that marker is what publishes the file:
@@ -49,6 +50,18 @@ filename as its own language convention and publishes only one of the two files,
 silently. That already cost half the slide decks once.
 
 --------------------------------------------------------------------------
+HTML IS RECOGNISED BUT NEVER ASKED FOR
+--------------------------------------------------------------------------
+`1430_hands-on-part-1_EN.html` is an nbconvert export: the same notebook, with
+its outputs, readable in a browser without Colab and without installing
+anything. Dropping one in the folder gives it a button like any other file.
+
+It is deliberately absent from `SCAFFOLDED`, so `--init` never writes an HTML
+placeholder. A placeholder is a request — "this file is expected, here is the
+name to give it" — and an export is expected of nobody: it renders a notebook
+that already has its own button and its own Colab badge.
+
+--------------------------------------------------------------------------
 WHY THE TIME PREFIX
 --------------------------------------------------------------------------
 It sorts the folder into the order of the day, and it makes collisions
@@ -65,11 +78,19 @@ from pathlib import Path
 #: Marks a file as not yet supplied. Removing it is what activates the link.
 PLACEHOLDER = "-inactif"
 
-#: Offered formats, with the icon the site uses for each.
+#: Offered formats, with the icon the site uses for each. Order matters: it is
+#: the order the buttons appear in, so a new format goes last.
 KINDS = (("pdf", ":material-file-pdf-box:"),
          ("pptx", ":material-microsoft-powerpoint:"),
-         ("ipynb", ":material-notebook-outline:"))
+         ("ipynb", ":material-notebook-outline:"),
+         ("html", ":material-language-html5:"))
 TAGS = ("EN", "FR")
+
+#: The formats `downloads.py --init` writes a placeholder for — that is, what a
+#: session owner is actually asked to supply. HTML is recognised above, so an
+#: export dropped in the folder gets its button, but it is never requested: see
+#: the section on it below.
+SCAFFOLDED = tuple(entry for entry in KINDS if entry[0] != "html")
 
 #: Cut the title at the first colon or dash — everything after it is a subtitle,
 #: and a filename does not need one.

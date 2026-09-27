@@ -52,7 +52,11 @@ EXPECTED_MODES = {"talk", "talk_lab", "benchmark"}
 
 
 def create_placeholders(agenda: dict) -> tuple[int, int]:
-    """One empty file per session, language and format. Never overwrites."""
+    """One empty file per session, language and scaffolded format.
+
+    Never overwrites. Scaffolded, not every recognised format: an HTML export is
+    published if supplied but never asked for — see naming.SCAFFOLDED.
+    """
     made = kept = 0
     for day in agenda["days"]:
         folder = naming.placeholder_dir(ROOT, day["n"])
@@ -66,7 +70,7 @@ def create_placeholders(agenda: dict) -> tuple[int, int]:
 
         for session in day["sessions"]:
             supplied = {f["kind"] + f["tag"] for f in naming.supplied(ROOT, session, day["n"])}
-            for kind, _icon in naming.KINDS:
+            for kind, _icon in naming.SCAFFOLDED:
                 for tag in naming.TAGS:
                     if kind + tag in supplied:
                         kept += 1          # already supplied — leave it alone
