@@ -12,8 +12,6 @@
 
 Taxonomie des sources non traditionnelles — imagerie satellitaire, mesure participative, données de caisse et de transaction, moissonnage web, capteurs et IdO, données produites par les citoyens. Cadres de qualité et biais de couverture des sources non probabilistes ; modèles d'accès et de partenariat avec les détenteurs privés ; éthique et confidentialité.
 
-[:material-file-pdf-box: PDF · EN](../downloads/Day3/0900_non-traditional-data-sources_EN.pdf){ .md-button } [:material-file-pdf-box: PDF · FR](../downloads/Day3/0900_non-traditional-data-sources_FR.pdf){ .md-button } [:material-microsoft-powerpoint: PPTX · EN](../downloads/Day3/0900_non-traditional-data-sources_EN.pptx){ .md-button } [:material-microsoft-powerpoint: PPTX · FR](../downloads/Day3/0900_non-traditional-data-sources_FR.pptx){ .md-button }
-
 
 !!! quote "10h30–10h45 — Pause café"
 
@@ -22,10 +20,6 @@ Taxonomie des sources non traditionnelles — imagerie satellitaire, mesure part
 :material-flask: **Laboratoire** &nbsp;·&nbsp; Plan d’action 2.1.1 · 3.1
 
 Ookla : tuiles de performance au zoom 16 en Mercator web (environ 611 m à l'équateur), trimestrielles depuis le T1 2019 ; champs clés (quadkey, avg_d_kbps, avg_lat_ms, tests, devices) ; licence CC BY-NC-SA 4.0 et ses conséquences pour la publication par un INS ; vérifier la couverture nationale avant de concevoir tout indicateur. WorldPop : rasters de population maillés servant à pondérer et normaliser. Les équipes joignent les tuiles aux frontières administratives et produisent un premier indicateur de connectivité pondéré par la population, par région.
-
-[:material-microsoft-powerpoint: PPTX · EN](../downloads/Day3/1045_hands-on_EN.pptx){ .md-button } [:material-microsoft-powerpoint: PPTX · FR](../downloads/Day3/1045_hands-on_FR.pptx){ .md-button } [:material-notebook-outline: IPYNB · EN](../downloads/Day3/1045_hands-on_EN.ipynb){ .md-button } [:material-notebook-outline: IPYNB · FR](../downloads/Day3/1045_hands-on_FR.ipynb){ .md-button }
-
-[![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/datainnov4africa-web/stg17-workshop/blob/main/docs/downloads/Day3/1045_hands-on_EN.ipynb) **EN** &nbsp; [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/datainnov4africa-web/stg17-workshop/blob/main/docs/downloads/Day3/1045_hands-on_FR.ipynb) **FR**
 
 !!! example "Laboratoire — Ookla et WorldPop"
 
@@ -44,18 +38,12 @@ Ookla : tuiles de performance au zoom 16 en Mercator web (environ 611 m à l'éq
 
 Fondamentaux — ingestion, stockage (lac de données et lakehouse), traitement distribué (par lots contre flux, Spark), indexation et recherche, orchestration, métadonnées et versionnement. Où chaque technologie mérite sa place dans un INS, et où un outil plus simple ferait l'affaire. La Plateforme mondiale des Nations unies et le Centre ONU pour les mégadonnées de Kigali comme infrastructures partagées.
 
-[:material-file-pdf-box: PDF · EN](../downloads/Day3/1400_engines-of-scale_EN.pdf){ .md-button } [:material-file-pdf-box: PDF · FR](../downloads/Day3/1400_engines-of-scale_FR.pdf){ .md-button } [:material-microsoft-powerpoint: PPTX · EN](../downloads/Day3/1400_engines-of-scale_EN.pptx){ .md-button } [:material-microsoft-powerpoint: PPTX · FR](../downloads/Day3/1400_engines-of-scale_FR.pptx){ .md-button }
-
 
 ### 14h45–15h30 &nbsp;·&nbsp; Atelier partie 1 — Ookla à l'échelle avec Elasticsearch
 
 :material-flask: **Laboratoire** &nbsp;·&nbsp; Plan d’action 4.2.1 · 4.2.3
 
 Indexer les tuiles Ookla dans un cluster Elasticsearch pré-provisionné ; comprendre le mapping et le type geo_shape ; exécuter les premières agrégations et requêtes géospatiales.
-
-[:material-file-pdf-box: PDF · EN](../downloads/Day3/1445_hands-on-part-1_EN.pdf){ .md-button } [:material-file-pdf-box: PDF · FR](../downloads/Day3/1445_hands-on-part-1_FR.pdf){ .md-button } [:material-microsoft-powerpoint: PPTX · EN](../downloads/Day3/1445_hands-on-part-1_EN.pptx){ .md-button } [:material-microsoft-powerpoint: PPTX · FR](../downloads/Day3/1445_hands-on-part-1_FR.pptx){ .md-button } [:material-notebook-outline: IPYNB · EN](../downloads/Day3/1445_hands-on-part-1_EN.ipynb){ .md-button } [:material-notebook-outline: IPYNB · FR](../downloads/Day3/1445_hands-on-part-1_FR.ipynb){ .md-button }
-
-[![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/datainnov4africa-web/stg17-workshop/blob/main/docs/downloads/Day3/1445_hands-on-part-1_EN.ipynb) **EN** &nbsp; [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/datainnov4africa-web/stg17-workshop/blob/main/docs/downloads/Day3/1445_hands-on-part-1_FR.ipynb) **FR**
 
 !!! example "Laboratoire — Elasticsearch"
 

@@ -12,8 +12,6 @@
 
 Taxonomy of non-traditional sources — satellite imagery, crowdsourced measurement, scanner and transaction data, web scraping, sensors and IoT, citizen-generated data. Quality frameworks and coverage bias in non-probabilistic sources; access and partnership models with private data holders; ethics and confidentiality.
 
-[:material-file-pdf-box: PDF · EN](../downloads/Day3/0900_non-traditional-data-sources_EN.pdf){ .md-button } [:material-file-pdf-box: PDF · FR](../downloads/Day3/0900_non-traditional-data-sources_FR.pdf){ .md-button } [:material-microsoft-powerpoint: PPTX · EN](../downloads/Day3/0900_non-traditional-data-sources_EN.pptx){ .md-button } [:material-microsoft-powerpoint: PPTX · FR](../downloads/Day3/0900_non-traditional-data-sources_FR.pptx){ .md-button }
-
 
 !!! quote "10:30–10:45 — Coffee break"
 
@@ -22,10 +20,6 @@ Taxonomy of non-traditional sources — satellite imagery, crowdsourced measurem
 :material-flask: **Laboratory** &nbsp;·&nbsp; Action Plan 2.1.1 · 3.1
 
 Ookla: performance tiles at web-Mercator zoom 16 (about 611 m at the equator), quarterly since Q1 2019; key fields (quadkey, avg_d_kbps, avg_lat_ms, tests, devices); CC BY-NC-SA 4.0 licence and its consequences for NSO publication; verify national coverage before designing any indicator. WorldPop: gridded population rasters used to weight and normalise. Teams join the tiles to administrative boundaries and produce a first population-weighted connectivity indicator per region.
-
-[:material-microsoft-powerpoint: PPTX · EN](../downloads/Day3/1045_hands-on_EN.pptx){ .md-button } [:material-microsoft-powerpoint: PPTX · FR](../downloads/Day3/1045_hands-on_FR.pptx){ .md-button } [:material-notebook-outline: IPYNB · EN](../downloads/Day3/1045_hands-on_EN.ipynb){ .md-button } [:material-notebook-outline: IPYNB · FR](../downloads/Day3/1045_hands-on_FR.ipynb){ .md-button }
-
-[![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/datainnov4africa-web/stg17-workshop/blob/main/docs/downloads/Day3/1045_hands-on_EN.ipynb) **EN** &nbsp; [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/datainnov4africa-web/stg17-workshop/blob/main/docs/downloads/Day3/1045_hands-on_FR.ipynb) **FR**
 
 !!! example "Laboratory — Ookla and WorldPop"
 
@@ -44,18 +38,12 @@ Ookla: performance tiles at web-Mercator zoom 16 (about 611 m at the equator), q
 
 Fundamentals — ingestion, storage (data lake and lakehouse), distributed processing (batch versus streaming, Spark), indexing and search, orchestration, metadata and versioning.
 
-[:material-file-pdf-box: PDF · EN](../downloads/Day3/1400_engines-of-scale_EN.pdf){ .md-button } [:material-file-pdf-box: PDF · FR](../downloads/Day3/1400_engines-of-scale_FR.pdf){ .md-button } [:material-microsoft-powerpoint: PPTX · EN](../downloads/Day3/1400_engines-of-scale_EN.pptx){ .md-button } [:material-microsoft-powerpoint: PPTX · FR](../downloads/Day3/1400_engines-of-scale_FR.pptx){ .md-button }
-
 
 ### 14:45–15:30 &nbsp;·&nbsp; Hands-on part 1 — Ookla at Scale with Elasticsearch
 
 :material-flask: **Laboratory** &nbsp;·&nbsp; Action Plan 4.2.1 · 4.2.3
 
 Index the Ookla tiles in a pre-provisioned Elasticsearch cluster; understand the mapping and the geo_shape type; run the first aggregation and geospatial queries.
-
-[:material-file-pdf-box: PDF · EN](../downloads/Day3/1445_hands-on-part-1_EN.pdf){ .md-button } [:material-file-pdf-box: PDF · FR](../downloads/Day3/1445_hands-on-part-1_FR.pdf){ .md-button } [:material-microsoft-powerpoint: PPTX · EN](../downloads/Day3/1445_hands-on-part-1_EN.pptx){ .md-button } [:material-microsoft-powerpoint: PPTX · FR](../downloads/Day3/1445_hands-on-part-1_FR.pptx){ .md-button } [:material-notebook-outline: IPYNB · EN](../downloads/Day3/1445_hands-on-part-1_EN.ipynb){ .md-button } [:material-notebook-outline: IPYNB · FR](../downloads/Day3/1445_hands-on-part-1_FR.ipynb){ .md-button }
-
-[![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/datainnov4africa-web/stg17-workshop/blob/main/docs/downloads/Day3/1445_hands-on-part-1_EN.ipynb) **EN** &nbsp; [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/datainnov4africa-web/stg17-workshop/blob/main/docs/downloads/Day3/1445_hands-on-part-1_FR.ipynb) **FR**
 
 !!! example "Laboratory — Elasticsearch"
 
