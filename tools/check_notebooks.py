@@ -105,6 +105,26 @@ def check(path: Path, warnings: list[str] | None = None) -> list[str]:
             continue
         if source.lstrip().startswith(("!", "%")):
             continue  # shell or magic line, not Python
+        # Magic lines — `%timeit`, `!pip install` — are not Python, so they are
+        # blanked before parsing. Blanked rather than dropped, so the line number
+        # in the error message still points at the author's line.
+        #
+        # But `%` also begins the continuation of a formatting expression:
+        #
+        #     print(("step %02d · %-30s SoL = %15.0f"
+        #            % (step, label, total)).replace(",", " "))
+        #
+        # Blanking that second line leaves the bracket on the first unclosed and
+        # reports a SyntaxError in a cell that is perfectly valid — worse than
+        # missing a real one, because it fails the build and blocks the deploy
+        # over nothing. So the source is parsed as written first, and the blanked
+        # form is only a fallback for cells that really do hold a magic. A cell
+        # that fails both ways is the only one reported.
+        try:
+            ast.parse(source)
+            continue
+        except SyntaxError:
+            pass
         stripped = "\n".join(
             "" if line.lstrip().startswith(("!", "%")) else line
             for line in source.splitlines()

@@ -12,7 +12,7 @@
 
 Concepts et utilité, délibérément brefs pour que la journée se passe dans les données — de DMSP-OLS (1992-2013) à VIIRS/DNB ; les produits NASA Black Marble (VNP46A2 journalier, A3 mensuel, A4 annuel) et la série VNL annuelle de l'EOG ; unités de radiance, résolution et disponibilité temporelle ; ce que les NTL approchent bien — activité économique, électrification, urbanisation, suivi de crise. Les artefacts connus ne sont ici que nommés ; on les rencontre concrètement en partie 2.
 
-[:material-file-pdf-box: PDF · EN · GEE](../downloads/Day4/0900_GEE_EN.pdf){ .md-button } [:material-file-pdf-box: PDF · FR · GEE](../downloads/Day4/0900_GEE_FR.pdf){ .md-button }
+[:material-file-pdf-box: PDF · EN](../downloads/Day4/0900_night-time-lights_EN.pdf){ .md-button } [:material-file-pdf-box: PDF · EN · GEE](../downloads/Day4/0900_GEE_EN.pdf){ .md-button } [:material-file-pdf-box: PDF · FR](../downloads/Day4/0900_night-time-lights_FR.pdf){ .md-button } [:material-file-pdf-box: PDF · FR · GEE](../downloads/Day4/0900_GEE_FR.pdf){ .md-button }
 
 
 ### 09h30–10h30 &nbsp;·&nbsp; Atelier partie 1 — Collecter
@@ -20,6 +20,10 @@ Concepts et utilité, délibérément brefs pour que la journée se passe dans l
 :material-flask: **Laboratoire** &nbsp;·&nbsp; Plan d’action 4.2.1
 
 Accéder aux rasters NTL (NASA Earthdata, EOG ou Google Earth Engine) ; comprendre la structure des fichiers, les bandes et les indicateurs de qualité ; découper à l'emprise nationale et enregistrer un sous-ensemble de travail.
+
+[:material-notebook-outline: IPYNB · EN](../downloads/Day4/0930_hands-on-part-1_EN.ipynb){ .md-button } [:material-notebook-outline: IPYNB · FR](../downloads/Day4/0930_hands-on-part-1_FR.ipynb){ .md-button }
+
+[![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/datainnov4africa-web/stg17-workshop/blob/main/docs/downloads/Day4/0930_hands-on-part-1_EN.ipynb) **EN** &nbsp; [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/datainnov4africa-web/stg17-workshop/blob/main/docs/downloads/Day4/0930_hands-on-part-1_FR.ipynb) **FR**
 
 !!! example "Laboratoire — NTL collecter et explorer"
 
@@ -35,6 +39,10 @@ Accéder aux rasters NTL (NASA Earthdata, EOG ou Google Earth Engine) ; comprend
 :material-flask: **Laboratoire** &nbsp;·&nbsp; Plan d’action 4.2.1 · 2.1.1
 
 Visualiser et interroger le raster avant de calculer dessus — distribution des valeurs de radiance, effet des masques de nuages et de qualité, variation d'un mois à l'autre. Les équipes traquent délibérément les artefacts nommés dans l'exposé du matin (halo lumineux autour des villes, saturation, torchères, saisonnalité, discontinuité de capteur, bruit de faible luminosité rural) et documentent lesquels sont présents dans leur propre pays. Se termine par un tour de comparaisons entre équipes.
+
+[:material-notebook-outline: IPYNB · EN](../downloads/Day4/1045_hands-on-part-2_EN.ipynb){ .md-button } [:material-notebook-outline: IPYNB · FR](../downloads/Day4/1045_hands-on-part-2_FR.ipynb){ .md-button }
+
+[![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/datainnov4africa-web/stg17-workshop/blob/main/docs/downloads/Day4/1045_hands-on-part-2_EN.ipynb) **EN** &nbsp; [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/datainnov4africa-web/stg17-workshop/blob/main/docs/downloads/Day4/1045_hands-on-part-2_FR.ipynb) **FR**
 
 !!! example "Laboratoire — NTL explorer et comprendre"
 
@@ -52,6 +60,10 @@ Visualiser et interroger le raster avant de calculer dessus — distribution des
 :material-flask: **Laboratoire** &nbsp;·&nbsp; Plan d’action 4.2.1 · 2.1.1 · 4.3 · 3.1.1
 
 Calculer les statistiques zonales par niveau administratif (somme de radiance, radiance moyenne, superficie éclairée) ; construire des séries temporelles annuelles et mensuelles ; détecter le changement entre deux périodes ; cartographier et visualiser les résultats. Valider ensuite l'indicateur indirect NTL en le corrélant avec des statistiques infranationales officielles (population, taux d'électrification) et décider, preuves à l'appui, s'il est utilisable pour la diffusion dans votre pays ou s'il reste un simple outil de diagnostic. Documenter explicitement les limites ; cette déclaration fait partie du livrable. Les cartes, graphiques et la déclaration de limites qui en résultent peuvent être publiés en site public via GitHub Pages.
+
+[:material-notebook-outline: IPYNB · EN](../downloads/Day4/1400_hands-on-part-3_EN.ipynb){ .md-button } [:material-notebook-outline: IPYNB · FR](../downloads/Day4/1400_hands-on-part-3_FR.ipynb){ .md-button }
+
+[![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/datainnov4africa-web/stg17-workshop/blob/main/docs/downloads/Day4/1400_hands-on-part-3_EN.ipynb) **EN** &nbsp; [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/datainnov4africa-web/stg17-workshop/blob/main/docs/downloads/Day4/1400_hands-on-part-3_FR.ipynb) **FR**
 
 !!! example "Laboratoire — NTL analyse et validation"
 
