@@ -3,7 +3,7 @@
 <div class="stg-hero" markdown>
 <p class="eyebrow">AfDB · AU STATAFRIC · STG17 · PARTICIPANTS' WORK</p>
 <p class="lede">What the country teams built during the week, published by themselves and open to everyone. Every dashboard is interactive and bilingual.</p>
-<p class="facts"><span>18 countries</span><span>47 dashboards</span><span>3 laboratories</span></p>
+<p class="facts"><span>18 countries</span><span>46 dashboards</span><span>3 laboratories</span></p>
 </div>
 
 ## Jump to a country {: #acces }
@@ -402,12 +402,6 @@
 ## <img class="flag" src="../assets/img/flags/nam.svg" alt="" width="22" height="22" loading="lazy"> Namibia {: #pays-nam }
 
 <div class="stg-dash">
-<article>
-<a class="shot" href="https://henokskielek1.github.io/connectivity-nam/" target="_blank" rel="noopener"><img src="../assets/img/dashboards/henokskielek1__connectivity-nam.webp" alt="Preview of Namibia — Connectivity and population" loading="lazy" width="720"></a>
-<h3>Connectivity and population</h3>
-<p class="muet">This dashboard could not be reached when this page was last built.</p>
-<p class="go"><a class="md-button" href="https://henokskielek1.github.io/connectivity-nam/" target="_blank" rel="noopener">Open the dashboard</a></p>
-</article>
 <article>
 <a class="shot" href="https://henokskielek1.github.io/ntl-nam-stg17/" target="_blank" rel="noopener"><img src="../assets/img/dashboards/henokskielek1__ntl-nam-stg17.webp" alt="Preview of Namibia — Night-time lights" loading="lazy" width="720"></a>
 <h3>Night-time lights</h3>

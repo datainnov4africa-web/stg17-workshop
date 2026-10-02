@@ -3,7 +3,7 @@
 <div class="stg-hero" markdown>
 <p class="eyebrow">BAD · UA STATAFRIC · STG17 · TRAVAUX DES PARTICIPANTS</p>
 <p class="lede">Ce que les équipes pays ont construit pendant la semaine, publié par elles-mêmes et accessible à tous. Chaque tableau de bord est interactif et bilingue.</p>
-<p class="facts"><span>18 pays</span><span>47 tableaux de bord</span><span>3 laboratoires</span></p>
+<p class="facts"><span>18 pays</span><span>46 tableaux de bord</span><span>3 laboratoires</span></p>
 </div>
 
 ## Accès direct {: #acces }
@@ -402,12 +402,6 @@
 ## <img class="flag" src="../../assets/img/flags/nam.svg" alt="" width="22" height="22" loading="lazy"> Namibie {: #pays-nam }
 
 <div class="stg-dash">
-<article>
-<a class="shot" href="https://henokskielek1.github.io/connectivity-nam/" target="_blank" rel="noopener"><img src="../../assets/img/dashboards/henokskielek1__connectivity-nam.webp" alt="Aperçu de Namibie — Connectivité et population" loading="lazy" width="720"></a>
-<h3>Connectivité et population</h3>
-<p class="muet">Ce tableau de bord n'était pas accessible au moment de la mise à jour de cette page.</p>
-<p class="go"><a class="md-button" href="https://henokskielek1.github.io/connectivity-nam/" target="_blank" rel="noopener">Ouvrir le tableau de bord</a></p>
-</article>
 <article>
 <a class="shot" href="https://henokskielek1.github.io/ntl-nam-stg17/" target="_blank" rel="noopener"><img src="../../assets/img/dashboards/henokskielek1__ntl-nam-stg17.webp" alt="Aperçu de Namibie — Lumières nocturnes" loading="lazy" width="720"></a>
 <h3>Lumières nocturnes</h3>
