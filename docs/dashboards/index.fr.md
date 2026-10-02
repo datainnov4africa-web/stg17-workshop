@@ -3,7 +3,7 @@
 <div class="stg-hero" markdown>
 <p class="eyebrow">BAD · UA STATAFRIC · STG17 · TRAVAUX DES PARTICIPANTS</p>
 <p class="lede">Ce que les équipes pays ont construit pendant la semaine, publié par elles-mêmes et accessible à tous. Chaque tableau de bord est interactif et bilingue.</p>
-<p class="facts"><span>18 pays</span><span>46 tableaux de bord</span><span>3 laboratoires</span></p>
+<p class="facts"><span>19 pays</span><span>49 tableaux de bord</span><span>3 laboratoires</span></p>
 </div>
 
 ## Accès direct {: #acces }
@@ -12,6 +12,7 @@
 <a href="#pays-bwa"><img class="flag" src="../../assets/img/flags/bwa.svg" alt="" width="22" height="22" loading="lazy"> Botswana</a>
 <a href="#pays-bdi"><img class="flag" src="../../assets/img/flags/bdi.svg" alt="" width="22" height="22" loading="lazy"> Burundi</a>
 <a href="#pays-civ"><img class="flag" src="../../assets/img/flags/civ.svg" alt="" width="22" height="22" loading="lazy"> Côte d'Ivoire</a>
+<a href="#pays-dji"><img class="flag" src="../../assets/img/flags/dji.svg" alt="" width="22" height="22" loading="lazy"> Djibouti</a>
 <a href="#pays-egy"><img class="flag" src="../../assets/img/flags/egy.svg" alt="" width="22" height="22" loading="lazy"> Égypte</a>
 <a href="#pays-eth"><img class="flag" src="../../assets/img/flags/eth.svg" alt="" width="22" height="22" loading="lazy"> Éthiopie</a>
 <a href="#pays-gmb"><img class="flag" src="../../assets/img/flags/gmb.svg" alt="" width="22" height="22" loading="lazy"> Gambie</a>
@@ -149,6 +150,46 @@
 <dt>Personnes en cellules habitées non éclairées</dt><dd>10 609 930<span class="u">40.0% of inhabited population</span></dd>
 </dl>
 <p class="go"><a class="md-button" href="https://kingkin7.github.io/ntl-civ-stg17/" target="_blank" rel="noopener">Ouvrir le tableau de bord</a></p>
+</article>
+</div>
+
+## <img class="flag" src="../../assets/img/flags/dji.svg" alt="" width="22" height="22" loading="lazy"> Djibouti {: #pays-dji }
+
+<div class="stg-dash">
+<article>
+<a class="shot" href="https://alichehemmoussa.github.io/stg17-dashboard/" target="_blank" rel="noopener"><img src="../../assets/img/dashboards/alichehemmoussa__stg17-dashboard.webp" alt="Aperçu de Djibouti — Du document statistique au tableau de bord" loading="lazy" width="720"></a>
+<h3>Du document statistique au tableau de bord</h3>
+<p>Publié par Institut National de la Statistique. 2 indicateurs · 2 vues · 3 zones</p>
+<dl class="kpis">
+<dt>Inflation annuelle – Rwanda – Janvier</dt><dd>7.5<span class="u">%</span></dd>
+<dt>Inflation annuelle – Rural – Juin</dt><dd>12.1<span class="u">%</span></dd>
+<dt>Inflation mensuelle – Rwanda – Juillet</dt><dd>0.3<span class="u">%</span></dd>
+</dl>
+<p class="go"><a class="md-button" href="https://alichehemmoussa.github.io/stg17-dashboard/" target="_blank" rel="noopener">Ouvrir le tableau de bord</a></p>
+</article>
+<article>
+<a class="shot" href="https://alichehemmoussa.github.io/connectivity-dji/" target="_blank" rel="noopener"><img src="../../assets/img/dashboards/alichehemmoussa__connectivity-dji.webp" alt="Aperçu de Djibouti — Connectivité et population" loading="lazy" width="720"></a>
+<h3>Connectivité et population</h3>
+<p>Données ouvertes Ookla Speedtest rapportées à la population, par unité administrative. 22 graphiques · cartes interactives.</p>
+<dl class="kpis">
+<dt>Population</dt><dd>1,1 M<span class="u">WorldPop 2025</span></dd>
+<dt>Median download per person</dt><dd>27 2<span class="u">Mbps</span></dd>
+<dt>Median download per tile</dt><dd>33 6<span class="u">Mbps</span></dd>
+<dt>Population ≥ 10 Mbps</dt><dd>74<span class="u">% of measured</span></dd>
+</dl>
+<p class="go"><a class="md-button" href="https://alichehemmoussa.github.io/connectivity-dji/" target="_blank" rel="noopener">Ouvrir le tableau de bord</a></p>
+</article>
+<article>
+<a class="shot" href="https://alichehemmoussa.github.io/ntl-dji-stg17/" target="_blank" rel="noopener"><img src="../../assets/img/dashboards/alichehemmoussa__ntl-dji-stg17.webp" alt="Aperçu de Djibouti — Lumières nocturnes" loading="lazy" width="720"></a>
+<h3>Lumières nocturnes</h3>
+<p>Indicateurs infranationaux dérivés des lumières nocturnes VIIRS. 10 graphiques · 8 volets d'analyse.</p>
+<dl class="kpis">
+<dt>Somme des lumières</dt><dd>9 722<span class="u">2024 · nW·cm⁻²·sr⁻¹</span></dd>
+<dt>Croissance annuelle de la SoL</dt><dd>+7.0%<span class="u">par an, 2015–2024</span></dd>
+<dt>Population</dt><dd>1 105 221<span class="u">WorldPop</span></dd>
+<dt>Personnes en cellules habitées non éclairées</dt><dd>450 713</dd>
+</dl>
+<p class="go"><a class="md-button" href="https://alichehemmoussa.github.io/ntl-dji-stg17/" target="_blank" rel="noopener">Ouvrir le tableau de bord</a></p>
 </article>
 </div>
 

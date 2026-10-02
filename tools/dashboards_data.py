@@ -53,6 +53,7 @@ AFRIQUE = {
     "cog": ("CG", "Congo", "Congo"),
     "com": ("KM", "Comores", "Comoros"),
     "cpv": ("CV", "Cabo Verde", "Cabo Verde"),
+    "dji": ("DJ", "Djibouti", "Djibouti"),
     "dza": ("DZ", "Algérie", "Algeria"),
     "egy": ("EG", "Égypte", "Egypt"),
     "eri": ("ER", "Érythrée", "Eritrea"),
