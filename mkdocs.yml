@@ -130,6 +130,7 @@ plugins:
             Day 3 · Non-traditional data: Jour 3 · Données non traditionnelles
             Day 4 · Night-Time Lights: Jour 4 · Lumières nocturnes
             Day 5 · Publishing and results: Jour 5 · Publication et résultats
+            Country dashboards: Tableaux de bord des pays
             Laboratories: Laboratoires
             Slides: Présentations
             Resources: Ressources
@@ -151,6 +152,7 @@ nav:
       - Day 3 · Non-traditional data: day3/index.md
       - Day 4 · Night-Time Lights: day4/index.md
       - Day 5 · Publishing and results: day5/index.md
+  - Country dashboards: dashboards/index.md
   - Laboratories: labs/index.md
   - Slides: slides/index.md
   - Resources:

@@ -725,3 +725,186 @@
 @media print {
   .stg-agenda { display: none; }
 }
+
+/* --- Country dashboards --------------------------------------------------
+   The showcase of what participants built. Three components: the flag index
+   that opens the page, the card grid, and the figures inside a card.
+
+   No hex value here either — everything comes from _afdb-vars.css, so this
+   page shifts with the palette like the rest of the site.
+   ------------------------------------------------------------------------- */
+
+/* The index. Fourteen countries is past the point where scrolling is a plan,
+   so every flag is a link, and the whole set fits above the first section. */
+.stg-flags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 18px 0 30px;
+}
+.stg-flags a {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 7px 13px 7px 10px;
+  border: 1px solid var(--afdb-line);
+  border-radius: 999px;
+  background: var(--afdb-wash);
+  color: var(--afdb-ink);
+  font-size: .76rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: border-color .15s ease, background .15s ease, transform .15s ease;
+}
+.stg-flags a:hover {
+  border-color: var(--afdb-green);
+  background: var(--md-default-bg-color);
+  transform: translateY(-1px);
+}
+.stg-flags .fl img.twemoji,
+.stg-dash h2 img.twemoji { width: 1.25em; height: 1.25em; vertical-align: -.2em; }
+
+/* The grid. One card per dashboard, so a country with all three laboratories
+   shows three; a country with one shows one, at the same width. */
+.stg-dash {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  margin: 18px 0 38px;
+}
+.stg-dash article {
+  display: flex;
+  flex-direction: column;
+  background: var(--md-default-bg-color);
+  border: 1px solid var(--afdb-line);
+  border-radius: var(--afdb-radius);
+  overflow: hidden;
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+.stg-dash article:hover { transform: translateY(-2px); box-shadow: var(--afdb-shadow); }
+
+/* The preview. A fixed aspect keeps the grid aligned whatever each dashboard
+   chose to put at the top of its page. */
+.stg-dash .shot {
+  display: block;
+  border-bottom: 1px solid var(--afdb-line);
+  background: var(--afdb-wash);
+  line-height: 0;
+}
+.stg-dash .shot img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 720 / 446;
+  object-fit: cover;
+  object-position: top center;
+}
+.stg-dash h3 {
+  margin: 0;
+  padding: 14px 18px 0;
+  font-size: .84rem;
+  font-weight: 700;
+  color: var(--afdb-green);
+  letter-spacing: .01em;
+}
+.stg-dash article > p {
+  margin: .5em 0 0;
+  padding: 0 18px;
+  font-size: .75rem;
+  line-height: 1.6;
+  color: var(--afdb-muted);
+}
+.stg-dash .muet { font-style: italic; }
+
+/* The figures, read from the dashboard itself. A definition list, because that
+   is what they are: a label and the value that answers it. */
+.stg-dash .kpis {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 2px 14px;
+  margin: 14px 0 0;
+  padding: 12px 18px;
+  border-top: 1px dashed var(--afdb-line);
+  background: var(--afdb-wash);
+}
+.stg-dash .kpis dt {
+  font-size: .66rem;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+  color: var(--afdb-muted);
+  align-self: center;
+}
+.stg-dash .kpis dd {
+  margin: 0;
+  font-size: .82rem;
+  font-weight: 700;
+  color: var(--afdb-navy);
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+.stg-dash .go { margin-top: auto; padding: 14px 18px 18px; }
+.stg-dash .go .md-button { width: 100%; text-align: center; font-size: .72rem; }
+.stg-note { margin-top: 32px; font-size: .68rem; color: var(--afdb-muted); }
+
+[data-md-color-scheme="slate"] .stg-dash article,
+[data-md-color-scheme="slate"] .stg-flags a { border-color: #2a3441; }
+[data-md-color-scheme="slate"] .stg-flags a,
+[data-md-color-scheme="slate"] .stg-dash .kpis { background: rgba(255, 255, 255, .03); }
+[data-md-color-scheme="slate"] .stg-dash .kpis dd { color: var(--md-default-fg-color); }
+
+@media screen and (max-width: 44.9em) {
+  .stg-dash { grid-template-columns: 1fr; gap: 16px; }
+  .stg-flags { gap: 6px; }
+  .stg-flags a { padding: 6px 11px 6px 9px; font-size: .72rem; }
+}
+
+/* --- Country dashboards · the flag, and holding the line on narrow screens --
+   A grid column sized `1fr` still refuses to shrink below the longest word it
+   contains, and an indicator name copied from a statistical release is a long
+   word. `minmax(0, …)` lets it shrink, and `overflow-wrap` lets the word break
+   rather than push the card — and with it the page — past the viewport.
+   ------------------------------------------------------------------------- */
+.stg-dash .kpis { grid-template-columns: minmax(0, 1fr) auto; }
+.stg-dash .kpis dt,
+.stg-dash .kpis dd,
+.stg-dash article > p,
+.stg-dash h3 { overflow-wrap: anywhere; min-width: 0; }
+.stg-dash article,
+.stg-dash .shot img { max-width: 100%; }
+.stg-flags a { max-width: 100%; }
+
+/* The flag is a local SVG, not the emoji: Windows draws the two regional
+   indicator letters instead of a flag, so a reader there would see "BW". */
+.flag {
+  width: 1.15em;
+  height: 1.15em;
+  vertical-align: -.17em;
+  border-radius: 2px;
+  flex: 0 0 auto;
+}
+.md-typeset h2 .flag { width: 1.05em; height: 1.05em; margin-right: .12em; }
+
+/* The table of contents repeats every country; on a long page that is the
+   fastest way back to the index. */
+.md-typeset .stg-dash + h2 { margin-top: 2.2em; }
+
+/* --- Country dashboards · correction -------------------------------------
+   `anywhere` lets the browser shrink a column to a single character, so a
+   label beside a wide value came out as POP / ULA / TIO / N. `break-word`
+   breaks only a word that would otherwise overflow, and leaves the column's
+   natural width alone. The unit moves under the figure for the same reason:
+   it was the unit that made the value column wide.
+   ------------------------------------------------------------------------- */
+.stg-dash .kpis dt,
+.stg-dash .kpis dd,
+.stg-dash article > p,
+.stg-dash h3 { overflow-wrap: break-word; }
+.stg-dash .kpis { grid-template-columns: minmax(0, 1fr) minmax(0, auto); row-gap: 7px; }
+.stg-dash .kpis dd { max-width: 100%; line-height: 1.25; }
+.stg-dash .kpis dd .u {
+  display: block;
+  font-size: .62rem;
+  font-weight: 500;
+  letter-spacing: .02em;
+  color: var(--afdb-muted);
+  text-transform: none;
+}
